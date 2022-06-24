@@ -1,3 +1,153 @@
+=== [gen8nationaldex] Sinnoh Leaders/Roark ===
+
+Rampardos  
+Ability: Mold Breaker  
+
+Probopass  
+Ability: Sturdy  
+
+Stonjourner  
+Ability: Power Spot  
+
+Bastiodon  
+Ability: Sturdy  
+
+Rhyperior  
+Ability: Lightning Rod  
+
+Drednaw  
+Ability: Strong Jaw  
+
+
+=== [gen8nationaldex] Unova Leaders/Cheren ===
+
+Stoutland  
+Ability: Intimidate  
+
+Bouffalant  
+Ability: Reckless  
+
+Cinccino  
+Ability: Cute Charm  
+
+Raticate-Alola  
+Ability: Gluttony  
+
+Blissey (F)  
+Ability: Natural Cure  
+
+Toucannon  
+Ability: Keen Eye  
+
+
+=== [gen8nationaldex] Unova Leaders/Cress ===
+
+Seismitoad  
+Ability: Swift Swim  
+
+Simipour  
+Ability: Gluttony  
+
+Samurott  
+Ability: Torrent  
+
+Swanna  
+Ability: Keen Eye  
+
+Azumarill  
+Ability: Thick Fat  
+
+Ludicolo  
+Ability: Swift Swim  
+
+
+=== [gen8nationaldex] Unova Leaders/Cilan ===
+
+Lilligant (F)  
+Ability: Chlorophyll  
+
+Serperior  
+Ability: Overgrow  
+
+Flapple  
+Ability: Ripen  
+
+Simisage  
+Ability: Gluttony  
+
+Ferrothorn  
+Ability: Iron Barbs  
+
+Tangrowth  
+Ability: Chlorophyll  
+
+
+=== [gen8nationaldex] Kalos Leaders/Grant ===
+
+Tyrantrum  
+Ability: Strong Jaw  
+
+Aurorus  
+Ability: Refrigerate  
+
+Carbink  
+Ability: Clear Body  
+
+Aerodactyl  
+Ability: Rock Head  
+
+Coalossal  
+Ability: Steam Engine  
+
+Rhyperior  
+Ability: Lightning Rod  
+
+
+=== [gen8nationaldex] Kalos Leaders/Viola ===
+
+Vivillon  
+Ability: Shield Dust  
+
+Masquerain  
+Ability: Intimidate  
+
+Scolipede  
+Ability: Poison Point  
+
+Orbeetle  
+Ability: Swarm  
+
+Wormadam-Sandy (F)  
+Ability: Anticipation  
+
+Shedinja  
+Ability: Wonder Guard  
+
+
+=== [gen8nationaldex] Qualifiers/Youngster ===
+
+Raticate  
+Ability: Run Away  
+
+Bibarel  
+Ability: Simple  
+
+Diggersby  
+Ability: Pickup  
+
+
+=== [gen8nationaldex] Qualifiers/Ace Trainer ===
+
+Sandslash  
+Ability: Sand Veil  
+
+Seviper  
+Ability: Shed Skin  
+
+Zangoose  
+Ability: Immunity  
+
+
 === [gen8nationaldex] Alola Elite/Nanu ===
 
 Persian-Alola  
@@ -628,5 +778,548 @@ Ability: Defiant
 
 Klefki  
 Ability: Prankster  
+
+
+=== [gen8nationaldex] Qualifiers/Bug Catcher ===
+
+Beautifly  
+Ability: Swarm  
+
+Ariados  
+Ability: Swarm  
+
+Vespiquen (F)  
+Ability: Pressure  
+
+
+=== [gen8nationaldex] Qualifiers/Veteran ===
+
+Sawk (M)  
+Ability: Sturdy  
+
+Furfrou  
+Ability: Fur Coat  
+
+Granbull  
+Ability: Intimidate  
+
+
+=== [gen8nationaldex] Qualifiers/Artist ===
+
+Bouffalant  
+Ability: Reckless  
+
+Mr. Mime  
+Ability: Soundproof  
+
+Sunflora  
+Ability: Chlorophyll  
+
+
+=== [gen8nationaldex] Qualifiers/Scientist ===
+
+Weezing  
+Ability: Levitate  
+
+Garbodor  
+Ability: Stench  
+
+Durant  
+Ability: Swarm  
+
+
+=== [gen8nationaldex] Qualifiers/Socialite ===
+
+Boltund  
+Ability: Strong Jaw  
+
+Comfey  
+Ability: Flower Veil  
+
+Purugly  
+Ability: Thick Fat  
+
+
+=== [gen8nationaldex] Kalos Leaders/Korrina ===
+
+Lucario  
+Ability: Steadfast  
+
+Hawlucha  
+Ability: Limber  
+
+Mienshao  
+Ability: Inner Focus  
+
+Passimian  
+Ability: Receiver  
+
+Falinks  
+Ability: Battle Armor  
+
+Scrafty  
+Ability: Shed Skin  
+
+
+=== [gen8nationaldex] Kalos Leaders/Ramos ===
+
+Chesnaught  
+Ability: Overgrow  
+
+Gogoat  
+Ability: Sap Sipper  
+
+Jumpluff  
+Ability: Chlorophyll  
+
+Victreebel  
+Ability: Chlorophyll  
+
+Sawsbuck  
+Ability: Chlorophyll  
+
+Parasect  
+Ability: Effect Spore  
+
+
+=== [gen8nationaldex] Kalos Leaders/Clemont ===
+
+Heliolisk  
+Ability: Dry Skin  
+
+Emolga  
+Ability: Static  
+
+Magnezone  
+Ability: Magnet Pull  
+
+Togedemaru  
+Ability: Iron Barbs  
+
+Rotom-Wash  
+Ability: Levitate  
+
+Jolteon  
+Ability: Volt Absorb  
+
+
+=== [gen8nationaldex] Kalos Leaders/Valerie ===
+
+Mr. Mime  
+Ability: Soundproof  
+
+Sylveon  
+Ability: Cute Charm  
+
+Mawile  
+Ability: Hyper Cutter  
+
+Togekiss  
+Ability: Hustle  
+
+Shiinotic  
+Ability: Illuminate  
+
+Rapidash-Galar  
+Ability: Run Away  
+
+
+=== [gen8nationaldex] Kalos Leaders/Olympia ===
+
+Sigilyph  
+Ability: Wonder Skin  
+
+Slowking  
+Ability: Oblivious  
+
+Meowstic-F (F)  
+Ability: Keen Eye  
+
+Gallade (M)  
+Ability: Steadfast  
+
+Jynx (F)  
+Ability: Oblivious  
+
+Oranguru  
+Ability: Inner Focus  
+
+
+=== [gen8nationaldex] Kalos Leaders/Wulfric ===
+
+Avalugg  
+Ability: Own Tempo  
+
+Cryogonal  
+Ability: Levitate  
+
+Abomasnow  
+Ability: Snow Warning  
+
+Mamoswine  
+Ability: Oblivious  
+
+Walrein  
+Ability: Thick Fat  
+
+Crabominable  
+Ability: Hyper Cutter  
+
+
+=== [gen8nationaldex] Unova Leaders/Chili ===
+
+Camerupt  
+Ability: Magma Armor  
+
+Emboar  
+Ability: Blaze  
+
+Simisear  
+Ability: Gluttony  
+
+Heatmor  
+Ability: Gluttony  
+
+Darmanitan  
+Ability: Sheer Force  
+
+Oricorio  
+Ability: Dancer  
+
+
+=== [gen8nationaldex] Unova Leaders/Lenora ===
+
+Braviary (M)  
+Ability: Keen Eye  
+
+Watchog  
+Ability: Illuminate  
+
+Cinccino  
+Ability: Cute Charm  
+
+Lickilicky  
+Ability: Own Tempo  
+
+Dubwool  
+Ability: Fluffy  
+
+Pyroar  
+Ability: Rivalry  
+
+
+=== [gen8nationaldex] Unova Leaders/Burgh ===
+
+Leavanny  
+Ability: Swarm  
+
+Crustle  
+Ability: Sturdy  
+
+Durant  
+Ability: Swarm  
+
+Accelgor  
+Ability: Hydration  
+
+Pinsir  
+Ability: Hyper Cutter  
+
+Frosmoth  
+Ability: Shield Dust  
+
+
+=== [gen8nationaldex] Unova Leaders/Elesa ===
+
+Zebstrika  
+Ability: Lightning Rod  
+
+Eelektross  
+Ability: Levitate  
+
+Emolga  
+Ability: Static  
+
+Stunfisk  
+Ability: Static  
+
+Dracozolt  
+Ability: Volt Absorb  
+
+Raichu-Alola  
+Ability: Surge Surfer  
+
+
+=== [gen8nationaldex] Unova Leaders/Clay ===
+
+Excadrill  
+Ability: Sand Rush  
+
+Krookodile  
+Ability: Intimidate  
+
+Golurk  
+Ability: Iron Fist  
+
+Runerigus  
+Ability: Wandering Spirit  
+
+Mudsdale  
+Ability: Own Tempo  
+
+Nidoqueen (F)  
+Ability: Poison Point  
+
+
+=== [gen8nationaldex] Unova Leaders/Skyla ===
+
+Swanna  
+Ability: Keen Eye  
+
+Archeops  
+Ability: Defeatist  
+
+Mandibuzz (F)  
+Ability: Big Pecks  
+
+Drifblim  
+Ability: Aftermath  
+
+Noivern  
+Ability: Frisk  
+
+Skarmory  
+Ability: Keen Eye  
+
+
+=== [gen8nationaldex] Unova Leaders/Brycen ===
+
+Cryogonal  
+Ability: Levitate  
+
+Beartic  
+Ability: Snow Cloak  
+
+Vanilluxe  
+Ability: Ice Body  
+
+Weavile  
+Ability: Pressure  
+
+Eiscue  
+Ability: Ice Face  
+
+Arctozolt  
+Ability: Volt Absorb  
+
+
+=== [gen8nationaldex] Unova Leaders/Drayden ===
+
+Haxorus  
+Ability: Rivalry  
+
+Hydreigon  
+Ability: Levitate  
+
+Druddigon  
+Ability: Rough Skin  
+
+Dragapult  
+Ability: Clear Body  
+
+Exeggutor-Alola  
+Ability: Frisk  
+
+Drampa  
+Ability: Berserk  
+
+
+=== [gen8nationaldex] Unova Leaders/Roxie ===
+
+Scolipede  
+Ability: Poison Point  
+
+Garbodor  
+Ability: Stench  
+
+Crobat  
+Ability: Inner Focus  
+
+Amoonguss  
+Ability: Effect Spore  
+
+Toxtricity  
+Ability: Punk Rock  
+
+Salazzle (F)  
+Ability: Corrosion  
+
+
+=== [gen8nationaldex] Unova Leaders/Marlon ===
+
+Jellicent  
+Ability: Water Absorb  
+
+Carracosta  
+Ability: Solid Rock  
+
+Wailord  
+Ability: Water Veil  
+
+Alomomola  
+Ability: Healer  
+
+Carracosta  
+Ability: Solid Rock  
+
+Quagsire  
+Ability: Damp  
+
+
+=== [gen8nationaldex] Sinnoh Leaders/Gardenia ===
+
+Torterra  
+Ability: Overgrow  
+
+Roserade  
+Ability: Natural Cure  
+
+Leafeon  
+Ability: Leaf Guard  
+
+Tangrowth  
+Ability: Chlorophyll  
+
+Whimsicott  
+Ability: Prankster  
+
+Tropius  
+Ability: Chlorophyll  
+
+
+=== [gen8nationaldex] Sinnoh Leaders/Maylene ===
+
+Gallade (M)  
+Ability: Steadfast  
+
+Toxicroak  
+Ability: Anticipation  
+
+Lucario  
+Ability: Steadfast  
+
+Infernape  
+Ability: Blaze  
+
+Sirfetch’d  
+Ability: Steadfast  
+
+Hawlucha  
+Ability: Limber  
+
+
+=== [gen8nationaldex] Sinnoh Leaders/Crasher Wake ===
+
+Floatzel  
+Ability: Swift Swim  
+
+Gastrodon  
+Ability: Sticky Hold  
+
+Empoleon  
+Ability: Torrent  
+
+Poliwrath  
+Ability: Water Absorb  
+
+Bruxish  
+Ability: Dazzling  
+
+Mantine  
+Ability: Swift Swim  
+
+
+=== [gen8nationaldex] Sinnoh Leaders/Fantina ===
+
+Mismagius  
+Ability: Levitate  
+
+Drifblim  
+Ability: Aftermath  
+
+Spiritomb  
+Ability: Pressure  
+
+Dusknoir  
+Ability: Pressure  
+
+Trevenant  
+Ability: Natural Cure  
+
+Aegislash  
+Ability: Stance Change  
+
+
+=== [gen8nationaldex] Sinnoh Leaders/Byron ===
+
+Bronzong  
+Ability: Levitate  
+
+Perrserker  
+Ability: Battle Armor  
+
+Steelix  
+Ability: Rock Head  
+
+Klefki  
+Ability: Prankster  
+
+Sandslash-Alola  
+Ability: Snow Cloak  
+
+Corviknight  
+Ability: Pressure  
+
+
+=== [gen8nationaldex] Sinnoh Leaders/Candice ===
+
+Glaceon  
+Ability: Snow Cloak  
+
+Froslass (F)  
+Ability: Snow Cloak  
+
+Weavile  
+Ability: Pressure  
+
+Mamoswine  
+Ability: Oblivious  
+
+Abomasnow  
+Ability: Snow Warning  
+
+Arctovish  
+Ability: Water Absorb  
+
+
+=== [gen8] Sinnoh Leaders/Volkner ===
+
+Electivire  
+Ability: Motor Drive  
+
+Luxray  
+Ability: Rivalry  
+
+Rotom-Mow  
+Ability: Levitate  
+
+Magnezone  
+Ability: Magnet Pull  
+
+Golem-Alola  
+Ability: Magnet Pull  
+
+Galvantula  
+Ability: Compound Eyes  
 
 
