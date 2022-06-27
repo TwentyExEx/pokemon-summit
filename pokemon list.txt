@@ -1,3 +1,150 @@
+=== [gen8nationaldex] Kanto Leaders/Blaine ===
+
+Arcanine  
+Ability: Intimidate  
+
+Ninetales  
+Ability: Flash Fire  
+
+Charizard  
+Ability: Blaze  
+
+Flareon  
+Ability: Flash Fire  
+
+Houndoom  
+Ability: Early Bird  
+
+Salazzle (F)  
+Ability: Corrosion  
+
+
+=== [gen8nationaldex] Kanto Leaders/Brock ===
+
+Golem-Alola  
+Ability: Magnet Pull  
+
+Kabutops  
+Ability: Swift Swim  
+
+Aerodactyl  
+Ability: Rock Head  
+
+Tyranitar  
+Ability: Sand Stream  
+
+Rhyperior  
+Ability: Lightning Rod  
+
+Lycanroc  
+Ability: Keen Eye  
+
+
+=== [gen8nationaldex] Johto Leaders/Pryce ===
+
+Mamoswine  
+Ability: Oblivious  
+
+Weavile  
+Ability: Pressure  
+
+Lapras  
+Ability: Water Absorb  
+
+Mr. Rime  
+Ability: Tangled Feet  
+
+Arctozolt  
+Ability: Volt Absorb  
+
+Jynx (F)  
+Ability: Oblivious  
+
+
+=== [gen8nationaldex] Johto Leaders/Jasmine ===
+
+Steelix  
+Ability: Rock Head  
+
+Forretress  
+Ability: Sturdy  
+
+Skarmory  
+Ability: Keen Eye  
+
+Mawile  
+Ability: Hyper Cutter  
+
+Metagross  
+Ability: Clear Body  
+
+Sandslash-Alola  
+Ability: Snow Cloak  
+
+
+=== [gen8nationaldex] Johto Leaders/Falkner ===
+
+Pidgeot  
+Ability: Keen Eye  
+
+Noctowl  
+Ability: Insomnia  
+
+Pelipper  
+Ability: Keen Eye  
+
+Talonflame  
+Ability: Flame Body  
+
+Oricorio-Pom-Pom  
+Ability: Dancer  
+
+Mandibuzz (F)  
+Ability: Big Pecks  
+
+
+=== [gen8nationaldex] Hoenn Leaders/Brawly ===
+
+Hariyama  
+Ability: Thick Fat  
+
+Breloom  
+Ability: Effect Spore  
+
+Hitmonchan (M)  
+Ability: Keen Eye  
+
+Mienshao  
+Ability: Inner Focus  
+
+Machamp  
+Ability: Guts  
+
+Scrafty  
+Ability: Shed Skin  
+
+
+=== [gen8nationaldex] Hoenn Leaders/Roxanne ===
+
+Probopass  
+Ability: Sturdy  
+
+Armaldo  
+Ability: Battle Armor  
+
+Cradily  
+Ability: Suction Cups  
+
+Minior  
+Ability: Shields Down  
+
+Aggron  
+Ability: Sturdy  
+
+Relicanth  
+Ability: Swift Swim  
+
+
 === [gen8nationaldex] Sinnoh Leaders/Roark ===
 
 Rampardos  
@@ -9,8 +156,8 @@ Ability: Sturdy
 Stonjourner  
 Ability: Power Spot  
 
-Bastiodon  
-Ability: Sturdy  
+Aerodactyl  
+Ability: Rock Head  
 
 Rhyperior  
 Ability: Lightning Rod  
@@ -23,21 +170,27 @@ Ability: Strong Jaw
 
 Stoutland  
 Ability: Intimidate  
+IVs: 0 Atk  
 
 Bouffalant  
 Ability: Reckless  
+IVs: 0 Atk  
 
 Cinccino  
 Ability: Cute Charm  
+IVs: 0 Atk  
 
 Raticate-Alola  
 Ability: Gluttony  
+IVs: 0 Atk  
 
 Blissey (F)  
 Ability: Natural Cure  
+IVs: 0 Atk  
 
 Toucannon  
 Ability: Keen Eye  
+IVs: 0 Atk  
 
 
 === [gen8nationaldex] Unova Leaders/Cress ===
@@ -219,9 +372,8 @@ Ability: Comatose
 Girafarig  
 Ability: Inner Focus  
 
-Bewear  
-Ability: Fluffy  
-IVs: 0 Atk  
+Bibarel  
+Ability: Simple  
 
 Drampa  
 Ability: Berserk  
@@ -1271,8 +1423,8 @@ Ability: Battle Armor
 Steelix  
 Ability: Rock Head  
 
-Klefki  
-Ability: Prankster  
+Bastiodon  
+Ability: Sturdy  
 
 Sandslash-Alola  
 Ability: Snow Cloak  
@@ -1321,5 +1473,383 @@ Ability: Magnet Pull
 
 Galvantula  
 Ability: Compound Eyes  
+
+
+=== [gen8nationaldex] Hoenn Leaders/Wattson ===
+
+Manectric  
+Ability: Static  
+
+Electrode  
+Ability: Soundproof  
+
+Dedenne  
+Ability: Cheek Pouch  
+
+Lanturn  
+Ability: Volt Absorb  
+
+Ampharos  
+Ability: Static  
+
+Golem-Alola  
+Ability: Magnet Pull  
+
+
+=== [gen8nationaldex] Hoenn Leaders/Flannery ===
+
+Blaziken  
+Ability: Blaze  
+
+Torkoal  
+Ability: White Smoke  
+
+Camerupt  
+Ability: Magma Armor  
+
+Houndoom  
+Ability: Early Bird  
+
+Coalossal  
+Ability: Steam Engine  
+
+Pyroar  
+Ability: Rivalry  
+
+
+=== [gen8nationaldex] Hoenn Leaders/Norman ===
+
+Slaking  
+Ability: Truant  
+
+Exploud  
+Ability: Soundproof  
+
+Wigglytuff  
+Ability: Cute Charm  
+
+Diggersby  
+Ability: Pickup  
+
+Obstagoon  
+Ability: Reckless  
+
+Unfezant  
+Ability: Big Pecks  
+
+
+=== [gen8nationaldex] Hoenn Leaders/Winona ===
+
+Altaria  
+Ability: Natural Cure  
+
+Skarmory  
+Ability: Keen Eye  
+
+Tropius  
+Ability: Chlorophyll  
+
+Honchkrow  
+Ability: Insomnia  
+
+Gliscor  
+Ability: Hyper Cutter  
+
+Gyarados  
+Ability: Intimidate  
+
+
+=== [gen8nationaldex] Hoenn Leaders/Tate ===
+
+Solrock  
+Ability: Levitate  
+
+Gallade (M)  
+Ability: Steadfast  
+
+Grumpig  
+Ability: Thick Fat  
+
+Reuniclus  
+Ability: Overcoat  
+
+Xatu  
+Ability: Synchronize  
+
+Bronzong  
+Ability: Levitate  
+
+
+=== [gen8nationaldex] Hoenn Leaders/Liza ===
+
+Lunatone  
+Ability: Levitate  
+
+Gardevoir  
+Ability: Synchronize  
+
+Chimecho  
+Ability: Levitate  
+
+Gothitelle  
+Ability: Frisk  
+
+Claydol  
+Ability: Levitate  
+
+Orbeetle  
+Ability: Swarm  
+
+
+=== [gen8nationaldex] Hoenn Leaders/Juan ===
+
+Crawdaunt  
+Ability: Hyper Cutter  
+
+Walrein  
+Ability: Thick Fat  
+
+Swampert  
+Ability: Torrent  
+
+Whiscash  
+Ability: Oblivious  
+
+Barbaracle  
+Ability: Tough Claws  
+
+Jellicent  
+Ability: Water Absorb  
+
+
+=== [gen8nationaldex] Johto Leaders/Bugsy ===
+
+Scizor  
+Ability: Swarm  
+
+Heracross  
+Ability: Swarm  
+
+Yanmega  
+Ability: Speed Boost  
+
+Forretress  
+Ability: Sturdy  
+
+Scolipede  
+Ability: Poison Point  
+
+Golisopod  
+Ability: Emergency Exit  
+
+
+=== [gen8nationaldex] Johto Leaders/Whitney ===
+
+Miltank (F)  
+Ability: Thick Fat  
+
+Blissey (F)  
+Ability: Natural Cure  
+
+Girafarig  
+Ability: Inner Focus  
+
+Ursaring  
+Ability: Guts  
+
+Lopunny  
+Ability: Cute Charm  
+
+Bewear  
+Ability: Fluffy  
+
+
+=== [gen8nationaldex] Johto Leaders/Morty ===
+
+Mismagius  
+Ability: Levitate  
+
+Gengar  
+Ability: Cursed Body  
+
+Dusknoir  
+Ability: Pressure  
+
+Palossand  
+Ability: Water Compaction  
+
+Banette  
+Ability: Insomnia  
+
+Drifblim  
+Ability: Aftermath  
+
+
+=== [gen8nationaldex] Johto Leaders/Chuck ===
+
+Primeape  
+Ability: Vital Spirit  
+
+Poliwrath  
+Ability: Water Absorb  
+
+Hitmontop (M)  
+Ability: Intimidate  
+
+Hawlucha  
+Ability: Limber  
+
+Toxicroak  
+Ability: Anticipation  
+
+Breloom  
+Ability: Effect Spore  
+
+
+=== [gen8nationaldex] Johto Leaders/Clair ===
+
+Kingdra  
+Ability: Swift Swim  
+
+Dragonite  
+Ability: Inner Focus  
+
+Dragalge  
+Ability: Poison Point  
+
+Dracovish  
+Ability: Water Absorb  
+
+Kommo-o  
+Ability: Bulletproof  
+
+Druddigon  
+Ability: Rough Skin  
+
+
+=== [gen8nationaldex] Kanto Leaders/Misty ===
+
+Starmie  
+Ability: Illuminate  
+
+Blastoise  
+Ability: Torrent  
+
+Quagsire  
+Ability: Damp  
+
+Lanturn  
+Ability: Volt Absorb  
+
+Cramorant  
+Ability: Gulp Missile  
+
+Vaporeon  
+Ability: Water Absorb  
+
+
+=== [gen8nationaldex] Kanto Leaders/Lt. Surge ===
+
+Raichu  
+Ability: Static  
+
+Electrode  
+Ability: Soundproof  
+
+Jolteon  
+Ability: Volt Absorb  
+
+Electivire  
+Ability: Motor Drive  
+
+Heliolisk  
+Ability: Dry Skin  
+
+Rotom-Mow  
+Ability: Levitate  
+
+
+=== [gen8nationaldex] Kanto Leaders/Erika ===
+
+Vileplume  
+Ability: Chlorophyll  
+
+Venusaur  
+Ability: Overgrow  
+
+Tangrowth  
+Ability: Chlorophyll  
+
+Abomasnow  
+Ability: Snow Warning  
+
+Exeggutor  
+Ability: Chlorophyll  
+
+Parasect  
+Ability: Effect Spore  
+
+
+=== [gen8nationaldex] Kanto Leaders/Janine ===
+
+Tentacruel  
+Ability: Clear Body  
+
+Weezing  
+Ability: Levitate  
+
+Venomoth  
+Ability: Shield Dust  
+
+Crobat  
+Ability: Inner Focus  
+
+Ariados  
+Ability: Swarm  
+
+Slowbro-Galar  
+Ability: Quick Draw  
+
+
+=== [gen8nationaldex] Kanto Leaders/Sabrina ===
+
+Alakazam  
+Ability: Synchronize  
+
+Slowking  
+Ability: Oblivious  
+
+Espeon  
+Ability: Synchronize  
+
+Indeedee-F (F)  
+Ability: Own Tempo  
+
+Medicham  
+Ability: Pure Power  
+
+Beheeyem  
+Ability: Telepathy  
+
+
+=== [gen8nationaldex] Kanto Leaders/Giovanni ===
+
+Nidoking (M)  
+Ability: Poison Point  
+
+Nidoqueen (F)  
+Ability: Poison Point  
+
+Marowak  
+Ability: Rock Head  
+
+Golem  
+Ability: Rock Head  
+
+Dugtrio-Alola  
+Ability: Sand Veil  
+
+Krookodile  
+Ability: Intimidate  
 
 
