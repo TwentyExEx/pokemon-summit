@@ -400,3 +400,28 @@ Name = Madame
 Gender = Female
 BaseMoney = 60
 #-------------------------------
+[SCHOOL_KID]
+Name = School Kid
+Gender = Male
+BaseMoney = 60
+#-------------------------------
+[PICNICKER]
+Name = Picnicker
+Gender = Female
+BaseMoney = 60
+#-------------------------------
+[POKE_KID]
+Name = Poke Kid
+Gender = Male
+BaseMoney = 60
+#-------------------------------
+[CAMPER]
+Name = Camper
+Gender = Male
+BaseMoney = 60
+#-------------------------------
+[LASS]
+Name = Lass
+Gender = Female
+BaseMoney = 60
+#-------------------------------
