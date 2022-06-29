@@ -1,24 +1,24 @@
 def pbSummitMakePokemon(species, move1, move2, move3, move4)
-  pkmn = Pokemon.new(species, 50)
+  @pkmn = Pokemon.new(species, 50)
   pokeStats = [:HP, :ATTACK, :DEFENSE, :SPECIAL_ATTACK, :SPECIAL_DEFENSE, :SPEED]
   for stat in pokeStats
-    pkmn.iv[stat] = 31
+    @pkmn.iv[stat] = 31
   end
-  pkmn.happiness = 255
-  pkmn.cannot_release = true
+  @pkmn.happiness = 255
+  @pkmn.cannot_release = true
   pokeMoves = [move1, move2, move3, move4]
   for move in pokeMoves
-    pkmn.learn_move(move)
+    @pkmn.learn_move(move)
   end
-  return pkmn
+  return @pkmn
 end
 
 def pbSummitGivePokemon(species, move1, move2, move3, move4)
   pbSummitMakePokemon(species, move1, move2, move3, move4)
-  pbAddPokemonSilent(pkmn)
+  pbAddPokemonSilent(@pkmn)
 end
 
-def pbSummitMakeTrainer(party_size)
+def pbSummitArcadeTrainer(party_size)
   if party_size
     allTypes = [:LASS, :SCHOOL_KID, :PICNICKER, :YOUNGSTER, :POKE_KID, :BUG_CATCHER, :CAMPER]
     namesFem = ["Melody", "Kuromi", "Kitty"]
@@ -32,6 +32,10 @@ def pbSummitMakeTrainer(party_size)
       name = namesMale[rand(namesMale.length)]
     end
     pbNewSummitTrainer(party_size, trainertype, name)
+    # p pbLoadTrainer(trainertype, name)
+    pbLoadTrainer(trainertype, name)
+    TrainerBattle.start(trainertype, name)
+    # pbSummitDeleteTrainer
   else
     pbMessage(_INTL("A team must have at least 1 Pokémon!"))
   end
@@ -43,75 +47,95 @@ def pbSummitChoosePokemon(tr_type)
   case type
     when "youngster", "school_kid"
     pkmnlist = [
-      [:RATICATE,:QUICKATTACK,:CRUNCH,:SWORDSDANCE,:DIG],
-      [:ARBOK,:CRUNCH,:GUNKSHOT,:ICEFANG,:GLARE],
-      [:FEAROW,:DRILLRUN,:AERIALACE,:UTURN,:STEELWING],
-      [:PIDGEOT,:AIRSLASH,:ROOST,:AERIALACE,:QUICKATTACK],
-      [:SANDSLASH,:EARTHQUAKE,:ROLLOUT,:SWORDSDANCE,:SLASH],
-      [:NIDOKING,:POISONJAB,:EARTHQUAKE,:MEGAHORN,:TOXIC],
-      [:NIDOQUEEN,:TOXICSPIKES,:CRUNCH,:EARTHPOWER,:SUPERPOWER]
+      ["RATICATE","QUICKATTACK","CRUNCH","SWORDSDANCE","DIG"],
+      ["ARBOK","CRUNCH","GUNKSHOT","ICEFANG","GLARE"],
+      ["FEAROW","DRILLRUN","AERIALACE","UTURN","STEELWING"],
+      ["PIDGEOT","AIRSLASH","ROOST","AERIALACE","QUICKATTACK"],
+      ["SANDSLASH","EARTHQUAKE","ROLLOUT","SWORDSDANCE","SLASH"],
+      ["NIDOKING","POISONJAB","EARTHQUAKE","MEGAHORN","TOXIC"],
+      ["NIDOQUEEN","TOXICSPIKES","CRUNCH","EARTHPOWER","SUPERPOWER"]
     ]
     when "lass", "poke_kid"
     pkmnlist = [
-      [:RATICATE,:QUICKATTACK,:CRUNCH,:SWORDSDANCE,:DIG],
-      [:ARBOK,:CRUNCH,:GUNKSHOT,:ICEFANG,:GLARE],
-      [:FEAROW,:DRILLRUN,:AERIALACE,:UTURN,:STEELWING],
-      [:PIDGEOT,:AIRSLASH,:ROOST,:AERIALACE,:QUICKATTACK],
-      [:SANDSLASH,:EARTHQUAKE,:ROLLOUT,:SWORDSDANCE,:SLASH],
-      [:NIDOKING,:POISONJAB,:EARTHQUAKE,:MEGAHORN,:TOXIC],
-      [:NIDOQUEEN,:TOXICSPIKES,:CRUNCH,:EARTHPOWER,:SUPERPOWER]
+      ["RATICATE","QUICKATTACK","CRUNCH","SWORDSDANCE","DIG"],
+      ["ARBOK","CRUNCH","GUNKSHOT","ICEFANG","GLARE"],
+      ["FEAROW","DRILLRUN","AERIALACE","UTURN","STEELWING"],
+      ["PIDGEOT","AIRSLASH","ROOST","AERIALACE","QUICKATTACK"],
+      ["SANDSLASH","EARTHQUAKE","ROLLOUT","SWORDSDANCE","SLASH"],
+      ["NIDOKING","POISONJAB","EARTHQUAKE","MEGAHORN","TOXIC"],
+      ["NIDOQUEEN","TOXICSPIKES","CRUNCH","EARTHPOWER","SUPERPOWER"]
     ]
     when "bug_catcher" 
     pkmnlist = [
-      [:BUTTERFREE,:BUGBUZZ,:PSYCHIC,:POISONPOWDER,:AIRSLASH],
-      [:BEEDRILL,:POISONJAB,:BUGBITE,:ENDEAVOR,:ASSURANCE],
-      [:VENOMOTH,:BUGBUZZ,:ENERGYBALL,:SLUDGEBOMB,:PROTECT],
-      [:PINSIR,:SUPERPOWER,:XSCISSOR,:SWORDSDANCE,:SUBMISSION],
-      [:PARASECT,:CROSSPOISON,:XSCISSOR,:STUNSPORE,:POISONPOWDER],
-      [:SCIZOR,:BULLETPUNCH,:IRONHEAD,:XSCISSOR,:SANDTOMB]
+      ["BUTTERFREE","BUGBUZZ","PSYCHIC","POISONPOWDER","AIRSLASH"],
+      ["BEEDRILL","POISONJAB","BUGBITE","ENDEAVOR","ASSURANCE"],
+      ["VENOMOTH","BUGBUZZ","ENERGYBALL","SLUDGEBOMB","PROTECT"],
+      ["PINSIR","SUPERPOWER","XSCISSOR","SWORDSDANCE","SUBMISSION"],
+      ["PARASECT","CROSSPOISON","XSCISSOR","STUNSPORE","POISONPOWDER"],
+      ["SCIZOR","BULLETPUNCH","IRONHEAD","XSCISSOR","SANDTOMB"]
     ]
     when "camper", "picnicker" 
     pkmnlist = [
-      [:DUGTRIO,:SANDTOMB,:NIGHTSLASH,:EARTHQUAKE,:SANDSTORM],
-      [:DUGTRIO_1,:IRONHEAD,:DIG,:EARTHQUAKE,:SUCKERPUNCH],
-      [:SANDSLASH,:EARTHQUAKE,:ROLLOUT,:SWORDSDANCE,:SLASH],
-      [:SANDSLASH_1,:IRONHEAD,:ICICLECRASH,:ICICLESPEAR,:IRONDEFENSE],
-      [:PRIMEAPE,:OUTRAGE,:STOMPINGTANTRUM,:CLOSECOMBAT,:SWAGGER],
-      [:ARBOK,:CRUNCH,:GUNKSHOT,:ICEFANG,:GLARE],
-      [:RATICATE_1,:CRUNCH,:SUCKERPUNCH,:SUPERFANG,:HYPERFANG],
-      [:FEAROW,:DRILLRUN,:AERIALACE,:UTURN,:STEELWING],
-      [:ARCANINE,:FLAMETHROWER,:FLAREBLITZ,:EXTREMESPEED,:PLAYROUGH]
+      ["DUGTRIO","SANDTOMB","NIGHTSLASH","EARTHQUAKE","SANDSTORM"],
+      ["DUGTRIO_1","IRONHEAD","DIG","EARTHQUAKE","SUCKERPUNCH"],
+      ["SANDSLASH","EARTHQUAKE","ROLLOUT","SWORDSDANCE","SLASH"],
+      ["SANDSLASH_1","IRONHEAD","ICICLECRASH","ICICLESPEAR","IRONDEFENSE"],
+      ["PRIMEAPE","OUTRAGE","STOMPINGTANTRUM","CLOSECOMBAT","SWAGGER"],
+      ["ARBOK","CRUNCH","GUNKSHOT","ICEFANG","GLARE"],
+      ["RATICATE_1","CRUNCH","SUCKERPUNCH","SUPERFANG","HYPERFANG"],
+      ["FEAROW","DRILLRUN","AERIALACE","UTURN","STEELWING"],
+      ["ARCANINE","FLAMETHROWER","FLAREBLITZ","EXTREMESPEED","PLAYROUGH"]
     ]
   end
-  return pkmnlist[rand(tr_type.length)]
+  num = rand(0...(pkmnlist.length-1))
+  return pkmnlist[num]
 end
 
-
-def pbNewSummitTrainer(party_size, tr_type, tr_name)
-  moves = []
-
-  trainer = NPCTrainer.new(tr_name, tr_type)
+def pbNewSummitTrainer(party_size, tr_type, tr_name, tr_version = 0, save_changes = true)
+  party = []
   for i in 0...party_size
     loop do
       pkmn = pbSummitChoosePokemon(tr_type)
       if pkmn
-        species = pkmn[0]
-        moves.push(pkmn[1], pkmn[2], pkmn[3], pkmn[4])
-        trainer.party.push([species, moves[0], moves[1], moves[2], moves[3]])
+        party.push([pkmn[0], pkmn[1], pkmn[2], pkmn[3], pkmn[4]])
         break
       else
-        break if i > 0
         pbMessage(_INTL("This trainer must have at least 1 Pokémon!"))
+        break
       end
     end
   end
-  trainer.party.each do |pkmn|
-    pbSummitMakePokemon(pkmn[0], pkmn[1], pkmn[2], pkmn[3], pkmn[4])
-    p "end"
+  trainer = [tr_type, tr_name, [], party, tr_version]
+  if save_changes
+    trainer_hash = {
+      :trainer_type => tr_type,
+      :name         => tr_name,
+      :version      => tr_version,
+      :pokemon      => []
+    }
+    party.each do |pkmn|
+      trainer_hash[:pokemon].push(
+        {
+          :species => pkmn[0],
+          :level   => 50,
+          :moves   => [pkmn[1], pkmn[2], pkmn[3], pkmn[4]]
+        }
+      )
+    end
+    # Add trainer's data to records
+    trainer_hash[:id] = [trainer_hash[:trainer_type], trainer_hash[:name], trainer_hash[:version]]
+    GameData::Trainer.register(trainer_hash)
+    GameData::Trainer.save
+    pbConvertTrainerData
   end
-  p trainer
-  $game_variables[1] = trainer
   return trainer
+end
+
+def pbSummitDeleteTrainer
+  # Remove trainer's data from records
+  GameData::Trainer.delete(@trainer_hash[:id])
+  GameData::Trainer.save
+  pbConvertTrainerData
 end
 
 def pbSummitMakerKanto
