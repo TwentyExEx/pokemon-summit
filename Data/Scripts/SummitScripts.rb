@@ -18,6 +18,43 @@ def pbSummitGivePokemon(species, move1, move2, move3, move4)
   pbAddPokemonSilent(@pkmn)
 end
 
+def pbSummitPrepBattle
+  setBattleRule("canLose")
+  setBattleRule("cannotRun")
+  setBattleRule("noExp")
+  setBattleRule("noMoney")
+  setBattleRule("disablePokeBalls")
+  tempParty = []
+  for i in $Trainer.party
+    clonepoke = i.clone
+    # clonepoke.ev = i.ev.clone
+    clonepoke.iv = i.iv.clone
+    for j in 0...$Trainer.party.length
+      # clonepoke.ev[j] = i.ev[j]
+      clonepoke.iv[j] = i.iv[j]
+    end
+    clonepoke.level = 50 # Set this to whatever preset level you want
+    clonepoke.calc_stats
+    clonepoke.item = nil
+    clonepoke.mail = nil
+    tempParty.push(clonepoke)
+  end
+    $game_variables[27] = $Trainer.party
+    $Trainer.party = tempParty
+    $game_variables[28] = tempParty
+    $game_switches[36] = true
+end
+
+def pbSummitPartyRefresh
+  $Trainer.party = $game_variables[35]
+end
+
+def pbSummitEndBattle(trainertype, name)
+  pbSummitDeleteTrainer(trainertype, name)
+  $Trainer.party = $game_variables[27]
+  $game_switches[36] = false
+end
+
 def pbSummitArcadeTrainer(party_size)
   if party_size
     allTypes = [:LASS, :SCHOOL_KID, :PICNICKER, :YOUNGSTER, :POKE_KID, :BUG_CATCHER, :CAMPER]
@@ -33,8 +70,9 @@ def pbSummitArcadeTrainer(party_size)
     end
     pbNewSummitTrainer(party_size, trainertype, name)
     GameData::TrainerType.get(trainertype).id
+    pbSummitPrepBattle
     TrainerBattle.start(trainertype, name)
-    pbSummitDeleteTrainer(trainertype, name)
+    pbSummitEndBattle(trainertype, name)
   else
     pbMessage(_INTL("A team must have at least 1 Pokémon!"))
   end
