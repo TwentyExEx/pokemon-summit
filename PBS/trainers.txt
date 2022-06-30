@@ -1,4 +1,4 @@
-# See the documentation on the wiki to learn how to edit this file.
+﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
 [LEADER_Brock,Brock]
 Items = FULLRESTORE,FULLRESTORE
@@ -81,3 +81,28 @@ Pokemon = COMFEY,50
 Pokemon = PURUGLY,50
     IV = 20,20,20,20,20,20
 #-------------------------------
+[SCHOOL_KID,Cinnamoroll]
+LoseText = ...
+Pokemon = ARBOK,50
+    Moves = CRUNCH,GUNKSHOT,ICEFANG,GLARE
+    IV = 31,0,0,0,0,0
+Pokemon = SANDSLASH,50
+    Moves = EARTHQUAKE,ROLLOUT,SWORDSDANCE,SLASH
+    IV = 31,0,0,0,0,0
+Pokemon = NIDOKING,50
+    Moves = POISONJAB,EARTHQUAKE,MEGAHORN,TOXIC
+    IV = 31,0,0,0,0,0
+#-------------------------------
+[PICNICKER,Kitty]
+LoseText = ...
+Pokemon = RATICATE,50
+    Form = 1
+    Moves = CRUNCH,SUCKERPUNCH,SUPERFANG,HYPERFANG
+    IV = 31,31,31,31,31,31
+Pokemon = SANDSLASH,50
+    Form = 1
+    Moves = IRONHEAD,ICICLECRASH,ICICLESPEAR,IRONDEFENSE
+    IV = 31,31,31,31,31,31
+Pokemon = FEAROW,50
+    Moves = DRILLRUN,AERIALACE,UTURN,STEELWING
+    IV = 31,31,31,31,31,31

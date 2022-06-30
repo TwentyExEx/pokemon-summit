@@ -40,12 +40,12 @@ def pbSummitArcadeTrainer(party_size)
   end
 end
 
-def pbSummitChoosePokemon(tr_type)
+def pbSummitChoosePokemon(tr_type, party_size)
   type = tr_type.to_s.downcase
+  num = nil
+  party = []
   pkmnlist = []
-  if num
-    oldnum = num
-  end
+
   case type
     when "youngster", "school_kid"
     pkmnlist = [
@@ -79,32 +79,38 @@ def pbSummitChoosePokemon(tr_type)
     when "camper", "picnicker" 
     pkmnlist = [
       ["DUGTRIO","SANDTOMB","NIGHTSLASH","EARTHQUAKE","SANDSTORM"],
-      ["DUGTRIO_1","IRONHEAD","DIG","EARTHQUAKE","SUCKERPUNCH"],
+      ["DUGTRIO","IRONHEAD","DIG","EARTHQUAKE","SUCKERPUNCH",1],
       ["SANDSLASH","EARTHQUAKE","ROLLOUT","SWORDSDANCE","SLASH"],
-      ["SANDSLASH_1","IRONHEAD","ICICLECRASH","ICICLESPEAR","IRONDEFENSE"],
+      ["SANDSLASH","IRONHEAD","ICICLECRASH","ICICLESPEAR","IRONDEFENSE",1],
       ["PRIMEAPE","OUTRAGE","STOMPINGTANTRUM","CLOSECOMBAT","SWAGGER"],
       ["ARBOK","CRUNCH","GUNKSHOT","ICEFANG","GLARE"],
-      ["RATICATE_1","CRUNCH","SUCKERPUNCH","SUPERFANG","HYPERFANG"],
+      ["RATICATE","CRUNCH","SUCKERPUNCH","SUPERFANG","HYPERFANG",1],
       ["FEAROW","DRILLRUN","AERIALACE","UTURN","STEELWING"],
       ["ARCANINE","FLAMETHROWER","FLAREBLITZ","EXTREMESPEED","PLAYROUGH"]
     ]
   end
-  loop do
-    num = rand(0...(pkmnlist.length-1))
-    if !oldnum || oldnum != num
-      break
+  for i in 0...party_size
+    loop do
+      num = rand(0...(pkmnlist.length-1))
+      pkmn = pkmnlist[num]
+      if !party.include?(pkmn)
+        party.push(pkmn)
+        break
+      end
     end
   end
-  return pkmnlist[num]
+  return party
 end
 
 def pbNewSummitTrainer(party_size, tr_type, tr_name, tr_version = 0, save_changes = true)
-  party = []
+  party = pbSummitChoosePokemon(tr_type, party_size)
   for i in 0...party_size
     loop do
-      pkmn = pbSummitChoosePokemon(tr_type)
-      if pkmn
-        party.push([pkmn[0], pkmn[1], pkmn[2], pkmn[3], pkmn[4]])
+      if party
+        pkmn = party[i]
+        if pkmn[5] == nil
+          pkmn[5] = 0
+        end
         break
       else
         pbMessage(_INTL("This trainer must have at least 1 Pokémon!"))
@@ -113,6 +119,7 @@ def pbNewSummitTrainer(party_size, tr_type, tr_name, tr_version = 0, save_change
     end
   end
   trainer = [tr_type, tr_name, [], party, tr_version]
+  pokeStats = [:HP, :ATTACK, :DEFENSE, :SPECIAL_ATTACK, :SPECIAL_DEFENSE, :SPEED]
   if save_changes
     @trainer_hash = {
       :trainer_type => tr_type,
@@ -125,7 +132,9 @@ def pbNewSummitTrainer(party_size, tr_type, tr_name, tr_version = 0, save_change
         {
           :species => pkmn[0],
           :level   => 50,
-          :moves   => [pkmn[1], pkmn[2], pkmn[3], pkmn[4]]
+          :moves   => [pkmn[1], pkmn[2], pkmn[3], pkmn[4]],
+          :iv      => {:HP => 31, :ATTACK => 31, :DEFENSE => 31, :SPECIAL_ATTACK => 31, :SPECIAL_DEFENSE => 31, :SPEED => 31},
+          :form    => pkmn[5]
         }
       )
     end
@@ -140,7 +149,6 @@ end
 
 def pbSummitDeleteTrainer(tr_type, name, tr_version = 0)
   # Remove trainer's data from records
-  # trainer_id = length of thing? idk
   trainer_id = [tr_type, name, tr_version]
   tr_data = GameData::Trainer::DATA[trainer_id]
   GameData::Trainer::DATA.delete(trainer_id)

@@ -424,4 +424,3 @@ BaseMoney = 60
 Name = Lass
 Gender = Female
 BaseMoney = 60
-#-------------------------------
