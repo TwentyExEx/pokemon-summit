@@ -32,10 +32,9 @@ def pbSummitArcadeTrainer(party_size)
       name = namesMale[rand(namesMale.length)]
     end
     pbNewSummitTrainer(party_size, trainertype, name)
-    # p pbLoadTrainer(trainertype, name)
-    pbLoadTrainer(trainertype, name)
+    GameData::TrainerType.get(trainertype).id
     TrainerBattle.start(trainertype, name)
-    # pbSummitDeleteTrainer
+    pbSummitDeleteTrainer(trainertype, name)
   else
     pbMessage(_INTL("A team must have at least 1 Pokémon!"))
   end
@@ -44,6 +43,9 @@ end
 def pbSummitChoosePokemon(tr_type)
   type = tr_type.to_s.downcase
   pkmnlist = []
+  if num
+    oldnum = num
+  end
   case type
     when "youngster", "school_kid"
     pkmnlist = [
@@ -87,7 +89,12 @@ def pbSummitChoosePokemon(tr_type)
       ["ARCANINE","FLAMETHROWER","FLAREBLITZ","EXTREMESPEED","PLAYROUGH"]
     ]
   end
-  num = rand(0...(pkmnlist.length-1))
+  loop do
+    num = rand(0...(pkmnlist.length-1))
+    if !oldnum || oldnum != num
+      break
+    end
+  end
   return pkmnlist[num]
 end
 
@@ -107,14 +114,14 @@ def pbNewSummitTrainer(party_size, tr_type, tr_name, tr_version = 0, save_change
   end
   trainer = [tr_type, tr_name, [], party, tr_version]
   if save_changes
-    trainer_hash = {
+    @trainer_hash = {
       :trainer_type => tr_type,
       :name         => tr_name,
       :version      => tr_version,
       :pokemon      => []
     }
     party.each do |pkmn|
-      trainer_hash[:pokemon].push(
+      @trainer_hash[:pokemon].push(
         {
           :species => pkmn[0],
           :level   => 50,
@@ -123,17 +130,20 @@ def pbNewSummitTrainer(party_size, tr_type, tr_name, tr_version = 0, save_change
       )
     end
     # Add trainer's data to records
-    trainer_hash[:id] = [trainer_hash[:trainer_type], trainer_hash[:name], trainer_hash[:version]]
-    GameData::Trainer.register(trainer_hash)
+    @trainer_hash[:id] = [@trainer_hash[:trainer_type], @trainer_hash[:name], @trainer_hash[:version]]
+    GameData::Trainer.register(@trainer_hash)
     GameData::Trainer.save
     pbConvertTrainerData
   end
   return trainer
 end
 
-def pbSummitDeleteTrainer
+def pbSummitDeleteTrainer(tr_type, name, tr_version = 0)
   # Remove trainer's data from records
-  GameData::Trainer.delete(@trainer_hash[:id])
+  # trainer_id = length of thing? idk
+  trainer_id = [tr_type, name, tr_version]
+  tr_data = GameData::Trainer::DATA[trainer_id]
+  GameData::Trainer::DATA.delete(trainer_id)
   GameData::Trainer.save
   pbConvertTrainerData
 end
