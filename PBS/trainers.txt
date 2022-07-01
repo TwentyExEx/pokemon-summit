@@ -80,39 +80,3 @@ Pokemon = COMFEY,50
     IV = 20,20,20,20,20,20
 Pokemon = PURUGLY,50
     IV = 20,20,20,20,20,20
-#-------------------------------
-[LASS,Kitty]
-LoseText = ...
-Pokemon = RATICATE,50
-    Moves = QUICKATTACK,CRUNCH,SWORDSDANCE,DIG
-    IV = 31,31,31,31,31,31
-Pokemon = SANDSLASH,50
-    Moves = EARTHQUAKE,ROLLOUT,SWORDSDANCE,SLASH
-    IV = 31,31,31,31,31,31
-Pokemon = PIDGEOT,50
-    Moves = AIRSLASH,ROOST,AERIALACE,QUICKATTACK
-    IV = 31,31,31,31,31,31
-#-------------------------------
-[POKE_KID,Keroppi]
-LoseText = ...
-Pokemon = NIDOKING,50
-    Moves = POISONJAB,EARTHQUAKE,MEGAHORN,TOXIC
-    IV = 31,31,31,31,31,31
-Pokemon = PIDGEOT,50
-    Moves = AIRSLASH,ROOST,AERIALACE,QUICKATTACK
-    IV = 31,31,31,31,31,31
-Pokemon = FEAROW,50
-    Moves = DRILLRUN,AERIALACE,UTURN,STEELWING
-    IV = 31,31,31,31,31,31
-#-------------------------------
-[YOUNGSTER,Keroppi]
-LoseText = ...
-Pokemon = PIDGEOT,50
-    Moves = AIRSLASH,ROOST,AERIALACE,QUICKATTACK
-    IV = 31,31,31,31,31,31
-Pokemon = NIDOKING,50
-    Moves = POISONJAB,EARTHQUAKE,MEGAHORN,TOXIC
-    IV = 31,31,31,31,31,31
-Pokemon = RATICATE,50
-    Moves = QUICKATTACK,CRUNCH,SWORDSDANCE,DIG
-    IV = 31,31,31,31,31,31
