@@ -31,11 +31,11 @@ Alder - KalerioDion and Aveontrainer
 Cynthia - Wobb and Aveontrainer
 
 Trainer Sprites 
-Milo, Nessa, Kabu, Bea, Allister, Opal, Gordie, Melony, Piers, Raihan, President Rose, Green, Lisia - Brumirage, Altthiel, Pujolly and Irpachuza. 
-Ilima, Lana, Kiawe, Mallow, Sophocles, Acerola, Mina, Hau, Guzma - Beliot419
-Viola, Korrina, Ramos, Clemont, Valerie, Olympia, Wulfric, Sidney - Gnomowladny
+Milo, Nessa, Kabu, Bea, Allister, Opal, Gordie, Melony, Piers, Raihan, President Rose, Green, Lisia, Klara, Avery, Mustard, Marnie, Bede, Sonia, Peony, Gloria, Leon - Brumirage, Altthiel, Pujolly and Irpachuza. 
+Ilima, Lana, Kiawe, Mallow, Sophocles, Acerola, Mina, Hau, Guzma, Elio, Selene, Kukui - Beliot419
+Viola, Korrina, Ramos, Clemont, Valerie, Olympia, Wulfric, Sidney, Malva, Siebold, Wikstrom, Drasna - Gnomowladny
 Grant, Glacia - MechanicalApe464
-Wally, Maxie, Archie - hyo-oppa
+Wally, Maxie, Archie, Leaf, Red, Brandan, May, Victor, Steven - hyo-oppa
 Shauna - Krokotips
 Lysandre, Brock, Misty, Surge, Erika, Koga, Sabrina, Blaine, Lorelei, Bruno, Agatha, Lance - Drawnamu
 Professor Elm - VictorV111
@@ -43,4 +43,8 @@ Kris - Kimba616, InvaderDebz and pruighfyurgfgbvf
 Phoebe - UltimaxLugia2020
 Drake - Segesi
 Zinnia - Jart4115
-
+Professor Juniper - art-56
+Professor Sycamore - Wynruelle
+Trevor - Aveontrainer
+Calem, Serena - TintjeMadelintje101
+Looker, Diantha - KyleDove
