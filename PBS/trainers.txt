@@ -18,3 +18,14 @@ Pokemon = ONIX,14
     IV = 20,20,20,20,20,20
     Ball = HEAVYBALL
 #-------------------------------
+[LASS,Jocelyn]
+LoseText = ...
+Pokemon = SWANNA,50
+    Moves = AERIALACE,HURRICANE,WATERPULSE,ICEBEAM
+    IV = 31,31,31,31,31,31
+Pokemon = SWELLOW,50
+    Moves = BRAVEBIRD,AERIALACE,QUICKATTACK,UTURN
+    IV = 31,31,31,31,31,31
+Pokemon = RAICHU,50
+    Moves = THUNDER,RAINDANCE,THUNDERBOLT,SURF
+    IV = 31,31,31,31,31,31
