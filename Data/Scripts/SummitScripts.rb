@@ -18,6 +18,48 @@ def pbSummitGivePokemon(species, move1, move2, move3, move4)
   pbAddPokemonSilent(@pkmn)
 end
 
+def pbSummitGauntletSelection(gauntlet)
+  trainerSelection = []
+
+  case gauntlet.downcase
+    when "kanto"
+      trainerlist = [
+        ["LEADER_Brock","Brock",0],
+        ["LEADER_Misty","Misty",0],
+        ["LEADER_Surge","Lt. Surge",0],
+        ["LEADER_Erika","Erika",0],
+        ["LEADER_Janine","Janine",0],
+        ["LEADER_Sabrina","Sabrina",0],
+        ["LEADER_Blaine","Blaine",0],
+        ["LEADER_Giovanni","Giovanni",0]
+      ]
+  end
+  (1..4).each {
+    num = rand(0...(trainerlist.length))
+    trainer = trainerlist[num]
+    if !trainerSelection.include?(trainer)
+      trainerSelection.push(trainer)
+      break
+    end
+  }
+  $game_variables[29] = trainerSelection
+end
+
+def pbSummitPrepGauntletTrainer
+  trainers = $game_variables[29]
+  order = $game_variables[31]
+  trainer = trainers[order]
+  $game_variables[30] = trainer[0]
+end
+
+def pbSummitGauntletTrainer
+    pbSummitPrepBattle
+  TrainerBattle.start(trainer)
+  if $game_variables[1] = 1
+    $game_variables[31] += 1
+  end
+end
+
 def pbSummitPrepBattle
   setBattleRule("canLose")
   setBattleRule("cannotRun")
