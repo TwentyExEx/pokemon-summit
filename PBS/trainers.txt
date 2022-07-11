@@ -18,14 +18,241 @@ Pokemon = ONIX,14
     IV = 20,20,20,20,20,20
     Ball = HEAVYBALL
 #-------------------------------
-[LASS,Jocelyn]
-LoseText = ...
-Pokemon = SWANNA,50
-    Moves = AERIALACE,HURRICANE,WATERPULSE,ICEBEAM
-    IV = 31,31,31,31,31,31
-Pokemon = SWELLOW,50
-    Moves = BRAVEBIRD,AERIALACE,QUICKATTACK,UTURN
-    IV = 31,31,31,31,31,31
+[LEADER_Brock,Brock,0]
+Pokemon = KABUTOPS,50
+	Moves = AQUAJET,LIQUIDATION,LEECHLIFE,STONEEDGE
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = GOLEM,50
+	Moves = EARTHQUAKE,STONEEDGE,HEAVYSLAM,SANDSTORM
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = AERODACTYL,50
+	Moves = GIGAIMPACT,ROCKSLIDE,STONEEDGE,IRONHEAD
+	AbilityIndex = 0 
+	IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Misty,Misty,0]
+Pokemon = QUAGSIRE,50
+	Moves = EARTHQUAKE,AQUATAIL,BRICKBREAK,ROCKTOMB
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = STARMIE,50
+	Moves = PSYCHIC,HYDROPUMP,POWERGEM,RECOVER
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = BLASTOISE,50
+	Moves = AQUATAIL,SURF,FLASHCANNON,SHELLSMASH
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Surge,Lt. Surge,0]
+Pokemon = ELECTRODE,50
+	Moves = DISCHARGE,THUNDERBOLT,LIGHTSCREEN,THUNDERWAVE
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
 Pokemon = RAICHU,50
-    Moves = THUNDER,RAINDANCE,THUNDERBOLT,SURF
-    IV = 31,31,31,31,31,31
+	Moves = THUNDER,RAINDANCE,THUNDERBOLT,SURF
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = JOLTEON,50
+	Moves = THUNDERBOLT,RAINDANCE,SHADOWBALL,THUNDER
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Erika,Erika,0]
+Pokemon = PARASECT,50
+	Moves = CROSSPOISON,XSCISSOR,STUNSPORE,POISONPOWDER
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = VILEPLUME,50
+	Moves = GIGADRAIN,PETALDANCE,SLUDGEWAVE,DAZZLINGGLEAM
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = VENUSAUR,50
+	Moves = PETALDANCE,ENERGYBALL,SLUDGEBOMB,TOXIC
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Janine,Janine,0]
+Pokemon = WEEZING,50
+	Moves = ASSURANCE,TOXIC,SLUDGEBOMB,HEATWAVE
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = TENTACRUEL,50
+	Moves = SLUDGEWAVE,SURF,HEX,SCALD
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = VENOMOTH,50
+	Moves = BUGBUZZ,ENERGYBALL,SLUDGEBOMB,PROTECT
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Sabrina,Sabrina,0]
+Pokemon = SLOWKING,50
+	Moves = SCALD,PSYCHIC,SLACKOFF,TELEPORT
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = ESPEON,50
+	Moves = PSYCHIC,DAZZLINGGLEAM,SHADOWBALL,REST
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = ALAKAZAM,50
+	Moves = PSYCHIC,CALMMIND,DAZZLINGGLEAM,SHADOWBALL
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Sabrina,Sabrina,0]
+Pokemon = SLOWKING,50
+	Moves = SCALD,PSYCHIC,SLACKOFF,TELEPORT
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = ESPEON,50
+	Moves = PSYCHIC,DAZZLINGGLEAM,SHADOWBALL,REST
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = ALAKAZAM,50
+	Moves = PSYCHIC,CALMMIND,DAZZLINGGLEAM,SHADOWBALL
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Blaine,Blaine,0]
+Pokemon = NINETALES,50
+	Moves = FLAMETHROWER,WILLOWISP,DISABLE,ENERGYBALL
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = CHARIZARD,50
+	Moves = DRAGONPULSE,FLAMETHROWER,AIRSLASH,OVERHEAT
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = ARCANINE,50
+	Moves = FLAMETHROWER,FLAREBLITZ,EXTREMESPEED,PLAYROUGH
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Giovanni,Giovanni,0]
+Pokemon = NIDOQUEEN,50
+	Moves = TOXICSPIKES,CRUNCH,EARTHPOWER,SUPERPOWER
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = MAROWAK,50
+	Moves = GIGAIMPACT,BONEMERANG,ROCKTOMB,EARTHQUAKE
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = NIDOKING,50
+	Moves = POISONJAB,EARTHQUAKE,MEGAHORN,TOXIC
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Falkner,Falkner,0]
+Pokemon = PIDGEOT,50
+	Moves = AIRSLASH,ROOST,AERIALACE,QUICKATTACK
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = NOCTOWL,50
+	Moves = AIRSLASH,HYPNOSIS,DREAMEATER,MOONBLAST
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = PELIPPER,50
+	Moves = SCALD,ROOST,UTURN,DEFOG
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Bugsy,Bugsy,0]
+Pokemon = SCIZOR,50
+	Moves = BULLETPUNCH,IRONHEAD,XSCISSOR,SWORDSDANCE
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = HERACROSS,50
+	Moves = FACADE,THROATCHOP,MEGAHORN,CLOSECOMBAT
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = YANMEGA,50
+	Moves = BUGBUZZ,AIRSLASH,UTURN,GIGADRAIN
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Whitney,Whitney,0]
+Pokemon = MILTANK,50
+	Moves = STEALTHROCK,MILKDRINK,THUNDERWAVE,SEISMICTOSS
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = BLISSEY,50
+	Moves = SEISMICTOSS,SOFTBOILED,THUNDERWAVE,TELEPORT
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = GIRAFARIG,50
+	Moves = ZENHEADBUTT,EARTHQUAKE,CRUNCH,PROTECT
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Morty,Morty,0]
+Pokemon = MISMAGIUS,50
+	Moves = NASTYPLOT,SHADOWBALL,MYSTICALFIRE,WILLOWISP
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = GENGAR,50
+	Moves = DARKPULSE,SHADOWBALL,SLUDGEBOMB,THUNDERBOLT
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = DUSKNOIR,50
+	Moves = POLTERGEIST,EARTHQUAKE,SHADOWSNEAK,POWERUPPUNCH
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Chuck,Chuck,0]
+Pokemon = PRIMEAPE,50
+	Moves = OUTRAGE,STOMPINGTANTRUM,CLOSECOMBAT,SWAGGER
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = POLIWRATH,50
+	Moves = DRAINPUNCH,DIVE,EARTHQUAKE,POISONJAB
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = HITMONTOP,50
+	Moves = DIG,CLOSECOMBAT,SUCKERPUNCH,DETECT
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Jasmine,Jasmine,0]
+Pokemon = FORRETRESS,50
+	Moves = HEAVYSLAM,GYROBALL,SPIKES,TOXICSPIKES
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = STEELIX,50
+	Moves = STEALTHROCK,EARTHQUAKE,HEAVYSLAM,TOXIC
+	AbilityIndex = 1
+	IV = 31,31,31,31,31,31
+Pokemon = SKARMORY,50
+	Moves = WHIRLWIND,ROOST,BRAVEBIRD,SPIKES
+	AbilityIndex = 1
+	IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Pryce,Pryce,0]
+Pokemon = MAMOSWINE,50
+	Moves = ICICLECRASH,EARTHQUAKE,ICESHARD,KNOCKOFF
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = WEAVILE,50
+	Moves = SWORDSDANCE,TRIPLEAXEL,KNOCKOFF,ICESHARD
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = LAPRAS,50
+	Moves = ICEBEAM,BRINE,RAINDANCE,SING
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Clair,Clair,0]
+Pokemon = KINGDRA,50
+	Moves = HYDROPUMP,DRACOMETEOR,SURF,RAINDANCE
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = DRAGONITE,50
+	Moves = OUTRAGE,THUNDERPUNCH,STONEEDGE,DRAGONDANCE
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+Pokemon = DRAGALGE,50
+	Moves = DRACOMETEOR,SLUDGEBOMB,FLIPTURN,SCALD
+	AbilityIndex = 0
+	IV = 31,31,31,31,31,31
+#-------------------------------
