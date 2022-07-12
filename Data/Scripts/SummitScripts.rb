@@ -420,11 +420,11 @@ $allpkmn = [
 
 def pbSummitSelectPokemon
   num = rand(0...($allpkmn.length))
-  @makepkmn = $allpkmn[num]
-  pbSummitMakePokemon(@makepkmn[0])
+  pkmn = $allpkmn[num]
+  pbSummitMakePokemon(pkmn[0], pkmn[5])
 end
 
-def pbSummitMakePokemon(species)
+def pbSummitMakePokemon(species, form)
   @givepkmn = Pokemon.new(species, 50)
   pokeStats = [:HP, :ATTACK, :DEFENSE, :SPECIAL_ATTACK, :SPECIAL_DEFENSE, :SPEED]
   for stat in pokeStats
@@ -432,17 +432,25 @@ def pbSummitMakePokemon(species)
   end
   @givepkmn.happiness = 255
   @givepkmn.cannot_release = true
-  pokeMoves = [@makepkmn[1], @makepkmn[2], @makepkmn[3], @makepkmn[4]]
+
+  for n in $allpkmn
+    if [n[0], n[5]] == [species, form]
+      pkmninfo = n
+      break
+    end
+  end
+
+  pokeMoves = [pkmninfo[1], pkmninfo[2], pkmninfo[3], pkmninfo[4]]
   for move in pokeMoves
     @givepkmn.learn_move(move)
   end
-  @givepkmn.form = @makepkmn[5]
-  @givepkmn.ability_index = @makepkmn[6]
+  @givepkmn.form = pkmninfo[5]
+  @givepkmn.ability_index = pkmninfo[6]
   return @givepkmn
 end
 
-def pbSummitGivePokemon(species)
-  pbSummitMakePokemon(species)
+def pbSummitGivePokemon(species, form)
+  pbSummitMakePokemon(species, form)
   pbAddPokemonSilent(@givepkmn)
 end
 
@@ -902,82 +910,105 @@ def pbSummitDeleteTrainer(tr_type, name, tr_version = 0)
 end
 
 def pbSummitMakerKanto
-  pbSummitGivePokemon(:VENUSAUR)
-  pbSummitGivePokemon(:CHARIZARD)
-  pbSummitGivePokemon(:BLASTOISE)
-  pbSummitGivePokemon(:RAICHU)
-  pbSummitGivePokemon(:PIDGEOT)
-  pbSummitGivePokemon(:HITMONLEE)
+  if !$Trainer.owned?(:VENUSAUR)
+    pbSummitGivePokemon(:VENUSAUR,0)
+    pbSummitGivePokemon(:CHARIZARD,0)
+    pbSummitGivePokemon(:BLASTOISE,0)
+    pbSummitGivePokemon(:RAICHU,0)
+    pbSummitGivePokemon(:PIDGEOT,0)
+    pbSummitGivePokemon(:HITMONLEE,0)
+  else
+    pbMessage("You have already obtained this starter set.")
+  end
 end
 
 def pbSummitMakerJohto
-  pbSummitGivePokemon(:MEGANIUM)
-  pbSummitGivePokemon(:TYPHLOSION)
-  pbSummitGivePokemon(:FERALIGATR)
-  pbSummitGivePokemon(:AMPHAROS)
-  pbSummitGivePokemon(:NOCTOWL)
-  pbSummitGivePokemon(:HITMONTOP)
+  if !$Trainer.owned?(:MEGANIUM)
+    pbSummitGivePokemon(:MEGANIUM,0)
+    pbSummitGivePokemon(:TYPHLOSION,0)
+    pbSummitGivePokemon(:FERALIGATR,0)
+    pbSummitGivePokemon(:AMPHAROS,0)
+    pbSummitGivePokemon(:NOCTOWL,0)
+    pbSummitGivePokemon(:HITMONTOP,0)
+  else
+    pbMessage("You have already obtained this starter set.")
+  end
 end
 
 def pbSummitMakerHoenn
-  pbSummitGivePokemon(:SCEPTILE)
-  pbSummitGivePokemon(:BLAZIKEN)
-  pbSummitGivePokemon(:SWAMPERT)
-  pbSummitGivePokemon(:MANECTRIC)
-  pbSummitGivePokemon(:SWELLOW)
-  pbSummitGivePokemon(:HARIYAMA)
+  if !$Trainer.owned?(:SCEPTILE)
+    pbSummitGivePokemon(:SCEPTILE,0)
+    pbSummitGivePokemon(:BLAZIKEN,0)
+    pbSummitGivePokemon(:SWAMPERT,0)
+    pbSummitGivePokemon(:MANECTRIC,0)
+    pbSummitGivePokemon(:SWELLOW,0)
+    pbSummitGivePokemon(:HARIYAMA,0)
+  else
+    pbMessage("You have already obtained this starter set.")
+  end
 end
 
 def pbSummitMakerSinnoh
-  pbSummitGivePokemon(:TORTERRA)
-  pbSummitGivePokemon(:INFERNAPE)
-  pbSummitGivePokemon(:EMPOLEON)
-  pbSummitGivePokemon(:LUXRAY)
-  pbSummitGivePokemon(:STARAPTOR)
-  pbSummitGivePokemon(:LUCARIO)
+  if !$Trainer.owned?(:TORTERRA)
+    pbSummitGivePokemon(:TORTERRA,0)
+    pbSummitGivePokemon(:INFERNAPE,0)
+    pbSummitGivePokemon(:EMPOLEON,0)
+    pbSummitGivePokemon(:LUXRAY,0)
+    pbSummitGivePokemon(:STARAPTOR,0)
+    pbSummitGivePokemon(:LUCARIO,0)
+  else
+    pbMessage("You have already obtained this starter set.")
+  end
 end
 
 def pbSummitMakerUnova
-  pbSummitGivePokemon(:SERPERIOR)
-  pbSummitGivePokemon(:EMBOAR)
-  pbSummitGivePokemon(:SAMUROTT)
-  pbSummitGivePokemon(:ZEBSTRIKA)
-  pbSummitGivePokemon(:UNFEZANT)
-  pbSummitGivePokemon(:CONKELDURR)
+  if !$Trainer.owned?(:SERPERIOR)
+    pbSummitGivePokemon(:SERPERIOR,0)
+    pbSummitGivePokemon(:EMBOAR,0)
+    pbSummitGivePokemon(:SAMUROTT,0)
+    pbSummitGivePokemon(:ZEBSTRIKA,0)
+    pbSummitGivePokemon(:UNFEZANT,0)
+    pbSummitGivePokemon(:CONKELDURR,0)
+  else
+    pbMessage("You have already obtained this starter set.")
+  end
 end
 
 def pbSummitMakerKalos
-  pbSummitGivePokemon(:CHESNAUGHT)
-  pbSummitGivePokemon(:DELPHOX)
-  pbSummitGivePokemon(:GRENINJA)
-  pbSummitGivePokemon(:HELIOLISK)
-  pbSummitGivePokemon(:TALONFLAME)
-  pbSummitGivePokemon(:PANGORO)
-end
-
-def pbSummitMakerKalos
-  pbSummitGivePokemon(:CHESNAUGHT)
-  pbSummitGivePokemon(:DELPHOX)
-  pbSummitGivePokemon(:GRENINJA)
-  pbSummitGivePokemon(:HELIOLISK)
-  pbSummitGivePokemon(:TALONFLAME)
-  pbSummitGivePokemon(:PANGORO)
+  if !$Trainer.owned?(:CHESNAUGHT)
+    pbSummitGivePokemon(:CHESNAUGHT,0)
+    pbSummitGivePokemon(:DELPHOX,0)
+    pbSummitGivePokemon(:GRENINJA,0)
+    pbSummitGivePokemon(:HELIOLISK,0)
+    pbSummitGivePokemon(:TALONFLAME,0)
+    pbSummitGivePokemon(:PANGORO,0)
+  else
+    pbMessage("You have already obtained this starter set.")
+  end
 end
 
 def pbSummitMakerAlola
-  pbSummitGivePokemon(:DECIDUEYE)
-  pbSummitGivePokemon(:INCINEROAR)
-  pbSummitGivePokemon(:PRIMARINA)
-  pbSummitGivePokemon(:VIKAVOLT)
-  pbSummitGivePokemon(:TOUCANNON)
-  pbSummitGivePokemon(:CRABOMINABLE)
+  if !$Trainer.owned?(:DECIDUEYE)
+    pbSummitGivePokemon(:DECIDUEYE,0)
+    pbSummitGivePokemon(:INCINEROAR,0)
+    pbSummitGivePokemon(:PRIMARINA,0)
+    pbSummitGivePokemon(:VIKAVOLT,0)
+    pbSummitGivePokemon(:TOUCANNON,0)
+    pbSummitGivePokemon(:CRABOMINABLE,0)
+  else
+    pbMessage("You have already obtained this starter set.")
+  end
 end
 
 def pbSummitMakerGalar
-  pbSummitGivePokemon(:RILLABOOM)
-  pbSummitGivePokemon(:CINDERACE)
-  pbSummitGivePokemon(:INTELEON)
-  pbSummitGivePokemon(:TOXTRICITY)
-  pbSummitGivePokemon(:CORVIKNIGHT)
-  pbSummitGivePokemon(:GRAPPLOCT)
+  if !$Trainer.owned?(:RILLABOOM)
+    pbSummitGivePokemon(:RILLABOOM,0)
+    pbSummitGivePokemon(:CINDERACE,0)
+    pbSummitGivePokemon(:INTELEON,0)
+    pbSummitGivePokemon(:TOXTRICITY,0)
+    pbSummitGivePokemon(:CORVIKNIGHT,0)
+    pbSummitGivePokemon(:GRAPPLOCT,0)
+  else
+    pbMessage("You have already obtained this starter set.")
+  end
 end
