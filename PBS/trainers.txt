@@ -512,7 +512,7 @@ Pokemon = SIMISAGE,50
 	Moves = LEAFSTORM,SUPERPOWER,ROCKSLIDE,GUNKSHOT
 	AbilityIndex = 0
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = Huh? Is it over?
 #-------------------------------
 [LEADER_Cress,Cress,0]
 Pokemon = SEISMITOAD,50
@@ -527,7 +527,7 @@ Pokemon = SIMIPOUR,50
 	Moves = NASTYPLOT,HYDROPUMP,ICEBEAM,GRASSKNOT
 	AbilityIndex = 0
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = Lose? Me? I don't believe this.
 #-------------------------------
 [LEADER_Chili,Chili,0]
 Pokemon = HEATMOR,50
@@ -542,7 +542,7 @@ Pokemon = SIMISEAR,50
 	Moves = NASTYPLOT,FIREBLAST,GRASSKNOT,FOCUSBLAST
 	AbilityIndex = 0
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = You got me. I am...burned...out...
 #-------------------------------
 [LEADER_Lenora,Lenora,0]
 Pokemon = BRAVIARY,50
@@ -557,7 +557,7 @@ Pokemon = CINCCINO,50
 	Moves = TAILSLAP,TRIPLEAXEL,BULLETSEED,KNOCKOFF
 	AbilityIndex = 0
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = Your fighting style is so enchanting.
 #-------------------------------
 [LEADER_Burgh,Burgh,0]
 Pokemon = CRUSTLE,50
@@ -572,7 +572,7 @@ Pokemon = LEAVANNY,50
 	Moves = STICKYWEB,LEAFBLADE,XSCISSOR,MAGICCOAT
 	AbilityIndex = 1
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = Is it over? Has my muse abandoned me?
 #-------------------------------
 [LEADER_Elesa,Elesa,0]
 Pokemon = EELEKTROSS,50
@@ -587,7 +587,7 @@ Pokemon = ZEBSTRIKA,50
 	Moves = THUNDERBOLT,VOLTSWITCH,OVERHEAT,HIDDENPOWER
 	AbilityIndex = 1
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = I meant to make your head spin, but you shocked me instead.
 #-------------------------------
 [LEADER_Clay,Clay,0]
 Pokemon = KROOKODILE,50
@@ -598,11 +598,11 @@ Pokemon = GOLURK,50
 	Moves = STEALTHROCK,EARTHQUAKE,SHADOWPUNCH,ICEPUNCH
 	AbilityIndex = 0
 	IV = 31,31,31,31,31,31
-Pokemon = EXCADRIL,50
+Pokemon = EXCADRILL,50
 	Moves = EARTHQUAKE,IRONHEAD,RAPIDSPIN,TOXIC
 	AbilityIndex = 0
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = Well, I've had enough... And just so you know, I didn't go easy on you.
 #-------------------------------
 [LEADER_Skyla,Skyla,0]
 Pokemon = ARCHEOPS,50
@@ -617,7 +617,7 @@ Pokemon = SWANNA,50
 	Moves = AERIALACE,HURRICANE,WATERPULSE,ICEBEAM
 	AbilityIndex = 0
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = Being your opponent in battle is a new source of strength to me. Thank you!
 #-------------------------------
 [LEADER_Brycen,Brycen,0]
 Pokemon = BEARTIC,50
@@ -632,7 +632,7 @@ Pokemon = CRYOGONAL,50
 	Moves = RAPIDSPIN,RECOVER,FREEZEDRY,KNOCKOFF
 	AbilityIndex = 0
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = The wonderful combination of you and your Pokémon! What a beautiful friendship!
 #-------------------------------
 [LEADER_Drayden,Drayden,0]
 Pokemon = HYDREIGON,50
@@ -647,7 +647,7 @@ Pokemon = HAXORUS,50
 	Moves = SWORDSDANCE,OUTRAGE,EARTHQUAKE,POISONJAB
 	AbilityIndex = 0
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = This intense feeling that floods me after a defeat... I don't know how to describe it.
 #-------------------------------
 [LEADER_Cheren,Cheren,0]
 Pokemon = STOUTLAND,50
@@ -662,7 +662,7 @@ Pokemon = CINCCINO,50
 	Moves = TAILSLAP,TRIPLEAXEL,BULLETSEED,KNOCKOFF
 	AbilityIndex = 1
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = Fantastic! You and your Pokémon have grown much stronger!
 #-------------------------------
 [LEADER_Roxie,Roxie,0]
 Pokemon = AMOONGUSS,50
@@ -677,7 +677,7 @@ Pokemon = SCOLIPEDE,50
 	Moves = MEGAHORN,TOXIC,CROSSPOISON,XSCISSOR
 	AbilityIndex = 1
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = Next time we meet, I'm going to give you a toxic shock!
 #-------------------------------
 [LEADER_Marlon,Marlon,0]
 Pokemon = ALOMOMOLA,50
@@ -692,7 +692,7 @@ Pokemon = CARRACOSTA,50
 	Moves = SHELLSMASH,STONEEDGE,AQUAJET,LIQUIDATION
 	AbilityIndex = 1
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = You're strong as a gnarly wave and as nice as a glassy sea.
 #-------------------------------
 [LEADER_Viola,Viola,0]
 Pokemon = VIVILLON,50
@@ -707,7 +707,7 @@ Pokemon = MASQUERAIN,50
 	Moves = STICKYWEB,BUGBUZZ,AIRSLASH,SCALD
 	AbilityIndex = 0
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = You and your Pokémon have shown me a whole new depth of field! Fantastic! Just fantastic!
 #-------------------------------
 [LEADER_Grant,Grant,0]
 Pokemon = AURORUS,50
@@ -722,7 +722,7 @@ Pokemon = CARBINK,50
 	Moves = STEALTHROCK,MOONBLAST,PROTECT,BODYPRESS
 	AbilityIndex = 0
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = You have proven to be a wall that I am unable to surmount!
 #-------------------------------
 [LEADER_Korrina,Korrina,0]
 Pokemon = MIENSHAO,50
@@ -737,7 +737,7 @@ Pokemon = HAWLUCHA,50
 	Moves = FLYINGPRESS,SUBMISSION,ROCKTOMB,POISONJAB
 	AbilityIndex = 1
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = How could it be?!
 #-------------------------------
 [LEADER_Ramos,Ramos,0]
 Pokemon = JUMPLUFF,50
@@ -752,7 +752,7 @@ Pokemon = GOGOAT,50
 	Moves = BULKUP,HORNLEECH,EARTHQUAKE,ROCKSLIDE
 	AbilityIndex = 0
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = Yeh believe in yer Pokémon... And they believe in yeh, too..
 #-------------------------------
 [LEADER_Clemont,Clemont,0]
 Pokemon = MAGNEZONE,50
@@ -767,7 +767,7 @@ Pokemon = HELIOLISK,50
 	Moves = THUNDERBOLT,HYPERVOICE,VOLTSWITCH,DARKPULSE
 	AbilityIndex = 0
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = Your passion for battle inspires me!
 #-------------------------------
 [LEADER_Valerie,Valerie,0]
 Pokemon = AROMATISSE,50
@@ -782,7 +782,7 @@ Pokemon = SYLVEON,50
 	Moves = MOONBLAST,PSYSHOCK,MISTYTERRAIN,MYSTICALFIRE
 	AbilityIndex = 0
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = I hope the sun is shining tomorrow... That would be reason enough to smile.
 #-------------------------------
 [LEADER_Olympia,Olympia,0]
 Pokemon = MEOWSTIC,50
@@ -797,7 +797,7 @@ Pokemon = SIGILYPH,50
 	Moves = CALMMIND,AIRSLASH,ROOST,PSYCHIC
 	AbilityIndex = 0
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = Create your own path. Let nothing get in your way. Your fate, your future.
 #-------------------------------
 [LEADER_Wulfric,Wulfric,0]
 Pokemon = CRYOGONAL,50
@@ -812,9 +812,9 @@ Pokemon = ABOMASNOW,50
 	Moves = SWORDSDANCE,ICESHARD,WOODHAMMER,EARTHQUAKE
 	AbilityIndex = 0
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = Outstanding! I'm tough as an iceberg, but you smashed me through and through!
 #-------------------------------
-[LEADER_Ilima,Ilima,0]
+[CAPTAIN_Ilima,Ilima,0]
 Pokemon = KOMALA,50
 	Moves = WOODHAMMER,THRASH,ROLLOUT,RAPIDSPIN
 	AbilityIndex = 0
@@ -828,9 +828,9 @@ Pokemon = RATICATE,50
 	AbilityIndex = 1
 	IV = 31,31,31,31,31,31
 	Form = 1 
-LoseText = 
+LoseText = Yes! You have emerged victorious!
 #-------------------------------
-[LEADER_Mallow,Mallow,0]
+[CAPTAIN_Mallow,Mallow,0]
 Pokemon = SHIINOTIC,50
 	Moves = SPORE,STRENGTHSAP,GIGADRAIN,MOONBLAST
 	AbilityIndex = 1
@@ -843,9 +843,9 @@ Pokemon = LURANTIS,50
 	Moves = LEAFSTORM,SUPERPOWER,SYNTHESIS,SUNNYDAY
 	AbilityIndex = 1
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = Sure enough, when it comes to you and Pokémon, the quality of the ingredients shines forth!
 #-------------------------------
-[LEADER_Lana,Lana,0]
+[CAPTAIN_Lana,Lana,0]
 Pokemon = ARAQUANID,50
 	Moves = LEECHLIFE,LIQUIDATION,CRUNCH,RAINDANCE
 	AbilityIndex = 0
@@ -858,15 +858,15 @@ Pokemon = WISHIWASHI,50
 	Moves = LIQUIDATION,EARTHQUAKE,ICEBEAM,ENDURE
 	AbilityIndex = 0
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = Well! You certainly reeled me in.
 #-------------------------------
-[LEADER_Kiawe,Kiawe,0]
+[CAPTAIN_Kiawe,Kiawe,0]
 Pokemon = SALAZZLE,50
 	Moves = TOXIC,SLUDGEWAVE,FLAMETHROWER,DRAGONPULSE
 	AbilityIndex = 0
 	IV = 31,31,31,31,31,31
 Pokemon = INCINEROAR,50
-	Moves = DARKESTLARIET,OVERHEAT,SWORDSDANCE,BRICKBREAK
+	Moves = DARKESTLARIAT,OVERHEAT,SWORDSDANCE,BRICKBREAK
 	AbilityIndex = 0
 	IV = 31,31,31,31,31,31
 Pokemon = MAROWAK,50
@@ -874,9 +874,9 @@ Pokemon = MAROWAK,50
 	AbilityIndex = 0
 	IV = 31,31,31,31,31,31
 	Form = 1
-LoseText = 
+LoseText = Win or lose, there's never enough dancing!
 #-------------------------------
-[LEADER_Sophocles,Sophocles,0]
+[CAPTAIN_Sophocles,Sophocles,0]
 Pokemon = TOGEDEMARU,50
 	Moves = ZINGZAP,IRONHEAD,NUZZLE,UTURN
 	AbilityIndex = 1
@@ -890,9 +890,9 @@ Pokemon = GOLEM,50
 	AbilityIndex = 1
 	IV = 31,31,31,31,31,31
 	Form = 1
-LoseText = 
+LoseText = I couldn't get it done... Don't worry about it, my precious Pokémon..
 #-------------------------------
-[LEADER_Acerola,Acerola,0]
+[CAPTAIN_Acerola,Acerola,0]
 Pokemon = DHELMISE,50
 	Moves = ANCHORSHOT,POWERWHIP,POLTERGEIST,SYNTHESIS
 	AbilityIndex = 0
@@ -905,9 +905,9 @@ Pokemon = MIMIKYU,50
 	Moves = SWORDSDANCE,PLAYROUGH,SHADOWSNEAK,SHADOWCLAW
 	AbilityIndex = 0
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = I'm...I'm speechless! You've done me in!
 #-------------------------------
-[LEADER_Mina,Mina,0]
+[CAPTAIN_Mina,Mina,0]
 Pokemon = GRANBULL,50
 	Moves = PLAYROUGH,OUTRAGE,CRUNCH,TAUNT
 	AbilityIndex = 0
@@ -921,7 +921,7 @@ Pokemon = RIBOMBEE,50
 	Moves = POLLENPUFF,MOONBLAST,QUIVERDANCE,STICKYWEB
 	AbilityIndex = 1
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = I'm shocked at your strength!
 #-------------------------------
 [LEADER_Milo,Milo,0]
 Pokemon = APPLETUN,50
@@ -936,7 +936,7 @@ Pokemon = RILLABOOM,50
 	Moves = SWORDSDANCE,DRUMBEATING,EARTHQUAKE,SUPERPOWER
 	AbilityIndex = 0
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = The power of Grass has wilted... What an incredible Trainer!
 #-------------------------------
 [LEADER_Nessa,Nessa,0]
 Pokemon = BARRASKEWDA,50
@@ -951,7 +951,7 @@ Pokemon = INTELEON,50
 	Moves = SNIPESHOT,ICEBEAM,AIRSLASH,AQUARING
 	AbilityIndex = 0
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = You had no problem handling our surging might. It's no wonder that you won.
 #-------------------------------
 [LEADER_Kabu,Kabu,0]
 Pokemon = DARMANITAN,50
@@ -966,7 +966,7 @@ Pokemon = CENTISKORCH,50
 	Moves = FIRELASH,LUNGE,CRUNCH,POWERWHIP
 	AbilityIndex = 1
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = Great Pokémon and a great Trainer! It's no surprise that you won!
 #-------------------------------
 [LEADER_Bea,Bea,0]
 Pokemon = PANGORO,50
@@ -981,7 +981,7 @@ Pokemon = SIRFETCHD,50
 	Moves = CLOSECOMBAT,KNOCKOFF,FIRSTIMPRESSION,POISONJAB
 	AbilityIndex = 0
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = I felt the fighting spirit of your Pokémon as you led them in battle.
 #-------------------------------
 [LEADER_Allister,Allister,0]
 Pokemon = RUNERIGUS,50
@@ -996,7 +996,7 @@ Pokemon = POLTEAGEIST,50
 	Moves = SHELLSMASH,SHADOWBALL,GIGADRAIN,POLTERGEIST
 	AbilityIndex = 0
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = Crumbs...
 #-------------------------------
 [LEADER_Opal,Opal,0]
 Pokemon = WEEZING,50
@@ -1012,7 +1012,7 @@ Pokemon = ALCREMIE,50
 	Moves = DAZZLINGGLEAM,ENERGYBALL,MYSTICALFIRE,LIGHTSCREEN
 	AbilityIndex = 0
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = Your pink is lacking, but you're an excellent Trainer with some excellent Pokémon.
 #-------------------------------
 [LEADER_Gordie,Gordie,0]
 Pokemon = SHUCKLE,50
@@ -1027,7 +1027,7 @@ Pokemon = STONJOURNER,50
 	Moves = STONEEDGE,HEATCRASH,EARTHQUAKE,ROCKSLIDE
 	AbilityIndex = 0
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = I've been crushed! I pride myself on my solid Pokémon, and yet this...
 #-------------------------------
 [LEADER_Melony,Melony,0]
 Pokemon = EISCUE,50
@@ -1043,7 +1043,7 @@ Pokemon = DARMANITAN,50
 	AbilityIndex = 0
 	IV = 31,31,31,31,31,31
 	Form = 1
-LoseText = 
+LoseText = I think you took breaking the ice a little too literally...
 #-------------------------------
 [LEADER_Piers,Piers,0]
 Pokemon = THIEVUL,50
@@ -1058,7 +1058,7 @@ Pokemon = OBSTAGOON,50
 	Moves = FACADE,KNOCKOFF,REST,SLEEPTALK
 	AbilityIndex = 0
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = Me an' my team gave it our best. Let's meet up again for a battle some time...
 #-------------------------------
 [LEADER_Raihan,Raihan,0]
 Pokemon = SANDACONDA,50
@@ -1073,5 +1073,5 @@ Pokemon = DURALUDON,50
 	Moves = DRACOMETEOR,FLASHCANNON,BODYPRESS,THUNDERBOLT
 	AbilityIndex = 0
 	IV = 31,31,31,31,31,31
-LoseText = 
+LoseText = I might have lost, but I still look good. Maybe I should snap a quick selfie...
 #-------------------------------
