@@ -1,1077 +1,1088 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
 [LEADER_Brock,Brock]
-Items = FULLRESTORE,FULLRESTORE
-LoseText = Very good.
-Pokemon = GEODUDE,12
-    Gender = male
-    Moves = DEFENSECURL,HEADSMASH,ROCKPOLISH,ROCKTHROW
-    AbilityIndex = 0
-    IV = 20,20,20,20,20,20
-Pokemon = ONIX,14
-    Name = Rocky
-    Gender = male
-    Shiny = yes
-    Moves = HEADSMASH,ROCKTHROW,RAGE,ROCKTOMB
-    AbilityIndex = 0
-    Item = SITRUSBERRY
-    IV = 20,20,20,20,20,20
-    Ball = HEAVYBALL
-#-------------------------------
-[LEADER_Brock,Brock,0]
+LoseText = Your Pokémon's powerful attacks overcame my rock-hard resistance...
 Pokemon = KABUTOPS,50
-	Moves = AQUAJET,LIQUIDATION,LEECHLIFE,STONEEDGE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
+    Moves = AQUAJET,LIQUIDATION,LEECHLIFE,STONEEDGE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
 Pokemon = GOLEM,50
-	Moves = EARTHQUAKE,STONEEDGE,HEAVYSLAM,SANDSTORM
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
+    Moves = EARTHQUAKE,STONEEDGE,HEAVYSLAM,SANDSTORM
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
 Pokemon = AERODACTYL,50
-	Moves = GIGAIMPACT,ROCKSLIDE,STONEEDGE,IRONHEAD
-	AbilityIndex = 0 
-	IV = 31,31,31,31,31,31
-LoseText = Your Pokémon's powerful attacks overcame my rock-hard resistance... 
+    Moves = GIGAIMPACT,ROCKSLIDE,STONEEDGE,IRONHEAD
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
 #-------------------------------
-[LEADER_Misty,Misty,0]
-Pokemon = QUAGSIRE,50
-	Moves = EARTHQUAKE,AQUATAIL,BRICKBREAK,ROCKTOMB
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = STARMIE,50
-	Moves = PSYCHIC,HYDROPUMP,POWERGEM,RECOVER
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = BLASTOISE,50
-	Moves = AQUATAIL,SURF,FLASHCANNON,SHELLSMASH
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
+[LEADER_Misty,Misty]
 LoseText = You really are strong... I'll admit that you are skilled...
+Pokemon = QUAGSIRE,50
+    Moves = EARTHQUAKE,AQUATAIL,BRICKBREAK,ROCKTOMB
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = STARMIE,50
+    Moves = PSYCHIC,HYDROPUMP,POWERGEM,RECOVER
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = BLASTOISE,50
+    Moves = AQUATAIL,SURF,FLASHCANNON,SHELLSMASH
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
 #-------------------------------
-[LEADER_Surge,Lt. Surge,0]
-Pokemon = ELECTRODE,50
-	Moves = DISCHARGE,THUNDERBOLT,LIGHTSCREEN,THUNDERWAVE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = RAICHU,50
-	Moves = THUNDER,RAINDANCE,THUNDERBOLT,SURF
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = JOLTEON,50
-	Moves = THUNDERBOLT,RAINDANCE,SHADOWBALL,THUNDER
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
+[LEADER_Surge,Lt. Surge]
 LoseText = Even my electric tricks lost. You're excellent! Keep goin' like lightning!
-#-------------------------------
-[LEADER_Erika,Erika,0]
-Pokemon = PARASECT,50
-	Moves = CROSSPOISON,XSCISSOR,STUNSPORE,POISONPOWDER
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = VILEPLUME,50
-	Moves = GIGADRAIN,PETALDANCE,SLUDGEWAVE,DAZZLINGGLEAM
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = VENUSAUR,50
-	Moves = PETALDANCE,ENERGYBALL,SLUDGEBOMB,TOXIC
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = That was a delightful match. I felt inspired.
-#-------------------------------
-[LEADER_Janine,Janine,0]
-Pokemon = WEEZING,50
-	Moves = ASSURANCE,TOXIC,SLUDGEBOMB,HEATWAVE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = TENTACRUEL,50
-	Moves = SLUDGEWAVE,SURF,HEX,SCALD
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = VENOMOTH,50
-	Moves = BUGBUZZ,ENERGYBALL,SLUDGEBOMB,PROTECT
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = You've got a great battle technique!
-#-------------------------------
-[LEADER_Sabrina,Sabrina,0]
-Pokemon = SLOWKING,50
-	Moves = SCALD,PSYCHIC,SLACKOFF,TELEPORT
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = ESPEON,50
-	Moves = PSYCHIC,DAZZLINGGLEAM,SHADOWBALL,REST
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = ALAKAZAM,50
-	Moves = PSYCHIC,CALMMIND,DAZZLINGGLEAM,SHADOWBALL
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = Was the future I saw...wrong?
-#-------------------------------
-[LEADER_Blaine,Blaine,0]
-Pokemon = NINETALES,50
-	Moves = FLAMETHROWER,WILLOWISP,DISABLE,ENERGYBALL
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = CHARIZARD,50
-	Moves = DRAGONPULSE,FLAMETHROWER,AIRSLASH,OVERHEAT
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = ARCANINE,50
-	Moves = FLAMETHROWER,FLAREBLITZ,EXTREMESPEED,PLAYROUGH
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = How could this be?! My spirit has not been defeated!
-#-------------------------------
-[LEADER_Giovanni,Giovanni,0]
-Pokemon = NIDOQUEEN,50
-	Moves = TOXICSPIKES,CRUNCH,EARTHPOWER,SUPERPOWER
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = MAROWAK,50
-	Moves = GIGAIMPACT,BONEMERANG,ROCKTOMB,EARTHQUAKE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = NIDOKING,50
-	Moves = POISONJAB,EARTHQUAKE,MEGAHORN,TOXIC
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = I lose?! There is nothing I wish to say to you!
-#-------------------------------
-[LEADER_Falkner,Falkner,0]
-Pokemon = PIDGEOT,50
-	Moves = AIRSLASH,ROOST,AERIALACE,QUICKATTACK
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = NOCTOWL,50
-	Moves = AIRSLASH,HYPNOSIS,DREAMEATER,MOONBLAST
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = PELIPPER,50
-	Moves = SCALD,ROOST,UTURN,DEFOG
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = I understand... I'll bow out gracefully.
-#-------------------------------
-[LEADER_Bugsy,Bugsy,0]
-Pokemon = SCIZOR,50
-	Moves = BULLETPUNCH,IRONHEAD,XSCISSOR,SWORDSDANCE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = HERACROSS,50
-	Moves = FACADE,THROATCHOP,MEGAHORN,CLOSECOMBAT
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = YANMEGA,50
-	Moves = BUGBUZZ,AIRSLASH,UTURN,GIGADRAIN
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = Aw, that's the end of it...
-#-------------------------------
-[LEADER_Whitney,Whitney,0]
-Pokemon = MILTANK,50
-	Moves = STEALTHROCK,MILKDRINK,THUNDERWAVE,SEISMICTOSS
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = BLISSEY,50
-	Moves = SEISMICTOSS,SOFTBOILED,THUNDERWAVE,TELEPORT
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = GIRAFARIG,50
-	Moves = ZENHEADBUTT,EARTHQUAKE,CRUNCH,PROTECT
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = Waaaaah! Waaaaah! ...Snivel, hic. ...You meanie! 
-#-------------------------------
-[LEADER_Morty,Morty,0]
-Pokemon = MISMAGIUS,50
-	Moves = NASTYPLOT,SHADOWBALL,MYSTICALFIRE,WILLOWISP
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = GENGAR,50
-	Moves = DARKPULSE,SHADOWBALL,SLUDGEBOMB,THUNDERBOLT
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = DUSKNOIR,50
-	Moves = POLTERGEIST,EARTHQUAKE,SHADOWSNEAK,POWERUPPUNCH
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = How is this possible...
-#-------------------------------
-[LEADER_Chuck,Chuck,0]
-Pokemon = PRIMEAPE,50
-	Moves = OUTRAGE,STOMPINGTANTRUM,CLOSECOMBAT,SWAGGER
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = POLIWRATH,50
-	Moves = DRAINPUNCH,DIVE,EARTHQUAKE,POISONJAB
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = HITMONTOP,50
-	Moves = DIG,CLOSECOMBAT,SUCKERPUNCH,DETECT
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = I lost? How about that!
-#-------------------------------
-[LEADER_Jasmine,Jasmine,0]
-Pokemon = FORRETRESS,50
-	Moves = HEAVYSLAM,GYROBALL,SPIKES,TOXICSPIKES
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = STEELIX,50
-	Moves = STEALTHROCK,EARTHQUAKE,HEAVYSLAM,TOXIC
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = SKARMORY,50
-	Moves = WHIRLWIND,ROOST,BRAVEBIRD,SPIKES
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-LoseText = Well done...
-#-------------------------------
-[LEADER_Pryce,Pryce,0]
-Pokemon = MAMOSWINE,50
-	Moves = ICICLECRASH,EARTHQUAKE,ICESHARD,KNOCKOFF
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = WEAVILE,50
-	Moves = SWORDSDANCE,TRIPLEAXEL,KNOCKOFF,ICESHARD
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = LAPRAS,50
-	Moves = ICEBEAM,BRINE,RAINDANCE,SING
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = Hmm. Seems as if my luck has run out.
-#-------------------------------
-[LEADER_Clair,Clair,0]
-Pokemon = KINGDRA,50
-	Moves = HYDROPUMP,DRACOMETEOR,SURF,RAINDANCE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = DRAGONITE,50
-	Moves = OUTRAGE,THUNDERPUNCH,STONEEDGE,DRAGONDANCE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = DRAGALGE,50
-	Moves = DRACOMETEOR,SLUDGEBOMB,FLIPTURN,SCALD
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = It's over...
-#-------------------------------
-[LEADER_Roxanne,Roxanne,0]
-Pokemon = ARMALDO,50
-	Moves = METALCLAW,XSCISSOR,STONEEDGE,PROTECT
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = PROBOPASS,50
-	Moves = POWERGEM,DISCHARGE,EARTHPOWER,THUNDERWAVE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = AGGRON,50
-	Moves = STEALTHROCK,HEADSMASH,HEAVYSLAM,PROTECT
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = So… I lost…
-#-------------------------------
-[LEADER_Brawly,Brawly,0]
-Pokemon = BRELOOM,50
-	Moves = DRAINPUNCH,SEEDBOMB,MACHPUNCH,STONEEDGE
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = HARIYAMA,50
-	Moves = CLOSECOMBAT,KNOCKOFF,HEAVYSLAM,STONEEDGE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = HITMONCHAN,50
-	Moves = DRAINPUNCH,POWERUPPUNCH,THUNDERPUNCH,BULLETPUNCH
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-LoseText = Whoa, wow! You made a much bigger splash than I expected!
-#-------------------------------
-[LEADER_Wattson,Wattson,0]
 Pokemon = ELECTRODE,50
-	Moves = SONICBOOM,THUNDERBOLT,LIGHTSCREEN,THUNDERWAVE
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = LANTURN,50
-	Moves = SCALD,VOLTSWITCH,TOXIC,PROTECT
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = MANECTRIC,50
-	Moves = THUNDERBOLT,VOLTSWITCH,ELECTRICTERRAIN,FLAMETHROWER
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = Wahahahah! Fine, I lost!
+    Moves = DISCHARGE,THUNDERBOLT,LIGHTSCREEN,THUNDERWAVE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = RAICHU,50
+    Moves = THUNDER,RAINDANCE,THUNDERBOLT,SURF
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = JOLTEON,50
+    Moves = THUNDERBOLT,RAINDANCE,SHADOWBALL,THUNDER
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
 #-------------------------------
-[LEADER_Flannery,Flannery,0]
-Pokemon = TORKOAL,50
-	Moves = STEALTHROCK,LAVAPLUME,RAPIDSPIN,TOXIC
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = BLAZIKEN,50
-	Moves = BLAZEKICK,CLOSECOMBAT,AERIALACE,DETECT
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = CAMERUPT,50
-	Moves = FIREBLAST,EARTHPOWER,REST,SLEEPTALK
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-LoseText = Oh... I guess I was trying too hard...
+[LEADER_Erika,Erika]
+LoseText = That was a delightful match. I felt inspired.
+Pokemon = PARASECT,50
+    Moves = CROSSPOISON,XSCISSOR,STUNSPORE,POISONPOWDER
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = VILEPLUME,50
+    Moves = GIGADRAIN,PETALDANCE,SLUDGEWAVE,DAZZLINGGLEAM
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = VENUSAUR,50
+    Moves = PETALDANCE,ENERGYBALL,SLUDGEBOMB,TOXIC
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
 #-------------------------------
-[LEADER_Norman,Norman,0]
-Pokemon = EXPLOUD,50
-	Moves = BOOMBURST,OVERHEAT,SURF,FOCUSBLAST
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = OBSTAGOON,50
-	Moves = OBSTRUCT,CROSSCHOP,HEADBUTT,NIGHTSLASH
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = SLAKING,50
-	Moves = EARTHQUAKE,FIREBLAST,RETALIATE,SUCKERPUNCH
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = I can't… I can't believe it.
-#-------------------------------
-[LEADER_Winona,Winona,0]
-Pokemon = SKARMORY,50
-	Moves = WHIRLWIND,ROOST,BRAVEBIRD,SPIKES
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = TROPIUS,50
-	Moves = LEECHSEED,SUBSTITUTE,AIRSLASH,PROTECT
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = ALTARIA,50
-	Moves = DRAGONPULSE,ROOST,HURRICANE,FLAMETHROWER
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = A Trainer that commands Pokémon with more grace than I...
-#-------------------------------
-[LEADER_Tate,Tate,0]
-Pokemon = SOLROCK,50
-	Moves = STEALTHROCK,MORNINGSUN,WILLOWISP,ZENHEADBUTT
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = GRUMPIG,50
-	Moves = PSYCHIC,FOCUSBLAST,SHADOWBALL,CALMMIND
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = GALLADE,50
-	Moves = SWORDSDANCE,CLOSECOMBAT,ZENHEADBUTT,KNOCKOFF
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = The... The combination of me and my Pokémon!
-#-------------------------------
-[LEADER_Liza,Liza,0]
-Pokemon = LUNATONE,50
-	Moves = METEORBEAM,PSYSHOCK,EARTHPOWER,ROCKPOLISH
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = CHIMECHO,50
-	Moves = HEALINGWISH,RECOVER,PSYCHIC,ENERGYBALL
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = GARDEVOIR,50
-	Moves = MOONBLAST,PSYCHIC,MYSTICALFIRE,HEALINGWISH
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-LoseText = Oh! The combination of me and my Pokémon...
-#-------------------------------
-[LEADER_Juan,Juan,0]
-Pokemon = CRAWDAUNT,50
-	Moves = SWORDSDANCE,CRABHAMMER,KNOCKOFF,AQUAJET
-	IV = 31,31,31,31,31,31
-	AbilityIndex = 0
-Pokemon = WALREIN,50
-	Moves = SWORDSDANCE,WATERFALL,ICICLESPEAR,EARTHQUAKE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = SWAMPERT,50
-	Moves = HAMMERARM,EARTHQUAKE,LIQUIDATION,ROCKSLIDE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = Ahahaha, excellent! Very well, you are the winner.
-#-------------------------------
-[LEADER_Roark,Roark,0]
-Pokemon = PROBOPASS,50
-	Moves = POWERGEM,DISCHARGE,EARTHPOWER,THUNDERWAVE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = RHYPERIOR,50
-	Moves = EARTHQUAKE,STONEEDGE,STEALTHROCK,MEGAHORN
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = RAMPARDOS,50
-	Moves = ZENHEADBUTT,STONEEDGE,EARTHQUAKE,AVALANCHE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = Wh-what? That can't be! My buffed-up Pokémon!
-#-------------------------------
-[LEADER_Gardenia,Gardenia,0]
-Pokemon = TANGROWTH,50
-	Moves = POWERWHIP,KNOCKOFF,SLUDGEBOMB,FOCUSBLAST
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = ROSERADE,50
-	Moves = GIGADRAIN,TOXICSPIKES,LEECHSEED,GRASSYTERRAIN
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = LEAFEON,50
-	Moves = SWORDSDANCE,LEAFBLADE,KNOCKOFF,SYNTHESIS
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = Aww, really? My Grass-type Pokémon are growing good and strong, too...
-#-------------------------------
-[LEADER_Maylene,Maylene,0]
-Pokemon = TOXICROAK,50
-	Moves = SWORDSDANCE,GUNKSHOT,DRAINPUNCH,KNOCKOFF
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = GALLADE,50
-	Moves = SWORDSDANCE,CLOSECOMBAT,ZENHEADBUTT,KNOCKOFF
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = LUCARIO,50
-	Moves = CLOSECOMBAT,METEORMASH,SWORDSDANCE,EXTREMESPEED
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-LoseText = I shall admit defeat... You are much too strong.
-#-------------------------------
-[LEADER_Wake,Crasher Wake,0]
-Pokemon = FLOATZEL,50
-	Moves = ICEFANG,CRUNCH,AQUATAIL,AQUAJET
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = GASTRODON,50
-	Moves = MUDDYWATER,WATERPULSE,ANCIENTPOWER,EARTHPOWER
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = POLIWRATH,50
-	Moves = DRAINPUNCH,DIVE,EARTHQUAKE,POISONJAB
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = Hunwah! It's gone and ended! How will I say this... I want more! I wanted to battle a lot more!
-#-------------------------------
-[LEADER_Fantina,Fantina,0]
-Pokemon = MISMAGIUS,50
-	Moves = NASTYPLOT,SHADOWBALL,MYSTICALFIRE,WILLOWISP
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = SPIRITOMB,50
-	Moves = REST,SLEEPTALK,CALMMIND,DARKPULSE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = DRIFBLIM,50
-	Moves = SHADOWBALL,CALMMIND,SUBSTITUTE,THUNDERBOLT
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-LoseText = You are so fantastically strong. I know why I have lost.
-#-------------------------------
-[LEADER_Byron,Byron,0]
-Pokemon = BRONZONG,50
-	Moves = STEALTHROCK,TOXIC,PSYWAVE,GYROBALL
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = STEELIX,50
-	Moves = STEALTHROCK,EARTHQUAKE,HEAVYSLAM,TOXIC
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = BASTIODON,50
-	Moves = IRONHEAD,HEAVYSLAM,STONEEDGE,EARTHQUAKE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = Hmm! My sturdy Pokémon--defeated!
-#-------------------------------
-[LEADER_Volkner,Volkner,0]
-Pokemon = ROTOM,50
-	Moves = NASTYPLOT,LEAFSTORM,VOLTSWITCH,PAINSPLIT
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-	Form = 5
-Pokemon = LUXRAY,50
-	Moves = WILDCHARGE,THUNDERFANG,PSYCHICFANGS,ROAR
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = ELECTIVIRE,50
-	Moves = THUNDERBOLT,FLAMETHROWER,FOCUSBLAST,VOLTSWITCH 
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = You've got me beat... 
-#-------------------------------
-[LEADER_Cilan,Cilan,0]
-Pokemon = LILLIGANT,50
-	Moves = ENERGYBALL,SYNTHESIS,PETALDANCE,QUIVERDANCE
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = SERPERIOR,50
-	Moves = LEAFSTORM,SUBSTITUTE,GLARE,TOXIC
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = SIMISAGE,50
-	Moves = LEAFSTORM,SUPERPOWER,ROCKSLIDE,GUNKSHOT
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = Huh? Is it over?
-#-------------------------------
-[LEADER_Cress,Cress,0]
-Pokemon = SEISMITOAD,50
-	Moves = DRAINPUNCH,LIQUIDATION,ROCKSLIDE,SUPERSONIC
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = SAMUROTT,50
-	Moves = AQUATAIL,SWORDSDANCE,AQUAJET,DRAGONTAIL
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = SIMIPOUR,50
-	Moves = NASTYPLOT,HYDROPUMP,ICEBEAM,GRASSKNOT
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = Lose? Me? I don't believe this.
-#-------------------------------
-[LEADER_Chili,Chili,0]
-Pokemon = HEATMOR,50
-	Moves = FIREBLAST,GIGADRAIN,FOCUSBLAST,SCORCHINGSANDS
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = EMBOAR,50
-	Moves = HAMMERARM,FLAREBLITZ,ASSURANCE,STONEEDGE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = SIMISEAR,50
-	Moves = NASTYPLOT,FIREBLAST,GRASSKNOT,FOCUSBLAST
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = You got me. I am...burned...out...
-#-------------------------------
-[LEADER_Lenora,Lenora,0]
-Pokemon = BRAVIARY,50
-	Moves = SUBSTITUTE,BULKUP,BRAVEBIRD,ROOST
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = WATCHOG,50
-	Moves = HYPERFANG,HYPNOSIS,NASTYPLOT,BATONPASS
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = CINCCINO,50
-	Moves = TAILSLAP,TRIPLEAXEL,BULLETSEED,KNOCKOFF
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = Your fighting style is so enchanting.
-#-------------------------------
-[LEADER_Burgh,Burgh,0]
-Pokemon = CRUSTLE,50
-	Moves = XSCISSOR,STEALTHROCK,SHELLSMASH,ROCKSLIDE
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = DURANT,50
-	Moves = FIRSTIMPRESSION,SUPERPOWER,ROCKSLIDE,IRONHEAD
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = LEAVANNY,50
-	Moves = STICKYWEB,LEAFBLADE,XSCISSOR,MAGICCOAT
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-LoseText = Is it over? Has my muse abandoned me?
-#-------------------------------
-[LEADER_Elesa,Elesa,0]
-Pokemon = EELEKTROSS,50
-	Moves = VOLTSWITCH,GIGADRAIN,FLAMETHROWER,DRAINPUNCH
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = EMOLGA,50
-	Moves = THUNDERBOLT,UTURN,ENCORE,ROOST
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = ZEBSTRIKA,50
-	Moves = THUNDERBOLT,VOLTSWITCH,OVERHEAT,HIDDENPOWER
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-LoseText = I meant to make your head spin, but you shocked me instead.
-#-------------------------------
-[LEADER_Clay,Clay,0]
-Pokemon = KROOKODILE,50
-	Moves = EARTHQUAKE,KNOCKOFF,STEALTHROCK,TAUNT
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = GOLURK,50
-	Moves = STEALTHROCK,EARTHQUAKE,SHADOWPUNCH,ICEPUNCH
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = EXCADRILL,50
-	Moves = EARTHQUAKE,IRONHEAD,RAPIDSPIN,TOXIC
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = Well, I've had enough... And just so you know, I didn't go easy on you.
-#-------------------------------
-[LEADER_Skyla,Skyla,0]
-Pokemon = ARCHEOPS,50
-	Moves = STONEEDGE,EARTHQUAKE,DUALWINGBEAT,ROOST
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = MANDIBUZZ,50
-	Moves = FOULPLAY,DEFOG,UTURN,ROOST
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = SWANNA,50
-	Moves = AERIALACE,HURRICANE,WATERPULSE,ICEBEAM
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = Being your opponent in battle is a new source of strength to me. Thank you!
-#-------------------------------
-[LEADER_Brycen,Brycen,0]
-Pokemon = BEARTIC,50
-	Moves = HAIL,SWORDSDANCE,ICICLECRASH,SUPERPOWER
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = VANILLUXE,50
-	Moves = BLIZZARD,FREEZEDRY,ICESHARD,TAUNT
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = CRYOGONAL,50
-	Moves = RAPIDSPIN,RECOVER,FREEZEDRY,KNOCKOFF
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = The wonderful combination of you and your Pokémon! What a beautiful friendship!
-#-------------------------------
-[LEADER_Drayden,Drayden,0]
-Pokemon = HYDREIGON,50
-	Moves = DRACOMETEOR,DARKPULSE,FLAMETHROWER,ROOST
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = DRUDDIGON,50
-	Moves = DRAGONTAIL,EARTHQUAKE,GLARE,TAUNT
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = HAXORUS,50
-	Moves = SWORDSDANCE,OUTRAGE,EARTHQUAKE,POISONJAB
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = This intense feeling that floods me after a defeat... I don't know how to describe it.
-#-------------------------------
-[LEADER_Cheren,Cheren,0]
-Pokemon = STOUTLAND,50
-	Moves = PLAYROUGH,DIG,IRONHEAD,CRUNCH
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = BOUFFALANT,50
-	Moves = SUBSTITUTE,SWORDSDANCE,BODYSLAM,THROATCHOP
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = CINCCINO,50
-	Moves = TAILSLAP,TRIPLEAXEL,BULLETSEED,KNOCKOFF
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-LoseText = Fantastic! You and your Pokémon have grown much stronger!
-#-------------------------------
-[LEADER_Roxie,Roxie,0]
-Pokemon = AMOONGUSS,50
-	Moves = GIGADRAIN,SLUDGEBOMB,FOULPLAY,SPORE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = GARBODOR,50
-	Moves = GUNKSHOT,SPIKES,STOMPINGTANTRUM,PAINSPLIT
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = SCOLIPEDE,50
-	Moves = MEGAHORN,TOXIC,CROSSPOISON,XSCISSOR
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-LoseText = Next time we meet, I'm going to give you a toxic shock!
-#-------------------------------
-[LEADER_Marlon,Marlon,0]
-Pokemon = ALOMOMOLA,50
-	Moves = SCALD,WISH,PROTECT,RAINDANCE
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = JELLICENT,50
-	Moves = WATERSPOUT,SHADOWBALL,TRICK,SURF
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = CARRACOSTA,50
-	Moves = SHELLSMASH,STONEEDGE,AQUAJET,LIQUIDATION
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-LoseText = You're strong as a gnarly wave and as nice as a glassy sea.
-#-------------------------------
-[LEADER_Viola,Viola,0]
-Pokemon = VIVILLON,50
-	Moves = DRAININGKISS,LIGHTSCREEN,SUPERSONIC,BUGBUZZ
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = SHEDINJA,50
-	Moves = SHADOWCLAW,DIG,PHANTOMFORCE,SPITE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = MASQUERAIN,50
-	Moves = STICKYWEB,BUGBUZZ,AIRSLASH,SCALD
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = You and your Pokémon have shown me a whole new depth of field! Fantastic! Just fantastic!
-#-------------------------------
-[LEADER_Grant,Grant,0]
-Pokemon = AURORUS,50
-	Moves = ICEBEAM,ANCIENTPOWER,EARTHPOWER,BLIZZARD
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = TYRANTRUM,50
-	Moves = HEADSMASH,OUTRAGE,CLOSECOMBAT,DRAGONCLAW
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = CARBINK,50
-	Moves = STEALTHROCK,MOONBLAST,PROTECT,BODYPRESS
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = You have proven to be a wall that I am unable to surmount!
-#-------------------------------
-[LEADER_Korrina,Korrina,0]
-Pokemon = MIENSHAO,50
-	Moves = HIGHJUMPKICK,KNOCKOFF,UTURN,FAKEOUT
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = LUCARIO,50
-	Moves = CLOSECOMBAT,METEORMASH,SWORDSDANCE,EXTREMESPEED
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = HAWLUCHA,50
-	Moves = FLYINGPRESS,SUBMISSION,ROCKTOMB,POISONJAB
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-LoseText = How could it be?!
-#-------------------------------
-[LEADER_Ramos,Ramos,0]
-Pokemon = JUMPLUFF,50
-	Moves = SWORDSDANCE,GIGADRAIN,LEECHSEED,POISONPOWDER
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = CHESNAUGHT,50
-	Moves = WOODHAMMER,DRAINPUNCH,SYNTHESIS,SPIKYSHIELD
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = GOGOAT,50
-	Moves = BULKUP,HORNLEECH,EARTHQUAKE,ROCKSLIDE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = Yeh believe in yer Pokémon... And they believe in yeh, too..
-#-------------------------------
-[LEADER_Clemont,Clemont,0]
-Pokemon = MAGNEZONE,50
-	Moves = IRONDEFENSE,BODYPRESS,THUNDERBOLT,TELEPORT
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = DEDENNE,50
-	Moves = THUNDER,PARABOLICCHARGE,DAZZLINGGLEAM,ELECTROWEB
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = HELIOLISK,50
-	Moves = THUNDERBOLT,HYPERVOICE,VOLTSWITCH,DARKPULSE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = Your passion for battle inspires me!
-#-------------------------------
-[LEADER_Valerie,Valerie,0]
-Pokemon = AROMATISSE,50
-	Moves = MOONBLAST,WISH,PROTECT,HEALBELL
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = MAWILE,50
-	Moves = SWORDSDANCE,PLAYROUGH,SUCKERPUNCH,KNOCKOFF
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = SYLVEON,50
-	Moves = MOONBLAST,PSYSHOCK,MISTYTERRAIN,MYSTICALFIRE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = I hope the sun is shining tomorrow... That would be reason enough to smile.
-#-------------------------------
-[LEADER_Olympia,Olympia,0]
-Pokemon = MEOWSTIC,50
-	Moves = REFLECT,LIGHTSCREEN,THUNDERWAVE,PSYCHIC
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = DELPHOX,50
-	Moves = CALMMIND,FIREBLAST,PSYCHIC,GRASSKNOT
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = SIGILYPH,50
-	Moves = CALMMIND,AIRSLASH,ROOST,PSYCHIC
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = Create your own path. Let nothing get in your way. Your fate, your future.
-#-------------------------------
-[LEADER_Wulfric,Wulfric,0]
-Pokemon = CRYOGONAL,50
-	Moves = RAPIDSPIN,RECOVER,FREEZEDRY,KNOCKOFF
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = AVALUGG,50
-	Moves = AVALANCHE,HAIL,EARTHQUAKE,STONEEDGE
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = ABOMASNOW,50
-	Moves = SWORDSDANCE,ICESHARD,WOODHAMMER,EARTHQUAKE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = Outstanding! I'm tough as an iceberg, but you smashed me through and through!
-#-------------------------------
-[CAPTAIN_Ilima,Ilima,0]
-Pokemon = KOMALA,50
-	Moves = WOODHAMMER,THRASH,ROLLOUT,RAPIDSPIN
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = GUMSHOOS,50
-	Moves = HYPERFANG,CRUNCH,BULLDOZE,SUBSTITUTE
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = RATICATE,50
-	Moves = CRUNCH,SUCKERPUNCH,DOUBLEEDGE,SCARYFACE
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-	Form = 1 
-LoseText = Yes! You have emerged victorious!
-#-------------------------------
-[CAPTAIN_Mallow,Mallow,0]
-Pokemon = SHIINOTIC,50
-	Moves = SPORE,STRENGTHSAP,GIGADRAIN,MOONBLAST
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = DECIDUEYE,50
-	Moves = POLTERGEIST,LEAFBLADE,UTURN,SHADOWSNEAK
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = LURANTIS,50
-	Moves = LEAFSTORM,SUPERPOWER,SYNTHESIS,SUNNYDAY
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-LoseText = Sure enough, when it comes to you and Pokémon, the quality of the ingredients shines forth!
-#-------------------------------
-[CAPTAIN_Lana,Lana,0]
-Pokemon = ARAQUANID,50
-	Moves = LEECHLIFE,LIQUIDATION,CRUNCH,RAINDANCE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = PRIMARINA,50
-	Moves = SPARKLINGARIA,MOONBLAST,MISTYTERRAIN,REFLECT
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = WISHIWASHI,50
-	Moves = LIQUIDATION,EARTHQUAKE,ICEBEAM,ENDURE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = Well! You certainly reeled me in.
-#-------------------------------
-[CAPTAIN_Kiawe,Kiawe,0]
-Pokemon = SALAZZLE,50
-	Moves = TOXIC,SLUDGEWAVE,FLAMETHROWER,DRAGONPULSE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = INCINEROAR,50
-	Moves = DARKESTLARIAT,OVERHEAT,SWORDSDANCE,BRICKBREAK
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = MAROWAK,50
-	Moves = SHADOWBONE,STOMPINGTANTRUM,FLAREBLITZ,FLAMEWHEEL
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-	Form = 1
-LoseText = Win or lose, there's never enough dancing!
-#-------------------------------
-[CAPTAIN_Sophocles,Sophocles,0]
-Pokemon = TOGEDEMARU,50
-	Moves = ZINGZAP,IRONHEAD,NUZZLE,UTURN
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = VIKAVOLT,50
-	Moves = ZAPCANNON,THUNDERBOLT,BUGBUZZ,FLASHCANNON
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = GOLEM,50
-	Moves = STONEEDGE,THUNDERPUNCH,EARTHQUAKE,GYROBALL
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-	Form = 1
-LoseText = I couldn't get it done... Don't worry about it, my precious Pokémon..
-#-------------------------------
-[CAPTAIN_Acerola,Acerola,0]
-Pokemon = DHELMISE,50
-	Moves = ANCHORSHOT,POWERWHIP,POLTERGEIST,SYNTHESIS
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = PALOSSAND,50
-	Moves = EARTHPOWER,SHADOWBALL,SHOREUP,STEALTHROCK
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = MIMIKYU,50
-	Moves = SWORDSDANCE,PLAYROUGH,SHADOWSNEAK,SHADOWCLAW
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = I'm...I'm speechless! You've done me in!
-#-------------------------------
-[CAPTAIN_Mina,Mina,0]
-Pokemon = GRANBULL,50
-	Moves = PLAYROUGH,OUTRAGE,CRUNCH,TAUNT
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = NINETALES,50
-	Moves = DAZZLINGGLEAM,ICEBEAM,NASTYPLOT,SHADOWBALL
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-	Form = 1
-Pokemon = RIBOMBEE,50
-	Moves = POLLENPUFF,MOONBLAST,QUIVERDANCE,STICKYWEB
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-LoseText = I'm shocked at your strength!
-#-------------------------------
-[LEADER_Milo,Milo,0]
-Pokemon = APPLETUN,50
-	Moves = DRACOMETEOR,APPLEACID,DRAGONPULSE,GIGADRAIN
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = ELDEGOSS,50
-	Moves = LEAFSTORM,LEAFTORNADO,POLLENPUFF,SING
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = RILLABOOM,50
-	Moves = SWORDSDANCE,DRUMBEATING,EARTHQUAKE,SUPERPOWER
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = The power of Grass has wilted... What an incredible Trainer!
-#-------------------------------
-[LEADER_Nessa,Nessa,0]
-Pokemon = BARRASKEWDA,50
-	Moves = LIQUIDATION,CLOSECOMBAT,FLIPTURN,PSYCHICFANGS
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = DREDNAW,50
-	Moves = LIQUIDATION,ROCKTOMB,JAWLOCK,CRUNCH
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = INTELEON,50
-	Moves = SNIPESHOT,ICEBEAM,AIRSLASH,AQUARING
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = You had no problem handling our surging might. It's no wonder that you won.
-#-------------------------------
-[LEADER_Kabu,Kabu,0]
-Pokemon = DARMANITAN,50
-	Moves = FLAREBLITZ,UTURN,ROCKSLIDE,EARTHQUAKE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = CINDERACE,50
-	Moves = PYROBALL,COURTCHANGE,ZENHEADBUTT,GUNKSHOT
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = CENTISKORCH,50
-	Moves = FIRELASH,LUNGE,CRUNCH,POWERWHIP
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-LoseText = Great Pokémon and a great Trainer! It's no surprise that you won!
-#-------------------------------
-[LEADER_Bea,Bea,0]
-Pokemon = PANGORO,50
-	Moves = KNOCKOFF,CLOSECOMBAT,IRONHEAD,DRAINPUNCH
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = FALINKS,50
-	Moves = SWORDSDANCE,CLOSECOMBAT,THROATCHOP,ZENHEADBUTT
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = SIRFETCHD,50
-	Moves = CLOSECOMBAT,KNOCKOFF,FIRSTIMPRESSION,POISONJAB
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = I felt the fighting spirit of your Pokémon as you led them in battle.
-#-------------------------------
-[LEADER_Allister,Allister,0]
-Pokemon = RUNERIGUS,50
-	Moves = STEALTHROCK,EARTHQUAKE,WILLOWISP,POLTERGEIST
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = CURSOLA,50
-	Moves = SHADOWBALL,METEORBEAM,BURNINGJEALOUSY,ENDURE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = POLTEAGEIST,50
-	Moves = SHELLSMASH,SHADOWBALL,GIGADRAIN,POLTERGEIST
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = Crumbs...
-#-------------------------------
-[LEADER_Opal,Opal,0]
+[LEADER_Janine,Janine]
+LoseText = You've got a great battle technique!
 Pokemon = WEEZING,50
-	Moves = STRANGESTEAM,SLUDGEBOMB,MISTYTERRAIN,THUNDERBOLT
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-	Form = 1
-Pokemon = TOGEKISS,50
-	Moves = ANCIENTPOWER,AIRSLASH,DAZZLINGGLEAM,AURASPHERE
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = ALCREMIE,50
-	Moves = DAZZLINGGLEAM,ENERGYBALL,MYSTICALFIRE,LIGHTSCREEN
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = Your pink is lacking, but you're an excellent Trainer with some excellent Pokémon.
+    Moves = ASSURANCE,TOXIC,SLUDGEBOMB,HEATWAVE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = TENTACRUEL,50
+    Moves = SLUDGEWAVE,SURF,HEX,SCALD
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = VENOMOTH,50
+    Moves = BUGBUZZ,ENERGYBALL,SLUDGEBOMB,PROTECT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
 #-------------------------------
-[LEADER_Gordie,Gordie,0]
-Pokemon = SHUCKLE,50
-	Moves = STICKYWEB,STEALTHROCK,ENCORE,FINALGAMBIT
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = COALOSSAL,50
-	Moves = ANCIENTPOWER,HEATCRASH,BURNUP,ROCKBLAST
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = STONJOURNER,50
-	Moves = STONEEDGE,HEATCRASH,EARTHQUAKE,ROCKSLIDE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-LoseText = I've been crushed! I pride myself on my solid Pokémon, and yet this...
+[LEADER_Sabrina,Sabrina]
+LoseText = Was the future I saw...wrong?
+Pokemon = SLOWKING,50
+    Moves = SCALD,PSYCHIC,SLACKOFF,TELEPORT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = ESPEON,50
+    Moves = PSYCHIC,DAZZLINGGLEAM,SHADOWBALL,REST
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = ALAKAZAM,50
+    Moves = PSYCHIC,CALMMIND,DAZZLINGGLEAM,SHADOWBALL
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
 #-------------------------------
-[LEADER_Melony,Melony,0]
-Pokemon = EISCUE,50
-	Moves = BELLYDRUM,ICICLECRASH,ZENHEADBUTT,SUBSTITUTE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = MRRIME,50
-	Moves = RAPIDSPIN,ICEBEAM,PSYCHIC,FOCUSBLAST
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = DARMANITAN,50
-	Moves = UTURN,ICICLECRASH,FLAREBLITZ,ROCKSLIDE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-	Form = 1
-LoseText = I think you took breaking the ice a little too literally...
+[LEADER_Blaine,Blaine]
+LoseText = How could this be?! My spirit has not been defeated!
+Pokemon = NINETALES,50
+    Moves = FLAMETHROWER,WILLOWISP,DISABLE,ENERGYBALL
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = CHARIZARD,50
+    Moves = DRAGONPULSE,FLAMETHROWER,AIRSLASH,OVERHEAT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = ARCANINE,50
+    Moves = FLAMETHROWER,FLAREBLITZ,EXTREMESPEED,PLAYROUGH
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
 #-------------------------------
-[LEADER_Piers,Piers,0]
-Pokemon = THIEVUL,50
-	Moves = NIGHTSLASH,FOULPLAY,PLAYROUGH,DIG
-	AbilityIndex = 1
-	IV = 31,31,31,31,31,31
-Pokemon = SKUNTANK,50
-	Moves = FLAMETHROWER,THIEF,SHADOWCLAW,POISONJAB
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
+[LEADER_Giovanni,Giovanni]
+LoseText = I lose?! There is nothing I wish to say to you!
+Pokemon = NIDOQUEEN,50
+    Moves = TOXICSPIKES,CRUNCH,EARTHPOWER,SUPERPOWER
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = MAROWAK,50
+    Moves = GIGAIMPACT,BONEMERANG,ROCKTOMB,EARTHQUAKE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = NIDOKING,50
+    Moves = POISONJAB,EARTHQUAKE,MEGAHORN,TOXIC
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Falkner,Falkner]
+LoseText = I understand... I'll bow out gracefully.
+Pokemon = PIDGEOT,50
+    Moves = AIRSLASH,ROOST,AERIALACE,QUICKATTACK
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = NOCTOWL,50
+    Moves = AIRSLASH,HYPNOSIS,DREAMEATER,MOONBLAST
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = PELIPPER,50
+    Moves = SCALD,ROOST,UTURN,DEFOG
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Bugsy,Bugsy]
+LoseText = Aw, that's the end of it...
+Pokemon = SCIZOR,50
+    Moves = BULLETPUNCH,IRONHEAD,XSCISSOR,SWORDSDANCE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = HERACROSS,50
+    Moves = FACADE,THROATCHOP,MEGAHORN,CLOSECOMBAT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = YANMEGA,50
+    Moves = BUGBUZZ,AIRSLASH,UTURN,GIGADRAIN
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Whitney,Whitney]
+LoseText = Waaaaah! Waaaaah! ...Snivel, hic. ...You meanie!
+Pokemon = MILTANK,50
+    Moves = STEALTHROCK,MILKDRINK,THUNDERWAVE,SEISMICTOSS
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = BLISSEY,50
+    Moves = SEISMICTOSS,SOFTBOILED,THUNDERWAVE,TELEPORT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = GIRAFARIG,50
+    Moves = ZENHEADBUTT,EARTHQUAKE,CRUNCH,PROTECT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Morty,Morty]
+LoseText = How is this possible...
+Pokemon = MISMAGIUS,50
+    Moves = NASTYPLOT,SHADOWBALL,MYSTICALFIRE,WILLOWISP
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = GENGAR,50
+    Moves = DARKPULSE,SHADOWBALL,SLUDGEBOMB,THUNDERBOLT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = DUSKNOIR,50
+    Moves = POLTERGEIST,EARTHQUAKE,SHADOWSNEAK,POWERUPPUNCH
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Chuck,Chuck]
+LoseText = I lost? How about that!
+Pokemon = PRIMEAPE,50
+    Moves = OUTRAGE,STOMPINGTANTRUM,CLOSECOMBAT,SWAGGER
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = POLIWRATH,50
+    Moves = DRAINPUNCH,DIVE,EARTHQUAKE,POISONJAB
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = HITMONTOP,50
+    Moves = DIG,CLOSECOMBAT,SUCKERPUNCH,DETECT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Jasmine,Jasmine]
+LoseText = Well done...
+Pokemon = FORRETRESS,50
+    Moves = HEAVYSLAM,GYROBALL,SPIKES,TOXICSPIKES
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = STEELIX,50
+    Moves = STEALTHROCK,EARTHQUAKE,HEAVYSLAM,TOXIC
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = SKARMORY,50
+    Moves = WHIRLWIND,ROOST,BRAVEBIRD,SPIKES
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Pryce,Pryce]
+LoseText = Hmm. Seems as if my luck has run out.
+Pokemon = MAMOSWINE,50
+    Moves = ICICLECRASH,EARTHQUAKE,ICESHARD,KNOCKOFF
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = WEAVILE,50
+    Moves = SWORDSDANCE,TRIPLEAXEL,KNOCKOFF,ICESHARD
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = LAPRAS,50
+    Moves = ICEBEAM,BRINE,RAINDANCE,SING
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Clair,Clair]
+LoseText = It's over...
+Pokemon = KINGDRA,50
+    Moves = HYDROPUMP,DRACOMETEOR,SURF,RAINDANCE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = DRAGONITE,50
+    Moves = OUTRAGE,THUNDERPUNCH,STONEEDGE,DRAGONDANCE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = DRAGALGE,50
+    Moves = DRACOMETEOR,SLUDGEBOMB,FLIPTURN,SCALD
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Roxanne,Roxanne]
+LoseText = So… I lost…
+Pokemon = ARMALDO,50
+    Moves = METALCLAW,XSCISSOR,STONEEDGE,PROTECT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = PROBOPASS,50
+    Moves = POWERGEM,DISCHARGE,EARTHPOWER,THUNDERWAVE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = AGGRON,50
+    Moves = STEALTHROCK,HEADSMASH,HEAVYSLAM,PROTECT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Brawly,Brawly]
+LoseText = Whoa, wow! You made a much bigger splash than I expected!
+Pokemon = BRELOOM,50
+    Moves = DRAINPUNCH,SEEDBOMB,MACHPUNCH,STONEEDGE
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = HARIYAMA,50
+    Moves = CLOSECOMBAT,KNOCKOFF,HEAVYSLAM,STONEEDGE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = HITMONCHAN,50
+    Moves = DRAINPUNCH,POWERUPPUNCH,THUNDERPUNCH,BULLETPUNCH
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Wattson,Wattson]
+LoseText = Wahahahah! Fine, I lost!
+Pokemon = ELECTRODE,50
+    Moves = SONICBOOM,THUNDERBOLT,LIGHTSCREEN,THUNDERWAVE
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = LANTURN,50
+    Moves = SCALD,VOLTSWITCH,TOXIC,PROTECT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = MANECTRIC,50
+    Moves = THUNDERBOLT,VOLTSWITCH,ELECTRICTERRAIN,FLAMETHROWER
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Flannery,Flannery]
+LoseText = Oh... I guess I was trying too hard...
+Pokemon = TORKOAL,50
+    Moves = STEALTHROCK,LAVAPLUME,RAPIDSPIN,TOXIC
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = BLAZIKEN,50
+    Moves = BLAZEKICK,CLOSECOMBAT,AERIALACE,DETECT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = CAMERUPT,50
+    Moves = FIREBLAST,EARTHPOWER,REST,SLEEPTALK
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Norman,Norman]
+LoseText = I can't… I can't believe it.
+Pokemon = EXPLOUD,50
+    Moves = BOOMBURST,OVERHEAT,SURF,FOCUSBLAST
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
 Pokemon = OBSTAGOON,50
-	Moves = FACADE,KNOCKOFF,REST,SLEEPTALK
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
+    Moves = OBSTRUCT,CROSSCHOP,HEADBUTT,NIGHTSLASH
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = SLAKING,50
+    Moves = EARTHQUAKE,FIREBLAST,RETALIATE,SUCKERPUNCH
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Winona,Winona]
+LoseText = A Trainer that commands Pokémon with more grace than I...
+Pokemon = SKARMORY,50
+    Moves = WHIRLWIND,ROOST,BRAVEBIRD,SPIKES
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = TROPIUS,50
+    Moves = LEECHSEED,SUBSTITUTE,AIRSLASH,PROTECT
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = ALTARIA,50
+    Moves = DRAGONPULSE,ROOST,HURRICANE,FLAMETHROWER
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Tate,Tate]
+LoseText = The... The combination of me and my Pokémon!
+Pokemon = SOLROCK,50
+    Moves = STEALTHROCK,MORNINGSUN,WILLOWISP,ZENHEADBUTT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = GRUMPIG,50
+    Moves = PSYCHIC,FOCUSBLAST,SHADOWBALL,CALMMIND
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = GALLADE,50
+    Moves = SWORDSDANCE,CLOSECOMBAT,ZENHEADBUTT,KNOCKOFF
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Liza,Liza]
+LoseText = Oh! The combination of me and my Pokémon...
+Pokemon = LUNATONE,50
+    Moves = METEORBEAM,PSYSHOCK,EARTHPOWER,ROCKPOLISH
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = CHIMECHO,50
+    Moves = HEALINGWISH,RECOVER,PSYCHIC,ENERGYBALL
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = GARDEVOIR,50
+    Moves = MOONBLAST,PSYCHIC,MYSTICALFIRE,HEALINGWISH
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Juan,Juan]
+LoseText = Ahahaha, excellent! Very well, you are the winner.
+Pokemon = CRAWDAUNT,50
+    Moves = SWORDSDANCE,CRABHAMMER,KNOCKOFF,AQUAJET
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = WALREIN,50
+    Moves = SWORDSDANCE,WATERFALL,ICICLESPEAR,EARTHQUAKE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = SWAMPERT,50
+    Moves = HAMMERARM,EARTHQUAKE,LIQUIDATION,ROCKSLIDE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Roark,Roark]
+LoseText = Wh-what? That can't be! My buffed-up Pokémon!
+Pokemon = PROBOPASS,50
+    Moves = POWERGEM,DISCHARGE,EARTHPOWER,THUNDERWAVE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = RHYPERIOR,50
+    Moves = EARTHQUAKE,STONEEDGE,STEALTHROCK,MEGAHORN
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = RAMPARDOS,50
+    Moves = ZENHEADBUTT,STONEEDGE,EARTHQUAKE,AVALANCHE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Gardenia,Gardenia]
+LoseText = Aww, really? My Grass-type Pokémon are growing good and strong, too...
+Pokemon = TANGROWTH,50
+    Moves = POWERWHIP,KNOCKOFF,SLUDGEBOMB,FOCUSBLAST
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = ROSERADE,50
+    Moves = GIGADRAIN,TOXICSPIKES,LEECHSEED,GRASSYTERRAIN
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = LEAFEON,50
+    Moves = SWORDSDANCE,LEAFBLADE,KNOCKOFF,SYNTHESIS
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Maylene,Maylene]
+LoseText = I shall admit defeat... You are much too strong.
+Pokemon = TOXICROAK,50
+    Moves = SWORDSDANCE,GUNKSHOT,DRAINPUNCH,KNOCKOFF
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = GALLADE,50
+    Moves = SWORDSDANCE,CLOSECOMBAT,ZENHEADBUTT,KNOCKOFF
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = LUCARIO,50
+    Moves = CLOSECOMBAT,METEORMASH,SWORDSDANCE,EXTREMESPEED
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Wake,Crasher Wake]
+LoseText = Hunwah! It's gone and ended! How will I say this... I want more! I wanted to battle a lot more!
+Pokemon = FLOATZEL,50
+    Moves = ICEFANG,CRUNCH,AQUATAIL,AQUAJET
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = GASTRODON,50
+    Moves = MUDDYWATER,WATERPULSE,ANCIENTPOWER,EARTHPOWER
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = POLIWRATH,50
+    Moves = DRAINPUNCH,DIVE,EARTHQUAKE,POISONJAB
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Fantina,Fantina]
+LoseText = You are so fantastically strong. I know why I have lost.
+Pokemon = MISMAGIUS,50
+    Moves = NASTYPLOT,SHADOWBALL,MYSTICALFIRE,WILLOWISP
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = SPIRITOMB,50
+    Moves = REST,SLEEPTALK,CALMMIND,DARKPULSE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = DRIFBLIM,50
+    Moves = SHADOWBALL,CALMMIND,SUBSTITUTE,THUNDERBOLT
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Byron,Byron]
+LoseText = Hmm! My sturdy Pokémon--defeated!
+Pokemon = BRONZONG,50
+    Moves = STEALTHROCK,TOXIC,PSYWAVE,GYROBALL
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = STEELIX,50
+    Moves = STEALTHROCK,EARTHQUAKE,HEAVYSLAM,TOXIC
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = BASTIODON,50
+    Moves = IRONHEAD,HEAVYSLAM,STONEEDGE,EARTHQUAKE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Volkner,Volkner]
+LoseText = You've got me beat...
+Pokemon = ROTOM,50
+    Form = 5
+    Moves = NASTYPLOT,LEAFSTORM,VOLTSWITCH,PAINSPLIT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = LUXRAY,50
+    Moves = WILDCHARGE,THUNDERFANG,PSYCHICFANGS,ROAR
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = ELECTIVIRE,50
+    Moves = THUNDERBOLT,FLAMETHROWER,FOCUSBLAST,VOLTSWITCH
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Cilan,Cilan]
+LoseText = Huh? Is it over?
+Pokemon = LILLIGANT,50
+    Moves = ENERGYBALL,SYNTHESIS,PETALDANCE,QUIVERDANCE
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = SERPERIOR,50
+    Moves = LEAFSTORM,SUBSTITUTE,GLARE,TOXIC
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = SIMISAGE,50
+    Moves = LEAFSTORM,SUPERPOWER,ROCKSLIDE,GUNKSHOT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Cress,Cress]
+LoseText = Lose? Me? I don't believe this.
+Pokemon = SEISMITOAD,50
+    Moves = DRAINPUNCH,LIQUIDATION,ROCKSLIDE,SUPERSONIC
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = SAMUROTT,50
+    Moves = AQUATAIL,SWORDSDANCE,AQUAJET,DRAGONTAIL
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = SIMIPOUR,50
+    Moves = NASTYPLOT,HYDROPUMP,ICEBEAM,GRASSKNOT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Chili,Chili]
+LoseText = You got me. I am...burned...out...
+Pokemon = HEATMOR,50
+    Moves = FIREBLAST,GIGADRAIN,FOCUSBLAST,SCORCHINGSANDS
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = EMBOAR,50
+    Moves = HAMMERARM,FLAREBLITZ,ASSURANCE,STONEEDGE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = SIMISEAR,50
+    Moves = NASTYPLOT,FIREBLAST,GRASSKNOT,FOCUSBLAST
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Lenora,Lenora]
+LoseText = Your fighting style is so enchanting.
+Pokemon = BRAVIARY,50
+    Moves = SUBSTITUTE,BULKUP,BRAVEBIRD,ROOST
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = WATCHOG,50
+    Moves = HYPERFANG,HYPNOSIS,NASTYPLOT,BATONPASS
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = CINCCINO,50
+    Moves = TAILSLAP,TRIPLEAXEL,BULLETSEED,KNOCKOFF
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Burgh,Burgh]
+LoseText = Is it over? Has my muse abandoned me?
+Pokemon = CRUSTLE,50
+    Moves = XSCISSOR,STEALTHROCK,SHELLSMASH,ROCKSLIDE
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = DURANT,50
+    Moves = FIRSTIMPRESSION,SUPERPOWER,ROCKSLIDE,IRONHEAD
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = LEAVANNY,50
+    Moves = STICKYWEB,LEAFBLADE,XSCISSOR,MAGICCOAT
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Elesa,Elesa]
+LoseText = I meant to make your head spin, but you shocked me instead.
+Pokemon = EELEKTROSS,50
+    Moves = VOLTSWITCH,GIGADRAIN,FLAMETHROWER,DRAINPUNCH
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = EMOLGA,50
+    Moves = THUNDERBOLT,UTURN,ENCORE,ROOST
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = ZEBSTRIKA,50
+    Moves = THUNDERBOLT,VOLTSWITCH,OVERHEAT,HIDDENPOWER
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Clay,Clay]
+LoseText = Well, I've had enough... And just so you know, I didn't go easy on you.
+Pokemon = KROOKODILE,50
+    Moves = EARTHQUAKE,KNOCKOFF,STEALTHROCK,TAUNT
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = GOLURK,50
+    Moves = STEALTHROCK,EARTHQUAKE,SHADOWPUNCH,ICEPUNCH
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = EXCADRILL,50
+    Moves = EARTHQUAKE,IRONHEAD,RAPIDSPIN,TOXIC
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Skyla,Skyla]
+LoseText = Being your opponent in battle is a new source of strength to me. Thank you!
+Pokemon = ARCHEOPS,50
+    Moves = STONEEDGE,EARTHQUAKE,DUALWINGBEAT,ROOST
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = MANDIBUZZ,50
+    Moves = FOULPLAY,DEFOG,UTURN,ROOST
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = SWANNA,50
+    Moves = AERIALACE,HURRICANE,WATERPULSE,ICEBEAM
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Brycen,Brycen]
+LoseText = The wonderful combination of you and your Pokémon! What a beautiful friendship!
+Pokemon = BEARTIC,50
+    Moves = HAIL,SWORDSDANCE,ICICLECRASH,SUPERPOWER
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = VANILLUXE,50
+    Moves = BLIZZARD,FREEZEDRY,ICESHARD,TAUNT
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = CRYOGONAL,50
+    Moves = RAPIDSPIN,RECOVER,FREEZEDRY,KNOCKOFF
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Drayden,Drayden]
+LoseText = This intense feeling that floods me after a defeat... I don't know how to describe it.
+Pokemon = HYDREIGON,50
+    Moves = DRACOMETEOR,DARKPULSE,FLAMETHROWER,ROOST
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = DRUDDIGON,50
+    Moves = DRAGONTAIL,EARTHQUAKE,GLARE,TAUNT
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = HAXORUS,50
+    Moves = SWORDSDANCE,OUTRAGE,EARTHQUAKE,POISONJAB
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Cheren,Cheren]
+LoseText = Fantastic! You and your Pokémon have grown much stronger!
+Pokemon = STOUTLAND,50
+    Moves = PLAYROUGH,DIG,IRONHEAD,CRUNCH
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = BOUFFALANT,50
+    Moves = SUBSTITUTE,SWORDSDANCE,BODYSLAM,THROATCHOP
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = CINCCINO,50
+    Moves = TAILSLAP,TRIPLEAXEL,BULLETSEED,KNOCKOFF
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Roxie,Roxie]
+LoseText = Next time we meet, I'm going to give you a toxic shock!
+Pokemon = AMOONGUSS,50
+    Moves = GIGADRAIN,SLUDGEBOMB,FOULPLAY,SPORE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = GARBODOR,50
+    Moves = GUNKSHOT,SPIKES,STOMPINGTANTRUM,PAINSPLIT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = SCOLIPEDE,50
+    Moves = MEGAHORN,TOXIC,CROSSPOISON,XSCISSOR
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Marlon,Marlon]
+LoseText = You're strong as a gnarly wave and as nice as a glassy sea.
+Pokemon = ALOMOMOLA,50
+    Moves = SCALD,WISH,PROTECT,RAINDANCE
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = JELLICENT,50
+    Moves = WATERSPOUT,SHADOWBALL,TRICK,SURF
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = CARRACOSTA,50
+    Moves = SHELLSMASH,STONEEDGE,AQUAJET,LIQUIDATION
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Viola,Viola]
+LoseText = You and your Pokémon have shown me a whole new depth of field! Fantastic! Just fantastic!
+Pokemon = VIVILLON,50
+    Moves = DRAININGKISS,LIGHTSCREEN,SUPERSONIC,BUGBUZZ
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = SHEDINJA,50
+    Moves = SHADOWCLAW,DIG,PHANTOMFORCE,SPITE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = MASQUERAIN,50
+    Moves = STICKYWEB,BUGBUZZ,AIRSLASH,SCALD
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Grant,Grant]
+LoseText = You have proven to be a wall that I am unable to surmount!
+Pokemon = AURORUS,50
+    Moves = ICEBEAM,ANCIENTPOWER,EARTHPOWER,BLIZZARD
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = TYRANTRUM,50
+    Moves = HEADSMASH,OUTRAGE,CLOSECOMBAT,DRAGONCLAW
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = CARBINK,50
+    Moves = STEALTHROCK,MOONBLAST,PROTECT,BODYPRESS
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Korrina,Korrina]
+LoseText = How could it be?!
+Pokemon = MIENSHAO,50
+    Moves = HIGHJUMPKICK,KNOCKOFF,UTURN,FAKEOUT
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = LUCARIO,50
+    Moves = CLOSECOMBAT,METEORMASH,SWORDSDANCE,EXTREMESPEED
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = HAWLUCHA,50
+    Moves = FLYINGPRESS,SUBMISSION,ROCKTOMB,POISONJAB
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Ramos,Ramos]
+LoseText = Yeh believe in yer Pokémon... And they believe in yeh, too..
+Pokemon = JUMPLUFF,50
+    Moves = SWORDSDANCE,GIGADRAIN,LEECHSEED,POISONPOWDER
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = CHESNAUGHT,50
+    Moves = WOODHAMMER,DRAINPUNCH,SYNTHESIS,SPIKYSHIELD
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = GOGOAT,50
+    Moves = BULKUP,HORNLEECH,EARTHQUAKE,ROCKSLIDE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Clemont,Clemont]
+LoseText = Your passion for battle inspires me!
+Pokemon = MAGNEZONE,50
+    Moves = IRONDEFENSE,BODYPRESS,THUNDERBOLT,TELEPORT
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = DEDENNE,50
+    Moves = THUNDER,PARABOLICCHARGE,DAZZLINGGLEAM,ELECTROWEB
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = HELIOLISK,50
+    Moves = THUNDERBOLT,HYPERVOICE,VOLTSWITCH,DARKPULSE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Valerie,Valerie]
+LoseText = I hope the sun is shining tomorrow... That would be reason enough to smile.
+Pokemon = AROMATISSE,50
+    Moves = MOONBLAST,WISH,PROTECT,HEALBELL
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = MAWILE,50
+    Moves = SWORDSDANCE,PLAYROUGH,SUCKERPUNCH,KNOCKOFF
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = SYLVEON,50
+    Moves = MOONBLAST,PSYSHOCK,MISTYTERRAIN,MYSTICALFIRE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Olympia,Olympia]
+LoseText = Create your own path. Let nothing get in your way. Your fate, your future.
+Pokemon = MEOWSTIC,50
+    Moves = REFLECT,LIGHTSCREEN,THUNDERWAVE,PSYCHIC
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = DELPHOX,50
+    Moves = CALMMIND,FIREBLAST,PSYCHIC,GRASSKNOT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = SIGILYPH,50
+    Moves = CALMMIND,AIRSLASH,ROOST,PSYCHIC
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Wulfric,Wulfric]
+LoseText = Outstanding! I'm tough as an iceberg, but you smashed me through and through!
+Pokemon = CRYOGONAL,50
+    Moves = RAPIDSPIN,RECOVER,FREEZEDRY,KNOCKOFF
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = AVALUGG,50
+    Moves = AVALANCHE,HAIL,EARTHQUAKE,STONEEDGE
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = ABOMASNOW,50
+    Moves = SWORDSDANCE,ICESHARD,WOODHAMMER,EARTHQUAKE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[CAPTAIN_Ilima,Ilima]
+LoseText = Yes! You have emerged victorious!
+Pokemon = KOMALA,50
+    Moves = WOODHAMMER,THRASH,ROLLOUT,RAPIDSPIN
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = GUMSHOOS,50
+    Moves = HYPERFANG,CRUNCH,BULLDOZE,SUBSTITUTE
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = RATICATE,50
+    Form = 1
+    Moves = CRUNCH,SUCKERPUNCH,DOUBLEEDGE,SCARYFACE
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[CAPTAIN_Mallow,Mallow]
+LoseText = Sure enough, when it comes to you and Pokémon, the quality of the ingredients shines forth!
+Pokemon = SHIINOTIC,50
+    Moves = SPORE,STRENGTHSAP,GIGADRAIN,MOONBLAST
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = DECIDUEYE,50
+    Moves = POLTERGEIST,LEAFBLADE,UTURN,SHADOWSNEAK
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = LURANTIS,50
+    Moves = LEAFSTORM,SUPERPOWER,SYNTHESIS,SUNNYDAY
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[CAPTAIN_Lana,Lana]
+LoseText = Well! You certainly reeled me in.
+Pokemon = ARAQUANID,50
+    Moves = LEECHLIFE,LIQUIDATION,CRUNCH,RAINDANCE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = PRIMARINA,50
+    Moves = SPARKLINGARIA,MOONBLAST,MISTYTERRAIN,REFLECT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = WISHIWASHI,50
+    Moves = LIQUIDATION,EARTHQUAKE,ICEBEAM,ENDURE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[CAPTAIN_Kiawe,Kiawe]
+LoseText = Win or lose, there's never enough dancing!
+Pokemon = SALAZZLE,50
+    Moves = TOXIC,SLUDGEWAVE,FLAMETHROWER,DRAGONPULSE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = INCINEROAR,50
+    Moves = DARKESTLARIAT,OVERHEAT,SWORDSDANCE,BRICKBREAK
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = MAROWAK,50
+    Form = 1
+    Moves = SHADOWBONE,STOMPINGTANTRUM,FLAREBLITZ,FLAMEWHEEL
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[CAPTAIN_Sophocles,Sophocles]
+LoseText = I couldn't get it done... Don't worry about it, my precious Pokémon..
+Pokemon = TOGEDEMARU,50
+    Moves = ZINGZAP,IRONHEAD,NUZZLE,UTURN
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = VIKAVOLT,50
+    Moves = ZAPCANNON,THUNDERBOLT,BUGBUZZ,FLASHCANNON
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = GOLEM,50
+    Form = 1
+    Moves = STONEEDGE,THUNDERPUNCH,EARTHQUAKE,GYROBALL
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[CAPTAIN_Acerola,Acerola]
+LoseText = I'm...I'm speechless! You've done me in!
+Pokemon = DHELMISE,50
+    Moves = ANCHORSHOT,POWERWHIP,POLTERGEIST,SYNTHESIS
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = PALOSSAND,50
+    Moves = EARTHPOWER,SHADOWBALL,SHOREUP,STEALTHROCK
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = MIMIKYU,50
+    Moves = SWORDSDANCE,PLAYROUGH,SHADOWSNEAK,SHADOWCLAW
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[CAPTAIN_Mina,Mina]
+LoseText = I'm shocked at your strength!
+Pokemon = GRANBULL,50
+    Moves = PLAYROUGH,OUTRAGE,CRUNCH,TAUNT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = NINETALES,50
+    Form = 1
+    Moves = DAZZLINGGLEAM,ICEBEAM,NASTYPLOT,SHADOWBALL
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = RIBOMBEE,50
+    Moves = POLLENPUFF,MOONBLAST,QUIVERDANCE,STICKYWEB
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Milo,Milo]
+LoseText = The power of Grass has wilted... What an incredible Trainer!
+Pokemon = APPLETUN,50
+    Moves = DRACOMETEOR,APPLEACID,DRAGONPULSE,GIGADRAIN
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = ELDEGOSS,50
+    Moves = LEAFSTORM,LEAFTORNADO,POLLENPUFF,SING
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = RILLABOOM,50
+    Moves = SWORDSDANCE,DRUMBEATING,EARTHQUAKE,SUPERPOWER
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Nessa,Nessa]
+LoseText = You had no problem handling our surging might. It's no wonder that you won.
+Pokemon = BARRASKEWDA,50
+    Moves = LIQUIDATION,CLOSECOMBAT,FLIPTURN,PSYCHICFANGS
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = DREDNAW,50
+    Moves = LIQUIDATION,ROCKTOMB,JAWLOCK,CRUNCH
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = INTELEON,50
+    Moves = SNIPESHOT,ICEBEAM,AIRSLASH,AQUARING
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Kabu,Kabu]
+LoseText = Great Pokémon and a great Trainer! It's no surprise that you won!
+Pokemon = DARMANITAN,50
+    Moves = FLAREBLITZ,UTURN,ROCKSLIDE,EARTHQUAKE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = CINDERACE,50
+    Moves = PYROBALL,COURTCHANGE,ZENHEADBUTT,GUNKSHOT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = CENTISKORCH,50
+    Moves = FIRELASH,LUNGE,CRUNCH,POWERWHIP
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Bea,Bea]
+LoseText = I felt the fighting spirit of your Pokémon as you led them in battle.
+Pokemon = PANGORO,50
+    Moves = KNOCKOFF,CLOSECOMBAT,IRONHEAD,DRAINPUNCH
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = FALINKS,50
+    Moves = SWORDSDANCE,CLOSECOMBAT,THROATCHOP,ZENHEADBUTT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = SIRFETCHD,50
+    Moves = CLOSECOMBAT,KNOCKOFF,FIRSTIMPRESSION,POISONJAB
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Allister,Allister]
+LoseText = Crumbs...
+Pokemon = RUNERIGUS,50
+    Moves = STEALTHROCK,EARTHQUAKE,WILLOWISP,POLTERGEIST
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = CURSOLA,50
+    Moves = SHADOWBALL,METEORBEAM,BURNINGJEALOUSY,ENDURE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = POLTEAGEIST,50
+    Moves = SHELLSMASH,SHADOWBALL,GIGADRAIN,POLTERGEIST
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Opal,Opal]
+LoseText = Your pink is lacking, but you're an excellent Trainer with some excellent Pokémon.
+Pokemon = WEEZING,50
+    Form = 1
+    Moves = STRANGESTEAM,SLUDGEBOMB,MISTYTERRAIN,THUNDERBOLT
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = TOGEKISS,50
+    Moves = ANCIENTPOWER,AIRSLASH,DAZZLINGGLEAM,AURASPHERE
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = ALCREMIE,50
+    Moves = DAZZLINGGLEAM,ENERGYBALL,MYSTICALFIRE,LIGHTSCREEN
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Gordie,Gordie]
+LoseText = I've been crushed! I pride myself on my solid Pokémon, and yet this...
+Pokemon = SHUCKLE,50
+    Moves = STICKYWEB,STEALTHROCK,ENCORE,FINALGAMBIT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = COALOSSAL,50
+    Moves = ANCIENTPOWER,HEATCRASH,BURNUP,ROCKBLAST
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = STONJOURNER,50
+    Moves = STONEEDGE,HEATCRASH,EARTHQUAKE,ROCKSLIDE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Melony,Melony]
+LoseText = I think you took breaking the ice a little too literally...
+Pokemon = EISCUE,50
+    Moves = BELLYDRUM,ICICLECRASH,ZENHEADBUTT,SUBSTITUTE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = MRRIME,50
+    Moves = RAPIDSPIN,ICEBEAM,PSYCHIC,FOCUSBLAST
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = DARMANITAN,50
+    Form = 1
+    Moves = UTURN,ICICLECRASH,FLAREBLITZ,ROCKSLIDE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LEADER_Piers,Piers]
 LoseText = Me an' my team gave it our best. Let's meet up again for a battle some time...
+Pokemon = THIEVUL,50
+    Moves = NIGHTSLASH,FOULPLAY,PLAYROUGH,DIG
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = SKUNTANK,50
+    Moves = FLAMETHROWER,THIEF,SHADOWCLAW,POISONJAB
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = OBSTAGOON,50
+    Moves = FACADE,KNOCKOFF,REST,SLEEPTALK
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
 #-------------------------------
-[LEADER_Raihan,Raihan,0]
-Pokemon = SANDACONDA,50
-	Moves = STEALTHROCK,EARTHQUAKE,SANDSTORM,REST
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = FLYGON,50
-	Moves = DRAGONDANCE,EARTHQUAKE,OUTRAGE,STONEEDGE
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
-Pokemon = DURALUDON,50
-	Moves = DRACOMETEOR,FLASHCANNON,BODYPRESS,THUNDERBOLT
-	AbilityIndex = 0
-	IV = 31,31,31,31,31,31
+[LEADER_Raihan,Raihan]
 LoseText = I might have lost, but I still look good. Maybe I should snap a quick selfie...
+Pokemon = SANDACONDA,50
+    Moves = STEALTHROCK,EARTHQUAKE,SANDSTORM,REST
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = FLYGON,50
+    Moves = DRAGONDANCE,EARTHQUAKE,OUTRAGE,STONEEDGE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = DURALUDON,50
+    Moves = DRACOMETEOR,FLASHCANNON,BODYPRESS,THUNDERBOLT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
 #-------------------------------
+[YOUNGSTER,Christian]
+LoseText = ...
+Pokemon = GASTRODON,50
+    Moves = MUDDYWATER,WATERPULSE,ANCIENTPOWER,EARTHPOWER
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = SANDSLASH,50
+    Moves = EARTHQUAKE,ROLLOUT,SWORDSDANCE,SLASH
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = ORBEETLE,50
+    Moves = PSYCHIC,BUGBUZZ,REFLECT,LIGHTSCREEN
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[LASS,Norah]
+LoseText = ...
+Pokemon = TOGEKISS,50
+    Moves = ANCIENTPOWER,AIRSLASH,DAZZLINGGLEAM,AURASPHERE
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = LIEPARD,50
+    Moves = NIGHTSLASH,SUCKERPUNCH,PLAYROUGH,SHADOWCLAW
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = ROSERADE,50
+    Moves = GIGADRAIN,TOXICSPIKES,LEECHSEED,GRASSYTERRAIN
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
