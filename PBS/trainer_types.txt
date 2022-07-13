@@ -293,6 +293,26 @@ Name = Young Couple
 Gender = Unknown
 BaseMoney = 60
 #-------------------------------
+[DRAGONTAMER]
+Name = Dragon Tamer
+Gender = Male
+BaseMoney = 60
+#-------------------------------
+[KINDLER]
+Name = Kindler
+Gender = Male
+BaseMoney = 60
+#-------------------------------
+[KIMONOGIRL]
+Name = Kimono Girl
+Gender = Female
+BaseMoney = 60
+#-------------------------------
+[BOARDER]
+Name = Boarder
+Gender = Male
+BaseMoney = 60
+#-------------------------------
 [LEADER_Brock]
 Name = Kanto Leader
 Gender = Male
