@@ -323,6 +323,16 @@ Name = Grunt
 Gender = Female
 BaseMoney = 60
 #-------------------------------
+[FAIRYTALEGIRL]
+Name = Fairy Tale Girl
+Gender = Female
+BaseMoney = 60
+#-------------------------------
+[HEXMANIAC]
+Name = Hex Maniac
+Gender = Female
+BaseMoney = 60
+#-------------------------------
 [LEADER_Brock]
 Name = Kanto Leader
 Gender = Male
