@@ -1086,3 +1086,18 @@ Pokemon = ROSERADE,50
     Moves = GIGADRAIN,TOXICSPIKES,LEECHSEED,GRASSYTERRAIN
     AbilityIndex = 1
     IV = 31,31,31,31,31,31
+#-------------------------------
+[BUGCATCHER,Miguel]
+LoseText = ...
+Pokemon = CRUSTLE,50
+    Moves = XSCISSOR,STEALTHROCK,SHELLSMASH,ROCKSLIDE
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+Pokemon = VIKAVOLT,50
+    Moves = ZAPCANNON,THUNDERBOLT,BUGBUZZ,FLASHCANNON
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = PINSIR,50
+    Moves = SUPERPOWER,XSCISSOR,SWORDSDANCE,SUBMISSION
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31

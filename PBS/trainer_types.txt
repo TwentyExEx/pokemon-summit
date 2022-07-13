@@ -313,6 +313,16 @@ Name = Boarder
 Gender = Male
 BaseMoney = 60
 #-------------------------------
+[TEAMROCKET_M]
+Name = Grunt
+Gender = Male
+BaseMoney = 60
+#-------------------------------
+[TEAMROCKET_F]
+Name = Grunt
+Gender = Female
+BaseMoney = 60
+#-------------------------------
 [LEADER_Brock]
 Name = Kanto Leader
 Gender = Male
