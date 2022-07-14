@@ -1075,7 +1075,7 @@ Pokemon = LAPRAS,50
     IV = 31,31,31,31,31,31
 	Item = HEAVYDUTYBOOTS
 #-------------------------------
-[ELITE_Bruno,Bruno]
+[ELITE_Bruno,Bruno,0]
 LoseText = 
 Pokemon = HITMONCHAN,50
     Moves = DRAINPUNCH,POWERUPPUNCH,THUNDERPUNCH,BULLETPUNCH
