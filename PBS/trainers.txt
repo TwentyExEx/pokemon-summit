@@ -1185,3 +1185,21 @@ Pokemon = GYARADOS,50
     IV = 31,31,31,31,31,31
 	Item = BLACKBELT
 #-------------------------------
+[ELITE_Will,Will]
+LoseText = 
+Pokemon = SLOWKING,50
+    Moves = SCALD,PSYCHIC,SLACKOFF,TELEPORT
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+	Item = COLBURBERRY
+Pokemon = XATU,50
+    Moves = PSYCHIC,HEATWAVE,ROOST,TELEPORT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = ROCKYHELMET
+Pokemon = GRUMPIG,50
+    Moves = PSYCHIC,FOCUSBLAST,SHADOWBALL,CALMMIND
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = ASSAULTVEST
+#-------------------------------
