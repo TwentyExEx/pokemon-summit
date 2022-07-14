@@ -1057,47 +1057,131 @@ Pokemon = DURALUDON,50
     AbilityIndex = 0
     IV = 31,31,31,31,31,31
 #-------------------------------
-[YOUNGSTER,Christian]
-LoseText = ...
-Pokemon = GASTRODON,50
-    Moves = MUDDYWATER,WATERPULSE,ANCIENTPOWER,EARTHPOWER
-    AbilityIndex = 1
-    IV = 31,31,31,31,31,31
-Pokemon = SANDSLASH,50
-    Moves = EARTHQUAKE,ROLLOUT,SWORDSDANCE,SLASH
+[ELITE_Lorelei,Lorelei]
+LoseText = 
+Pokemon = DEWGONG,50
+    Moves = ICEBEAM,AQUATAIL,ICESHARD,AQUARING
     AbilityIndex = 0
     IV = 31,31,31,31,31,31
-Pokemon = ORBEETLE,50
-    Moves = PSYCHIC,BUGBUZZ,REFLECT,LIGHTSCREEN
+	Item = LEFTOVERS
+Pokemon = JYNX,50
+    Moves = PSYCHIC,BLIZZARD,ICEBEAM,SHADOWBALL
     AbilityIndex = 0
     IV = 31,31,31,31,31,31
+	Item = ASSAULTVEST
+Pokemon = LAPRAS,50
+    Moves = ICEBEAM,BRINE,RAINDANCE,SING
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = HEAVYDUTYBOOTS
 #-------------------------------
-[LASS,Norah]
-LoseText = ...
-Pokemon = TOGEKISS,50
-    Moves = ANCIENTPOWER,AIRSLASH,DAZZLINGGLEAM,AURASPHERE
+[ELITE_Bruno,Bruno]
+LoseText = 
+Pokemon = HITMONCHAN,50
+    Moves = DRAINPUNCH,POWERUPPUNCH,THUNDERPUNCH,BULLETPUNCH
     AbilityIndex = 1
     IV = 31,31,31,31,31,31
-Pokemon = LIEPARD,50
-    Moves = NIGHTSLASH,SUCKERPUNCH,PLAYROUGH,SHADOWCLAW
-    AbilityIndex = 1
+	Item = BLACKBELT
+Pokemon = HITMONLEE,50
+    Moves = BLAZEKICK,BRICKBREAK,POISONJAB,THROATCHOP
+    AbilityIndex = 0
     IV = 31,31,31,31,31,31
-Pokemon = ROSERADE,50
-    Moves = GIGADRAIN,TOXICSPIKES,LEECHSEED,GRASSYTERRAIN
-    AbilityIndex = 1
+	Item = LEFTOVERS
+Pokemon = MACHAMP,50
+    Moves = STONEEDGE,DARKESTLARIAT,CLOSECOMBAT,FACADE
+    AbilityIndex = 0
     IV = 31,31,31,31,31,31
+	Item = FLAMEORB
 #-------------------------------
-[BUGCATCHER,Miguel]
-LoseText = ...
-Pokemon = CRUSTLE,50
-    Moves = XSCISSOR,STEALTHROCK,SHELLSMASH,ROCKSLIDE
+[ELITE_Koga,Koga]
+LoseText = 
+Pokemon = TENTACRUEL,50
+    Moves = SLUDGEWAVE,SURF,HEX,SCALD
     AbilityIndex = 1
     IV = 31,31,31,31,31,31
-Pokemon = VIKAVOLT,50
-    Moves = ZAPCANNON,THUNDERBOLT,BUGBUZZ,FLASHCANNON
+	Item = BLACKSLUDGE
+Pokemon = CROBAT,50
+    Moves = LEECHLIFE,CROSSPOISON,BRAVEBIRD,ZENHEADBUTT
     AbilityIndex = 0
     IV = 31,31,31,31,31,31
-Pokemon = PINSIR,50
-    Moves = SUPERPOWER,XSCISSOR,SWORDSDANCE,SUBMISSION
+	Item = SHARPBEAK
+Pokemon = WEEZING,50
+    Moves = ASSURANCE,TOXIC,SLUDGEBOMB,HEATWAVE
     AbilityIndex = 0
     IV = 31,31,31,31,31,31
+	Item = ASSAULTVEST
+#-------------------------------
+[ELITE_Agatha,Agatha]
+LoseText = 
+Pokemon = MAROWAK,50
+    Moves = SHADOWBONE,STOMPINGTANTRUM,FLAREBLITZ,FLAMEWHEEL 
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = THICKCLUB
+	Form = 1
+Pokemon = MISMAGIUS,50
+    Moves = NASTYPLOT,SHADOWBALL,MYSTICALFIRE,WILLOWISP
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = LEFTOVERS
+Pokemon = GENGAR,50
+    Moves = DARKPULSE,SHADOWBALL,SLUDGEBOMB,THUNDERBOLT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = BLACKSLUDGE
+#-------------------------------
+[ELITE_Lance,Lance]
+LoseText = 
+Pokemon = KINGDRA,50
+    Moves = HYDROPUMP,DRACOMETEOR,SURF,RAINDANCE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = DAMPROCK
+Pokemon = EXEGGUTOR,50
+    Moves = DRAGONHAMMER,GIGADRAIN,LEAFSTORM,DRAGONPULSE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = DRACOPLATE
+	Form = 1
+Pokemon = DRAGONITE,50
+    Moves = OUTRAGE,THUNDERPUNCH,STONEEDGE,DRAGONDANCE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = LEFTOVERS
+#-------------------------------
+[ELITE_Green,Green]
+LoseText = 
+Pokemon = CLEFABLE,50
+    Moves = MOONBLAST,METRONOME,PSYCHIC,FLAMETHROWER
+    AbilityIndex = 1 
+    IV = 31,31,31,31,31,31
+	Item = LEFTOVERS
+Pokemon = VICTREEBEL,50
+    Moves = LEAFTORNADO,LEAFBLADE,POISONJAB,SLEEPPOWDER
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = ROCKYHELMET
+Pokemon = BLASTOISE,50
+    Moves = AQUATAIL,SURF,FLASHCANNON,SHELLSMASH
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = WHITEHERB
+#-------------------------------
+[ELITE_Oak,Oak]
+LoseText = 
+Pokemon = TAUROS,50
+    Moves = ASSURANCE,ZENHEADBUTT,STOMPINGTANTRUM,STONEEDGE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = LEFTOVERS
+Pokemon = ARCANINE,50
+    Moves = FLAMETHROWER,FLAREBLITZ,EXTREMESPEED,PLAYROUGH
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = HEAVYDUTYBOOTS
+Pokemon = GYARADOS,50
+    Moves = ICEFANG,BOUNCE,OUTRAGE,AQUATAIL
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = BLACKBELT
+#-------------------------------
