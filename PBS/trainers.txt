@@ -465,6 +465,21 @@ Pokemon = BASTIODON,50
     AbilityIndex = 0
     IV = 31,31,31,31,31,31
 #-------------------------------
+[LEADER_Candice,Candice]
+LoseText = I must say, I'm warmed up to you! I might even admire you a little.
+Pokemon = ABOMASNOW,50
+    Moves = SWORDSDANCE,ICESHARD,WOODHAMMER,EARTHQUAKE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = FROSLASS,50
+    Moves = HAIL,SHADOWBALL,FROSTBREATH,WILLOWISP
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = GLACEON,50
+    Moves = ICEBEAM,FREEZEDRY,SHADOWBALL,WATERPULSE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+#-------------------------------
 [LEADER_Volkner,Volkner]
 LoseText = You've got me beat...
 Pokemon = ROTOM,50
