@@ -162,7 +162,7 @@ end
   @sprites["bg"].zoom_x=1.5
   shakeItem
   shakeItem
-  pbWait(30)
+  pbMessage(_INTL("{1} obtained {2}!\\wtnp[60]\1",$Trainer.name,@pokemon.downcase.capitalize))
   18.times do
   Graphics.update  
   @sprites["bg"].zoom_y-=0.15/2 
@@ -172,11 +172,7 @@ end
   @sprites["pokemon"].zoom_x-=0.17/2 
   @sprites["pokemon"].opacity-=14.16
   end
-  pbAddPokemonSilent(@pokeinfo)
-  pbMessage(_INTL("{1} obtained {2}!\\wtnp[50]\1",$Trainer.name,@pokemon.downcase.capitalize))
-  if $Trainer.party_full?
-    pbStorePokemon(@pokeinfo)
-  end
+  pbStorePokemon(@pokeinfo)
   loop do
     break
   end
