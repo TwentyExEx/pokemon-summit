@@ -418,6 +418,8 @@ $allpkmn = [
   [:DRAGAPULT, :SHADOWBALL, :DRACOMETEOR, :FLAMETHROWER, :HYDROPUMP, 0, 1]
 ]
 
+$bracketnames = ["Kanto Leaders", "Johto Leaders", "Hoenn Leaders", "Sinnoh Leaders", "Unova Leaders", "Kalos Leaders", "Alola Captains", "Galar Leaders"]
+
 def pbSummitSelectPokemon
   num = rand(0...($allpkmn.length))
   pkmn = $allpkmn[num]
@@ -485,8 +487,6 @@ def pbSummitBracketSelection(group)
             ["LEADER_Pryce","Pryce",0],
             ["LEADER_Clair","Clair",0]
           ]
-        
-        
     when 2 # Hoenn Leaders
           trainerlist = [
             ["LEADER_Roxanne","Roxanne",0],
@@ -581,6 +581,11 @@ def pbSummitBracketSelection(group)
   $game_variables[29] = trainerSelection
 end
 
+def pbSummitBracketAnnounce
+  bracket = $bracketnames[$game_variables[31]]
+  pbMessage(_INTL("\\rYou will be facing the {1} bracket.",bracket))
+end
+
 def pbSummitPrepMainTrainer(bracket)
   trainers = $game_variables[29]
   fightnum = $game_variables[33]
@@ -588,7 +593,7 @@ def pbSummitPrepMainTrainer(bracket)
   $game_variables[30] = opponent
 
   case bracket
-  when 0 || 1 # Kanto and Johto Leaders
+  when 0, 1 # Kanto and Johto Leaders
     $game_map.events[1].character_name = "trainer_Sheet2"
     case opponent[0].downcase
     when "leader_brock"
@@ -889,8 +894,6 @@ def pbSummitMainTrainer
 end
 
 def pbSummitBracketUnlock
-  bracketnames = ["Kanto Leaders", "Johto Leaders", "Hoenn Leaders", "Sinnoh Leaders", "Unova Leaders", "Kalos Leaders", "Alola Captains", "Galar Leaders"]
-
   bracketwon = bracketnames[$game_variables[31]-1]
   bracketunlocked = bracketnames[$game_variables[31]]
 
