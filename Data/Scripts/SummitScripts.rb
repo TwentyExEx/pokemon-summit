@@ -817,17 +817,15 @@ def pbSummitPrepBattle
   setBattleRule("setStyle")
   setBattleRule("outcomeVar", 32)
   tempParty = []
-  for i in $Trainer.party
-    clonepoke = i.clone
-    clonepoke.ev = i.ev.clone
-    clonepoke.iv = i.iv.clone
-    clonepoke.item = i.item.clone
-    clonepoke.ability = i.ability.clone
-    for j in 0...$Trainer.party.length
-      clonepoke.ev[j] = i.ev[j]
-      clonepoke.iv[j] = i.iv[j]
-      clonepoke.item[j] = i.item[j]
-      clonepoke.ability[j] = i.ability[j]
+  for poke in $Trainer.party
+    clonepoke = poke.clone
+    clonepoke.ev = poke.ev.clone
+    clonepoke.iv = poke.iv.clone
+    clonepoke.item = poke.item.clone
+    clonepoke.ability = poke.ability.clone
+    for j in 0...6
+      clonepoke.ev[j] = poke.ev[j]
+      clonepoke.iv[j] = poke.iv[j]
     end
     clonepoke.level = 50 # Set this to whatever preset level you want
     clonepoke.calc_stats
