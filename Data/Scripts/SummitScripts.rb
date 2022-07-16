@@ -687,6 +687,7 @@ def pbSummitPrepMainTrainer(bracket)
       $game_map.events[1].pattern = 1
     when "leader_maylene"
       $game_map.events[1].character_name = "trainer_LEADER_Maylene"
+      $game_map.events[1].direction = 2
     when "leader_wake"
       $game_map.events[1].direction = 2
       $game_map.events[1].pattern = 3
@@ -1354,7 +1355,7 @@ def pbSummitSuperTrain
       else
         for statname in @chosenstats
           statnameint = statname.clone
-          if statname.include?(" ")
+          if statname.equal?(" ")
             statnameint.gsub!(/\s/, "_")
           end
           pkmn.ev[statnameint.upcase.to_sym] = 252
