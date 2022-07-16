@@ -534,7 +534,7 @@ def pbSummitBracketSelection(group)
             ["LEADER_Viola","Viola",0],
             ["LEADER_Grant","Grant",0],
             ["LEADER_Korrina","Korrina",0],
-            ["LEADER_Ramos","Whitney",0],
+            ["LEADER_Ramos","Ramos",0],
             ["LEADER_Clemont","Clemont",0],
             ["LEADER_Valerie","Valerie",0],
             ["LEADER_Olympia","Olympia",0],
