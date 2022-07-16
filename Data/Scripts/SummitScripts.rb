@@ -1012,3 +1012,71 @@ def pbSummitMakerGalar
     pbMessage("You have already obtained this starter set.")
   end
 end
+
+def pbSummitSuperTrain
+  @evstats = ["HP","Attack","Defense","Sp. Attack","Sp. Defense","Speed"]
+  @selection = @evstats.clone
+
+  pbMessage("\\rWhich Pokémon would you like to super train?")
+  pkmn = pbChoosePokemon(1, 3)
+
+  if $game_variables[1] < 0
+    return false
+  else
+    pbMessage("\\rWhich stats would you like this Pokémon to specialize in?")
+    loop do
+      temp = pbMessage("\\rSelect a stat to specialize in.",@evstats,-1)
+      if temp < 0
+          cmd = pbMessage("Cancel super training?",["Yes", "No"],1)
+          if cmd <= 0
+            return false
+            break
+          end
+      else
+        @stat1 = @evstats[temp]
+        @selection.delete_at(temp)
+        break
+      end
+    end
+
+    loop do
+      temp = pbMessage("\\rSelect another stat to specialize in.",@selection,-1)
+      if temp < 0
+        cmd = pbMessage("Cancel super training?",["Yes", "No"],1)
+        if cmd <= 0
+          return false
+          break
+        end
+      else
+        @stat2 = @selection[temp]
+        break
+      end
+    end
+
+    @chosenstats = [@stat1, @stat2]
+
+    pkmn = pbGetPokemon(1)
+
+    loop do
+      cmd = pbMessage(_INTL("\\rDo you want us to train your #{pbGetPokemon(1).species.downcase.capitalize} in {1} and {2}?",@stat1,@stat2),["Yes","No"],2)
+      if cmd == 1
+        cmd2 = pbMessage("Cancel super training?",["Yes", "No"],1)
+        if cmd2 == 0
+          return false
+          break
+        end
+      else
+        for statname in @chosenstats
+          if statname.include?("Sp.")
+            statname.gsub("Sp.", "Special")
+            statname.gsub(" ","_")
+          end
+          pkmn.ev[statname.to_sym] = 252
+        end
+        pbMessage(_INTL("\\rYour #{pbGetPokemon(1).species.downcase.capitalize} now specializes in {1} and {2}.",@stat1,@stat2))
+        return true
+        break
+      end
+    end
+  end
+end
