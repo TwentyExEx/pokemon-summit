@@ -440,11 +440,11 @@ def pbSummitMakePokemon(species, form)
     end
   end
 
+  @givepkmn.form = pkmninfo[5]
   pokeMoves = [pkmninfo[1], pkmninfo[2], pkmninfo[3], pkmninfo[4]]
   for move in pokeMoves
     @givepkmn.learn_move(move)
   end
-  @givepkmn.form = pkmninfo[5]
   @givepkmn.ability_index = pkmninfo[6]
   return @givepkmn
 end
@@ -474,6 +474,97 @@ def pbSummitBracketSelection(group)
         ["LEADER_Blaine","Blaine",0],
         ["LEADER_Giovanni","Giovanni",0]
       ]
+    when 1 # Johto Leaders
+          trainerlist = [
+            ["LEADER_Falkner","Falkner",0],
+            ["LEADER_Bugsy","Bugsy",0],
+            ["LEADER_Morty","Morty",0],
+            ["LEADER_Whitney","Whitney",0],
+            ["LEADER_Chuck","Chuck",0],
+            ["LEADER_Jasmine","Jasmine",0],
+            ["LEADER_Pryce","Pryce",0],
+            ["LEADER_Clair","Clair",0]
+          ]
+        
+        
+    when 2 # Hoenn Leaders
+          trainerlist = [
+            ["LEADER_Roxanne","Roxanne",0],
+            ["LEADER_Brawly","Brawly",0],
+            ["LEADER_Wattson","Wattson",0],
+            ["LEADER_Flannery","Flannery",0],
+            ["LEADER_Norman","Norman",0],
+            ["LEADER_Winona","Winona",0],
+            ["LEADER_Tate","Tate",0],
+        ["LEADER_Liza","Liza",0],
+            ["LEADER_Juan","Juan",0]
+          ]
+        
+    when 3 # Sinnoh Leaders
+          trainerlist = [
+            ["LEADER_Roark","Roark",0],
+            ["LEADER_Gardenia","Gardenia",0],
+            ["LEADER_Maylene","Maylene",0],
+            ["LEADER_Wake","Crasher Wake",0],
+            ["LEADER_Fantina","Fantina",0],
+            ["LEADER_Byron","Byron",0],
+            ["LEADER_Candice","Candice",0],
+            ["LEADER_Volkner","Volkner",0]
+          ]
+        
+    when 4 # Unova Leaders
+          trainerlist = [
+            ["LEADER_Cilan","Cilan",0],
+            ["LEADER_Chili","Chili",0],
+            ["LEADER_Cress","Cress",0],
+            ["LEADER_Lenora","Lenora",0],
+            ["LEADER_Burgh","Burgh",0],
+            ["LEADER_Elesa","Elesa",0],
+            ["LEADER_Clay","Clay",0],
+            ["LEADER_Skyla","Skyla",0],
+            ["LEADER_Drayden","Drayden",0],
+            ["LEADER_Cheren","Cheren",0],
+            ["LEADER_Roxie","Roxie",0],
+            ["LEADER_Marlon","Marlon",0],
+            ["LEADER_Brycen","Brycen",0]
+          ]
+        
+    when 5 # Kalos Leaders
+          trainerlist = [
+            ["LEADER_Viola","Viola",0],
+            ["LEADER_Grant","Grant",0],
+            ["LEADER_Korrina","Korrina",0],
+            ["LEADER_Ramos","Whitney",0],
+            ["LEADER_Clemont","Clemont",0],
+            ["LEADER_Valerie","Valerie",0],
+            ["LEADER_Olympia","Olympia",0],
+            ["LEADER_Wulfric","Wulfric",0]
+          ]
+        
+    when 6 # Alola Captains
+          trainerlist = [
+            ["CAPTAIN_Ilima","Ilima",0],
+            ["CAPTAIN_Mallow","Mallow",0],
+            ["CAPTAIN_Lana","Lana",0],
+            ["CAPTAIN_Kiawe","Kiawe",0],
+            ["CAPTAIN_Sophocles","Sophocles",0],
+            ["CAPTAIN_Acerola","Acerola",0],
+            ["CAPTAIN_Mina","Mina",0]
+          ]
+        
+    when 7 # Galar Leaders
+          trainerlist = [
+            ["LEADER_Milo","Milo",0],
+            ["LEADER_Nessa","Nessa",0],
+            ["LEADER_Kabu","Kabu",0],
+            ["LEADER_Bea","Bea",0],
+            ["LEADER_Allister","Allister",0],
+            ["LEADER_Opal","Opal",0],
+            ["LEADER_Gordie","Gordie",0],
+            ["LEADER_Melony","Melony",0],
+            ["LEADER_Piers","Piers",0],
+            ["LEADER_Raihan","Raihan",0]
+          ]
   end
 
   for i in 0..4
@@ -790,7 +881,6 @@ def pbSummitMainTrainer
   TrainerBattle.start($game_variables[30])
   $Trainer.party = $game_variables[27]
   if $game_variables[32] == 1
-    $Trainer.money+=3000
     $game_variables[33] += 1
   end
   if $game_variables[33] == 3 # when cleared bracket
@@ -799,7 +889,7 @@ def pbSummitMainTrainer
 end
 
 def pbSummitBracketUnlock
-  bracketnames = ["Kanto Leaders", "Johto Leaders", "Hoenn Leaders", "Sinnoh Leaders", "Unova Leaders", "Kalos Leaders", "Alola Leaders", "Galar Leaders"]
+  bracketnames = ["Kanto Leaders", "Johto Leaders", "Hoenn Leaders", "Sinnoh Leaders", "Unova Leaders", "Kalos Leaders", "Alola Captains", "Galar Leaders"]
 
   bracketwon = bracketnames[$game_variables[31]-1]
   bracketunlocked = bracketnames[$game_variables[31]]
@@ -1199,7 +1289,7 @@ def pbSummitMakerGalar
 end
 
 def pbSummitSuperTrain
-  @evstats = ["HP","Attack","Defense","Sp. Attack","Sp. Defense","Speed"]
+  @evstats = ["HP","Attack","Defense","Special Attack","Special Defense","Speed"]
   @selection = @evstats.clone
 
   pbMessage("\\rWhich Pokémon would you like to super train?")
@@ -1233,7 +1323,12 @@ def pbSummitSuperTrain
           break
         end
       else
-        @stat2 = @selection[temp]
+        temp2 = @selection[temp]
+        for stat in @evstats
+          if stat.include?(temp2)
+            @stat2 = stat
+          end
+        end
         break
       end
     end
@@ -1243,7 +1338,7 @@ def pbSummitSuperTrain
     pkmn = pbGetPokemon(1)
 
     loop do
-      cmd = pbMessage(_INTL("\\rDo you want us to train your #{pbGetPokemon(1).species.downcase.capitalize} in {1} and {2}?",@stat1,@stat2),["Yes","No"],2)
+      cmd = pbMessage(_INTL("\\rDo you want us to train your #{pbGetPokemon(1).species.downcase.capitalize} in {1} and {2}?",@chosenstats[0],@chosenstats[1]),["Yes","No"],2)
       if cmd == 1
         cmd2 = pbMessage("Cancel super training?",["Yes", "No"],1)
         if cmd2 == 0
@@ -1252,13 +1347,14 @@ def pbSummitSuperTrain
         end
       else
         for statname in @chosenstats
-          if statname.include?("Sp.")
-            statname.gsub("Sp.", "Special")
-            statname.gsub(" ","_")
+          statnameint = statname.clone
+          if statname.include?(" ")
+            statnameint.gsub!(/\s/, "_")
           end
-          pkmn.ev[statname.to_sym] = 252
+          pkmn.ev[statnameint.upcase.to_sym] = 252
         end
-        pbMessage(_INTL("\\rYour #{pbGetPokemon(1).species.downcase.capitalize} now specializes in {1} and {2}.",@stat1,@stat2))
+
+        pbMessage(_INTL("\\rYour #{pbGetPokemon(1).species.downcase.capitalize} now specializes in {1} and {2}.",@chosenstats[0],@chosenstats[1]))
         return true
         break
       end
