@@ -1,0 +1,4 @@
+Name       = Pokemon Summit Scripts
+Version    = 1.0.0
+Essentials = 20.1
+Credits    = kallisto

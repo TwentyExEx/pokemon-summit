@@ -458,7 +458,7 @@ end
 
 def pbSummitVendingPokemon
   pbSummitSelectPokemon
-  pbAddPokemon(@givepkmn)
+  pbShowPokemonSprite(@givepkmn)
 end
 
 def pbSummitBracketSelection(group)
@@ -1332,7 +1332,7 @@ def pbSummitSuperTrain
       else
         temp2 = @selection[temp]
         for stat in @evstats
-          if stat.include?(temp2)
+          if stat.equal?(temp2)
             @stat2 = stat
           end
         end
@@ -1355,13 +1355,13 @@ def pbSummitSuperTrain
       else
         for statname in @chosenstats
           statnameint = statname.clone
-          if statname.equal?(" ")
+          if statname.include?(" ")
             statnameint.gsub!(/\s/, "_")
           end
           pkmn.ev[statnameint.upcase.to_sym] = 252
         end
 
-        pbMessage(_INTL("\\rYour #{pbGetPokemon(1).species.downcase.capitalize} now specializes in {1} and {2}.",@chosenstats[0],@chosenstats[1]))
+        pbMessage(_INTL("\\G\\rYour #{pbGetPokemon(1).species.downcase.capitalize} now specializes in {1} and {2}.",@chosenstats[0],@chosenstats[1]))
         return true
         break
       end
