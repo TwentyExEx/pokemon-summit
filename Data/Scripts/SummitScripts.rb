@@ -894,8 +894,8 @@ def pbSummitMainTrainer
 end
 
 def pbSummitBracketUnlock
-  bracketwon = bracketnames[$game_variables[31]-1]
-  bracketunlocked = bracketnames[$game_variables[31]]
+  bracketwon = $bracketnames[$game_variables[31]-1]
+  bracketunlocked = $bracketnames[$game_variables[31]]
 
   pbMessage(_INTL("Congratulations on defeating the {1}!",bracketwon))
   pbSEPlay("Slots coin")
