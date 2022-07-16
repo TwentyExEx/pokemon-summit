@@ -1,3 +1,255 @@
+=== [gen8nationaldex] Champions/Blue ===
+
+Pidgeot  
+Ability: Keen Eye  
+
+Aerodactyl  
+Ability: Rock Head  
+
+Blastoise  
+Ability: Torrent  
+
+Arcanine  
+Ability: Intimidate  
+
+Machamp  
+Ability: Guts  
+
+Exeggutor  
+Ability: Chlorophyll  
+
+
+=== [gen8nationaldex] Champions/Steven ===
+
+Aggron  
+Ability: Sturdy  
+
+Excadrill  
+Ability: Sand Rush  
+
+Metagross  
+Ability: Clear Body  
+
+Skarmory  
+Ability: Keen Eye  
+
+Claydol  
+Ability: Levitate  
+
+Armaldo  
+Ability: Battle Armor  
+
+
+=== [gen8nationaldex] Champions/Wallace ===
+
+Starmie  
+Ability: Illuminate  
+
+Swampert  
+Ability: Torrent  
+
+Ludicolo  
+Ability: Swift Swim  
+
+Walrein  
+Ability: Thick Fat  
+
+Sharpedo  
+Ability: Rough Skin  
+
+Milotic  
+Ability: Marvel Scale  
+
+
+=== [gen8] Champions/Hau ===
+
+Raichu-Alola  
+Ability: Surge Surfer  
+
+Decidueye  
+Ability: Overgrow  
+
+Tauros (M)  
+Ability: Intimidate  
+
+Noivern  
+Ability: Frisk  
+
+Vaporeon  
+Ability: Water Absorb  
+
+Crabominable  
+Ability: Hyper Cutter  
+
+
+=== [gen8nationaldex] World Heroines/Serena ===
+
+Rhyperior  
+Ability: Lightning Rod  
+
+Absol  
+Ability: Pressure  
+
+Delphox  
+Ability: Blaze  
+
+Sylveon  
+Ability: Cute Charm  
+
+Heliolisk  
+Ability: Dry Skin  
+
+Avalugg  
+Ability: Own Tempo  
+
+
+=== [gen8nationaldex] World Heroines/Rosa ===
+
+Accelgor  
+Ability: Hydration  
+
+Serperior  
+Ability: Overgrow  
+
+Simipour  
+Ability: Gluttony  
+
+Weavile  
+Ability: Pressure  
+
+Lickilicky  
+Ability: Own Tempo  
+
+Gothitelle  
+Ability: Frisk  
+
+
+=== [gen8nationaldex] World Heroines/Leaf ===
+
+Wigglytuff  
+Ability: Cute Charm  
+
+Nidoqueen (F)  
+Ability: Poison Point  
+
+Venusaur  
+Ability: Overgrow  
+
+Vaporeon  
+Ability: Water Absorb  
+
+Clefable  
+Ability: Cute Charm  
+
+Alakazam  
+Ability: Synchronize  
+
+
+=== [gen8nationaldex] World Heroes/Elio ===
+
+Persian-Alola  
+Ability: Fur Coat  
+
+Mimikyu  
+Ability: Disguise  
+
+Primarina  
+Ability: Torrent  
+
+Oranguru  
+Ability: Inner Focus  
+
+Tsareena (F)  
+Ability: Leaf Guard  
+
+Gumshoos  
+Ability: Stakeout  
+
+
+=== [gen8nationaldex] World Heroes/Red ===
+
+Charizard  
+Ability: Blaze  
+
+Jolteon  
+Ability: Volt Absorb  
+
+Dodrio  
+Ability: Run Away  
+
+Gengar  
+Ability: Cursed Body  
+
+Victreebel  
+Ability: Chlorophyll  
+
+Lapras  
+Ability: Water Absorb  
+
+
+=== [gen8nationaldex] Galar Experts/Marnie ===
+
+Liepard  
+Ability: Limber  
+
+Morpeko  
+Ability: Hunger Switch  
+
+Grimmsnarl (M)  
+Ability: Prankster  
+
+Scrafty  
+Ability: Shed Skin  
+
+Toxicroak  
+Ability: Anticipation  
+
+Pangoro  
+Ability: Iron Fist  
+
+
+=== [gen8nationaldex] Galar Experts/Avery ===
+
+Rapidash-Galar  
+Ability: Run Away  
+
+Slowking-Galar  
+Ability: Curious Medicine  
+
+Swoobat  
+Ability: Unaware  
+
+Alakazam  
+Ability: Synchronize  
+
+Slowking-Galar  
+Ability: Curious Medicine  
+
+Orbeetle  
+Ability: Swarm  
+
+
+=== [gen8nationaldex] Galar Experts/Klara ===
+
+Weezing-Galar  
+Ability: Levitate  
+
+Drapion  
+Ability: Battle Armor  
+
+Slowbro-Galar  
+Ability: Quick Draw  
+
+Slowking-Galar  
+Ability: Curious Medicine  
+
+Scolipede  
+Ability: Poison Point  
+
+Amoonguss  
+Ability: Effect Spore  
+
+
 === [gen8nationaldex] Alola Experts/Gladion ===
 
 Porygon-Z  
@@ -525,8 +777,8 @@ Ability: Corrosion
 
 === [gen8nationaldex] Kanto Leaders/Brock ===
 
-Golem-Alola  
-Ability: Magnet Pull  
+Golem  
+Ability: Rock Head  
 
 Kabutops  
 Ability: Swift Swim  
@@ -636,14 +888,14 @@ Ability: Sturdy
 Armaldo  
 Ability: Battle Armor  
 
+Aggron  
+Ability: Sturdy  
+
 Cradily  
 Ability: Suction Cups  
 
 Minior  
 Ability: Shields Down  
-
-Aggron  
-Ability: Sturdy  
 
 Relicanth  
 Ability: Swift Swim  
@@ -1941,6 +2193,7 @@ Ability: Big Pecks
 
 Altaria  
 Ability: Natural Cure  
+IVs: 0 Atk  
 
 Skarmory  
 Ability: Keen Eye  
@@ -1989,6 +2242,7 @@ Ability: Synchronize
 
 Chimecho  
 Ability: Levitate  
+IVs: 0 Atk  
 
 Gothitelle  
 Ability: Frisk  
@@ -3174,5 +3428,530 @@ Ability: Marvel Scale
 
 Mismagius  
 Ability: Levitate  
+
+
+=== [gen8nationaldex] Galar Experts/Mustard ===
+
+Mienshao  
+Ability: Inner Focus  
+
+Kommo-o  
+Ability: Bulletproof  
+
+Luxray  
+Ability: Rivalry  
+
+Corviknight  
+Ability: Pressure  
+
+Lycanroc  
+Ability: Keen Eye  
+
+Sirfetch’d  
+Ability: Steadfast  
+
+
+=== [gen8nationaldex] Galar Experts/Bede ===
+
+Mawile  
+Ability: Hyper Cutter  
+
+Sylveon  
+Ability: Cute Charm  
+
+Hatterene (F)  
+Ability: Healer  
+
+Rapidash-Galar  
+Ability: Run Away  
+
+Clefable  
+Ability: Cute Charm  
+
+Slurpuff  
+Ability: Sweet Veil  
+
+
+=== [gen8nationaldex] Galar Experts/Sonia ===
+
+Rotom-Frost  
+Ability: Levitate  
+
+Boltund  
+Ability: Strong Jaw  
+
+Garbodor  
+Ability: Stench  
+
+Rillaboom  
+Ability: Overgrow  
+
+Cinderace  
+Ability: Blaze  
+
+Inteleon  
+Ability: Torrent  
+
+
+=== [gen8nationaldex] Galar Experts/Peony ===
+
+Perrserker  
+Ability: Battle Armor  
+
+Copperajah  
+Ability: Sheer Force  
+
+Aggron  
+Ability: Sturdy  
+
+Bronzong  
+Ability: Levitate  
+
+Scizor  
+Ability: Swarm  
+
+Aegislash  
+Ability: Stance Change  
+
+
+=== [gen8nationaldex] World Heroes/Ethan ===
+
+Azumarill  
+Ability: Thick Fat  
+
+Donphan  
+Ability: Sturdy  
+
+Typhlosion  
+Ability: Blaze  
+
+Sunflora  
+Ability: Chlorophyll  
+
+Togekiss  
+Ability: Hustle  
+
+Ambipom  
+Ability: Technician  
+
+
+=== [gen8nationaldex] World Heroes/Brendan ===
+
+Swellow  
+Ability: Guts  
+
+Wailord  
+Ability: Water Veil  
+
+Sceptile  
+Ability: Overgrow  
+
+Raichu  
+Ability: Static  
+
+Magcargo  
+Ability: Magma Armor  
+
+Mightyena  
+Ability: Intimidate  
+
+
+=== [gen8nationaldex] World Heroes/Lucas ===
+
+Rotom-Heat  
+Ability: Levitate  
+
+Gliscor  
+Ability: Hyper Cutter  
+
+Empoleon  
+Ability: Torrent  
+
+Glaceon  
+Ability: Snow Cloak  
+
+Cradily  
+Ability: Suction Cups  
+
+Tauros (M)  
+Ability: Intimidate  
+
+
+=== [gen8nationaldex] World Heroes/Hilbert ===
+
+Beartic  
+Ability: Snow Cloak  
+
+Sawk (M)  
+Ability: Sturdy  
+
+Serperior  
+Ability: Overgrow  
+
+Stoutland  
+Ability: Intimidate  
+
+Alomomola  
+Ability: Healer  
+
+Mandibuzz (F)  
+Ability: Big Pecks  
+
+
+=== [gen8nationaldex] World Heroes/Nate ===
+
+Simisear  
+Ability: Gluttony  
+
+Braviary (M)  
+Ability: Keen Eye  
+
+Samurott  
+Ability: Torrent  
+
+Escavalier  
+Ability: Swarm  
+
+Gliscor  
+Ability: Hyper Cutter  
+
+Lucario  
+Ability: Steadfast  
+
+
+=== [gen8nationaldex] World Heroes/Calem ===
+
+Meowstic (M)  
+Ability: Keen Eye  
+
+Gogoat  
+Ability: Sap Sipper  
+
+Greninja  
+Ability: Torrent  
+
+Flareon  
+Ability: Flash Fire  
+
+Absol  
+Ability: Pressure  
+
+Clefable  
+Ability: Cute Charm  
+
+
+=== [gen8nationaldex] World Heroes/Victor ===
+
+Sirfetch’d  
+Ability: Steadfast  
+
+Mr. Rime  
+Ability: Tangled Feet  
+
+Inteleon  
+Ability: Torrent  
+
+Eldegoss  
+Ability: Cotton Down  
+
+Corviknight  
+Ability: Pressure  
+
+Centiskorch  
+Ability: Flash Fire  
+
+
+=== [gen8nationaldex] World Heroines/Lyra ===
+
+Girafarig  
+Ability: Inner Focus  
+
+Meganium  
+Ability: Overgrow  
+
+Hitmontop (M)  
+Ability: Intimidate  
+
+Xatu  
+Ability: Synchronize  
+
+Ampharos  
+Ability: Static  
+
+Forretress  
+Ability: Sturdy  
+
+
+=== [gen8nationaldex] World Heroines/May ===
+
+Breloom  
+Ability: Effect Spore  
+
+Claydol  
+Ability: Levitate  
+
+Blaziken  
+Ability: Blaze  
+
+Lopunny  
+Ability: Cute Charm  
+
+Altaria  
+Ability: Natural Cure  
+
+Relicanth  
+Ability: Swift Swim  
+
+
+=== [gen8nationaldex] World Heroines/Dawn ===
+
+Wormadam-Sandy (F)  
+Ability: Anticipation  
+
+Froslass (F)  
+Ability: Snow Cloak  
+
+Infernape  
+Ability: Blaze  
+
+Tangrowth  
+Ability: Chlorophyll  
+
+Milotic  
+Ability: Marvel Scale  
+
+Togekiss  
+Ability: Hustle  
+
+
+=== [gen8nationaldex] World Heroines/Hilda ===
+
+Sawsbuck  
+Ability: Chlorophyll  
+
+Stunfisk  
+Ability: Static  
+
+Emboar  
+Ability: Blaze  
+
+Alomomola  
+Ability: Healer  
+
+Reuniclus  
+Ability: Overcoat  
+
+Gigalith  
+Ability: Sturdy  
+
+
+=== [gen8nationaldex] World Heroines/Selene ===
+
+Toxapex  
+Ability: Merciless  
+
+Vikavolt  
+Ability: Levitate  
+
+Decidueye  
+Ability: Overgrow  
+
+Muk-Alola  
+Ability: Poison Touch  
+
+Ribombee  
+Ability: Honey Gather  
+
+Salazzle (F)  
+Ability: Corrosion  
+
+
+=== [gen8nationaldex] World Heroines/Gloria ===
+
+Toxtricity  
+Ability: Punk Rock  
+
+Rillaboom  
+Ability: Overgrow  
+
+Eiscue  
+Ability: Ice Face  
+
+Falinks  
+Ability: Battle Armor  
+
+Barraskewda  
+Ability: Swift Swim  
+
+Flapple  
+Ability: Ripen  
+
+
+=== [gen8nationaldex] Champions/Leon ===
+
+Aegislash  
+Ability: Stance Change  
+
+Dragapult  
+Ability: Clear Body  
+
+Charizard  
+Ability: Blaze  
+
+Mr. Rime  
+Ability: Tangled Feet  
+
+Seismitoad  
+Ability: Swift Swim  
+
+Rhyperior  
+Ability: Lightning Rod  
+
+
+=== [gen8nationaldex] Champions/Kukui ===
+
+Lycanroc  
+Ability: Keen Eye  
+
+Magnezone  
+Ability: Magnet Pull  
+
+Ninetales-Alola  
+Ability: Snow Cloak  
+
+Braviary (M)  
+Ability: Keen Eye  
+
+Snorlax  
+Ability: Immunity  
+
+Incineroar  
+Ability: Blaze  
+
+
+=== [gen8nationaldex] Champions/Diantha ===
+
+Hawlucha  
+Ability: Limber  
+
+Tyrantrum  
+Ability: Strong Jaw  
+
+Aurorus  
+Ability: Refrigerate  
+
+Gourgeist  
+Ability: Pickup  
+
+Goodra  
+Ability: Sap Sipper  
+
+Gardevoir  
+Ability: Synchronize  
+
+
+=== [gen8nationaldex] Champions/Iris ===
+
+Hydreigon  
+Ability: Levitate  
+
+Archeops  
+Ability: Defeatist  
+
+Aggron  
+Ability: Sturdy  
+
+Lapras  
+Ability: Water Absorb  
+
+Druddigon  
+Ability: Rough Skin  
+
+Haxorus  
+Ability: Rivalry  
+
+
+=== [gen8nationaldex] Champions/Alder ===
+
+Accelgor  
+Ability: Hydration  
+
+Vanilluxe  
+Ability: Ice Body  
+
+Bouffalant  
+Ability: Reckless  
+
+Conkeldurr  
+Ability: Guts  
+
+Reuniclus  
+Ability: Overcoat  
+
+Volcarona  
+Ability: Flame Body  
+
+
+=== [gen8nationaldex] Champions/Cynthia ===
+
+Spiritomb  
+Ability: Pressure  
+
+Roserade  
+Ability: Natural Cure  
+
+Gastrodon  
+Ability: Sticky Hold  
+
+Lucario  
+Ability: Steadfast  
+
+Milotic  
+Ability: Marvel Scale  
+
+Garchomp  
+Ability: Sand Veil  
+
+
+=== [gen8nationaldex] Champions/Lance ===
+
+Salamence  
+Ability: Intimidate  
+
+Dragonite  
+Ability: Inner Focus  
+
+Haxorus  
+Ability: Rivalry  
+
+Flygon  
+Ability: Levitate  
+
+Kommo-o  
+Ability: Bulletproof  
+
+Duraludon  
+Ability: Light Metal  
+
+
+=== [gen8nationaldex] Champions/Red ===
+
+Lapras  
+Ability: Water Absorb  
+
+Snorlax  
+Ability: Immunity  
+
+Pikachu  
+Ability: Static  
+
+Venusaur  
+Ability: Overgrow  
+
+Charizard  
+Ability: Blaze  
+
+Blastoise  
+Ability: Torrent  
 
 
