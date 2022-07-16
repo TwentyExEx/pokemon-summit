@@ -888,7 +888,7 @@ def pbSummitMainTrainer
   if $game_variables[32] == 1
     $game_variables[33] += 1
   end
-  if $game_variables[33] == 3 # when cleared bracket
+  if $game_variables[33] == 4 # when cleared bracket
     $game_variables[31] += 1 # next bracket
   end
 end
@@ -898,7 +898,10 @@ def pbSummitBracketUnlock
   bracketunlocked = bracketnames[$game_variables[31]]
 
   pbMessage(_INTL("Congratulations on defeating the {1}!",bracketwon))
-  pbMessage(_INTL("You have successfully unlocked the {1}!",bracketunlocked))
+  pbSEPlay("Slots coin")
+  $Trainer.money += 5000
+  pbMessage("\\GYou have earned $5,000 for your performance.")
+  pbMessage(_INTL("You have also successfully unlocked the {1}!",bracketunlocked))
 end
 
 def pbSummitPrepBattle
