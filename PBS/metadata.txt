@@ -8,7 +8,7 @@ StorageCreator = Bill
 WildBattleBGM = Battle wild
 TrainerBattleBGM = Battle trainer
 WildVictoryBGM = Battle victory wild
-TrainerVictoryBGM = Battle victory trainer
+TrainerVictoryBGM = win
 SurfBGM = Surfing
 BicycleBGM = Bicycle
 #-------------------------------
