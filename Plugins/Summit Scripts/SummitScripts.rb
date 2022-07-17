@@ -887,13 +887,88 @@ def pbSummitPrepMainTrainer(bracket)
   end
 end
 
+def pbSummitUpdateMainTrainer(type, name, version)
+  trainer_id = [type.to_sym, name, version]
+  tr_data = GameData::Trainer::DATA[trainer_id]
+  old_type = tr_data.trainer_type
+  old_name = tr_data.real_name
+  old_version = tr_data.version
+  @data = [
+            tr_data.trainer_type,
+            tr_data.real_name,
+            tr_data.version,
+            tr_data.real_lose_text
+          ]
+  $fullparty = tr_data.pokemon
+  Settings::MAX_PARTY_SIZE.times do |i|
+    @data.push($fullparty[i])
+  end
+  party = []
+  Settings::MAX_PARTY_SIZE.times do |i|
+    party.push(@data[4 + i]) if @data[4 + i] && @data[4 + i][:species]
+  end
+    trainer_hash = {
+      :trainer_type => @data[0],
+      :name         => @data[1],
+      :version      => @data[2],
+      :lose_text    => @data[3],
+      :pokemon      => party
+    }
+    # Add trainer type's data to records
+    trainer_hash[:id] = [trainer_hash[:trainer_type], trainer_hash[:name], trainer_hash[:version]]
+    GameData::Trainer.register(trainer_hash)
+    if @data[0] != old_type || @data[1] != old_name || @data[2] != old_version
+      GameData::Trainer::DATA.delete([old_type, old_name, old_version])
+    end
+  GameData::Trainer.save
+  pbConvertTrainerData
+end
+
+def pbSummitRevertMainTrainer(type, name, version)
+  trainer_id = [type.to_sym, name, version]
+  tr_data = GameData::Trainer::DATA[trainer_id]
+  old_type = tr_data.trainer_type
+  old_name = tr_data.real_name
+  old_version = tr_data.version
+  @data = [
+            tr_data.trainer_type,
+            tr_data.real_name,
+            tr_data.version,
+            tr_data.real_lose_text
+          ]
+  $fullparty.length.times do |i|
+    @data.push($fullparty[i])
+  end
+  party = []
+  $fullparty.length.times do |i|
+    party.push(@data[4 + i]) if @data[4 + i] && @data[4 + i][:species]
+  end
+  trainer_hash = {
+    :trainer_type => @data[0],
+    :name         => @data[1],
+    :version      => @data[2],
+    :lose_text    => @data[3],
+    :pokemon      => party
+  }
+  # Add trainer type's data to records
+  trainer_hash[:id] = [trainer_hash[:trainer_type], trainer_hash[:name], trainer_hash[:version]]
+  GameData::Trainer.register(trainer_hash)
+  if @data[0] != old_type || @data[1] != old_name || @data[2] != old_version
+    GameData::Trainer::DATA.delete([old_type, old_name, old_version])
+  end
+  GameData::Trainer.save
+  pbConvertTrainerData
+end
+
 def pbSummitMainTrainer
   pbSummitPrepBattle
   type = $game_variables[30][0]
   name = $game_variables[30][1]
   version = $game_variables[15]
-
+  
+  pbSummitUpdateMainTrainer(type, name, version)
   TrainerBattle.start(type, name, version)
+  pbSummitRevertMainTrainer(type, name, version)
 
   $Trainer.party = $game_variables[27]
   if $game_variables[32] == 1
@@ -1186,9 +1261,7 @@ def pbNewSummitTrainer(tr_type, tr_name, tr_version = 0, save_changes = true, pa
           :moves         => [pkmn[1], pkmn[2], pkmn[3], pkmn[4]],
           :iv            => {:HP => ivval, :ATTACK => ivval, :DEFENSE => ivval, :SPECIAL_ATTACK => ivval, :SPECIAL_DEFENSE => ivval, :SPEED => ivval},
           :form          => pkmn[5],
-          :ability_index => pkmn[6],
-          # :nature        => pkmn[7],
-          # :item          => pkmn[8]
+          :ability_index => pkmn[6]
         }
       )
     end
@@ -1337,6 +1410,9 @@ def pbSummitSuperTrain
             statnameint = statname.clone
             if statname.include?(" ")
               statnameint.gsub!(/\s/, "_")
+            end
+            for i in $allstats
+              pkmn.ev[i] = 0
             end
             pkmn.ev[statnameint.upcase.to_sym] = 252
           end
