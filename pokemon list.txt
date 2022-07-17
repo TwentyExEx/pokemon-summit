@@ -1219,71 +1219,174 @@ Adamant Nature
 
 === [gen8nationaldex] Unova Leaders/Cheren ===
 
-Stoutland  
+Stoutland @ Expert Belt  
 Ability: Intimidate  
-IVs: 0 Atk  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Play Rough  
+- Dig  
+- Iron Head  
+- Crunch  
 
-Bouffalant  
-Ability: Reckless  
-IVs: 0 Atk  
+Bouffalant @ Leftovers  
+Ability: Sap Sipper  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Substitute  
+- Swords Dance  
+- Body Slam  
+- Throat Chop  
 
-Cinccino  
-Ability: Cute Charm  
-IVs: 0 Atk  
+Cinccino @ Protective Pads  
+Ability: Technician  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Tail Slap  
+- Triple Axel  
+- Bullet Seed  
+- Knock Off  
 
-Raticate-Alola  
-Ability: Gluttony  
-IVs: 0 Atk  
+Raticate-Alola @ Black Glasses  
+Ability: Hustle  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Crunch  
+- Sucker Punch  
+- Double-Edge  
+- Scary Face  
 
-Blissey (F)  
+Blissey (F) @ Heavy-Duty Boots  
 Ability: Natural Cure  
+EVs: 252 HP / 252 Def  
+Bold Nature  
 IVs: 0 Atk  
+- Blizzard  
+- Soft-Boiled  
+- Thunder Wave  
+- Fire Blast  
 
-Toucannon  
-Ability: Keen Eye  
-IVs: 0 Atk  
+Toucannon @ King's Rock  
+Ability: Skill Link  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Beak Blast  
+- Rock Blast  
+- Bullet Seed  
+- Pluck  
 
 
 === [gen8nationaldex] Unova Leaders/Cress ===
 
-Seismitoad  
-Ability: Swift Swim  
+Seismitoad @ Expert Belt  
+Ability: Poison Touch  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Drain Punch  
+- Liquidation  
+- Rock Slide  
+- Supersonic  
 
-Simipour  
+Simipour @ Sitrus Berry  
 Ability: Gluttony  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Nasty Plot  
+- Hydro Pump  
+- Ice Beam  
+- Grass Knot  
 
-Samurott  
+Samurott @ Heavy-Duty Boots  
 Ability: Torrent  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Aqua Tail  
+- Swords Dance  
+- Aqua Jet  
+- Dragon Tail  
 
-Swanna  
-Ability: Keen Eye  
-
-Azumarill  
-Ability: Thick Fat  
-
-Ludicolo  
+Ludicolo @ Damp Rock  
 Ability: Swift Swim  
+IVs: 0 Atk  
+- Giga Drain  
+- Hydro Pump  
+- Ice Beam  
+- Rain Dance  
+
+Swanna @ Wacan Berry  
+Ability: Keen Eye  
+EVs: 252 SpA / 252 Spe  
+Hasty Nature  
+- Aerial Ace  
+- Hurricane  
+- Water Pulse  
+- Ice Beam  
+
+Azumarill @ Sitrus Berry  
+Ability: Huge Power  
+- Aqua Tail  
+- Play Rough  
+- Bulldoze  
+- Bounce  
 
 
 === [gen8nationaldex] Unova Leaders/Cilan ===
 
-Lilligant (F)  
-Ability: Chlorophyll  
-
-Serperior  
-Ability: Overgrow  
-
-Flapple  
-Ability: Ripen  
-
-Simisage  
-Ability: Gluttony  
-
-Ferrothorn  
+Ferrothorn @ Focus Sash  
 Ability: Iron Barbs  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Spikes  
+- Knock Off  
+- Knock Off  
+- Power Whip  
 
-Tangrowth  
-Ability: Chlorophyll  
+Serperior @ Leftovers  
+Ability: Overgrow  
+EVs: 252 HP / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Leaf Storm  
+- Substitute  
+- Glare  
+- Toxic  
+
+Simisage @ Sitrus Berry  
+Ability: Gluttony  
+EVs: 252 Atk / 252 Spe  
+Hasty Nature  
+- Leaf Storm  
+- Superpower  
+- Rock Slide  
+- Gunk Shot  
+
+Flapple @ Sitrus Berry  
+Ability: Ripen  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Grav Apple  
+- Outrage  
+- Grassy Glide  
+- Sucker Punch  
+
+Lilligant (F) @ Miracle Seed  
+Ability: Own Tempo  
+EVs: 252 SpA / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Energy Ball  
+- Synthesis  
+- Petal Dance  
+- Quiver Dance  
+
+Tangrowth @ Assault Vest  
+Ability: Leaf Guard  
+EVs: 252 HP / 252 SpA  
+Rash Nature  
+- Power Whip  
+- Knock Off  
+- Sludge Bomb  
+- Focus Blast  
 
 
 === [gen8nationaldex] Kalos Leaders/Grant ===
@@ -1309,23 +1412,63 @@ Ability: Lightning Rod
 
 === [gen8nationaldex] Kalos Leaders/Viola ===
 
-Vivillon  
+Vivillon @ Leftovers  
 Ability: Shield Dust  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Draining Kiss  
+- Light Screen  
+- Supersonic  
+- Bug Buzz  
 
-Masquerain  
+Masquerain @ Focus Sash  
 Ability: Intimidate  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Sticky Web  
+- Bug Buzz  
+- Air Slash  
+- Scald  
 
-Scolipede  
-Ability: Poison Point  
-
-Orbeetle  
+Scolipede @ Black Sludge  
 Ability: Swarm  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Megahorn  
+- Toxic  
+- Cross Poison  
+- X-Scissor  
 
-Wormadam-Sandy (F)  
-Ability: Anticipation  
-
-Shedinja  
+Shedinja @ Heavy-Duty Boots  
 Ability: Wonder Guard  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Shadow Claw  
+- Dig  
+- Phantom Force  
+- Spite  
+
+Orbeetle @ Light Clay  
+Ability: Swarm  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Psychic  
+- Bug Buzz  
+- Reflect  
+- Light Screen  
+
+Wormadam-Sandy (F) @ Sitrus Berry  
+Ability: Anticipation  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Psychic  
+- Bug Buzz  
+- Protect  
+- Earth Power  
 
 
 === [gen8nationaldex] Alola Captains/Ilima ===
@@ -1982,212 +2125,579 @@ Ability: Hyper Cutter
 
 === [gen8nationaldex] Unova Leaders/Chili ===
 
-Camerupt  
-Ability: Magma Armor  
-
-Emboar  
-Ability: Blaze  
-
-Simisear  
-Ability: Gluttony  
-
-Heatmor  
-Ability: Gluttony  
-
-Darmanitan  
+Darmanitan @ Leftovers  
 Ability: Sheer Force  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Flare Blitz  
+- U-turn  
+- Rock Slide  
+- Earthquake  
 
-Oricorio  
+Emboar @ Expert Belt  
+Ability: Blaze  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Hammer Arm  
+- Flare Blitz  
+- Assurance  
+- Stone Edge  
+
+Simisear @ Sitrus Berry  
+Ability: Gluttony  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Nasty Plot  
+- Fire Blast  
+- Grass Knot  
+- Focus Blast  
+
+Oricorio @ Charti Berry  
 Ability: Dancer  
+EVs: 252 HP / 252 Def  
+Bold Nature  
+IVs: 0 Atk  
+- Calm Mind  
+- Revelation Dance  
+- Hurricane  
+- Roost  
+
+Camerupt @ Passho Berry  
+Ability: Solid Rock  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Fire Blast  
+- Earth Power  
+- Rest  
+- Sleep Talk  
+
+Heatmor @ Sitrus Berry  
+Ability: Gluttony  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Fire Blast  
+- Giga Drain  
+- Focus Blast  
+- Scorching Sands  
 
 
 === [gen8nationaldex] Unova Leaders/Lenora ===
 
-Braviary (M)  
+Watchog @ Quick Claw  
 Ability: Keen Eye  
+EVs: 252 HP / 252 SpD  
+Careful Nature  
+- Hyper Fang  
+- Hypnosis  
+- Nasty Plot  
+- Baton Pass  
 
-Watchog  
-Ability: Illuminate  
+Cinccino @ Protective Pads  
+Ability: Technician  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Tail Slap  
+- Bullet Seed  
+- Rock Blast  
+- Triple Axel  
 
-Cinccino  
-Ability: Cute Charm  
+Braviary (M) @ Heavy-Duty Boots  
+Ability: Sheer Force  
+EVs: 252 HP / 252 SpD  
+Careful Nature  
+- Substitute  
+- Bulk Up  
+- Brave Bird  
+- Roost  
 
-Lickilicky  
+Lickilicky @ Leftovers  
 Ability: Own Tempo  
+EVs: 252 HP / 252 SpD  
+Careful Nature  
+- Wish  
+- Protect  
+- Heal Bell  
+- Knock Off  
 
-Dubwool  
+Dubwool @ King's Rock  
 Ability: Fluffy  
+EVs: 252 HP / 252 SpD  
+Careful Nature  
+- Cotton Guard  
+- Body Press  
+- Rest  
+- Payback  
 
-Pyroar  
-Ability: Rivalry  
+Pyroar @ Expert Belt  
+Ability: Unnerve  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Flamethrower  
+- Hyper Voice  
+- Dark Pulse  
+- Will-O-Wisp  
 
 
 === [gen8nationaldex] Unova Leaders/Burgh ===
 
-Leavanny  
+Leavanny @ Leftovers  
 Ability: Swarm  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Sticky Web  
+- Leaf Blade  
+- X-Scissor  
+- Magic Coat  
 
-Crustle  
+Crustle @ White Herb  
 Ability: Sturdy  
+EVs: 252 Atk / 252 Spe  
+Adamant Nature  
+- X-Scissor  
+- Stealth Rock  
+- Shell Smash  
+- Rock Slide  
 
-Durant  
+Durant @ Occa Berry  
 Ability: Swarm  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- First Impression  
+- Superpower  
+- Rock Slide  
+- Iron Head  
 
-Accelgor  
+Accelgor @ Rocky Helmet  
 Ability: Hydration  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Bug Buzz  
+- Toxic  
+- Water Shuriken  
+- Giga Drain  
 
-Pinsir  
+Pinsir @ King's Rock  
 Ability: Hyper Cutter  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Superpower  
+- X-Scissor  
+- Swords Dance  
+- Submission  
 
-Frosmoth  
+Frosmoth @ Quick Claw  
 Ability: Shield Dust  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Ice Beam  
+- Bug Buzz  
+- Stun Spore  
+- Tailwind  
 
 
 === [gen8nationaldex] Unova Leaders/Elesa ===
 
-Zebstrika  
-Ability: Lightning Rod  
+Zebstrika @ Air Balloon  
+Ability: Motor Drive  
+EVs: 252 SpA / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Thunderbolt  
+- Volt Switch  
+- Overheat  
+- Hidden Power  
 
-Eelektross  
+Eelektross @ Assault Vest  
 Ability: Levitate  
+- Volt Switch  
+- Giga Drain  
+- Flamethrower  
+- Drain Punch  
 
-Emolga  
+Emolga @ Rocky Helmet  
 Ability: Static  
+- Thunderbolt  
+- U-turn  
+- Encore  
+- Roost  
 
-Stunfisk  
-Ability: Static  
-
-Dracozolt  
-Ability: Volt Absorb  
-
-Raichu-Alola  
+Raichu-Alola @ Terrain Extender  
 Ability: Surge Surfer  
+IVs: 0 Atk  
+- Psychic  
+- Thunderbolt  
+- Electric Terrain  
+- Surf  
+
+Stunfisk @ Lum Berry  
+Ability: Static  
+IVs: 0 Atk  
+- Stealth Rock  
+- Discharge  
+- Earth Power  
+- Rest  
+
+Dracozolt @ King's Rock  
+Ability: Volt Absorb  
+- Bolt Beak  
+- Draco Meteor  
+- Substitute  
+- Iron Tail  
 
 
 === [gen8nationaldex] Unova Leaders/Clay ===
 
-Excadrill  
+Krookodile @ Chople Berry  
+Ability: Moxie  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Earthquake  
+- Knock Off  
+- Stealth Rock  
+- Taunt  
+
+Excadrill @ Leftovers  
 Ability: Sand Rush  
+EVs: 252 Atk / 252 Spe  
+Adamant Nature  
+- Earthquake  
+- Iron Head  
+- Sandstorm  
+- Toxic  
 
-Krookodile  
-Ability: Intimidate  
-
-Golurk  
+Golurk @ Colbur Berry  
 Ability: Iron Fist  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Thunder Punch  
+- Earthquake  
+- Shadow Punch  
+- Ice Punch  
 
-Runerigus  
+Runerigus @ Black Glasses  
 Ability: Wandering Spirit  
+EVs: 252 HP / 252 Def  
+Relaxed Nature  
+- Poltergeist  
+- Dark Pulse  
+- Energy Ball  
+- Protect  
 
-Mudsdale  
-Ability: Own Tempo  
+Mudsdale @ Sitrus Berry  
+Ability: Stamina  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Earthquake  
+- Body Press  
+- Smack Down  
+- Close Combat  
 
-Nidoqueen (F)  
+Nidoqueen (F) @ Black Sludge  
 Ability: Poison Point  
+EVs: 252 HP / 252 Atk  
+Brave Nature  
+- Crunch  
+- Earth Power  
+- Superpower  
+- Poison Jab  
 
 
 === [gen8nationaldex] Unova Leaders/Skyla ===
 
-Swanna  
+Swanna @ Wacan Berry  
 Ability: Keen Eye  
+EVs: 252 SpA / 252 Spe  
+Hasty Nature  
+- Aerial Ace  
+- Hurricane  
+- Water Pulse  
+- Ice Beam  
 
-Archeops  
+Archeops @ Rocky Helmet  
 Ability: Defeatist  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Stone Edge  
+- Earthquake  
+- Dual Wingbeat  
+- Roost  
 
-Mandibuzz (F)  
+Mandibuzz (F) @ Charti Berry  
 Ability: Big Pecks  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Foul Play  
+- Knock Off  
+- Steel Wing  
+- U-turn  
 
-Drifblim  
-Ability: Aftermath  
+Drifblim @ Sitrus Berry  
+Ability: Unburden  
+EVs: 252 SpA / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Shadow Ball  
+- Calm Mind  
+- Substitute  
+- Thunderbolt  
 
-Noivern  
-Ability: Frisk  
+Noivern @ Yache Berry  
+Ability: Infiltrator  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+- Draco Meteor  
+- Flamethrower  
+- Roost  
+- U-turn  
 
-Skarmory  
-Ability: Keen Eye  
+Skarmory @ Heavy-Duty Boots  
+Ability: Sturdy  
+EVs: 252 HP / 252 Def  
+Impish Nature  
+- Roost  
+- Whirlwind  
+- Brave Bird  
+- Steel Wing  
 
 
 === [gen8nationaldex] Unova Leaders/Brycen ===
 
-Cryogonal  
+Vanilluxe @ Icy Rock  
+Ability: Snow Warning  
+EVs: 252 HP / 252 SpA  
+Quiet Nature  
+- Blizzard  
+- Freeze-Dry  
+- Ice Shard  
+- Flash Cannon  
+
+Cryogonal @ Leftovers  
 Ability: Levitate  
+EVs: 252 SpA / 252 Spe  
+Hasty Nature  
+- Freeze-Dry  
+- Knock Off  
+- Hail  
+- Flash Cannon  
 
-Beartic  
+Beartic @ Weakness Policy  
 Ability: Snow Cloak  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Hail  
+- Swords Dance  
+- Icicle Crash  
+- Superpower  
 
-Vanilluxe  
-Ability: Ice Body  
-
-Weavile  
+Weavile @ Heavy-Duty Boots  
 Ability: Pressure  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Swords Dance  
+- Triple Axel  
+- Ice Shard  
+- Knock Off  
 
-Eiscue  
+Eiscue @ Expert Belt  
 Ability: Ice Face  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Belly Drum  
+- Icicle Crash  
+- Zen Headbutt  
+- Substitute  
 
-Arctozolt  
-Ability: Volt Absorb  
+Arctozolt @ King's Rock  
+Ability: Static  
+EVs: 252 HP / 252 Def  
+Relaxed Nature  
+- Substitute  
+- Bolt Beak  
+- Low Kick  
+- Blizzard  
 
 
 === [gen8nationaldex] Unova Leaders/Drayden ===
 
-Haxorus  
-Ability: Rivalry  
+Haxorus @ Lum Berry  
+Ability: Mold Breaker  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Aqua Tail  
+- Outrage  
+- Earthquake  
+- Poison Jab  
 
-Hydreigon  
+Hydreigon @ White Herb  
 Ability: Levitate  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Draco Meteor  
+- Dark Pulse  
+- Flamethrower  
+- Roost  
 
-Druddigon  
-Ability: Rough Skin  
+Druddigon @ Rocky Helmet  
+Ability: Sheer Force  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Dragon Tail  
+- Earthquake  
+- Glare  
+- Dragon Claw  
 
-Dragapult  
+Dragapult @ Expert Belt  
 Ability: Clear Body  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Phantom Force  
+- Psychic Fangs  
+- Sucker Punch  
+- Dragon Darts  
 
-Exeggutor-Alola  
+Exeggutor-Alola @ Yache Berry  
 Ability: Frisk  
+EVs: 252 HP / 252 SpA  
+Quiet Nature  
+- Dragon Hammer  
+- Giga Drain  
+- Leaf Storm  
+- Dragon Pulse  
 
-Drampa  
-Ability: Berserk  
+Drampa @ Leftovers  
+Ability: Sap Sipper  
+IVs: 0 Atk  
+- Hyper Voice  
+- Draco Meteor  
+- Flamethrower  
+- Energy Ball  
 
 
 === [gen8nationaldex] Unova Leaders/Roxie ===
 
-Scolipede  
-Ability: Poison Point  
+Scolipede @ Rocky Helmet  
+Ability: Swarm  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Megahorn  
+- Toxic  
+- Cross Poison  
+- X-Scissor  
 
-Garbodor  
+Garbodor @ Leftovers  
 Ability: Stench  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Gunk Shot  
+- Spikes  
+- Stomping Tantrum  
+- Pain Split  
 
-Crobat  
+Crobat @ Sharp Beak  
 Ability: Inner Focus  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Leech Life  
+- Cross Poison  
+- Brave Bird  
+- Zen Headbutt  
 
-Amoonguss  
+Amoonguss @ Big Root  
 Ability: Effect Spore  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Giga Drain  
+- Sludge Bomb  
+- Foul Play  
+- Spore  
 
-Toxtricity  
+Toxtricity @ Quick Claw  
 Ability: Punk Rock  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Boomburst  
+- Overdrive  
+- Snarl  
+- Sludge Wave  
 
-Salazzle (F)  
+Salazzle (F) @ Focus Sash  
 Ability: Corrosion  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Toxic  
+- Sludge Wave  
+- Flamethrower  
+- Dragon Pulse  
 
 
 === [gen8nationaldex] Unova Leaders/Marlon ===
 
-Jellicent  
-Ability: Water Absorb  
+Jellicent @ Damp Rock  
+Ability: Cursed Body  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Water Spout  
+- Shadow Ball  
+- Rain Dance  
+- Surf  
 
-Carracosta  
-Ability: Solid Rock  
+Carracosta @ White Herb  
+Ability: Sturdy  
+EVs: 252 Atk / 252 Spe  
+Adamant Nature  
+- Shell Smash  
+- Stone Edge  
+- Aqua Jet  
+- Liquidation  
 
-Wailord  
+Wailord @ Leftovers  
 Ability: Water Veil  
+EVs: 252 HP / 252 SpD  
+Calm Nature  
+IVs: 0 Atk  
+- Ice Beam  
+- Aqua Ring  
+- Protect  
+- Block  
 
-Alomomola  
+Alomomola @ Wacan Berry  
 Ability: Healer  
+EVs: 252 HP / 252 Def  
+Bold Nature  
+IVs: 0 Atk  
+- Scald  
+- Wish  
+- Protect  
+- Rain Dance  
 
-Carracosta  
-Ability: Solid Rock  
+Bruxish @ Twisted Spoon  
+Ability: Strong Jaw  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Swords Dance  
+- Psychic Fangs  
+- Aqua Jet  
+- Crunch  
 
-Quagsire  
-Ability: Damp  
+Quagsire @ Sitrus Berry  
+Ability: Water Absorb  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Earthquake  
+- Aqua Tail  
+- Brick Break  
+- Rock Tomb  
 
 
 === [gen8nationaldex] Sinnoh Leaders/Gardenia ===
