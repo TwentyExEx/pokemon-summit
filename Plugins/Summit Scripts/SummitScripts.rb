@@ -418,6 +418,8 @@ $allpkmn = [
   [:DRAGAPULT, :SHADOWBALL, :DRACOMETEOR, :FLAMETHROWER, :HYDROPUMP, 0, 1]
 ]
 
+$allstats = [:HP, :ATTACK, :DEFENSE, :SPECIAL_ATTACK, :SPECIAL_DEFENSE, :SPEED]
+
 $bracketnames = ["Kanto Leaders", "Johto Leaders", "Hoenn Leaders", "Sinnoh Leaders", "Unova Leaders", "Kalos Leaders", "Alola Captains", "Galar Leaders"]
 
 def pbSummitSelectPokemon
@@ -432,8 +434,7 @@ def pbSummitMakePokemon(species, form)
     specform << "_" << form.to_s
   end
   @givepkmn = Pokemon.new(specform, 50)
-  pokeStats = [:HP, :ATTACK, :DEFENSE, :SPECIAL_ATTACK, :SPECIAL_DEFENSE, :SPEED]
-  for stat in pokeStats
+  for stat in $allstats
     @givepkmn.iv[stat] = 31
   end
   @givepkmn.happiness = 255
@@ -500,7 +501,7 @@ def pbSummitBracketSelection(group)
             ["LEADER_Norman","Norman",0],
             ["LEADER_Winona","Winona",0],
             ["LEADER_Tate","Tate",0],
-        ["LEADER_Liza","Liza",0],
+            ["LEADER_Liza","Liza",0],
             ["LEADER_Juan","Juan",0]
           ]
         
@@ -1160,7 +1161,6 @@ def pbNewSummitTrainer(tr_type, tr_name, tr_version = 0, save_changes = true, pa
     end
   end
   trainer = [tr_type, tr_name, [], party, tr_version]
-  pokeStats = [:HP, :ATTACK, :DEFENSE, :SPECIAL_ATTACK, :SPECIAL_DEFENSE, :SPEED]
 
   case $game_variables[15]
     when 0 # Easy
@@ -1282,71 +1282,219 @@ def pbSummitSuperTrain
   @evstats = ["HP","Attack","Defense","Special Attack","Special Defense","Speed"]
   @selection = @evstats.clone
 
-  pbMessage("\\rWhich Pokémon would you like to super train?")
-  pkmn = pbChoosePokemon(1, 3)
+  loop do
+    pbMessage("\\rWhich Pokémon would you like to super train?")
+    pkmn = pbChoosePokemon(1, 3)
+    if $game_variables[1] < 0
+      cmd = pbMessage("Cancel super training?",["Yes", "No"],1)
+      if cmd <= 0
+        return false
+        break
+      end
+    else
+      pbMessage("\\rWhich stats would you like this Pokémon to specialize in?")
+      loop do
+        cmd = pbMessage("\\rSelect a stat to specialize in.",@evstats,-1)
+        if cmd == 1
+          break
+        else
+          @stat1 = @evstats[cmd]
+          @selection.delete_at(cmd)
+          break
+        end
+      end
+      loop do
+        cmd = pbMessage("\\rSelect another stat to specialize in.",@selection,-1)
+        if cmd == -1
+          break
+        else
+          cmd2 = @selection[cmd]
+          for stat in @evstats
+            if stat.equal?(cmd2)
+              @stat2 = stat
+            end
+          end
+          break
+        end
+      end
 
-  if $game_variables[1] < 0
-    return false
-  else
-    pbMessage("\\rWhich stats would you like this Pokémon to specialize in?")
-    loop do
-      temp = pbMessage("\\rSelect a stat to specialize in.",@evstats,-1)
-      if temp < 0
-          cmd = pbMessage("Cancel super training?",["Yes", "No"],1)
-          if cmd <= 0
+      @chosenstats = [@stat1, @stat2]
+
+      pkmn = pbGetPokemon(1)
+
+      loop do
+        cmd = pbMessage(_INTL("\\rDo you want us to train your #{pbGetPokemon(1).species.downcase.capitalize} in {1} and {2}?",@chosenstats[0],@chosenstats[1]),["Yes","No"],-1)
+        if cmd == -1
+          break
+        elsif cmd == 1
+          cmd2 = pbMessage("Cancel super training?",["Yes", "No"],1)
+          if cmd2 == 0
             return false
             break
           end
-      else
-        @stat1 = @evstats[temp]
-        @selection.delete_at(temp)
-        break
-      end
-    end
-
-    loop do
-      temp = pbMessage("\\rSelect another stat to specialize in.",@selection,-1)
-      if temp < 0
-        cmd = pbMessage("Cancel super training?",["Yes", "No"],1)
-        if cmd <= 0
-          return false
+        else
+          for statname in @chosenstats
+            statnameint = statname.clone
+            if statname.include?(" ")
+              statnameint.gsub!(/\s/, "_")
+            end
+            pkmn.ev[statnameint.upcase.to_sym] = 252
+          end
+          pbMessage(_INTL("\\G\\rYour #{pbGetPokemon(1).species.downcase.capitalize} now specializes in {1} and {2}.",@chosenstats[0],@chosenstats[1]))
+          return true
           break
         end
-      else
-        temp2 = @selection[temp]
-        for stat in @evstats
-          if stat.equal?(temp2)
-            @stat2 = stat
-          end
-        end
+      end
+      break
+    end
+  end
+end
+
+def pbSummitChangeNature
+  loop do
+    pbMessage("\\rWhich Pokémon would you like to change the nature of?")
+    pkmn = pbChoosePokemon(1, 3)
+    if $game_variables[1] < 0
+      cmd = pbMessage("Cancel nature change?",["Yes", "No"],1)
+      if cmd <= 0
+        return false
         break
       end
+    else
+      stats = []
+      for stat in $allstats
+        if stat != :HP
+          statname = stat.clone
+          statname = statname.to_s.downcase
+          statname.gsub!(/_/, " ")
+          statname.gsub!(/(\w+)/) {|word| word.capitalize}
+          stats.push(statname)
+        end
+      end
+      stats << "None"
+      loop do
+        cmd = pbMessage(_INTL("\\rWhich stat should this nature raise?"),stats,-1)
+        naturelist = []
+        if cmd == -1
+          break
+        elsif cmd == 6 # None
+          for i in GameData::Nature::DATA.keys
+            naturename = i.to_s.downcase
+            if GameData::Nature.try_get(i).stat_changes.empty?
+              naturelist.push(naturename.capitalize)
+            end
+          end
+        else
+          for i in GameData::Nature::DATA.keys
+            naturename = i.to_s.downcase
+            if !GameData::Nature.try_get(i).stat_changes.empty?
+              statraise = GameData::Nature.get(i).stat_changes[0][0]
+              if statraise == $allstats[cmd+1]
+                name = naturename.capitalize
+                info = name.clone
+                info << " (-"
+                statdrop = GameData::Nature.get(i).stat_changes[1][0].clone
+                statdrop = statdrop.to_s.downcase
+                statdrop.gsub!(/_/, " ")
+                statdrop.gsub!(/special/, "sp.")
+                statdrop.gsub!(/attack/, "atk")
+                statdrop.gsub!(/defense/, "def")
+                statdrop.gsub!(/(\w+)/) {|word| word.capitalize}
+                info << statdrop << ")"
+                naturelist.push(info)
+              end
+            end
+          end
+        end
+        loop do
+          cmd = pbMessage(_INTL("\\rWhat nature would you like to give your #{pbGetPokemon(1).species.downcase.capitalize}?"),naturelist,-1)
+          if cmd >= 0
+            @chosennature = naturelist[cmd].split[0]
+            pkmn = pbGetPokemon(1)
+            loop do
+              cmd = pbMessage(_INTL("\\rDo you want us to give your #{pbGetPokemon(1).species.downcase.capitalize} a {1} nature?",@chosennature),["Yes","No"],-1)
+              if cmd == -1
+                break
+              elsif cmd == 1
+                cmd2 = pbMessage("Cancel nature change?",["Yes", "No"],1)
+                if cmd2 == 0
+                  return false
+                  break
+                end
+              else
+                for i in GameData::Nature::DATA.keys
+                  if @chosennature == GameData::Nature.get(i).real_name
+                    pkmn.nature = GameData::Nature.get(i)
+                    pbMessage(_INTL("\\G\\rYour #{pbGetPokemon(1).species.downcase.capitalize}'s nature is now {1}.",@chosennature.to_s))
+                    return true
+                    break
+                    break
+                    break
+                    break
+                    break
+                  end
+                end
+              end
+            end
+          else
+            break
+          end
+        end
+      end
     end
+  end
+end
 
-    @chosenstats = [@stat1, @stat2]
+def pbSummitChangeAbility
+  loop do
+    pbMessage("\\rWhich Pokémon would you like to change the ability of?")
+    pkmn = pbChoosePokemon(1, 3)
+    if $game_variables[1] < 0
+      cmd = pbMessage("Cancel ability change?",["Yes", "No"],1)
+      if cmd <= 0
+        return false
+        break
+      end
+    else
+      loop do
+        pkmn = pbGetPokemon(1)
 
-    pkmn = pbGetPokemon(1)
-
-    loop do
-      cmd = pbMessage(_INTL("\\rDo you want us to train your #{pbGetPokemon(1).species.downcase.capitalize} in {1} and {2}?",@chosenstats[0],@chosenstats[1]),["Yes","No"],2)
-      if cmd == 1
-        cmd2 = pbMessage("Cancel super training?",["Yes", "No"],1)
-        if cmd2 == 0
-          return false
+        abilitylist = []
+        for ability in pkmn.species_data.abilities
+          i = ability.to_s
+          abilityname = GameData::Ability.get(i).real_name
+          abilitylist.push(abilityname)
+        end
+        cmd = pbMessage("\\rWhich ability would you like this Pokémon to have?",abilitylist,-1)
+        if cmd == 1
+          break
+        else
+          @chosenability = abilitylist[cmd]
+          loop do
+            cmd = pbMessage(_INTL("\\rChange your #{pbGetPokemon(1).species.downcase.capitalize}'s ability to in {1}?",@chosenability),["Yes","No"],-1)
+            if cmd == -1
+              break
+            elsif cmd == 1
+              cmd2 = pbMessage("Cancel ability change?",["Yes", "No"],1)
+              if cmd2 == 0
+                return false
+                break
+              end
+            else
+              p @chosenability
+              for i in GameData::Ability::DATA.keys
+                if @chosenability == GameData::Ability.get(i).real_name
+                  pkmn.ability = GameData::Ability.get(i)
+                  break
+                end
+              end
+              pbMessage(_INTL("\\G\\rYour #{pbGetPokemon(1).species.downcase.capitalize}'s ability is now {1}.",@chosenability))
+              return true
+              break
+            end
+          end
           break
         end
-      else
-        for statname in @chosenstats
-          statnameint = statname.clone
-          if statname.include?(" ")
-            statnameint.gsub!(/\s/, "_")
-          end
-          pkmn.ev[statnameint.upcase.to_sym] = 252
-        end
-
-        pbMessage(_INTL("\\G\\rYour #{pbGetPokemon(1).species.downcase.capitalize} now specializes in {1} and {2}.",@chosenstats[0],@chosenstats[1]))
-        return true
-        break
       end
     end
   end
