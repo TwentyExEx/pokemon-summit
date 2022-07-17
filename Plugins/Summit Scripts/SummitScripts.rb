@@ -884,7 +884,12 @@ end
 
 def pbSummitMainTrainer
   pbSummitPrepBattle
-  TrainerBattle.start($game_variables[30])
+  type = $game_variables[30][0]
+  name = $game_variables[30][1]
+  version = $game_variables[15]
+
+  TrainerBattle.start(type, name, version)
+
   $Trainer.party = $game_variables[27]
   if $game_variables[32] == 1
     $game_variables[33] += 1
@@ -898,11 +903,11 @@ def pbSummitBracketUnlock
   bracketwon = $bracketnames[$game_variables[31]-1]
   bracketunlocked = $bracketnames[$game_variables[31]]
 
-  pbMessage(_INTL("Congratulations on defeating the {1}!",bracketwon))
+  pbMessage(_INTL("\\rCongratulations on defeating the {1}!",bracketwon))
   pbSEPlay("Slots coin")
   $Trainer.money += 5000
-  pbMessage("\\GYou have earned $5,000 for your performance.")
-  pbMessage(_INTL("You have also successfully unlocked the {1}!",bracketunlocked))
+  pbMessage("\\G\\rYou have earned $5,000 for your performance.")
+  pbMessage(_INTL("\\rYou have also successfully unlocked the {1}!",bracketunlocked))
 end
 
 def pbSummitPrepBattle
@@ -1155,11 +1160,9 @@ def pbNewSummitTrainer(tr_type, tr_name, tr_version = 0, save_changes = true, pa
 
   case $game_variables[15]
     when 0 # Easy
-      ivval = 15 if $game_variables[35] == 1
-      ivval = 10 if $game_variables[35] == 2
+      ivval = 10
     when 1 # Standard
-      ivval = 25 if $game_variables[35] == 1
-      ivval = 20 if $game_variables[35] == 2
+      ivval = 20
     when 2, 3 # Hard, Extreme
       ivval = 31
   end
@@ -1203,107 +1206,71 @@ def pbSummitDeleteTrainer(tr_type, name, tr_version = 0)
   pbConvertTrainerData
 end
 
-def pbSummitMakerKanto
-  if !$Trainer.owned?(:VENUSAUR)
-    pbSummitGivePokemon(:VENUSAUR,0)
-    pbSummitGivePokemon(:CHARIZARD,0)
-    pbSummitGivePokemon(:BLASTOISE,0)
-    pbSummitGivePokemon(:RAICHU,0)
-    pbSummitGivePokemon(:PIDGEOT,0)
-    pbSummitGivePokemon(:HITMONLEE,0)
-  else
-    pbMessage("You have already obtained this starter set.")
-  end
+def pbSummitChooseRegion
+  regionlist = ["Kanto","Johto","Hoenn","Sinnoh","Unova","Kalos","Alola","Galar"]
+  pbMessage("\\rWelcome to the Pokémon Summit challenge!")
+  cmd = pbMessage("\rWhat Pokémon starter set would you like to claim?",regionlist)
+  pbSummitGetStarterSet(regionlist[cmd])
 end
 
-def pbSummitMakerJohto
-  if !$Trainer.owned?(:MEGANIUM)
-    pbSummitGivePokemon(:MEGANIUM,0)
-    pbSummitGivePokemon(:TYPHLOSION,0)
-    pbSummitGivePokemon(:FERALIGATR,0)
-    pbSummitGivePokemon(:AMPHAROS,0)
-    pbSummitGivePokemon(:NOCTOWL,0)
-    pbSummitGivePokemon(:HITMONTOP,0)
-  else
-    pbMessage("You have already obtained this starter set.")
-  end
-end
-
-def pbSummitMakerHoenn
-  if !$Trainer.owned?(:SCEPTILE)
-    pbSummitGivePokemon(:SCEPTILE,0)
-    pbSummitGivePokemon(:BLAZIKEN,0)
-    pbSummitGivePokemon(:SWAMPERT,0)
-    pbSummitGivePokemon(:MANECTRIC,0)
-    pbSummitGivePokemon(:SWELLOW,0)
-    pbSummitGivePokemon(:HARIYAMA,0)
-  else
-    pbMessage("You have already obtained this starter set.")
-  end
-end
-
-def pbSummitMakerSinnoh
-  if !$Trainer.owned?(:TORTERRA)
-    pbSummitGivePokemon(:TORTERRA,0)
-    pbSummitGivePokemon(:INFERNAPE,0)
-    pbSummitGivePokemon(:EMPOLEON,0)
-    pbSummitGivePokemon(:LUXRAY,0)
-    pbSummitGivePokemon(:STARAPTOR,0)
-    pbSummitGivePokemon(:LUCARIO,0)
-  else
-    pbMessage("You have already obtained this starter set.")
-  end
-end
-
-def pbSummitMakerUnova
-  if !$Trainer.owned?(:SERPERIOR)
-    pbSummitGivePokemon(:SERPERIOR,0)
-    pbSummitGivePokemon(:EMBOAR,0)
-    pbSummitGivePokemon(:SAMUROTT,0)
-    pbSummitGivePokemon(:ZEBSTRIKA,0)
-    pbSummitGivePokemon(:UNFEZANT,0)
-    pbSummitGivePokemon(:CONKELDURR,0)
-  else
-    pbMessage("You have already obtained this starter set.")
-  end
-end
-
-def pbSummitMakerKalos
-  if !$Trainer.owned?(:CHESNAUGHT)
-    pbSummitGivePokemon(:CHESNAUGHT,0)
-    pbSummitGivePokemon(:DELPHOX,0)
-    pbSummitGivePokemon(:GRENINJA,0)
-    pbSummitGivePokemon(:HELIOLISK,0)
-    pbSummitGivePokemon(:TALONFLAME,0)
-    pbSummitGivePokemon(:PANGORO,0)
-  else
-    pbMessage("You have already obtained this starter set.")
-  end
-end
-
-def pbSummitMakerAlola
-  if !$Trainer.owned?(:DECIDUEYE)
-    pbSummitGivePokemon(:DECIDUEYE,0)
-    pbSummitGivePokemon(:INCINEROAR,0)
-    pbSummitGivePokemon(:PRIMARINA,0)
-    pbSummitGivePokemon(:VIKAVOLT,0)
-    pbSummitGivePokemon(:TOUCANNON,0)
-    pbSummitGivePokemon(:CRABOMINABLE,0)
-  else
-    pbMessage("You have already obtained this starter set.")
-  end
-end
-
-def pbSummitMakerGalar
-  if !$Trainer.owned?(:RILLABOOM)
-    pbSummitGivePokemon(:RILLABOOM,0)
-    pbSummitGivePokemon(:CINDERACE,0)
-    pbSummitGivePokemon(:INTELEON,0)
-    pbSummitGivePokemon(:TOXTRICITY,0)
-    pbSummitGivePokemon(:CORVIKNIGHT,0)
-    pbSummitGivePokemon(:GRAPPLOCT,0)
-  else
-    pbMessage("You have already obtained this starter set.")
+def pbSummitGetStarterSet(region)
+  case region.downcase
+    when "kanto"
+      pbSummitGivePokemon(:VENUSAUR,0)
+      pbSummitGivePokemon(:CHARIZARD,0)
+      pbSummitGivePokemon(:BLASTOISE,0)
+      pbSummitGivePokemon(:RAICHU,0)
+      pbSummitGivePokemon(:PIDGEOT,0)
+      pbSummitGivePokemon(:HITMONLEE,0)
+    when "johto"
+      pbSummitGivePokemon(:MEGANIUM,0)
+      pbSummitGivePokemon(:TYPHLOSION,0)
+      pbSummitGivePokemon(:FERALIGATR,0)
+      pbSummitGivePokemon(:AMPHAROS,0)
+      pbSummitGivePokemon(:NOCTOWL,0)
+      pbSummitGivePokemon(:HITMONTOP,0)
+    when "hoenn"
+      pbSummitGivePokemon(:SCEPTILE,0)
+      pbSummitGivePokemon(:BLAZIKEN,0)
+      pbSummitGivePokemon(:SWAMPERT,0)
+      pbSummitGivePokemon(:MANECTRIC,0)
+      pbSummitGivePokemon(:SWELLOW,0)
+      pbSummitGivePokemon(:HARIYAMA,0)
+    when "sinnoh"
+      pbSummitGivePokemon(:TORTERRA,0)
+      pbSummitGivePokemon(:INFERNAPE,0)
+      pbSummitGivePokemon(:EMPOLEON,0)
+      pbSummitGivePokemon(:LUXRAY,0)
+      pbSummitGivePokemon(:STARAPTOR,0)
+      pbSummitGivePokemon(:LUCARIO,0)
+    when "unova"
+      pbSummitGivePokemon(:SERPERIOR,0)
+      pbSummitGivePokemon(:EMBOAR,0)
+      pbSummitGivePokemon(:SAMUROTT,0)
+      pbSummitGivePokemon(:ZEBSTRIKA,0)
+      pbSummitGivePokemon(:UNFEZANT,0)
+      pbSummitGivePokemon(:CONKELDURR,0)
+    when "kalos"
+      pbSummitGivePokemon(:CHESNAUGHT,0)
+      pbSummitGivePokemon(:DELPHOX,0)
+      pbSummitGivePokemon(:GRENINJA,0)
+      pbSummitGivePokemon(:HELIOLISK,0)
+      pbSummitGivePokemon(:TALONFLAME,0)
+      pbSummitGivePokemon(:PANGORO,0)
+    when "alola"
+      pbSummitGivePokemon(:DECIDUEYE,0)
+      pbSummitGivePokemon(:INCINEROAR,0)
+      pbSummitGivePokemon(:PRIMARINA,0)
+      pbSummitGivePokemon(:VIKAVOLT,0)
+      pbSummitGivePokemon(:TOUCANNON,0)
+      pbSummitGivePokemon(:CRABOMINABLE,0)
+    when "galar"
+      pbSummitGivePokemon(:RILLABOOM,0)
+      pbSummitGivePokemon(:CINDERACE,0)
+      pbSummitGivePokemon(:INTELEON,0)
+      pbSummitGivePokemon(:TOXTRICITY,0)
+      pbSummitGivePokemon(:CORVIKNIGHT,0)
+      pbSummitGivePokemon(:GRAPPLOCT,0)
   end
 end
 
