@@ -45,6 +45,13 @@ class ShowPokemonSpriteScene
 
 def initialize(pokemon)
  @pokemon=pokemon.species.to_s
+ case pokemon.form
+  when 0
+    @form=""
+  else
+    @form="_"
+    @form.concat(pokemon.form.to_s)
+  end
  @pokeinfo=pokemon
 end
 
@@ -70,12 +77,12 @@ def pbStartScene
  @sprites["bg"].opacity=0
  
   if !@pokemon.is_a?(String)
-     pokemonname=_INTL("Graphics/Pokemon/Front/{1}",@pokemon)
+     pokemonname=_INTL("Graphics/Pokemon/Front/{1}{2}",@pokemon,@form)
     if !pbResolveBitmap(pokemonname)
-     pokemonname=_INTL("Graphics/Pokemon/Front/{1}",@pokemon)
+     pokemonname=_INTL("Graphics/Pokemon/Front/{1}{2}",@pokemon,@form)
     end
   else
-   pokemonname=_INTL("Graphics/Pokemon/Front/{1}",@pokemon)
+   pokemonname=_INTL("Graphics/Pokemon/Front/{1}{2}",@pokemon,@form)
    @fakepokemon=true
 end
 

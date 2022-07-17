@@ -427,7 +427,9 @@ def pbSummitSelectPokemon
 end
 
 def pbSummitMakePokemon(species, form)
-  @givepkmn = Pokemon.new(species, 50)
+  specform = species.clone.to_s
+  specform << "_" << form.to_s
+  @givepkmn = Pokemon.new(specform, 50)
   pokeStats = [:HP, :ATTACK, :DEFENSE, :SPECIAL_ATTACK, :SPECIAL_DEFENSE, :SPEED]
   for stat in pokeStats
     @givepkmn.iv[stat] = 31
@@ -1209,7 +1211,7 @@ end
 def pbSummitChooseRegion
   regionlist = ["Kanto","Johto","Hoenn","Sinnoh","Unova","Kalos","Alola","Galar"]
   pbMessage("\\rWelcome to the Pokémon Summit challenge!")
-  cmd = pbMessage("\rWhat Pokémon starter set would you like to claim?",regionlist)
+  cmd = pbMessage("\\rWhat Pokémon starter set would you like to claim?",regionlist)
   pbSummitGetStarterSet(regionlist[cmd])
 end
 
