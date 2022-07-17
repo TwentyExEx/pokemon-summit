@@ -428,7 +428,9 @@ end
 
 def pbSummitMakePokemon(species, form)
   specform = species.clone.to_s
-  specform << "_" << form.to_s
+  if form != 0
+    specform << "_" << form.to_s
+  end
   @givepkmn = Pokemon.new(specform, 50)
   pokeStats = [:HP, :ATTACK, :DEFENSE, :SPECIAL_ATTACK, :SPECIAL_DEFENSE, :SPEED]
   for stat in pokeStats
