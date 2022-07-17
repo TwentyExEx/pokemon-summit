@@ -920,6 +920,7 @@ def pbSummitPrepBattle
     clonepoke.iv = poke.iv.clone
     clonepoke.item = poke.item.clone
     clonepoke.ability = poke.ability.clone
+    clonepoke.nature = poke.nature.clone
     for j in 0...6
       clonepoke.ev[j] = poke.ev[j]
       clonepoke.iv[j] = poke.iv[j]
@@ -939,9 +940,6 @@ def pbSummitEndBattle(trainertype, name)
   pbSummitDeleteTrainer(trainertype, name)
   $Trainer.party = $game_variables[27]
   $game_switches[36] = false
-  if $game_variables[32] == 1
-    $Trainer.money+=3000
-  end
 end
 
 def pbSummitPrepArcadeTrainer
@@ -1154,6 +1152,18 @@ def pbNewSummitTrainer(tr_type, tr_name, tr_version = 0, save_changes = true, pa
   end
   trainer = [tr_type, tr_name, [], party, tr_version]
   pokeStats = [:HP, :ATTACK, :DEFENSE, :SPECIAL_ATTACK, :SPECIAL_DEFENSE, :SPEED]
+
+  case $game_variables[15]
+    when 0 # Easy
+      ivval = 15 if $game_variables[35] == 1
+      ivval = 10 if $game_variables[35] == 2
+    when 1 # Standard
+      ivval = 25 if $game_variables[35] == 1
+      ivval = 20 if $game_variables[35] == 2
+    when 2, 3 # Hard, Extreme
+      ivval = 31
+  end
+
   if save_changes
     @trainer_hash = {
       :trainer_type => tr_type,
@@ -1167,9 +1177,11 @@ def pbNewSummitTrainer(tr_type, tr_name, tr_version = 0, save_changes = true, pa
           :species       => pkmn[0],
           :level         => 50,
           :moves         => [pkmn[1], pkmn[2], pkmn[3], pkmn[4]],
-          :iv            => {:HP => 31, :ATTACK => 31, :DEFENSE => 31, :SPECIAL_ATTACK => 31, :SPECIAL_DEFENSE => 31, :SPEED => 31},
+          :iv            => {:HP => ivval, :ATTACK => ivval, :DEFENSE => ivval, :SPECIAL_ATTACK => ivval, :SPECIAL_DEFENSE => ivval, :SPEED => ivval},
           :form          => pkmn[5],
-          :ability_index => pkmn[6]
+          :ability_index => pkmn[6],
+          # :nature        => pkmn[7],
+          # :item          => pkmn[8]
         }
       )
     end
