@@ -910,8 +910,8 @@ def pbSummitBracketUnlock
 
   pbMessage(_INTL("\\rCongratulations on defeating the {1}!",bracketwon))
   pbSEPlay("Slots coin")
-  $Trainer.money += 5000
-  pbMessage("\\G\\rYou have earned $5,000 for your performance.")
+  $Trainer.money += 700
+  pbMessage("\\G\\rYou have earned $700 for your performance.")
   pbMessage(_INTL("\\rYou have also successfully unlocked the {1}!",bracketunlocked))
 end
 
@@ -1210,7 +1210,6 @@ end
 
 def pbSummitChooseRegion
   regionlist = ["Kanto","Johto","Hoenn","Sinnoh","Unova","Kalos","Alola","Galar"]
-  pbMessage("\\rWelcome to the Pokémon Summit challenge!")
   cmd = pbMessage("\\rWhat Pokémon starter set would you like to claim?",regionlist)
   pbSummitGetStarterSet(regionlist[cmd])
 end
@@ -1499,4 +1498,10 @@ def pbSummitChangeAbility
       end
     end
   end
+end
+
+def pbSummitMonkey
+    pbSummitGivePokemon(:SIMISAGE,0)
+    pbSummitGivePokemon(:SIMISEAR,0)
+    pbSummitGivePokemon(:SIMIPOUR,0)
 end
