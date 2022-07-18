@@ -7280,6 +7280,7 @@ Pokemon = CLEFABLE,50
     IV = 31,31,31,31,31,31
 #-------------------------------
 [ELITE_Marnie,Marnie]
+LoseText = ...
 Pokemon = LIEPARD,50
     Moves = NIGHTSLASH,SUCKERPUNCH,PLAYROUGH,SHADOWCLAW
     AbilityIndex = 1
@@ -7297,6 +7298,7 @@ Pokemon = GRIMMSNARL,50
     IV = 31,31,31,31,31,31
 #-------------------------------
 [ELITE_Avery,Avery]
+LoseText = ...
 Pokemon = ORBEETLE,50
     Moves = PSYCHIC,BUGBUZZ,REFLECT,LIGHTSCREEN
     AbilityIndex = 0
@@ -7315,6 +7317,7 @@ Pokemon = SLOWKING,50
     IV = 31,31,31,31,31,31
 #-------------------------------
 [ELITE_Klara,Klara]
+LoseText = ...
 Pokemon = WEEZING,50
     Form = 1
     Moves = STRANGESTEAM,SLUDGEBOMB,DAZZLINGGLEAM,THUNDERBOLT
@@ -7334,6 +7337,7 @@ Pokemon = DRAPION,50
     IV = 31,31,31,31,31,31
 #-------------------------------
 [ELITE_Mustard,Mustard]
+LoseText = ...
 Pokemon = LUXRAY,50
     Moves = WILDCHARGE,THUNDERFANG,PSYCHICFANGS,ROAR
     AbilityIndex = 1
@@ -7351,6 +7355,7 @@ Pokemon = KOMMOO,50
     IV = 31,31,31,31,31,31
 #-------------------------------
 [ELITE_Bede,Bede]
+LoseText = ...
 Pokemon = MAWILE,50
     Moves = SWORDSDANCE,PLAYROUGH,SUCKERPUNCH,KNOCKOFF
     AbilityIndex = 1
@@ -7369,6 +7374,7 @@ Pokemon = HATTERENE,50
     IV = 31,31,31,31,31,31
 #-------------------------------
 [ELITE_Sonia,Sonia]
+LoseText = ...
 Pokemon = GARBODOR,50
     Moves = GUNKSHOT,TOXICSPIKES,STOMPINGTANTRUM,PAINSPLIT
     AbilityIndex = 0
@@ -7387,6 +7393,7 @@ Pokemon = BOLTUND,50
     IV = 31,31,31,31,31,31
 #-------------------------------
 [ELITE_Peony,Peony]
+LoseText = ...
 Pokemon = BRONZONG,50
     Moves = STEALTHROCK,TOXIC,PSYWAVE,GYROBALL
     AbilityIndex = 0
@@ -7404,6 +7411,7 @@ Pokemon = COPPERAJAH,50
     IV = 31,31,31,31,31,31
 #-------------------------------
 [BOSS_Giovanni,Giovanni]
+LoseText = ...
 Pokemon = NIDOQUEEN,50
     Moves = TOXICSPIKES,CRUNCH,EARTHPOWER,SUPERPOWER
     AbilityIndex = 0
@@ -7421,6 +7429,7 @@ Pokemon = PERSIAN,50
     IV = 31,31,31,31,31,31
 #-------------------------------
 [BOSS_Maxie,Maxie]
+LoseText = ...
 Pokemon = MIGHTYENA,50
     Moves = FIREFANG,THUNDERFANG,ICEFANG,CRUNCH
     AbilityIndex = 0
@@ -7438,6 +7447,7 @@ Pokemon = CAMERUPT,50
     IV = 31,31,31,31,31,31
 #-------------------------------
 [BOSS_Archie,Archie]
+LoseText = ...
 Pokemon = MIGHTYENA,50
     Moves = FIREFANG,THUNDERFANG,ICEFANG,CRUNCH
     AbilityIndex = 0
@@ -7455,6 +7465,7 @@ Pokemon = SHARPEDO,50
     IV = 31,31,31,31,31,31
 #-------------------------------
 [BOSS_Cyrus,Cyrus]
+LoseText = ...
 Pokemon = WEAVILE,50
     Moves = SWORDSDANCE,TRIPLEAXEL,KNOCKOFF,ICESHARD
     AbilityIndex = 0
@@ -7472,6 +7483,7 @@ Pokemon = GLISCOR,50
     IV = 31,31,31,31,31,31
 #-------------------------------
 [BOSS_Ghetsis,Ghetsis]
+LoseText = ...
 Pokemon = BISHARP,50
     Moves = IRONHEAD,KNOCKOFF,SUCKERPUNCH,SWORDSDANCE
     AbilityIndex = 0
@@ -7489,6 +7501,7 @@ Pokemon = HYDREIGON,50
     IV = 31,31,31,31,31,31
 #-------------------------------
 [BOSS_Lysandre,Lysandre]
+LoseText = ...
 Pokemon = PANGORO,50
     Moves = KNOCKOFF,CLOSECOMBAT,IRONHEAD,DRAINPUNCH
     AbilityIndex = 0
@@ -7506,6 +7519,7 @@ Pokemon = GYARADOS,50
     IV = 31,31,31,31,31,31
 #-------------------------------
 [BOSS_Guzma,Guzma]
+LoseText = ...
 Pokemon = PINSIR,50
     Moves = SUPERPOWER,XSCISSOR,SWORDSDANCE,SUBMISSION
     AbilityIndex = 0
@@ -7523,6 +7537,7 @@ Pokemon = GOLISOPOD,50
     IV = 31,31,31,31,31,31
 #-------------------------------
 [BOSS_Rose,Rose]
+LoseText = ...
 Pokemon = FERROTHORN,50
     Moves = SPIKES,KNOCKOFF,LEECHSEED,POWERWHIP
     AbilityIndex = 1
@@ -7538,3 +7553,18 @@ Pokemon = COPPERAJAH,50
     AbilityIndex = 0
     Item = ASSAULTVEST
     IV = 31,31,31,31,31,31
+#-------------------------------
+[YOUNGSTER,Sebastian]
+LoseText = ...
+Pokemon = GUMSHOOS,50
+    Moves = HYPERFANG,CRUNCH,BULLDOZE,SUBSTITUTE
+    AbilityIndex = 1
+    IV = 20,20,20,20,20,20
+Pokemon = ELDEGOSS,50
+    Moves = LEAFSTORM,LEAFTORNADO,POLLENPUFF,SING
+    AbilityIndex = 0
+    IV = 20,20,20,20,20,20
+Pokemon = DIGGERSBY,50
+    Moves = EARTHQUAKE,HAMMERARM,SWORDSDANCE,BOUNCE
+    AbilityIndex = 0
+    IV = 20,20,20,20,20,20
