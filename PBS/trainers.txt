@@ -17,6 +17,87 @@ Pokemon = AERODACTYL,50
     AbilityIndex = 0
     IV = 15,15,15,15,15,15
 	Nature = HARDY
+#-------------------------------
+[LEADER_Brock,Brock,1]
+LoseText = Your Pokémon's powerful attacks overcame my rock-hard resistance...
+Pokemon = KABUTOPS,50
+    Moves = AQUAJET,LIQUIDATION,LEECHLIFE,STONEEDGE
+    AbilityIndex = 1
+    IV = 25,25,25,25,25,25
+	Nature = JOLLY
+Pokemon = GOLEM,50
+    Moves = EARTHQUAKE,STONEEDGE,HEAVYSLAM,SANDSTORM
+    AbilityIndex = 0
+    IV = 25,25,25,25,25,25
+	Nature = ADAMANT
+Pokemon = AERODACTYL,50
+    Moves = GIGAIMPACT,ROCKSLIDE,STONEEDGE,IRONHEAD
+    AbilityIndex = 0
+    IV = 25,25,25,25,25,25
+	Nature = JOLLY
+#-------------------------------
+[LEADER_Brock,Brock,2]
+LoseText = Your Pokémon's powerful attacks overcame my rock-hard resistance...
+Pokemon = KABUTOPS,50
+    Moves = AQUAJET,LIQUIDATION,LEECHLIFE,STONEEDGE
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+    Item = ASSAULTVEST
+	Nature = JOLLY
+Pokemon = GOLEM,50
+    Moves = EARTHQUAKE,STONEEDGE,HEAVYSLAM,SANDSTORM
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = WEAKNESSPOLICY
+	Nature = ADAMANT
+Pokemon = AERODACTYL,50
+    Moves = GIGAIMPACT,ROCKSLIDE,STONEEDGE,IRONHEAD
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = HEAVYDUTYBOOTS
+	Nature = JOLLY
+#-------------------------------
+[LEADER_Brock,Brock,3]
+LoseText = Your Pokémon's powerful attacks overcame my rock-hard resistance...
+Pokemon = KABUTOPS,50
+    Moves = AQUAJET,LIQUIDATION,LEECHLIFE,STONEEDGE
+    AbilityIndex = 1
+    IV = 31,31,31,31,31,31
+	EV = 0,252,0,252,0,0
+    Item = ASSAULTVEST
+	Nature = JOLLY
+Pokemon = GOLEM,50
+    Moves = EARTHQUAKE,STONEEDGE,HEAVYSLAM,SANDSTORM
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	EV = 252,252,0,0,0,0
+	Item = WEAKNESSPOLICY
+	Nature = ADAMANT
+Pokemon = AERODACTYL,50
+    Moves = GIGAIMPACT,ROCKSLIDE,STONEEDGE,IRONHEAD
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	EV = 0,252,0,252,0,0
+	Item = HEAVYDUTYBOOTS
+	Nature = JOLLY
+#-------------------------------
+[LEADER_Brock,Brock,4]
+LoseText = Your Pokémon's powerful attacks overcame my rock-hard resistance...
+Pokemon = KABUTOPS,50
+    Moves = AQUAJET,LIQUIDATION,LEECHLIFE,STONEEDGE
+    AbilityIndex = 1
+    IV = 25,25,25,25,25,25
+	Nature = HARDY
+Pokemon = GOLEM,50
+    Moves = EARTHQUAKE,STONEEDGE,HEAVYSLAM,SANDSTORM
+    AbilityIndex = 0
+    IV = 15,15,15,15,15,15
+	Nature = HARDY
+Pokemon = AERODACTYL,50
+    Moves = GIGAIMPACT,ROCKSLIDE,STONEEDGE,IRONHEAD
+    AbilityIndex = 0
+    IV = 15,15,15,15,15,15
+	Nature = HARDY
 Pokemon = TYRANITAR,50
 	Moves = STEALTHROCK,ROCKBLAST,EARTHQUAKE,THUNDERWAVE
 	AbilityIndex = 0
@@ -33,7 +114,7 @@ Pokemon = LYCANROC,50
     IV = 15,15,15,15,15,15
 	Nature = HARDY
 #-------------------------------
-[LEADER_Brock,Brock,1]
+[LEADER_Brock,Brock,5]
 LoseText = Your Pokémon's powerful attacks overcame my rock-hard resistance...
 Pokemon = KABUTOPS,50
     Moves = AQUAJET,LIQUIDATION,LEECHLIFE,STONEEDGE
@@ -66,7 +147,7 @@ Pokemon = LYCANROC,50
     IV = 25,25,25,25,25,25
 	Nature = ADAMANT
 #-------------------------------
-[LEADER_Brock,Brock,2]
+[LEADER_Brock,Brock,6]
 LoseText = Your Pokémon's powerful attacks overcame my rock-hard resistance...
 Pokemon = KABUTOPS,50
     Moves = AQUAJET,LIQUIDATION,LEECHLIFE,STONEEDGE
@@ -105,7 +186,7 @@ Pokemon = LYCANROC,50
 	Item = FOCUSSASH
 	Nature = ADAMANT
 #-------------------------------
-[LEADER_Brock,Brock,3]
+[LEADER_Brock,Brock,7]
 LoseText = Your Pokémon's powerful attacks overcame my rock-hard resistance...
 Pokemon = KABUTOPS,50
     Moves = AQUAJET,LIQUIDATION,LEECHLIFE,STONEEDGE
@@ -167,6 +248,87 @@ Pokemon = BLASTOISE,50
     AbilityIndex = 0
     IV = 15,15,15,15,15,15
 	Nature = HARDY
+#-------------------------------
+[LEADER_Misty,Misty,1]
+LoseText = You really are strong... I'll admit that you are skilled...
+Pokemon = QUAGSIRE,50
+    Moves = EARTHQUAKE,AQUATAIL,BRICKBREAK,ROCKTOMB
+    AbilityIndex = 0
+    IV = 25,25,25,25,25,25
+	Nature = ADAMANT
+Pokemon = STARMIE,50
+    Moves = PSYCHIC,HYDROPUMP,POWERGEM,RECOVER
+    AbilityIndex = 0
+    IV = 25,25,25,25,25,25
+	Nature = TIMID
+Pokemon = BLASTOISE,50
+    Moves = AQUATAIL,SURF,FLASHCANNON,SHELLSMASH
+    AbilityIndex = 0
+    IV = 25,25,25,25,25,25
+	Nature = MILD
+#-------------------------------
+[LEADER_Misty,Misty,2]
+LoseText = You really are strong... I'll admit that you are skilled...
+Pokemon = QUAGSIRE,50
+    Moves = EARTHQUAKE,AQUATAIL,BRICKBREAK,ROCKTOMB
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = ROCKYHELMET
+	Nature = ADAMANT
+Pokemon = STARMIE,50
+    Moves = PSYCHIC,HYDROPUMP,POWERGEM,RECOVER
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = COLBURBERRY
+	Nature = TIMID
+Pokemon = BLASTOISE,50
+    Moves = AQUATAIL,SURF,FLASHCANNON,SHELLSMASH
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = WHITEHERB
+	Nature = MILD
+#-------------------------------
+[LEADER_Misty,Misty,3]
+LoseText = You really are strong... I'll admit that you are skilled...
+Pokemon = QUAGSIRE,50
+    Moves = EARTHQUAKE,AQUATAIL,BRICKBREAK,ROCKTOMB
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	EV = 252,252,0,0,0,0
+	Item = ROCKYHELMET
+	Nature = ADAMANT
+Pokemon = STARMIE,50
+    Moves = PSYCHIC,HYDROPUMP,POWERGEM,RECOVER
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	EV = 0,0,252,252,0,0
+	Item = COLBURBERRY
+	Nature = TIMID
+Pokemon = BLASTOISE,50
+    Moves = AQUATAIL,SURF,FLASHCANNON,SHELLSMASH
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+    EV = 0,0,252,252,0,0
+	Item = WHITEHERB
+	Nature = MILD
+#-------------------------------
+[LEADER_Misty,Misty,4]
+LoseText = You really are strong... I'll admit that you are skilled...
+Pokemon = QUAGSIRE,50
+    Moves = EARTHQUAKE,AQUATAIL,BRICKBREAK,ROCKTOMB
+    AbilityIndex = 0
+    IV = 15,15,15,15,15,15
+	Nature = HARDY
+Pokemon = STARMIE,50
+    Moves = PSYCHIC,HYDROPUMP,POWERGEM,RECOVER
+    AbilityIndex = 0
+    IV = 15,15,15,15,15,15
+	Nature = HARDY
+Pokemon = BLASTOISE,50
+    Moves = AQUATAIL,SURF,FLASHCANNON,SHELLSMASH
+    AbilityIndex = 0
+    IV = 15,15,15,15,15,15
+	Nature = HARDY
 Pokemon = LANTURN,50
 	Moves = SCALD,VOLTSWITCH,TOXIC,PROTECT
     AbilityIndex = 0
@@ -183,7 +345,7 @@ Pokemon = VAPOREON,50
     IV = 15,15,15,15,15,15
 	Nature = HARDY
 #-------------------------------
-[LEADER_Misty,Misty,1]
+[LEADER_Misty,Misty,5]
 LoseText = You really are strong... I'll admit that you are skilled...
 Pokemon = QUAGSIRE,50
     Moves = EARTHQUAKE,AQUATAIL,BRICKBREAK,ROCKTOMB
@@ -216,7 +378,7 @@ Pokemon = VAPOREON,50
     IV = 25,25,25,25,25,25
 	Nature = MODEST
 #-------------------------------
-[LEADER_Misty,Misty,2]
+[LEADER_Misty,Misty,6]
 LoseText = You really are strong... I'll admit that you are skilled...
 Pokemon = QUAGSIRE,50
     Moves = EARTHQUAKE,AQUATAIL,BRICKBREAK,ROCKTOMB
@@ -255,7 +417,7 @@ Pokemon = VAPOREON,50
 	Item = MYSTICWATER
 	Nature = MODEST
 #-------------------------------
-[LEADER_Misty,Misty,3]
+[LEADER_Misty,Misty,7]
 LoseText = You really are strong... I'll admit that you are skilled...
 Pokemon = QUAGSIRE,50
     Moves = EARTHQUAKE,AQUATAIL,BRICKBREAK,ROCKTOMB
@@ -317,6 +479,87 @@ Pokemon = JOLTEON,50
     AbilityIndex = 0
     IV = 15,15,15,15,15,15
 	Nature = HARDY
+#-------------------------------
+[LEADER_Surge,Lt. Surge,1]
+LoseText = Even my electric tricks lost. You're excellent! Keep goin' like lightning!
+Pokemon = ELECTRODE,50
+    Moves = DISCHARGE,THUNDERBOLT,LIGHTSCREEN,THUNDERWAVE
+    AbilityIndex = 0
+    IV = 25,25,25,25,25,25
+	Nature = TIMID
+Pokemon = RAICHU,50
+    Moves = THUNDER,RAINDANCE,THUNDERBOLT,SURF
+    AbilityIndex = 0
+    IV = 25,25,25,25,25,25
+	Nature = TIMID
+Pokemon = JOLTEON,50
+    Moves = THUNDERBOLT,RAINDANCE,SHADOWBALL,THUNDER
+    AbilityIndex = 0
+    IV = 25,25,25,25,25,25
+	Nature = TIMID
+#-------------------------------
+[LEADER_Surge,Lt. Surge,2]
+LoseText = Even my electric tricks lost. You're excellent! Keep goin' like lightning!
+Pokemon = ELECTRODE,50
+    Moves = DISCHARGE,THUNDERBOLT,LIGHTSCREEN,THUNDERWAVE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = LIGHTCLAY
+	Nature = TIMID
+Pokemon = RAICHU,50
+    Moves = THUNDER,RAINDANCE,THUNDERBOLT,SURF
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = ROCKYHELMET
+	Nature = TIMID
+Pokemon = JOLTEON,50
+    Moves = THUNDERBOLT,RAINDANCE,SHADOWBALL,THUNDER
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = ZAPPLATE
+	Nature = TIMID
+#-------------------------------
+[LEADER_Surge,Lt. Surge,3]
+LoseText = Even my electric tricks lost. You're excellent! Keep goin' like lightning!
+Pokemon = ELECTRODE,50
+    Moves = DISCHARGE,THUNDERBOLT,LIGHTSCREEN,THUNDERWAVE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+    EV = 0,0,0,252,252,0	
+	Item = LIGHTCLAY
+	Nature = TIMID
+Pokemon = RAICHU,50
+    Moves = THUNDER,RAINDANCE,THUNDERBOLT,SURF
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+    EV = 0,0,0,252,252,0	
+	Item = ROCKYHELMET
+	Nature = TIMID
+Pokemon = JOLTEON,50
+    Moves = THUNDERBOLT,RAINDANCE,SHADOWBALL,THUNDER
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+    EV = 0,0,0,252,252,0	
+	Item = MAGNET
+	Nature = TIMID
+#-------------------------------
+[LEADER_Surge,Lt. Surge,4]
+LoseText = Even my electric tricks lost. You're excellent! Keep goin' like lightning!
+Pokemon = ELECTRODE,50
+    Moves = DISCHARGE,THUNDERBOLT,LIGHTSCREEN,THUNDERWAVE
+    AbilityIndex = 0
+    IV = 15,15,15,15,15,15
+	Nature = HARDY
+Pokemon = RAICHU,50
+    Moves = THUNDER,RAINDANCE,THUNDERBOLT,SURF
+    AbilityIndex = 0
+    IV = 15,15,15,15,15,15
+	Nature = HARDY
+Pokemon = JOLTEON,50
+    Moves = THUNDERBOLT,RAINDANCE,SHADOWBALL,THUNDER
+    AbilityIndex = 0
+    IV = 15,15,15,15,15,15
+	Nature = HARDY
 Pokemon = ELECTIVIRE,50
     Moves = THUNDERBOLT,FLAMETHROWER,FOCUSBLAST,VOLTSWITCH
     AbilityIndex = 0
@@ -334,7 +577,7 @@ Pokemon = ROTOM,50
 	Nature = HARDY
 	Form = 5
 #-------------------------------
-[LEADER_Surge,Lt. Surge,1]
+[LEADER_Surge,Lt. Surge,5]
 LoseText = Even my electric tricks lost. You're excellent! Keep goin' like lightning!
 Pokemon = ELECTRODE,50
     Moves = DISCHARGE,THUNDERBOLT,LIGHTSCREEN,THUNDERWAVE
@@ -368,7 +611,7 @@ Pokemon = ROTOM,50
 	Nature = TIMID
 	Form = 5
 #-------------------------------
-[LEADER_Surge,Lt. Surge,2]
+[LEADER_Surge,Lt. Surge,6]
 LoseText = Even my electric tricks lost. You're excellent! Keep goin' like lightning!
 Pokemon = ELECTRODE,50
     Moves = DISCHARGE,THUNDERBOLT,LIGHTSCREEN,THUNDERWAVE
@@ -408,7 +651,7 @@ Pokemon = ROTOM,50
 	Nature = TIMID
 	Form = 5
 #-------------------------------
-[LEADER_Surge,Lt. Surge,3]
+[LEADER_Surge,Lt. Surge,7]
 LoseText = Even my electric tricks lost. You're excellent! Keep goin' like lightning!
 Pokemon = ELECTRODE,50
     Moves = DISCHARGE,THUNDERBOLT,LIGHTSCREEN,THUNDERWAVE
@@ -471,6 +714,87 @@ Pokemon = VENUSAUR,50
     AbilityIndex = 0
     IV = 15,15,15,15,15,15
 	Nature = HARDY
+#-------------------------------
+[LEADER_Erika,Erika,1]
+LoseText = That was a delightful match. I felt inspired.
+Pokemon = PARASECT,50
+    Moves = CROSSPOISON,XSCISSOR,STUNSPORE,POISONPOWDER
+    AbilityIndex = 0
+    IV = 25,25,25,25,25,25
+	Nature = ADAMANT
+Pokemon = VILEPLUME,50
+    Moves = GIGADRAIN,PETALDANCE,SLUDGEWAVE,DAZZLINGGLEAM
+    AbilityIndex = 0
+    IV = 25,25,25,25,25,25
+	Nature = MODEST
+Pokemon = VENUSAUR,50
+    Moves = PETALDANCE,ENERGYBALL,SLUDGEBOMB,TOXIC
+    AbilityIndex = 0
+    IV = 25,25,25,25,25,25
+	Nature = TIMID
+#-------------------------------
+[LEADER_Erika,Erika,2]
+LoseText = That was a delightful match. I felt inspired.
+Pokemon = PARASECT,50
+    Moves = CROSSPOISON,XSCISSOR,STUNSPORE,POISONPOWDER
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = LEFTOVERS
+	Nature = ADAMANT
+Pokemon = VILEPLUME,50
+    Moves = GIGADRAIN,PETALDANCE,SLUDGEWAVE,DAZZLINGGLEAM
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = BLACKSLUDGE
+	Nature = MODEST
+Pokemon = VENUSAUR,50
+    Moves = PETALDANCE,ENERGYBALL,SLUDGEBOMB,TOXIC
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = COBABERRY
+	Nature = TIMID
+#-------------------------------
+[LEADER_Erika,Erika,3]
+LoseText = That was a delightful match. I felt inspired.
+Pokemon = PARASECT,50
+    Moves = CROSSPOISON,XSCISSOR,STUNSPORE,POISONPOWDER
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	EV = 252,252,0,0,0,0
+	Item = LEFTOVERS
+	Nature = ADAMANT
+Pokemon = VILEPLUME,50
+    Moves = GIGADRAIN,PETALDANCE,SLUDGEWAVE,DAZZLINGGLEAM
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+    EV = 0,0,0,252,252,0
+	Item = BLACKSLUDGE
+	Nature = MODEST
+Pokemon = VENUSAUR,50
+    Moves = PETALDANCE,ENERGYBALL,SLUDGEBOMB,TOXIC
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+    EV = 0,0,0,252,252,0
+	Item = COBABERRY
+	Nature = TIMID
+#-------------------------------
+[LEADER_Erika,Erika,4]
+LoseText = That was a delightful match. I felt inspired.
+Pokemon = PARASECT,50
+    Moves = CROSSPOISON,XSCISSOR,STUNSPORE,POISONPOWDER
+    AbilityIndex = 0
+    IV = 15,15,15,15,15,15
+	Nature = HARDY
+Pokemon = VILEPLUME,50
+    Moves = GIGADRAIN,PETALDANCE,SLUDGEWAVE,DAZZLINGGLEAM
+    AbilityIndex = 0
+    IV = 15,15,15,15,15,15
+	Nature = HARDY
+Pokemon = VENUSAUR,50
+    Moves = PETALDANCE,ENERGYBALL,SLUDGEBOMB,TOXIC
+    AbilityIndex = 0
+    IV = 15,15,15,15,15,15
+	Nature = HARDY
 Pokemon = BRELOOM,50
     Moves = DRAINPUNCH,SEEDBOMB,MACHPUNCH,STONEEDGE
     AbilityIndex = 1
@@ -487,7 +811,7 @@ Pokemon = EXEGGUTOR,50
     IV = 15,15,15,15,15,15
 	Nature = HARDY
 #-------------------------------
-[LEADER_Erika,Erika,1]
+[LEADER_Erika,Erika,5]
 LoseText = That was a delightful match. I felt inspired.
 Pokemon = PARASECT,50
     Moves = CROSSPOISON,XSCISSOR,STUNSPORE,POISONPOWDER
@@ -520,7 +844,7 @@ Pokemon = EXEGGUTOR,50
     IV = 25,25,25,25,25,25
 	Nature = MODEST
 #-------------------------------
-[LEADER_Erika,Erika,2]
+[LEADER_Erika,Erika,6]
 LoseText = That was a delightful match. I felt inspired.
 Pokemon = PARASECT,50
     Moves = CROSSPOISON,XSCISSOR,STUNSPORE,POISONPOWDER
@@ -559,7 +883,7 @@ Pokemon = EXEGGUTOR,50
 	Item = MIRACLESEED
 	Nature = MODEST
 #-------------------------------
-[LEADER_Erika,Erika,3]
+[LEADER_Erika,Erika,7]
 LoseText = That was a delightful match. I felt inspired.
 Pokemon = PARASECT,50
     Moves = CROSSPOISON,XSCISSOR,STUNSPORE,POISONPOWDER
@@ -621,6 +945,87 @@ Pokemon = VENOMOTH,50
     AbilityIndex = 0
     IV = 15,15,15,15,15,15
 	Nature = HARDY
+#-------------------------------
+[LEADER_Janine,Janine,1]
+LoseText = You've got a great battle technique!
+Pokemon = WEEZING,50
+    Moves = ASSURANCE,TOXIC,SLUDGEBOMB,HEATWAVE
+    AbilityIndex = 0
+    IV = 25,25,25,25,25,25
+	Nature = RELAXED
+Pokemon = TENTACRUEL,50
+    Moves = SLUDGEWAVE,SURF,HEX,SCALD
+    AbilityIndex = 0
+    IV = 25,25,25,25,25,25
+	Nature = TIMID
+Pokemon = VENOMOTH,50
+    Moves = BUGBUZZ,ENERGYBALL,SLUDGEBOMB,PROTECT
+    AbilityIndex = 0
+    IV = 25,25,25,25,25,25
+	Nature = TIMID
+#-------------------------------
+[LEADER_Janine,Janine,2]
+LoseText = You've got a great battle technique!
+Pokemon = WEEZING,50
+    Moves = ASSURANCE,TOXIC,SLUDGEBOMB,HEATWAVE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = LEFTOVERS
+	Nature = RELAXED
+Pokemon = TENTACRUEL,50
+    Moves = SLUDGEWAVE,SURF,HEX,SCALD
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = BLACKSLUDGE
+	Nature = TIMID
+Pokemon = VENOMOTH,50
+    Moves = BUGBUZZ,ENERGYBALL,SLUDGEBOMB,PROTECT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = EXPERTBELT
+	Nature = TIMID
+#-------------------------------
+[LEADER_Janine,Janine,3]
+LoseText = You've got a great battle technique!
+Pokemon = WEEZING,50
+    Moves = ASSURANCE,TOXIC,SLUDGEBOMB,HEATWAVE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	EV = 252,0,252,0,0,0
+	Item = LEFTOVERS
+	Nature = RELAXED
+Pokemon = TENTACRUEL,50
+    Moves = SLUDGEWAVE,SURF,HEX,SCALD
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	EV = 0,0,0,252,252,0
+	Item = BLACKSLUDGE
+	Nature = TIMID
+Pokemon = VENOMOTH,50
+    Moves = BUGBUZZ,ENERGYBALL,SLUDGEBOMB,PROTECT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	EV = 0,0,0,252,252,0
+	Item = EXPERTBELT
+	Nature = TIMID
+#-------------------------------
+[LEADER_Janine,Janine,4]
+LoseText = You've got a great battle technique!
+Pokemon = WEEZING,50
+    Moves = ASSURANCE,TOXIC,SLUDGEBOMB,HEATWAVE
+    AbilityIndex = 0
+    IV = 15,15,15,15,15,15
+	Nature = HARDY
+Pokemon = TENTACRUEL,50
+    Moves = SLUDGEWAVE,SURF,HEX,SCALD
+    AbilityIndex = 0
+    IV = 15,15,15,15,15,15
+	Nature = HARDY
+Pokemon = VENOMOTH,50
+    Moves = BUGBUZZ,ENERGYBALL,SLUDGEBOMB,PROTECT
+    AbilityIndex = 0
+    IV = 15,15,15,15,15,15
+	Nature = HARDY
 Pokemon = CROBAT,50
     Moves = LEECHLIFE,CROSSPOISON,BRAVEBIRD,ZENHEADBUTT
     AbilityIndex = 0
@@ -638,7 +1043,7 @@ Pokemon = SLOWBRO,50
 	Nature = HARDY
 	Form = 1
 #-------------------------------
-[LEADER_Janine,Janine,1]
+[LEADER_Janine,Janine,5]
 LoseText = You've got a great battle technique!
 Pokemon = WEEZING,50
     Moves = ASSURANCE,TOXIC,SLUDGEBOMB,HEATWAVE
@@ -672,7 +1077,7 @@ Pokemon = SLOWBRO,50
 	Nature = QUIET
 	Form = 1
 #-------------------------------
-[LEADER_Janine,Janine,2]
+[LEADER_Janine,Janine,6]
 LoseText = You've got a great battle technique!
 Pokemon = WEEZING,50
     Moves = ASSURANCE,TOXIC,SLUDGEBOMB,HEATWAVE
@@ -712,7 +1117,7 @@ Pokemon = SLOWBRO,50
 	Nature = QUIET
 	Form = 1
 #-------------------------------
-[LEADER_Janine,Janine,3]
+[LEADER_Janine,Janine,7]
 LoseText = You've got a great battle technique!
 Pokemon = WEEZING,50
     Moves = ASSURANCE,TOXIC,SLUDGEBOMB,HEATWAVE
@@ -775,6 +1180,87 @@ Pokemon = ALAKAZAM,50
     AbilityIndex = 0
     IV = 15,15,15,15,15,15
 	Nature = HARDY
+#-------------------------------
+[LEADER_Sabrina,Sabrina,1]
+LoseText = Was the future I saw...wrong?
+Pokemon = SLOWKING,50
+    Moves = SCALD,PSYCHIC,SLACKOFF,TELEPORT
+    AbilityIndex = 0
+    IV = 25,25,25,25,25,25
+	Nature = BOLD
+Pokemon = ESPEON,50
+    Moves = PSYCHIC,DAZZLINGGLEAM,SHADOWBALL,REST
+    AbilityIndex = 0
+    IV = 25,25,25,25,25,25
+	Nature = TIMID
+Pokemon = ALAKAZAM,50
+    Moves = PSYCHIC,CALMMIND,DAZZLINGGLEAM,SHADOWBALL
+    AbilityIndex = 0
+    IV = 25,25,25,25,25,25
+	Nature = TIMID
+#-------------------------------
+[LEADER_Sabrina,Sabrina,2]
+LoseText = Was the future I saw...wrong?
+Pokemon = SLOWKING,50
+    Moves = SCALD,PSYCHIC,SLACKOFF,TELEPORT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = COLBURBERRY
+	Nature = BOLD
+Pokemon = ESPEON,50
+    Moves = PSYCHIC,DAZZLINGGLEAM,SHADOWBALL,REST
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = CHESTOBERRY
+	Nature = TIMID
+Pokemon = ALAKAZAM,50
+    Moves = PSYCHIC,CALMMIND,DAZZLINGGLEAM,SHADOWBALL
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = FOCUSSASH
+	Nature = TIMID
+#-------------------------------
+[LEADER_Sabrina,Sabrina,3]
+LoseText = Was the future I saw...wrong?
+Pokemon = SLOWKING,50
+    Moves = SCALD,PSYCHIC,SLACKOFF,TELEPORT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	EV = 252,0,252,0,0,0
+	Item = BERRYJUICE
+	Nature = BOLD
+Pokemon = ESPEON,50
+    Moves = PSYCHIC,DAZZLINGGLEAM,SHADOWBALL,REST
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	EV = 0,0,0,252,252,0
+	Item = CHESTOBERRY
+	Nature = TIMID
+Pokemon = ALAKAZAM,50
+    Moves = PSYCHIC,CALMMIND,DAZZLINGGLEAM,SHADOWBALL
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	EV = 0,0,0,252,252,0
+	Item = FOCUSSASH
+	Nature = TIMID
+#-------------------------------
+[LEADER_Sabrina,Sabrina,4]
+LoseText = Was the future I saw...wrong?
+Pokemon = SLOWKING,50
+    Moves = SCALD,PSYCHIC,SLACKOFF,TELEPORT
+    AbilityIndex = 0
+    IV = 15,15,15,15,15,15
+	Nature = HARDY
+Pokemon = ESPEON,50
+    Moves = PSYCHIC,DAZZLINGGLEAM,SHADOWBALL,REST
+    AbilityIndex = 0
+    IV = 15,15,15,15,15,15
+	Nature = HARDY
+Pokemon = ALAKAZAM,50
+    Moves = PSYCHIC,CALMMIND,DAZZLINGGLEAM,SHADOWBALL
+    AbilityIndex = 0
+    IV = 15,15,15,15,15,15
+	Nature = HARDY
 Pokemon = INDEEDEE,50
 	Gender = Female
     Moves = EXPANDINGFORCE,MYSTICALFIRE,HYPERVOICE,DAZZLINGGLEAM
@@ -792,7 +1278,7 @@ Pokemon = BEHEEYEM,50
     IV = 15,15,15,15,15,15
 	Nature = HARDY
 #-------------------------------
-[LEADER_Sabrina,Sabrina,1]
+[LEADER_Sabrina,Sabrina,5]
 LoseText = Was the future I saw...wrong?
 Pokemon = SLOWKING,50
     Moves = SCALD,PSYCHIC,SLACKOFF,TELEPORT
@@ -826,7 +1312,7 @@ Pokemon = BEHEEYEM,50
     IV = 25,25,25,25,25,25
 	Nature = MODEST
 #-------------------------------
-[LEADER_Sabrina,Sabrina,2]
+[LEADER_Sabrina,Sabrina,6]
 LoseText = Was the future I saw...wrong?
 Pokemon = SLOWKING,50
     Moves = SCALD,PSYCHIC,SLACKOFF,TELEPORT
@@ -866,7 +1352,7 @@ Pokemon = BEHEEYEM,50
 	Item = COLBURBERRY
 	Nature = MODEST
 #-------------------------------
-[LEADER_Sabrina,Sabrina,3]
+[LEADER_Sabrina,Sabrina,7]
 LoseText = Was the future I saw...wrong?
 Pokemon = SLOWKING,50
     Moves = SCALD,PSYCHIC,SLACKOFF,TELEPORT
@@ -929,6 +1415,87 @@ Pokemon = ARCANINE,50
     AbilityIndex = 0
     IV = 15,15,15,15,15,15
 	Nature = HARDY
+#-------------------------------
+[LEADER_Blaine,Blaine,1]
+LoseText = How could this be?! My spirit has not been defeated!
+Pokemon = NINETALES,50
+    Moves = FLAMETHROWER,WILLOWISP,DISABLE,ENERGYBALL
+    AbilityIndex = 0
+    IV = 25,25,25,25,25,25
+	Nature = TIMID
+Pokemon = CHARIZARD,50
+    Moves = DRAGONPULSE,FLAMETHROWER,AIRSLASH,OVERHEAT
+    AbilityIndex = 0
+    IV = 25,25,25,25,25,25
+	Nature = TIMID
+Pokemon = ARCANINE,50
+    Moves = FLAMETHROWER,FLAREBLITZ,EXTREMESPEED,PLAYROUGH
+    AbilityIndex = 0
+    IV = 25,25,25,25,25,25
+	Nature = HASTY
+#-------------------------------
+[LEADER_Blaine,Blaine,2]
+LoseText = How could this be?! My spirit has not been defeated!
+Pokemon = NINETALES,50
+    Moves = FLAMETHROWER,WILLOWISP,DISABLE,ENERGYBALL
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = EXPERTBELT
+	Nature = TIMID
+Pokemon = CHARIZARD,50
+    Moves = DRAGONPULSE,FLAMETHROWER,AIRSLASH,OVERHEAT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = HEAVYDUTYBOOTS
+	Nature = TIMID
+Pokemon = ARCANINE,50
+    Moves = FLAMETHROWER,FLAREBLITZ,EXTREMESPEED,PLAYROUGH
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = LEFTOVERS
+	Nature = HASTY
+#-------------------------------
+[LEADER_Blaine,Blaine,3]
+LoseText = How could this be?! My spirit has not been defeated!
+Pokemon = NINETALES,50
+    Moves = FLAMETHROWER,WILLOWISP,DISABLE,ENERGYBALL
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	EV = 0,0,0,252,252,0
+	Item = EXPERTBELT
+	Nature = TIMID
+Pokemon = CHARIZARD,50
+    Moves = DRAGONPULSE,FLAMETHROWER,AIRSLASH,OVERHEAT
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	EV = 0,0,0,252,252,0
+	Item = HEAVYDUTYBOOTS
+	Nature = TIMID
+Pokemon = ARCANINE,50
+    Moves = FLAMETHROWER,FLAREBLITZ,EXTREMESPEED,PLAYROUGH
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	EV = 0,252,0,252,0,0
+	Item = LEFTOVERS
+	Nature = HASTY
+#-------------------------------
+[LEADER_Blaine,Blaine,4]
+LoseText = How could this be?! My spirit has not been defeated!
+Pokemon = NINETALES,50
+    Moves = FLAMETHROWER,WILLOWISP,DISABLE,ENERGYBALL
+    AbilityIndex = 0
+    IV = 15,15,15,15,15,15
+	Nature = HARDY
+Pokemon = CHARIZARD,50
+    Moves = DRAGONPULSE,FLAMETHROWER,AIRSLASH,OVERHEAT
+    AbilityIndex = 0
+    IV = 15,15,15,15,15,15
+	Nature = HARDY
+Pokemon = ARCANINE,50
+    Moves = FLAMETHROWER,FLAREBLITZ,EXTREMESPEED,PLAYROUGH
+    AbilityIndex = 0
+    IV = 15,15,15,15,15,15
+	Nature = HARDY
 Pokemon = SALAZZLE,50
     Moves = TOXIC,SLUDGEWAVE,FLAMETHROWER,DRAGONPULSE
     AbilityIndex = 0
@@ -945,7 +1512,7 @@ Pokemon = HOUNDOOM,50
     IV = 15,15,15,15,15,15
 	Nature = HARDY
 #-------------------------------
-[LEADER_Blaine,Blaine,1]
+[LEADER_Blaine,Blaine,5]
 LoseText = How could this be?! My spirit has not been defeated!
 Pokemon = NINETALES,50
     Moves = FLAMETHROWER,WILLOWISP,DISABLE,ENERGYBALL
@@ -978,7 +1545,7 @@ Pokemon = HOUNDOOM,50
     IV = 25,25,25,25,25,25
 	Nature = TIMID
 #-------------------------------
-[LEADER_Blaine,Blaine,2]
+[LEADER_Blaine,Blaine,6]
 LoseText = How could this be?! My spirit has not been defeated!
 Pokemon = NINETALES,50
     Moves = FLAMETHROWER,WILLOWISP,DISABLE,ENERGYBALL
@@ -1017,7 +1584,7 @@ Pokemon = HOUNDOOM,50
 	Item = ROCKYHELMET
 	Nature = TIMID
 #-------------------------------
-[LEADER_Blaine,Blaine,3]
+[LEADER_Blaine,Blaine,7]
 LoseText = How could this be?! My spirit has not been defeated!
 Pokemon = NINETALES,50
     Moves = FLAMETHROWER,WILLOWISP,DISABLE,ENERGYBALL
@@ -1079,6 +1646,87 @@ Pokemon = NIDOKING,50
     AbilityIndex = 0
     IV = 15,15,15,15,15,15
 	Nature = HARDY
+#-------------------------------
+[LEADER_Giovanni,Giovanni,1]
+LoseText = I lose?! There is nothing I wish to say to you!
+Pokemon = NIDOQUEEN,50
+    Moves = TOXICSPIKES,CRUNCH,EARTHPOWER,SUPERPOWER
+    AbilityIndex = 0
+    IV = 25,25,25,25,25,25
+	Nature = JOLLY
+Pokemon = MAROWAK,50
+    Moves = GIGAIMPACT,BONEMERANG,ROCKTOMB,EARTHQUAKE
+    AbilityIndex = 0
+    IV = 25,25,25,25,25,25
+	Nature = ADAMANT
+Pokemon = NIDOKING,50
+    Moves = POISONJAB,EARTHQUAKE,MEGAHORN,TOXIC
+    AbilityIndex = 0
+    IV = 25,25,25,25,25,25
+	Nature = JOLLY
+#-------------------------------
+[LEADER_Giovanni,Giovanni,2]
+LoseText = I lose?! There is nothing I wish to say to you!
+Pokemon = NIDOQUEEN,50
+    Moves = TOXICSPIKES,CRUNCH,EARTHPOWER,SUPERPOWER
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = ROCKYHELMET
+	Nature = JOLLY
+Pokemon = MAROWAK,50
+    Moves = GIGAIMPACT,BONEMERANG,ROCKTOMB,EARTHQUAKE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = THICKCLUB
+	Nature = ADAMANT
+Pokemon = NIDOKING,50
+    Moves = POISONJAB,EARTHQUAKE,MEGAHORN,TOXIC
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	Item = SHUCABERRY
+	Nature = JOLLY
+#-------------------------------
+[LEADER_Giovanni,Giovanni,3]
+LoseText = I lose?! There is nothing I wish to say to you!
+Pokemon = NIDOQUEEN,50
+    Moves = TOXICSPIKES,CRUNCH,EARTHPOWER,SUPERPOWER
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	EV = 252,252,0,0,0,0
+	Item = ROCKYHELMET
+	Nature = JOLLY
+Pokemon = MAROWAK,50
+    Moves = GIGAIMPACT,BONEMERANG,ROCKTOMB,EARTHQUAKE
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	EV = 252,252,0,0,0,0
+	Item = THICKCLUB
+	Nature = ADAMANT
+Pokemon = NIDOKING,50
+    Moves = POISONJAB,EARTHQUAKE,MEGAHORN,TOXIC
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+	EV = 0,252,0,252,0,0
+	Item = SHUCABERRY
+	Nature = JOLLY
+#-------------------------------
+[LEADER_Giovanni,Giovanni,4]
+LoseText = I lose?! There is nothing I wish to say to you!
+Pokemon = NIDOQUEEN,50
+    Moves = TOXICSPIKES,CRUNCH,EARTHPOWER,SUPERPOWER
+    AbilityIndex = 0
+    IV = 15,15,15,15,15,15
+	Nature = HARDY
+Pokemon = MAROWAK,50
+    Moves = GIGAIMPACT,BONEMERANG,ROCKTOMB,EARTHQUAKE
+    AbilityIndex = 0
+    IV = 15,15,15,15,15,15
+	Nature = HARDY
+Pokemon = NIDOKING,50
+    Moves = POISONJAB,EARTHQUAKE,MEGAHORN,TOXIC
+    AbilityIndex = 0
+    IV = 15,15,15,15,15,15
+	Nature = HARDY
 Pokemon = GOLEM,50
     Moves = STONEEDGE,THUNDERPUNCH,EARTHQUAKE,GYROBALL
     AbilityIndex = 1
@@ -1097,7 +1745,7 @@ Pokemon = KROOKODILE,50
     IV = 15,15,15,15,15,15
 	Nature = HARDY
 #-------------------------------
-[LEADER_Giovanni,Giovanni,1]
+[LEADER_Giovanni,Giovanni,5]
 LoseText = I lose?! There is nothing I wish to say to you!
 Pokemon = NIDOQUEEN,50
     Moves = TOXICSPIKES,CRUNCH,EARTHPOWER,SUPERPOWER
@@ -1132,7 +1780,7 @@ Pokemon = KROOKODILE,50
     IV = 25,25,25,25,25,25
 	Nature = JOLLY
 #-------------------------------
-[LEADER_Giovanni,Giovanni,2]
+[LEADER_Giovanni,Giovanni,6]
 LoseText = I lose?! There is nothing I wish to say to you!
 Pokemon = NIDOQUEEN,50
     Moves = TOXICSPIKES,CRUNCH,EARTHPOWER,SUPERPOWER
@@ -1173,7 +1821,7 @@ Pokemon = KROOKODILE,50
 	Item = CHOPLEBERRY
 	Nature = JOLLY
 #-------------------------------
-[LEADER_Giovanni,Giovanni,3]
+[LEADER_Giovanni,Giovanni,7]
 LoseText = I lose?! There is nothing I wish to say to you!
 Pokemon = NIDOQUEEN,50
     Moves = TOXICSPIKES,CRUNCH,EARTHPOWER,SUPERPOWER
