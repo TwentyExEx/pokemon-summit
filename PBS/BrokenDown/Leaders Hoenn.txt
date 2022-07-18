@@ -2034,7 +2034,7 @@ Pokemon = JELLICENT,50
     Moves = WATERSPOUT,SHADOWBALL,TRICK,SURF
     AbilityIndex = 1
     IV = 31,31,31,31,31,31
-	Item = WACANBARRY
+	Item = WACANBERRY
 	Nature = NAUGHTY
 #-------------------------------
 [LEADER_Juan,Juan,7]
@@ -2079,6 +2079,6 @@ Pokemon = JELLICENT,50
     AbilityIndex = 1
     IV = 31,31,31,31,31,31
 	EV = 252,0,0,0,252,0
-	Item = WACANBARRY
+	Item = WACANBERRY
 	Nature = NAUGHTY
 #-------------------------------
