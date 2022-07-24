@@ -971,7 +971,14 @@ Name = Elite Four
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = bruno
+BattleBGM = bruno1
+#-------------------------------
+[ELITE_Bruno2]
+Name = Elite Four
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = bruno2
 #-------------------------------
 [ELITE_Agatha]
 Name = Elite Four
@@ -999,14 +1006,14 @@ Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = kantowild
+BattleBGM = green
 #-------------------------------
 [ELITE_Oak]
 Name = Professor
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = kantowild
+BattleBGM = oak
 #-------------------------------
 [ELITE_Will]
 Name = Elite Four
@@ -1587,7 +1594,7 @@ Name = Champion
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = blue
+BattleBGM = championblue
 #-------------------------------
 [CHAMPION_Red]
 Name = Champion

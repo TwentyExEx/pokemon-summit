@@ -16547,6 +16547,24 @@ Pokemon = MACHAMP,50
     Item = FLAMEORB
     IV = 31,31,31,31,31,31
 #-------------------------------
+[ELITE_Bruno2,Bruno]
+LoseText = Why?! …How could we lose?
+Pokemon = HITMONCHAN,50
+    Moves = DRAINPUNCH,POWERUPPUNCH,THUNDERPUNCH,BULLETPUNCH
+    AbilityIndex = 1
+    Item = BLACKBELT
+    IV = 31,31,31,31,31,31
+Pokemon = HITMONLEE,50
+    Moves = BLAZEKICK,BRICKBREAK,POISONJAB,THROATCHOP
+    AbilityIndex = 0
+    Item = LEFTOVERS
+    IV = 31,31,31,31,31,31
+Pokemon = MACHAMP,50
+    Moves = STONEEDGE,DARKESTLARIAT,CLOSECOMBAT,FACADE
+    AbilityIndex = 0
+    Item = FLAMEORB
+    IV = 31,31,31,31,31,31
+#-------------------------------
 [ELITE_Koga,Koga]
 LoseText = Why? How could I lose?
 Pokemon = TENTACRUEL,50
