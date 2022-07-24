@@ -549,6 +549,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnohleader
+VictoryBGM = sinnohleaderw
 #-------------------------------
 [LEADER_Gardenia]
 Name = Sinnoh Leader
@@ -556,6 +557,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnohleader
+VictoryBGM = sinnohleaderw
 #-------------------------------
 [LEADER_Maylene]
 Name = Sinnoh Leader
@@ -563,6 +565,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnohleader
+VictoryBGM = sinnohleaderw
 #-------------------------------
 [LEADER_Wake]
 Name = Sinnoh Leader
@@ -570,6 +573,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnohleader
+VictoryBGM = sinnohleaderw
 #-------------------------------
 [LEADER_Fantina]
 Name = Sinnoh Leader
@@ -577,6 +581,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnohleader
+VictoryBGM = sinnohleaderw
 #-------------------------------
 [LEADER_Byron]
 Name = Sinnoh Leader
@@ -584,6 +589,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnohleader
+VictoryBGM = sinnohleaderw
 #-------------------------------
 [LEADER_Candice]
 Name = Sinnoh Leader
@@ -591,6 +597,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnohleader
+VictoryBGM = sinnohleaderw
 #-------------------------------
 [LEADER_Volkner]
 Name = Sinnoh Leader
@@ -598,6 +605,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnohleader
+VictoryBGM = sinnohleaderw
 #-------------------------------
 [LEADER_Cilan]
 Name = Unova Leader
@@ -895,6 +903,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = barry
+VictoryBGM = sinnohtrainerw
 #-------------------------------
 [RIVAL_Bianca]
 Name = Rival
@@ -961,6 +970,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = cyrus
+VictoryBGM = cyrusw
 #-------------------------------
 [BOSS_Ghetsis]
 Name = Team Plasma Boss
@@ -1155,6 +1165,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = aaron
+VictoryBGM = sinnohelitefourw
 #-------------------------------
 [ELITE_Bertha]
 Name = Elite Four
@@ -1162,6 +1173,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = bertha
+VictoryBGM = sinnohelitefourw
 #-------------------------------
 [ELITE_Flint]
 Name = Elite Four
@@ -1169,6 +1181,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = flint
+VictoryBGM = sinnohelitefourw
 #-------------------------------
 [ELITE_Lucian]
 Name = Elite Four
@@ -1176,6 +1189,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = lucian
+VictoryBGM = sinnohelitefourw
 #-------------------------------
 [ELITE_Riley]
 Name = Pokémon Trainer
@@ -1183,6 +1197,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnohtrainer
+VictoryBGM = sinnohtrainerw
 #-------------------------------
 [ELITE_Cheryl]
 Name = Pokémon Trainer
@@ -1190,6 +1205,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnohtrainer
+VictoryBGM = sinnohtrainerw
 #-------------------------------
 [ELITE_Buck]
 Name = Pokémon Trainer
@@ -1197,6 +1213,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnohtrainer
+VictoryBGM = sinnohtrainerw
 #-------------------------------
 [ELITE_Mira]
 Name = Pokémon Trainer
@@ -1204,6 +1221,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnohtrainer
+VictoryBGM = sinnohtrainerw
 #-------------------------------
 [ELITE_Marley]
 Name = Pokémon Trainer
@@ -1211,6 +1229,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnohtrainer
+VictoryBGM = sinnohtrainerw
 #-------------------------------
 [ELITE_Rowan]
 Name = Professor
@@ -1218,6 +1237,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnohtrainer
+VictoryBGM = sinnohtrainerw
 #-------------------------------
 [ELITE_Shauntal]
 Name = Elite Four
@@ -1459,6 +1479,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnohtrainer
+VictoryBGM = sinnohtrainerw
 #-------------------------------
 [PROTAG_Hilbert]
 Name = Pokémon Trainer
@@ -1525,6 +1546,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnohtrainer
+VictoryBGM = sinnohtrainerw
 #-------------------------------
 [PROTAG_Hilda]
 Name = Pokémon Trainer
@@ -1623,6 +1645,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = cynthia
+VictoryBGM = cynthiaw
 #-------------------------------
 [CHAMPION_Wallace]
 Name = Champion
