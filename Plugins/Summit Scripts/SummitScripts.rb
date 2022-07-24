@@ -447,7 +447,6 @@ def pbSummitMakePokemon(species, form)
     end
   end
 
-  @givepkmn.form = pkmninfo[5]
   pokeMoves = [pkmninfo[1], pkmninfo[2], pkmninfo[3], pkmninfo[4]]
   for move in pokeMoves
     @givepkmn.learn_move(move)
@@ -776,7 +775,7 @@ def pbSummitPrepMainTrainer(bracket)
       when "leader_olympia"
         $game_map.events[1].direction = 4
         $game_map.events[1].pattern = 2
-      when "leader_wolfric"
+      when "leader_wulfric"
         $game_map.events[1].direction = 4
         $game_map.events[1].pattern = 3
       when "elite_malva"
@@ -797,10 +796,10 @@ def pbSummitPrepMainTrainer(bracket)
     when "elite_looker"
         $game_map.events[1].direction = 8
         $game_map.events[1].pattern = 1
-      when "elite_trevor"
-        $game_map.events[1].direction = 8
-        $game_map.events[1].pattern = 2
-      end
+    when "elite_trevor"
+      $game_map.events[1].direction = 8
+      $game_map.events[1].pattern = 2
+    end
    when 6 # Alola Captains and Alola Elites
       $game_map.events[1].character_name = "trainer_Sheet7"
       case opponent[0].downcase
@@ -931,6 +930,7 @@ def pbSummitPrepBattle
     clonepoke.item = poke.item.clone
     clonepoke.ability = poke.ability.clone
     clonepoke.nature = poke.nature.clone
+    clonepoke.gender = poke.gender.clone
     for j in 0...6
       clonepoke.ev[j] = poke.ev[j]
       clonepoke.iv[j] = poke.iv[j]
@@ -1330,13 +1330,13 @@ def pbSummitSuperTrain
             break
           end
         else
+          for i in $allstats
+            pkmn.ev[i] = 0
+          end
           for statname in @chosenstats
             statnameint = statname.clone
             if statname.include?(" ")
               statnameint.gsub!(/\s/, "_")
-            end
-            for i in $allstats
-              pkmn.ev[i] = 0
             end
             pkmn.ev[statnameint.upcase.to_sym] = 252
           end
@@ -1458,20 +1458,49 @@ def pbSummitChangeAbility
     else
       loop do
         pkmn = pbGetPokemon(1)
-
         abilitylist = []
+        abilities = []
         for ability in pkmn.species_data.abilities
           i = ability.to_s
           abilityname = GameData::Ability.get(i).real_name
-          abilitylist.push(abilityname)
+          abilities.push(abilityname)
+          listing = abilityname.clone
+          price = 2000
+          listprice = price.to_s.clone
+          listprice.insert(1, ",")
+          listing << " - $" << listprice
+          abilitylist.push(listing)
         end
-        cmd = pbMessage("\\rWhich ability would you like this Pokémon to have?",abilitylist,-1)
-        if cmd == 1
+        for ability in pkmn.species_data.hidden_abilities
+          i = ability.to_s
+          abilityname = GameData::Ability.get(i).real_name
+          abilities.push(abilityname)
+          listing = abilityname.clone
+          price = 3000
+          listprice = price.to_s.clone
+          listprice.insert(1, ",")
+          listing << " - $" << listprice
+          abilitylist.push(listing)
+        end
+        cmd = pbMessage("\\G\\rWhich ability would you like this Pokémon to have?",abilitylist,-1)
+        if cmd == -1
           break
         else
-          @chosenability = abilitylist[cmd]
+          @chosenability = abilities[cmd]
+          if pkmn.species_data.abilities.include?(@chosenability.upcase.to_sym)
+            price = 2000
+          else
+            price = 3000
+          end
+          listprice = price.to_s.clone
+          listprice.insert(1, ",")
+          if $Trainer.money < price
+            pbMessage("\\rSorry, you don't have enough money.")
+            return false
+            break
+          end
           loop do
-            cmd = pbMessage(_INTL("\\rChange your #{pbGetPokemon(1).species.downcase.capitalize}'s ability to in {1}?",@chosenability),["Yes","No"],-1)
+            cmd = pbMessage(_INTL("\\rChange your #{pbGetPokemon(1).species.downcase.capitalize}'s ability to in {1}? It'll cost \\G$#{listprice}.",@chosenability),["Yes","No"],-1)
             if cmd == -1
               break
             elsif cmd == 1
@@ -1481,7 +1510,6 @@ def pbSummitChangeAbility
                 break
               end
             else
-              p @chosenability
               for i in GameData::Ability::DATA.keys
                 if @chosenability == GameData::Ability.get(i).real_name
                   pkmn.ability = GameData::Ability.get(i)
@@ -1489,6 +1517,7 @@ def pbSummitChangeAbility
                 end
               end
               pbMessage(_INTL("\\G\\rYour #{pbGetPokemon(1).species.downcase.capitalize}'s ability is now {1}.",@chosenability))
+              $Trainer.money -= price
               return true
               break
             end
@@ -1567,4 +1596,86 @@ def pbDrawMoveList
   pbDrawImagePositions(overlay,imagepos)
   drawTextEx(overlay,272,214,230,5,selMoveData.description,
      Color.new(64,64,64),Color.new(176,176,176))
+end
+
+def pbSummitInitShopItems
+  typeitems = [:DRACOPLATE, :DREADPLATE, :EARTHPLATE, :FISTPLATE, :FLAMEPLATE, :ICICLEPLATE,
+    :INSECTPLATE, :IRONPLATE, :MEADOWPLATE, :MINDPLATE, :PIXIEPLATE, :SKYPLATE, :SPLASHPLATE, :SPOOKYPLATE,
+    :STONEPLATE, :TOXICPLATE, :ZAPPLATE]
+    $game_variables[38] = typeitems
+  utilitems = [:AIRBALLOON, :ASSAULTVEST, :BIGROOT, :BINDINGBAND, :BLUNDERPOLICY, :BRIGHTPOWDER, :CHOICEBAND, 
+    :CHOICESCARF, :CHOICESPECS, :DAMPROCK, :DESTINYKNOT, :EJECTBUTTON, :EJECTPACK, :EXPERTBELT, :FLAMEORB, 
+    :FLOATSTONE, :FOCUSBAND, :FOCUSSASH, :GRIPCLAW, :HEATROCK, :HEAVYDUTYBOOTS, :ICYROCK, :IRONBALL, 
+    :KINGSROCK, :LAGGINGTAIL, :LIFEORB, :LIGHTCLAY, :LUCKINCENSE, :MACHOBRACE, :MENTALHERB, :METRONOME, 
+    :MUSCLEBAND, :POWERHERB, :PROTECTIVEPADS, :QUICKCLAW, :RAZORCLAW, :RAZORFANG, :REDCARD, :RINGTARGET, 
+    :ROCKYHELMET, :ROOMSERVICE, :SAFETYGOGGLES, :SCOPELENS, :SHEDSHELL, :SMOKEBALL, :SMOOTHROCK, :STICKYBARB,
+    :TERRAINEXTENDER, :THROATSPRAY, :TOXICORB, :UTILITYUMBRELLA, :WHITEHERB, :WIDELENS, :WISEGLASSES, :ZOOMLENS]
+    $game_variables[39] = utilitems
+  berries = [:CHERIBERRY, :CHESTOBERRY, :PECHABERRY, 
+    :RAWSTBERRY, :ASPEARBERRY, :ORANBERRY, :PERSIMBERRY, 
+    :LUMBERRY, :SITRUSBERRY, :OCCABERRY, :PASSHOBERRY, 
+    :WACANBERRY, :RINDOBERRY, :YACHEBERRY, :CHOPLEBERRY, 
+    :KEBIABERRY, :SHUCABERRY, :COBABERRY, :PAYAPABERRY, 
+    :TANGABERRY, :CHARTIBERRY, :KASIBBERRY, :HABANBERRY, 
+    :COLBURBERRY, :BABIRIBERRY, :CHILANBERRY, :ROSELIBERRY]
+    $game_variables[40] = berries
+end
+
+def pbSummitGetShopItems(section)
+  items = []
+  case section
+    when "plates"
+      items = $game_variables[38]
+    when "utility"
+      items = $game_variables[39]
+    when "berries"
+      items = $game_variables[40]
+  end
+  return items
+end
+
+def pbBuyScreen
+  @scene.pbStartBuyScene(@stock,@adapter)
+  item=nil
+  loop do
+    item=@scene.pbChooseBuyItem
+    break if !item
+    quantity=0
+    itemname=@adapter.getDisplayName(item)
+    price=@adapter.getPrice(item)
+    if @adapter.getMoney<price
+      pbDisplayPaused(_INTL("You don't have enough money."))
+      next
+    end
+    if !pbConfirm(_INTL("Certainly. You want {1}. That will be ${2}. OK?",
+       itemname,price.to_s_formatted))
+      next
+    end
+    quantity=1
+    if @adapter.getMoney<price
+      pbDisplayPaused(_INTL("You don't have enough money."))
+      next
+    end
+    added=0
+    quantity.times do
+      break if !@adapter.addItem(item)
+      added+=1
+    end
+    if added!=quantity
+      added.times do
+        if !@adapter.removeItem(item)
+          raise _INTL("Failed to delete stored items")
+        end
+      end
+      pbDisplayPaused(_INTL("You have no more room in the Bag."))
+    else
+      @adapter.setMoney(@adapter.getMoney-price)
+      for i in 0...@stock.length
+          @stock[i]=nil
+      end
+      @stock.compact!
+      pbDisplayPaused(_INTL("Here you are! Thank you!")) { pbSEPlay("Mart buy item") }
+    end
+  end
+  @scene.pbEndBuyScene
 end
