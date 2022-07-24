@@ -349,6 +349,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kantoleader
+VictoryBGM = kantoleaderw
 #-------------------------------
 [LEADER_Misty]
 Name = Kanto Leader
@@ -356,6 +357,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kantoleader
+VictoryBGM = kantoleaderw
 #-------------------------------
 [LEADER_Surge]
 Name = Kanto Leader
@@ -363,6 +365,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kantoleader
+VictoryBGM = kantoleaderw
 #-------------------------------
 [LEADER_Erika]
 Name = Kanto Leader
@@ -370,6 +373,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kantoleader
+VictoryBGM = kantoleaderw
 #-------------------------------
 [LEADER_Janine]
 Name = Kanto Leader
@@ -377,6 +381,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kantoleader
+VictoryBGM = kantoleaderw
 #-------------------------------
 [LEADER_Sabrina]
 Name = Kanto Leader
@@ -384,6 +389,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kantoleader
+VictoryBGM = kantoleaderw
 #-------------------------------
 [LEADER_Blaine]
 Name = Kanto Leader
@@ -391,6 +397,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kantoleader
+VictoryBGM = kantoleaderw
 #-------------------------------
 [LEADER_Giovanni]
 Name = Kanto Leader
@@ -398,6 +405,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kantoleader
+VictoryBGM = kantoleaderw
 #-------------------------------
 [LEADER_Falkner]
 Name = Johto Leader
@@ -405,6 +413,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = johtoleader
+VictoryBGM = johtoleaderw
 #-------------------------------
 [LEADER_Bugsy]
 Name = Johto Leader
@@ -412,6 +421,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = johtoleader
+VictoryBGM = johtoleaderw
 #-------------------------------
 [LEADER_Whitney]
 Name = Johto Leader
@@ -419,6 +429,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = johtoleader
+VictoryBGM = johtoleaderw
 #-------------------------------
 [LEADER_Morty]
 Name = Johto Leader
@@ -426,6 +437,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = johtoleader
+VictoryBGM = johtoleaderw
 #-------------------------------
 [LEADER_Chuck]
 Name = Johto Leader
@@ -433,6 +445,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = johtoleader
+VictoryBGM = johtoleaderw
 #-------------------------------
 [LEADER_Jasmine]
 Name = Johto Leader
@@ -440,6 +453,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = johtoleader
+VictoryBGM = johtoleaderw
 #-------------------------------
 [LEADER_Pryce]
 Name = Johto Leader
@@ -447,6 +461,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = johtoleader
+VictoryBGM = johtoleaderw
 #-------------------------------
 [LEADER_Clair]
 Name = Johto Leader
@@ -454,6 +469,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = johtoleader
+VictoryBGM = johtoleaderw
 #-------------------------------
 [LEADER_Roxanne]
 Name = Hoenn Leader
@@ -461,6 +477,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = hoennleader
+VictoryBGM = hoennleaderw
 #-------------------------------
 [LEADER_Brawly]
 Name = Hoenn Leader
@@ -468,6 +485,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = hoennleader
+VictoryBGM = hoennleaderw
 #-------------------------------
 [LEADER_Wattson]
 Name = Hoenn Leader
@@ -475,6 +493,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = hoennleader
+VictoryBGM = hoennleaderw
 #-------------------------------
 [LEADER_Flannery]
 Name = Hoenn Leader
@@ -482,6 +501,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = hoennleader
+VictoryBGM = hoennleaderw
 #-------------------------------
 [LEADER_Norman]
 Name = Hoenn Leader
@@ -489,6 +509,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = hoennleader
+VictoryBGM = hoennleaderw
 #-------------------------------
 [LEADER_Winona]
 Name = Hoenn Leader
@@ -496,6 +517,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = hoennleader
+VictoryBGM = hoennleaderw
 #-------------------------------
 [LEADER_Tate]
 Name = Hoenn Leader
@@ -503,6 +525,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = hoennleader
+VictoryBGM = hoennleaderw
 #-------------------------------
 [LEADER_Liza]
 Name = Hoenn Leader
@@ -510,6 +533,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = hoennleader
+VictoryBGM = hoennleaderw
 #-------------------------------
 [LEADER_Juan]
 Name = Hoenn Leader
@@ -517,6 +541,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = hoennleader
+VictoryBGM = hoennleaderw
 #-------------------------------
 [LEADER_Roark]
 Name = Sinnoh Leader
@@ -846,6 +871,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = blue
+VictoryBGM = kantotrainerw
 #-------------------------------
 [RIVAL_Silver]
 Name = Rival
@@ -853,6 +879,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = silver
+VictoryBGM = johtotrainerw
 #-------------------------------
 [RIVAL_Wally]
 Name = Rival
@@ -860,6 +887,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = wally
+VictoryBGM = hoenntrainerw
 #-------------------------------
 [RIVAL_Barry]
 Name = Rival
@@ -909,6 +937,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = giovanni
+VictoryBGM = kantotrainerw
 #-------------------------------
 [BOSS_Archie]
 Name = Team Aqua Boss
@@ -916,6 +945,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = archie
+VictoryBGM = aquamagmaw
 #-------------------------------
 [BOSS_Maxie]
 Name = Team Magma Boss
@@ -923,6 +953,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = maxie
+VictoryBGM = aquamagmaw
 #-------------------------------
 [BOSS_Cyrus]
 Name = Team Galactic Boss
@@ -965,6 +996,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = lorelei
+VictoryBGM = kantoleaderw
 #-------------------------------
 [ELITE_Bruno]
 Name = Elite Four
@@ -972,6 +1004,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = bruno1
+VictoryBGM = kantoleaderw
 #-------------------------------
 [ELITE_Bruno2]
 Name = Elite Four
@@ -979,6 +1012,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = bruno2
+VictoryBGM = johtoleaderw
 #-------------------------------
 [ELITE_Agatha]
 Name = Elite Four
@@ -986,6 +1020,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = agatha
+VictoryBGM = kantoleaderw
 #-------------------------------
 [ELITE_Koga]
 Name = Elite Four
@@ -993,6 +1028,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = koga
+VictoryBGM = johtoleaderw
 #-------------------------------
 [ELITE_Lance]
 Name = Elite Four
@@ -1000,6 +1036,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = lance
+VictoryBGM = kantoleaderw
 #-------------------------------
 [ELITE_Green]
 Name = Pokémon Trainer
@@ -1007,6 +1044,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = green
+VictoryBGM = kantoleaderw
 #-------------------------------
 [ELITE_Oak]
 Name = Professor
@@ -1014,6 +1052,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = oak
+VictoryBGM = kantoleaderw
 #-------------------------------
 [ELITE_Will]
 Name = Elite Four
@@ -1021,6 +1060,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = will
+VictoryBGM = johtoleaderw
 #-------------------------------
 [ELITE_Karen]
 Name = Elite Four
@@ -1028,6 +1068,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = karen
+VictoryBGM = johtoleaderw
 #-------------------------------
 [ELITE_Elm]
 Name = Professor
@@ -1035,6 +1076,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = johtotrainer
+VictoryBGM = johtotrainerw
 #-------------------------------
 [ELITE_Eusine]
 Name = Mystery Man
@@ -1042,6 +1084,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = johtotrainer
+VictoryBGM = johtotrainerw
 #-------------------------------
 [ELITE_Kris]
 Name = Pokémon Trainer
@@ -1049,6 +1092,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = johtotrainer
+VictoryBGM = johtotrainerw
 #-------------------------------
 [ELITE_Sidney]
 Name = Elite Four
@@ -1056,6 +1100,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = hoennelitefour
+VictoryBGM = hoennleaderw
 #-------------------------------
 [ELITE_Phoebe]
 Name = Elite Four
@@ -1063,6 +1108,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = hoennelitefour
+VictoryBGM = hoennleaderw
 #-------------------------------
 [ELITE_Glacia]
 Name = Elite Four
@@ -1070,6 +1116,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = hoennelitefour
+VictoryBGM = hoennleaderw
 #-------------------------------
 [ELITE_Drake]
 Name = Elite Four
@@ -1077,6 +1124,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = hoennelitefour
+VictoryBGM = hoennleaderw
 #-------------------------------
 [ELITE_Birch]
 Name = Professor
@@ -1084,6 +1132,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = birch
+VictoryBGM = hoenntrainerw
 #-------------------------------
 [ELITE_Zinnia]
 Name = Lorekeeper
@@ -1098,6 +1147,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = lisia
+VictoryBGM = hoenntrainerw
 #-------------------------------
 [ELITE_Aaron]
 Name = Elite Four
@@ -1385,6 +1435,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = red
+VictoryBGM = kantotrainerw
 #-------------------------------
 [PROTAG_Ethan]
 Name = Pokémon Trainer
@@ -1392,6 +1443,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = johtotrainer
+VictoryBGM = johtotrainerw
 #-------------------------------
 [PROTAG_Brandan]
 Name = Pokémon Trainer
@@ -1399,6 +1451,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = protaghoenn
+VictoryBGM = hoenntrainerw
 #-------------------------------
 [PROTAG_Lucas]
 Name = Pokémon Trainer
@@ -1448,6 +1501,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = leaf
+VictoryBGM = kantotrainerw
 #-------------------------------
 [PROTAG_Lyra]
 Name = Pokémon Trainer
@@ -1455,6 +1509,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = johtotrainer
+VictoryBGM = johtotrainerw
 #-------------------------------
 [PROTAG_May]
 Name = Pokémon Trainer
@@ -1462,6 +1517,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = protaghoenn
+VictoryBGM = hoenntrainerw
 #-------------------------------
 [PROTAG_Dawn]
 Name = Pokémon Trainer
@@ -1574,6 +1630,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = wallace
+VictoryBGM = hoennchampionw
 #-------------------------------
 [CHAMPION_Steven]
 Name = Champion
@@ -1581,6 +1638,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = steven
+VictoryBGM = hoennchampionw
 #-------------------------------
 [CHAMPION_Lance]
 Name = Champion
@@ -1588,6 +1646,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = championlance
+VictoryBGM = johtoleaderw
 #-------------------------------
 [CHAMPION_Blue]
 Name = Champion
@@ -1595,6 +1654,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = championblue
+VictoryBGM = kantoleaderw
 #-------------------------------
 [CHAMPION_Red]
 Name = Champion
@@ -1602,3 +1662,4 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = red2
+VictoryBGM = kantoleaderw
