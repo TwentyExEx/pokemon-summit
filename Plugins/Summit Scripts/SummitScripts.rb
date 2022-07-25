@@ -482,7 +482,6 @@ end
 
 def pbSummitBracketSelection(group)
   trainerSelection = []
-
   case group
     when 0 # Kanto Leaders
       trainerlist = [
@@ -594,24 +593,20 @@ def pbSummitBracketSelection(group)
         if group == 4
           if trainer[0] == ("LEADER_Lenora")
             trainerSelection.push(trainer) if !trainerSelection.include?("LEADER_Cheren")
-            break
           elsif trainer[0] == ("LEADER_Cheren")
             trainerSelection.push(trainer) if !trainerSelection.include?("LEADER_Lenora")
-            break
           elsif trainer[0] == ("LEADER_Cress")
             trainerSelection.push(trainer) if !trainerSelection.include?("LEADER_Marlon")
-            break
           elsif trainer[0] == ("LEADER_Marlon")
             trainerSelection.push(trainer) if !trainerSelection.include?("LEADER_Cress")
-            break
           end
-        trainerSelection.push(trainer)
-        break
+        else
+          trainerSelection.push(trainer)
         end
+        break
       end
     end
   end
-
   $game_variables[29] = trainerSelection
 end
 
@@ -924,7 +919,6 @@ def pbSummitMainTrainer
   type = $game_variables[30][0]
   name = $game_variables[30][1]
   version = $game_variables[15]
-  p $game_variables[30]
   TrainerBattle.start(type, name, version)
 
   $Trainer.party = $game_variables[27]
