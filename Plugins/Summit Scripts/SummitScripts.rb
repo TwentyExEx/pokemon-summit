@@ -426,6 +426,11 @@ def pbSummitSelectPokemon
   num = rand(0...($allpkmn.length))
   pkmn = $allpkmn[num]
   pbSummitMakePokemon(pkmn[0], pkmn[5])
+  specform = pkmn[0].clone.to_s
+  if pkmn[5] != 0
+    specform << "_" << pkmn[5].to_s
+  end
+  return specform
 end
 
 def pbSummitMakePokemon(species, form)
@@ -462,7 +467,14 @@ end
 
 def pbSummitVendingPokemon
   pbSummitSelectPokemon
-  pbShowPokemonSprite(@givepkmn)
+  p pkmn.to_sym
+  p $player.owned?(pkmn.to_sym)
+  p $player.owned?(:LUNATONE)
+  if $player.owned?(pkmn.to_sym) # obtained
+    pbMessage("owned all")
+  else
+    pbShowPokemonSprite(@givepkmn)
+  end
 end
 
 def pbSummitBracketSelection(group)
@@ -576,8 +588,23 @@ def pbSummitBracketSelection(group)
       num = rand(0...(trainerlist.length))
       trainer = trainerlist[num]
       if !trainerSelection.include?(trainer)
+        if group == 4
+          if trainer[0] == ("LEADER_Lenora")
+            trainerSelection.push(trainer) if !trainerSelection.include?("LEADER_Cheren")
+            break
+          elsif trainer[0] == ("LEADER_Cheren")
+            trainerSelection.push(trainer) if !trainerSelection.include?("LEADER_Lenora")
+            break
+          elsif trainer[0] == ("LEADER_Cress")
+            trainerSelection.push(trainer) if !trainerSelection.include?("LEADER_Marlon")
+            break
+          elsif trainer[0] == ("LEADER_Marlon")
+            trainerSelection.push(trainer) if !trainerSelection.include?("LEADER_Cress")
+            break
+          end
         trainerSelection.push(trainer)
         break
+        end
       end
     end
   end
@@ -592,10 +619,13 @@ end
 
 def pbSummitPrepMainTrainer(bracket)
   trainers = $game_variables[29]
-  fightnum = $game_variables[33]
-  opponent = trainers[fightnum]
+  if $game_variables[35] == 1
+    fightnum = $game_variables[33]
+    opponent = trainers[fightnum]
+  else
+    opponent = trainers.sample
+  end
   $game_variables[30] = opponent
-
   case bracket
   when 0, 1 # Kanto and Johto Leaders
     $game_map.events[1].character_name = "trainer_Sheet2"
@@ -891,7 +921,7 @@ def pbSummitMainTrainer
   type = $game_variables[30][0]
   name = $game_variables[30][1]
   version = $game_variables[15]
-  
+  p $game_variables[30]
   TrainerBattle.start(type, name, version)
 
   $Trainer.party = $game_variables[27]
@@ -906,6 +936,10 @@ end
 def pbSummitBracketUnlock
   bracketwon = $bracketnames[$game_variables[31]-1]
   bracketunlocked = $bracketnames[$game_variables[31]]
+  if $game_variables[41] == nil
+    $game_variables[41] = []
+  end
+  $game_variables[41].push($game_variables[31])
 
   pbMessage(_INTL("\\rCongratulations on defeating the {1}!",bracketwon))
   pbSEPlay("Slots coin")
