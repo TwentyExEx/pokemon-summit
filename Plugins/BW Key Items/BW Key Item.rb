@@ -179,7 +179,6 @@ end
   @sprites["pokemon"].zoom_x-=0.17/2 
   @sprites["pokemon"].opacity-=14.16
   end
-  pbStorePokemon(@pokeinfo)
   loop do
     break
   end

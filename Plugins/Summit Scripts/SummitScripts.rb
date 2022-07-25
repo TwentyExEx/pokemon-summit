@@ -430,7 +430,7 @@ def pbSummitSelectPokemon
   if pkmn[5] != 0
     specform << "_" << pkmn[5].to_s
   end
-  return specform
+  return pkmn[0], pkmn[5], specform
 end
 
 def pbSummitMakePokemon(species, form)
@@ -451,7 +451,6 @@ def pbSummitMakePokemon(species, form)
       break
     end
   end
-
   pokeMoves = [pkmninfo[1], pkmninfo[2], pkmninfo[3], pkmninfo[4]]
   for move in pokeMoves
     @givepkmn.learn_move(move)
@@ -466,14 +465,17 @@ def pbSummitGivePokemon(species, form)
 end
 
 def pbSummitVendingPokemon
-  pbSummitSelectPokemon
-  p pkmn.to_sym
-  p $player.owned?(pkmn.to_sym)
-  p $player.owned?(:LUNATONE)
-  if $player.owned?(pkmn.to_sym) # obtained
-    pbMessage("owned all")
-  else
-    pbShowPokemonSprite(@givepkmn)
+  loop do
+    pkmn = pbSummitSelectPokemon
+    species = pkmn[0].to_sym
+    if $player.owned?(species) # obtained
+      return false
+      break
+    else
+      pbShowPokemonSprite(@givepkmn)
+      pbSummitGivePokemon(pkmn[0], pkmn[1])
+    end
+    break
   end
 end
 
