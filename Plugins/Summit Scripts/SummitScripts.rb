@@ -474,6 +474,7 @@ def pbSummitVendingPokemon
     else
       pbShowPokemonSprite(@givepkmn)
       pbSummitGivePokemon(pkmn[0], pkmn[1])
+      return true
     end
     break
   end
