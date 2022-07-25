@@ -1410,7 +1410,7 @@ Description = An item to be held by a Pokémon. This exotic-smelling incense boo
 Name = Charcoal
 NamePlural = Charcoals
 Pocket = 1
-Price = 1000
+Price = 3000
 Flags = Fling_30
 Description = An item to be held by a Pokémon. It is a combustible fuel that boosts the power of Fire-type moves.
 #-------------------------------
@@ -1418,7 +1418,7 @@ Description = An item to be held by a Pokémon. It is a combustible fuel that bo
 Name = Mystic Water
 NamePlural = Mystic Waters
 Pocket = 1
-Price = 1000
+Price = 3000
 Flags = Fling_30
 Description = An item to be held by a Pokémon. It is a teardrop-shaped gem that ups the power of Water-type moves.
 #-------------------------------
@@ -1426,7 +1426,7 @@ Description = An item to be held by a Pokémon. It is a teardrop-shaped gem that
 Name = Magnet
 NamePlural = Magnets
 Pocket = 1
-Price = 1000
+Price = 3000
 Flags = Fling_30
 Description = An item to be held by a Pokémon. It is a powerful magnet that boosts the power of Electric-type moves.
 #-------------------------------
@@ -1434,7 +1434,7 @@ Description = An item to be held by a Pokémon. It is a powerful magnet that boo
 Name = Miracle Seed
 NamePlural = Miracle Seeds
 Pocket = 1
-Price = 1000
+Price = 3000
 Flags = Fling_30
 Description = An item to be held by a Pokémon. It is a seed imbued with life that ups the power of Grass-type moves.
 #-------------------------------
@@ -1442,7 +1442,7 @@ Description = An item to be held by a Pokémon. It is a seed imbued with life th
 Name = Never-Melt Ice
 NamePlural = Never-Melt Ices
 Pocket = 1
-Price = 1000
+Price = 3000
 Flags = Fling_30
 Description = An item to be held by a Pokémon. It is a piece of ice that repels heat and boosts Ice-type moves.
 #-------------------------------
@@ -1450,7 +1450,7 @@ Description = An item to be held by a Pokémon. It is a piece of ice that repels
 Name = Black Belt
 NamePlural = Black Belts
 Pocket = 1
-Price = 1000
+Price = 3000
 Flags = Fling_30
 Description = An item to be held by a Pokémon. It is a belt that boosts determination and Fighting-type moves.
 #-------------------------------
@@ -1458,7 +1458,7 @@ Description = An item to be held by a Pokémon. It is a belt that boosts determi
 Name = Poison Barb
 NamePlural = Poison Barbs
 Pocket = 1
-Price = 1000
+Price = 3000
 Flags = Fling_70
 Description = An item to be held by a Pokémon. It is a small, poisonous barb that ups the power of Poison-type moves.
 #-------------------------------
@@ -1466,7 +1466,7 @@ Description = An item to be held by a Pokémon. It is a small, poisonous barb th
 Name = Soft Sand
 NamePlural = Soft Sand
 Pocket = 1
-Price = 1000
+Price = 3000
 Flags = Fling_10
 Description = An item to be held by a Pokémon. It is a loose, silky sand that boosts the power of Ground-type moves.
 #-------------------------------
@@ -1474,7 +1474,7 @@ Description = An item to be held by a Pokémon. It is a loose, silky sand that b
 Name = Sharp Beak
 NamePlural = Sharp Beaks
 Pocket = 1
-Price = 1000
+Price = 3000
 Flags = Fling_50
 Description = An item to be held by a Pokémon. It is a long, sharp beak that boosts the power of Flying-type moves.
 #-------------------------------
@@ -1482,7 +1482,7 @@ Description = An item to be held by a Pokémon. It is a long, sharp beak that bo
 Name = Twisted Spoon
 NamePlural = Twisted Spoons
 Pocket = 1
-Price = 1000
+Price = 3000
 Flags = Fling_30
 Description = An item to be held by a Pokémon. It is a spoon imbued with telekinetic power that boosts Psychic-type moves.
 #-------------------------------
@@ -1490,7 +1490,7 @@ Description = An item to be held by a Pokémon. It is a spoon imbued with teleki
 Name = Silver Powder
 NamePlural = Silver Powders
 Pocket = 1
-Price = 1000
+Price = 3000
 Flags = Fling_10
 Description = An item to be held by a Pokémon. It is a shiny, silver powder that ups the power of Bug-type moves.
 #-------------------------------
@@ -1498,7 +1498,7 @@ Description = An item to be held by a Pokémon. It is a shiny, silver powder tha
 Name = Hard Stone
 NamePlural = Hard Stones
 Pocket = 1
-Price = 1000
+Price = 3000
 Flags = Fling_100
 Description = An item to be held by a Pokémon. It is an unbreakable stone that ups the power of Rock-type moves.
 #-------------------------------
@@ -1506,7 +1506,7 @@ Description = An item to be held by a Pokémon. It is an unbreakable stone that 
 Name = Spell Tag
 NamePlural = Spell Tags
 Pocket = 1
-Price = 1000
+Price = 3000
 Flags = Fling_30
 Description = An item to be held by a Pokémon. It is a sinister, eerie tag that boosts the power of Ghost-type moves.
 #-------------------------------
@@ -1514,7 +1514,7 @@ Description = An item to be held by a Pokémon. It is a sinister, eerie tag that
 Name = Dragon Fang
 NamePlural = Dragon Fangs
 Pocket = 1
-Price = 1000
+Price = 3000
 Flags = Fling_70
 Description = An item to be held by a Pokémon. It is a hard and sharp fang that ups the power of Dragon-type moves.
 #-------------------------------
@@ -1522,7 +1522,7 @@ Description = An item to be held by a Pokémon. It is a hard and sharp fang that
 Name = Black Glasses
 NamePlural = Black Glasses
 Pocket = 1
-Price = 1000
+Price = 3000
 Flags = Fling_30
 Description = An item to be held by a Pokémon. It is a shady-looking pair of glasses that boosts Dark-type moves.
 #-------------------------------
@@ -1530,7 +1530,7 @@ Description = An item to be held by a Pokémon. It is a shady-looking pair of gl
 Name = Metal Coat
 NamePlural = Metal Coats
 Pocket = 1
-Price = 1000
+Price = 3000
 Flags = Fling_30
 Description = An item to be held by a Pokémon. It is a special metallic film that ups the power of Steel-type moves.
 #-------------------------------
@@ -1538,9 +1538,17 @@ Description = An item to be held by a Pokémon. It is a special metallic film th
 Name = Silk Scarf
 NamePlural = Silk Scarves
 Pocket = 1
-Price = 1000
+Price = 3000
 Flags = Fling_10
 Description = An item to be held by a Pokémon. It is a sumptuous scarf that boosts the power of Normal-type moves.
+#-------------------------------
+[PIXIEDUST]
+Name = Pixie Dust
+NamePlural = Pixie Dusts
+Pocket = 1
+Price = 3000
+Flags = Fling_10
+Description = An item to be held by a Pokémon. It is a bag of strange dust that boosts the power of Fairy-type moves.
 #-------------------------------
 [FLAMEPLATE]
 Name = Flame Plate
