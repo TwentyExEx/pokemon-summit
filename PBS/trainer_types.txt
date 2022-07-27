@@ -613,6 +613,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = unovaleader
+VictoryBGM = unovaleaderw
 #-------------------------------
 [LEADER_Chili]
 Name = Unova Leader
@@ -620,6 +621,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = unovaleader
+VictoryBGM = unovaleaderw
 #-------------------------------
 [LEADER_Cress]
 Name = Unova Leader
@@ -627,6 +629,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = unovaleader
+VictoryBGM = unovaleaderw
 #-------------------------------
 [LEADER_Lenora]
 Name = Unova Leader
@@ -634,6 +637,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = unovaleader
+VictoryBGM = unovaleaderw
 #-------------------------------
 [LEADER_Burgh]
 Name = Unova Leader
@@ -641,6 +645,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = unovaleader
+VictoryBGM = unovaleaderw
 #-------------------------------
 [LEADER_Elesa]
 Name = Unova Leader
@@ -648,6 +653,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = unovaleader
+VictoryBGM = unovaleaderw
 #-------------------------------
 [LEADER_Clay]
 Name = Unova Leader
@@ -655,6 +661,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = unovaleader
+VictoryBGM = unovaleaderw
 #-------------------------------
 [LEADER_Skyla]
 Name = Unova Leader
@@ -662,6 +669,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = unovaleader
+VictoryBGM = unovaleaderw
 #-------------------------------
 [LEADER_Brycen]
 Name = Unova Leader
@@ -669,6 +677,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = unovaleader
+VictoryBGM = unovaleaderw
 #-------------------------------
 [LEADER_Drayden]
 Name = Unova Leader
@@ -676,6 +685,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = unovaleader
+VictoryBGM = unovaleaderw
 #-------------------------------
 [LEADER_Cheren]
 Name = Unova Leader
@@ -683,6 +693,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = unovaleader
+VictoryBGM = unovaleaderw
 #-------------------------------
 [LEADER_Roxie]
 Name = Unova Leader
@@ -690,6 +701,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = unovaleader
+VictoryBGM = unovaleaderw
 #-------------------------------
 [LEADER_Marlon]
 Name = Unova Leader
@@ -697,6 +709,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = unovaleader
+VictoryBGM = unovaleaderw
 #-------------------------------
 [LEADER_Viola]
 Name = Kalos Leader
@@ -704,6 +717,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kalosleader
+VictoryBGM = kalosleaderw
 #-------------------------------
 [LEADER_Grant]
 Name = Kalos Leader
@@ -711,6 +725,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kalosleader
+VictoryBGM = kalosleaderw
 #-------------------------------
 [LEADER_Korrina]
 Name = Kalos Leader
@@ -718,6 +733,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kalosleader
+VictoryBGM = kalosleaderw
 #-------------------------------
 [LEADER_Ramos]
 Name = Kalos Leader
@@ -725,6 +741,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kalosleader
+VictoryBGM = kalosleaderw
 #-------------------------------
 [LEADER_Clemont]
 Name = Kalos Leader
@@ -732,6 +749,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kalosleader
+VictoryBGM = kalosleaderw
 #-------------------------------
 [LEADER_Olympia]
 Name = Kalos Leader
@@ -739,6 +757,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kalosleader
+VictoryBGM = kalosleaderw
 #-------------------------------
 [LEADER_Valerie]
 Name = Kalos Leader
@@ -746,6 +765,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kalosleader
+VictoryBGM = kalosleaderw
 #-------------------------------
 [LEADER_Wulfric]
 Name = Kalos Leader
@@ -753,6 +773,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kalosleader
+VictoryBGM = kalosleaderw
 #-------------------------------
 [CAPTAIN_Ilima]
 Name = Alola Captain
