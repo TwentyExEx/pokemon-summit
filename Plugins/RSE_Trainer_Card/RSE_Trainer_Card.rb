@@ -28,12 +28,12 @@ class PokemonTrainerCard_Scene
       @sprites["card"].setBitmap("Graphics/Pictures/Trainer Card/card_#{pbGet(CARDLEVELVARIABLE)}")
       @sprites["overlay"] = BitmapSprite.new(Graphics.width,Graphics.height,@viewport)
       pbSetSystemFont(@sprites["overlay"].bitmap)
-      @sprites["trainer"] = IconSprite.new(336 - 16,106,@viewport)
-      @sprites["trainer"].setBitmap(GameData::TrainerType.player_front_sprite_filename($player.trainer_type))
-      @sprites["trainer"].x -= (@sprites["trainer"].bitmap.width-128)/2
-      @sprites["trainer"].y -= (@sprites["trainer"].bitmap.height-128)
-      @sprites["trainer"].z = 2
-      pbDrawTrainerCardFront
+      # @sprites["trainer"] = IconSprite.new(336 - 16,106,@viewport)
+      # @sprites["trainer"].setBitmap(GameData::TrainerType.player_front_sprite_filename($player.trainer_type))
+      # @sprites["trainer"].x -= (@sprites["trainer"].bitmap.width-128)/2
+      # @sprites["trainer"].y -= (@sprites["trainer"].bitmap.height-128)
+      # @sprites["trainer"].z = 2
+      # pbDrawTrainerCardFront
       pbFadeInAndShow(@sprites) { pbUpdate }
     end
   
