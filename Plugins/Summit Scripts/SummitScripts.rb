@@ -1565,3 +1565,83 @@ def pbSummitMonkey
     pbSummitGivePokemon(:SIMISEAR,0)
     pbSummitGivePokemon(:SIMIPOUR,0)
 end
+
+def pbSummitInitShopItems
+  typeitems = [:BLACKBELT, :BLACKGLASSES, :CHARCOAL, :DRAGONFANG, :HARDSTONE, :MAGNET, :METALCOAT, :MIRACLESEED, :MYSTICWATER, :NEVERMELTICE, :PIXIEDUST, :POISONBARB, :SHARPBEAK, :SILKSCARF, :SILVERPOWDER, :SOFTSAND, :SPELLTAG, :TWISTEDSPOON]
+    $game_variables[38] = typeitems
+  utilitems = [:AIRBALLOON, :ASSAULTVEST, :BIGROOT, :BINDINGBAND, :BLUNDERPOLICY, :BRIGHTPOWDER, :CHOICEBAND, 
+    :CHOICESCARF, :CHOICESPECS, :DAMPROCK, :DESTINYKNOT, :EJECTBUTTON, :EJECTPACK, :EXPERTBELT, :FLAMEORB, 
+    :FLOATSTONE, :FOCUSBAND, :FOCUSSASH, :GRIPCLAW, :HEATROCK, :HEAVYDUTYBOOTS, :ICYROCK, :IRONBALL, 
+    :KINGSROCK, :LAGGINGTAIL, :LEEK, :LEFTOVERS, :LIFEORB, :LIGHTCLAY, :LUCKINCENSE, :MACHOBRACE, :MENTALHERB, :METRONOME, 
+    :MUSCLEBAND, :POWERHERB, :PROTECTIVEPADS, :QUICKCLAW, :RAZORCLAW, :RAZORFANG, :REDCARD, :RINGTARGET, 
+    :ROCKYHELMET, :ROOMSERVICE, :SAFETYGOGGLES, :SCOPELENS, :SHEDSHELL, :SMOKEBALL, :SMOOTHROCK, :STICKYBARB,
+    :TERRAINEXTENDER, :THICKCLUB, :THROATSPRAY, :TOXICORB, :UTILITYUMBRELLA, :WHITEHERB, :WIDELENS, :WISEGLASSES, :ZOOMLENS]
+    $game_variables[39] = utilitems
+  berries = [:CHERIBERRY, :CHESTOBERRY, :PECHABERRY, 
+    :RAWSTBERRY, :ASPEARBERRY, :ORANBERRY, :PERSIMBERRY, 
+    :LUMBERRY, :SITRUSBERRY, :OCCABERRY, :PASSHOBERRY, 
+    :WACANBERRY, :RINDOBERRY, :YACHEBERRY, :CHOPLEBERRY, 
+    :KEBIABERRY, :SHUCABERRY, :COBABERRY, :PAYAPABERRY, 
+    :TANGABERRY, :CHARTIBERRY, :KASIBBERRY, :HABANBERRY, 
+    :COLBURBERRY, :BABIRIBERRY, :CHILANBERRY, :ROSELIBERRY]
+    $game_variables[40] = berries
+end
+
+def pbSummitGetShopItems(section)
+  items = []
+  case section
+    when "plates"
+      items = $game_variables[38]
+    when "utility"
+      items = $game_variables[39]
+    when "berries"
+      items = $game_variables[40]
+  end
+  return items
+end
+
+def pbBuyScreen
+  @scene.pbStartBuyScene(@stock,@adapter)
+  item=nil
+  loop do
+    item=@scene.pbChooseBuyItem
+    break if !item
+    quantity=0
+    itemname=@adapter.getDisplayName(item)
+    price=@adapter.getPrice(item)
+    if @adapter.getMoney<price
+      pbDisplayPaused(_INTL("You don't have enough money."))
+      next
+    end
+    if !pbConfirm(_INTL("Certainly. You want {1}. That will be ${2}. OK?",
+       itemname,price.to_s_formatted))
+      next
+    end
+    quantity=1
+    if @adapter.getMoney<price
+      pbDisplayPaused(_INTL("You don't have enough money."))
+      next
+    end
+    added=0
+    quantity.times do
+      break if !@adapter.addItem(item)
+      added+=1
+    end
+    if added!=quantity
+      added.times do
+        if !@adapter.removeItem(item)
+          raise _INTL("Failed to delete stored items")
+        end
+      end
+      pbDisplayPaused(_INTL("You have no more room in the Bag."))
+    else
+      @adapter.setMoney(@adapter.getMoney-price)
+      for i in 0...@stock.length
+          @stock[i]=nil
+      end
+      @stock.compact!
+      pbDisplayPaused(_INTL("Here you are! Thank you!")) { pbSEPlay("Mart buy item") }
+    end
+  end
+  @scene.pbEndBuyScene
+end
