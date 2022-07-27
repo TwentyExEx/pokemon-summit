@@ -33,7 +33,7 @@ class PokemonTrainerCard_Scene
       # @sprites["trainer"].x -= (@sprites["trainer"].bitmap.width-128)/2
       # @sprites["trainer"].y -= (@sprites["trainer"].bitmap.height-128)
       # @sprites["trainer"].z = 2
-      # pbDrawTrainerCardFront
+      pbDrawTrainerCardFront
       pbFadeInAndShow(@sprites) { pbUpdate }
     end
   
