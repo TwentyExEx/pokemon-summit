@@ -467,8 +467,8 @@ end
 def pbSummitVendingPokemon
   loop do
     pkmn = pbSummitSelectPokemon
-    species = pkmn[0].to_sym
-    if $player.owned?(species) # obtained
+    specform = pkmn[0].to_s << "_" << pkmn[5].to_s
+    if $game_variables[42].include?(specform) # obtained
       return false
       break
     else

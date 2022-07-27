@@ -174,12 +174,13 @@ end
   case @form
     when ""
       dispname = GameData::Species.get(@pokemon.to_sym).real_name
-      pbMessage(_INTL("{1} obtained {2}!\\wtnp[60]\1",$Trainer.name,dispname))
     else
       dispname = GameData::Species.get(@specform).form_name.clone
       dispname << " "<< GameData::Species.get(@specform).real_name
-      pbMessage(_INTL("{1} obtained {2}!\\wtnp[60]\1",$Trainer.name,dispname))
   end
+  pbMessage(_INTL("{1} obtained {2}!\\wtnp[60]\1",$Trainer.name,dispname))
+  # Register as obtained
+  $game_variables[42].push(@specform)
   18.times do
   Graphics.update  
   @sprites["bg"].zoom_y-=0.15/2 
