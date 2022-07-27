@@ -52,7 +52,8 @@ def initialize(pokemon)
     @form="_"
     @form.concat(pokemon.form.to_s)
   end
- @pokeinfo=pokemon
+  @specform = @pokemon.clone << @form
+  @pokeinfo = pokemon
 end
 
 def pbStartScene
@@ -169,7 +170,16 @@ end
   @sprites["bg"].zoom_x=1.5
   shakeItem
   shakeItem
-  pbMessage(_INTL("{1} obtained {2}!\\wtnp[60]\1",$Trainer.name,@pokemon.downcase.capitalize))
+  # Display message
+  case @form
+    when ""
+      dispname = GameData::Species.get(@pokemon.to_sym).real_name
+      pbMessage(_INTL("{1} obtained {2}!\\wtnp[60]\1",$Trainer.name,dispname))
+    else
+      dispname = GameData::Species.get(@specform).form_name.clone
+      dispname << " "<< GameData::Species.get(@specform).real_name
+      pbMessage(_INTL("{1} obtained {2}!\\wtnp[60]\1",$Trainer.name,dispname))
+  end
   18.times do
   Graphics.update  
   @sprites["bg"].zoom_y-=0.15/2 
