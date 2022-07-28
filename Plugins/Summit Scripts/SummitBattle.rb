@@ -1017,7 +1017,7 @@ def pbSummitChoosePokemon(tr_type, party_size = 3)
         [:BANETTE,0]
         ]
 
-    when "kimono_girl"
+    when "kimonogirl"
       trainerpkmn = [
         [:FLAREON,0],
         [:VAPOREON,0],
