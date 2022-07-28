@@ -439,6 +439,14 @@ def pbSummitMainTrainer
   type = $game_variables[30][0]
   name = $game_variables[30][1]
   version = $game_variables[15]
+  $DiscordRPC.details = "VS #{GameData::TrainerType.get($game_variables[30][0]).name} #{$game_variables[30][1]}"
+  $DiscordRPC.large_image = $game_variables[30][0].downcase
+  if $game_variables[35] == 1
+    $DiscordRPC.state = "#{$bracketnames[$game_variables[31]]} (#{$game_variables[33].to_int+1} of 4)"
+  else
+    $DiscordRPC.state = "Arcade (#{$game_variables[33].to_int+1} of 10)"
+  end
+  $DiscordRPC.update
   TrainerBattle.start(type, name, version)
 
   $Trainer.party = $game_variables[27]
@@ -448,6 +456,13 @@ def pbSummitMainTrainer
   if $game_variables[33] == 4 # when cleared bracket
     $game_variables[31] += 1 # next bracket
   end
+end
+
+def pbSummitLobby
+  $DiscordRPC.details = "In the lobby"
+  $DiscordRPC.large_image = "lobby"
+  $DiscordRPC.state = "Preparing for battle"
+  $DiscordRPC.update
 end
 
 def pbSummitBracketUnlock
@@ -527,6 +542,10 @@ def pbSummitArcadeTrainer
   pbNewSummitTrainer(@arcadetype, @arcadename)
   GameData::TrainerType.get(@arcadetype).id
   pbSummitPrepBattle
+  $DiscordRPC.details = "VS Arcade Trainer"
+  $DiscordRPC.large_image = "arcade_trainer"
+  $DiscordRPC.state = "Arcade (#{$game_variables[33].to_int+1} of 10)"
+  $DiscordRPC.update
   TrainerBattle.start(@arcadetype, @arcadename)
   pbSummitEndBattle(@arcadetype, @arcadename)
 end
