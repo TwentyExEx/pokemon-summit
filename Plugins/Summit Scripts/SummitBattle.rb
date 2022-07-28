@@ -468,7 +468,7 @@ end
 def pbSummitBracketUnlock
   bracketwon = $bracketnames[$game_variables[31]-1]
   bracketunlocked = $bracketnames[$game_variables[31]]
-  if $game_variables[41] == nil
+  if $game_variables[41] == nil || 0
     $game_variables[41] = []
   end
   $game_variables[41].push($game_variables[31])
