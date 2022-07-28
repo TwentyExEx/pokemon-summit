@@ -459,9 +459,9 @@ def pbSummitMainTrainer
 end
 
 def pbSummitLobby
-  $DiscordRPC.details = "In the lobby"
+  $DiscordRPC.details = "In the Lobby"
   $DiscordRPC.large_image = "lobby"
-  $DiscordRPC.state = "Preparing for battle"
+  $DiscordRPC.state = "Preparing for Battle"
   $DiscordRPC.update
 end
 

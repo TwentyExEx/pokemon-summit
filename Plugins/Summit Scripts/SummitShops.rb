@@ -15,7 +15,7 @@ def pbSummitSuperTrain
       pbMessage("\\rWhich stats would you like this Pokémon to specialize in?")
       loop do
         cmd = pbMessage("\\rSelect a stat to specialize in.",@evstats,-1)
-        if cmd == 1
+        if cmd == -1
           break
         else
           @stat1 = @evstats[cmd]
