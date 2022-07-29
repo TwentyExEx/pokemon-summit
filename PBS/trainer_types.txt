@@ -786,6 +786,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = alolatrainer
+VictoryBGM = alolacaptainw
 #-------------------------------
 [CAPTAIN_Lana]
 Name = Alola Captain
@@ -793,6 +794,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = alolatrainer
+VictoryBGM = alolacaptainw
 #-------------------------------
 [CAPTAIN_Kiawe]
 Name = Alola Captain
@@ -800,6 +802,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = alolatrainer
+VictoryBGM = alolacaptainw
 #-------------------------------
 [CAPTAIN_Mallow]
 Name = Alola Captain
@@ -807,6 +810,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = alolatrainer
+VictoryBGM = alolacaptainw
 #-------------------------------
 [CAPTAIN_Sophocles]
 Name = Alola Captain
@@ -814,6 +818,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = alolatrainer
+VictoryBGM = alolacaptainw
 #-------------------------------
 [CAPTAIN_Acerola]
 Name = Alola Captain
@@ -821,6 +826,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = alolatrainer
+VictoryBGM = alolacaptainw
 #-------------------------------
 [CAPTAIN_Mina]
 Name = Alola Captain
@@ -828,6 +834,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = alolatrainer
+VictoryBGM = alolacaptainw
 #-------------------------------
 [LEADER_Milo]
 Name = Galar Leader
@@ -835,6 +842,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = galarleader
+VictoryBGM = galarleaderw
 #-------------------------------
 [LEADER_Nessa]
 Name = Galar Leader
@@ -842,6 +850,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = galarleader
+VictoryBGM = galarleaderw
 #-------------------------------
 [LEADER_Kabu]
 Name = Galar Leader
@@ -849,6 +858,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = galarleader
+VictoryBGM = galarleaderw
 #-------------------------------
 [LEADER_Bea]
 Name = Galar Leader
@@ -856,6 +866,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = galarleader
+VictoryBGM = galarleaderw
 #-------------------------------
 [LEADER_Allister]
 Name = Galar Leader
@@ -863,6 +874,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = galarleader
+VictoryBGM = galarleaderw
 #-------------------------------
 [LEADER_Opal]
 Name = Galar Leader
@@ -870,6 +882,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = galarleader
+VictoryBGM = galarleaderw
 #-------------------------------
 [LEADER_Gordie]
 Name = Galar Leader
@@ -877,6 +890,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = galarleader
+VictoryBGM = galarleaderw
 #-------------------------------
 [LEADER_Melony]
 Name = Galar Leader
@@ -884,6 +898,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = galarleader
+VictoryBGM = galarleaderw
 #-------------------------------
 [LEADER_Piers]
 Name = Galar Leader
@@ -891,6 +906,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = piers
+VictoryBGM = galarleaderw
 #-------------------------------
 [LEADER_Raihan]
 Name = Galar Leader
@@ -898,6 +914,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = galarleader
+VictoryBGM = galarleaderw
 #-------------------------------
 [RIVAL_Blue]
 Name = Rival
