@@ -137,7 +137,7 @@ end
 
 def pbSummitPrepMainTrainer(bracket)
   trainers = $game_variables[29]
-  if $game_variables[35] == 1
+  if $game_variables[35] == "challenge"
     fightnum = $game_variables[33]
     opponent = trainers[fightnum]
   else
@@ -467,7 +467,7 @@ def pbSummitMainTrainer
 
   $DiscordRPC.details = "VS #{GameData::TrainerType.get($game_variables[30][0]).name} #{$game_variables[30][1]}"
   $DiscordRPC.large_image = $game_variables[30][0].downcase
-  if $game_variables[35] == 1
+  if $game_variables[35] == "challenge"
     $DiscordRPC.state = "#{$bracketnames[$game_variables[31]]} (#{$game_variables[33].to_int+1} of 4)"
   else
     $DiscordRPC.state = "Arcade (Win Streak: #{$game_variables[43].to_int})"
@@ -476,7 +476,7 @@ def pbSummitMainTrainer
   TrainerBattle.start(type, name, version)
 
   $Trainer.party = $game_variables[27]
-  if $game_variables[35] == 1 # Main mode
+  if $game_variables[35] == "challenge" # Main mode
     if $game_variables[32] == 1
       $game_variables[33] += 1
     end
@@ -1680,4 +1680,13 @@ def pbSummitDifficultyInfo
       pbMessage("#{i}")
     end
   end
+end
+
+def pbSummitPostMatch
+  $game_switches[37] = false
+  $game_variables[35] = "lobby"
+  $game_variables[32] = 0
+  $game_temp.begun_new_game = false
+  Game.save
+  pbMessage(_INTL("\\se[]{1} saved the game.\\me[GUI save game]\\wtnp[30]", $player.name))
 end
