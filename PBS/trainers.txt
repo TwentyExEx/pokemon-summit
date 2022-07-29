@@ -716,8 +716,8 @@ Pokemon = VILEPLUME,50
     AbilityIndex = 0
     Nature = HARDY
     IV = 15,15,15,15,15,15
-Pokemon = VENUSAUR,50
-    AbilityIndex = 0
+Pokemon = TANGROWTH,50
+    AbilityIndex = 1
     Nature = HARDY
     IV = 15,15,15,15,15,15
 #-------------------------------
@@ -733,10 +733,10 @@ Pokemon = VILEPLUME,50
     AbilityIndex = 0
     Nature = MODEST
     IV = 25,25,25,25,25,25
-Pokemon = VENUSAUR,50
-    Moves = PETALDANCE,ENERGYBALL,SLUDGEBOMB,TOXIC
-    AbilityIndex = 0
-    Nature = TIMID
+Pokemon = TANGROWTH,50
+    Moves = POWERWHIP,KNOCKOFF,SLUDGEBOMB,FOCUSBLAST
+    AbilityIndex = 1
+    Nature = RASH
     IV = 25,25,25,25,25,25
 #-------------------------------
 [LEADER_Erika,Erika,2]
@@ -753,11 +753,11 @@ Pokemon = VILEPLUME,50
     Item = BLACKSLUDGE
     Nature = MODEST
     IV = 31,31,31,31,31,31
-Pokemon = VENUSAUR,50
-    Moves = PETALDANCE,ENERGYBALL,SLUDGEBOMB,TOXIC
-    AbilityIndex = 0
-    Item = COBABERRY
-    Nature = TIMID
+Pokemon = TANGROWTH,50
+    Moves = POWERWHIP,KNOCKOFF,SLUDGEBOMB,FOCUSBLAST
+    AbilityIndex = 1
+    Item = ASSAULTVEST
+    Nature = RASH
     IV = 31,31,31,31,31,31
 #-------------------------------
 [LEADER_Erika,Erika,3]
@@ -776,11 +776,11 @@ Pokemon = VILEPLUME,50
     Nature = MODEST
     IV = 31,31,31,31,31,31
     EV = 0,0,0,252,252,0
-Pokemon = VENUSAUR,50
-    Moves = PETALDANCE,ENERGYBALL,SLUDGEBOMB,TOXIC
-    AbilityIndex = 0
-    Item = COBABERRY
-    Nature = TIMID
+Pokemon = TANGROWTH,50
+    Moves = POWERWHIP,KNOCKOFF,SLUDGEBOMB,FOCUSBLAST
+    AbilityIndex = 1
+    Item = ASSAULTVEST
+    Nature = RASH
     IV = 31,31,31,31,31,31
     EV = 0,0,0,252,252,0
 #-------------------------------
@@ -1180,7 +1180,7 @@ Pokemon = SLOWBRO,50
 #-------------------------------
 [LEADER_Sabrina,Sabrina]
 LoseText = Was the future I saw...wrong?
-Pokemon = ESPEON,50
+Pokemon = HYPNO,50
     AbilityIndex = 0
     Nature = HARDY
     IV = 15,15,15,15,15,15
@@ -1195,8 +1195,8 @@ Pokemon = ALAKAZAM,50
 #-------------------------------
 [LEADER_Sabrina,Sabrina,1]
 LoseText = Was the future I saw...wrong?
-Pokemon = ESPEON,50
-    Moves = PSYCHIC,DAZZLINGGLEAM,SHADOWBALL,REST
+Pokemon = HYPNO,50
+    Moves = PSYCHIC,HYPNOSIS,SHADOWBALL,DREAMEATER
     AbilityIndex = 0
     Nature = TIMID
     IV = 25,25,25,25,25,25
@@ -1213,10 +1213,10 @@ Pokemon = ALAKAZAM,50
 #-------------------------------
 [LEADER_Sabrina,Sabrina,2]
 LoseText = Was the future I saw...wrong?
-Pokemon = ESPEON,50
-    Moves = PSYCHIC,DAZZLINGGLEAM,SHADOWBALL,REST
+Pokemon = HYPNO,50
+    Moves = PSYCHIC,HYPNOSIS,SHADOWBALL,DREAMEATER
     AbilityIndex = 0
-    Item = CHESTOBERRY
+    Item = COLBURBERRY
     Nature = TIMID
     IV = 31,31,31,31,31,31
 Pokemon = SLOWKING,50
@@ -1234,10 +1234,10 @@ Pokemon = ALAKAZAM,50
 #-------------------------------
 [LEADER_Sabrina,Sabrina,3]
 LoseText = Was the future I saw...wrong?
-Pokemon = ESPEON,50
-    Moves = PSYCHIC,DAZZLINGGLEAM,SHADOWBALL,REST
+Pokemon = HYPNO,50
+    Moves = PSYCHIC,HYPNOSIS,SHADOWBALL,DREAMEATER
     AbilityIndex = 0
-    Item = CHESTOBERRY
+    Item = COLBURBERRY
     Nature = TIMID
     IV = 31,31,31,31,31,31
     EV = 0,0,0,252,252,0
@@ -1258,8 +1258,8 @@ Pokemon = ALAKAZAM,50
 #-------------------------------
 [LEADER_Sabrina,Sabrina,4]
 LoseText = Was the future I saw...wrong?
-Pokemon = ESPEON,50
-    Moves = PSYCHIC,DAZZLINGGLEAM,SHADOWBALL,REST
+Pokemon = HYPNO,50
+    Moves = PSYCHIC,HYPNOSIS,SHADOWBALL,DREAMEATER
     AbilityIndex = 0
     Nature = HARDY
     IV = 15,15,15,15,15,15
@@ -1284,18 +1284,18 @@ Pokemon = MEDICHAM,50
     AbilityIndex = 0
     Nature = HARDY
     IV = 15,15,15,15,15,15
-Pokemon = BEHEEYEM,50
-    Moves = PSYCHIC,THUNDERBOLT,RECOVER,NASTYPLOT
-    AbilityIndex = 1
+Pokemon = ESPEON,50
+    Moves = PSYCHIC,DAZZLINGGLEAM,SHADOWBALL,REST
+    AbilityIndex = 0
     Nature = HARDY
     IV = 15,15,15,15,15,15
 #-------------------------------
 [LEADER_Sabrina,Sabrina,5]
 LoseText = Was the future I saw...wrong?
-Pokemon = ESPEON,50
-    Moves = PSYCHIC,DAZZLINGGLEAM,SHADOWBALL,REST
+Pokemon = HYPNO,50
+    Moves = PSYCHIC,HYPNOSIS,SHADOWBALL,DREAMEATER
     AbilityIndex = 0
-    Item = CHESTOBERRY
+    Item = COLBURBERRY
     Nature = TIMID
     IV = 25,25,25,25,25,25
 Pokemon = SLOWKING,50
@@ -1323,19 +1323,19 @@ Pokemon = MEDICHAM,50
     Item = SITRUSBERRY
     Nature = JOLLY
     IV = 25,25,25,25,25,25
-Pokemon = BEHEEYEM,50
-    Moves = PSYCHIC,THUNDERBOLT,RECOVER,NASTYPLOT
-    AbilityIndex = 1
-    Item = COLBURBERRY
-    Nature = MODEST
+Pokemon = ESPEON,50
+    Moves = PSYCHIC,DAZZLINGGLEAM,SHADOWBALL,REST
+    AbilityIndex = 0
+    Item = CHESTOBERRY
+    Nature = TIMID
     IV = 25,25,25,25,25,25
 #-------------------------------
 [LEADER_Sabrina,Sabrina,6]
 LoseText = Was the future I saw...wrong?
-Pokemon = ESPEON,50
-    Moves = PSYCHIC,DAZZLINGGLEAM,SHADOWBALL,REST
+Pokemon = HYPNO,50
+    Moves = PSYCHIC,HYPNOSIS,SHADOWBALL,DREAMEATER
     AbilityIndex = 0
-    Item = CHESTOBERRY
+    Item = COLBURBERRY
     Nature = TIMID
     IV = 31,31,31,31,31,31
 Pokemon = SLOWKING,50
@@ -1363,19 +1363,19 @@ Pokemon = MEDICHAM,50
     Item = SITRUSBERRY
     Nature = JOLLY
     IV = 31,31,31,31,31,31
-Pokemon = BEHEEYEM,50
-    Moves = PSYCHIC,THUNDERBOLT,RECOVER,NASTYPLOT
-    AbilityIndex = 1
-    Item = COLBURBERRY
-    Nature = MODEST
+Pokemon = ESPEON,50
+    Moves = PSYCHIC,DAZZLINGGLEAM,SHADOWBALL,REST
+    AbilityIndex = 0
+    Item = CHESTOBERRY
+    Nature = TIMID
     IV = 31,31,31,31,31,31
 #-------------------------------
 [LEADER_Sabrina,Sabrina,7]
 LoseText = Was the future I saw...wrong?
-Pokemon = ESPEON,50
-    Moves = PSYCHIC,DAZZLINGGLEAM,SHADOWBALL,REST
-    AbilityIndex = 1
-    Item = CHESTOBERRY
+Pokemon = HYPNO,50
+    Moves = PSYCHIC,HYPNOSIS,SHADOWBALL,DREAMEATER
+    AbilityIndex = 0
+    Item = COLBURBERRY
     Nature = TIMID
     IV = 31,31,31,31,31,31
     EV = 0,0,0,252,252,0
@@ -1408,18 +1408,18 @@ Pokemon = MEDICHAM,50
     Nature = JOLLY
     IV = 31,31,31,31,31,31
     EV = 0,252,0,252,0,0
-Pokemon = BEHEEYEM,50
-    Moves = PSYCHIC,THUNDERBOLT,RECOVER,NASTYPLOT
-    AbilityIndex = 2
-    Item = COLBURBERRY
-    Nature = MODEST
+Pokemon = ESPEON,50
+    Moves = PSYCHIC,DAZZLINGGLEAM,SHADOWBALL,REST
+    AbilityIndex = 0
+    Item = CHESTOBERRY
+    Nature = TIMID
     IV = 31,31,31,31,31,31
-    EV = 252,0,0,0,252,0
+    EV = 0,0,0,252,252,0
 #-------------------------------
 [LEADER_Blaine,Blaine]
 LoseText = How could this be?! My spirit has not been defeated!
-Pokemon = ARCANINE,50
-    AbilityIndex = 0
+Pokemon = FLAREON,50
+    AbilityIndex = 1
     Nature = HARDY
     IV = 15,15,15,15,15,15
 Pokemon = CHARIZARD,50
@@ -1433,10 +1433,10 @@ Pokemon = NINETALES,50
 #-------------------------------
 [LEADER_Blaine,Blaine,1]
 LoseText = How could this be?! My spirit has not been defeated!
-Pokemon = ARCANINE,50
-    Moves = FLAMETHROWER,FLAREBLITZ,EXTREMESPEED,PLAYROUGH
-    AbilityIndex = 0
-    Nature = HASTY
+Pokemon = FLAREON,50
+    Moves = FLAREBLITZ,BITE,IRONTAIL,SUPERPOWER
+    AbilityIndex = 1
+    Nature = ADAMANT
     IV = 25,25,25,25,25,25
 Pokemon = CHARIZARD,50
     Moves = DRAGONPULSE,FLAMETHROWER,AIRSLASH,OVERHEAT
@@ -1451,11 +1451,11 @@ Pokemon = NINETALES,50
 #-------------------------------
 [LEADER_Blaine,Blaine,2]
 LoseText = How could this be?! My spirit has not been defeated!
-Pokemon = ARCANINE,50
-    Moves = FLAMETHROWER,FLAREBLITZ,EXTREMESPEED,PLAYROUGH
-    AbilityIndex = 0
-    Item = LEFTOVERS
-    Nature = HASTY
+Pokemon = FLAREON,50
+    Moves = FLAREBLITZ,BITE,IRONTAIL,SUPERPOWER
+    AbilityIndex = 1
+    Item = CHARCOAL
+    Nature = ADAMANT
     IV = 31,31,31,31,31,31
 Pokemon = CHARIZARD,50
     Moves = DRAGONPULSE,FLAMETHROWER,AIRSLASH,OVERHEAT
@@ -1472,13 +1472,13 @@ Pokemon = NINETALES,50
 #-------------------------------
 [LEADER_Blaine,Blaine,3]
 LoseText = How could this be?! My spirit has not been defeated!
-Pokemon = ARCANINE,50
-    Moves = FLAMETHROWER,FLAREBLITZ,EXTREMESPEED,PLAYROUGH
-    AbilityIndex = 0
-    Item = LEFTOVERS
-    Nature = HASTY
+Pokemon = FLAREON,50
+    Moves = FLAREBLITZ,BITE,IRONTAIL,SUPERPOWER
+    AbilityIndex = 1
+    Item = CHARCOAL
+    Nature = ADAMANT
     IV = 31,31,31,31,31,31
-    EV = 0,252,0,252,0,0
+    EV = 252,252,0,0,0,0
 Pokemon = CHARIZARD,50
     Moves = DRAGONPULSE,FLAMETHROWER,AIRSLASH,OVERHEAT
     AbilityIndex = 0
@@ -1664,6 +1664,11 @@ Pokemon = NIDOKING,50
     AbilityIndex = 0
     Nature = HARDY
     IV = 15,15,15,15,15,15
+Pokemon = DUGTRIO,50
+    Form = 1
+    AbilityIndex = 1
+    Nature = HARDY
+    IV = 15,15,15,15,15,15
 #-------------------------------
 [LEADER_Giovanni,Giovanni,1]
 LoseText = I lose?! There is nothing I wish to say to you!
@@ -1677,9 +1682,10 @@ Pokemon = MAROWAK,50
     AbilityIndex = 0
     Nature = ADAMANT
     IV = 25,25,25,25,25,25
-Pokemon = NIDOKING,50
-    Moves = POISONJAB,EARTHQUAKE,MEGAHORN,TOXIC
-    AbilityIndex = 0
+Pokemon = DUGTRIO,50
+    Form = 1
+    Moves = IRONHEAD,DIG,EARTHQUAKE,SUCKERPUNCH
+    AbilityIndex = 1
     Nature = JOLLY
     IV = 25,25,25,25,25,25
 #-------------------------------
@@ -1697,10 +1703,11 @@ Pokemon = MAROWAK,50
     Item = THICKCLUB
     Nature = ADAMANT
     IV = 31,31,31,31,31,31
-Pokemon = NIDOKING,50
-    Moves = POISONJAB,EARTHQUAKE,MEGAHORN,TOXIC
-    AbilityIndex = 0
-    Item = SHUCABERRY
+Pokemon = DUGTRIO,50
+    Form = 1
+    Moves = IRONHEAD,DIG,EARTHQUAKE,SUCKERPUNCH
+    AbilityIndex = 1
+    Item = LEFTOVERS
     Nature = JOLLY
     IV = 31,31,31,31,31,31
 #-------------------------------
@@ -1720,13 +1727,14 @@ Pokemon = MAROWAK,50
     Nature = ADAMANT
     IV = 31,31,31,31,31,31
     EV = 252,252,0,0,0,0
-Pokemon = NIDOKING,50
-    Moves = POISONJAB,EARTHQUAKE,MEGAHORN,TOXIC
-    AbilityIndex = 2
-    Item = SHUCABERRY
+Pokemon = DUGTRIO,50
+    Form = 1
+    Moves = IRONHEAD,DIG,EARTHQUAKE,SUCKERPUNCH
+    AbilityIndex = 1
+    Item = LEFTOVERS
     Nature = JOLLY
     IV = 31,31,31,31,31,31
-    EV = 0,252,0,252,0,0
+    EV = 0,252,252,0,0,0
 #-------------------------------
 [LEADER_Giovanni,Giovanni,4]
 LoseText = I lose?! There is nothing I wish to say to you!

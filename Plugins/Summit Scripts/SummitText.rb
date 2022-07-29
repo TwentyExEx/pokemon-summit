@@ -35,8 +35,8 @@ module TrainerIntros
 	}
 
 	LEADER_Giovanni = {
-		:meeting => "\\bhi im evil",
-		:rematch => "\\bim still evil"
+		:meeting => "\\bKeep your nose out of grown-up matters... Or experience a world of pain!",
+		:rematch => "\\bFor your insolence, you will feel a world of pain!"
 	}
 
 	LEADER_Falkner = {
