@@ -456,7 +456,7 @@ def pbSummitMainTrainerSpeech
     ver = :rematch
   end
   text = TrainerIntros.const_get(trainer)[ver]
-  pbMessage("#{text}")
+  pbMessage("\\c[9]#{text}")
 end
 
 def pbSummitMainTrainer
