@@ -136,5 +136,5 @@
 [:LEADER_Raihan,"Whoa, this ought to be good.",1],
 [:LEADER_Allister,"...'M Allister. H-here...I go...",0],
 [:LEADER_Allister,"Wh-wh-wh-what?! M-m-me?! Battle... you?!",1],
-[:LEADER_Melony,"",0],
-[:LEADER_Melony,"",1]
+[:LEADER_Melony,"You won't be able to escape when I freeze you solid. And after that... Well, you'll see. I think you'll find my battle style is quite severe.",0],
+[:LEADER_Melony,"It helps inspire my Gym Trainers if I participate in this tournament from time to time! My only choice is to keep aiming for that grand victory!",1]
