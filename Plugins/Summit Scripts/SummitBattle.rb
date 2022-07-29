@@ -469,7 +469,7 @@ def pbSummitMainTrainer
   $DiscordRPC.large_image = $game_variables[30][0].downcase
   if $game_variables[35] == "challenge"
     $DiscordRPC.state = "#{$bracketnames[$game_variables[31]]} (#{$game_variables[33].to_int+1} of 4)"
-  else
+  elsif $game_variables[35] == "arcade"
     $DiscordRPC.state = "Arcade (Win Streak: #{$game_variables[43].to_int})"
   end
   $DiscordRPC.update
@@ -572,7 +572,7 @@ def pbSummitArcadeTrainer
   pbSummitPrepBattle
   $DiscordRPC.details = "VS Arcade Trainer"
   $DiscordRPC.large_image = "arcade_trainer"
-  $DiscordRPC.state = "Arcade (#{$game_variables[43].to_int+1} of 10)"
+  $DiscordRPC.state = "Win Streak: (#{$game_variables[43].to_int})"
   $DiscordRPC.update
   TrainerBattle.start(@arcadetype, @arcadename)
   pbSummitEndBattle(@arcadetype, @arcadename)
