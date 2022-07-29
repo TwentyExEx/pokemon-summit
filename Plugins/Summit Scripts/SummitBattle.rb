@@ -470,7 +470,7 @@ def pbSummitMainTrainer
   if $game_variables[35] == 1
     $DiscordRPC.state = "#{$bracketnames[$game_variables[31]]} (#{$game_variables[33].to_int+1} of 4)"
   else
-    $DiscordRPC.state = "Arcade (#{$game_variables[43].to_int+1} of 10)"
+    $DiscordRPC.state = "Arcade (Win Streak: #{$game_variables[43].to_int})"
   end
   $DiscordRPC.update
   TrainerBattle.start(type, name, version)
