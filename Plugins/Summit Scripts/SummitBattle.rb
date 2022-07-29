@@ -435,16 +435,28 @@ def pbSummitPrepMainTrainer(bracket)
 end
 
 def pbSummitAnnounceMainTrainer
-  opponent = GameData::TrainerType.get($game_variables[30][0]).name << " " << $game_variables[30][1]
+  opp = GameData::TrainerType.get($game_variables[30][0]).name.clone << " " << $game_variables[30][1]
   messages = [
-    ["Challenger #{$player.name} and #{opponent} in the same room, let alone battling for us!","Challenger #{$player.name} and #{opponent} in the same room, let alone battling for us!"],
-    ["Audience, strap in, this round is going to be incredible!","Challenger #{$player.name} vs #{opponent}, starting in just a moment!"],
-    ["#{opponent} is looking ready for a intense fight!","Here comes Challenger #{$player.name} to give them what they want!"],
-    ["We got a special one today, folks!","Challenger #{$player.name}, up against the incredible #{opponent}!"]
+    ["Now, I've been looking forward to this matchup!","Challenger #{$player.name} and #{opp} in the same room, let alone battling for us!"],
+    ["Audience, strap in, this round is going to be incredible!","Challenger #{$player.name} vs #{opp}, starting in just a moment!"],
+    ["#{opp} is looking ready for a intense fight!","Here comes Challenger #{$player.name} to give them what they want!"],
+    ["We got a special one today, folks!","Challenger #{$player.name}, up against the incredible #{opp}!"]
   ]
   message = rand(messages.length)
   pbMessage("#{messages[message][0]}")
   pbMessage("#{messages[message][1]}")
+end
+
+def pbSummitMainTrainerSpeech
+  trainer = $game_variables[30][0].to_s
+  stage = $game_variables[15]
+  if stage < 3
+    ver = :meeting
+  else
+    ver = :rematch
+  end
+  text = TrainerIntros.const_get(trainer)[ver]
+  pbMessage("#{text}")
 end
 
 def pbSummitMainTrainer
@@ -452,6 +464,7 @@ def pbSummitMainTrainer
   type = $game_variables[30][0]
   name = $game_variables[30][1]
   version = $game_variables[15]
+
   $DiscordRPC.details = "VS #{GameData::TrainerType.get($game_variables[30][0]).name} #{$game_variables[30][1]}"
   $DiscordRPC.large_image = $game_variables[30][0].downcase
   if $game_variables[35] == 1
@@ -1628,4 +1641,43 @@ def pbSummitArcadeStreakReward
   pbSEPlay("Slots coin")
   $Trainer.money += prize
   pbMessage("\\r\GYou have earned #{prize.to_s_formatted} for your performance.")
+end
+
+$difficulties = ["Easy","Standard","Hard","Extreme","Cancel"]
+
+def pbSummitDifficultySet
+  cmd = pbMessage("\\rWhich difficulty would you like to select?",$difficulties,5)
+  $game_variables[15] = cmd
+  choice = $difficulties[cmd]
+  if cmd != 4
+    pbMessage("\\rYour difficulty has been set to #{choice}.")
+    return true
+  else
+    return false
+  end
+end
+
+def pbSummitDifficultyInfo
+  cmd = pbMessage("\\rWhich difficulty would you like information on?",$difficulties,5)
+  difficulty = $difficulties[cmd].downcase
+  case difficulty
+  when "easy"
+    info = ["\\rOn Easy Mode, opponent Pokémon have lowered stats (15 IV) compared to later difficulties.",
+    "\\rThey are also not Super Trained and their Natures are all neutral.",
+    "\\rMovesets are also not defined, only using their level-up moves at Level 50."]
+  when "standard"
+    info = ["\\rOn Normal Mode, opponent Pokémon have decent stats (25 IV) compared to later difficulties.",
+    "\\rThey are not Super Trained, but have beneficiary natures to their moveset."]
+  when "hard"
+    info = ["\\rOn Hard Mode, opponent Pokémon have perfect stats (31 IV).",
+    "\\rThey are not Super Trained, but have beneficiary natures to their moveset, along with held items." ]
+  when "extreme"
+    info = ["\\rOn Extreme mode, opponent Pokémon have perfect stats (31 IV).",
+    "\\rThey are Super Trained and have beneficiary natures to their moveset, along with held items."]
+  end
+  if cmd != 4
+    for i in info
+      pbMessage("#{i}")
+    end
+  end
 end
