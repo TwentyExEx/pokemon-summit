@@ -1,5 +1,4 @@
 module TrainerIntros
-
 	LEADER_Brock = {
 		:meeting => "\\bI'm Brock, Pewter City's Gym Leader. You can see just by looking at my Pokémon how rock hard my willpower is.",
 		:rematch => "\\bPlease allow me the privilege of facing you in battle once again! Allow me to show you the true rock-hard strength of my Pokémon!"
