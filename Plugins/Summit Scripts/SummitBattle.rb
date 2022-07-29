@@ -434,6 +434,19 @@ def pbSummitPrepMainTrainer(bracket)
   end
 end
 
+def pbSummitAnnounceMainTrainer
+  opponent = GameData::TrainerType.get($game_variables[30][0]).name << " " << $game_variables[30][1]
+  messages = [
+    ["Challenger #{$player.name} and #{opponent} in the same room, let alone battling for us!","Challenger #{$player.name} and #{opponent} in the same room, let alone battling for us!"],
+    ["Audience, strap in, this round is going to be incredible!","Challenger #{$player.name} vs #{opponent}, starting in just a moment!"],
+    ["#{opponent} is looking ready for a intense fight!","Here comes Challenger #{$player.name} to give them what they want!"],
+    ["We got a special one today, folks!","Challenger #{$player.name}, up against the incredible #{opponent}!"]
+  ]
+  message = rand(messages.length)
+  pbMessage("#{messages[message][0]}")
+  pbMessage("#{messages[message][1]}")
+end
+
 def pbSummitMainTrainer
   pbSummitPrepBattle
   type = $game_variables[30][0]
