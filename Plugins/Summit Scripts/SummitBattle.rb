@@ -444,17 +444,19 @@ def pbSummitMainTrainer
   if $game_variables[35] == 1
     $DiscordRPC.state = "#{$bracketnames[$game_variables[31]]} (#{$game_variables[33].to_int+1} of 4)"
   else
-    $DiscordRPC.state = "Arcade (#{$game_variables[33].to_int+1} of 10)"
+    $DiscordRPC.state = "Arcade (#{$game_variables[43].to_int+1} of 10)"
   end
   $DiscordRPC.update
   TrainerBattle.start(type, name, version)
 
   $Trainer.party = $game_variables[27]
-  if $game_variables[32] == 1
-    $game_variables[33] += 1
-  end
-  if $game_variables[33] == 4 # when cleared bracket
-    $game_variables[31] += 1 # next bracket
+  if $game_variables[35] == 1 # Main mode
+    if $game_variables[32] == 1
+      $game_variables[33] += 1
+    end
+    if $game_variables[33] == 4 # when cleared bracket
+      $game_variables[31] += 1 # next bracket
+    end
   end
 end
 
@@ -544,7 +546,7 @@ def pbSummitArcadeTrainer
   pbSummitPrepBattle
   $DiscordRPC.details = "VS Arcade Trainer"
   $DiscordRPC.large_image = "arcade_trainer"
-  $DiscordRPC.state = "Arcade (#{$game_variables[33].to_int+1} of 10)"
+  $DiscordRPC.state = "Arcade (#{$game_variables[43].to_int+1} of 10)"
   $DiscordRPC.update
   TrainerBattle.start(@arcadetype, @arcadename)
   pbSummitEndBattle(@arcadetype, @arcadename)
@@ -1605,4 +1607,12 @@ def pbSummitDeleteTrainer(tr_type, name, tr_version = 0)
   GameData::Trainer::DATA.delete(trainer_id)
   GameData::Trainer.save
   pbConvertTrainerData
+end
+
+def pbSummitArcadeStreakReward
+  pbMessage("\\rCongratulations on finishing #{pbGet(43)} consecutive trainers in a row!")
+  prize = 1000*($game_variables[43]/10.floor)
+  pbSEPlay("Slots coin")
+  $Trainer.money += prize
+  pbMessage("\\r\GYou have earned #{prize.to_s_formatted} for your performance.")
 end
