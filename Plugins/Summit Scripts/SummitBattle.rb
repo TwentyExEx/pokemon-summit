@@ -450,7 +450,7 @@ end
 def pbSummitMainTrainerSpeech
   trainer = $game_variables[30][0].to_s
   stage = $game_variables[15]
-  if stage < 4
+  if stage < 3
     ver = :meeting
   else
     ver = :rematch
