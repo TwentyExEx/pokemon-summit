@@ -572,7 +572,7 @@ def pbSummitArcadeTrainer
   pbSummitPrepBattle
   $DiscordRPC.details = "VS Arcade Trainer"
   $DiscordRPC.large_image = "arcade_trainer"
-  $DiscordRPC.state = "Win Streak: (#{$game_variables[43].to_int})"
+  $DiscordRPC.state = "Arcade (Win Streak: #{$game_variables[43].to_int})"
   $DiscordRPC.update
   TrainerBattle.start(@arcadetype, @arcadename)
   pbSummitEndBattle(@arcadetype, @arcadename)
@@ -1680,13 +1680,4 @@ def pbSummitDifficultyInfo
       pbMessage("#{i}")
     end
   end
-end
-
-def pbSummitPostMatch
-  $game_switches[37] = false
-  $game_variables[35] = "lobby"
-  $game_variables[32] = 0
-  $game_temp.begun_new_game = false
-  Game.save
-  pbMessage(_INTL("\\se[]{1} saved the game.\\me[GUI save game]\\wtnp[30]", $player.name))
 end
