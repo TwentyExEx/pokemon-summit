@@ -473,6 +473,50 @@ def pbSummitMainTrainer
     $DiscordRPC.state = "Arcade (Win Streak: #{$game_variables[43].to_int})"
   end
   $DiscordRPC.update
+
+  types = [
+    rock = [
+            [:LEADER_Brock]
+          ],
+          
+    water = [
+            [:LEADER_Misty]
+          ],
+          
+    electric = [
+            [:LEADER_Surge]
+          ],
+
+    grass = [
+            [:LEADER_Erika]
+          ],
+
+    poison = [
+            [:LEADER_Janine]
+          ],
+
+    psychic = [
+            [:LEADER_Sabrina]
+          ],
+          
+    fire = [
+            [:LEADER_Blaine]
+          ],
+          
+    ground = [
+            [:LEADER_Giovanni]
+          ]
+  ]
+
+  for i in types
+    if i.include?(type)
+      bg = i
+      break
+    end
+  end
+
+  $game_map.battleback_name => bg
+
   TrainerBattle.start(type, name, version)
 
   $Trainer.party = $game_variables[27]
