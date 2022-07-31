@@ -18081,3 +18081,18 @@ Pokemon = SNORLAX,50
     Moves = HAMMERARM,HIGHHORSEPOWER,HEAVYSLAM,BODYSLAM
     AbilityIndex = 0
     IV = 31,31,31,31,31,31
+#-------------------------------
+[POKEMONRANGER_F,Abigail]
+LoseText = ...
+Pokemon = SCEPTILE,50
+    Moves = GIGADRAIN,ENERGYBALL,DRAGONPULSE,FOCUSBLAST
+    AbilityIndex = 0
+    IV = 20,20,20,20,20,20
+Pokemon = VAPOREON,50
+    Moves = BRINE,ICEBEAM,SHADOWBALL,AQUARING
+    AbilityIndex = 0
+    IV = 20,20,20,20,20,20
+Pokemon = VANILLUXE,50
+    Moves = BLIZZARD,FREEZEDRY,ICESHARD,TAUNT
+    AbilityIndex = 1
+    IV = 20,20,20,20,20,20
