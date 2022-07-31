@@ -443,8 +443,8 @@ def pbSummitAnnounceMainTrainer
     ["We got a special one today, folks!","Challenger #{$player.name}, up against the incredible #{opp}!"]
   ]
   message = rand(messages.length)
-  pbMessage("\\xnr[Announcer]\\ml[ANNOUNCER]\\c[9]#{messages[message][0]}")
-  pbMessage("\\xnr[Announcer]\\ml[ANNOUNCER]\\c[9]#{messages[message][1]}")
+  pbMessage("\\xn[Announcer]\\ml[ANNOUNCER]\\c[9]#{messages[message][0]}")
+  pbMessage("\\xn[Announcer]\\ml[ANNOUNCER]\\c[9]#{messages[message][1]}")
 end
 
 def pbSummitMainTrainerSpeech
@@ -456,7 +456,7 @@ def pbSummitMainTrainerSpeech
     ver = :rematch
   end
   text = TrainerIntros.const_get(trainer)[ver]
-  namepic = "\\xn[#{$game_variables[30][1]}]\\mr[#{$game_variables[30][0].to_s}]"
+  namepic = "\\xnr[#{$game_variables[30][1]}]\\mr[#{$game_variables[30][0].to_s}]"
   pbMessage("#{namepic}#{text}")
 end
 
