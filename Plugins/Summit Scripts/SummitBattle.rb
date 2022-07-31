@@ -475,36 +475,169 @@ def pbSummitMainTrainer
   $DiscordRPC.update
 
   types = [
-    rock = [
-            [:LEADER_Brock]
+    normal = [
+        [:CAPTAIN_Ilima],
+        [:ELITE_Birch],
+        [:ELITE_Elm],
+        [:ELITE_Juniper],
+        [:ELITE_N],
+        [:ELITE_Oak],
+        [:ELITE_Sonia],
+        [:ELITE_Sycamore],
+        [:ELITE_Trevor],
+        [:LEADER_Cheren],
+        [:LEADER_Lenora],
+        [:LEADER_Norman],
+        [:LEADER_Whitney]
+      ],
+        
+    fighting = [
+            [:CHAMPION_Kukui],
+            [:ELITE_Bruno],
+            [:ELITE_Bruno2],
+            [:ELITE_Hala],
+            [:ELITE_Marshal],
+            [:LEADER_Brawly],
+            [:LEADER_Chuck],
+            [:LEADER_Maylene],
+            [:LEADER_Bea],
+            [:LEADER_Korrina]
           ],
-          
-    water = [
-            [:LEADER_Misty]
+        
+    flying = [
+            [:LEADER_Falkner],
+            [:LEADER_Winona],
+            [:LEADER_Skyla],
+            [:ELITE_Kahili]
           ],
-          
-    electric = [
-            [:LEADER_Surge]
-          ],
-
-    grass = [
-            [:LEADER_Erika]
-          ],
-
+        
     poison = [
-            [:LEADER_Janine]
+            [:LEADER_Janine],
+            [:LEADER_Roxie],
+            [:ELITE_Koga],
+            [:ELITE_Klara]
+          ],
+        
+    ground = [
+            [:LEADER_Giovanni],
+            [:LEADER_Clay],
+            [:ELITE_Bertha]
+          ],
+        
+    rock = [
+            [:LEADER_Brock],
+            [:LEADER_Roxanne],
+            [:LEADER_Roark],
+            [:LEADER_Grant],
+            [:ELITE_Olivia]
+          ],
+        
+    bug = [
+            [:LEADER_Bugsy],
+            [:LEADER_Burgh],
+            [:LEADER_Viola],
+            [:ELITE_Aaron]
+          ],
+
+    ghost = [
+            [:LEADER_Morty],
+            [:LEADER_Fantina],
+            [:CAPTAIN_Acerola],
+            [:ELITE_Agatha],
+            [:ELITE_Phoebe],
+            [:ELITE_Shauntal],
+            [:LEADER_Allister]
+          ],
+
+    steel = [
+            [:LEADER_Jasmine],
+            [:LEADER_Byron],
+            [:ELITE_Wikstrom],
+            [:ELITE_Molayne]
+          ],
+        
+    fire = [
+            [:LEADER_Blaine],
+            [:LEADER_Flannery],
+            [:LEADER_Chili],
+            [:CAPTAIN_Kiawe],
+            [:ELITE_Flint],
+            [:ELITE_Malva],
+            [:LEADER_Kabu]
+          ],
+
+    water = [
+            [:LEADER_Misty],
+            [:LEADER_Juan],
+            [:LEADER_Wake],
+            [:LEADER_Cress],
+            [:LEADER_Marlon],
+            [:CAPTAIN_Lana],
+            [:ELITE_Siebold],
+            [:LEADER_Nessa]
+          ],
+        
+    grass = [
+            [:LEADER_Erika],
+            [:LEADER_Gardenia],
+            [:LEADER_Cilan],
+            [:LEADER_Ramos],
+            [:CAPTAIN_Mallow],
+            [:LEADER_Milo]
+          ],
+
+    electric = [
+            [:LEADER_Surge],
+            [:LEADER_Wattson],
+            [:LEADER_Volkner],
+            [:LEADER_Elesa],
+            [:LEADER_Clemont],
+            [:CAPTAIN_Sophocles],
+            [],
+            []
           ],
 
     psychic = [
-            [:LEADER_Sabrina]
+            [:LEADER_Sabrina],
+            [:LEADER_Tate],
+            [:LEADER_Liza],
+            [:LEADER_Olympia],
+            [:ELITE_Will],
+            [:ELITE_Lucian],
+            [:ELITE_Caitlin],
+            [:ELITE_Avery]
           ],
-          
-    fire = [
-            [:LEADER_Blaine]
+        
+    ice = [
+            [:LEADER_Pryce],
+            [:LEADER_Candice],
+            [:LEADER_Brycen],
+            [:LEADER_Wulfric],
+            [:ELITE_Lorelei],
+            [:LEADER_Melony],
+            [:ELITE_Glacia]
           ],
-          
-    ground = [
-            [:LEADER_Giovanni]
+        
+    dragon = [
+            [:LEADER_Clair],
+            [:LEADER_Drayden],
+            [:LEADER_Raihan],
+            [:ELITE_Lance],
+            [:ELITE_Drake],
+            [:ELITE_Drasna]
+          ],
+        
+    dark = [
+            [:ELITE_Karen],
+            [:ELITE_Sidney],
+            [:LEADER_Piers],
+            [:ELITE_Grimsley]
+          ],
+        
+    fairy = [
+            [:LEADER_Valerie],
+            [:CAPTAIN_Mina],
+            [:LEADER_Opal]
           ]
   ]
 
@@ -515,7 +648,7 @@ def pbSummitMainTrainer
     end
   end
 
-  $game_map.battleback_name => bg
+  $game_map.battleback_name = bg
 
   TrainerBattle.start(type, name, version)
 
