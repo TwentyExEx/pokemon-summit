@@ -75,8 +75,8 @@ module TrainerIntros
 	}
 	
 	LEADER_Clair = {
-		:meeting => "I am Clair. The world's best Dragon-type master. I will use my full power against any opponent!",
-		:rematch => "...You are here. Now let's battle!"
+		:meeting => "\\rI am Clair. The world's best Dragon-type master. I will use my full power against any opponent!",
+		:rematch => "\\r...You are here. Now let's battle!"
 	}
 	
 	LEADER_Roxanne = {
@@ -95,18 +95,18 @@ module TrainerIntros
 	}
 	
 	LEADER_Flannery = {
-		:meeting => "The way to get the most out of the strength you and your Pokémon have acquired is to not push too hard and just be yourself! So, I'll show you how to do that right now, OK?",
-		:rematch => "Let's exchange superhot moves in another battle!"
+		:meeting => "\\rThe way to get the most out of the strength you and your Pokémon have acquired is to not push too hard and just be yourself! So, I'll show you how to do that right now, OK?",
+		:rematch => "\\rLet's exchange superhot moves in another battle!"
 	}
 	
 	LEADER_Norman = {
-		:meeting => "I lost to my own child... I rethought everything about myself, so now there is no way I can lose! I'll do everything in my power to win! You'd better give it your best shot, too!",
-		:rematch => "You better give it your best shot!"
+		:meeting => "\\bI lost to my own child... I rethought everything about myself, so now there is no way I can lose! I'll do everything in my power to win! You'd better give it your best shot, too!",
+		:rematch => "\\bYou better give it your best shot!"
 	}
 	
 	LEADER_Winona = {
-		:meeting => "I have become one with bird Pokémon and have soared the skies... However grueling the battle, we have triumphed with grace... Witness the elegant choreography of my Pokémon and I!",
-		:rematch => "We humans can never escape gravity's pull on the ground. But by striving for excellence, we have the power to soar! Please, allow me to see your power at full flight!"
+		:meeting => "\\rI have become one with bird Pokémon and have soared the skies... However grueling the battle, we have triumphed with grace... Witness the elegant choreography of my Pokémon and I!",
+		:rematch => "\\rWe humans can never escape gravity's pull on the ground. But by striving for excellence, we have the power to soar! Please, allow me to see your power at full flight!"
 	}
 	
 	LEADER_Tate = {
