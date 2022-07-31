@@ -651,6 +651,7 @@ def pbSummitBracketUnlock
   $Trainer.money += 700
   pbMessage("\\G\\rYou have earned $700 for your performance.")
   pbMessage(_INTL("\\rYou have also successfully unlocked the {1}!",bracketunlocked))
+  $game_variables[29] = [] # Clear previous bracket selection
 end
 
 def pbSummitPrepBattle
