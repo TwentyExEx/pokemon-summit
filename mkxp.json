@@ -169,7 +169,7 @@
     // fullscreen
     // (default: disabled)
     //
-    "anyAltToggleFS": false,
+    "anyAltToggleFS": true,
 
 
     // Enable F12 game reset
