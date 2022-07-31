@@ -169,7 +169,7 @@
     // fullscreen
     // (default: disabled)
     //
-    // "anyAltToggleFS": false,
+    "anyAltToggleFS": false,
 
 
     // Enable F12 game reset
@@ -348,7 +348,7 @@
       "x": "JumpUp",
       "y": "JumpDown",
       "z": "Special",
-      "l": "(unused)",
+      "l": "Speed Up",
       "r": "(unused)"
     }
 
