@@ -438,6 +438,144 @@ def pbSummitPrepMainTrainer(bracket)
         $game_map.events[1].pattern = 1
       end
   end
+  poketypes = ["normal", "fighting", "flying", "poison", "ground", "rock", "bug", "ghost", "steel", "fire", "water", "grass", "electric", "psychic", "ice", "dragon", "dark", "fairy"]
+
+  $trbytype = [
+    normal = [
+      :CAPTAIN_Ilima,
+      :ELITE_Birch,
+      :ELITE_Elm,
+      :ELITE_Juniper,
+      :ELITE_N,
+      :ELITE_Oak,
+      :ELITE_Sonia,
+      :ELITE_Sycamore,
+      :ELITE_Trevor,
+      :LEADER_Cheren,
+      :LEADER_Lenora,
+      :LEADER_Norman,
+      :LEADER_Whitney],       
+    fighting = [
+      :CHAMPION_Kukui,
+      :ELITE_Bruno,
+      :ELITE_Bruno2,
+      :ELITE_Hala,
+      :ELITE_Marshal,
+      :LEADER_Brawly,
+      :LEADER_Chuck,
+      :LEADER_Maylene,
+      :LEADER_Bea,
+      :LEADER_Korrina],      
+    flying = [
+      :LEADER_Falkner,
+      :LEADER_Winona,
+      :LEADER_Skyla,
+      :ELITE_Kahili],
+    poison = [
+      :LEADER_Janine,
+      :LEADER_Roxie,
+      :ELITE_Koga,
+      :ELITE_Klara],
+    ground = [
+      :LEADER_Giovanni,
+      :LEADER_Clay,
+      :ELITE_Bertha],
+    rock = [
+      :LEADER_Brock,
+      :LEADER_Roxanne,
+      :LEADER_Roark,
+      :LEADER_Grant,
+      :ELITE_Olivia], 
+    bug = [
+        :LEADER_Bugsy,
+        :LEADER_Burgh,
+        :LEADER_Viola,
+        :ELITE_Aaron],
+    ghost = [
+        :LEADER_Morty,
+        :LEADER_Fantina,
+        :CAPTAIN_Acerola,
+        :ELITE_Agatha,
+        :ELITE_Phoebe,
+        :ELITE_Shauntal,
+        :LEADER_Allister],
+    steel = [
+        :LEADER_Jasmine,
+        :LEADER_Byron,
+        :ELITE_Wikstrom,
+        :ELITE_Molayne],
+    fire = [
+        :LEADER_Blaine,
+        :LEADER_Flannery,
+        :LEADER_Chili,
+        :CAPTAIN_Kiawe,
+        :ELITE_Flint,
+        :ELITE_Malva,
+        :LEADER_Kabu],
+    water = [
+        :LEADER_Misty,
+        :LEADER_Juan,
+        :LEADER_Wake,
+        :LEADER_Cress,
+        :LEADER_Marlon,
+        :CAPTAIN_Lana,
+        :ELITE_Siebold,
+        :LEADER_Nessa],
+    grass = [
+        :LEADER_Erika,
+        :LEADER_Gardenia,
+        :LEADER_Cilan,
+        :LEADER_Ramos,
+        :CAPTAIN_Mallow,
+        :LEADER_Milo],
+    electric = [
+        :LEADER_Surge,
+        :LEADER_Wattson,
+        :LEADER_Volkner,
+        :LEADER_Elesa,
+        :LEADER_Clemont,
+        :CAPTAIN_Sophocles],
+    psychic = [
+        :LEADER_Sabrina,
+        :LEADER_Tate,
+        :LEADER_Liza,
+        :LEADER_Olympia,
+        :ELITE_Will,
+        :ELITE_Lucian,
+        :ELITE_Caitlin,
+        :ELITE_Avery],
+    ice = [
+        :LEADER_Pryce,
+        :LEADER_Candice,
+        :LEADER_Brycen,
+        :LEADER_Wulfric,
+        :ELITE_Lorelei,
+        :LEADER_Melony,
+        :ELITE_Glacia],
+    dragon = [
+        :LEADER_Clair,
+        :LEADER_Drayden,
+        :LEADER_Raihan,
+        :ELITE_Lance,
+        :ELITE_Drake,
+        :ELITE_Drasna],
+    dark = [
+        :ELITE_Karen,
+        :ELITE_Sidney,
+        :LEADER_Piers,
+        :ELITE_Grimsley],
+    fairy = [
+        :LEADER_Valerie,
+        :CAPTAIN_Mina,
+        :LEADER_Opal]
+  ]
+
+  for i in 0...$trbytype.size
+    if $trbytype[i].include?(opponent[0].to_sym)
+      $bg = poketypes[i]
+      break
+    end
+  end
 end
 
 def pbSummitTestIntro # Debug
@@ -466,6 +604,53 @@ def pbSummitAnnounceMainTrainer
     ["#{opp} is looking ready for a intense fight!","Here comes Challenger #{$player.name} to give them what they want!"],
     ["We got a special one today, folks!","Challenger #{$player.name}, up against the incredible #{opp}!"]
   ]
+  
+  case $bg.to_s.downcase
+    when "normal"
+      typemessages = [
+          ["Their Pokémon may be Normal, but #{opp} is nothing but extraordinary!","Challenger #{$player.name} really has a tough fight ahead!"],
+          ["Don't turn off your TV sets folks, Normal-Types can surprise you!","You can count on #{opp} and Challenger #{$player.name} putting on a show! "],
+          ["#{opp}, master of Normal-Type Pokémon, is here to fight!","They are tough, but Challenger #{$player.name} has a Fighting chance!"]
+    ] 
+    when "fighting"
+      typemessages = [
+          ["Straight from the dojo, #{opp} is here to show us the ropes!","Challenger #{$player.name} better bring their best!"],
+          ["With Pokémon that can chop right through concrete, #{opp} enters the ring!","Will this force prove too strong for Challenger #{$player.name}?"],
+          ["#{opp} has a whole team of intense Fighting-Type Pokémon","Challenger #{$player.name} would need to be a Psychic to break down this trainer!"]
+    ]
+    when "flying"
+      typemessages = [
+          ["Watch out above Challenger #{$player.name}!","#{opp} swoops into the arena!"],
+          ["#{opp} takes to the skies to fight Challenger #{$player.name} with their Flying Pokémon!","The cameramen will need a break after this one!"],
+          ["With all of their Flying-Type Pokémon, it'll be hard to catch #{opp} off guard!","Will Challenger #{$player.name} find a way to Rock their foundations?"]
+    ]
+    when "bug"
+      typemessages = [
+          ["Oh my... so many Bug Pokémon...","I'm sorry Challenger #{$player.name} and #{opp}, I just can't watch this one"],
+          ["#{opp} has a whole team of creepy-crawly Bug Pokémon!","I don't know how Challenger #{$player.name} can be in the same room..."],
+          ["I try not to be bias, but the Bug-Type Pokémon of #{opp} give me no choice.","Send 'em Flying, Challenger #{$player.name}"]
+      ]
+    when "ghost"
+      typemessages = [
+          ["Quiet whispers fill the room as the haunting battle between Challenger #{$player.name} and #{opp} begins!"],
+          ["Challenger #{$player.name} has entered the arena, looking confident and ready to fight!","However, #{opp} has a whole lot of spirit!"],
+          ["#{opp} is here to terrify with their horde of Ghost-Type Pokémon!","Times ahead certainly look Dark for Challenger #{$player.name}!"]
+      ]
+    when "steel"
+      typemessages = [
+          ["Shining of brilliant silver, #{opp} and their Steel-Type Pokémon are here to put pressure on Challenger #{$player.name} and their team!"],
+          ["Challenger #{$player.name} vs #{opp} live on your screens in a moment.","This battle will be metal!"],
+          ["With their sturdy Steel-Type Pokémon, #{opp} has come to shake things up.","Challenger #{$player.name} will have no choice but to hit the Ground running!"],
+      ]
+    when "fire"
+      typemessages = [
+          ["With a flaming fury, #{opp} bursts onto our screens!","Can Challenger #{$player.name} find a way to control the flames?"],
+          ["Challenger #{$player.name} vs #{opp} will surely make sparks fly.","Things are really heating up around here!"],
+          ["#{opp} makes training Fire-Type Pokémon look easy.","Challenger #{$player.name} is in troubled Water in this matchup!"],
+      ]
+  end
+  
+  messages.push(typemessages) if typemessages.is_a?(Array)
   message = rand(messages.length)
   pbMessage("\\xn[Announcer]\\ml[ANNOUNCER]\\c[9]#{messages[message][0]}")
   pbMessage("\\xn[Announcer]\\ml[ANNOUNCER]\\c[9]#{messages[message][1]}")
@@ -498,148 +683,10 @@ def pbSummitMainTrainer
     $DiscordRPC.state = "Arcade (Win Streak: #{$game_variables[43].to_int})"
   end
   $DiscordRPC.update
-  poketypes = ["normal", "fighting", "flying", "poison", "ground", "rock", "bug", "ghost", "steel", "fire", "water", "grass", "electric", "psychic", "ice", "dragon", "dark", "fairy"]
-
-  trbytype = [
-    normal = [
-    :CAPTAIN_Ilima,
-    :ELITE_Birch,
-    :ELITE_Elm,
-    :ELITE_Juniper,
-    :ELITE_N,
-    :ELITE_Oak,
-    :ELITE_Sonia,
-    :ELITE_Sycamore,
-    :ELITE_Trevor,
-    :LEADER_Cheren,
-    :LEADER_Lenora,
-    :LEADER_Norman,
-    :LEADER_Whitney],       
-    fighting = [
-            :CHAMPION_Kukui,
-            :ELITE_Bruno,
-            :ELITE_Bruno2,
-            :ELITE_Hala,
-            :ELITE_Marshal,
-            :LEADER_Brawly,
-            :LEADER_Chuck,
-            :LEADER_Maylene,
-            :LEADER_Bea,
-            :LEADER_Korrina],      
-    flying = [
-            :LEADER_Falkner,
-            :LEADER_Winona,
-            :LEADER_Skyla,
-            :ELITE_Kahili],
-    poison = [
-            :LEADER_Janine,
-            :LEADER_Roxie,
-            :ELITE_Koga,
-            :ELITE_Klara],
-    ground = [
-            :LEADER_Giovanni,
-            :LEADER_Clay,
-            :ELITE_Bertha],
-    rock = [
-            :LEADER_Brock,
-            :LEADER_Roxanne,
-            :LEADER_Roark,
-            :LEADER_Grant,
-            :ELITE_Olivia], 
-    bug = [
-            :LEADER_Bugsy,
-            :LEADER_Burgh,
-            :LEADER_Viola,
-            :ELITE_Aaron],
-    ghost = [
-            :LEADER_Morty,
-            :LEADER_Fantina,
-            :CAPTAIN_Acerola,
-            :ELITE_Agatha,
-            :ELITE_Phoebe,
-            :ELITE_Shauntal,
-            :LEADER_Allister],
-    steel = [
-            :LEADER_Jasmine,
-            :LEADER_Byron,
-            :ELITE_Wikstrom,
-            :ELITE_Molayne],
-    fire = [
-            :LEADER_Blaine,
-            :LEADER_Flannery,
-            :LEADER_Chili,
-            :CAPTAIN_Kiawe,
-            :ELITE_Flint,
-            :ELITE_Malva,
-            :LEADER_Kabu],
-    water = [
-            :LEADER_Misty,
-            :LEADER_Juan,
-            :LEADER_Wake,
-            :LEADER_Cress,
-            :LEADER_Marlon,
-            :CAPTAIN_Lana,
-            :ELITE_Siebold,
-            :LEADER_Nessa],
-    grass = [
-            :LEADER_Erika,
-            :LEADER_Gardenia,
-            :LEADER_Cilan,
-            :LEADER_Ramos,
-            :CAPTAIN_Mallow,
-            :LEADER_Milo],
-    electric = [
-            :LEADER_Surge,
-            :LEADER_Wattson,
-            :LEADER_Volkner,
-            :LEADER_Elesa,
-            :LEADER_Clemont,
-            :CAPTAIN_Sophocles],
-    psychic = [
-            :LEADER_Sabrina,
-            :LEADER_Tate,
-            :LEADER_Liza,
-            :LEADER_Olympia,
-            :ELITE_Will,
-            :ELITE_Lucian,
-            :ELITE_Caitlin,
-            :ELITE_Avery],
-    ice = [
-            :LEADER_Pryce,
-            :LEADER_Candice,
-            :LEADER_Brycen,
-            :LEADER_Wulfric,
-            :ELITE_Lorelei,
-            :LEADER_Melony,
-            :ELITE_Glacia],
-    dragon = [
-            :LEADER_Clair,
-            :LEADER_Drayden,
-            :LEADER_Raihan,
-            :ELITE_Lance,
-            :ELITE_Drake,
-            :ELITE_Drasna],
-    dark = [
-            :ELITE_Karen,
-            :ELITE_Sidney,
-            :LEADER_Piers,
-            :ELITE_Grimsley],
-    fairy = [
-            :LEADER_Valerie,
-            :CAPTAIN_Mina,
-            :LEADER_Opal]
-  ]
-
-  for i in 0...trbytype.size
-    if trbytype[i].include?(type.to_sym)
-      bg = poketypes[i]
-      break
-    end
-  end
 
   if $game_variables[35] == "challenge"
-    setBattleRule("backdrop", bg.to_s)
-    setBattleRule("base", bg.to_s)
+    setBattleRule("backdrop", $bg.to_s)
+    setBattleRule("base", $bg.to_s)
   end
   
   TrainerBattle.start(type, name, version)
