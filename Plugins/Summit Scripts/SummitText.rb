@@ -250,7 +250,7 @@ module TrainerIntros
 	}
 	
 	LEADER_Clemont = {
-		:meeting => "\\bThe name's Clemont! I like my Pokémon battles how I like my inventions—high-voltage!",
+		:meeting => "\\bThe name's Clemont! I like my Pokémon battles how I like my inventions--high-voltage!",
 		:rematch => "\\bOh! I'm glad that we got to meet yet again like this!"
 	}
 	
@@ -270,7 +270,7 @@ module TrainerIntros
 	}
 	
 	CAPTAIN_Ilima = {
-		:meeting => "\\bIt's not battle results that interest me. Rather, it's the carefully-thought-out strategies or novel tactics employed by Trainers. How those plans affect one's opponent and influence the outcome of battles—that is where my interest lies!",
+		:meeting => "\\bIt's not battle results that interest me. Rather, it's the carefully-thought-out strategies or novel tactics employed by Trainers. How those plans affect one's opponent and influence the outcome of battles--that is where my interest lies!",
 		:rematch => "\\bThere are so many amazing discoveries yet to be made! Someday I hope to share them with everyone!"
 	}
 	

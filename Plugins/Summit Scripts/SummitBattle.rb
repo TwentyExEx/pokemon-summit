@@ -1,4 +1,134 @@
 $bracketnames = ["Kanto Leaders", "Johto Leaders", "Hoenn Leaders", "Sinnoh Leaders", "Unova Leaders", "Kalos Leaders", "Alola Captains", "Galar Leaders"]
+$poketypes = ["normal", "fighting", "flying", "poison", "ground", "rock", "bug", "ghost", "steel", "fire", "water", "grass", "electric", "psychic", "ice", "dragon", "dark", "fairy"]
+$trbytype = [
+  normal = [
+    :CAPTAIN_Ilima,
+    :ELITE_Birch,
+    :ELITE_Elm,
+    :ELITE_Juniper,
+    :ELITE_N,
+    :ELITE_Oak,
+    :ELITE_Sonia,
+    :ELITE_Sycamore,
+    :ELITE_Trevor,
+    :LEADER_Cheren,
+    :LEADER_Lenora,
+    :LEADER_Norman,
+    :LEADER_Whitney],       
+  fighting = [
+    :CHAMPION_Kukui,
+    :ELITE_Bruno,
+    :ELITE_Bruno2,
+    :ELITE_Hala,
+    :ELITE_Marshal,
+    :LEADER_Brawly,
+    :LEADER_Chuck,
+    :LEADER_Maylene,
+    :LEADER_Bea,
+    :LEADER_Korrina],      
+  flying = [
+    :LEADER_Falkner,
+    :LEADER_Winona,
+    :LEADER_Skyla,
+    :ELITE_Kahili],
+  poison = [
+    :LEADER_Janine,
+    :LEADER_Roxie,
+    :ELITE_Koga,
+    :ELITE_Klara],
+  ground = [
+    :LEADER_Giovanni,
+    :LEADER_Clay,
+    :ELITE_Bertha],
+  rock = [
+    :LEADER_Brock,
+    :LEADER_Roxanne,
+    :LEADER_Roark,
+    :LEADER_Grant,
+    :ELITE_Olivia], 
+  bug = [
+      :LEADER_Bugsy,
+      :LEADER_Burgh,
+      :LEADER_Viola,
+      :ELITE_Aaron],
+  ghost = [
+      :LEADER_Morty,
+      :LEADER_Fantina,
+      :CAPTAIN_Acerola,
+      :ELITE_Agatha,
+      :ELITE_Phoebe,
+      :ELITE_Shauntal,
+      :LEADER_Allister],
+  steel = [
+      :LEADER_Jasmine,
+      :LEADER_Byron,
+      :ELITE_Wikstrom,
+      :ELITE_Molayne],
+  fire = [
+      :LEADER_Blaine,
+      :LEADER_Flannery,
+      :LEADER_Chili,
+      :CAPTAIN_Kiawe,
+      :ELITE_Flint,
+      :ELITE_Malva,
+      :LEADER_Kabu],
+  water = [
+      :LEADER_Misty,
+      :LEADER_Juan,
+      :LEADER_Wake,
+      :LEADER_Cress,
+      :LEADER_Marlon,
+      :CAPTAIN_Lana,
+      :ELITE_Siebold,
+      :LEADER_Nessa],
+  grass = [
+      :LEADER_Erika,
+      :LEADER_Gardenia,
+      :LEADER_Cilan,
+      :LEADER_Ramos,
+      :CAPTAIN_Mallow,
+      :LEADER_Milo],
+  electric = [
+      :LEADER_Surge,
+      :LEADER_Wattson,
+      :LEADER_Volkner,
+      :LEADER_Elesa,
+      :LEADER_Clemont,
+      :CAPTAIN_Sophocles],
+  psychic = [
+      :LEADER_Sabrina,
+      :LEADER_Tate,
+      :LEADER_Liza,
+      :LEADER_Olympia,
+      :ELITE_Will,
+      :ELITE_Lucian,
+      :ELITE_Caitlin,
+      :ELITE_Avery],
+  ice = [
+      :LEADER_Pryce,
+      :LEADER_Candice,
+      :LEADER_Brycen,
+      :LEADER_Wulfric,
+      :ELITE_Lorelei,
+      :LEADER_Melony,
+      :ELITE_Glacia],
+  dragon = [
+      :LEADER_Clair,
+      :LEADER_Drayden,
+      :LEADER_Raihan,
+      :ELITE_Lance,
+      :ELITE_Drake,
+      :ELITE_Drasna],
+  dark = [
+      :ELITE_Karen,
+      :ELITE_Sidney,
+      :LEADER_Piers,
+      :ELITE_Grimsley],
+  fairy = [
+      :LEADER_Valerie,
+      :CAPTAIN_Mina,
+      :LEADER_Opal]
+]
 
 def pbSummitBracketSelection(group)
   trainerSelection = []
@@ -438,164 +568,33 @@ def pbSummitPrepMainTrainer(bracket)
         $game_map.events[1].pattern = 1
       end
   end
-  poketypes = ["normal", "fighting", "flying", "poison", "ground", "rock", "bug", "ghost", "steel", "fire", "water", "grass", "electric", "psychic", "ice", "dragon", "dark", "fairy"]
-
-  $trbytype = [
-    normal = [
-      :CAPTAIN_Ilima,
-      :ELITE_Birch,
-      :ELITE_Elm,
-      :ELITE_Juniper,
-      :ELITE_N,
-      :ELITE_Oak,
-      :ELITE_Sonia,
-      :ELITE_Sycamore,
-      :ELITE_Trevor,
-      :LEADER_Cheren,
-      :LEADER_Lenora,
-      :LEADER_Norman,
-      :LEADER_Whitney],       
-    fighting = [
-      :CHAMPION_Kukui,
-      :ELITE_Bruno,
-      :ELITE_Bruno2,
-      :ELITE_Hala,
-      :ELITE_Marshal,
-      :LEADER_Brawly,
-      :LEADER_Chuck,
-      :LEADER_Maylene,
-      :LEADER_Bea,
-      :LEADER_Korrina],      
-    flying = [
-      :LEADER_Falkner,
-      :LEADER_Winona,
-      :LEADER_Skyla,
-      :ELITE_Kahili],
-    poison = [
-      :LEADER_Janine,
-      :LEADER_Roxie,
-      :ELITE_Koga,
-      :ELITE_Klara],
-    ground = [
-      :LEADER_Giovanni,
-      :LEADER_Clay,
-      :ELITE_Bertha],
-    rock = [
-      :LEADER_Brock,
-      :LEADER_Roxanne,
-      :LEADER_Roark,
-      :LEADER_Grant,
-      :ELITE_Olivia], 
-    bug = [
-        :LEADER_Bugsy,
-        :LEADER_Burgh,
-        :LEADER_Viola,
-        :ELITE_Aaron],
-    ghost = [
-        :LEADER_Morty,
-        :LEADER_Fantina,
-        :CAPTAIN_Acerola,
-        :ELITE_Agatha,
-        :ELITE_Phoebe,
-        :ELITE_Shauntal,
-        :LEADER_Allister],
-    steel = [
-        :LEADER_Jasmine,
-        :LEADER_Byron,
-        :ELITE_Wikstrom,
-        :ELITE_Molayne],
-    fire = [
-        :LEADER_Blaine,
-        :LEADER_Flannery,
-        :LEADER_Chili,
-        :CAPTAIN_Kiawe,
-        :ELITE_Flint,
-        :ELITE_Malva,
-        :LEADER_Kabu],
-    water = [
-        :LEADER_Misty,
-        :LEADER_Juan,
-        :LEADER_Wake,
-        :LEADER_Cress,
-        :LEADER_Marlon,
-        :CAPTAIN_Lana,
-        :ELITE_Siebold,
-        :LEADER_Nessa],
-    grass = [
-        :LEADER_Erika,
-        :LEADER_Gardenia,
-        :LEADER_Cilan,
-        :LEADER_Ramos,
-        :CAPTAIN_Mallow,
-        :LEADER_Milo],
-    electric = [
-        :LEADER_Surge,
-        :LEADER_Wattson,
-        :LEADER_Volkner,
-        :LEADER_Elesa,
-        :LEADER_Clemont,
-        :CAPTAIN_Sophocles],
-    psychic = [
-        :LEADER_Sabrina,
-        :LEADER_Tate,
-        :LEADER_Liza,
-        :LEADER_Olympia,
-        :ELITE_Will,
-        :ELITE_Lucian,
-        :ELITE_Caitlin,
-        :ELITE_Avery],
-    ice = [
-        :LEADER_Pryce,
-        :LEADER_Candice,
-        :LEADER_Brycen,
-        :LEADER_Wulfric,
-        :ELITE_Lorelei,
-        :LEADER_Melony,
-        :ELITE_Glacia],
-    dragon = [
-        :LEADER_Clair,
-        :LEADER_Drayden,
-        :LEADER_Raihan,
-        :ELITE_Lance,
-        :ELITE_Drake,
-        :ELITE_Drasna],
-    dark = [
-        :ELITE_Karen,
-        :ELITE_Sidney,
-        :LEADER_Piers,
-        :ELITE_Grimsley],
-    fairy = [
-        :LEADER_Valerie,
-        :CAPTAIN_Mina,
-        :LEADER_Opal]
-  ]
-
+  
   for i in 0...$trbytype.size
     if $trbytype[i].include?(opponent[0].to_sym)
-      $bg = poketypes[i]
+      $bg = $poketypes[i]
       break
     end
   end
 end
 
 def pbSummitTestIntro # Debug
-    kanto = [
-    ["LEADER_Viola","Viola",0],
-    ["LEADER_Grant","Grant",0],
-    ["LEADER_Korrina","Korrina",0],
-    ["LEADER_Ramos","Ramos",0],
-    ["LEADER_Valerie","Valerie",0],
+    testgroup = [
+    ["LEADER_Wake","Crasher Wake",0],
+    ["LEADER_Roxie","Roxie",0],
     ["LEADER_Olympia","Olympia",0],
     ["LEADER_Clemont","Clemont",0],
-    ["LEADER_Wulfric","Wulfric",0],
-    ["LEADER_Chuck","Chuck",0],
-    ["LEADER_Chuck","Chuck",0],
-    ["LEADER_Chuck","Chuck",0]
+    ["LEADER_Wulfric","Wulfric",0]
   ]
-  for trainer in kanto
+  for trainer in testgroup
+    for i in 0...$trbytype.size
+      if $trbytype[i].include?(trainer[0].to_sym)
+        $bg = $poketypes[i]
+        break
+      end
+    end
   $game_variables[30] = trainer
-    pbSummitAnnounceMainTrainer
-    pbSummitMainTrainerSpeech
+  pbSummitAnnounceMainTrainer
+  pbSummitMainTrainerSpeech
   end
 end
 
@@ -652,11 +651,27 @@ def pbSummitAnnounceMainTrainer
           ["#{opp} makes training Fire-Type Pokémon look easy.","Challenger #{$player.name} is in troubled Water in this matchup!"],
       ]
   end
-  
-  messages.push(typemessages) if typemessages.is_a?(Array)
-  message = rand(messages.length)
-  pbMessage("\\xn[Announcer]\\ml[ANNOUNCER]\\c[9]#{messages[message][0]}")
-  pbMessage("\\xn[Announcer]\\ml[ANNOUNCER]\\c[9]#{messages[message][1]}")
+  num = rand(100)
+  if num < 50
+    set = "standard"
+    chosen = messages
+  else
+    if typemessages.is_a?(Array)
+      set = "type"
+      chosen = typemessages
+    else
+      set = "standard"
+      chosen = messages
+    end
+  end
+  loop do
+    @msgnum = rand(0...chosen.length)
+    newmessage = [set, @msgnum]
+    break if newmessage != $game_variables[45]
+  end
+  pbMessage("\\xn[Announcer]\\ml[ANNOUNCER]\\c[9]#{chosen[@msgnum][0]}")
+  pbMessage("\\xn[Announcer]\\ml[ANNOUNCER]\\c[9]#{chosen[@msgnum][1]}")
+  $game_variables[45] = [set, @msgnum]
 end
 
 def pbSummitMainTrainerSpeech
