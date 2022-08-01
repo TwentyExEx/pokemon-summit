@@ -110,6 +110,12 @@ def pbSummitBracketSelection(group)
       num = rand(0...(trainerlist.length))
       trainer = trainerlist[num]
       if !trainerSelection.include?(trainer)
+        if group == 2
+          if trainer[0] == ("LEADER_Tate")
+            trainerSelection.push(trainer) if !trainerSelection.include?("LEADER_Liza")
+          elsif trainer[0] == ("LEADER_Liza")
+            trainerSelection.push(trainer) if !trainerSelection.include?("LEADER_Tate")
+          end
         if group == 4
           if trainer[0] == ("LEADER_Lenora")
             trainerSelection.push(trainer) if !trainerSelection.include?("LEADER_Cheren")
@@ -644,7 +650,8 @@ def pbSummitBracketUnlock
   if $game_variables[41] == nil || 0
     $game_variables[41] = []
   end
-  $game_variables[41].push($game_variables[31])
+  $game_variables[41].push($game_variables[31]) # Add completed bracket to array
+  $game_variables[44].push($game_variables[29]) # Add trainers defeated to array
 
   pbMessage(_INTL("\\rCongratulations on defeating the {1}!",bracketwon))
   pbSEPlay("Slots coin")
