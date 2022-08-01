@@ -353,4 +353,260 @@ module TrainerIntros
 		:meeting => "\\rYou won't be able to escape when I freeze you solid. And after that... Well you'll see. I think you'll find my battle style is quite severe.",
 		:rematch => "\\rIt helps inspire my Gym Trainers if I participate in this tournament from time to time! My only choice is to keep aiming for that grand victory!"
 	}
+
+	BOSS_Giovanni = {
+		:meeting => "\\bKeep your nose out of grown-up matters... Or experience a world of pain!",
+		:rematch => "\\bFor your insolence, you will feel a world of pain!"
+	}
+	
+	BOSS_Maxie = {
+		:meeting => "\\bI can't allow an ignorant child like you to get in our way. I, Maxie, will show you the consequences of meddling!",
+		:rematch => "\\bBrace yourself for my ultimate attack! Fuhahaha!"
+	}
+
+	BOSS_Archie = {
+		:meeting => "\\bWell then, you little scamp... It's the rope's end for you and your Pokémon!",
+		:rematch => "\\bThere's no stopping us!"
+	}
+	
+	BOSS_Cyrus = {
+		:meeting => "\\bI will not let anyone get in my way...",
+		:rematch => "\\bHow foolish..."
+	}
+
+	BOSS_Ghetsis = {
+		:meeting => "\\bVery well, then... All obstacles to my ambitions must be removed!",
+		:rematch => "\\bMust you insist on interfering with my plans?"
+	}
+	
+	BOSS_Lysandre = {
+		:meeting => "\\bThe future you want, or the future I want... Let us see which one is more deserving, shall we?",
+		:rematch => "\\bThis time, I won't lose."
+	}
+	
+	BOSS_Guzma = {
+		:meeting => "\\bWanna see what destruction looks like? Here it is in human form—it's your boy Guzma!",
+		:rematch => "\\bIt's time I put out your fire at the source!"
+	}
+
+	BOSS_Rose = {
+		:meeting => "\\bYou must understand. I can't let you interfere with my plan to protect the future of Galar!",
+		:rematch => "\\bLet's see your Galar League potential."
+	}
+	
+	ELITE_Lorelei = {
+		:meeting => "\\rYour Pokémon will be at my mercy when they are frozen solid. Are you ready?",
+		:rematch => "\\rHey, fantastic timing! I was just thinking how I'd like to battle you. I hope you're ready."
+	}
+	
+	ELITE_Bruno = {
+		:meeting => "\\bWe will grind you down with our superior power! Hoo hah!",
+		:rematch => "\\bIt's time to show you the power of my Fighting-type Pokémon, who I've been training just as hard as you've trained your team, surely!"
+	}
+	
+	ELITE_Bruno2 = {
+		:meeting => "\\bWe will grind you down with our superior power! Hoo hah!",
+		:rematch => "\\bIt's time to show you the power of my Fighting-type Pokémon, who I've been training just as hard as you've trained your team, surely!"
+	}
+	
+	ELITE_Agatha = {
+		:meeting => "\\rI'm Agatha, of the Indigo Elite Four! Let's see what you can do, child!",
+		:rematch => "\\rSo you've come! It's not in my character to lose over and over. Give this battle everything you've got!"
+	}
+
+	ELITE_Lance = {
+		:meeting => "\\bWell, are you ready to lose? Your World Summit challenge ends with me.",
+		:rematch => "\\bI'd feel ashamed to call myself Lance the Dragon Trainer if I didn't challenge you to a battle again!"
+	}
+	
+	ELITE_Will = {
+		:meeting => "\\bI have trained all around the world, making my Psychic-type Pokémon powerful. Losing is not an option!",
+		:rematch => "\\bI have observed your battle techniques. I'm ready for you!"
+	}
+	
+	ELITE_Koga = {
+		:meeting => "\\bPrepare to be the victim of my sinister techniques!",
+		:rematch => "\\bDespair as you feel the creeping horror of Poison-type Pokémon!"
+	}
+	
+	ELITE_Karen = {
+		:meeting => "\\rI'm known for my overpowering tactics. Think you can take them? Just try to entertain me. Let's go.",
+		:rematch => "\\rYou've assembled a charming team. Our battle should be a good one."
+	}
+	
+	ELITE_Sidney = {
+		:meeting => "\\bI like that look you're giving me. I guess you'll give me a good match.",
+		:rematch => "\\bWith the strength you've gained, we can battle with no holds barred!"
+	}
+	
+	ELITE_Phoebe = {
+		:meeting => "\\rThe bond I developed with my Pokémon is extremely tight. Come on! Just try and see if you can even inflict damage.",
+		:rematch => "\\rAhaha! I've been waiting for you!"
+	}
+	
+	ELITE_Glacia = {
+		:meeting => "\\rI've traveled from Hoenn so that I may hone my Ice-type moves. But all I have seen are challenges by weak Trainers and their Pokémon. I wonder what you will show me.",
+		:rematch => "\\rAhaha! I've been waiting for you!"
+	}
+	
+	ELITE_Drake = {
+		:meeting => "\\bI am the last of the Hoenn Elite Four, Drake the Dragon master! Do you know what it takes to prevail?",
+		:rematch => "\\bOh, I've been waitin' for you! My Pokémon and I are going to show you everything we've got!"
+	}
+	
+	ELITE_Aaron = {
+		:meeting => "\\bWould you like to know why I take on challengers here? It's because I want to become perfect, just like my bug Pokémon!",
+		:rematch => "\\bBug Pokémon are nasty-mean, and yet they're beautiful, too. Ok! Let me take you on!"
+	}
+	
+	ELITE_Bertha = {
+		:meeting => "\\rI'm Bertha. I have a preference for Ground-type Pokémon. Well, would you show this old lady how much you've learned?",
+		:rematch => "\\rWell, would you show this old lady how much more you've learned?"
+	}
+	
+	ELITE_Flint = {
+		:meeting => "\\bYou're facing a Fire-type Pokémon user with me. Let Flint see how hot your spirit burns!",
+		:rematch => "\\bBattles are clashes of the burning spirit of Pokémon. Battles aren't about appearances or what's weak or strong. It all comes down to whether the combatants can burn hot or not."
+	}
+	
+	ELITE_Lucian = {
+		:meeting => "\\bAllow me to introduce myself. I am Lucian. I am a user of the Psychic type. I must say, you've already proven yourself to be outstanding by coming this far.",
+		:rematch => "\\bThey say I am the toughest of the Sinnoh Elite Four. I'm afraid I will have to go all out against you to live up to that reputation."
+	}
+
+	ELITE_Shauntal = {
+		:meeting => "\\rYou're a challenger, right? I'm the Unova Elite Four's Ghost-type Pokémon user, Shauntal, and I shall be your opponent.",
+		:rematch => "\\rI absolutely love writing about the close bonds between the Trainers and the Pokémon that I've competed against. Could I use you and your Pokémon as a subject?"
+	}
+	
+	ELITE_Marshal = {
+		:meeting => "\\bIt is my intention to test you--to take you to the limits of your strength. Kiai!",
+		:rematch => "\\bI thank you deeply for the chance for another round of combat against you."
+	}
+	
+	ELITE_Grimsley = {
+		:meeting => "\\bWhat will be determined here is which of us can absorb the opponent's light and shine... But who will decide that? It shall be I, Grimsley of the Unova Elite Four, and I will fulfill my duty to be your opponent.",
+		:rematch => "\\bLet us begin. And may the best Trainer win! Contests like this are proof that you are really living..."
+	}
+	
+	ELITE_Caitlin = {
+		:meeting => "\\rMake your best effort not to bore me with a yawn-inducing battle. Clear?",
+		:rematch => "\\rYou seem stronger than before... Do be sure not to bore me with a snooze-inducing battle, is that clear?"
+	}
+	
+	ELITE_Malva = {
+		:meeting => "\\rWelcome, challenger! I am Malva, and I shall be your opponent today.",
+		:rematch => "\\rOh, I can't tell you how happy I am to meet you again... I feel like my heart might just burst into flames. I'm burning up with my hatred for you, runt!"
+	}
+	
+	ELITE_Siebold = {
+		:meeting => "\\bI am Siebold of the Kalos Elite Four. Tell me, don't you think Pokémon battles are worthy of being called art?",
+		:rematch => "\\bThis is a path with no end. To seek to be the absolute best is an absurd goal."
+	}
+	
+	ELITE_Wikstrom = {
+		:meeting => "\\bWell met, young challenger! Verily am I the famed blade of hardened steel, Duke Wikstrom! Let the battle begin! En garde!",
+		:rematch => "\\bWith my magnificent Pokémon at my side, I will reveal the scope of Trainer achievement! Let us both give our word that our contest shall be fair and honorable."
+	}
+	
+	ELITE_Drasna = {
+		:meeting => "\\rOh goodness, hello to you! Facing opponents like you and your team will make my Pokémon grow like weeds!",
+		:rematch => "\\rOh, goodness, hello to you! I'm so glad you've joined us! I know that you're very strong. That will make this great fun!"
+	}
+	
+	ELITE_Hala = {
+		:meeting => "\\bI have been expecting you. Old Hala here will be going all out!",
+		:rematch => "\\bWell, this time I'm holding nothing back! Time for you to see what I can really do!"
+	}
+	
+	ELITE_Olivia = {
+		:meeting => "\\rWe're gonna give you guys everything we've got! And my partners are all adorable, rugged little Rock types!",
+		:rematch => "\\rNo introduction needed here. Time to battle me, Olivia!"
+	}
+	
+	ELITE_Molayne = {
+		:meeting => "\\bI'm Molayne, of the Alola Elite Four. My strength is like that of a supernova!",
+		:rematch => "\\bI'll gladly show you the skills of a Trainer who toughened up while adventuring alongside Kukui back in the day!"
+	}
+	
+	ELITE_Kahili = {
+		:meeting => "\\bI've been traveling the world to improve my skill as both a Trainer and as a golfer. Have a look at my fantastic Flying-type team!",
+		:rematch => "\\bSo, you came to battle me again! I'm coming for you, Challenger"
+	}
+	
+	ELITE_Klara = {
+		:meeting => "\\rI'll be nice and gentle... as I knock you out flat!",
+		:rematch => "\\rLet's set the record straight right here. I'll show you once and for all that I'm the better Trainer!"
+	}
+	
+	ELITE_Avery = {
+		:meeting => "\\bI'll be using my psychic powers to test your strength! Come on now.. Don't overexert yourself!",
+		:rematch => "\\bI warned you about my psychic powers, and now you'll experience them firsthand!"
+	}
+	
+	ELITE_Mustard = {
+		:meeting => "\\bAll right! Let's get this show started! This is the best way to get to know new people!",
+		:rematch => "\\bIt's been a while since the last time I battled like this...but I think you can handle it!"
+	}
+	
+	CHAMPION_Leon = {
+		:meeting => "\\bI've been waiting for you. I have been watching you rise to every challenge ahead of you. Now, how about you take on Champion Leon with everything that you've got?",
+		:rematch => "\\bLet's make this a final match that'll go down in history! No! A match that'll change the world forever!"
+	}
+	
+	CHAMPION_Hau = {
+		:meeting => "\\bHey! What kinds of Pokémon do you like? I've got too many favorites! ... Oh yeah! I'm Hau! I'm the current Champion of Alola, lets have a monumental fight!",
+		:rematch => "\\bThe funnest thing in the world has got to be to battle all out, you know? Seriously! So watch out 'cause me and my awesome team are definitely winning this one!"
+	}
+	
+	CHAMPION_Kukui = {
+		:meeting => "\\bAlola! The name's Kukui. I'm a Professor from Alola and also the founder of the Alola Pokémon League. Which makes me the first Champion of Alola!",
+		:rematch => "\\bI expect you to show me some intense moves and real heart-stopping tactics in this battle! Let's have a battle worthy of this moment!"
+	}
+	
+	CHAMPION_Diantha = {
+		:meeting => "\\rYou know, I'd really love to learn more about how a strong Trainer like you raises your Pokémon. As Kalos Champion and as Grand Duchess of the Battle Chateau, I, Diantha, challenge you.",
+		:rematch => "\\rI can't wait to see what you and your Pokémon are capable now that I know exactly what it is you've done already! I am the Champion, Diantha, and I accept your challenge."
+	}
+	
+	CHAMPION_Iris = {
+		:meeting => "\\rBrace yourself! I'm Iris, the Pokémon League Champion, and I'm going to defeat you!",
+		:rematch => "\\rThe Trainers who come here are Trainers who desire victory with every fiber of their being! If I battle with people like that, not only will I get stronger, my Pokémon will, too! This time however, I will not lose to you!"
+	}
+	
+	CHAMPION_Alder = {
+		:meeting => "\\bMy name is Alder. I'm the Unova Pokémon League's Former Champion. I show everyone how wonderful it is to move forward together with Pokémon. Competing like this is probably the best way to show everyone!",
+		:rematch => "\\bI've really been looking forward to deciding who's the strongest Pokémon Trainer in this tournament! Kiai!"
+	}
+	
+	CHAMPION_Cynthia = {
+		:meeting => "\\rOne look at you tells me many things about you. Together, you and your Pokémon overcame all the challenges you faced, however difficult. I, Cynthia, accept your challenge! There won't be any letup from me!",
+		:rematch => "\\rHave you been keeping well? The power you learned... I can feel it emanating from you. But that's enough talk. Let's get on with why you're here. As the Sinnoh Pokémon League Champion, I accept your challenge!"
+	}
+	
+	CHAMPION_Wallace = {
+		:meeting => "\\bAt times your Pokémon should dance like a spring breeze, and at times they should strike like lightning. I want to feel bedazzled by your masterful performance!",
+		:rematch => "\\bWho can most elegantly dance with their Pokémon? Show me right here and now!"
+	}
+	
+	CHAMPION_Steven = {
+		:meeting => "\\bMy name is Steven. I'm interested in rare Stones, so I travel here and there. I want you to come at me with all that you've learned. My Pokémon and I will respond in turn with all that we know!",
+		:rematch => "\\bNow then... There are no words left for us to exchange. We will understand one another through battle!"
+	}
+	
+	CHAMPION_Lance = {
+		:meeting => "\\bYou are brimming with love and trust toward Pokémon. I think we will be able to have a fantastic battle so, I, Lance the Dragon-type master, accept your challenge!",
+		:rematch => "\\bI knew that you, with your skills, would eventually reach me here.We will battle to determine who is the stronger of the two of us."
+	}
+	
+	CHAMPION_Blue = {
+		:meeting => "\\bI'll know if you are good or not by battling you right now. This is what I, Kanto's top-level Trainer, can really do!",
+		:rematch => "\\bYou're the real deal. You are a good Trainer. But I'm going to stop your journey right here. Show it to me—the true power of your Pokémon!"
+	}
+	
+	CHAMPION_Red = {
+		:meeting => "\\b...",
+		:rematch => "\\b..."
+	}
+	
 end
