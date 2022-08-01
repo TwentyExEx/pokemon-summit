@@ -157,10 +157,10 @@ def pbSummitBracketSelection(group)
           ]
     when 2 # Hoenn Leaders
           trainerlist = [
-            # ["LEADER_Roxanne","Roxanne",0],
-            # ["LEADER_Brawly","Brawly",0],
-            # ["LEADER_Wattson","Wattson",0],
-            # ["LEADER_Flannery","Flannery",0],
+            ["LEADER_Roxanne","Roxanne",0],
+            ["LEADER_Brawly","Brawly",0],
+            ["LEADER_Wattson","Wattson",0],
+            ["LEADER_Flannery","Flannery",0],
             ["LEADER_Norman","Norman",0],
             ["LEADER_Winona","Winona",0],
             ["LEADER_Tate","Tate",0],
@@ -352,6 +352,7 @@ def pbSummitPrepMainTrainer(bracket)
     end
   when 2 # Hoenn Leaders, add || num for Elite Hoenn
     $game_map.events[1].character_name = "trainer_Sheet3"
+    p opponent[0]
     case opponent[0].downcase
     when "leader_roxanne"
       $game_map.events[1].direction = 2
