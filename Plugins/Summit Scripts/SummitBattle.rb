@@ -618,10 +618,18 @@ end
 def pbSummitAnnounceMainTrainer
   opp = GameData::TrainerType.get($game_variables[30][0]).name.clone << " " << $game_variables[30][1]
   messages = [
-    ["Now, I've been looking forward to this matchup!","Challenger #{$player.name} and #{opp} in the same room, let alone battling for us!"],
-    ["Audience, strap in, this round is going to be incredible!","Challenger #{$player.name} vs #{opp}, starting in just a moment!"],
+    ["Now, I've been looking forward to this matchup.","Challenger #{$player.name} and #{opp} in the same room, let alone battling for us!?"],
+    ["Audience, strap in, this round is going to be incredible.","Challenger #{$player.name} vs #{opp}, starting in just a moment!"],
     ["#{opp} is looking ready for a intense fight!","Here comes Challenger #{$player.name} to give them what they want!"],
-    ["We got a special one today, folks!","Challenger #{$player.name}, up against the incredible #{opp}!"]
+    ["Don't turn off your television sets, dear viewers at home.","Challenger #{$player.name} is about to face the legendary #{opp}!"],
+    ["I can't believe my eyes, is #{opp} really in the building?","Sorry Challenger #{$player.name}, you are cool too."],
+    ["Challenger #{$player.name} vs #{opp}?","This is going to get ugly..."],
+    ["The energy in the arena grows evermore intense as Challenger #{$player.name} and #{opp} prepare their Pokémon."],
+    ["What kind of battle can we expect from Challenger #{$player.name} and #{opp} today?"],
+    ["The potential battle of the century quietly begins today between Challenger #{$player.name} and #{opp}."],
+    ["Everyone please welcome Challenger #{$player.name} and #{opp}!","There's no doubt that this is an important battle for both trainers."],
+    ["The once peaceful air is now turning thick with tension at the appearance of #{$player.name} and #{opp}."],
+    ["We got a special one today, folks.","Challenger #{$player.name}, up against the incredible #{opp}!"]
   ]
   
   case $bg.to_s.downcase
@@ -758,6 +766,10 @@ def pbSummitBracketUnlock
   pbMessage("\\G\\rYou have earned $700 for your performance.")
   pbMessage(_INTL("\\rYou have also successfully unlocked the {1}!",bracketunlocked))
   $game_variables[29] = [] # Clear previous bracket selection
+  if $game_variables == 3 # Sinnoh beat
+    $game_switches[39] = true
+    $game_switches[40] = true
+  end
 end
 
 def pbSummitPrepBattle

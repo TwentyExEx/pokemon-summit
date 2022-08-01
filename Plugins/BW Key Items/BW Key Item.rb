@@ -44,16 +44,16 @@
 class ShowPokemonSpriteScene
 
 def initialize(pokemon)
- @pokemon=pokemon.species.to_s
- case pokemon.form
-  when 0
-    @form=""
+ @pokemon=SummitPokeInfo.const_get(pokemon.to_s)[:species].to_s
+ @form=SummitPokeInfo.const_get(pokemon.to_s)[:form].to_s
+ case @form
+  when "0"
+    @dispform=""
   else
-    @form="_"
-    @form.concat(pokemon.form.to_s)
+    @dispform="_"
+    @dispform << @form
   end
-  @specform = @pokemon.clone << @form
-  @pokeinfo = pokemon
+ @specform = @pokemon.clone << @dispform
 end
 
 def pbStartScene
@@ -78,12 +78,12 @@ def pbStartScene
  @sprites["bg"].opacity=0
  
   if !@pokemon.is_a?(String)
-     pokemonname=_INTL("Graphics/Pokemon/Front/{1}{2}",@pokemon,@form)
+     pokemonname=_INTL("Graphics/Pokemon/Front/{1}",@specform)
     if !pbResolveBitmap(pokemonname)
-     pokemonname=_INTL("Graphics/Pokemon/Front/{1}{2}",@pokemon,@form)
+     pokemonname=_INTL("Graphics/Pokemon/Front/{1}",@specform)
     end
   else
-   pokemonname=_INTL("Graphics/Pokemon/Front/{1}{2}",@pokemon,@form)
+   pokemonname=_INTL("Graphics/Pokemon/Front/{1}",@specform)
    @fakepokemon=true
 end
 
@@ -171,16 +171,16 @@ end
   shakeItem
   shakeItem
   # Display message
-  case @form
+  case @dispform
     when ""
-      dispname = GameData::Species.get(@pokemon.to_sym).real_name
+      $dispname = GameData::Species.get(@pokemon.to_sym).real_name
     else
-      dispname = GameData::Species.get(@specform).form_name.clone
-      dispname << " "<< GameData::Species.get(@specform).real_name
+      $dispname = GameData::Species.get(@specform).form_name.clone
+      $dispname << " "<< GameData::Species.get(@specform).real_name
   end
-  pbMessage(_INTL("{1} obtained {2}!\\wtnp[60]\1",$Trainer.name,dispname))
+  pbMessage(_INTL("{1} obtained {2}!\\wtnp[60]\1",$Trainer.name,$dispname))
   # Register as obtained
-  $game_variables[42].push(@specform)
+  $game_variables[42].push(@pokemon)
   18.times do
   Graphics.update  
   @sprites["bg"].zoom_y-=0.15/2 
