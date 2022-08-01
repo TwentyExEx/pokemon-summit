@@ -40,7 +40,7 @@ def pbSummitVendingPokemon
       return false
       break
     else
-      pbShowPokemonSprite(@givepkmn)
+      pbShowPokemonSprite(pkmn)
       pbSummitGivePokemon(pkmn)
       return true
     end
