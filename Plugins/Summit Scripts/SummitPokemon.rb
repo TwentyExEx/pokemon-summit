@@ -137,10 +137,10 @@ def pbSummitGiveGiftPokemon
 end
 
 def pbSummitCallGift
-  if $game_switches[39] = true
+  if $game_switches[39] == true
     num = rand(1..100)
     if num < 25
-      $game_switches[40] = true
+      $game_switches[40] == true
       return true
     else
       return false
