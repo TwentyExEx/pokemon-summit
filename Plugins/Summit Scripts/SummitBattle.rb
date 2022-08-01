@@ -235,7 +235,7 @@ def pbSummitBracketSelection(group)
           ]
   end
 
-  until trainerSelection.length == 4 do
+  until trainerSelection.length == 5 do
     num = rand(0...(trainerlist.length))
     trainer = trainerlist[num]
     if !trainerSelection.include?(trainer)
@@ -352,7 +352,6 @@ def pbSummitPrepMainTrainer(bracket)
     end
   when 2 # Hoenn Leaders, add || num for Elite Hoenn
     $game_map.events[1].character_name = "trainer_Sheet3"
-    p opponent[0]
     case opponent[0].downcase
     when "leader_roxanne"
       $game_map.events[1].direction = 2
