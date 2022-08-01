@@ -123,12 +123,13 @@ def pbSummitGetStarterSet(region) # Unused
       pbSummitGivePokemon(:GRAPPLOCT)
   end
 end
-
-def pbSummitGiftPokemon
+def pbSummitGiveGiftPokemon
   size = $game_variables[44].length
   trainer = $game_variables[44][rand(0...size)]
   gift = SummitGifts.const_get(trainer.to_s)
   pkmn = pbSummitMakePokemon(gift[:species], gift[:form])
+  pbMessage("\\rHello, \\PN!")
+  pbMessage("#{gift[:name]} left this for you.")
   pbShowPokemonSprite(@givepkmn)
   pbSummitGivePokemon(pkmn)
 end

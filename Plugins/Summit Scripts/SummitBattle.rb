@@ -157,10 +157,10 @@ def pbSummitBracketSelection(group)
           ]
     when 2 # Hoenn Leaders
           trainerlist = [
-            ["LEADER_Roxanne","Roxanne",0],
-            ["LEADER_Brawly","Brawly",0],
-            ["LEADER_Wattson","Wattson",0],
-            ["LEADER_Flannery","Flannery",0],
+            # ["LEADER_Roxanne","Roxanne",0],
+            # ["LEADER_Brawly","Brawly",0],
+            # ["LEADER_Wattson","Wattson",0],
+            # ["LEADER_Flannery","Flannery",0],
             ["LEADER_Norman","Norman",0],
             ["LEADER_Winona","Winona",0],
             ["LEADER_Tate","Tate",0],
@@ -235,31 +235,48 @@ def pbSummitBracketSelection(group)
           ]
   end
 
-  for i in 0..4
-    loop do
-      num = rand(0...(trainerlist.length))
-      trainer = trainerlist[num]
-      if !trainerSelection.include?(trainer)
-        if group == 2
-          if trainer[0] == ("LEADER_Tate")
-            trainerSelection.push(trainer) if !trainerSelection.include?("LEADER_Liza")
-          elsif trainer[0] == ("LEADER_Liza")
-            trainerSelection.push(trainer) if !trainerSelection.include?("LEADER_Tate")
-          end
-        elsif group == 4
-          if trainer[0] == ("LEADER_Lenora")
-            trainerSelection.push(trainer) if !trainerSelection.include?("LEADER_Cheren")
-          elsif trainer[0] == ("LEADER_Cheren")
-            trainerSelection.push(trainer) if !trainerSelection.include?("LEADER_Lenora")
-          elsif trainer[0] == ("LEADER_Cress")
-            trainerSelection.push(trainer) if !trainerSelection.include?("LEADER_Marlon")
-          elsif trainer[0] == ("LEADER_Marlon")
-            trainerSelection.push(trainer) if !trainerSelection.include?("LEADER_Cress")
-          end
-        else
+  until trainerSelection.length == 4 do
+    num = rand(0...(trainerlist.length))
+    trainer = trainerlist[num]
+    if !trainerSelection.include?(trainer)
+      if group == 2 && trainer[0] == ("LEADER_Tate")
+        if !trainerSelection.include?(["LEADER_Liza","Liza",0])
           trainerSelection.push(trainer)
+        else
+          break
         end
-        break
+      elsif group == 2 && trainer[0] == ("LEADER_Liza")
+        if !trainerSelection.include?(["LEADER_Tate","Tate",0])
+          trainerSelection.push(trainer)
+        else
+          break
+        end
+      elsif group == 4 && trainer[0] == ("LEADER_Cheren")
+        if !trainerSelection.include?(["LEADER_Cheren","Cheren",0])
+          trainerSelection.push(trainer)
+        else
+          break
+        end
+      elsif group == 4 && trainer[0] == ("LEADER_Lenora")
+        if !trainerSelection.include?(["LEADER_Lenora","Lenora",0])
+          trainerSelection.push(trainer)
+        else
+          break
+        end
+      elsif group == 4 && trainer[0] == ("LEADER_Cress")
+        if !trainerSelection.include?(["LEADER_Cress","Cress",0])
+          trainerSelection.push(trainer)
+        else
+          break
+        end
+      elsif group == 4 && trainer[0] == ("LEADER_Marlon")
+        if !trainerSelection.include?(["LEADER_Marlon","Marlon",0])
+          trainerSelection.push(trainer)
+        else
+          break
+        end      
+      else
+        trainerSelection.push(trainer)
       end
     end
   end
@@ -335,6 +352,7 @@ def pbSummitPrepMainTrainer(bracket)
     end
   when 2 # Hoenn Leaders, add || num for Elite Hoenn
     $game_map.events[1].character_name = "trainer_Sheet3"
+    p opponent[0]
     case opponent[0].downcase
     when "leader_roxanne"
       $game_map.events[1].direction = 2
@@ -669,8 +687,9 @@ def pbSummitAnnounceMainTrainer
     newmessage = [set, @msgnum]
     break if newmessage != $game_variables[45]
   end
-  pbMessage("\\xn[Announcer]\\ml[ANNOUNCER]\\c[9]#{chosen[@msgnum][0]}")
-  pbMessage("\\xn[Announcer]\\ml[ANNOUNCER]\\c[9]#{chosen[@msgnum][1]}")
+  for i in chosen[@msgnum]
+    pbMessage("\\xn[Announcer]\\ml[ANNOUNCER]\\c[9]#{i}")
+  end
   $game_variables[45] = [set, @msgnum]
 end
 
@@ -731,7 +750,9 @@ def pbSummitBracketUnlock
   bracketwon = $bracketnames[$game_variables[31]-1]
   bracketunlocked = $bracketnames[$game_variables[31]]
   $game_variables[41] = $game_variables[31] # Change var to last completed bracket
-  $game_variables[44].push($game_variables[29]) # Add trainers defeated to array
+  for trainer in $game_variables[29]
+    $game_variables[44].push(trainer) # Add trainers defeated to array
+  end
 
   pbMessage(_INTL("\\rCongratulations on defeating the {1}!",bracketwon))
   pbSEPlay("Slots coin")
