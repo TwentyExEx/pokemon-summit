@@ -116,7 +116,7 @@ def pbSummitBracketSelection(group)
           elsif trainer[0] == ("LEADER_Liza")
             trainerSelection.push(trainer) if !trainerSelection.include?("LEADER_Tate")
           end
-        if group == 4
+        elsif group == 4
           if trainer[0] == ("LEADER_Lenora")
             trainerSelection.push(trainer) if !trainerSelection.include?("LEADER_Cheren")
           elsif trainer[0] == ("LEADER_Cheren")
@@ -647,10 +647,7 @@ end
 def pbSummitBracketUnlock
   bracketwon = $bracketnames[$game_variables[31]-1]
   bracketunlocked = $bracketnames[$game_variables[31]]
-  if $game_variables[41] == nil || 0
-    $game_variables[41] = []
-  end
-  $game_variables[41].push($game_variables[31]) # Add completed bracket to array
+  $game_variables[41] = $game_variables[31] # Change var to last completed bracket
   $game_variables[44].push($game_variables[29]) # Add trainers defeated to array
 
   pbMessage(_INTL("\\rCongratulations on defeating the {1}!",bracketwon))
@@ -739,984 +736,63 @@ def pbSummitChoosePokemon(tr_type, party_size = 3)
 
   case type
     when "youngster","gentleman"
-    trainerpkmn = [
-        [:RATICATE,0],
-        [:ARBOK,0],
-        [:FEAROW,0],
-        [:PIDGEOT,0],
-        [:SANDSLASH,0],
-        [:NIDOKING,0],
-        [:NIDOQUEEN,0],
-        [:GOLEM,0],
-        [:PRIMEAPE,0],
-        [:DUGTRIO,0],
-        [:FURRET,0],
-        [:NOCTOWL,0],
-        [:QUAGSIRE,0],
-        [:MIGHTYENA,0],
-        [:SWELLOW,0],
-        [:SHIFTRY,0],
-        [:LUDICOLO,0],
-        [:MANECTRIC,0],
-        [:SWALOT,0],
-        [:STARAPTOR,0],
-        [:KRICKETUNE,0],
-        [:LUXRAY,0],
-        [:SKUNTANK,0],
-        [:BIBAREL,0],
-        [:GASTRODON,0],
-        [:WATCHOG,0],
-        [:STOUTLAND,0],
-        [:SEISMITOAD,0],
-        [:SCOLIPEDE,0],
-        [:CONKELDURR,0],
-        [:UNFEZANT,0],
-        [:SAWSBUCK,0],
-        [:GALVANTULA,0],
-        [:TALONFLAME,0],
-        [:DIGGERSBY,0],
-        [:PYROAR,0],
-        [:GUMSHOOS,0],
-        [:VIKAVOLT,0],
-        [:RATICATE,1],
-        [:MUK,1],
-        [:LYCANROC,0],
-        [:ORBEETLE,0],
-        [:THIEVUL,0],
-        [:GREEDENT,0],
-        [:ELDEGOSS,0]
-      ]
-
+    trainerpkmn = [:RATICATE,:ARBOK,:FEAROW,:PIDGEOT,:SANDSLASH,:NIDOKING,:NIDOQUEEN,:GOLEM,:PRIMEAPE,:DUGTRIO,:FURRET,:NOCTOWL,:QUAGSIRE,:MIGHTYENA,:SWELLOW,:SHIFTRY,:LUDICOLO,:MANECTRIC,:SWALOT,:STARAPTOR,:KRICKETUNE,:LUXRAY,:SKUNTANK,:BIBAREL,:GASTRODON,:WATCHOG,:STOUTLAND,:SEISMITOAD,:SCOLIPEDE,:CONKELDURR,:UNFEZANT,:SAWSBUCK,:GALVANTULA,:TALONFLAME,:DIGGERSBY,:PYROAR,:GUMSHOOS,:VIKAVOLT,:RATICATE_ALOLA,:MUK_ALOLA,:LYCANROC_MIDDAY,:ORBEETLE,:THIEVUL,:GREEDENT,:ELDEGOSS]
     when "lass", "lady"
-    trainerpkmn = [
-        [:RATICATE,0],
-        [:ARBOK,0],
-        [:FEAROW,0],
-        [:PIDGEOT,0],
-        [:SANDSLASH,0],
-        [:NIDOKING,0],
-        [:NIDOQUEEN,0],
-        [:WIGGLYTUFF,0],
-        [:CLEFABLE,0],
-        [:VILEPLUME,0],
-        [:BELLOSSOM,0],
-        [:RAICHU,0],
-        [:PERSIAN,0],
-        [:FURRET,0],
-        [:QUAGSIRE,0],
-        [:AZUMARILL,0],
-        [:AMPHAROS,0],
-        [:GOLDUCK,0],
-        [:GRANBULL,0],
-        [:SHIFTRY,0],
-        [:LUDICOLO,0],
-        [:BRELOOM,0],
-        [:DELCATTY,0],
-        [:SWELLOW,0],
-        [:BIBAREL,0],
-        [:PACHIRISU,0],
-        [:LOPUNNY,0],
-        [:ROSERADE,0],
-        [:STARAPTOR,0],
-        [:WHIMSICOTT,0],
-        [:LILLIGANT,0],
-        [:LIEPARD,0],
-        [:SWOOBAT,0],
-        [:TOGEKISS,0],
-        [:SWANNA,0],
-        [:FLORGES,0],
-        [:DEDENNE,0],
-        [:DIGGERSBY,0],
-        [:KOMALA,0],
-        [:LYCANROC,2],
-        [:TOUCANNON,0],
-        [:TSAREENA,0],
-        [:ARAQUANID,0],
-        [:HATTERENE,0],
-        [:GRIMMSNARL,0],
-        [:DREDNAW,0],
-        [:ALCREMIE,0]
-        ]
-
-      when "bugcatcher"
-      trainerpkmn = [
-        [:BUTTERFREE,0],
-        [:BEEDRILL,0],
-        [:VENOMOTH,0],
-        [:PINSIR,0],
-        [:PARASECT,0],
-        [:SCIZOR,0],
-        [:LEDIAN,0],
-        [:ARIADOS,0],
-        [:FORRETRESS,0],
-        [:HERACROSS,0],
-        [:BEAUTIFLY,0],
-        [:DUSTOX,0],
-        [:MASQUERAIN,0],
-        [:NINJASK,0],
-        [:SHEDINJA,0],
-        [:WORMADAM,0],
-        [:WORMADAM,1],
-        [:WORMADAM,2],
-        [:MOTHIM,0],
-        [:VESPIQUEN,0],
-        [:SCOLIPEDE,0],
-        [:CRUSTLE,0],
-        [:ESCAVALIER,0],
-        [:GALVANTULA,0],
-        [:VOLCARONA,0],
-        [:VIVILLON,0],
-        [:VIKAVOLT,0],
-        [:RIBOMBEE,0],
-        [:GOLISOPOD,0],
-        [:ORBEETLE,0],
-        [:ARMALDO,0],
-        [:ARAQUANID,0],
-        [:CENTISKORCH,0],
-        [:FROSMOTH,0],
-        [:KRICKETUNE,0],
-        [:ACCELGOR,0]
-      ]
-
+    trainerpkmn = [:RATICATE,:ARBOK,:FEAROW,:PIDGEOT,:SANDSLASH,:NIDOKING,:NIDOQUEEN,:WIGGLYTUFF,:CLEFABLE,:VILEPLUME,:BELLOSSOM,:RAICHU,:PERSIAN,:FURRET,:QUAGSIRE,:AZUMARILL,:AMPHAROS,:GOLDUCK,:GRANBULL,:SHIFTRY,:LUDICOLO,:BRELOOM,:DELCATTY,:SWELLOW,:BIBAREL,:PACHIRISU,:LOPUNNY,:ROSERADE,:STARAPTOR,:WHIMSICOTT,:LILLIGANT,:LIEPARD,:SWOOBAT,:TOGEKISS,:SWANNA,:FLORGES,:DEDENNE,:DIGGERSBY,:KOMALA,:LYCANROC_DUSK,:TOUCANNON,:TSAREENA,:ARAQUANID,:HATTERENE,:GRIMMSNARL,:DREDNAW,:ALCREMIE]
+    when "bugcatcher"
+      trainerpkmn = [:BUTTERFREE,:BEEDRILL,:VENOMOTH,:PINSIR,:PARASECT,:SCIZOR,:LEDIAN,:ARIADOS,:FORRETRESS,:HERACROSS,:BEAUTIFLY,:DUSTOX,:MASQUERAIN,:NINJASK,:SHEDINJA,:WORMADAM_PLANTCLOAK,:WORMADAM_SANDYCLOAK,:WORMADAM_TRASHCLOAK,:MOTHIM,:VESPIQUEN,:SCOLIPEDE,:CRUSTLE,:ESCAVALIER,:GALVANTULA,:VOLCARONA,:VIVILLON,:VIKAVOLT,:RIBOMBEE,:GOLISOPOD,:ORBEETLE,:ARMALDO,:ARAQUANID,:CENTISKORCH,:FROSMOTH,:KRICKETUNE,:ACCELGOR]
     when "camper", "picnicker", "gambler"
-      trainerpkmn = [
-        [:DUGTRIO,0],
-        [:DUGTRIO,1],
-        [:SANDSLASH,0],
-        [:SANDSLASH,1],
-        [:PRIMEAPE,0],
-        [:ARBOK,0],
-        [:RATICATE,1],
-        [:FEAROW,0],
-        [:ARCANINE,0],
-        [:NIDOKING,0],
-        [:NIDOQUEEN,0],
-        [:MAGCARGO,0],
-        [:URSARING,0],
-        [:GOLEM,0],
-        [:GOLEM,1],
-        [:ESPEON,0],
-        [:UMBREON,0],
-        [:WOBBUFFET,0],
-        [:SUDOWOODO,0],
-        [:CLAYDOL,0],
-        [:XATU,0],
-        [:SWALOT,0],
-        [:CROBAT,0],
-        [:PELIPPER,0],
-        [:CACTURNE,0],
-        [:SEVIPER,0],
-        [:ZANGOOSE,0],
-        [:PROBOPASS,0],
-        [:HARIYAMA,0],
-        [:LUXRAY,0],
-        [:SNORLAX,0],
-        [:MAGMORTAR,0],
-        [:ELECTIVIRE,0],
-        [:DRIFBLIM,0],
-        [:GASTRODON,0],
-        [:TANGROWTH,0],
-        [:CINCCINO,0],
-        [:DARMANITAN,0],
-        [:PANGORO,0],
-        [:GOGOAT,0],
-        [:PALOSSAND,0],
-        [:COPPERAJAH,0],
-        [:PERRSERKER,0],
-        [:OBSTAGOON,0]
-      ]
-
+      trainerpkmn = [:DUGTRIO,:DUGTRIO_ALOLA,:SANDSLASH,:SANDSLASH_ALOLA,:PRIMEAPE,:ARBOK,:RATICATE_ALOLA,:FEAROW,:ARCANINE,:NIDOKING,:NIDOQUEEN,:MAGCARGO,:URSARING,:GOLEM,:GOLEM_ALOLA,:ESPEON,:UMBREON,:WOBBUFFET,:SUDOWOODO,:CLAYDOL,:XATU,:SWALOT,:CROBAT,:PELIPPER,:CACTURNE,:SEVIPER,:ZANGOOSE,:PROBOPASS,:HARIYAMA,:LUXRAY,:SNORLAX,:MAGMORTAR,:ELECTIVIRE,:DRIFBLIM,:GASTRODON,:TANGROWTH,:CINCCINO,:DARMANITAN,:PANGORO,:GOGOAT,:PALOSSAND,:COPPERAJAH,:PERRSERKER,:OBSTAGOON]
     when "schoolkid"
-      trainerpkmn = [
-        [:RAICHU,0],
-        [:RAICHU,1],
-        [:CLEFABLE,0],
-        [:WIGGLYTUFF,0],
-        [:TOGEKISS,0],
-        [:HITMONLEE,0],
-        [:HITMONCHAN,0],
-        [:HITMONTOP,0],
-        [:JYNX,0],
-        [:ELECTIVIRE,0],
-        [:MAGMORTAR,0],
-        [:AZUMARILL,0],
-        [:WOBBUFFET,0],
-        [:ROSERADE,0],
-        [:CHIMECHO,0],
-        [:SUDOWOODO,0],
-        [:MRMIME,0],
-        [:MRRIME,0],
-        [:BLISSEY,0],
-        [:SNORLAX,0],
-        [:LUCARIO,0],
-        [:MANTINE,0],
-        [:TOXTRICITY,0]
-        ]
-
+      trainerpkmn = [:RAICHU,:RAICHU_ALOLA,:CLEFABLE,:WIGGLYTUFF,:TOGEKISS,:HITMONLEE,:HITMONCHAN,:HITMONTOP,:JYNX,:ELECTIVIRE,:MAGMORTAR,:AZUMARILL,:WOBBUFFET,:ROSERADE,:CHIMECHO,:SUDOWOODO,:MRMIME,:MRRIME,:BLISSEY,:SNORLAX,:LUCARIO,:MANTINE,:TOXTRICITY]
     when "tuber_f","tuber_m"
-      trainerpkmn = [
-        [:GOLDUCK,0],
-        [:SLOWBRO,0],
-        [:SLOWBRO,1],
-        [:KINGLER,0],
-        [:EXEGGUTOR,0],
-        [:EXEGGUTOR,1],
-        [:SLOWKING,0],
-        [:SLOWKING,1],
-        [:AZUMARILL,0],
-        [:PELIPPER,0],
-        [:GASTRODON,0],
-        [:MALAMAR,0],
-        [:BARBARACLE,0],
-        [:TOXAPEX,0],
-        [:GOLISOPOD,0],
-        [:PALOSSAND,0],
-        [:PYUKUMUKU,0],
-        [:CRAMORANT,0],
-        [:GRAPPLOCT,0],
-        [:PERRSERKER,0],
-        [:PINCURCHIN,0],
-        [:SWAMPERT,0],
-        [:SAMUROTT,0],
-        [:PRIMARINA,0]
-      ]
-
+      trainerpkmn = [:GOLDUCK,:SLOWBRO,:SLOWBRO_GALAR,:KINGLER,:EXEGGUTOR,:EXEGGUTOR_ALOLA,:SLOWKING,:SLOWKING_GALAR,:AZUMARILL,:PELIPPER,:GASTRODON,:MALAMAR,:BARBARACLE,:TOXAPEX,:GOLISOPOD,:PALOSSAND,:PYUKUMUKU,:CRAMORANT,:GRAPPLOCT,:PERRSERKER,:PINCURCHIN,:SWAMPERT,:SAMUROTT,:PRIMARINA]
     when "swimmer_f","swimmer_m","sailor"
-      trainerpkmn = [
-        [:GOLDUCK,0],
-        [:SEAKING,0],
-        [:GYARADOS,0],
-        [:AZUMARILL,0],
-        [:QUAGSIRE,0],
-        [:WHISCASH,0],
-        [:CRAWDAUNT,0],
-        [:MILOTIC,0],
-        [:FLOATZEL,0],
-        [:SHARPEDO,0],
-        [:EELEKTROSS,0],
-        [:ARAQUANID,0],
-        [:BARRASKEWDA,0],
-        [:DREDNAW,0],
-        [:TENTACRUEL,0],
-        [:CLOYSTER,0],
-        [:KINGDRA,0],
-        [:LAPRAS,0],
-        [:STARMIE,0],
-        [:GOREBYSS,0],
-        [:GASTRODON,0],
-        [:JELLICENT,0],
-        [:CLAWITZER,0],
-        [:BRUXISH,0],
-        [:WISHIWASHI,0],
-        [:LANTURN,0],
-        [:DRAGALGE,0],
-        [:DHELMISE,0],
-        [:CRAMORANT,0],
-        [:BLASTOISE,0],
-        [:FERALIGATR,0],
-        [:EMPOLEON,0]
-        ]
-
+      trainerpkmn = [:GOLDUCK,:SEAKING,:GYARADOS,:AZUMARILL,:QUAGSIRE,:WHISCASH,:CRAWDAUNT,:MILOTIC,:FLOATZEL,:SHARPEDO,:EELEKTROSS,:ARAQUANID,:BARRASKEWDA,:DREDNAW,:TENTACRUEL,:CLOYSTER,:KINGDRA,:LAPRAS,:STARMIE,:GOREBYSS,:GASTRODON,:JELLICENT,:CLAWITZER,:BRUXISH,:WISHIWASHI,:LANTURN,:DRAGALGE,:DHELMISE,:CRAMORANT,:BLASTOISE,:FERALIGATR,:EMPOLEON]
     when "blackbelt","crushgirl"
-      trainerpkmn = [
-        [:PRIMEAPE,0],
-        [:MACHAMP,0],
-        [:HITMONLEE,0],
-        [:HITMONCHAN,0],
-        [:HITMONTOP,0],
-        [:HARIYAMA,0],
-        [:LUCARIO,0],
-        [:CONKELDURR,0],
-        [:THROH,0],
-        [:SAWK,0],
-        [:MIENSHAO,0],
-        [:PASSIMIAN,0],
-        [:GRAPPLOCT,0],
-        [:SIRFETCHD,0],
-        [:FALINKS,0],
-        [:MEDICHAM,0],
-        [:PANGORO,0],
-        [:HAWLUCHA,0],
-        [:CRABOMINABLE,0],
-        [:POLIWRATH,0],
-        [:HERACROSS,0],
-        [:BLAZIKEN,0],
-        [:BRELOOM,0],
-        [:INFERNAPE,0],
-        [:TOXICROAK,0],
-        [:GALLADE,0],
-        [:EMBOAR,0],
-        [:SCRAFTY,0],
-        [:CHESNAUGHT,0],
-        [:BEWEAR,0],
-        [:KOMMOO,0]
-        ]
-
+      trainerpkmn = [:PRIMEAPE,:MACHAMP,:HITMONLEE,:HITMONCHAN,:HITMONTOP,:HARIYAMA,:LUCARIO,:CONKELDURR,:THROH,:SAWK,:MIENSHAO,:PASSIMIAN,:GRAPPLOCT,:SIRFETCHD,:FALINKS,:MEDICHAM,:PANGORO,:HAWLUCHA,:CRABOMINABLE,:POLIWRATH,:HERACROSS,:BLAZIKEN,:BRELOOM,:INFERNAPE,:TOXICROAK,:GALLADE,:EMBOAR,:SCRAFTY,:CHESNAUGHT,:BEWEAR,:KOMMOO]
     when "hiker","ruinmaniac"
-      trainerpkmn = [
-        [:GOLEM,0],
-        [:GOLEM,1],
-        [:STEELIX,0],
-        [:MACHAMP,0],
-        [:DUGTRIO,0],
-        [:DUGTRIO,1],
-        [:SANDSLASH,0],
-        [:MAMOSWINE,0],
-        [:PROBOPASS,0],
-        [:CAMERUPT,0],
-        [:CLAYDOL,0],
-        [:SUDOWOODO,0],
-        [:BRONZONG,0],
-        [:RHYPERIOR,0],
-        [:DONPHAN,0],
-        [:GIGALITH,0],
-        [:EXCADRILL,0],
-        [:CONKELDURR,0],
-        [:AGGRON,0],
-        [:HIPPOWDON,0],
-        [:CRUSTLE,0],
-        [:GLISCOR,0],
-        [:MAWILE,0],
-        [:GOLURK,0],
-        [:MAROWAK,0],
-        [:DIGGERSBY,0],
-        [:CARBINK,0],
-        [:TYRANTRUM,0],
-        [:FLYGON,0],
-        [:LYCANROC,1],
-        [:MUDSDALE,0],
-        [:COALOSSAL,0],
-        [:SLAKING,0],
-        [:OBSTAGOON,0],
-        [:SEVIPER,0],
-        [:WATCHOG,0],
-        [:LIEPARD,0],
-        [:DARMANITAN,0],
-        [:KROOKODILE,0]
-        ]
-
+      trainerpkmn = [:GOLEM,:GOLEM_ALOLA,:STEELIX,:MACHAMP,:DUGTRIO,:DUGTRIO_ALOLA,:SANDSLASH,:MAMOSWINE,:PROBOPASS,:CAMERUPT,:CLAYDOL,:SUDOWOODO,:BRONZONG,:RHYPERIOR,:DONPHAN,:GIGALITH,:EXCADRILL,:CONKELDURR,:AGGRON,:HIPPOWDON,:CRUSTLE,:GLISCOR,:MAWILE,:GOLURK,:MAROWAK,:DIGGERSBY,:CARBINK,:TYRANTRUM,:FLYGON,:LYCANROC_MIDNIGHT,:MUDSDALE,:COALOSSAL,:SLAKING,:OBSTAGOON,:SEVIPER,:WATCHOG,:LIEPARD,:DARMANITAN,:KROOKODILE]
     when "scientist","supernerd"
-      trainerpkmn = [
-        [:KLINKLANG,0],
-        [:PERRSERKER,0],
-        [:COPPERAJAH,0],
-        [:SKARMORY,0],
-        [:MAWILE,0],
-        [:AGGRON,0],
-        [:METAGROSS,0],
-        [:BRONZONG,0],
-        [:AEGISLASH,0],
-        [:KLEFKI,0],
-        [:DURALUDON,0],
-        [:MAGNEZONE,0],
-        [:TOGEDEMARU,0],
-        [:ELECTRODE,0],
-        [:ELECTIVIRE,0],
-        [:JOLTEON,0],
-        [:AMPHAROS,0],
-        [:MANECTRIC,0],
-        [:LUXRAY,0],
-        [:ZEBSTRIKA,0],
-        [:BOLTUND,0],
-        [:ROTOM,0],
-        [:EMOLGA,0],
-        [:HELIOLISK,0],
-        [:ORICORIO,1],
-        [:TOXTRICITY,0],
-        [:VIKAVOLT,0],
-        [:MUK,0],
-        [:MUK,1],
-        [:WEEZING,0],
-        [:WEEZING,1],
-        [:SWALOT,0],
-        [:GARBODOR,0]
-        ]
-
+      trainerpkmn = [:KLINKLANG,:PERRSERKER,:COPPERAJAH,:SKARMORY,:MAWILE,:AGGRON,:METAGROSS,:BRONZONG,:AEGISLASH,:KLEFKI,:DURALUDON,:MAGNEZONE,:TOGEDEMARU,:ELECTRODE,:ELECTIVIRE,:JOLTEON,:AMPHAROS,:MANECTRIC,:LUXRAY,:ZEBSTRIKA,:BOLTUND,:ROTOM,:EMOLGA,:HELIOLISK,:ORICORIO_POMPOM,:TOXTRICITY,:VIKAVOLT,:MUK,:MUK_ALOLA,:WEEZING,:WEEZING_GALAR,:SWALOT,:GARBODOR]
     when "psychic_f","psychic_m","juggler"
-      trainerpkmn = [
-        [:ALAKAZAM,0],
-        [:HYPNO,0],
-        [:ESPEON,0],
-        [:WOBBUFFET,0],
-        [:GRUMPIG,0],
-        [:CHIMECHO,0],
-        [:MUSHARNA,0],
-        [:GOTHITELLE,0],
-        [:REUNICLUS,0],
-        [:BEHEEYEM,0],
-        [:MEOWSTIC,0],
-        [:RAPIDASH,0],
-        [:XATU,0],
-        [:GARDEVOIR,0],
-        [:GALLADE,0],
-        [:SWOOBAT,0],
-        [:SIGILYPH,0],
-        [:ORICORIO,2],
-        [:HATTERENE,0],
-        [:INDEEDEE,0],
-        [:RAICHU,1],
-        [:SLOWBRO,0],
-        [:SLOWBRO,1],
-        [:EXEGGUTOR,0],
-        [:SLOWKING,0],
-        [:SLOWKING,1],
-        [:MEDICHAM,0],
-        [:MRMIME,0],
-        [:MRRIME,0],
-        [:ORBEETLE,0],
-        [:MALAMAR,0],
-        [:DELPHOX,0],
-        [:BRONZONG,0],
-        [:METAGROSS,0],
-        [:CLAYDOL,0]
-        ]
-
+      trainerpkmn = [:ALAKAZAM,:HYPNO,:ESPEON,:WOBBUFFET,:GRUMPIG,:CHIMECHO,:MUSHARNA,:GOTHITELLE,:REUNICLUS,:BEHEEYEM,:MEOWSTIC,:RAPIDASH,:XATU,:GARDEVOIR,:GALLADE,:SWOOBAT,:SIGILYPH,:ORORICORIO_PAU,:HATTERENE,:INDEEDEE,:RAICHU_ALOLA,:SLOWBRO,:SLOWBRO_GALAR,:EXEGGUTOR,:SLOWKING,:SLOWKING_GALAR,:MEDICHAM,:MRMIME,:MRRIME,:ORBEETLE,:MALAMAR,:DELPHOX,:BRONZONG,:METAGROSS,:CLAYDOL]
     when "chaneller","hexmaniac"
-      trainerpkmn = [
-        [:GENGAR,0],
-        [:DRIFBLIM,0],
-        [:CHANDELURE,0],
-        [:MISMAGIUS,0],
-        [:DUSKNOIR,0],
-        [:COFAGRIGUS,0],
-        [:POLTEAGEIST,0],
-        [:TREVENANT,0],
-        [:GOURGEIST,0],
-        [:ORICORIO,3],
-        [:PALOSSAND,0],
-        [:MIMIKYU,0],
-        [:DHELMISE,0],
-        [:MAROWAK,1],
-        [:SABLEYE,0],
-        [:FROSLASS,0],
-        [:JELLICENT,0],
-        [:GOLURK,0],
-        [:AEGISLASH,0],
-        [:DECIDUEYE,0],
-        [:RUNERIGUS,0],
-        [:DRAGAPULT,0],
-        [:BANETTE,0]
-        ]
-
+      trainerpkmn = [:GENGAR,:DRIFBLIM,:CHANDELURE,:MISMAGIUS,:DUSKNOIR,:COFAGRIGUS,:POLTEAGEIST,:TREVENANT,:GOURGEIST,:ORICORIO_SENSU,:PALOSSAND,:MIMIKYU,:DHELMISE,:MAROWAK_ALOLA,:SABLEYE,:FROSLASS,:JELLICENT,:GOLURK,:AEGISLASH,:DECIDUEYE,:RUNERIGUS,:DRAGAPULT,:BANETTE]
     when "kimonogirl"
-      trainerpkmn = [
-        [:FLAREON,0],
-        [:VAPOREON,0],
-        [:JOLTEON,0],
-        [:ESPEON,0],
-        [:UMBREON,0],
-        [:LEAFEON,0],
-        [:GLACEON,0],
-        [:SYLVEON,0]
-        ]
-
+      trainerpkmn = [:FLAREON,:VAPOREON,:JOLTEON,:ESPEON,:UMBREON,:LEAFEON,:GLACEON,:SYLVEON]
     when "beauty","aromalady"
-      trainerpkmn = [
-        [:VENUSAUR,0],
-        [:VICTREEBEL,0],
-        [:VILEPLUME,0],
-        [:BELLOSSOM,0],
-        [:MEGANIUM,0],
-        [:SUNFLORA,0],
-        [:CHERRIM,0],
-        [:LEAFEON,0],
-        [:LILLIGANT,0],
-        [:LURANTIS,0],
-        [:TSAREENA,0],
-        [:ELDEGOSS,0],
-        [:JUMPLUFF,0],
-        [:ROSERADE,0],
-        [:WHIMSICOTT,0],
-        [:LEAVANNY,0],
-        [:SAWSBUCK,0],
-        [:CLEFABLE,0],
-        [:FLORGES,0],
-        [:AROMATISSE,0],
-        [:SLURPUFF,0],
-        [:SYLVEON,0],
-        [:COMFEY,0],
-        [:ALCREMIE,0],
-        [:TOGEKISS,0],
-        [:NINETALES,1],
-        [:RAPIDASH,1],
-        [:GARDEVOIR,0],
-        [:MAWILE,0],
-        [:PRIMARINA,0],
-        ]
-
+      trainerpkmn = [:VENUSAUR,:VICTREEBEL,:VILEPLUME,:BELLOSSOM,:MEGANIUM,:SUNFLORA,:CHERRIM,:LEAFEON,:LILLIGANT,:LURANTIS,:TSAREENA,:ELDEGOSS,:JUMPLUFF,:ROSERADE,:WHIMSICOTT,:LEAVANNY,:SAWSBUCK,:CLEFABLE,:FLORGES,:AROMATISSE,:SLURPUFF,:SYLVEON,:COMFEY,:ALCREMIE,:TOGEKISS,:NINETALES_ALOLA,:RAPIDASH_GALAR,:GARDEVOIR,:MAWILE,:PRIMARINA]
     when "kindler"
-      trainerpkmn = [
-        [:CHARIZARD,0],
-        [:NINETALES,0],
-        [:ARCANINE,0],
-        [:RAPIDASH,0],
-        [:FLAREON,0],
-        [:TYPHLOSION,0],
-        [:TORKOAL,0],
-        [:MAGMORTAR,0],
-        [:SIMISEAR,0],
-        [:DARMANITAN,0],
-        [:HEATMOR,0],
-        [:CINDERACE,0],
-        [:MAROWAK,1],
-        [:MAGCARGO,0],
-        [:BLAZIKEN,0],
-        [:CAMERUPT,0],
-        [:INFERNAPE,0],
-        [:EMBOAR,0],
-        [:TALONFLAME,0],
-        [:PYROAR,0],
-        [:INCINEROAR,0],
-        [:ORICORIO,0],
-        [:TURTONATOR,0],
-        [:CENTISKORCH,0],
-        [:HOUNDOOM,0],
-        [:ROTOM,1],
-        [:CHANDELURE,0],
-        [:SALAZZLE,0],
-        [:COALOSSAL,0]
-        ]
-
+      trainerpkmn = [:CHARIZARD,:NINETALES,:ARCANINE,:RAPIDASH,:FLAREON,:TYPHLOSION,:TORKOAL,:MAGMORTAR,:SIMISEAR,:DARMANITAN,:HEATMOR,:CINDERACE,:MAROWAK_ALOLA,:MAGCARGO,:BLAZIKEN,:CAMERUPT,:INFERNAPE,:EMBOAR,:TALONFLAME,:PYROAR,:INCINEROAR,:ORICORIO_BAILE,:TURTONATOR,:CENTISKORCH,:HOUNDOOM,:ROTOM_HEAT,:CHANDELURE,:SALAZZLE,:COALOSSAL]
     when "boarder"
-      trainerpkmn = [
-        [:GLALIE,0],
-        [:GLACEON,0],
-        [:DARMANITAN,1],
-        [:VANILLUXE,0],
-        [:BEARTIC,0],
-        [:CRYOGONAL,0],
-        [:AVALUGG,0],
-        [:EISCUE,0],
-        [:SANDSLASH,1],
-        [:NINETALES,1],
-        [:JYNX,0],
-        [:WALREIN,0],
-        [:MAMOSWINE,0],
-        [:FROSLASS,0],
-        [:MRRIME,0],
-        [:FROSMOTH,0],
-        [:DEWGONG,0],
-        [:CLOYSTER,0],
-        [:LAPRAS,0],
-        [:ABOMASNOW,0],
-        [:WEAVILE,0],
-        [:ROTOM,3],
-        [:AURORUS,0],
-        [:CRABOMINABLE,0],
-        [:ARCTOZOLT,0],
-        [:ARCTOVISH,0]
-        ]
-
+      trainerpkmn = [:GLALIE,:GLACEON,:DARMANITAN_GALAR,:VANILLUXE,:BEARTIC,:CRYOGONAL,:AVALUGG,:EISCUE,:SANDSLASH_ALOLA,:NINETALES_ALOLA,:JYNX,:WALREIN,:MAMOSWINE,:FROSLASS,:MRRIME,:FROSMOTH,:DEWGONG,:CLOYSTER,:LAPRAS,:ABOMASNOW,:WEAVILE,:ROTOM_FROST,:AURORUS,:CRABOMINABLE,:ARCTOZOLT,:ARCTOVISH]
     when "rocker","engineer"
-      trainerpkmn = [
-        [:RAICHU,1],
-        [:RAICHU,0],
-        [:ELECTRODE,0],
-        [:JOLTEON,0],
-        [:AMPHAROS,0],
-        [:MANECTRIC,0],
-        [:LUXRAY,0],
-        [:ELECTIVIRE,0],
-        [:ZEBSTRIKA,0],
-        [:EELEKTROSS,0],
-        [:BOLTUND,0],
-        [:PINCURCHIN,0],
-        [:MAGNEZONE,0],
-        [:ROTOM,0],
-        [:ROTOM,2],
-        [:ROTOM,1],
-        [:ROTOM,3],
-        [:ROTOM,4],
-        [:ROTOM,5],
-        [:EMOLGA,0],
-        [:HELIOLISK,0],
-        [:DEDENNE,0],
-        [:ORICORIO,1],
-        [:TOGEDEMARU,0],
-        [:TOXTRICITY,0],
-        [:MORPEKO,0],
-        [:DRACOZOLT,0],
-        [:ARCTOZOLT,0],
-        [:GOLEM,1],
-        [:LANTURN,0],
-        [:GALVANTULA,0],
-        [:STUNFISK,0],
-        [:VIKAVOLT,0]
-    ]
-
+      trainerpkmn = [:RAICHU_ALOLA,:RAICHU,:ELECTRODE,:JOLTEON,:AMPHAROS,:MANECTRIC,:LUXRAY,:ELECTIVIRE,:ZEBSTRIKA,:EELEKTROSS,:BOLTUND,:PINCURCHIN,:MAGNEZONE,:ROTOM,:ROTOM_HEAT,:ROTOM_WASH,:ROTOM_FROST,:ROTOM_FAN,:ROTOM_MOW,:EMOLGA,:HELIOLISK,:DEDENNE,:ORICORIO_POMPOM,:TOGEDEMARU,:TOXTRICITY,:MORPEKO,:DRACOZOLT,:ARCTOZOLT,:GOLEM_ALOLA,:LANTURN,:GALVANTULA,:STUNFISK,:VIKAVOLT]
     when "biker","cueball","burglar","teamrocket_m","teamrocket_f"
-      trainerpkmn = [
-        [:MUK,0],
-        [:WEEZING,0],
-        [:KROOKODILE,0],
-        [:MAGMORTAR,0],
-        [:PERSIAN,1],
-        [:ARBOK,0],
-        [:MUK,1],
-        [:UMBREON,0],
-        [:DRAPION,0],
-        [:GRANBULL,0],
-        [:HOUNDOOM,0],
-        [:TYRANITAR,0],
-        [:MIGHTYENA,0],
-        [:TOXICROAK,0],
-        [:EXPLOUD,0],
-        [:SHARPEDO,0],
-        [:CACTURNE,0],
-        [:SCRAFTY,0],
-        [:CRAWDAUNT,0],
-        [:BISHARP,0],
-        [:ABSOL,0],
-        [:HONCHKROW,0],
-        [:LIEPARD,0],
-        [:ZOROARK,0],
-        [:THIEVUL,0],
-        [:OBSTAGOON,0],
-        [:MANDIBUZZ,0],
-        [:MALAMAR,0],
-        [:PANGORO,0],
-        [:GRIMMSNARL,0],
-        [:LYCANROC,1],
-        [:SHIFTRY,0],
-        [:SKUNTANK,0],
-        [:HYDREIGON,0],
-        [:RATICATE,1],
-        [:GOLISOPOD,0],
-        [:DREDNAW,0],
-        [:PERRSERKER,0]
-        ]
-
+      trainerpkmn = [:MUK,:WEEZING,:KROOKODILE,:MAGMORTAR,:PERSIAN_ALOLA,:ARBOK,:MUK_ALOLA,:UMBREON,:DRAPION,:GRANBULL,:HOUNDOOM,:TYRANITAR,:MIGHTYENA,:TOXICROAK,:EXPLOUD,:SHARPEDO,:CACTURNE,:SCRAFTY,:CRAWDAUNT,:BISHARP,:ABSOL,:HONCHKROW,:LIEPARD,:ZOROARK,:THIEVUL,:OBSTAGOON,:MANDIBUZZ,:MALAMAR,:PANGORO,:GRIMMSNARL,:LYCANROC_MIDDAY,:SHIFTRY,:SKUNTANK,:HYDREIGON,:RATICATE_ALOLA,:GOLISOPOD,:DREDNAW,:PERRSERKER]
     when "birdkeeper"
-      trainerpkmn = [
-        [:PIDGEOT,0],
-        [:FEAROW,0],
-        [:CROBAT,0],
-        [:DODRIO,0],
-        [:AERODACTYL,0],
-        [:NOCTOWL,0],
-        [:XATU,0],
-        [:HONCHKROW,0],
-        [:SKARMORY,0],
-        [:SWELLOW,0],
-        [:STARAPTOR,0],
-        [:UNFEZANT,0],
-        [:SIGILYPH,0],
-        [:BRAVIARY,0],
-        [:MANDIBUZZ,0],
-        [:TALONFLAME,0],
-        [:DECIDUEYE,0],
-        [:TOUCANNON,0],
-        [:ORICORIO,3],
-        [:ORICORIO,2],
-        [:ORICORIO,1],
-        [:ORICORIO,0],
-        [:CORVIKNIGHT,0],
-        [:SIRFETCHD,0],
-        [:PELIPPER,0],
-        [:ALTARIA,0],
-        [:TOGEKISS,0],
-        [:SWOOBAT,0],
-        [:ARCHEOPS,0],
-        [:SWANNA,0],
-        [:HAWLUCHA,0],
-        [:NOIVERN,0],
-        [:CRAMORANT,0],
-        ]
-
+      trainerpkmn = [:PIDGEOT,:FEAROW,:CROBAT,:DODRIO,:AERODACTYL,:NOCTOWL,:XATU,:HONCHKROW,:SKARMORY,:SWELLOW,:STARAPTOR,:UNFEZANT,:SIGILYPH,:BRAVIARY,:MANDIBUZZ,:TALONFLAME,:DECIDUEYE,:TOUCANNON,:ORICORIO_BAILE,:ORICORIO_POMPOM,:ORICORIO_PAU,:ORICORIO_SENSU,:CORVIKNIGHT,:SIRFETCHD,:PELIPPER,:ALTARIA,:TOGEKISS,:SWOOBAT,:ARCHEOPS,:SWANNA,:HAWLUCHA,:NOIVERN,:CRAMORANT]
     when "fisherman"
-      trainerpkmn = [
-        [:SEAKING,0],
-        [:LANTURN,0],
-        [:SHARPEDO,0],
-        [:WHISCASH,0],
-        [:LUMINEON,0],
-        [:WISHIWASHI,0],
-        [:BRUXISH,0],
-        [:BARRASKEWDA,0],
-        [:GYARADOS,0],
-        [:OCTILLERY,0],
-        [:WAILORD,0],
-        [:RELICANTH,0],
-        [:MALAMAR,0],
-        [:ALOMOMOLA,0],
-        [:TENTACRUEL,0],
-        [:CLOYSTER,0],
-        [:KINGLER,0],
-        [:CRAWDAUNT,0],
-        [:CARRACOSTA,0],
-        [:CLAWITZER,0],
-        [:GOLISOPOD,0],
-        [:POLIWRATH,0],
-        [:POLITOED,0],
-        [:HUNTAIL,0],
-        [:GOREBYSS,0],
-        [:GRENINJA,0],
-        [:TOXAPEX,0],
-        [:PYUKUMUKU,0],
-        [:SLOWBRO,0],
-        [:SLOWBRO,1],
-        [:SLOWKING,0],
-        [:SLOWKING,1],
-        [:KINGDRA,0],
-        [:SWAMPERT,0],
-        [:DREDNAW,0]
-        ]
-
+      trainerpkmn = [:SEAKING,:LANTURN,:SHARPEDO,:WHISCASH,:LUMINEON,:WISHIWASHI,:BRUXISH,:BARRASKEWDA,:GYARADOS,:OCTILLERY,:WAILORD,:RELICANTH,:MALAMAR,:ALOMOMOLA,:TENTACRUEL,:CLOYSTER,:KINGLER,:CRAWDAUNT,:CARRACOSTA,:CLAWITZER,:GOLISOPOD,:POLIWRATH,:POLITOED,:HUNTAIL,:GOREBYSS,:GRENINJA,:TOXAPEX,:PYUKUMUKU,:SLOWBRO,:SLOWBRO_GALAR,:SLOWKING,:SLOWKING_GALAR,:KINGDRA,:SWAMPERT,:DREDNAW]
     when "pokemaniac","tamer"
-      trainerpkmn = [
-        [:MAROWAK,1],
-        [:MAROWAK,0],
-        [:KANGASKHAN,0],
-        [:SNORLAX,0],
-        [:TYRANITAR,0],
-        [:AGGRON,0],
-        [:RAMPARDOS,0],
-        [:BASTIODON,0],
-        [:LICKILICKY,0],
-        [:AURORUS,0],
-        [:NIDOKING,0],
-        [:SLOWBRO,0],
-        [:SLOWBRO,1],
-        [:SLOWKING,0],
-        [:SLOWKING,1],
-        [:SWAMPERT,0],
-        [:SCEPTILE,0],
-        [:EXPLOUD,0],
-        [:TORTERRA,0],
-        [:GARCHOMP,0],
-        [:ABOMASNOW,0],
-        [:RHYPERIOR,0],
-        [:HAXORUS,0],
-        [:DRUDDIGON,0],
-        [:HELIOLISK,0],
-        [:TYRANTRUM,0],
-        [:AVALUGG,0],
-        [:SALAZZLE,0],
-        [:TURTONATOR,0],
-        [:DRAMPA,0],
-        [:DREDNAW,0]
-        ]
-
+      trainerpkmn = [:MAROWAK_ALOLA,:MAROWAK,:KANGASKHAN,:SNORLAX,:TYRANITAR,:AGGRON,:RAMPARDOS,:BASTIODON,:LICKILICKY,:AURORUS,:NIDOKING,:SLOWBRO,:SLOWBRO_GALAR,:SLOWKING,:SLOWKING_GALAR,:SWAMPERT,:SCEPTILE,:EXPLOUD,:TORTERRA,:GARCHOMP,:ABOMASNOW,:RHYPERIOR,:HAXORUS,:DRUDDIGON,:HELIOLISK,:TYRANTRUM,:AVALUGG,:SALAZZLE,:TURTONATOR,:DRAMPA,:DREDNAW]
     when "pokemonbreeder"
-      trainerpkmn = [
-        [:RAICHU,0],
-        [:RAICHU,1],
-        [:CLEFABLE,0],
-        [:WIGGLYTUFF,0],
-        [:TOGEKISS,0],
-        [:HITMONLEE,0],
-        [:HITMONCHAN,0],
-        [:HITMONTOP,0],
-        [:JYNX,0],
-        [:ELECTIVIRE,0],
-        [:MAGMORTAR,0],
-        [:WOBBUFFET,0],
-        [:AZUMARILL,0],
-        [:ROSERADE,0],
-        [:CHIMECHO,0],
-        [:SUDOWOODO,0],
-        [:MRMIME,0],
-        [:MRRIME,0],
-        [:SNORLAX,0],
-        [:LUCARIO,0],
-        [:MANTINE,0],
-        [:TOXTRICITY,0],
-        [:VENUSAUR,0],
-        [:CHARIZARD,0],
-        [:BLASTOISE,0],
-        [:MEGANIUM,0],
-        [:TYPHLOSION,0],
-        [:FERALIGATR,0],
-        [:SCEPTILE,0],
-        [:BLAZIKEN,0],
-        [:SWAMPERT,0],
-        [:TORTERRA,0],
-        [:INFERNAPE,0],
-        [:EMPOLEON,0],
-        [:SERPERIOR,0],
-        [:EMBOAR,0],
-        [:SAMUROTT,0],
-        [:CHESNAUGHT,0],
-        [:DELPHOX,0],
-        [:GRENINJA,0],
-        [:DECIDUEYE,0],
-        [:INCINEROAR,0],
-        [:PRIMARINA,0],
-        [:RILLABOOM,0],
-        [:CINDERACE,0],
-        [:INTELEON,0]
-        ]
-
+      trainerpkmn = [:RAICHU,:RAICHU_ALOLA,:CLEFABLE,:WIGGLYTUFF,:TOGEKISS,:HITMONLEE,:HITMONCHAN,:HITMONTOP,:JYNX,:ELECTIVIRE,:MAGMORTAR,:WOBBUFFET,:AZUMARILL,:ROSERADE,:CHIMECHO,:SUDOWOODO,:MRMIME,:MRRIME,:SNORLAX,:LUCARIO,:MANTINE,:TOXTRICITY,:VENUSAUR,:CHARIZARD,:BLASTOISE,:MEGANIUM,:TYPHLOSION,:FERALIGATR,:SCEPTILE,:BLAZIKEN,:SWAMPERT,:TORTERRA,:INFERNAPE,:EMPOLEON,:SERPERIOR,:EMBOAR,:SAMUROTT,:CHESNAUGHT,:DELPHOX,:GRENINJA,:DECIDUEYE,:INCINEROAR,:PRIMARINA,:RILLABOOM,:CINDERACE,:INTELEON]
     when "cooltrainer_m","cooltrainer_f","pokemonranger_m","pokemonranger_f"
-      trainerpkmn = [
-        [:TYRANITAR,0],
-        [:SALAMENCE,0],
-        [:METAGROSS,0],
-        [:GARCHOMP,0],
-        [:SLAKING,0],
-        [:GYARADOS,0],
-        [:VENUSAUR,0],
-        [:CHARIZARD,0],
-        [:BLASTOISE,0],
-        [:MEGANIUM,0],
-        [:TYPHLOSION,0],
-        [:FERALIGATR,0],
-        [:SCEPTILE,0],
-        [:BLAZIKEN,0],
-        [:SWAMPERT,0],
-        [:TORTERRA,0],
-        [:INFERNAPE,0],
-        [:EMPOLEON,0],
-        [:SERPERIOR,0],
-        [:EMBOAR,0],
-        [:SAMUROTT,0],
-        [:CHESNAUGHT,0],
-        [:DELPHOX,0],
-        [:GRENINJA,0],
-        [:DECIDUEYE,0],
-        [:INCINEROAR,0],
-        [:PRIMARINA,0],
-        [:RILLABOOM,0],
-        [:CINDERACE,0],
-        [:INTELEON,0],
-        [:AGGRON,0],
-        [:LUCARIO,0],
-        [:GARDEVOIR,0],
-        [:GALLADE,0],
-        [:AERODACTYL,0],
-        [:AMPHAROS,0],
-        [:ALAKAZAM,0],
-        [:GENGAR,0],
-        [:PINSIR,0],
-        [:DRAGONITE,0],
-        [:SCIZOR,0],
-        [:HERACROSS,0],
-        [:HOUNDOOM,0],
-        [:HYDREIGON,0],
-        [:GOODRA,0],
-        [:KOMMOO,0],
-        [:DRAGAPULT,0],
-        [:ABOMASNOW,0],
-        [:SLOWBRO,0],
-        [:SLOWBRO,1],
-        [:SLOWKING,0],
-        [:SLOWKING,1],
-        [:KANGASKHAN,0],
-        [:ALTARIA,0],
-        [:GLALIE,0],
-        [:FROSLASS,0],
-        [:LOPUNNY,0],
-        [:ARCANINE,0],
-        [:ABSOL,0],
-        [:FLORGES,0],
-        [:VOLCARONA,0],
-        [:SHARPEDO,0],
-        [:TOGEKISS,0],
-        [:BLISSEY,0],
-        [:KINGDRA,0],
-        [:ELECTIVIRE,0],
-        [:MAGMORTAR,0],
-        [:MILOTIC,0],
-        [:DARMANITAN,0],
-        [:CROBAT,0],
-        [:LAPRAS,0],
-        [:VANILLUXE,0],
-        [:DURALUDON,0],
-        [:GOGOAT,0],
-        [:EXEGGUTOR,0],
-        [:EXEGGUTOR,1],
-        [:MAMOSWINE,0],
-        [:MEDICHAM,0],
-        [:AMBIPOM,0],
-        [:FLAREON,0],
-        [:VAPOREON,0],
-        [:JOLTEON,0],
-        [:ESPEON,0],
-        [:UMBREON,0],
-        [:LEAFEON,0],
-        [:GLACEON,0],
-        [:SYLVEON,0],
-        [:GOREBYSS,0],
-        [:HUNTAIL,0],
-        [:LURANTIS,0],
-        [:LILLIGANT,0],
-        [:MAWILE,0],
-        [:SABLEYE,0],
-        [:MISMAGIUS,0],
-        [:SANDSLASH,1],
-        [:SANDSLASH,0]
-        ]
-
+      trainerpkmn = [:TYRANITAR,:SALAMENCE,:METAGROSS,:GARCHOMP,:SLAKING,:GYARADOS,:VENUSAUR,:CHARIZARD,:BLASTOISE,:MEGANIUM,:TYPHLOSION,:FERALIGATR,:SCEPTILE,:BLAZIKEN,:SWAMPERT,:TORTERRA,:INFERNAPE,:EMPOLEON,:SERPERIOR,:EMBOAR,:SAMUROTT,:CHESNAUGHT,:DELPHOX,:GRENINJA,:DECIDUEYE,:INCINEROAR,:PRIMARINA,:RILLABOOM,:CINDERACE,:INTELEON,:AGGRON,:LUCARIO,:GARDEVOIR,:GALLADE,:AERODACTYL,:AMPHAROS,:ALAKAZAM,:GENGAR,:PINSIR,:DRAGONITE,:SCIZOR,:HERACROSS,:HOUNDOOM,:HYDREIGON,:GOODRA,:KOMMOO,:DRAGAPULT,:ABOMASNOW,:SLOWBRO,:SLOWBRO_GALAR,:SLOWKING,:SLOWKING_GALAR,:KANGASKHAN,:ALTARIA,:GLALIE,:FROSLASS,:LOPUNNY,:ARCANINE,:ABSOL,:FLORGES,:VOLCARONA,:SHARPEDO,:TOGEKISS,:BLISSEY,:KINGDRA,:ELECTIVIRE,:MAGMORTAR,:MILOTIC,:DARMANITAN,:CROBAT,:LAPRAS,:VANILLUXE,:DURALUDON,:GOGOAT,:EXEGGUTOR,:EXEGGUTOR_ALOLA,:MAMOSWINE,:MEDICHAM,:AMBIPOM,:FLAREON,:VAPOREON,:JOLTEON,:ESPEON,:UMBREON,:LEAFEON,:GLACEON,:SYLVEON,:GOREBYSS,:HUNTAIL,:LURANTIS,:LILLIGANT,:MAWILE,:SABLEYE,:MISMAGIUS,:SANDSLASH_ALOLA,:SANDSLASH]
     when "dragontamer"
-      trainerpkmn = [
-        [:SALAMENCE,0],
-        [:HYDREIGON,0],
-        [:GOODRA,0],
-        [:KOMMOO,0],
-        [:CHARIZARD,0],
-        [:KINGDRA,0],
-        [:GYARADOS,0],
-        [:DRAGONITE,0],
-        [:FLYGON,0],
-        [:ALTARIA,0],
-        [:GARCHOMP,0],
-        [:HAXORUS,0],
-        [:DRUDDIGON,0],
-        [:DRAGALGE,0],
-        [:TYRANTRUM,0],
-        [:NOIVERN,0],
-        [:TURTONATOR,0],
-        [:DRAMPA,0],
-        [:FLAPPLE,0],
-        [:APPLETUN,0],
-        [:DURALUDON,0],
-        [:DRAGAPULT,0],
-        [:EXEGGUTOR,1],
-        [:DRACOZOLT,0],
-        [:DRACOVISH,0]
-        ]
+      trainerpkmn = [:SALAMENCE,:HYDREIGON,:GOODRA,:KOMMOO,:CHARIZARD,:KINGDRA,:GYARADOS,:DRAGONITE,:FLYGON,:ALTARIA,:GARCHOMP,:HAXORUS,:DRUDDIGON,:DRAGALGE,:TYRANTRUM,:NOIVERN,:TURTONATOR,:DRAMPA,:FLAPPLE,:APPLETUN,:DURALUDON,:DRAGAPULT,:EXEGGUTOR_ALOLA,:DRACOZOLT,:DRACOVISH]
     when "fairytalegirl"
-      trainerpkmn = [
-        [:CLEFABLE,0],
-        [:GRANBULL,0],
-        [:FLORGES,0],
-        [:AROMATISSE,0],
-        [:SLURPUFF,0],
-        [:SYLVEON,0],
-        [:COMFEY,0],
-        [:ALCREMIE,0],
-        [:TOGEKISS,0],
-        [:NINETALES,1],
-        [:RAPIDASH,1],
-        [:WEEZING,1],
-        [:MRMIME,0],
-        [:AZUMARILL,0],
-        [:GARDEVOIR,0],
-        [:MAWILE,0],
-        [:WHIMSICOTT,0],
-        [:DEDENNE,0],
-        [:CARBINK,0],
-        [:KLEFKI,0],
-        [:PRIMARINA,0],
-        [:RIBOMBEE,0],
-        [:SHIINOTIC,0],
-        [:MIMIKYU,0],
-        [:HATTERENE,0],
-        [:GRIMMSNARL,0]
-        ]
+      trainerpkmn = [:CLEFABLE,:GRANBULL,:FLORGES,:AROMATISSE,:SLURPUFF,:SYLVEON,:COMFEY,:ALCREMIE,:TOGEKISS,:NINETALES_ALOLA,:RAPIDASH_GALAR,:WEEZING_GALAR,:MRMIME,:AZUMARILL,:GARDEVOIR,:MAWILE,:WHIMSICOTT,:DEDENNE,:CARBINK,:KLEFKI,:PRIMARINA,:RIBOMBEE,:SHIINOTIC,:MIMIKYU,:HATTERENE,:GRIMMSNARL]
   end
   for i in 0...party_size
     loop do
       num = rand(0...(trainerpkmn.length))
-      pkmn = trainerpkmn[num]
-      for n in $allpkmn
-        if [n[0], n[5]] == pkmn
-          pkmninfo = n
-          break
-        end
-      end
-      if !party.include?(pkmninfo)
-        party.push(pkmninfo)
+      select = trainerpkmn[num]
+      if !party.include?(select)
+        pkmn = SummitPokeInfo.const_get(select)
+        party.push(pkmn)
         break
       end
     end
@@ -1730,9 +806,6 @@ def pbNewSummitTrainer(tr_type, tr_name, tr_version = 0, save_changes = true, pa
     loop do
       if party
         pkmn = party[i]
-        if pkmn[5] == nil
-          pkmn[5] = 0
-        end
         break
       else
         pbMessage(_INTL("This trainer must have at least 1 Pokémon!"))
@@ -1761,12 +834,12 @@ def pbNewSummitTrainer(tr_type, tr_name, tr_version = 0, save_changes = true, pa
     party.each do |pkmn|
       @trainer_hash[:pokemon].push(
         {
-          :species       => pkmn[0],
+          :species       => pkmn[:species],
           :level         => 50,
-          :moves         => [pkmn[1], pkmn[2], pkmn[3], pkmn[4]],
+          :moves         => pkmn[:moves],
           :iv            => {:HP => ivval, :ATTACK => ivval, :DEFENSE => ivval, :SPECIAL_ATTACK => ivval, :SPECIAL_DEFENSE => ivval, :SPEED => ivval},
-          :form          => pkmn[5],
-          :ability_index => pkmn[6]
+          :form          => pkmn[:form],
+          :ability_index => pkmn[:ability_index]
         }
       )
     end
@@ -1774,7 +847,6 @@ def pbNewSummitTrainer(tr_type, tr_name, tr_version = 0, save_changes = true, pa
     @trainer_hash[:id] = [@trainer_hash[:trainer_type], @trainer_hash[:name], @trainer_hash[:version]]
     GameData::Trainer.register(@trainer_hash)
     GameData::Trainer.save
-    pbConvertTrainerData
   end
   return trainer
 end
@@ -1785,7 +857,6 @@ def pbSummitDeleteTrainer(tr_type, name, tr_version = 0)
   tr_data = GameData::Trainer::DATA[trainer_id]
   GameData::Trainer::DATA.delete(trainer_id)
   GameData::Trainer.save
-  pbConvertTrainerData
 end
 
 def pbSummitArcadeStreakReward
