@@ -580,14 +580,17 @@ end
 
 def pbSummitTestIntro # Debug
     kanto = [
-    ["LEADER_Brock","Brock",0],
-    ["LEADER_Misty","Misty",0],
-    ["LEADER_Surge","Lt. Surge",0],
-    ["LEADER_Erika","Erika",0],
-    ["LEADER_Janine","Janine",0],
-    ["LEADER_Sabrina","Sabrina",0],
-    ["LEADER_Blaine","Blaine",0],
-    ["LEADER_Giovanni","Giovanni",0]
+    ["LEADER_Viola","Viola",0],
+    ["LEADER_Grant","Grant",0],
+    ["LEADER_Korrina","Korrina",0],
+    ["LEADER_Ramos","Ramos",0],
+    ["LEADER_Valerie","Valerie",0],
+    ["LEADER_Olympia","Olympia",0],
+    ["LEADER_Clemont","Clemont",0],
+    ["LEADER_Wulfric","Wulfric",0],
+    ["LEADER_Chuck","Chuck",0],
+    ["LEADER_Chuck","Chuck",0],
+    ["LEADER_Chuck","Chuck",0]
   ]
   for trainer in kanto
   $game_variables[30] = trainer
