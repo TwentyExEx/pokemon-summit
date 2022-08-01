@@ -242,9 +242,9 @@ module SummitPokeInfo
 	WATCHOG = {:species => :WATCHOG, :moves => [:HYPERFANG, :HYPNOSIS, :NASTYPLOT, :BATONPASS], :form => 0, :ability_index => 1}
 	STOUTLAND = {:species => :STOUTLAND, :moves => [:PLAYROUGH, :DIG, :IRONHEAD, :CRUNCH], :form => 0, :ability_index => 0}
 	LIEPARD = {:species => :LIEPARD, :moves => [:NIGHTSLASH, :SUCKERPUNCH, :PLAYROUGH, :SHADOWCLAW], :form => 0, :ability_index => 1}
-	SIMISAGE = {:species => :SIMISAGE, :moves => [:LEAFSTORM, :SUPERPOWER, :ROCKSLIDE, :GUNKSHOT], :form => 0, :ability_index => 0}
-	SIMISEAR = {:species => :SIMISEAR, :moves => [:NASTYPLOT, :FIREBLAST, :GRASSKNOT, :FOCUSBLAST], :form => 0, :ability_index => 0}
-	SIMIPOUR = {:species => :SIMIPOUR, :moves => [:NASTYPLOT, :HYDROPUMP, :ICEBEAM, :GRASSKNOT], :form => 0, :ability_index => 0}
+	SIMISAGE = {:species => :SIMISAGE, :moves => [:SEEDBOMB, :BRICKBREAK, :ROCKSLIDE, :GUNKSHOT], :form => 0, :ability_index => 0}
+	SIMISEAR = {:species => :SIMISEAR, :moves => [:WILLOWISP, :FLAMETHROWER, :ACROBATICS, :SHADOWCLAW], :form => 0, :ability_index => 0}
+	SIMIPOUR = {:species => :SIMIPOUR, :moves => [:NASTYPLOT, :SURF, :ICEBEAM, :GRASSKNOT], :form => 0, :ability_index => 0}
 	MUSHARNA = {:species => :MUSHARNA, :moves => [:FUTURESIGHT, :MOONBLAST, :MOONLIGHT, :HYPNOSIS], :form => 0, :ability_index => 1}
 	UNFEZANT = {:species => :UNFEZANT, :moves => [:SKYATTACK, :GIGAIMPACT, :BRAVEBIRD, :REST], :form => 0, :ability_index => 1}
 	ZEBSTRIKA = {:species => :ZEBSTRIKA, :moves => [:THUNDERBOLT, :VOLTSWITCH, :OVERHEAT, :HIDDENPOWER], :form => 0, :ability_index => 1}
