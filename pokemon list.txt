@@ -210,44 +210,124 @@ Ability: Iron Fist
 
 === [gen8nationaldex] Galar Experts/Avery ===
 
-Rapidash-Galar  
-Ability: Run Away  
-
-Slowking-Galar  
-Ability: Curious Medicine  
-
-Swoobat  
-Ability: Unaware  
-
-Alakazam  
-Ability: Synchronize  
-
-Slowking-Galar  
-Ability: Curious Medicine  
-
-Orbeetle  
+Orbeetle @ Light Clay  
 Ability: Swarm  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Bug Buzz  
+- Psychic  
+- Light Screen  
+- Reflect  
+
+Rapidash-Galar @ Assault Vest  
+Ability: Run Away  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Psycho Cut  
+- Drill Run  
+- Megahorn  
+- Play Rough  
+
+Slowking-Galar @ Black Sludge  
+Ability: Regenerator  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Psychic  
+- Sludge Bomb  
+- Flamethrower  
+- Ice Beam  
+
+Reuniclus @ Kasib Berry  
+Ability: Magic Guard  
+EVs: 252 HP / 252 Def  
+Bold Nature  
+IVs: 0 Atk  
+- Calm Mind  
+- Psyshock  
+- Focus Blast  
+- Recover  
+
+Swoobat @ Heavy-Duty Boots  
+Ability: Unaware  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Psychic  
+- Air Slash  
+- Stored Power  
+- Shadow Ball  
+
+Alakazam @ Focus Sash  
+Ability: Synchronize  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Psychic  
+- Calm Mind  
+- Dazzling Gleam  
+- Shadow Ball  
 
 
 === [gen8nationaldex] Galar Experts/Klara ===
 
-Weezing-Galar  
-Ability: Levitate  
+Weezing-Galar @ Leftovers  
+Ability: Neutralizing Gas  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Strange Steam  
+- Sludge Bomb  
+- Toxic  
+- Thunderbolt  
 
-Drapion  
-Ability: Battle Armor  
+Toxtricity @ Quick Claw  
+Ability: Punk Rock  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Boomburst  
+- Overdrive  
+- Snarl  
+- Sludge Wave  
 
-Slowbro-Galar  
+Slowbro-Galar @ Assault Vest  
 Ability: Quick Draw  
+EVs: 252 HP / 252 SpA  
+Quiet Nature  
+- Shell Side Arm  
+- Surf  
+- Psychic  
+- Zen Headbutt  
 
-Slowking-Galar  
-Ability: Curious Medicine  
+Drapion @ Shuca Berry  
+Ability: Keen Eye  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Swords Dance  
+- Knock Off  
+- Poison Jab  
+- Earthquake  
 
-Scolipede  
-Ability: Poison Point  
+Scolipede @ Black Sludge  
+Ability: Speed Boost  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Megahorn  
+- Toxic  
+- Cross Poison  
+- X-Scissor  
 
-Amoonguss  
+Amoonguss @ Big Root  
 Ability: Effect Spore  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Giga Drain  
+- Sludge Bomb  
+- Foul Play  
+- Spore  
 
 
 === [gen8nationaldex] Alola Experts/Gladion ===
@@ -273,44 +353,116 @@ Ability: Pressure
 
 === [gen8nationaldex] Alola Experts/Kahili ===
 
-Oricorio  
+Oricorio @ Charti Berry  
 Ability: Dancer  
+EVs: 252 HP / 252 Def  
+Bold Nature  
+IVs: 0 Atk  
+- Calm Mind  
+- Revelation Dance  
+- Roost  
+- Baton Pass  
 
-Hawlucha  
-Ability: Limber  
+Hawlucha @ Expert Belt  
+Ability: Unburden  
+- Flying Press  
+- Submission  
+- Rock Tomb  
+- Poison Jab  
 
-Toucannon  
-Ability: Keen Eye  
+Toucannon @ King's Rock  
+Ability: Skill Link  
+EVs: 248 HP / 252 Atk  
+Adamant Nature  
+- Beak Blast  
+- Rock Blast  
+- Bullet Seed  
+- Pluck  
 
-Gliscor  
-Ability: Hyper Cutter  
+Gliscor @ Toxic Orb  
+Ability: Poison Heal  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Earthquake  
+- Swords Dance  
+- X-Scissor  
+- Poison Jab  
 
-Emolga  
+Emolga @ Rocky Helmet  
 Ability: Static  
+EVs: 252 HP / 252 Spe  
+Timid Nature  
+- Thunderbolt  
+- U-turn  
+- Encore  
+- Roost  
 
-Cramorant  
+Cramorant @ Heavy-Duty Boots  
 Ability: Gulp Missile  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Roost  
+- Surf  
+- Hurricane  
+- Substitute  
 
 
 === [gen8nationaldex] Alola Experts/Molayne ===
 
-Skarmory  
-Ability: Keen Eye  
+Skarmory @ Rocky Helmet  
+Ability: Sturdy  
+EVs: 252 HP / 252 Def  
+Impish Nature  
+- Whirlwind  
+- Roost  
+- Brave Bird  
+- Spikes  
 
-Sandslash-Alola  
+Sandslash-Alola @ Occa Berry  
 Ability: Snow Cloak  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Iron Head  
+- Icicle Crash  
+- Icicle Spear  
+- Iron Defense  
 
-Dugtrio-Alola  
-Ability: Sand Veil  
+Dugtrio-Alola @ Leftovers  
+Ability: Tangling Hair  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Iron Head  
+- Dig  
+- Earthquake  
+- Sucker Punch  
 
-Togedemaru  
-Ability: Iron Barbs  
+Togedemaru @ Magnet  
+Ability: Sturdy  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Zing Zap  
+- Iron Head  
+- Nuzzle  
+- U-turn  
 
-Durant  
-Ability: Swarm  
+Durant @ Quick Claw  
+Ability: Hustle  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- First Impression  
+- Superpower  
+- Rock Slide  
+- Iron Head  
 
-Mawile  
-Ability: Hyper Cutter  
+Mawile @ Focus Sash  
+Ability: Intimidate  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Swords Dance  
+- Play Rough  
+- Sucker Punch  
+- Knock Off  
 
 
 === [gen8nationaldex] Alola Experts/Hapu ===
@@ -336,65 +488,184 @@ Ability: Wandering Spirit
 
 === [gen8nationaldex] Alola Experts/Olivia ===
 
-Golem-Alola  
-Ability: Magnet Pull  
-
-Carbink  
+Carbink @ Leftovers  
 Ability: Clear Body  
+EVs: 252 HP / 252 SpD  
+Calm Nature  
+IVs: 0 Atk  
+- Stealth Rock  
+- Moonblast  
+- Protect  
+- Body Press  
 
-Lycanroc-Midnight  
-Ability: Keen Eye  
-
-Probopass  
+Golem-Alola @ Weakness Policy  
 Ability: Sturdy  
+EVs: 252 HP / 252 Atk  
+Brave Nature  
+IVs: 0 Spe  
+- Stone Edge  
+- Thunder Punch  
+- Earthquake  
+- Gyro Ball  
 
-Cradily  
+Lycanroc-Midnight @ Assault Vest  
+Ability: Keen Eye  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Swords Dance  
+- Stone Edge  
+- Close Combat  
+- Sucker Punch  
+
+Probopass @ Air Balloon  
+Ability: Sturdy  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Power Gem  
+- Discharge  
+- Earth Power  
+- Thunder Wave  
+
+Cradily @ Big Root  
 Ability: Suction Cups  
+EVs: 248 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Earth Power  
+- Ancient Power  
+- Toxic  
+- Ancient Power  
 
-Armaldo  
+Armaldo @ Heavy-Duty Boots  
 Ability: Battle Armor  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Metal Claw  
+- X-Scissor  
+- Stone Edge  
+- Protect  
 
 
 === [gen8nationaldex] Kalos Experts/Malva ===
 
-Torkoal  
-Ability: White Smoke  
+Torkoal @ Heat Rock  
+Ability: Drought  
+EVs: 252 HP / 252 Def  
+Bold Nature  
+- Stealth Rock  
+- Lava Plume  
+- Rapid Spin  
+- Toxic  
 
-Talonflame  
+Talonflame @ Passho Berry  
+Ability: Gale Wings  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Brave Bird  
+- Flame Charge  
+- Acrobatics  
+- Flare Blitz  
+
+Pyroar @ Throat Spray  
+Ability: Moxie  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Endeavor  
+- Hyper Voice  
+- Dark Pulse  
+- Will-O-Wisp  
+
+Chandelure @ Heavy-Duty Boots  
 Ability: Flame Body  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Fire Blast  
+- Shadow Ball  
+- Toxic  
+- Energy Ball  
 
-Pyroar  
-Ability: Rivalry  
-
-Chandelure  
-Ability: Flash Fire  
-
-Salazzle (F)  
+Salazzle (F) @ Focus Sash  
 Ability: Corrosion  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Toxic  
+- Sludge Wave  
+- Flamethrower  
+- Dragon Pulse  
 
-Houndoom  
+Houndoom @ Air Balloon  
 Ability: Early Bird  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Shadow Ball  
+- Dark Pulse  
+- Flamethrower  
+- Taunt  
 
 
 === [gen8nationaldex] Unova Experts/Shauntal ===
 
-Cofagrigus  
+Cofagrigus @ Chesto Berry  
 Ability: Mummy  
+EVs: 252 HP / 252 SpD  
+Calm Nature  
+IVs: 0 Atk  
+- Iron Defense  
+- Body Press  
+- Shadow Ball  
+- Rest  
 
-Chandelure  
-Ability: Flash Fire  
+Chandelure @ Heavy-Duty Boots  
+Ability: Infiltrator  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Toxic  
+- Energy Ball  
+- Shadow Ball  
+- Fire Blast  
 
-Golurk  
+Golurk @ Expert Belt  
 Ability: Iron Fist  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Earthquake  
+- Shadow Punch  
+- Ice Punch  
+- Power-Up Punch  
 
-Drifblim  
-Ability: Aftermath  
+Drifblim @ Sitrus Berry  
+Ability: Unburden  
+EVs: 252 SpA / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Shadow Ball  
+- Calm Mind  
+- Substitute  
+- Thunderbolt  
 
-Froslass (F)  
-Ability: Snow Cloak  
+Froslass (F) @ Leftovers  
+Ability: Cursed Body  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+- Avalanche  
+- Frost Breath  
+- Will-O-Wisp  
+- Hex  
 
-Mimikyu  
+Mimikyu @ Razor Claw  
 Ability: Disguise  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Swords Dance  
+- Play Rough  
+- Shadow Sneak  
+- Shadow Claw  
 
 
 === [gen8nationaldex] Sinnoh Experts/Buck ===
@@ -441,23 +712,58 @@ Ability: Sap Sipper
 
 === [gen8nationaldex] Sinnoh Experts/Aaron ===
 
-Scizor  
-Ability: Swarm  
+Scizor @ Rocky Helmet  
+Ability: Technician  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Bullet Punch  
+- Iron Head  
+- X-Scissor  
+- Swords Dance  
 
-Vespiquen (F)  
+Vespiquen (F) @ Focus Sash  
 Ability: Pressure  
+EVs: 252 HP / 252 SpA  
+Quiet Nature  
+- Attack Order  
+- Defend Order  
+- Power Gem  
+- Air Slash  
 
-Yanmega  
+Yanmega @ Silver Powder  
 Ability: Speed Boost  
+EVs: 252 SpA / 252 Spe  
+Modest Nature  
+- Bug Buzz  
+- Air Slash  
+- U-turn  
+- Giga Drain  
 
-Heracross  
-Ability: Swarm  
+Heracross @ Flame Orb  
+Ability: Guts  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Facade  
+- Throat Chop  
+- Megahorn  
+- Close Combat  
 
-Golisopod  
+Golisopod @ Sitrus Berry  
 Ability: Emergency Exit  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Liquidation  
+- First Impression  
+- Sucker Punch  
+- X-Scissor  
 
-Vikavolt  
+Vikavolt @ Magnet  
 Ability: Levitate  
+IVs: 0 Atk  
+- Zap Cannon  
+- Thunderbolt  
+- Bug Buzz  
+- Flash Cannon  
 
 
 === [gen8nationaldex] Hoenn Experts/Lisia ===
@@ -525,44 +831,118 @@ Ability: Overgrow
 
 === [gen8nationaldex] Hoenn Experts/Drake ===
 
-Altaria  
+Altaria @ Roseli Berry  
 Ability: Natural Cure  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Dragon Pulse  
+- Roost  
+- Hurricane  
+- Flamethrower  
 
-Flygon  
+Flygon @ Persim Berry  
 Ability: Levitate  
+EVs: 252 Atk / 252 Spe  
+Adamant Nature  
+- Dragon Dance  
+- Earthquake  
+- Outrage  
+- Stone Edge  
 
-Salamence  
+Salamence @ Heavy-Duty Boots  
 Ability: Intimidate  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Hurricane  
+- Flamethrower  
+- Draco Meteor  
+- Roost  
 
-Kingdra  
+Kingdra @ White Herb  
 Ability: Swift Swim  
+IVs: 0 Atk  
+- Hydro Pump  
+- Draco Meteor  
+- Surf  
+- Flash Cannon  
 
-Drampa  
+Drampa @ Leftovers  
 Ability: Berserk  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Hyper Voice  
+- Draco Meteor  
+- Flamethrower  
+- Energy Ball  
 
-Duraludon  
-Ability: Light Metal  
+Duraludon @ Expert Belt  
+Ability: Heavy Metal  
+EVs: 252 SpA / 252 Spe  
+Naive Nature  
+- Draco Meteor  
+- Flash Cannon  
+- Heavy Slam  
+- Thunder  
 
 
 === [gen8nationaldex] Hoenn Experts/Sidney ===
 
-Mightyena  
-Ability: Intimidate  
-
-Sharpedo  
-Ability: Rough Skin  
-
-Cacturne  
+Cacturne @ Big Root  
 Ability: Sand Veil  
+EVs: 252 HP / 252 SpA  
+Quiet Nature  
+- Spikes  
+- Giga Drain  
+- Dark Pulse  
+- Sucker Punch  
 
-Shiftry  
-Ability: Chlorophyll  
+Mightyena @ Sitrus Berry  
+Ability: Moxie  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Fire Fang  
+- Thunder Fang  
+- Ice Fang  
+- Crunch  
 
-Absol  
+Sharpedo @ Rocky Helmet  
+Ability: Speed Boost  
+EVs: 252 Atk / 252 Spe  
+Adamant Nature  
+- Waterfall  
+- Crunch  
+- Close Combat  
+- Protect  
+
+Shiftry @ Power Herb  
+Ability: Pickpocket  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Solar Blade  
+- Foul Play  
+- Low Sweep  
+- Protect  
+
+Absol @ Black Glasses  
 Ability: Pressure  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Swords Dance  
+- Knock Off  
+- Sucker Punch  
+- Zen Headbutt  
 
-Scrafty  
-Ability: Shed Skin  
+Scrafty @ Persim Berry  
+Ability: Intimidate  
+EVs: 252 Atk / 252 Spe  
+Adamant Nature  
+- Dragon Dance  
+- Close Combat  
+- Knock Off  
+- Iron Head  
 
 
 === [gen8nationaldex] Johto Experts/Kris ===
@@ -609,86 +989,241 @@ Ability: Own Tempo
 
 === [gen8nationaldex] Johto Experts/Will ===
 
-Jynx (F)  
-Ability: Oblivious  
+Xatu @ Light Clay  
+Ability: Magic Bounce  
+EVs: 252 HP / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Light Screen  
+- Reflect  
+- Substitute  
+- Toxic  
 
-Grumpig  
+Jynx (F) @ Never-Melt Ice  
+Ability: Oblivious  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Psychic  
+- Blizzard  
+- Shadow Ball  
+- Hail  
+
+Grumpig @ Colbur Berry  
 Ability: Thick Fat  
+IVs: 0 Atk  
+- Psychic  
+- Focus Blast  
+- Shadow Ball  
+- Calm Mind  
 
-Bronzong  
-Ability: Levitate  
+Bronzong @ Iron Ball  
+Ability: Heatproof  
+EVs: 252 HP / 252 SpD  
+Sassy Nature  
+IVs: 0 Spe  
+- Gyro Ball  
+- Psychic Terrain  
+- Hex  
+- Toxic  
 
-Xatu  
-Ability: Synchronize  
+Beheeyem @ Twisted Spoon  
+Ability: Analytic  
+IVs: 0 Atk  
+- Psychic  
+- Thunderbolt  
+- Recover  
+- Nasty Plot  
 
-Beheeyem  
-Ability: Telepathy  
-
-Slowking  
+Slowking @ Leftovers  
 Ability: Oblivious  
+EVs: 252 HP / 252 Def  
+Bold Nature  
+IVs: 0 Atk  
+- Scald  
+- Psychic  
+- Slack Off  
+- Flamethrower  
 
 
 === [gen8nationaldex] Kanto Experts/Lance ===
 
-Exeggutor-Alola  
-Ability: Frisk  
+Exeggutor-Alola @ Yache Berry  
+Ability: Harvest  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Leech Seed  
+- Giga Drain  
+- Leaf Storm  
+- Dragon Pulse  
 
-Dragonite  
-Ability: Inner Focus  
+Dragonite @ Leftovers  
+Ability: Multiscale  
+EVs: 252 Atk / 252 Spe  
+Adamant Nature  
+- Outrage  
+- Thunder Punch  
+- Stone Edge  
+- Dragon Dance  
 
-Kingdra  
-Ability: Swift Swim  
+Kingdra @ Assault Vest  
+Ability: Sniper  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Hydro Pump  
+- Draco Meteor  
+- Surf  
+- Signal Beam  
 
-Altaria  
-Ability: Natural Cure  
+Altaria @ Roseli Berry  
+Ability: Cloud Nine  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Dragon Pulse  
+- Roost  
+- Hurricane  
+- Flamethrower  
 
-Druddigon  
+Druddigon @ Rocky Helmet  
 Ability: Rough Skin  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Dragon Tail  
+- Earthquake  
+- Glare  
+- Iron Head  
 
-Tyrantrum  
-Ability: Strong Jaw  
+Tyrantrum @ King's Rock  
+Ability: Rock Head  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Head Smash  
+- Outrage  
+- Close Combat  
+- Poison Fang  
 
 
 === [gen8nationaldex] Kanto Experts/Agatha ===
 
-Spiritomb  
+Spiritomb @ Leftovers  
 Ability: Pressure  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Rest  
+- Sleep Talk  
+- Calm Mind  
+- Dark Pulse  
 
-Sableye  
-Ability: Keen Eye  
-
-Golurk  
+Golurk @ Expert Belt  
 Ability: Iron Fist  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Earthquake  
+- Shadow Punch  
+- Ice Punch  
+- Power-Up Punch  
 
-Marowak-Alola  
+Marowak-Alola @ Thick Club  
 Ability: Cursed Body  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Shadow Bone  
+- Stomping Tantrum  
+- Flare Blitz  
+- Flame Wheel  
 
-Gengar  
+Sableye @ Rocky Helmet  
+Ability: Prankster  
+EVs: 252 HP / 252 SpD  
+Careful Nature  
+- Knock Off  
+- Recover  
+- Will-O-Wisp  
+- Encore  
+
+Gengar @ Black Sludge  
 Ability: Cursed Body  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Dark Pulse  
+- Shadow Ball  
+- Sludge Bomb  
+- Thunderbolt  
 
-Mismagius  
+Mismagius @ Colbur Berry  
 Ability: Levitate  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Nasty Plot  
+- Shadow Ball  
+- Mystical Fire  
+- Will-O-Wisp  
 
 
 === [gen8nationaldex] Kanto Experts/Lorelei ===
 
-Dewgong  
-Ability: Thick Fat  
+Aurorus @ Icy Rock  
+Ability: Snow Warning  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Ice Beam  
+- Ancient Power  
+- Blizzard  
+- Earth Power  
 
-Jynx (F)  
+Dewgong @ Leftovers  
+Ability: Ice Body  
+EVs: 252 HP / 252 Atk  
+Brave Nature  
+- Ice Beam  
+- Aqua Tail  
+- Ice Shard  
+- Aqua Ring  
+
+Jynx (F) @ Twisted Spoon  
 Ability: Oblivious  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Psychic  
+- Blizzard  
+- Shadow Ball  
+- Hail  
 
-Cloyster  
+Cloyster @ White Herb  
+Ability: Skill Link  
+EVs: 252 Atk / 252 Spe  
+Adamant Nature  
+- Icicle Spear  
+- Rock Blast  
+- Pin Missile  
+- Shell Smash  
+
+Sandslash-Alola @ Occa Berry  
+Ability: Slush Rush  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Iron Head  
+- Icicle Crash  
+- Earthquake  
+- Iron Defense  
+
+Lapras @ Heavy-Duty Boots  
 Ability: Shell Armor  
-
-Sandslash-Alola  
-Ability: Snow Cloak  
-
-Lapras  
-Ability: Water Absorb  
-
-Aurorus  
-Ability: Refrigerate  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Ice Beam  
+- Brine  
+- Thunder  
+- Sing  
 
 
 === [gen8nationaldex] Team Leaders/Giovanni ===
@@ -721,7 +1256,7 @@ Adamant Nature
 - Steel Wing  
 
 Persian @ Silk Scarf  
-Ability: Limber  
+Ability: Technician  
 EVs: 252 Atk / 252 Spe  
 Jolly Nature  
 - Assurance  
@@ -730,7 +1265,9 @@ Jolly Nature
 - Dig  
 
 Dugtrio @ Smooth Rock  
-Ability: Sand Veil  
+Ability: Sand Force  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
 - Sand Tomb  
 - Night Slash  
 - Earthquake  
@@ -738,6 +1275,8 @@ Ability: Sand Veil
 
 Nidoking (M) @ Air Balloon  
 Ability: Sheer Force  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
 - Poison Jab  
 - Earthquake  
 - Megahorn  
@@ -5291,24 +5830,6 @@ Ability: Stance Change
 
 === [gen8nationaldex] Team Leaders/Maxie ===
 
-Mightyena @ Expert Belt  
-Ability: Quick Feet  
-EVs: 252 Atk / 252 Spe  
-Jolly Nature  
-- Fire Fang  
-- Thunder Fang  
-- Ice Fang  
-- Crunch  
-
-Crobat @ Sharp Beak  
-Ability: Inner Focus  
-EVs: 252 Atk / 4 SpD / 252 Spe  
-Jolly Nature  
-- Leech Life  
-- Cross Poison  
-- Brave Bird  
-- Zen Headbutt  
-
 Torkoal @ Focus Sash  
 Ability: Drought  
 EVs: 252 HP / 252 SpA  
@@ -5321,11 +5842,31 @@ IVs: 0 Atk
 
 Camerupt @ Blunder Policy  
 Ability: Solid Rock  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
 IVs: 0 Atk  
 - Fire Blast  
 - Earth Power  
 - Rest  
 - Sleep Talk  
+
+Mightyena @ Expert Belt  
+Ability: Quick Feet  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Fire Fang  
+- Thunder Fang  
+- Ice Fang  
+- Crunch  
+
+Crobat @ Sharp Beak  
+Ability: Inner Focus  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Leech Life  
+- Cross Poison  
+- Brave Bird  
+- Zen Headbutt  
 
 Flygon @ Lum Berry  
 Ability: Levitate  
@@ -5349,14 +5890,14 @@ IVs: 0 Atk
 
 === [gen8nationaldex] Team Leaders/Archie ===
 
-Mightyena @ Expert Belt  
-Ability: Quick Feet  
+Sharpedo @ Rocky Helmet  
+Ability: Speed Boost  
 EVs: 252 Atk / 252 Spe  
-Jolly Nature  
-- Fire Fang  
-- Thunder Fang  
-- Ice Fang  
+Adamant Nature  
+- Waterfall  
 - Crunch  
+- Close Combat  
+- Protect  
 
 Relicanth @ Rindo Berry  
 Ability: Rock Head  
@@ -5377,6 +5918,15 @@ IVs: 0 Atk
 - Dark Pulse  
 - Flamethrower  
 
+Mightyena @ Expert Belt  
+Ability: Quick Feet  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Fire Fang  
+- Thunder Fang  
+- Ice Fang  
+- Crunch  
+
 Swoobat @ Heavy-Duty Boots  
 Ability: Unaware  
 EVs: 252 SpA / 252 Spe  
@@ -5386,15 +5936,6 @@ IVs: 0 Atk
 - Air Slash  
 - Stored Power  
 - Shadow Ball  
-
-Sharpedo @ Rocky Helmet  
-Ability: Speed Boost  
-EVs: 252 Atk / 4 SpD / 252 Spe  
-Adamant Nature  
-- Waterfall  
-- Crunch  
-- Close Combat  
-- Protect  
 
 Clawitzer @ Wacan Berry  
 Ability: Mega Launcher  
@@ -5445,7 +5986,7 @@ Jolly Nature
 - Body Slam  
 - Aerial Ace  
 - Play Rough  
-- Substitute  
+- Foul Play  
 
 Probopass @ Air Balloon  
 Ability: Sturdy  
@@ -5471,7 +6012,7 @@ Jolly Nature
 
 Cofagrigus @ Chesto Berry  
 Ability: Mummy  
-EVs: 248 HP / 252 Def  
+EVs: 252 HP / 252 Def  
 Bold Nature  
 IVs: 0 Atk  
 - Iron Defense  
@@ -5488,15 +6029,6 @@ Adamant Nature
 - Sucker Punch  
 - Swords Dance  
 
-Drapion @ Shuca Berry  
-Ability: Sniper  
-EVs: 252 Atk / 252 Spe  
-Jolly Nature  
-- Swords Dance  
-- Knock Off  
-- Poison Jab  
-- Earthquake  
-
 Hydreigon @ White Herb  
 Ability: Levitate  
 EVs: 252 HP / 252 SpA  
@@ -5506,6 +6038,15 @@ IVs: 0 Atk
 - Dark Pulse  
 - Flamethrower  
 - Roost  
+
+Drapion @ Shuca Berry  
+Ability: Keen Eye  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Swords Dance  
+- Knock Off  
+- Poison Jab  
+- Earthquake  
 
 Eelektross @ Assault Vest  
 Ability: Levitate  
@@ -5517,7 +6058,7 @@ Quiet Nature
 - Drain Punch  
 
 Seismitoad @ Expert Belt  
-Ability: Swift Swim  
+Ability: Poison Touch  
 EVs: 252 Atk / 252 Spe  
 Adamant Nature  
 - Drain Punch  
@@ -5537,15 +6078,6 @@ Jolly Nature
 - U-turn  
 - Fake Out  
 
-Pangoro @ Expert Belt  
-Ability: Iron Fist  
-EVs: 252 HP / 252 Atk  
-Adamant Nature  
-- Knock Off  
-- Close Combat  
-- Iron Head  
-- Drain Punch  
-
 Pyroar @ Power Herb  
 Ability: Moxie  
 EVs: 252 SpA / 252 Spe  
@@ -5556,6 +6088,15 @@ IVs: 0 Atk
 - Dark Pulse  
 - Will-O-Wisp  
 
+Gyarados @ Heavy-Duty Boots  
+Ability: Intimidate  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Ice Fang  
+- Bounce  
+- Outrage  
+- Aqua Tail  
+
 Avalugg @ Occa Berry  
 Ability: Sturdy  
 EVs: 252 HP / 252 Atk  
@@ -5565,14 +6106,14 @@ Adamant Nature
 - Earthquake  
 - Stone Edge  
 
-Gyarados @ Heavy-Duty Boots  
-Ability: Intimidate  
-EVs: 252 Atk / 252 Spe  
-Jolly Nature  
-- Ice Fang  
-- Bounce  
-- Outrage  
-- Aqua Tail  
+Pangoro @ Expert Belt  
+Ability: Scrappy  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Knock Off  
+- Close Combat  
+- Iron Head  
+- Drain Punch  
 
 Malamar @ Bright Powder  
 Ability: Contrary  
@@ -5596,8 +6137,27 @@ IVs: 0 Atk
 - Air Slash  
 - Scald  
 
+Golisopod @ Sitrus Berry  
+Ability: Emergency Exit  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Liquidation  
+- First Impression  
+- Sucker Punch  
+- X-Scissor  
+
+Vikavolt @ Quick Claw  
+Ability: Levitate  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Zap Cannon  
+- Thunderbolt  
+- Bug Buzz  
+- Flash Cannon  
+
 Ariados @ Focus Sash  
-Ability: Swarm  
+Ability: Sniper  
 EVs: 252 HP / 252 Atk  
 Adamant Nature  
 - Leech Life  
@@ -5615,66 +6175,24 @@ Adamant Nature
 - Swords Dance  
 
 Pinsir @ White Herb  
-Ability: Hyper Cutter  
+Ability: Moxie  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
 - Superpower  
 - X-Scissor  
 - Swords Dance  
 - Submission  
 
-Vikavolt @ Quick Claw  
-Ability: Levitate  
-EVs: 252 HP / 252 SpA  
-Modest Nature  
-IVs: 0 Atk  
-- Zap Cannon  
-- Thunderbolt  
-- Bug Buzz  
-- Flash Cannon  
-
-Golisopod @ Sitrus Berry  
-Ability: Emergency Exit  
-EVs: 252 HP / 252 Atk  
-Adamant Nature  
-- Liquidation  
-- First Impression  
-- Sucker Punch  
-- X-Scissor  
-
 
 === [gen8nationaldex] Team Leaders/President Rose ===
 
-Ferrothorn @ Rocky Helmet  
+Ferrothorn @ Occa Berry  
 Ability: Iron Barbs  
 EVs: 252 HP / 252 Def  
 Impish Nature  
 - Spikes  
 - Knock Off  
 - Leech Seed  
-- Substitute  
-
-Escavalier @ Leftovers  
-Ability: Shell Armor  
-EVs: 252 HP / 252 Atk  
-Adamant Nature  
-- Iron Head  
-- Swords Dance  
-- Brutal Swing  
-- X-Scissor  
-
-Perrserker @ King's Rock  
-Ability: Tough Claws  
-- Swords Dance  
-- Iron Head  
-- Seed Bomb  
-- Substitute  
-
-Klinklang @ Razor Claw  
-Ability: Clear Body  
-EVs: 252 Atk / 252 Spe  
-Adamant Nature  
-- Shift Gear  
-- Gear Grind  
-- Facade  
 - Substitute  
 
 Copperajah @ Assault Vest  
@@ -5686,8 +6204,37 @@ Adamant Nature
 - Stone Edge  
 - Heat Crash  
 
+Perrserker @ King's Rock  
+Ability: Tough Claws  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Swords Dance  
+- Iron Head  
+- Seed Bomb  
+- Substitute  
+
+Escavalier @ Leftovers  
+Ability: Shell Armor  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Iron Head  
+- Swords Dance  
+- Brutal Swing  
+- X-Scissor  
+
+Klinklang @ Razor Claw  
+Ability: Clear Body  
+EVs: 252 Atk / 252 Spe  
+Adamant Nature  
+- Shift Gear  
+- Gear Grind  
+- Assurance  
+- Substitute  
+
 Togedemaru @ Magnet  
 Ability: Sturdy  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
 - Zing Zap  
 - Iron Head  
 - Nuzzle  
@@ -5696,44 +6243,102 @@ Ability: Sturdy
 
 === [gen8nationaldex] Kanto Experts/Bruno ===
 
-Hitmonchan (M)  
-Ability: Keen Eye  
+Hitmonchan (M) @ Leftovers  
+Ability: Iron Fist  
+- Drain Punch  
+- Power-Up Punch  
+- Thunder Punch  
+- Bullet Punch  
 
-Hitmonlee (M)  
-Ability: Limber  
+Hitmonlee (M) @ Coba Berry  
+Ability: Unburden  
+- Blaze Kick  
+- Brick Break  
+- Poison Jab  
+- Throat Chop  
 
-Hitmontop (M)  
+Hitmontop (M) @ Rocky Helmet  
 Ability: Intimidate  
+- Dig  
+- Close Combat  
+- Sucker Punch  
+- Detect  
 
-Hariyama  
+Hariyama @ Assault Vest  
 Ability: Thick Fat  
+- Close Combat  
+- Knock Off  
+- Heavy Slam  
+- Stone Edge  
 
-Lucario  
-Ability: Steadfast  
+Lucario @ Black Belt  
+Ability: Inner Focus  
+- Close Combat  
+- Meteor Mash  
+- Swords Dance  
+- Extreme Speed  
 
-Machamp  
+Machamp @ Flame Orb  
 Ability: Guts  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Facade  
+- Stone Edge  
+- Darkest Lariat  
+- Close Combat  
 
 
 === [gen8nationaldex] Kanto Experts/Koga ===
 
-Crobat  
-Ability: Inner Focus  
+Crobat @ Sharp Beak  
+Ability: Infiltrator  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Leech Life  
+- Cross Poison  
+- Brave Bird  
+- Zen Headbutt  
 
-Tentacruel  
-Ability: Clear Body  
+Tentacruel @ Rocky Helmet  
+Ability: Liquid Ooze  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Sludge Wave  
+- Surf  
+- Hex  
+- Scald  
 
-Weezing  
-Ability: Levitate  
+Weezing @ Black Sludge  
+Ability: Neutralizing Gas  
+- Assurance  
+- Toxic  
+- Sludge Bomb  
+- Heat Wave  
 
-Skuntank  
+Skuntank @ Air Balloon  
 Ability: Stench  
+- Flamethrower  
+- Thief  
+- Shadow Claw  
+- Poison Jab  
 
-Venomoth  
-Ability: Shield Dust  
+Venomoth @ Focus Sash  
+Ability: Tinted Lens  
+IVs: 0 Atk  
+- Bug Buzz  
+- Energy Ball  
+- Sludge Bomb  
+- Protect  
 
-Dragalge  
-Ability: Poison Point  
+Dragalge @ Poison Barb  
+Ability: Adaptability  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+- Draco Meteor  
+- Sludge Bomb  
+- Flip Turn  
+- Scald  
 
 
 === [gen8nationaldex] Kanto Experts/Green ===
@@ -5780,23 +6385,56 @@ Ability: Overgrow
 
 === [gen8nationaldex] Johto Experts/Karen ===
 
-Umbreon  
+Umbreon @ Chesto Berry  
 Ability: Synchronize  
+EVs: 252 HP / 252 SpD  
+Calm Nature  
+IVs: 0 Atk  
+- Foul Play  
+- Protect  
+- Toxic  
+- Rest  
 
-Houndoom  
+Houndoom @ Focus Sash  
 Ability: Early Bird  
+IVs: 0 Atk  
+- Flamethrower  
+- Dark Pulse  
+- Shadow Ball  
+- Taunt  
 
-Honchkrow  
-Ability: Insomnia  
+Honchkrow @ Sharp Beak  
+Ability: Moxie  
+- Night Slash  
+- Sucker Punch  
+- Aerial Ace  
+- Steel Wing  
 
-Absol  
-Ability: Pressure  
-
-Zoroark  
+Zoroark @ Rocky Helmet  
 Ability: Illusion  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+- Dark Pulse  
+- Flamethrower  
+- Sludge Bomb  
+- U-turn  
 
-Persian-Alola  
+Absol @ Black Glasses  
+Ability: Super Luck  
+- Swords Dance  
+- Knock Off  
+- Sucker Punch  
+- Play Rough  
+
+Persian-Alola @ Heavy-Duty Boots  
 Ability: Fur Coat  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Power Gem  
+- Thunderbolt  
+- Shadow Ball  
+- Dark Pulse  
 
 
 === [gen8nationaldex] Johto Experts/Professor Elm ===
@@ -5822,107 +6460,296 @@ Ability: Blaze
 
 === [gen8nationaldex] Hoenn Experts/Phoebe ===
 
-Banette  
+Banette @ Spell Tag  
 Ability: Insomnia  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Shadow Claw  
+- Gunk Shot  
+- Knock Off  
+- Shadow Sneak  
 
-Sableye  
-Ability: Keen Eye  
+Sableye @ Rocky Helmet  
+Ability: Prankster  
+EVs: 248 HP / 252 SpD  
+Careful Nature  
+- Knock Off  
+- Recover  
+- Will-O-Wisp  
+- Encore  
 
-Drifblim  
-Ability: Aftermath  
+Drifblim @ Flame Orb  
+Ability: Flare Boost  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Shadow Ball  
+- Calm Mind  
+- Substitute  
+- Thunderbolt  
 
-Gourgeist  
-Ability: Pickup  
+Gourgeist @ Colbur Berry  
+Ability: Insomnia  
+EVs: 252 Atk / 252 Spe  
+Naive Nature  
+- Power Whip  
+- Poltergeist  
+- Shadow Sneak  
+- Fire Blast  
 
-Cursola  
+Cursola @ Power Herb  
 Ability: Weak Armor  
+IVs: 0 Atk  
+- Shadow Ball  
+- Meteor Beam  
+- Burning Jealousy  
+- Endure  
 
-Jellicent  
-Ability: Water Absorb  
+Jellicent @ Wacan Berry  
+Ability: Cursed Body  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Water Spout  
+- Shadow Ball  
+- Trick  
+- Surf  
 
 
 === [gen8nationaldex] Hoenn Experts/Glacia ===
 
-Glalie  
-Ability: Inner Focus  
-
-Froslass (F)  
-Ability: Snow Cloak  
-
-Walrein  
-Ability: Thick Fat  
-
-Beartic  
-Ability: Snow Cloak  
-
-Abomasnow  
+Abomasnow @ Icy Rock  
 Ability: Snow Warning  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Swords Dance  
+- Ice Shard  
+- Earthquake  
+- Wood Hammer  
 
-Ninetales-Alola  
+Walrein @ Heavy-Duty Boots  
+Ability: Ice Body  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Swords Dance  
+- Waterfall  
+- Icicle Spear  
+- Earthquake  
+
+Glalie @ Sitrus Berry  
+Ability: Ice Body  
+EVs: 252 SpA / 252 Spe  
+Hasty Nature  
+IVs: 0 Atk  
+- Hail  
+- Dark Pulse  
+- Blizzard  
+- Signal Beam  
+
+Froslass (F) @ Focus Sash  
 Ability: Snow Cloak  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Shadow Ball  
+- Frost Breath  
+- Will-O-Wisp  
+- Thunderbolt  
+
+Ninetales-Alola @ Leftovers  
+Ability: Snow Warning  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Dazzling Gleam  
+- Ice Beam  
+- Nasty Plot  
+- Hex  
+
+Beartic @ White Herb  
+Ability: Slush Rush  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Hail  
+- Swords Dance  
+- Icicle Crash  
+- Superpower  
 
 
 === [gen8nationaldex] Sinnoh Experts/Bertha ===
 
-Gliscor  
-Ability: Hyper Cutter  
-
-Rhyperior  
-Ability: Lightning Rod  
-
-Hippowdon  
+Hippowdon @ Rocky Helmet  
 Ability: Sand Stream  
+- Earthquake  
+- Toxic  
+- Slack Off  
+- Thunder Fang  
 
-Mamoswine  
-Ability: Oblivious  
+Gliscor @ Toxic Orb  
+Ability: Poison Heal  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Earthquake  
+- Swords Dance  
+- X-Scissor  
+- Poison Jab  
 
-Nidoking (M)  
-Ability: Poison Point  
+Rhyperior @ Soft Sand  
+Ability: Solid Rock  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Earthquake  
+- Stone Edge  
+- Stealth Rock  
+- Megahorn  
 
-Flygon  
+Mamoswine @ Never-Melt Ice  
+Ability: Thick Fat  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Icicle Crash  
+- Earthquake  
+- Ice Shard  
+- Knock Off  
+
+Nidoking (M) @ Black Sludge  
+Ability: Sheer Force  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Body Slam  
+- Fire Punch  
+- Head Smash  
+- Superpower  
+
+Flygon @ Persim Berry  
 Ability: Levitate  
+EVs: 252 Atk / 252 Spe  
+Adamant Nature  
+- Dragon Dance  
+- Earthquake  
+- Outrage  
+- Stone Edge  
 
 
 === [gen8nationaldex] Sinnoh Experts/Flint ===
 
-Houndoom  
-Ability: Early Bird  
+Houndoom @ Focus Sash  
+Ability: Unnerve  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Flamethrower  
+- Dark Pulse  
+- Shadow Ball  
+- Taunt  
 
-Flareon  
+Flareon @ Charcoal  
 Ability: Flash Fire  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Flare Blitz  
+- Bite  
+- Iron Tail  
+- Superpower  
 
-Rapidash  
-Ability: Run Away  
-
-Infernape  
-Ability: Blaze  
-
-Magmortar  
+Rapidash @ Assault Vest  
 Ability: Flame Body  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Smart Strike  
+- Flame Wheel  
+- Flare Blitz  
+- Poison Jab  
 
-Centiskorch  
-Ability: Flash Fire  
+Infernape @ Rocky Helmet  
+Ability: Blaze  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Nasty Plot  
+- Fire Blast  
+- Focus Blast  
+- Flamethrower  
+
+Magmortar @ Heavy-Duty Boots  
+Ability: Flame Body  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Thunderbolt  
+- Fire Blast  
+- Focus Blast  
+- Scorching Sands  
+
+Centiskorch @ Quick Claw  
+Ability: White Smoke  
+EVs: 252 HP / 252 Atk  
+Lonely Nature  
+- Bug Buzz  
+- Lunge  
+- Crunch  
+- Power Whip  
 
 
 === [gen8nationaldex] Sinnoh Experts/Lucian ===
 
-Espeon  
+Bronzong @ Light Clay  
+Ability: Heatproof  
+EVs: 252 HP / 252 SpD  
+Calm Nature  
+IVs: 0 Atk  
+- Stealth Rock  
+- Toxic  
+- Light Screen  
+- Reflect  
+
+Espeon @ Chesto Berry  
 Ability: Synchronize  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Psychic  
+- Dazzling Gleam  
+- Shadow Ball  
+- Rest  
 
-Bronzong  
-Ability: Levitate  
+Mr. Mime @ Expert Belt  
+Ability: Filter  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Psychic  
+- Dazzling Gleam  
+- Magical Leaf  
+- Psychic Terrain  
 
-Gallade (M)  
+Gallade (M) @ White Herb  
 Ability: Steadfast  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Swords Dance  
+- Close Combat  
+- Knock Off  
+- Zen Headbutt  
 
-Mr. Mime  
-Ability: Soundproof  
-
-Metagross  
+Metagross @ Air Balloon  
 Ability: Clear Body  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Meteor Mash  
+- Earthquake  
+- Hammer Arm  
+- Zen Headbutt  
 
-Starmie  
+Starmie @ Colbur Berry  
 Ability: Illuminate  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Psychic  
+- Hydro Pump  
+- Power Gem  
+- Recover  
 
 
 === [gen8nationaldex] Sinnoh Experts/Riley ===
@@ -5990,65 +6817,178 @@ Ability: Volt Absorb
 
 === [gen8nationaldex] Unova Experts/Marshal ===
 
-Throh (M)  
+Throh (M) @ Flame Orb  
 Ability: Guts  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Superpower  
+- Earthquake  
+- Knock Off  
+- Poison Jab  
 
-Mienshao  
-Ability: Inner Focus  
+Mienshao @ Assault Vest  
+Ability: Reckless  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Knock Off  
+- High Jump Kick  
+- U-turn  
+- Fake Out  
 
-Conkeldurr  
-Ability: Guts  
+Conkeldurr @ Leftovers  
+Ability: Iron Fist  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Drain Punch  
+- Fire Punch  
+- Ice Punch  
+- Thunder Punch  
 
-Sawk (M)  
+Sawk (M) @ Expert Belt  
 Ability: Sturdy  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Close Combat  
+- Knock Off  
+- Poison Jab  
+- Earthquake  
 
-Lucario  
+Lucario @ Black Belt  
 Ability: Steadfast  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Aura Sphere  
+- Dark Pulse  
+- Dragon Pulse  
+- Flash Cannon  
 
-Falinks  
+Falinks @ White Herb  
 Ability: Battle Armor  
+- Swords Dance  
+- Close Combat  
+- Throat Chop  
+- Zen Headbutt  
 
 
 === [gen8nationaldex] Unova Experts/Grimsley ===
 
-Scrafty  
-Ability: Shed Skin  
-
-Krookodile  
+Krookodile @ Chople Berry  
 Ability: Intimidate  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Earthquake  
+- Knock Off  
+- Stealth Rock  
+- Taunt  
 
-Bisharp  
+Scrafty @ Persim Berry  
+Ability: Moxie  
+EVs: 252 Atk / 252 Spe  
+Adamant Nature  
+- Dragon Dance  
+- Close Combat  
+- Knock Off  
+- Iron Head  
+
+Bisharp @ Black Glasses  
 Ability: Defiant  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Iron Head  
+- Knock Off  
+- Sucker Punch  
+- Swords Dance  
 
-Liepard  
-Ability: Limber  
+Liepard @ Sitrus Berry  
+Ability: Unburden  
+EVs: 252 Atk / 252 Spe  
+Adamant Nature  
+- Night Slash  
+- Sucker Punch  
+- Play Rough  
+- Shadow Claw  
 
-Sharpedo  
-Ability: Rough Skin  
+Sharpedo @ Rocky Helmet  
+Ability: Speed Boost  
+EVs: 252 Atk / 252 Spe  
+Adamant Nature  
+- Waterfall  
+- Crunch  
+- Close Combat  
+- Protect  
 
-Tyranitar  
+Tyranitar @ Leftovers  
 Ability: Sand Stream  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Crunch  
+- Body Slam  
+- Earthquake  
+- Thunder Wave  
 
 
 === [gen8nationaldex] Unova Experts/Caitlin ===
 
-Musharna  
-Ability: Forewarn  
+Musharna @ Terrain Extender  
+Ability: Synchronize  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Psychic Terrain  
+- Moonblast  
+- Hypnosis  
+- Psychic  
 
-Gothitelle  
-Ability: Frisk  
+Gothitelle @ Leftovers  
+Ability: Shadow Tag  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Dark Pulse  
+- Charm  
+- Shadow Ball  
+- Psychic  
 
-Reuniclus  
-Ability: Overcoat  
+Reuniclus @ Iron Ball  
+Ability: Magic Guard  
+EVs: 252 HP / 252 Def  
+Bold Nature  
+IVs: 0 Atk  
+- Calm Mind  
+- Psyshock  
+- Focus Blast  
+- Trick Room  
 
-Oranguru  
+Oranguru @ Colbur Berry  
 Ability: Inner Focus  
+EVs: 248 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Psychic  
+- Thunderbolt  
+- Nasty Plot  
+- Shadow Ball  
 
-Indeedee (M)  
-Ability: Inner Focus  
+Indeedee (M) @ Twisted Spoon  
+Ability: Psychic Surge  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Expanding Force  
+- Mystical Fire  
+- Hyper Voice  
+- Dazzling Gleam  
 
-Oricorio-Pa'u  
+Oricorio-Pa'u @ Charti Berry  
 Ability: Dancer  
+EVs: 252 HP / 252 Def / 4 SpA  
+Bold Nature  
+IVs: 0 Atk  
+- Calm Mind  
+- Hurricane  
+- Revelation Dance  
+- Roost  
 
 
 === [gen8nationaldex] Unova Experts/N ===
@@ -6137,65 +7077,180 @@ Ability: Torrent
 
 === [gen8nationaldex] Kalos Experts/Siebold ===
 
-Clawitzer  
+Clawitzer @ Expert Belt  
 Ability: Mega Launcher  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Water Pulse  
+- Ice Beam  
+- Dark Pulse  
+- Aura Sphere  
 
-Barbaracle  
-Ability: Tough Claws  
+Barbaracle @ White Herb  
+Ability: Pickpocket  
+EVs: 252 Atk / 252 Spe  
+Naughty Nature  
+- Shell Smash  
+- Liquidation  
+- Stone Edge  
+- Grass Knot  
 
-Starmie  
-Ability: Illuminate  
+Starmie @ Colbur Berry  
+Ability: Natural Cure  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Psychic  
+- Hydro Pump  
+- Power Gem  
+- Recover  
 
-Greninja  
-Ability: Torrent  
-
-Toxapex  
+Toxapex @ Black Sludge  
 Ability: Merciless  
+EVs: 248 HP / 252 Def  
+Bold Nature  
+IVs: 0 Atk  
+- Toxic  
+- Toxic Spikes  
+- Scald  
+- Hex  
 
-Araquanid  
+Greninja @ Leftovers  
+Ability: Protean  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Hydro Pump  
+- Dark Pulse  
+- Ice Beam  
+- Grass Knot  
+
+Araquanid @ Mystic Water  
 Ability: Water Bubble  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Leech Life  
+- Liquidation  
+- Crunch  
+- Poison Jab  
 
 
 === [gen8nationaldex] Kalos Experts/Wikstrom ===
 
-Klefki  
+Klefki @ Leftovers  
 Ability: Prankster  
+EVs: 252 HP / 252 Def  
+Bold Nature  
+IVs: 0 Atk  
+- Spikes  
+- Dazzling Gleam  
+- Thunder Wave  
+- Toxic  
 
-Scizor  
-Ability: Swarm  
+Scizor @ Occa Berry  
+Ability: Technician  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Acrobatics  
+- Iron Head  
+- X-Scissor  
+- Swords Dance  
 
-Aegislash  
+Aegislash @ Expert Belt  
 Ability: Stance Change  
+EVs: 252 HP / 252 SpD  
+Sassy Nature  
+- Shadow Ball  
+- Flash Cannon  
+- Close Combat  
+- King's Shield  
 
-Probopass  
+Probopass @ Air Balloon  
 Ability: Sturdy  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Power Gem  
+- Discharge  
+- Earth Power  
+- Thunder Wave  
 
-Skarmory  
-Ability: Keen Eye  
+Skarmory @ Expert Belt  
+Ability: Sturdy  
+EVs: 252 HP / 252 Def  
+Impish Nature  
+- Whirlwind  
+- Roost  
+- Brave Bird  
+- Rock Slide  
 
-Bisharp  
+Bisharp @ Black Glasses  
 Ability: Defiant  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Iron Head  
+- Knock Off  
+- Sucker Punch  
+- Swords Dance  
 
 
 === [gen8nationaldex] Kalos Experts/Drasna ===
 
-Druddigon  
-Ability: Rough Skin  
+Druddigon @ Rocky Helmet  
+Ability: Sheer Force  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Dragon Tail  
+- Earthquake  
+- Glare  
+- Dragon Claw  
 
-Dragalge  
-Ability: Poison Point  
+Dragalge @ Black Sludge  
+Ability: Adaptability  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+- Draco Meteor  
+- Sludge Bomb  
+- Flip Turn  
+- Scald  
 
-Noivern  
-Ability: Frisk  
+Noivern @ Yache Berry  
+Ability: Infiltrator  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+- Draco Meteor  
+- Flamethrower  
+- Roost  
+- U-turn  
 
-Altaria  
-Ability: Natural Cure  
+Altaria @ Roseli Berry  
+Ability: Cloud Nine  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Dragon Pulse  
+- Roost  
+- Hurricane  
+- Flamethrower  
 
-Kommo-o  
+Kommo-o @ King's Rock  
 Ability: Bulletproof  
+EVs: 252 SpA / 252 Spe  
+Naive Nature  
+- Body Press  
+- Earthquake  
+- Flamethrower  
+- Clanging Scales  
 
-Dracovish  
-Ability: Water Absorb  
+Dracovish @ Quick Claw  
+Ability: Strong Jaw  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Fishious Rend  
+- Psychic Fangs  
+- Crunch  
+- Outrage  
 
 
 === [gen8nationaldex] Kalos Experts/Professor Sycamore ===
@@ -6263,23 +7318,59 @@ Ability: Hyper Cutter
 
 === [gen8nationaldex] Alola Experts/Hala ===
 
-Bewear  
+Bewear @ Leftovers  
 Ability: Fluffy  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Swords Dance  
+- Double-Edge  
+- Drain Punch  
+- Darkest Lariat  
 
-Crabominable  
-Ability: Hyper Cutter  
+Crabominable @ Assault Vest  
+Ability: Iron Fist  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Drain Punch  
+- Ice Hammer  
+- Earthquake  
+- Thunder Punch  
 
-Poliwrath  
+Poliwrath @ Mystic Water  
 Ability: Water Absorb  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Drain Punch  
+- Dive  
+- Earthquake  
+- Poison Jab  
 
-Hariyama  
+Hariyama @ Iron Ball  
 Ability: Thick Fat  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Close Combat  
+- Knock Off  
+- Heavy Slam  
+- Stone Edge  
 
-Primeape  
+Primeape @ Black Belt  
 Ability: Vital Spirit  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Outrage  
+- Stomping Tantrum  
+- Close Combat  
+- Swagger  
 
-Grapploct  
+Grapploct @ King's Rock  
 Ability: Limber  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Bulk Up  
+- Drain Punch  
+- Brutal Swing  
+- Sucker Punch  
 
 
 === [gen8nationaldex] Alola Experts/Nanu ===
@@ -6326,23 +7417,59 @@ Ability: Levitate
 
 === [gen8nationaldex] Galar Experts/Mustard ===
 
-Mienshao  
+Mienshao @ Wide Lens  
 Ability: Inner Focus  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- High Jump Kick  
+- Knock Off  
+- U-turn  
+- Fake Out  
 
-Kommo-o  
+Kommo-o @ Rocky Helmet  
 Ability: Bulletproof  
+EVs: 252 SpA / 252 Spe  
+Naive Nature  
+- Body Press  
+- X-Scissor  
+- Flamethrower  
+- Clanging Scales  
 
-Luxray  
-Ability: Rivalry  
+Luxray @ Air Balloon  
+Ability: Intimidate  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Wild Charge  
+- Thunder Fang  
+- Psychic Fangs  
+- Roar  
 
-Corviknight  
-Ability: Pressure  
+Corviknight @ Occa Berry  
+Ability: Unnerve  
+EVs: 252 HP / 252 Def  
+Impish Nature  
+- Iron Head  
+- Drill Peck  
+- Protect  
+- Body Press  
 
-Lycanroc  
+Lycanroc @ Focus Sash  
 Ability: Keen Eye  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Accelerock  
+- Stone Edge  
+- Crunch  
+- Thunder Fang  
 
-Sirfetch’d  
+Sirfetch’d @ Leek  
 Ability: Steadfast  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Close Combat  
+- Knock Off  
+- First Impression  
+- Poison Jab  
 
 
 === [gen8nationaldex] Galar Experts/Bede ===
@@ -6389,23 +7516,60 @@ Ability: Torrent
 
 === [gen8nationaldex] Galar Experts/Peony ===
 
-Perrserker  
-Ability: Battle Armor  
+Perrserker @ Leftovers  
+Ability: Tough Claws  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Swords Dance  
+- Iron Head  
+- Seed Bomb  
+- Substitute  
 
-Copperajah  
-Ability: Sheer Force  
+Copperajah @ Iron Ball  
+Ability: Heavy Metal  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Heavy Slam  
+- Power Whip  
+- Stone Edge  
+- Heat Crash  
 
-Aggron  
-Ability: Sturdy  
+Aggron @ Soft Sand  
+Ability: Rock Head  
+EVs: 252 HP / 252 Def  
+Impish Nature  
+- Earthquake  
+- Head Smash  
+- Heavy Slam  
+- Protect  
 
-Bronzong  
-Ability: Levitate  
+Bronzong @ Spell Tag  
+Ability: Heatproof  
+EVs: 252 HP / 252 SpD  
+Sassy Nature  
+IVs: 0 Spe  
+- Ancient Power  
+- Toxic  
+- Psychic  
+- Gyro Ball  
 
-Scizor  
-Ability: Swarm  
+Scizor @ Rocky Helmet  
+Ability: Technician  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Bullet Punch  
+- Iron Head  
+- X-Scissor  
+- Swords Dance  
 
-Aegislash  
+Aegislash @ Occa Berry  
 Ability: Stance Change  
+EVs: 252 HP / 252 SpD  
+Sassy Nature  
+- Shadow Ball  
+- Flash Cannon  
+- Close Combat  
+- King's Shield  
 
 
 === [gen8nationaldex] World Heroes/Ethan ===
