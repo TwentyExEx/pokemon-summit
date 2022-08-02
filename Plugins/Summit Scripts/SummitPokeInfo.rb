@@ -339,7 +339,7 @@ module SummitPokeInfo
 	AVALUGG = {:species => :AVALUGG, :moves => [:AVALANCHE, :HAIL, :EARTHQUAKE, :STONEEDGE], :form => 0, :ability_index => 1}
 	NOIVERN = {:species => :NOIVERN, :moves => [:DRACOMETEOR, :FLAMETHROWER, :ROOST, :UTURN], :form => 0, :ability_index => 1}
 	DECIDUEYE = {:species => :DECIDUEYE, :moves => [:POLTERGEIST, :LEAFBLADE, :UTURN, :SHADOWSNEAK], :form => 0, :ability_index => 0}
-	INCINEROAR = {:species => :INCINEROAR, :moves => [:DARKESTLARIET, :OVERHEAT, :SWORDSDANCE, :BRICKBREAK], :form => 0, :ability_index => 0}
+	INCINEROAR = {:species => :INCINEROAR, :moves => [:DARKESTLARIAT, :OVERHEAT, :SWORDSDANCE, :BRICKBREAK], :form => 0, :ability_index => 0}
 	PRIMARINA = {:species => :PRIMARINA, :moves => [:SPARKLINGARIA, :MOONBLAST, :MISTYTERRAIN, :REFLECT], :form => 0, :ability_index => 0}
 	TOUCANNON = {:species => :TOUCANNON, :moves => [:BEAKBLAST, :ROCKBLAST, :BULLETSEED, :PLUCK], :form => 0, :ability_index => 1}
 	GUMSHOOS = {:species => :GUMSHOOS, :moves => [:HYPERFANG, :CRUNCH, :BULLDOZE, :SUBSTITUTE], :form => 0, :ability_index => 1}

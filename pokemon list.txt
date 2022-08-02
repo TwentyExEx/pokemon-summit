@@ -1,85 +1,235 @@
 === [gen8nationaldex] Champions/Blue ===
 
-Pidgeot  
+Pidgeot @ Charti Berry  
 Ability: Keen Eye  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Aerial Ace  
+- Steel Wing  
+- Thief  
+- Roost  
 
-Aerodactyl  
+Aerodactyl @ Assault Vest  
 Ability: Rock Head  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Stone Edge  
+- Earthquake  
+- Ice Fang  
+- Fire Fang  
 
-Blastoise  
+Blastoise @ White Herb  
 Ability: Torrent  
+EVs: 252 SpA / 252 Spe  
+Mild Nature  
+- Hydro Pump  
+- Ice Beam  
+- Earthquake  
+- Shell Smash  
 
-Arcanine  
+Arcanine @ Expert Belt  
 Ability: Intimidate  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Flare Blitz  
+- Close Combat  
+- Extreme Speed  
+- Wild Charge  
 
-Machamp  
+Machamp @ Flame Orb  
 Ability: Guts  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Superpower  
+- Fire Punch  
+- Bullet Punch  
+- Stone Edge  
 
-Exeggutor  
+Exeggutor @ Big Root  
 Ability: Chlorophyll  
+EVs: 252 SpA / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Giga Drain  
+- Leaf Storm  
+- Psychic  
+- Leech Seed  
 
 
 === [gen8nationaldex] Champions/Steven ===
 
-Aggron  
-Ability: Sturdy  
-
-Excadrill  
-Ability: Sand Rush  
-
-Metagross  
-Ability: Clear Body  
-
-Skarmory  
+Skarmory @ Rocky Helmet  
 Ability: Keen Eye  
+EVs: 252 HP / 252 Def  
+Impish Nature  
+- Toxic  
+- Spikes  
+- Steel Wing  
+- Aerial Ace  
 
-Claydol  
+Aggron @ Air Balloon  
+Ability: Rock Head  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Head Smash  
+- Avalanche  
+- Earthquake  
+- Metal Burst  
+
+Excadrill @ Focus Sash  
+Ability: Sand Force  
+- Earthquake  
+- Rock Slide  
+- X-Scissor  
+- Sandstorm  
+
+Claydol @ Light Clay  
 Ability: Levitate  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Reflect  
+- Light Screen  
+- Psychic  
+- Earth Power  
 
-Armaldo  
+Armaldo @ White Herb  
 Ability: Battle Armor  
+- X-Scissor  
+- Rock Blast  
+- Earthquake  
+- Superpower  
+
+Metagross @ Occa Berry  
+Ability: Clear Body  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Zen Headbutt  
+- Hammer Arm  
+- Earthquake  
+- Bullet Punch  
 
 
 === [gen8nationaldex] Champions/Wallace ===
 
-Starmie  
-Ability: Illuminate  
+Starmie @ Expert Belt  
+Ability: Natural Cure  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Surf  
+- Psychic  
+- Thunderbolt  
+- Signal Beam  
 
-Swampert  
+Swampert @ Rindo Berry  
 Ability: Torrent  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Muddy Water  
+- Earth Power  
+- Ice Beam  
+- Focus Blast  
 
-Ludicolo  
+Ludicolo @ Wise Glasses  
 Ability: Swift Swim  
+EVs: 252 SpA / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Rain Dance  
+- Surf  
+- Giga Drain  
+- Focus Blast  
 
-Walrein  
+Walrein @ Leftovers  
 Ability: Thick Fat  
+EVs: 252 HP / 252 SpD  
+Calm Nature  
+IVs: 0 Atk  
+- Surf  
+- Yawn  
+- Blizzard  
+- Protect  
 
-Sharpedo  
-Ability: Rough Skin  
+Sharpedo @ Focus Sash  
+Ability: Speed Boost  
+EVs: 252 Atk / 252 Spe  
+Lonely Nature  
+- Hydro Pump  
+- Crunch  
+- Zen Headbutt  
+- Aqua Jet  
 
-Milotic  
+Milotic @ Rocky Helmet  
 Ability: Marvel Scale  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Scald  
+- Icy Wind  
+- Rest  
+- Sleep Talk  
 
 
 === [gen8nationaldex] Champions/Hau ===
 
-Raichu-Alola  
+Raichu-Alola @ Terrain Extender  
 Ability: Surge Surfer  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Psychic  
+- Thunderbolt  
+- Electric Terrain  
+- Surf  
 
-Decidueye  
-Ability: Overgrow  
-
-Tauros (M)  
+Tauros (M) @ Leftovers  
 Ability: Intimidate  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Iron Head  
+- Zen Headbutt  
+- Earthquake  
+- Stone Edge  
 
-Noivern  
-Ability: Frisk  
+Noivern @ Yache Berry  
+Ability: Infiltrator  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Dragon Pulse  
+- Flamethrower  
+- Roost  
+- Dark Pulse  
 
-Vaporeon  
+Vaporeon @ Mystic Water  
 Ability: Water Absorb  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Brine  
+- Ice Beam  
+- Shadow Ball  
+- Aqua Ring  
 
-Crabominable  
-Ability: Hyper Cutter  
+Crabominable @ Assault Vest  
+Ability: Iron Fist  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Drain Punch  
+- Ice Hammer  
+- Earthquake  
+- Thunder Punch  
+
+Decidueye @ Spell Tag  
+Ability: Overgrow  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Poltergeist  
+- Leaf Blade  
+- U-turn  
+- Shadow Sneak  
 
 
 === [gen8nationaldex] World Heroines/Serena ===
@@ -7847,169 +7997,459 @@ Ability: Ripen
 
 === [gen8nationaldex] Champions/Leon ===
 
-Aegislash  
+Aegislash @ Occa Berry  
 Ability: Stance Change  
+EVs: 252 HP / 252 SpD  
+Sassy Nature  
+- Shadow Ball  
+- Flash Cannon  
+- Close Combat  
+- King's Shield  
 
-Dragapult  
-Ability: Clear Body  
+Dragapult @ Assault Vest  
+Ability: Cursed Body  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Phantom Force  
+- Psychic Fangs  
+- Sucker Punch  
+- Dragon Darts  
 
-Charizard  
+Mr. Rime @ Twisted Spoon  
+Ability: Screen Cleaner  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+- Rapid Spin  
+- Ice Beam  
+- Psychic  
+- Focus Blast  
+
+Seismitoad @ Expert Belt  
+Ability: Poison Touch  
+EVs: 252 Atk / 252 Spe  
+Adamant Nature  
+- Drain Punch  
+- Liquidation  
+- Rock Slide  
+- Supersonic  
+
+Rhyperior @ Air Balloon  
+Ability: Solid Rock  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Earthquake  
+- Stone Edge  
+- Avalanche  
+- Megahorn  
+
+Charizard @ Heavy-Duty Boots  
 Ability: Blaze  
-
-Mr. Rime  
-Ability: Tangled Feet  
-
-Seismitoad  
-Ability: Swift Swim  
-
-Rhyperior  
-Ability: Lightning Rod  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Dragon Pulse  
+- Flamethrower  
+- Air Slash  
+- Scorching Sands  
 
 
 === [gen8nationaldex] Champions/Kukui ===
 
-Lycanroc  
-Ability: Keen Eye  
+Lycanroc @ Focus Sash  
+Ability: Steadfast  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Accelerock  
+- Stone Edge  
+- Crunch  
+- Thunder Fang  
 
-Magnezone  
-Ability: Magnet Pull  
+Braviary (M) @ Heavy-Duty Boots  
+Ability: Defiant  
+EVs: 252 HP / 252 SpD  
+Careful Nature  
+- Substitute  
+- Bulk Up  
+- Brave Bird  
+- Close Combat  
 
-Ninetales-Alola  
+Magnezone @ Air Balloon  
+Ability: Sturdy  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Iron Defense  
+- Body Press  
+- Thunderbolt  
+- Flash Cannon  
+
+Ninetales-Alola @ Never-Melt Ice  
 Ability: Snow Cloak  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Dazzling Gleam  
+- Ice Beam  
+- Nasty Plot  
+- Shadow Ball  
 
-Braviary (M)  
-Ability: Keen Eye  
-
-Snorlax  
+Snorlax @ Iron Ball  
 Ability: Immunity  
+- Hammer Arm  
+- High Horsepower  
+- Heavy Slam  
+- Body Slam  
 
-Incineroar  
-Ability: Blaze  
+Incineroar @ Black Glasses  
+Ability: Intimidate  
+EVs: 252 HP / 252 Atk  
+Brave Nature  
+- Darkest Lariat  
+- Swords Dance  
+- Brick Break  
+- Overheat  
 
 
 === [gen8nationaldex] Champions/Diantha ===
 
-Hawlucha  
-Ability: Limber  
+Hawlucha @ Wacan Berry  
+Ability: Unburden  
+EVs: 252 Atk / 252 Spe  
+Adamant Nature  
+- Flying Press  
+- Submission  
+- Rock Tomb  
+- Poison Jab  
 
-Tyrantrum  
+Tyrantrum @ Expert Belt  
 Ability: Strong Jaw  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Fire Fang  
+- Ice Fang  
+- Psychic Fangs  
+- Crunch  
 
-Aurorus  
+Aurorus @ Rocky Helmet  
 Ability: Refrigerate  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Ice Beam  
+- Ancient Power  
+- Earth Power  
+- Blizzard  
 
-Gourgeist  
-Ability: Pickup  
+Gourgeist @ Colbur Berry  
+Ability: Insomnia  
+EVs: 252 Atk / 252 Spe  
+Naive Nature  
+- Power Whip  
+- Poltergeist  
+- Fire Blast  
+- Shadow Sneak  
 
-Goodra  
-Ability: Sap Sipper  
+Goodra @ Leftovers  
+Ability: Gooey  
+EVs: 252 SpA / 252 Spe  
+Hasty Nature  
+IVs: 0 Atk  
+- Draco Meteor  
+- Fire Blast  
+- Thunderbolt  
+- Sludge Bomb  
 
-Gardevoir  
-Ability: Synchronize  
+Gardevoir @ Pixie Plate  
+Ability: Trace  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Moonblast  
+- Psychic  
+- Mystical Fire  
+- Healing Wish  
 
 
 === [gen8nationaldex] Champions/Iris ===
 
-Hydreigon  
+Hydreigon @ Expert Belt  
 Ability: Levitate  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Draco Meteor  
+- Dark Pulse  
+- Flamethrower  
+- Roost  
 
-Archeops  
+Archeops @ Blunder Policy  
 Ability: Defeatist  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Stone Edge  
+- Earthquake  
+- Dual Wingbeat  
+- Roost  
 
-Aggron  
-Ability: Sturdy  
+Aggron @ Soft Sand  
+Ability: Rock Head  
+EVs: 252 HP / 252 Def  
+Impish Nature  
+- Earthquake  
+- Head Smash  
+- Heavy Slam  
+- Protect  
 
-Lapras  
-Ability: Water Absorb  
+Lapras @ Leftovers  
+Ability: Shell Armor  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Ice Beam  
+- Brine  
+- Rain Dance  
+- Sing  
 
-Druddigon  
+Druddigon @ Rocky Helmet  
 Ability: Rough Skin  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Dragon Tail  
+- Earthquake  
+- Glare  
+- Dragon Claw  
 
-Haxorus  
-Ability: Rivalry  
+Haxorus @ Persim Berry  
+Ability: Unnerve  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Aqua Tail  
+- Outrage  
+- Earthquake  
+- Poison Jab  
 
 
 === [gen8nationaldex] Champions/Alder ===
 
-Accelgor  
+Accelgor @ Rocky Helmet  
 Ability: Hydration  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Bug Buzz  
+- Toxic  
+- Water Shuriken  
+- Giga Drain  
 
-Vanilluxe  
-Ability: Ice Body  
+Vanilluxe @ Icy Rock  
+Ability: Snow Warning  
+EVs: 252 HP / 252 SpA  
+Quiet Nature  
+- Blizzard  
+- Freeze-Dry  
+- Ice Shard  
+- Flash Cannon  
 
-Bouffalant  
-Ability: Reckless  
+Reuniclus @ Iron Ball  
+Ability: Magic Guard  
+EVs: 252 HP / 252 Def  
+Bold Nature  
+IVs: 0 Atk  
+- Calm Mind  
+- Psyshock  
+- Focus Blast  
+- Trick Room  
 
-Conkeldurr  
-Ability: Guts  
+Conkeldurr @ Expert Belt  
+Ability: Iron Fist  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Drain Punch  
+- Fire Punch  
+- Ice Punch  
+- Thunder Punch  
 
-Reuniclus  
-Ability: Overcoat  
+Bouffalant @ Leftovers  
+Ability: Sap Sipper  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Substitute  
+- Swords Dance  
+- Body Slam  
+- Throat Chop  
 
-Volcarona  
+Volcarona @ Heavy-Duty Boots  
 Ability: Flame Body  
+EVs: 252 SpA / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Quiver Dance  
+- Flamethrower  
+- Bug Buzz  
+- Psychic  
 
 
 === [gen8nationaldex] Champions/Cynthia ===
 
-Spiritomb  
+Spiritomb @ Sitrus Berry  
 Ability: Pressure  
+EVs: 252 HP / 252 SpD  
+Sassy Nature  
+- Shadow Ball  
+- Dark Pulse  
+- Will-O-Wisp  
+- Sucker Punch  
 
-Roserade  
-Ability: Natural Cure  
+Roserade @ Expert Belt  
+Ability: Poison Point  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Dazzling Gleam  
+- Shadow Ball  
+- Sludge Bomb  
+- Energy Ball  
 
-Gastrodon  
-Ability: Sticky Hold  
+Togekiss @ Leftovers  
+Ability: Serene Grace  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Air Slash  
+- Dazzling Gleam  
+- Aura Sphere  
+- Thunder Wave  
 
-Lucario  
-Ability: Steadfast  
+Lucario @ Wise Glasses  
+Ability: Inner Focus  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Aura Sphere  
+- Dragon Pulse  
+- Flash Cannon  
+- Psychic  
 
-Milotic  
+Milotic @ Flame Orb  
 Ability: Marvel Scale  
+EVs: 252 HP / 252 Def  
+Bold Nature  
+IVs: 0 Atk  
+- Recover  
+- Ice Beam  
+- Mirror Coat  
+- Scald  
 
-Garchomp  
-Ability: Sand Veil  
+Garchomp @ Yache Berry  
+Ability: Rough Skin  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Dragon Claw  
+- Earthquake  
+- Swords Dance  
+- Poison Jab  
 
 
 === [gen8nationaldex] Champions/Lance ===
 
-Salamence  
+Salamence @ Expert Belt  
 Ability: Intimidate  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Dragon Claw  
+- Crunch  
+- Earthquake  
+- Stone Edge  
 
-Dragonite  
+Dragonite @ Focus Sash  
 Ability: Inner Focus  
+- Extreme Speed  
+- Ice Punch  
+- Fire Punch  
+- Draco Meteor  
 
-Haxorus  
-Ability: Rivalry  
+Haxorus @ Assault Vest  
+Ability: Mold Breaker  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Outrage  
+- Superpower  
+- Earthquake  
+- Rock Slide  
 
-Flygon  
+Flygon @ Power Herb  
 Ability: Levitate  
+- Solar Beam  
+- Draco Meteor  
+- Earth Power  
+- U-turn  
 
-Kommo-o  
+Kommo-o @ Rocky Helmet  
 Ability: Bulletproof  
+EVs: 252 SpA / 252 Spe  
+Naive Nature  
+- Body Press  
+- Earthquake  
+- Flamethrower  
+- Clanging Scales  
 
-Duraludon  
+Duraludon @ White Herb  
 Ability: Light Metal  
+IVs: 0 Atk  
+- Draco Meteor  
+- Flash Cannon  
+- Body Press  
+- Thunderbolt  
 
 
 === [gen8nationaldex] Champions/Red ===
 
-Lapras  
-Ability: Water Absorb  
-
-Snorlax  
-Ability: Immunity  
-
-Pikachu  
+Pikachu @ Light Ball  
 Ability: Static  
+- Volt Tackle  
+- Iron Tail  
+- Brick Break  
+- Fake Out  
 
-Venusaur  
+Venusaur @ White Herb  
 Ability: Overgrow  
+- Leaf Storm  
+- Sludge Bomb  
+- Earthquake  
+- Sleep Powder  
 
-Charizard  
+Charizard @ Focus Sash  
 Ability: Blaze  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Fire Blast  
+- Focus Blast  
+- Air Slash  
+- Dragon Pulse  
 
-Blastoise  
+Blastoise @ Wise Glasses  
 Ability: Torrent  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Water Spout  
+- Hydro Pump  
+- Blizzard  
+- Focus Blast  
+
+Snorlax @ Quick Claw  
+Ability: Immunity  
+- Body Slam  
+- Earthquake  
+- Crunch  
+- Seed Bomb  
+
+Lapras @ Sitrus Berry  
+Ability: Water Absorb  
+- Ice Beam  
+- Hydro Pump  
+- Ice Shard  
+- Thunderbolt  
 
 
