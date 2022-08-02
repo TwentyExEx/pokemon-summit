@@ -766,9 +766,12 @@ def pbSummitBracketUnlock
   pbMessage("\\G\\rYou have earned $700 for your performance.")
   pbMessage(_INTL("\\rYou have also successfully unlocked the {1}!",bracketunlocked))
   $game_variables[29] = [] # Clear previous bracket selection
-  if $game_variables == 3 # Sinnoh beat
+  if $game_variables[31] == 4 # Sinnoh beat
     $game_switches[39] = true
     $game_switches[40] = true
+  end
+  if $game_variables[31] == 8 # Galar beat
+    $game_switches[41] = true
   end
 end
 
@@ -1018,4 +1021,32 @@ def pbSummitDifficultyInfo
       pbMessage("#{i}")
     end
   end
+end
+
+def pbSummitRainbowRocket
+  pbMessage("\\rCongratulations on defeating the Galar Leaders!")
+  pbSEPlay("Slots coin")
+  $Trainer.money += 700
+  pbMessage("\\G\\rYou have earned $700 for your performance.")
+  pbMessage("\\rYou have also successfully unlocked--")
+  pbSEPlay("Mining collapse")
+  $game_screen.start_shake(5, 5, 5 * Graphics.frame_rate / 20)
+  $game_map.fog_name = "lobbyoff"
+  $game_map.fog_zoom = 100
+  $game_map.fog_blend_type = 2
+  $game_map.fog_opacity = 0
+  $game_map.start_fog_opacity_change(200, 6 * Graphics.frame_rate / 20)
+  pbWait(14 * Graphics.frame_rate / 20)
+  pbMessage("\\rOh no! What's happening?")
+  pbSEPlay("Mining collapse")
+  $game_screen.start_shake(5, 5, 5 * Graphics.frame_rate / 20)
+  pbWait(14 * Graphics.frame_rate / 20)
+  pbMessage("\\xnr[Giovanni]\\mr[LEADER_Giovanni]\\b<outln2>Attention all World Summit employees and participants!</outln2>")
+  pbMessage("\\xnr[Giovanni]\\mr[LEADER_Giovanni]\\b<outln2>This building is now under the control of Team Rainbow Rocket.</outln2>")
+  pbMessage("\\xnr[Giovanni]\\mr[LEADER_Giovanni]\\b<outln2>We are about to make our way down to the lobby to collect all of your resources.</outln2>")
+  pbMessage("\\xnr[Giovanni]\\mr[LEADER_Giovanni]\\b<outln2>Stay out of our way or experience a world of pain.</outln2>")
+
+  pbMessage("\\rThis is awful! Somebody needs to stop them!")
+  pbMessage("\\rYou're a strong trainer... Please, you have to do something!")
+  pbMessage("\\rTalk to me when you're prepared... I can take you to the floor they're on.")
 end
