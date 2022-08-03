@@ -1,4 +1,4 @@
-$bracketnames = ["Kanto Leaders", "Johto Leaders", "Hoenn Leaders", "Sinnoh Leaders", "Unova Leaders", "Kalos Leaders", "Alola Captains", "Galar Leaders"]
+$bracketnames = ["Kanto Leaders", "Johto Leaders", "Hoenn Leaders", "Sinnoh Leaders", "Unova Leaders", "Kalos Leaders", "Alola Captains", "Galar Leaders", "Team Bosses"]
 $poketypes = ["normal", "fighting", "flying", "poison", "ground", "rock", "bug", "ghost", "steel", "fire", "water", "grass", "electric", "psychic", "ice", "dragon", "dark", "fairy"]
 $trbytype = [
   normal = [
@@ -233,52 +233,67 @@ def pbSummitBracketSelection(group)
             ["LEADER_Piers","Piers",0],
             ["LEADER_Raihan","Raihan",0]
           ]
+    when 8 # Team Bosses
+          trainerlist = [
+            ["BOSS_Rose","Rose",0],
+            ["BOSS_Guzma","Guzma",0],
+            ["BOSS_Lysandre","Lysandre",0],
+            ["BOSS_Ghetsis","Ghetsis",0],
+            ["BOSS_Cyrus","Cyrus",0],
+            ["BOSS_Archie","Archie",0],
+            ["BOSS_Maxie","Maxie",0],
+            ["BOSS_Giovanni","Giovanni",0]
+          ]
   end
-
-  until trainerSelection.length == 5 do
-    num = rand(0...(trainerlist.length))
-    trainer = trainerlist[num]
-    if !trainerSelection.include?(trainer)
-      if group == 2 && trainer[0] == ("LEADER_Tate")
-        if !trainerSelection.include?(["LEADER_Liza","Liza",0])
-          trainerSelection.push(trainer)
-        else
-          break
+  case
+    when group < 8
+      until trainerSelection.length == 5 do
+        num = rand(0...(trainerlist.length))
+        trainer = trainerlist[num]
+        if !trainerSelection.include?(trainer)
+          if group == 2 && trainer[0] == ("LEADER_Tate")
+            if !trainerSelection.include?(["LEADER_Liza","Liza",0])
+              trainerSelection.push(trainer)
+            else
+              break
+            end
+          elsif group == 2 && trainer[0] == ("LEADER_Liza")
+            if !trainerSelection.include?(["LEADER_Tate","Tate",0])
+              trainerSelection.push(trainer)
+            else
+              break
+            end
+          elsif group == 4 && trainer[0] == ("LEADER_Cheren")
+            if !trainerSelection.include?(["LEADER_Cheren","Cheren",0])
+              trainerSelection.push(trainer)
+            else
+              break
+            end
+          elsif group == 4 && trainer[0] == ("LEADER_Lenora")
+            if !trainerSelection.include?(["LEADER_Lenora","Lenora",0])
+              trainerSelection.push(trainer)
+            else
+              break
+            end
+          elsif group == 4 && trainer[0] == ("LEADER_Cress")
+            if !trainerSelection.include?(["LEADER_Cress","Cress",0])
+              trainerSelection.push(trainer)
+            else
+              break
+            end
+          elsif group == 4 && trainer[0] == ("LEADER_Marlon")
+            if !trainerSelection.include?(["LEADER_Marlon","Marlon",0])
+              trainerSelection.push(trainer)
+            else
+              break
+            end      
+          else
+            trainerSelection.push(trainer)
+          end
         end
-      elsif group == 2 && trainer[0] == ("LEADER_Liza")
-        if !trainerSelection.include?(["LEADER_Tate","Tate",0])
-          trainerSelection.push(trainer)
-        else
-          break
-        end
-      elsif group == 4 && trainer[0] == ("LEADER_Cheren")
-        if !trainerSelection.include?(["LEADER_Cheren","Cheren",0])
-          trainerSelection.push(trainer)
-        else
-          break
-        end
-      elsif group == 4 && trainer[0] == ("LEADER_Lenora")
-        if !trainerSelection.include?(["LEADER_Lenora","Lenora",0])
-          trainerSelection.push(trainer)
-        else
-          break
-        end
-      elsif group == 4 && trainer[0] == ("LEADER_Cress")
-        if !trainerSelection.include?(["LEADER_Cress","Cress",0])
-          trainerSelection.push(trainer)
-        else
-          break
-        end
-      elsif group == 4 && trainer[0] == ("LEADER_Marlon")
-        if !trainerSelection.include?(["LEADER_Marlon","Marlon",0])
-          trainerSelection.push(trainer)
-        else
-          break
-        end      
-      else
-        trainerSelection.push(trainer)
       end
-    end
+    when group == 8
+      trainerSelection = trainerlist
   end
   $game_variables[29] = trainerSelection
 end
@@ -290,7 +305,7 @@ end
 
 def pbSummitPrepMainTrainer(bracket)
   trainers = $game_variables[29]
-  if $game_variables[35] == "challenge"
+  if $game_variables[35] == "challenge" || "bosses"
     fightnum = $game_variables[33]
     opponent = trainers[fightnum]
   else
@@ -381,7 +396,7 @@ def pbSummitPrepMainTrainer(bracket)
       $game_map.events[1].direction = 6
       $game_map.events[1].pattern = 0
     end
-  when 3 # Sinnoh Leaders, add || for Team Leaders
+  when 3, 8 # Sinnoh Leaders, Team Bosses
     $game_map.events[1].character_name = "trainer_Sheet4"
     case opponent[0].downcase
     when "leader_roark"
@@ -407,6 +422,30 @@ def pbSummitPrepMainTrainer(bracket)
       $game_map.events[1].pattern = 2
     when "leader_volkner"
       $game_map.events[1].direction = 4
+      $game_map.events[1].pattern = 3
+    when "boss_giovanni"
+      $game_map.events[1].direction = 6
+      $game_map.events[1].pattern = 0
+    when "boss_archie"
+      $game_map.events[1].direction = 6
+      $game_map.events[1].pattern = 1
+    when "boss_maxie"
+      $game_map.events[1].direction = 6
+      $game_map.events[1].pattern = 2
+    when "boss_cyrus"
+      $game_map.events[1].direction = 6
+      $game_map.events[1].pattern = 3
+    when "boss_ghetsis"
+      $game_map.events[1].direction = 8
+      $game_map.events[1].pattern = 0
+    when "boss_lysandre"
+      $game_map.events[1].direction = 8
+      $game_map.events[1].pattern = 1
+    when "boss_guzma"
+      $game_map.events[1].direction = 8
+      $game_map.events[1].pattern = 2
+    when "boss_rose"
+      $game_map.events[1].direction = 8
       $game_map.events[1].pattern = 3
     end
   when 4 # Unova Leaders
@@ -554,6 +593,40 @@ def pbSummitPrepMainTrainer(bracket)
       $game_map.events[1].character_name = "trainer_Sheet10"
       case opponent[0].downcase
       when "leader_milo"
+        $game_map.events[1].direction = 2
+        $game_map.events[1].pattern = 0
+      when "leader_nessa"
+        $game_map.events[1].direction = 2
+        $game_map.events[1].pattern = 1
+      when "leader_kabu"
+        $game_map.events[1].direction = 2
+        $game_map.events[1].pattern = 2
+      when "leader_bea"
+        $game_map.events[1].direction = 2
+        $game_map.events[1].pattern = 3
+      when "leader_allister"
+        $game_map.events[1].direction = 4
+        $game_map.events[1].pattern = 0
+      when "leader_opal"
+        $game_map.events[1].direction = 4
+        $game_map.events[1].pattern = 1
+      when "leader_geordie"
+        $game_map.events[1].direction = 4
+        $game_map.events[1].pattern = 2
+      when "leader_melony"
+        $game_map.events[1].direction = 4
+        $game_map.events[1].pattern = 3
+      when "leader_piers"
+        $game_map.events[1].direction = 6
+        $game_map.events[1].pattern = 0
+      when "leader_raihan"
+        $game_map.events[1].direction = 6
+        $game_map.events[1].pattern = 1
+      end
+   when 8 # Team Bosses
+      $game_map.events[1].character_name = "trainer_Sheet4"
+      case opponent[0].downcase
+      when "boss_rose"
         $game_map.events[1].direction = 2
         $game_map.events[1].pattern = 0
       when "leader_nessa"
@@ -735,11 +808,13 @@ def pbSummitMainTrainer
   TrainerBattle.start(type, name, version)
 
   $Trainer.party = $game_variables[27]
-  if $game_variables[35] == "challenge" # Main mode
+  if $game_variables[35] == "challenge" || "bosses" # Main mode
     if $game_variables[32] == 1
       $game_variables[33] += 1
     end
-    if $game_variables[33] == 4 # when cleared bracket
+    if $game_variables[35] == "challenge" && $game_variables[33] == 4 # when cleared bracket
+      $game_variables[31] += 1 # next bracket
+    elsif $game_variables[35] == "bosses" && $game_variables[33] == 8
       $game_variables[31] += 1 # next bracket
     end
   end
