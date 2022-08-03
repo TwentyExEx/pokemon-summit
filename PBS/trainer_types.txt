@@ -324,12 +324,62 @@ Gender = Male
 BaseMoney = 60
 #-------------------------------
 [TEAMROCKET_M]
-Name = Grunt
+Name = Team Rocket Grunt
 Gender = Male
 BaseMoney = 60
 #-------------------------------
 [TEAMROCKET_F]
-Name = Grunt
+Name = Team Rocket Grunt
+Gender = Female
+BaseMoney = 60
+#-------------------------------
+[AQUA_M]
+Name = Team Aqua Grunt
+Gender = Male
+BaseMoney = 60
+#-------------------------------
+[AQUA_F]
+Name = Team Aqua Grunt
+Gender = Female
+BaseMoney = 60
+#-------------------------------
+[MAGMA_M]
+Name = Team Magma Grunt
+Gender = Male
+BaseMoney = 60
+#-------------------------------
+[MAGMA_F]
+Name = Team Magma Grunt
+Gender = Female
+BaseMoney = 60
+#-------------------------------
+[GALACTIC_M]
+Name = Team Galactic Grunt
+Gender = Male
+BaseMoney = 60
+#-------------------------------
+[GALACTIC_F]
+Name = Team Galactic Grunt
+Gender = Female
+BaseMoney = 60
+#-------------------------------
+[PLASMA_M]
+Name = Team Plasma Grunt
+Gender = Male
+BaseMoney = 60
+#-------------------------------
+[PLASMA_F]
+Name = Team Plasma Grunt
+Gender = Female
+BaseMoney = 60
+#-------------------------------
+[FLARE_M]
+Name = Team Flare Grunt
+Gender = Male
+BaseMoney = 60
+#-------------------------------
+[FLARE_F]
+Name = Team Flare Grunt
 Gender = Female
 BaseMoney = 60
 #-------------------------------
