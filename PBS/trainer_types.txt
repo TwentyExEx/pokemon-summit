@@ -2,7 +2,7 @@
 #-------------------------------
 [POKEMONTRAINER_Red]
 Name = Pokémon Trainer
-Gender = Male
+Gender = Other
 BaseMoney = 60
 #-------------------------------
 [POKEMONTRAINER_Leaf]
@@ -17,7 +17,7 @@ BaseMoney = 60
 #-------------------------------
 [POKEMONTRAINER_Kieran]
 Name = Pokémon Trainer
-Gender = Male
+Gender = Other
 BaseMoney = 60
 #-------------------------------
 [POKEMONTRAINER_Brendan]
