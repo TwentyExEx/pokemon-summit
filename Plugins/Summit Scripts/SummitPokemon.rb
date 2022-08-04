@@ -10,9 +10,9 @@ end
 
 def pbSummitMakePokemon(specform)
   pkmn = SummitPokeInfo.const_get(specform)
-  specformformatted = pkmn[:species].clone
+  specformformatted = pkmn[:species].clone.to_s
   if pkmn[:form] != 0
-    specformformatted >> "_" >> pkmn[:form]
+    specformformatted << "_" << pkmn[:form].to_s
   end
   @givepkmn = Pokemon.new(specformformatted, 50)
   for stat in $allstats
