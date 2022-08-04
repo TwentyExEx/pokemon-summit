@@ -811,6 +811,7 @@ def pbSummitMainTrainer
   if $game_variables[35] == "challenge" || "bosses" # Main mode
     if $game_variables[32] == 1
       $game_variables[33] += 1
+      $game_variables[46] += 1
     end
     if $game_variables[35] == "challenge" && $game_variables[33] == 4 # when cleared bracket
       $game_variables[31] += 1 # next bracket
@@ -918,6 +919,9 @@ def pbSummitArcadeTrainer
   $DiscordRPC.update
   TrainerBattle.start(@arcadetype, @arcadename)
   pbSummitEndBattle(@arcadetype, @arcadename)
+  if $game_variables[32] == 1
+    $game_variables[46] += 1
+  end
 end
 
 def pbSummitChoosePokemon(tr_type, party_size = 3)
