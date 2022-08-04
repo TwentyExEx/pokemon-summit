@@ -808,6 +808,9 @@ def pbSummitMainTrainer
   TrainerBattle.start(type, name, version)
 
   $Trainer.party = $game_variables[27]
+  for pkmn in $Trainer.party
+    pkmn.giveRibbon(type)
+  end
   if $game_variables[35] == "challenge" || "bosses" # Main mode
     if $game_variables[32] == 1
       $game_variables[33] += 1
