@@ -30,6 +30,8 @@ end
 
 def pbSummitGivePokemon(specform)
   pbSummitMakePokemon(specform)
+  @givepkmn.obtain_map = 2
+  @givepkmn.obtain_text = "Summit Lobby"
   pbAddPokemonSilent(@givepkmn)
 end
 
@@ -132,7 +134,9 @@ def pbSummitGiveGiftPokemon
   pbMessage("\\rHello, \\PN!")
   pbMessage("\\r#{gift[:name]} left this for you.")
   pbShowPokemonSprite(gift[:species])
-  pbSummitGivePokemon(gift[:species])
+  pbSummitMakePokemon(gift[:species])
+  @givepkmn.owner = Pokemon::Owner.new_foreign(trainer[1].to_s, GameData::TrainerType.get(trainer[0]).gender)
+  pbAddPokemonSilent(@givepkmn)
   pbMessage("\\rTake good care of that #{$dispname}!")
 end
 

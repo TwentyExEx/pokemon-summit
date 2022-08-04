@@ -88,6 +88,6 @@ module ModularTitle
   START_POS = [nil, nil]
 
   # set to true to show Title Screen even when running the game in Debug mode
-  SHOW_IN_DEBUG = true
+  SHOW_IN_DEBUG = false
 
 end

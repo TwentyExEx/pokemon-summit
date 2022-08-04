@@ -6,15 +6,14 @@ Name = Intro
 [002]   # Summit Lobby
 Name = Summit Lobby
 Outdoor = false
-ShowArea = false
-MapPosition = 0,13,12
-BattleBack = field
 #-------------------------------
 [003]   # Main Arena
 Name = Main Arena
+Outdoor = false
 TrainerVictoryBGM = win.ogg
 #-------------------------------
 [006]   # Arcade Arena
 Name = Arcade Arena
+Outdoor = false
 TrainerVictoryBGM = win.ogg
 #-------------------------------
