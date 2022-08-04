@@ -125,8 +125,8 @@ Name = Beauty Ribbon
 IconPosition = 24
 Description = Super Contest Beauty Category Normal Rank winner!
 #-------------------------------
-[SINNOHBEAUTYSUPER]
-Name = Beauty Ribbon Great
+[LEADER_Gardenia]
+Name = Test
 IconPosition = 25
 Description = Super Contest Beauty Category Great Rank winner!
 #-------------------------------
