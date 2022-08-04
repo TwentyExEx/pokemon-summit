@@ -1181,35 +1181,35 @@ Weight = 56.4
 Generation = 6
 #-------------------------------
 [ROTOM,1]
-FormName = Heat Rotom
+FormName = Heat
 Types = ELECTRIC,FIRE
 BaseStats = 50,65,107,86,105,107
 BaseExp = 182
 Pokedex = This Rotom has possessed a convection microwave oven that uses a special motor. It also has a flair for manipulating flames.
 #-------------------------------
 [ROTOM,2]
-FormName = Wash Rotom
+FormName = Wash
 Types = ELECTRIC,WATER
 BaseStats = 50,65,107,86,105,107
 BaseExp = 182
 Pokedex = This form of Rotom enjoys coming up with water-based pranks. Be careful with it if you don't want your room flooded.
 #-------------------------------
 [ROTOM,3]
-FormName = Frost Rotom
+FormName = Frost
 Types = ELECTRIC,ICE
 BaseStats = 50,65,107,86,105,107
 BaseExp = 182
 Pokedex = Rotom assumes this form when it takes over a refrigerator powered by a special motor. It battles by spewing cold air.
 #-------------------------------
 [ROTOM,4]
-FormName = Fan Rotom
+FormName = Fan
 Types = ELECTRIC,FLYING
 BaseStats = 50,65,107,86,105,107
 BaseExp = 182
 Pokedex = In this form, Rotom applies its new power over wind to its love of pranks. It will happily blow away any important documents it can find.
 #-------------------------------
 [ROTOM,5]
-FormName = Mow Rotom
+FormName = Mow
 Types = ELECTRIC,GRASS
 BaseStats = 50,65,107,86,105,107
 BaseExp = 182
