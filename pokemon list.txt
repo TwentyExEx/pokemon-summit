@@ -371,7 +371,7 @@ IVs: 0 Atk
 - Reflect  
 
 Rapidash-Galar @ Assault Vest  
-Ability: Run Away  
+Ability: Pastel Veil  
 EVs: 252 Atk / 252 Spe  
 Jolly Nature  
 - Psycho Cut  
@@ -399,16 +399,6 @@ IVs: 0 Atk
 - Focus Blast  
 - Recover  
 
-Swoobat @ Heavy-Duty Boots  
-Ability: Unaware  
-EVs: 252 SpA / 252 Spe  
-Timid Nature  
-IVs: 0 Atk  
-- Psychic  
-- Air Slash  
-- Stored Power  
-- Shadow Ball  
-
 Alakazam @ Focus Sash  
 Ability: Synchronize  
 EVs: 252 SpA / 252 Spe  
@@ -417,6 +407,16 @@ IVs: 0 Atk
 - Psychic  
 - Calm Mind  
 - Dazzling Gleam  
+- Shadow Ball  
+
+Swoobat @ Heavy-Duty Boots  
+Ability: Unaware  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Psychic  
+- Air Slash  
+- Stored Power  
 - Shadow Ball  
 
 
@@ -511,10 +511,12 @@ IVs: 0 Atk
 - Calm Mind  
 - Revelation Dance  
 - Roost  
-- Baton Pass  
+- Air Slash  
 
-Hawlucha @ Expert Belt  
+Hawlucha @ Sitrus Berry  
 Ability: Unburden  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Adamant Nature  
 - Flying Press  
 - Submission  
 - Rock Tomb  
@@ -639,7 +641,7 @@ Ability: Wandering Spirit
 === [gen8nationaldex] Alola Experts/Olivia ===
 
 Carbink @ Leftovers  
-Ability: Clear Body  
+Ability: Sturdy  
 EVs: 252 HP / 252 SpD  
 Calm Nature  
 IVs: 0 Atk  
@@ -659,7 +661,7 @@ IVs: 0 Spe
 - Gyro Ball  
 
 Lycanroc-Midnight @ Assault Vest  
-Ability: Keen Eye  
+Ability: No Guard  
 EVs: 252 Atk / 252 Spe  
 Jolly Nature  
 - Swords Dance  
@@ -685,7 +687,7 @@ IVs: 0 Atk
 - Earth Power  
 - Ancient Power  
 - Toxic  
-- Ancient Power  
+- Giga Drain  
 
 Armaldo @ Heavy-Duty Boots  
 Ability: Battle Armor  
@@ -862,17 +864,8 @@ Ability: Sap Sipper
 
 === [gen8nationaldex] Sinnoh Experts/Aaron ===
 
-Scizor @ Rocky Helmet  
-Ability: Technician  
-EVs: 252 HP / 252 Atk  
-Adamant Nature  
-- Bullet Punch  
-- Iron Head  
-- X-Scissor  
-- Swords Dance  
-
 Vespiquen (F) @ Focus Sash  
-Ability: Pressure  
+Ability: Unnerve  
 EVs: 252 HP / 252 SpA  
 Quiet Nature  
 - Attack Order  
@@ -880,7 +873,7 @@ Quiet Nature
 - Power Gem  
 - Air Slash  
 
-Yanmega @ Silver Powder  
+Yanmega @ Wacan Berry  
 Ability: Speed Boost  
 EVs: 252 SpA / 252 Spe  
 Modest Nature  
@@ -898,6 +891,15 @@ Jolly Nature
 - Megahorn  
 - Close Combat  
 
+Scizor @ Rocky Helmet  
+Ability: Technician  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Bullet Punch  
+- Iron Head  
+- X-Scissor  
+- Swords Dance  
+
 Golisopod @ Sitrus Berry  
 Ability: Emergency Exit  
 EVs: 252 HP / 252 Atk  
@@ -907,8 +909,10 @@ Adamant Nature
 - Sucker Punch  
 - X-Scissor  
 
-Vikavolt @ Magnet  
+Vikavolt @ Quick Claw  
 Ability: Levitate  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
 IVs: 0 Atk  
 - Zap Cannon  
 - Thunderbolt  
@@ -1001,7 +1005,7 @@ Adamant Nature
 - Stone Edge  
 
 Salamence @ Heavy-Duty Boots  
-Ability: Intimidate  
+Ability: Moxie  
 EVs: 252 HP / 252 SpA  
 Modest Nature  
 IVs: 0 Atk  
@@ -1012,6 +1016,8 @@ IVs: 0 Atk
 
 Kingdra @ White Herb  
 Ability: Swift Swim  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Modest Nature  
 IVs: 0 Atk  
 - Hydro Pump  
 - Draco Meteor  
@@ -2442,175 +2448,6 @@ Adamant Nature
 - Power Whip  
 - High Jump Kick  
 - U-turn  
-
-
-=== [gen8nationaldex] Starting Teams/Kanto Selection ===
-
-Venusaur  
-Ability: Overgrow  
-
-Charizard  
-Ability: Blaze  
-
-Blastoise  
-Ability: Torrent  
-
-Raichu  
-Ability: Static  
-
-Pidgeot  
-Ability: Keen Eye  
-
-Hitmonlee (M)  
-Ability: Limber  
-
-
-=== [gen8nationaldex] Starting Teams/Johto Selection ===
-
-Meganium  
-Ability: Overgrow  
-
-Typhlosion  
-Ability: Blaze  
-
-Feraligatr  
-Ability: Torrent  
-
-Ampharos  
-Ability: Static  
-
-Noctowl  
-Ability: Insomnia  
-
-Hitmontop (M)  
-Ability: Intimidate  
-
-
-=== [gen8nationaldex] Starting Teams/Hoenn Selection ===
-
-Sceptile  
-Ability: Overgrow  
-
-Blaziken  
-Ability: Blaze  
-
-Swampert  
-Ability: Torrent  
-
-Manectric  
-Ability: Static  
-
-Swellow  
-Ability: Guts  
-
-Hariyama  
-Ability: Thick Fat  
-
-
-=== [gen8nationaldex] Starting Teams/Sinnoh Selection ===
-
-Torterra  
-Ability: Overgrow  
-
-Infernape  
-Ability: Blaze  
-
-Empoleon  
-Ability: Torrent  
-
-Luxray  
-Ability: Rivalry  
-
-Staraptor  
-Ability: Intimidate  
-
-Lucario  
-Ability: Steadfast  
-
-
-=== [gen8nationaldex] Starting Teams/Unova Selection ===
-
-Serperior  
-Ability: Overgrow  
-
-Emboar  
-Ability: Blaze  
-
-Samurott  
-Ability: Torrent  
-
-Zebstrika  
-Ability: Lightning Rod  
-
-Unfezant  
-Ability: Big Pecks  
-
-Conkeldurr  
-Ability: Guts  
-
-
-=== [gen8nationaldex] Starting Teams/Kalos Selection ===
-
-Chesnaught  
-Ability: Overgrow  
-
-Delphox  
-Ability: Blaze  
-
-Greninja  
-Ability: Torrent  
-
-Heliolisk  
-Ability: Dry Skin  
-
-Talonflame  
-Ability: Flame Body  
-
-Pangoro  
-Ability: Iron Fist  
-
-
-=== [gen8nationaldex] Starting Teams/Alola Selection ===
-
-Decidueye  
-Ability: Overgrow  
-
-Incineroar  
-Ability: Blaze  
-
-Primarina  
-Ability: Torrent  
-
-Vikavolt  
-Ability: Levitate  
-IVs: 0 Atk  
-
-Toucannon  
-Ability: Keen Eye  
-
-Crabominable  
-Ability: Hyper Cutter  
-
-
-=== [gen8nationaldex] Starting Teams/Galar Selection ===
-
-Rillaboom  
-Ability: Overgrow  
-
-Cinderace  
-Ability: Blaze  
-
-Inteleon  
-Ability: Torrent  
-
-Toxtricity  
-Ability: Punk Rock  
-
-Corviknight  
-Ability: Pressure  
-
-Grapploct  
-Ability: Limber  
 
 
 === [gen8nationaldex] Galar Leaders/Nessa ===
@@ -6611,7 +6448,7 @@ Ability: Blaze
 === [gen8nationaldex] Hoenn Experts/Phoebe ===
 
 Banette @ Spell Tag  
-Ability: Insomnia  
+Ability: Cursed Body  
 EVs: 252 HP / 252 Atk  
 Adamant Nature  
 - Shadow Claw  
@@ -6649,6 +6486,8 @@ Naive Nature
 
 Cursola @ Power Herb  
 Ability: Weak Armor  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
 IVs: 0 Atk  
 - Shadow Ball  
 - Meteor Beam  
@@ -6677,15 +6516,6 @@ Adamant Nature
 - Earthquake  
 - Wood Hammer  
 
-Walrein @ Heavy-Duty Boots  
-Ability: Ice Body  
-EVs: 252 HP / 252 Atk  
-Adamant Nature  
-- Swords Dance  
-- Waterfall  
-- Icicle Spear  
-- Earthquake  
-
 Glalie @ Sitrus Berry  
 Ability: Ice Body  
 EVs: 252 SpA / 252 Spe  
@@ -6695,6 +6525,15 @@ IVs: 0 Atk
 - Dark Pulse  
 - Blizzard  
 - Signal Beam  
+
+Walrein @ Heavy-Duty Boots  
+Ability: Ice Body  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Swords Dance  
+- Waterfall  
+- Icicle Spear  
+- Earthquake  
 
 Froslass (F) @ Focus Sash  
 Ability: Snow Cloak  
@@ -6730,6 +6569,8 @@ Adamant Nature
 
 Hippowdon @ Rocky Helmet  
 Ability: Sand Stream  
+EVs: 252 HP / 252 Def  
+Impish Nature  
 - Earthquake  
 - Toxic  
 - Slack Off  
@@ -6783,25 +6624,6 @@ Adamant Nature
 
 === [gen8nationaldex] Sinnoh Experts/Flint ===
 
-Houndoom @ Focus Sash  
-Ability: Unnerve  
-EVs: 252 SpA / 252 Spe  
-Timid Nature  
-IVs: 0 Atk  
-- Flamethrower  
-- Dark Pulse  
-- Shadow Ball  
-- Taunt  
-
-Flareon @ Charcoal  
-Ability: Flash Fire  
-EVs: 252 HP / 252 Atk  
-Adamant Nature  
-- Flare Blitz  
-- Bite  
-- Iron Tail  
-- Superpower  
-
 Rapidash @ Assault Vest  
 Ability: Flame Body  
 EVs: 252 Atk / 252 Spe  
@@ -6830,6 +6652,25 @@ IVs: 0 Atk
 - Fire Blast  
 - Focus Blast  
 - Scorching Sands  
+
+Houndoom @ Focus Sash  
+Ability: Unnerve  
+EVs: 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Flamethrower  
+- Dark Pulse  
+- Shadow Ball  
+- Taunt  
+
+Flareon @ Charcoal  
+Ability: Flash Fire  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
+- Flare Blitz  
+- Bite  
+- Iron Tail  
+- Superpower  
 
 Centiskorch @ Quick Claw  
 Ability: White Smoke  
@@ -7015,6 +6856,8 @@ IVs: 0 Atk
 
 Falinks @ White Herb  
 Ability: Battle Armor  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
 - Swords Dance  
 - Close Combat  
 - Throat Chop  
@@ -7262,7 +7105,7 @@ EVs: 248 HP / 252 Def
 Bold Nature  
 IVs: 0 Atk  
 - Toxic  
-- Toxic Spikes  
+- Venoshock  
 - Scald  
 - Hex  
 
@@ -7495,7 +7338,7 @@ Adamant Nature
 - Earthquake  
 - Poison Jab  
 
-Hariyama @ Iron Ball  
+Hariyama @ Focus Sash  
 Ability: Thick Fat  
 EVs: 252 HP / 252 Atk  
 Adamant Nature  
@@ -7514,7 +7357,7 @@ Jolly Nature
 - Swagger  
 
 Grapploct @ King's Rock  
-Ability: Limber  
+Ability: Technician  
 EVs: 252 HP / 252 Atk  
 Adamant Nature  
 - Bulk Up  
@@ -7568,7 +7411,7 @@ Ability: Levitate
 === [gen8nationaldex] Galar Experts/Mustard ===
 
 Mienshao @ Wide Lens  
-Ability: Inner Focus  
+Ability: Reckless  
 EVs: 252 Atk / 252 Spe  
 Jolly Nature  
 - High Jump Kick  
@@ -7693,7 +7536,7 @@ Impish Nature
 - Heavy Slam  
 - Protect  
 
-Bronzong @ Spell Tag  
+Bronzong @ Twisted Spoon  
 Ability: Heatproof  
 EVs: 252 HP / 252 SpD  
 Sassy Nature  
