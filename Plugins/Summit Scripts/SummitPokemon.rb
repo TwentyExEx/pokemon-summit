@@ -143,9 +143,11 @@ end
 def pbSummitCallGift
   if $game_switches[39] == true
     num = rand(1..100)
-    if num < 25
+    if ($game_variables[35] == "challenge" && $game_variables[32] == 1) && num <= 25
       $game_switches[40] == true
-      return true
+    elsif num < 10
+      $game_switches[40] == true
+    return true
     else
       return false
     end
