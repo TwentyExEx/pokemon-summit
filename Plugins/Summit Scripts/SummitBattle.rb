@@ -408,6 +408,7 @@ def pbSummitPrepMainTrainer(bracket)
     when "leader_maylene"
       $game_map.events[1].character_name = "trainer_LEADER_Maylene"
       $game_map.events[1].direction = 2
+      $game_map.events[1].pattern = 0
     when "leader_wake"
       $game_map.events[1].direction = 2
       $game_map.events[1].pattern = 3
@@ -808,9 +809,6 @@ def pbSummitMainTrainer
   TrainerBattle.start(type, name, version)
 
   $Trainer.party = $game_variables[27]
-  for pkmn in $Trainer.party
-    pkmn.giveRibbon(type)
-  end
   if $game_variables[35] == "challenge" || "bosses" # Main mode
     if $game_variables[32] == 1
       $game_variables[33] += 1
@@ -836,6 +834,9 @@ def pbSummitBracketUnlock
   bracketunlocked = $bracketnames[$game_variables[31]]
   $game_variables[41] = $game_variables[31] # Change var to last completed bracket
   for trainer in $game_variables[29]
+    for pkmn in $Trainer.party
+      pkmn.giveRibbon(trainer)
+    end
     $game_variables[44].push(trainer) # Add trainers defeated to array
   end
 
