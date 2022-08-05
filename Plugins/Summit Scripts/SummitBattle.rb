@@ -145,105 +145,164 @@ def pbSummitBracketSelection(group)
         ["LEADER_Giovanni","Giovanni",0]
       ]
     when 1 # Johto Leaders
-          trainerlist = [
-            ["LEADER_Falkner","Falkner",0],
-            ["LEADER_Bugsy","Bugsy",0],
-            ["LEADER_Morty","Morty",0],
-            ["LEADER_Whitney","Whitney",0],
-            ["LEADER_Chuck","Chuck",0],
-            ["LEADER_Jasmine","Jasmine",0],
-            ["LEADER_Pryce","Pryce",0],
-            ["LEADER_Clair","Clair",0]
-          ]
+        trainerlist = [
+          ["LEADER_Falkner","Falkner",0],
+          ["LEADER_Bugsy","Bugsy",0],
+          ["LEADER_Morty","Morty",0],
+          ["LEADER_Whitney","Whitney",0],
+          ["LEADER_Chuck","Chuck",0],
+          ["LEADER_Jasmine","Jasmine",0],
+          ["LEADER_Pryce","Pryce",0],
+          ["LEADER_Clair","Clair",0]
+        ]
     when 2 # Hoenn Leaders
           trainerlist = [
-            ["LEADER_Roxanne","Roxanne",0],
-            ["LEADER_Brawly","Brawly",0],
-            ["LEADER_Wattson","Wattson",0],
-            ["LEADER_Flannery","Flannery",0],
-            ["LEADER_Norman","Norman",0],
-            ["LEADER_Winona","Winona",0],
-            ["LEADER_Tate","Tate",0],
-            ["LEADER_Liza","Liza",0],
-            ["LEADER_Juan","Juan",0]
-          ]
-        
+          ["LEADER_Roxanne","Roxanne",0],
+          ["LEADER_Brawly","Brawly",0],
+          ["LEADER_Wattson","Wattson",0],
+          ["LEADER_Flannery","Flannery",0],
+          ["LEADER_Norman","Norman",0],
+          ["LEADER_Winona","Winona",0],
+          ["LEADER_Tate","Tate",0],
+          ["LEADER_Liza","Liza",0],
+          ["LEADER_Juan","Juan",0]
+        ]
     when 3 # Sinnoh Leaders
-          trainerlist = [
-            ["LEADER_Roark","Roark",0],
-            ["LEADER_Gardenia","Gardenia",0],
-            ["LEADER_Maylene","Maylene",0],
-            ["LEADER_Wake","Crasher Wake",0],
-            ["LEADER_Fantina","Fantina",0],
-            ["LEADER_Byron","Byron",0],
-            ["LEADER_Candice","Candice",0],
-            ["LEADER_Volkner","Volkner",0]
-          ]
-        
+      trainerlist = [
+        ["LEADER_Roark","Roark",0],
+        ["LEADER_Gardenia","Gardenia",0],
+        ["LEADER_Maylene","Maylene",0],
+        ["LEADER_Wake","Crasher Wake",0],
+        ["LEADER_Fantina","Fantina",0],
+        ["LEADER_Byron","Byron",0],
+        ["LEADER_Candice","Candice",0],
+        ["LEADER_Volkner","Volkner",0]
+      ]   
     when 4 # Unova Leaders
-          trainerlist = [
-            ["LEADER_Cilan","Cilan",0],
-            ["LEADER_Chili","Chili",0],
-            ["LEADER_Cress","Cress",0],
-            ["LEADER_Lenora","Lenora",0],
-            ["LEADER_Burgh","Burgh",0],
-            ["LEADER_Elesa","Elesa",0],
-            ["LEADER_Clay","Clay",0],
-            ["LEADER_Skyla","Skyla",0],
-            ["LEADER_Drayden","Drayden",0],
-            ["LEADER_Cheren","Cheren",0],
-            ["LEADER_Roxie","Roxie",0],
-            ["LEADER_Marlon","Marlon",0],
-            ["LEADER_Brycen","Brycen",0]
-          ]
-        
+      trainerlist = [
+        ["LEADER_Cilan","Cilan",0],
+        ["LEADER_Chili","Chili",0],
+        ["LEADER_Cress","Cress",0],
+        ["LEADER_Lenora","Lenora",0],
+        ["LEADER_Burgh","Burgh",0],
+        ["LEADER_Elesa","Elesa",0],
+        ["LEADER_Clay","Clay",0],
+        ["LEADER_Skyla","Skyla",0],
+        ["LEADER_Drayden","Drayden",0],
+        ["LEADER_Cheren","Cheren",0],
+        ["LEADER_Roxie","Roxie",0],
+        ["LEADER_Marlon","Marlon",0],
+        ["LEADER_Brycen","Brycen",0]
+      ]
     when 5 # Kalos Leaders
-          trainerlist = [
-            ["LEADER_Viola","Viola",0],
-            ["LEADER_Grant","Grant",0],
-            ["LEADER_Korrina","Korrina",0],
-            ["LEADER_Ramos","Ramos",0],
-            ["LEADER_Clemont","Clemont",0],
-            ["LEADER_Valerie","Valerie",0],
-            ["LEADER_Olympia","Olympia",0],
-            ["LEADER_Wulfric","Wulfric",0]
-          ]
-        
+      trainerlist = [
+        ["LEADER_Viola","Viola",0],
+        ["LEADER_Grant","Grant",0],
+        ["LEADER_Korrina","Korrina",0],
+        ["LEADER_Ramos","Ramos",0],
+        ["LEADER_Clemont","Clemont",0],
+        ["LEADER_Valerie","Valerie",0],
+        ["LEADER_Olympia","Olympia",0],
+        ["LEADER_Wulfric","Wulfric",0]
+      ]
     when 6 # Alola Captains
-          trainerlist = [
-            ["CAPTAIN_Ilima","Ilima",0],
-            ["CAPTAIN_Mallow","Mallow",0],
-            ["CAPTAIN_Lana","Lana",0],
-            ["CAPTAIN_Kiawe","Kiawe",0],
-            ["CAPTAIN_Sophocles","Sophocles",0],
-            ["CAPTAIN_Acerola","Acerola",0],
-            ["CAPTAIN_Mina","Mina",0]
-          ]
-        
+      trainerlist = [
+        ["CAPTAIN_Ilima","Ilima",0],
+        ["CAPTAIN_Mallow","Mallow",0],
+        ["CAPTAIN_Lana","Lana",0],
+        ["CAPTAIN_Kiawe","Kiawe",0],
+        ["CAPTAIN_Sophocles","Sophocles",0],
+        ["CAPTAIN_Acerola","Acerola",0],
+        ["CAPTAIN_Mina","Mina",0]
+      ]
     when 7 # Galar Leaders
-          trainerlist = [
-            ["LEADER_Milo","Milo",0],
-            ["LEADER_Nessa","Nessa",0],
-            ["LEADER_Kabu","Kabu",0],
-            ["LEADER_Bea","Bea",0],
-            ["LEADER_Allister","Allister",0],
-            ["LEADER_Opal","Opal",0],
-            ["LEADER_Gordie","Gordie",0],
-            ["LEADER_Melony","Melony",0],
-            ["LEADER_Piers","Piers",0],
-            ["LEADER_Raihan","Raihan",0]
-          ]
+      trainerlist = [
+        ["LEADER_Milo","Milo",0],
+        ["LEADER_Nessa","Nessa",0],
+        ["LEADER_Kabu","Kabu",0],
+        ["LEADER_Bea","Bea",0],
+        ["LEADER_Allister","Allister",0],
+        ["LEADER_Opal","Opal",0],
+        ["LEADER_Gordie","Gordie",0],
+        ["LEADER_Melony","Melony",0],
+        ["LEADER_Piers","Piers",0],
+        ["LEADER_Raihan","Raihan",0]
+      ]
     when 8 # Team Bosses
-          trainerlist = [
-            ["BOSS_Rose","Rose",0],
-            ["BOSS_Guzma","Guzma",0],
-            ["BOSS_Lysandre","Lysandre",0],
-            ["BOSS_Ghetsis","Ghetsis",0],
-            ["BOSS_Cyrus","Cyrus",0],
-            ["BOSS_Archie","Archie",0],
-            ["BOSS_Maxie","Maxie",0],
-            ["BOSS_Giovanni","Giovanni",0]
-          ]
+      trainerlist = [
+        ["BOSS_Rose","Rose",0],
+        ["BOSS_Guzma","Guzma",0],
+        ["BOSS_Lysandre","Lysandre",0],
+        ["BOSS_Ghetsis","Ghetsis",0],
+        ["BOSS_Cyrus","Cyrus",0],
+        ["BOSS_Archie","Archie",0],
+        ["BOSS_Maxie","Maxie",0],
+        ["BOSS_Giovanni","Giovanni",0]
+      ]
+    when 9 # Kanto E4
+      trainerlist = [
+        ["ELITE_Lorelei","Lorelei",0],
+        ["ELITE_Bruno","Bruno",0],
+        ["ELITE_Agatha","Agatha",0],
+        ["ELITE_Lance","Lance",0],
+        ["CHAMPION_Blue","Blue",0]
+      ]
+    when 10 # Johto E4
+      trainerlist = [
+        ["ELITE_Will","Will",0],
+        ["ELITE_Koga","Koga",0],
+        ["ELITE_Bruno2","Bruno",0],
+        ["ELITE_Karen","Karen",0],
+        ["CHAMPION_Lance","Lance",0]
+      ]
+    when 11 # Sinnoh E4
+      trainerlist = [
+        ["ELITE_Sidney","Sidney",0],
+        ["ELITE_Phoebe","Phoebe",0],
+        ["ELITE_Glacia","Glacia",0],
+        ["ELITE_Drake","Drake",0],
+        ["CHAMPION_Steven","Steven",0]
+      ]
+    when 12 # Sinnoh E4
+      trainerlist = [
+        ["ELITE_Aaron","Aaron",0],
+        ["ELITE_Bertha","Bertha",0],
+        ["ELITE_Flint","Flint",0],
+        ["ELITE_Lucian","Lucian",0],
+        ["CHAMPION_Cynthia","Cynthia",0]
+      ]
+    when 13 # Unova E4
+      trainerlist = [
+        ["ELITE_Shauntal","Shauntal",0],
+        ["ELITE_Marshal","Marshal",0],
+        ["ELITE_Grimsley","Grimsley",0],
+        ["ELITE_Caitlin","Caitlin",0],
+        ["CHAMPION_Iris","Iris",0]
+      ]
+    when 14 # Kalos E4
+      trainerlist = [
+        ["ELITE_Malva","Malva",0],
+        ["ELITE_Siebold","Siebold",0],
+        ["ELITE_Wikstrom","Wikstrom",0],
+        ["ELITE_Drasna","Drasna",0],
+        ["CHAMPION_Diantha","Diantha",0]
+      ]
+    when 15 # Alola E4
+      trainerlist = [
+        ["ELITE_Hala","Hala",0],
+        ["ELITE_Molayne","Molayne",0],
+        ["ELITE_Olivia","Olivia",0],
+        ["ELITE_Kahili","Kahili",0],
+        ["CHAMPION_Kukui","Kukui",0]
+      ]
+    when 16 # Galar E4
+      trainerlist = [
+        ["ELITE_Klara","Klara",0],
+        ["ELITE_Avery","Avery",0],
+        ["ELITE_Mustard","Mustard",0],
+        ["ELITE_Peony","Peony",0],
+        ["CHAMPION_Leon","Leon",0]
+      ]
   end
   case
     when group < 8
@@ -292,7 +351,7 @@ def pbSummitBracketSelection(group)
           end
         end
       end
-    when group == 8
+    when group >= 8
       trainerSelection = trainerlist
   end
   $game_variables[29] = trainerSelection
