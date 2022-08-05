@@ -2,7 +2,7 @@ require 'socket'
 require 'io/wait'
 
 module CableClub
-  HOST = "35.213.213.159"
+  HOST = "35.213.230.216"
   PORT = 9999
   
   ONLINE_TRAINER_TYPE_LIST = [

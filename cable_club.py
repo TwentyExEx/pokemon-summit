@@ -12,7 +12,7 @@ from distutils.version import StrictVersion
 
 # This is the v20 version of the server. It is not compatible with earlier versions of the script
 
-HOST = r"127.0.0.1"
+HOST = r"0.0.0.0"
 PORT = 9999
 PBS_DIR = r"./PBS"
 
@@ -374,7 +374,7 @@ def make_party_validator(pbs_dir):
                     owner_name = record.str()
                     if not (len(owner_name) <= 10): errors.append("invalid owner name")
                     owner_gender = record.int()
-                    if owner_gender not in {0, 1}: errors.append("invalid owner gender")
+                    #if owner_gender not in {0, 1}: errors.append("invalid owner gender")
                     exp = record.int()
                     # TODO: validate exp.
                     form = record.int()
@@ -383,12 +383,12 @@ def make_party_validator(pbs_dir):
                     if item and item not in item_syms: errors.append("invalid item")
                     for _ in range(record.int()):
                         move = record.str()
-                        if move and move not in species_.moves: errors.append("invalid move")
+                        #if move and move not in species_.moves: errors.append("invalid move")
                         ppup = record.int()
-                        if not (0 <= ppup <= 3): errors.append("invalid ppup")
+                        if not (0 <= ppup <= 3): errors.append("invalid ppup")#
                     for _ in range(record.int()):
                         move = record.str()
-                        if move and move not in species_.moves: errors.append("invalid first move")
+                        #if move and move not in species_.moves: errors.append("invalid first move")
                     gender = record.int()
                     if gender not in species_.genders: errors.append("invalid gender")
                     shiny = record.bool_or_none()
