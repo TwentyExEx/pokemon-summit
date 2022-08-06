@@ -1,126 +1,131 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
-[HOENNCOOL]
+[LEADER_Brock]
 Name = Cool Ribbon
 IconPosition = 0
 Description = Hoenn Cool Contest Normal Rank winner!
 #-------------------------------
-[HOENNCOOLSUPER]
+[LEADER_Misty]
 Name = Cool Ribbon Super
 IconPosition = 1
 Description = Hoenn Cool Contest Super Rank winner!
 #-------------------------------
-[HOENNCOOLHYPER]
+[LEADER_Surge]
 Name = Cool Ribbon Hyper
 IconPosition = 2
 Description = Hoenn Cool Contest Hyper Rank winner!
 #-------------------------------
-[HOENNCOOLMASTER]
+[LEADER_Erika]
 Name = Cool Ribbon Master
 IconPosition = 3
 Description = Hoenn Cool Contest Master Rank winner!
 #-------------------------------
-[HOENNBEAUTY]
+[LEADER_Janine]
 Name = Beauty Ribbon
 IconPosition = 4
 Description = Hoenn Beauty Contest Normal Rank winner!
 #-------------------------------
-[HOENNBEAUTYSUPER]
+[LEADER_Sabrina]
 Name = Beauty Ribbon Super
 IconPosition = 5
 Description = Hoenn Beauty Contest Super Rank winner!
 #-------------------------------
-[HOENNBEAUTYHYPER]
+[LEADER_Blaine]
 Name = Beauty Ribbon Hyper
 IconPosition = 6
 Description = Hoenn Beauty Contest Hyper Rank winner!
 #-------------------------------
-[HOENNBEAUTYMASTER]
+[LEADER_Giovanni]
 Name = Beauty Ribbon Master
 IconPosition = 7
 Description = Hoenn Beauty Contest Master Rank winner!
 #-------------------------------
-[HOENNCUTE]
+[LEADER_Falkner]
 Name = Cute Ribbon
 IconPosition = 8
 Description = Hoenn Cute Contest Normal Rank winner!
 #-------------------------------
-[HOENNCUTESUPER]
+[LEADER_Bugsy]
 Name = Cute Ribbon Super
 IconPosition = 9
 Description = Hoenn Cute Contest Super Rank winner!
 #-------------------------------
-[HOENNCUTEHYPER]
+[LEADER_Whitney]
 Name = Cute Ribbon Hyper
 IconPosition = 10
 Description = Hoenn Cute Contest Hyper Rank winner!
 #-------------------------------
-[HOENNCUTEMASTER]
+[LEADER_Morty]
 Name = Cute Ribbon Master
 IconPosition = 11
 Description = Hoenn Cute Contest Master Rank winner!
 #-------------------------------
-[HOENNSMART]
+[LEADER_Chuck]
 Name = Smart Ribbon
 IconPosition = 12
 Description = Hoenn Smart Contest Normal Rank winner!
 #-------------------------------
-[HOENNSMARTSUPER]
+[LEADER_Jasmine]
 Name = Smart Ribbon Super
 IconPosition = 13
 Description = Hoenn Smart Contest Super Rank winner!
 #-------------------------------
-[HOENNSMARTHYPER]
+[LEADER_Pryce]
 Name = Smart Ribbon Hyper
 IconPosition = 14
 Description = Hoenn Smart Contest Hyper Rank winner!
 #-------------------------------
-[HOENNSMARTMASTER]
+[LEADER_Clair]
 Name = Smart Ribbon Master
 IconPosition = 15
 Description = Hoenn Smart Contest Master Rank winner!
 #-------------------------------
-[HOENNTOUGH]
+[LEADER_Roxanne]
 Name = Tough Ribbon
 IconPosition = 16
 Description = Hoenn Tough Contest Normal Rank winner!
 #-------------------------------
-[HOENNTOUGHSUPER]
+[LEADER_Brawly]
 Name = Tough Ribbon Super
 IconPosition = 17
 Description = Hoenn Tough Contest Super Rank winner!
 #-------------------------------
-[HOENNTOUGHHYPER]
+[LEADER_Wattson]
 Name = Tough Ribbon Hyper
 IconPosition = 18
 Description = Hoenn Tough Contest Hyper Rank winner!
 #-------------------------------
-[HOENNTOUGHMASTER]
+[LEADER_Flannery]
 Name = Tough Ribbon Master
 IconPosition = 19
 Description = Hoenn Tough Contest Master Rank winner!
 #-------------------------------
-[SINNOHCOOL]
+[LEADER_Norman]
 Name = Cool Ribbon
 IconPosition = 20
 Description = Super Contest Cool Category Normal Rank winner!
 #-------------------------------
-[SINNOHCOOLSUPER]
+[LEADER_Winona]
 Name = Cool Ribbon Great
 IconPosition = 21
 Description = Super Contest Cool Category Great Rank winner!
 #-------------------------------
-[SINNOHCOOLHYPER]
+[LEADER_Tate]
 Name = Cool Ribbon Ultra
 IconPosition = 22
 Description = Super Contest Cool Category Ultra Rank winner!
 #-------------------------------
-[SINNOHCOOLMASTER]
+[LEADER_Liza]
+Name = Cool Ribbon Ultra
+IconPosition = 22
+Description = Super Contest Cool Category Ultra Rank winner!
+#-------------------------------
+[LEADER_Juan]
 Name = Cool Ribbon Master
 IconPosition = 23
 Description = Super Contest Cool Category Master Rank winner!
 #-------------------------------
-[SINNOHBEAUTY]
+[LEADER_Roark]
 Name = Beauty Ribbon
 IconPosition = 24
 Description = Super Contest Beauty Category Normal Rank winner!
@@ -130,207 +135,222 @@ Name = Test
 IconPosition = 25
 Description = Super Contest Beauty Category Great Rank winner!
 #-------------------------------
-[SINNOHBEAUTYHYPER]
+[LEADER_Maylene]
 Name = Beauty Ribbon Ultra
 IconPosition = 26
 Description = Super Contest Beauty Category Ultra Rank winner!
 #-------------------------------
-[SINNOHBEAUTYMASTER]
+[LEADER_Wake]
 Name = Beauty Ribbon Master
 IconPosition = 27
 Description = Super Contest Beauty Category Master Rank winner!
 #-------------------------------
-[SINNOHCUTE]
+[LEADER_Fantina]
 Name = Cute Ribbon
 IconPosition = 28
 Description = Super Contest Cute Category Normal Rank winner!
 #-------------------------------
-[SINNOHCUTESUPER]
+[LEADER_Byron]
 Name = Cute Ribbon Great
 IconPosition = 29
 Description = Super Contest Cute Category Great Rank winner!
 #-------------------------------
-[SINNOHCUTEHYPER]
+[LEADER_Candice]
 Name = Cute Ribbon Ultra
 IconPosition = 30
 Description = Super Contest Cute Category Ultra Rank winner!
 #-------------------------------
-[SINNOHCUTEMASTER]
+[LEADER_Volkner]
 Name = Cute Ribbon Master
 IconPosition = 31
 Description = Super Contest Cute Category Master Rank winner!
 #-------------------------------
-[SINNOHSMART]
+[LEADER_Cilan]
 Name = Smart Ribbon
 IconPosition = 32
 Description = Super Contest Smart Category Normal Rank winner!
 #-------------------------------
-[SINNOHSMARTSUPER]
+[LEADER_Chili]
+Name = Smart Ribbon
+IconPosition = 32
+Description = Super Contest Smart Category Normal Rank winner!
+#-------------------------------
+[LEADER_Cress]
+Name = Smart Ribbon
+IconPosition = 32
+Description = Super Contest Smart Category Normal Rank winner!
+#-------------------------------
+[LEADER_Lenora]
 Name = Smart Ribbon Great
 IconPosition = 33
 Description = Super Contest Smart Category Great Rank winner!
 #-------------------------------
-[SINNOHSMARTHYPER]
+[LEADER_Cheren]
+Name = Smart Ribbon Great
+IconPosition = 33
+Description = Super Contest Smart Category Great Rank winner!
+#-------------------------------
+[LEADER_Burgh]
 Name = Smart Ribbon Ultra
 IconPosition = 34
 Description = Super Contest Smart Category Ultra Rank winner!
 #-------------------------------
-[SINNOHSMARTMASTER]
+[LEADER_Elesa]
 Name = Smart Ribbon Master
 IconPosition = 35
 Description = Super Contest Smart Category Master Rank winner!
 #-------------------------------
-[SINNOHTOUGH]
+[LEADER_Clay]
 Name = Tough Ribbon
 IconPosition = 36
 Description = Super Contest Tough Category Normal Rank winner!
 #-------------------------------
-[SINNOHTOUGHSUPER]
+[LEADER_Skyla]
 Name = Tough Ribbon Great
 IconPosition = 37
 Description = Super Contest Tough Category Great Rank winner!
 #-------------------------------
-[SINNOHTOUGHHYPER]
+[LEADER_Brycen]
 Name = Tough Ribbon Ultra
 IconPosition = 38
 Description = Super Contest Tough Category Ultra Rank winner!
 #-------------------------------
-[SINNOHTOUGHMASTER]
+[LEADER_Drayden]
 Name = Tough Ribbon Master
 IconPosition = 39
 Description = Super Contest Tough Category Master Rank winner!
 #-------------------------------
-[WINNING]
+[LEADER_Roxie]
 Name = Winning Ribbon
 IconPosition = 40
 Description = Ribbon awarded for clearing Hoenn's Battle Tower's Lv. 50 challenge.
 #-------------------------------
-[VICTORY]
+[LEADER_Marlon]
 Name = Victory Ribbon
 IconPosition = 41
 Description = Ribbon awarded for clearing Hoenn's Battle Tower's Lv. 100 challenge.
 #-------------------------------
-[ABILITY]
+[LEADER_Viola]
 Name = Ability Ribbon
 IconPosition = 42
 Description = A Ribbon awarded for defeating the Tower Tycoon at the Battle Tower.
 #-------------------------------
-[GREATABILITY]
+[LEADER_Grant]
 Name = Great Ability Ribbon
 IconPosition = 43
 Description = A Ribbon awarded for defeating the Tower Tycoon at the Battle Tower.
 #-------------------------------
-[DOUBLEABILITY]
+[LEADER_Korrina]
 Name = Double Ability Ribbon
 IconPosition = 44
 Description = A Ribbon awarded for completing the Battle Tower Double challenge.
 #-------------------------------
-[MULTIABILITY]
+[LEADER_Ramos]
 Name = Multi Ability Ribbon
 IconPosition = 45
 Description = A Ribbon awarded for completing the Battle Tower Multi challenge.
 #-------------------------------
-[PAIRABILITY]
+[LEADER_Clemont]
 Name = Pair Ability Ribbon
 IconPosition = 46
 Description = A Ribbon awarded for completing the Battle Tower Link Multi challenge.
 #-------------------------------
-[WORLDABILITY]
+[LEADER_Valerie]
 Name = World Ability Ribbon
 IconPosition = 47
 Description = A Ribbon awarded for completing the Wi-Fi Battle Tower challenge.
 #-------------------------------
-[CHAMPION]
+[LEADER_Olympia]
 Name = Champion Ribbon
 IconPosition = 48
 Description = Ribbon for clearing the Pokémon League and entering the Hall of Fame in another region.
 #-------------------------------
-[SINNOHCHAMP]
+[LEADER_Wulfric]
 Name = Sinnoh Champ Ribbon
 IconPosition = 49
 Description = Ribbon awarded for beating the Sinnoh Champion and entering the Hall of Fame.
 #-------------------------------
-[RECORD]
+[CAPTAIN_Ilima]
 Name = Record Ribbon
 IconPosition = 50
 Description = A Ribbon awarded for setting an incredible record.
 #-------------------------------
-[EVENT]
+[CAPTAIN_Mallow]
 Name = Event Ribbon
 IconPosition = 51
 Description = Pokémon Event Participation Ribbon.
 #-------------------------------
-[LEGEND]
+[CAPTAIN_Lana]
 Name = Legend Ribbon
 IconPosition = 52
 Description = A Ribbon awarded for setting a legendary record.
 #-------------------------------
-[GORGEOUS]
+[CAPTAIN_Kiawe]
 Name = Gorgeous Ribbon
 IconPosition = 53
 Description = An extraordinarily gorgeous and extravagant Ribbon.
 #-------------------------------
-[ROYAL]
+[CAPTAIN_Sophocles]
 Name = Royal Ribbon
 IconPosition = 54
 Description = An incredibly regal Ribbon with an air of nobility.
 #-------------------------------
-[GORGEOUSROYAL]
+[CAPTAIN_Acerola]
 Name = Gorgeous Royal Ribbon
 IconPosition = 55
 Description = A gorgeous and regal Ribbon that is the peak of fabulous.
 #-------------------------------
-[ALERT]
+[CAPTAIN_Mina]
 Name = Alert Ribbon
 IconPosition = 56
 Description = A Ribbon for recalling an invigorating event that created life energy.
 #-------------------------------
-[SHOCK]
+[LEADER_Milo]
 Name = Shock Ribbon
 IconPosition = 57
 Description = A Ribbon for recalling a thrilling event that made life more exciting.
 #-------------------------------
-[DOWNCAST]
+[LEADER_Nessa]
 Name = Downcast Ribbon
 IconPosition = 58
 Description = A Ribbon for recalling feelings of sadness that added spice to life.
 #-------------------------------
-[CARELESS]
+[LEADER_Kabu]
 Name = Careless Ribbon
 IconPosition = 59
 Description = A Ribbon for recalling a careless error that helped steer life decisions.
 #-------------------------------
-[RELAX]
+[LEADER_Bea]
 Name = Relax Ribbon
 IconPosition = 60
 Description = A Ribbon for recalling a refreshing event that added sparkle to life.
 #-------------------------------
-[SNOOZE]
+[LEADER_Allister]
 Name = Snooze Ribbon
 IconPosition = 61
 Description = A Ribbon for recalling a deep slumber that made life soothing.
 #-------------------------------
-[SMILE]
+[LEADER_Opal]
 Name = Smile Ribbon
 IconPosition = 62
 Description = A Ribbon for recalling that smiles enrich the quality of life.
 #-------------------------------
-[FOOTPRINT]
+[LEADER_Gordie]
 Name = Footprint Ribbon
 IconPosition = 63
 Description = A Ribbon awarded to a Pokémon deemed to have a top-quality footprint.
 #-------------------------------
-[ARTIST]
+[LEADER_Melony]
 Name = Artist Ribbon
 IconPosition = 64
 Description = Ribbon awarded for being chosen as a super sketch model in Hoenn.
 #-------------------------------
-[EFFORT]
+[LEADER_Piers]
 Name = Effort Ribbon
 IconPosition = 65
 Description = Ribbon awarded for being an exceptionally hard worker.
 #-------------------------------
-[BIRTHDAY]
+[LEADER_Raihan]
 Name = Birthday Ribbon
 IconPosition = 66
 Description = A Ribbon to celebrate a birthday.
