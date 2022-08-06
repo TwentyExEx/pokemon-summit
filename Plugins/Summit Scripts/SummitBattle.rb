@@ -362,6 +362,23 @@ def pbSummitBracketAnnounce
   pbMessage(_INTL("\\rYou will be facing the {1} bracket.",bracket))
 end
 
+def pbSummitPartyCheck
+  if $game_variables[31] < 9
+    if $player.pokemon_count == 3
+      return true
+    else
+      $game_variables[5] = "three"
+      return false
+  elsif $game_variables[31] >= 9
+    if $player.pokemon_count == 6
+      return true
+    else
+      $game_variables[5] = "three"
+      return false
+    end
+  end
+end
+
 def pbSummitPrepMainTrainer(bracket)
   if $game_variables[35] == "challenge" || "bosses"
     trainers = $game_variables[29]
