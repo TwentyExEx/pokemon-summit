@@ -57,21 +57,62 @@ def pbSummitVendingPokemon
   end
 end
 
-def pbSummitRocketPokemon
-  pokesale = []
+def pbSummitRocketInventory
+  @pokesale = []
   3.times do
     pkmn = pbSummitSelectPokemon
-    pokesale.push(pkmn)
+    @pokemon=SummitPokeInfo.const_get(pkmn.to_s)[:species].to_s
+    @form=SummitPokeInfo.const_get(pkmn.to_s)[:form].to_s
+    case @form
+     when "0"
+       @dispform=""
+     else
+       @dispform="_"
+       @dispform << @form
+     end
+    @specform = @pokemon.clone << @dispform
+    case @dispform
+      when ""
+        dispname = GameData::Species.get(@pokemon.to_sym).real_name
+      else
+        dispname = GameData::Species.get(@specform).form_name.clone
+        dispname << " "<< GameData::Species.get(@specform).real_name
+    end
+    @pokesale.push(dispname)
   end
-  cmd = pbMessage("Which of these Pokémon would you like to purchase?",pokesale,-1)
-  if cmd > 0
+  @pokesale.push("Cancel")
+end
+
+def pbSummitRocketPokemon
+  if $game_switches[44] == false
+    pbMessage("\\rWe're all out o' stock, actually. Come back another time.")
     return false
   else
-    pbMessage("One #{pokesale[cmd]}... That'll be $1,000. Sound good to you?",["Yes","No"],2)
-    if cmd == 1
+    $game_switches[44] = true
+  end
+  if $game_switches[43] == true
+    pbSummitRocketInventory
+    $game_switches[43] = false
+  end
+  cmd = pbMessage("\\rWhich of these Pokémon would you like to purchase?",@pokesale,3)
+  if cmd < 0 || cmd == 3
+    pbMessage("\\rYour loss.")
+    return false
+  else
+    pbMessage("\\rOne #{@pokesale[cmd]}... That'll be $1,000. Sound good to you?",["Yes","No"],2)
+    if cmd == 2
+      pbMessage("\\rYour loss.")
       return false
     else
-      $game_variables[1] = pokesale[cmd]
+      pkmn = @pokesale[cmd].upcase.to_sym
+      pbShowPokemonSprite(pkmn)
+      pbSummitGivePokemon(pkmn)
+      pbMessage("\\G\\rI'll take that cash now.")
+      pbSEPlay("Slots coin")
+      $Trainer.money -= 1000
+      pbMessage("\\rYour brand new #{@pokesale[cmd]} has been put into your PC.")
+      pbMessage("\\rAnd remember, no refunds!")
+      $game_switches[44] = false
       return true
     end
   end
