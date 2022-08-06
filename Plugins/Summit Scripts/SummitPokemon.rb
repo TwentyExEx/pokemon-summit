@@ -57,6 +57,26 @@ def pbSummitVendingPokemon
   end
 end
 
+def pbSummitRocketPokemon
+  pokesale = []
+  3.times do
+    pkmn = pbSummitSelectPokemon
+    pokesale.push(pkmn)
+  end
+  cmd = pbMessage("Which of these Pokémon would you like to purchase?",pokesale,-1)
+  if cmd > 0
+    return false
+  else
+    pbMessage("One #{pokesale[cmd]}... That'll be $1,000. Sound good to you?",["Yes","No"],2)
+    if cmd == 1
+      return false
+    else
+      $game_variables[1] = pokesale[cmd]
+      return true
+    end
+  end
+end
+
 def pbSummitMonkey
     pbSummitGivePokemon(:SIMISAGE)
     pbSummitGivePokemon(:SIMISEAR)
@@ -157,10 +177,10 @@ end
 
 def pbSummitCallGift
   if $game_switches[39] == true
-    num = rand(1..100)
-    if ($game_variables[35] == "challenge" && $game_variables[32] == 1) && num <= 25
+    num = 100 #rand(1..100)
+    if ($game_variables[35] == "challenge" && $game_variables[32] == 1) && num >= 75
       $game_switches[40] == true
-    elsif num < 10
+    elsif num >= 90
       $game_switches[40] == true
     return true
     else

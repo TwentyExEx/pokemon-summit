@@ -860,7 +860,7 @@ def pbSummitMainTrainer
   end
   $DiscordRPC.update
 
-  if $game_variables[35] == "challenge" || "gauntlet"
+  if $game_variables[35] == ("challenge" || "gauntlet")
     setBattleRule("backdrop", $bg.to_s)
     setBattleRule("base", $bg.to_s)
   elsif $game_variables[35] == "bosses"
@@ -878,9 +878,14 @@ def pbSummitMainTrainer
     end
     if $game_variables[35] == "challenge" && $game_variables[33] == 4 # when cleared bracket
       $game_variables[31] += 1 # next bracket
-    elsif $game_variables[35] == "bosses" && $game_variables[33] == 8
-      $game_variables[31] += 1 # next bracket
-    elsif $game_variables[35] == "gauntlet" && $game_variables[33] == 3
+    elsif $game_variables[35] == "bosses"
+      if $game_variables[33] == 8
+        $game_variables[31] += 1 # next bracket
+      end
+      if $game_variables[33] == 4
+        $game_switches[42] = true # break
+      end
+    elsif $game_variables[35] == "gauntlet" && $game_variables[33] == 4
       $game_switches[42] = true # break
     end
   end

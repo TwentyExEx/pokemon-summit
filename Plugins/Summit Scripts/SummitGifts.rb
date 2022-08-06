@@ -113,19 +113,19 @@ module SummitGifts
 	ELITE_Kahili = {:name =>"Alola Elite Four Kahili", :species => :TOUCANNON}
 	ELITE_Klara = {:name =>"Pokémon Trainer Klara", :species => :SLOWKING_GALAR}
 	ELITE_Avery = {:name =>"Pokémon Trainer Avery", :species => :SLOWBRO_GALAR}
-	ELITE_Mustard => {:name =>"Pokémon Trainer Mustard", :species => :MIENSHAO}
-	ELITE_Peony => {:name =>"Pokémon Trainer Peony", :species => :COPPERAJAH}
-	CHAMPION_Leon => {:name =>"Champion Leon", :species => :CHARIZARD}
-	CHAMPION_Hau => {:name =>"Champion Hau", :species => :RAICHU_ALOLA}
-	CHAMPION_Kukui => {:name =>"Champion Kukui", :species => :INCINEROAR}
-	CHAMPION_Diantha => {:name =>"Champion Diantha", :species => :GARDEVOIR}
-	CHAMPION_Iris => {:name =>"Champion Iris", :species => :HAXORUS}
-	CHAMPION_Alder => {:name =>"Champion Alder", :species => :VOLCARONA}
-	CHAMPION_Cynthia => {:name =>"Champion Cynthia", :species => :GARCHOMP}
-	CHAMPION_Wallace => {:name =>"Champion Wallace", :species => :MILOTIC}
-	CHAMPION_Steven => {:name =>"Champion Steven", :species => :METAGROSS}
-	CHAMPION_Lance => {:name =>"Champion Lance", :species => :DRAGONITE}
-	CHAMPION_Blue => {:name =>"Champion Blue", :species => :BLASTOISE}
-	CHAMPION_Red => {:name =>"Champion Red", :species => :LAPRAS}
+	ELITE_Mustard = {:name =>"Pokémon Trainer Mustard", :species => :MIENSHAO}
+	ELITE_Peony = {:name =>"Pokémon Trainer Peony", :species => :COPPERAJAH}
+	CHAMPION_Leon = {:name =>"Champion Leon", :species => :CHARIZARD}
+	CHAMPION_Hau = {:name =>"Champion Hau", :species => :RAICHU_ALOLA}
+	CHAMPION_Kukui = {:name =>"Champion Kukui", :species => :INCINEROAR}
+	CHAMPION_Diantha = {:name =>"Champion Diantha", :species => :GARDEVOIR}
+	CHAMPION_Iris = {:name =>"Champion Iris", :species => :HAXORUS}
+	CHAMPION_Alder = {:name =>"Champion Alder", :species => :VOLCARONA}
+	CHAMPION_Cynthia = {:name =>"Champion Cynthia", :species => :GARCHOMP}
+	CHAMPION_Wallace = {:name =>"Champion Wallace", :species => :MILOTIC}
+	CHAMPION_Steven = {:name =>"Champion Steven", :species => :METAGROSS}
+	CHAMPION_Lance = {:name =>"Champion Lance", :species => :DRAGONITE}
+	CHAMPION_Blue = {:name =>"Champion Blue", :species => :BLASTOISE}
+	CHAMPION_Red = {:name =>"Champion Red", :species => :LAPRAS}
 
 end

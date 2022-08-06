@@ -385,7 +385,7 @@ module TrainerIntros
 	}
 	
 	BOSS_Guzma = {
-		:meeting => "\\bWanna see what destruction looks like? Here it is in human form—it's your boy Guzma!",
+		:meeting => "\\bWanna see what destruction looks like? Here it is in human form--it's your boy Guzma!",
 		:rematch => "\\bIt's time I put out your fire at the source!"
 	}
 
