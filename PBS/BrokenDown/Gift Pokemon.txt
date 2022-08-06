@@ -112,9 +112,9 @@
 :ELITE_Klara => {:name =>"Pokémon Trainer Klara", :giftmon => :SLOWKING, :form => 1
 :ELITE_Avery => {:name =>"Pokémon Trainer Avery", :giftmon => :SLOWBRO, :form => 1}
 :ELITE_Mustard => {:name =>"Pokémon Trainer Mustard", :giftmon => :MIENSHAO, :form => 0}
-:ELITE_Mustard => {:name =>"Pokémon Trainer Mustard", :giftmon => :COPPERAJAH, :form => 0}
+:ELITE_Peony => {:name =>"Pokémon Trainer Peony", :giftmon => :COPPERAJAH, :form => 0}
 :CHAMPION_Leon => {:name =>"Champion Leon", :giftmon => :CHARIZARD, :form => 0}
-:CHAMPION_Hau => {:name =>"Champion Leon", :giftmon => :RAICHU, :form => 1}
+:CHAMPION_Hau => {:name =>"Champion Hau", :giftmon => :RAICHU, :form => 1}
 :CHAMPION_Kukui => {:name =>"Champion Kukui", :giftmon => :INCINEROAR, :form => 0}
 :CHAMPION_Diantha => {:name =>"Champion Diantha", :giftmon => :GARDEVOIR, :form => 0}
 :CHAMPION_Iris => {:name =>"Champion Iris", :giftmon => :HAXORUS, :form => 0}
