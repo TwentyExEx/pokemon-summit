@@ -9,24 +9,6 @@ Jolly Nature
 - Thief  
 - Roost  
 
-Aerodactyl @ Assault Vest  
-Ability: Rock Head  
-EVs: 252 Atk / 252 Spe  
-Jolly Nature  
-- Stone Edge  
-- Earthquake  
-- Ice Fang  
-- Fire Fang  
-
-Blastoise @ White Herb  
-Ability: Torrent  
-EVs: 252 SpA / 252 Spe  
-Mild Nature  
-- Hydro Pump  
-- Ice Beam  
-- Earthquake  
-- Shell Smash  
-
 Arcanine @ Expert Belt  
 Ability: Intimidate  
 EVs: 252 Atk / 252 Spe  
@@ -35,6 +17,15 @@ Jolly Nature
 - Close Combat  
 - Extreme Speed  
 - Wild Charge  
+
+Aerodactyl @ Assault Vest  
+Ability: Unnerve  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Stone Edge  
+- Earthquake  
+- Ice Fang  
+- Fire Fang  
 
 Machamp @ Flame Orb  
 Ability: Guts  
@@ -54,6 +45,15 @@ IVs: 0 Atk
 - Leaf Storm  
 - Psychic  
 - Leech Seed  
+
+Blastoise @ White Herb  
+Ability: Torrent  
+EVs: 252 SpA / 252 Spe  
+Mild Nature  
+- Hydro Pump  
+- Ice Beam  
+- Earthquake  
+- Shell Smash  
 
 
 === [gen8nationaldex] Champions/Steven ===
@@ -78,6 +78,8 @@ Adamant Nature
 
 Excadrill @ Focus Sash  
 Ability: Sand Force  
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
 - Earthquake  
 - Rock Slide  
 - X-Scissor  
@@ -95,6 +97,8 @@ IVs: 0 Atk
 
 Armaldo @ White Herb  
 Ability: Battle Armor  
+EVs: 252 HP / 252 Atk  
+Adamant Nature  
 - X-Scissor  
 - Rock Blast  
 - Earthquake  
@@ -8075,7 +8079,7 @@ Jolly Nature
 === [gen8nationaldex] Champions/Alder ===
 
 Accelgor @ Rocky Helmet  
-Ability: Hydration  
+Ability: Sticky Hold  
 EVs: 252 SpA / 252 Spe  
 Timid Nature  
 IVs: 0 Atk  
@@ -8196,7 +8200,7 @@ Jolly Nature
 === [gen8nationaldex] Champions/Lance ===
 
 Salamence @ Expert Belt  
-Ability: Intimidate  
+Ability: Moxie  
 EVs: 252 Atk / 252 Spe  
 Jolly Nature  
 - Dragon Claw  
@@ -8204,12 +8208,14 @@ Jolly Nature
 - Earthquake  
 - Stone Edge  
 
-Dragonite @ Focus Sash  
-Ability: Inner Focus  
-- Extreme Speed  
-- Ice Punch  
-- Fire Punch  
-- Draco Meteor  
+Kommo-o @ Rocky Helmet  
+Ability: Bulletproof  
+EVs: 252 SpA / 252 Spe  
+Naive Nature  
+- Body Press  
+- Earthquake  
+- Flamethrower  
+- Clanging Scales  
 
 Haxorus @ Assault Vest  
 Ability: Mold Breaker  
@@ -8222,33 +8228,39 @@ Jolly Nature
 
 Flygon @ Power Herb  
 Ability: Levitate  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Timid Nature  
 - Solar Beam  
 - Draco Meteor  
 - Earth Power  
 - U-turn  
 
-Kommo-o @ Rocky Helmet  
-Ability: Bulletproof  
-EVs: 252 SpA / 252 Spe  
-Naive Nature  
-- Body Press  
-- Earthquake  
-- Flamethrower  
-- Clanging Scales  
-
 Duraludon @ White Herb  
 Ability: Light Metal  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Timid Nature  
 IVs: 0 Atk  
 - Draco Meteor  
 - Flash Cannon  
 - Body Press  
 - Thunderbolt  
 
+Dragonite @ Focus Sash  
+Ability: Inner Focus  
+EVs: 252 Atk / 4 SpA / 252 Spe  
+Hasty Nature  
+- Extreme Speed  
+- Ice Punch  
+- Fire Punch  
+- Draco Meteor  
+
 
 === [gen8nationaldex] Champions/Red ===
 
 Pikachu @ Light Ball  
 Ability: Static  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
 - Volt Tackle  
 - Iron Tail  
 - Brick Break  
@@ -8256,6 +8268,8 @@ Ability: Static
 
 Venusaur @ White Herb  
 Ability: Overgrow  
+EVs: 4 Atk / 252 SpA / 252 Spe  
+Hasty Nature  
 - Leaf Storm  
 - Sludge Bomb  
 - Earthquake  
@@ -8273,7 +8287,7 @@ IVs: 0 Atk
 
 Blastoise @ Wise Glasses  
 Ability: Torrent  
-EVs: 252 HP / 252 SpA  
+EVs: 252 HP / 252 SpA / 4 SpD  
 Modest Nature  
 IVs: 0 Atk  
 - Water Spout  
@@ -8283,6 +8297,8 @@ IVs: 0 Atk
 
 Snorlax @ Quick Claw  
 Ability: Immunity  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
 - Body Slam  
 - Earthquake  
 - Crunch  
@@ -8290,6 +8306,8 @@ Ability: Immunity
 
 Lapras @ Sitrus Berry  
 Ability: Water Absorb  
+EVs: 248 HP / 8 Atk / 252 SpA  
+Quiet Nature  
 - Ice Beam  
 - Hydro Pump  
 - Ice Shard  
