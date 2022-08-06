@@ -903,10 +903,10 @@ def pbSummitBracketUnlock
   bracketunlocked = $bracketnames[$game_variables[31]]
   $game_variables[41] = $game_variables[31] # Change var to last completed bracket
   for trainer in $game_variables[29]
-    # for pkmn in $Trainer.party
-    #   pkmn.giveRibbon(trainer[0].to_sym)
-    # end
-    $game_variables[44].push(trainer[0]) # Add trainers defeated to array
+    for pkmn in $Trainer.party
+      pkmn.giveRibbon(trainer[0].to_sym)
+    end
+    $game_variables[44].push(trainer) # Add trainers defeated to array
   end
 
   pbMessage(_INTL("\\rCongratulations on defeating the {1}!",bracketwon))
