@@ -853,22 +853,25 @@ def pbSummitMainTrainer
 
   $DiscordRPC.details = "VS #{GameData::TrainerType.get($game_variables[30][0]).name} #{$game_variables[30][1]}"
   $DiscordRPC.large_image = $game_variables[30][0].downcase
-  if $game_variables[35] == "challenge"
+  if $game_variables[35] == "challenge" || "bosses" || "gauntlet"
     $DiscordRPC.state = "#{$bracketnames[$game_variables[31]]} (#{$game_variables[33].to_int+1} of 4)"
   elsif $game_variables[35] == "arcade"
     $DiscordRPC.state = "Arcade (Win Streak: #{$game_variables[43].to_int})"
   end
   $DiscordRPC.update
 
-  if $game_variables[35] == "challenge"
+  if $game_variables[35] == "challenge" || "gauntlet"
     setBattleRule("backdrop", $bg.to_s)
     setBattleRule("base", $bg.to_s)
+  elsif $game_variables[35] == "bosses"
+    setBattleRule("backdrop", "dark")
+    setBattleRule("base", "dark")
   end
   
   TrainerBattle.start(type, name, version)
 
   $Trainer.party = $game_variables[27]
-  if $game_variables[35] == "challenge" || "bosses" # Main mode
+  if $game_variables[35] == "challenge" || "bosses" || "gauntlet" # Main mode
     if $game_variables[32] == 1
       $game_variables[33] += 1
       $game_variables[46] += 1
@@ -877,6 +880,8 @@ def pbSummitMainTrainer
       $game_variables[31] += 1 # next bracket
     elsif $game_variables[35] == "bosses" && $game_variables[33] == 8
       $game_variables[31] += 1 # next bracket
+    elsif $game_variables[35] == "gauntlet" && $game_variables[33] == 3
+      $game_switches[42] = true # break
     end
   end
 end

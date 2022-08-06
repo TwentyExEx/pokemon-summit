@@ -1,9 +1,8 @@
 def pbSummitSuperTrain
   @evstats = ["HP","Attack","Defense","Special Attack","Special Defense","Speed"]
   @selection = @evstats.clone
-
   loop do
-    pbMessage("\\rWhich Pokémon would you like to super train?")
+    pbMessage("\\bWhich Pokémon would you like to super train?")
     pkmn = pbChoosePokemon(1, 3)
     if $game_variables[1] < 0
       cmd = pbMessage("Cancel super training?",["Yes", "No"],1)
@@ -12,63 +11,61 @@ def pbSummitSuperTrain
         break
       end
     else
-      pbMessage("\\rWhich stats would you like this Pokémon to specialize in?")
+      pbMessage("\\bWhich stats would you like this Pokémon to specialize in?")
       loop do
-        cmd = pbMessage("\\rSelect a stat to specialize in.",@evstats,-1)
+        cmd = pbMessage("\\bSelect a stat to specialize in.",@evstats,-1)
         if cmd == -1
           break
         else
           @stat1 = @evstats[cmd]
           @selection.delete_at(cmd)
-          break
         end
-      end
-      loop do
-        cmd = pbMessage("\\rSelect another stat to specialize in.",@selection,-1)
-        if cmd == -1
-          break
-        else
-          cmd2 = @selection[cmd]
-          for stat in @evstats
-            if stat.equal?(cmd2)
-              @stat2 = stat
+        loop do
+          cmd = pbMessage("\\bSelect another stat to specialize in.",@selection,-1)
+          if cmd >= 0
+            cmd2 = @selection[cmd]
+              for stat in @evstats
+                if stat.equal?(cmd2)
+                  @stat2 = stat
+                end
+              end
+            pkmn = pbGetPokemon(1)
+            loop do
+              cmd = pbMessage(_INTL("\\bDo you want us to train your #{pbGetPokemon(1).species.downcase.capitalize} in {1} and {2}?",@chosenstats[0],@chosenstats[1]),["Yes","No"],-1)
+              if cmd == -1
+                break
+              elsif cmd == 1
+                cmd2 = pbMessage("Cancel super training?",["Yes", "No"],1)
+                if cmd2 == 0
+                  return false
+                  break
+                end
+              else
+                for i in $allstats
+                  pkmn.ev[i] = 0
+                end
+                for statname in @chosenstats
+                  statnameint = statname.clone
+                  if statname.include?(" ")
+                    statnameint.gsub!(/\s/, "_")
+                  end
+                  pkmn.ev[statnameint.upcase.to_sym] = 252
+                end
+                pbMessage(_INTL("\\G\\bYour #{pbGetPokemon(1).species.downcase.capitalize} now specializes in {1} and {2}.",@chosenstats[0],@chosenstats[1]))
+                return true
+                break
+                break
+                break
+                break
+                break
+              end
             end
-          end
-          break
-        end
-      end
-
-      @chosenstats = [@stat1, @stat2]
-
-      pkmn = pbGetPokemon(1)
-
-      loop do
-        cmd = pbMessage(_INTL("\\rDo you want us to train your #{pbGetPokemon(1).species.downcase.capitalize} in {1} and {2}?",@chosenstats[0],@chosenstats[1]),["Yes","No"],-1)
-        if cmd == -1
-          break
-        elsif cmd == 1
-          cmd2 = pbMessage("Cancel super training?",["Yes", "No"],1)
-          if cmd2 == 0
-            return false
+          else
+            @selection = @evstats.clone
             break
           end
-        else
-          for i in $allstats
-            pkmn.ev[i] = 0
-          end
-          for statname in @chosenstats
-            statnameint = statname.clone
-            if statname.include?(" ")
-              statnameint.gsub!(/\s/, "_")
-            end
-            pkmn.ev[statnameint.upcase.to_sym] = 252
-          end
-          pbMessage(_INTL("\\G\\rYour #{pbGetPokemon(1).species.downcase.capitalize} now specializes in {1} and {2}.",@chosenstats[0],@chosenstats[1]))
-          return true
-          break
         end
       end
-      break
     end
   end
 end
