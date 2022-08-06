@@ -805,7 +805,7 @@ end
 class Battle_CableClub < Battle
   attr_reader :connection
   def initialize(connection, client_id, scene, opponent_party, opponent)
-    @connection = connection
+    @battle.connection = battle.connection
     @client_id = client_id
     player = NPCTrainer.new($player.name, $player.trainer_type)
     super(scene, $player.party, opponent_party, [player], [opponent])
@@ -818,7 +818,7 @@ class Battle_CableClub < Battle
       choice = super(index, checkLaxOnly, canCancel)
       # bug fix for the unknown type :switch. cause: going into the pokemon menu then backing out and attacking, which sends the switch symbol regardless.
       if !canCancel # forced switches do not allow canceling, and both sides would expect a response.
-        @connection.send do |writer|
+        @battle.connection.send do |writer|
           writer.sym(:switch)
           writer.int(choice)
         end
@@ -837,7 +837,7 @@ class Battle_CableClub < Battle
           Graphics.update
           Input.update
           raise Connection::Disconnected.new("disconnected") if Input.trigger?(Input::BACK) && pbConfirmMessageSerious("Would you like to disconnect?")
-          @connection.update do |record|
+          @battle.connection.update do |record|
             case (type = record.sym)
             when :forfeit
               pbSEPlay("Battle flee")
@@ -862,10 +862,10 @@ class Battle_CableClub < Battle
   def pbRun(idxBattler, duringBattle = false)
     ret = super(idxBattler, duringBattle)
     if ret == 1
-      @connection.send do |writer|
+      @battle.connection.send do |writer|
         writer.sym(:forfeit)
       end
-      @connection.discard(1)
+      @battle.connection.discard(1)
     end
     return ret
   end
@@ -937,7 +937,7 @@ class Battle
       if index == their_indices.last
         # TODO: patch this up to be index agnostic.
         # Would work fine if restricted to single/double battles
-        @connection.send do |writer|
+        @battle.connection.send do |writer|
           cur_seed=srand
           srand(cur_seed)
           writer.sym(:seed)

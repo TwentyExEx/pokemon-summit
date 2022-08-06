@@ -177,10 +177,10 @@ end
 
 def pbSummitCallGift
   if $game_switches[39] == true
-    num = 100 #rand(1..100)
-    if ($game_variables[35] == "challenge" && $game_variables[32] == 1) && num >= 75
+    num = rand(1..100)
+    if ($game_variables[35] == "challenge" && $game_variables[32] == 1) && num > 75
       return true
-    elsif num >= 90
+    elsif num > 90
       return true
     else
       return false
