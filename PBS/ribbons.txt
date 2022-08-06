@@ -1,421 +1,421 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
 [LEADER_Brock]
-Name = Cool Ribbon
+Name = Boulder Badge
 IconPosition = 0
-Description = Hoenn Cool Contest Normal Rank winner!
+Description = Awarded for defeating Kanto Leader Brock!
 #-------------------------------
 [LEADER_Misty]
-Name = Cool Ribbon Super
+Name = Cascade Badge
 IconPosition = 1
-Description = Hoenn Cool Contest Super Rank winner!
+Description = Awarded for defeating Kanto Leader Misty!
 #-------------------------------
 [LEADER_Surge]
-Name = Cool Ribbon Hyper
+Name = Thunder Badge
 IconPosition = 2
-Description = Hoenn Cool Contest Hyper Rank winner!
+Description = Awarded for defeating Kanto Leader Lt. Surge!
 #-------------------------------
 [LEADER_Erika]
-Name = Cool Ribbon Master
+Name = Rainbow Badge
 IconPosition = 3
-Description = Hoenn Cool Contest Master Rank winner!
+Description = Awarded for defeating Kanto Leader Erika!
 #-------------------------------
 [LEADER_Janine]
-Name = Beauty Ribbon
+Name = Soul Badge
 IconPosition = 4
-Description = Hoenn Beauty Contest Normal Rank winner!
+Description = Awarded for defeating Kanto Leader Janine!
 #-------------------------------
 [LEADER_Sabrina]
-Name = Beauty Ribbon Super
+Name = Marsh Badge
 IconPosition = 5
-Description = Hoenn Beauty Contest Super Rank winner!
+Description = Awarded for defeating Kanto Leader Sabrina!
 #-------------------------------
 [LEADER_Blaine]
-Name = Beauty Ribbon Hyper
+Name = Volcano Badge
 IconPosition = 6
-Description = Hoenn Beauty Contest Hyper Rank winner!
+Description = Awarded for defeating Kanto Leader Blaine!
 #-------------------------------
 [LEADER_Giovanni]
-Name = Beauty Ribbon Master
+Name = Earth Badge
 IconPosition = 7
-Description = Hoenn Beauty Contest Master Rank winner!
+Description = Awarded for defeating Kanto Leader Giovanni!
 #-------------------------------
 [LEADER_Falkner]
-Name = Cute Ribbon
+Name = Zephyr Badge
 IconPosition = 8
-Description = Hoenn Cute Contest Normal Rank winner!
+Description = Awarded for defeating Johto Leader Falkner!
 #-------------------------------
 [LEADER_Bugsy]
-Name = Cute Ribbon Super
+Name = Hive Badge
 IconPosition = 9
-Description = Hoenn Cute Contest Super Rank winner!
+Description = Awarded for defeating Johto Leader Bugsy!
 #-------------------------------
 [LEADER_Whitney]
-Name = Cute Ribbon Hyper
+Name = Plain Badge
 IconPosition = 10
-Description = Hoenn Cute Contest Hyper Rank winner!
+Description = Awarded for defeating Johto Leader Whitney!
 #-------------------------------
 [LEADER_Morty]
-Name = Cute Ribbon Master
+Name = Fog Badge
 IconPosition = 11
-Description = Hoenn Cute Contest Master Rank winner!
+Description = Awarded for defeating Johto Leader Morty!
 #-------------------------------
 [LEADER_Chuck]
-Name = Smart Ribbon
+Name = Storm Badge
 IconPosition = 12
-Description = Hoenn Smart Contest Normal Rank winner!
+Description = Awarded for defeating Johto Leader Chuck!
 #-------------------------------
 [LEADER_Jasmine]
-Name = Smart Ribbon Super
+Name = Mineral Badge
 IconPosition = 13
-Description = Hoenn Smart Contest Super Rank winner!
+Description = Awarded for defeating Johto Leader Jasmine!
 #-------------------------------
 [LEADER_Pryce]
-Name = Smart Ribbon Hyper
+Name = Glacier Badge
 IconPosition = 14
-Description = Hoenn Smart Contest Hyper Rank winner!
+Description = Awarded for defeating Johto Leader Pryce!
 #-------------------------------
 [LEADER_Clair]
-Name = Smart Ribbon Master
+Name = Rising Badge
 IconPosition = 15
-Description = Hoenn Smart Contest Master Rank winner!
+Description = Awarded for defeating Johto Leader Clair!
 #-------------------------------
 [LEADER_Roxanne]
-Name = Tough Ribbon
+Name = Stone Badge
 IconPosition = 16
-Description = Hoenn Tough Contest Normal Rank winner!
+Description = Awarded for defeating Hoenn Leader Roxanne!
 #-------------------------------
 [LEADER_Brawly]
-Name = Tough Ribbon Super
+Name = Knuckle Badge
 IconPosition = 17
-Description = Hoenn Tough Contest Super Rank winner!
+Description = Awarded for defeating Hoenn Leader Brawly!
 #-------------------------------
 [LEADER_Wattson]
-Name = Tough Ribbon Hyper
+Name = Dynamo Badge
 IconPosition = 18
-Description = Hoenn Tough Contest Hyper Rank winner!
+Description = Awarded for defeating Hoenn Leader Wattson!
 #-------------------------------
 [LEADER_Flannery]
-Name = Tough Ribbon Master
+Name = Heat Badge
 IconPosition = 19
-Description = Hoenn Tough Contest Master Rank winner!
+Description = Awarded for defeating Hoenn Leader Flannery!
 #-------------------------------
 [LEADER_Norman]
-Name = Cool Ribbon
+Name = Balance Badge
 IconPosition = 20
-Description = Super Contest Cool Category Normal Rank winner!
+Description = Awarded for defeating Hoenn Leader Norman!
 #-------------------------------
 [LEADER_Winona]
-Name = Cool Ribbon Great
+Name = Feather Badge
 IconPosition = 21
-Description = Super Contest Cool Category Great Rank winner!
+Description = Awarded for defeating Hoenn Leader Winona!
 #-------------------------------
 [LEADER_Tate]
-Name = Cool Ribbon Ultra
+Name = Mind Badge T 
 IconPosition = 22
-Description = Super Contest Cool Category Ultra Rank winner!
+Description = Awarded for defeating Hoenn Leader Tate!
 #-------------------------------
 [LEADER_Liza]
-Name = Cool Ribbon Ultra
+Name = Mind Badge L
 IconPosition = 22
-Description = Super Contest Cool Category Ultra Rank winner!
+Description = Awarded for defeating Hoenn Leader Liza!
 #-------------------------------
 [LEADER_Juan]
-Name = Cool Ribbon Master
+Name = Rain Badge
 IconPosition = 23
-Description = Super Contest Cool Category Master Rank winner!
+Description = Awarded for defeating Hoenn Leader Juan!
 #-------------------------------
 [LEADER_Roark]
-Name = Beauty Ribbon
+Name = Coal Badge
 IconPosition = 24
-Description = Super Contest Beauty Category Normal Rank winner!
+Description = Awarded for defeating Sinnoh Leader Roark!
 #-------------------------------
 [LEADER_Gardenia]
-Name = Test
+Name = Forest Badge
 IconPosition = 25
-Description = Super Contest Beauty Category Great Rank winner!
-#-------------------------------
-[LEADER_Maylene]
-Name = Beauty Ribbon Ultra
-IconPosition = 26
-Description = Super Contest Beauty Category Ultra Rank winner!
-#-------------------------------
-[LEADER_Wake]
-Name = Beauty Ribbon Master
-IconPosition = 27
-Description = Super Contest Beauty Category Master Rank winner!
+Description = Awarded for defeating Sinnoh Leader Gardenia!
 #-------------------------------
 [LEADER_Fantina]
-Name = Cute Ribbon
+Name = Relic Badge
+IconPosition = 26
+Description = Awarded for defeating Sinnoh Leader Fantina!
+#-------------------------------
+[LEADER_Maylene]
+Name = Cobble Badge
+IconPosition = 27
+Description = Awarded for defeating Sinnoh Leader Maylene!
+#-------------------------------
+[LEADER_Wake]
+Name = Fen Badge
 IconPosition = 28
-Description = Super Contest Cute Category Normal Rank winner!
+Description = Awarded for defeating Sinnoh Leader Crasher Wake!
 #-------------------------------
 [LEADER_Byron]
-Name = Cute Ribbon Great
+Name = Mine Badge
 IconPosition = 29
-Description = Super Contest Cute Category Great Rank winner!
+Description = Awarded for defeating Sinnoh Leader Byron!
 #-------------------------------
 [LEADER_Candice]
-Name = Cute Ribbon Ultra
+Name = Icicle Badge
 IconPosition = 30
-Description = Super Contest Cute Category Ultra Rank winner!
+Description = Awarded for defeating Sinnoh Leader Candice!
 #-------------------------------
 [LEADER_Volkner]
-Name = Cute Ribbon Master
+Name = Beacon Badge
 IconPosition = 31
-Description = Super Contest Cute Category Master Rank winner!
+Description = Awarded for defeating Sinnoh Leader Volkner!
 #-------------------------------
 [LEADER_Cilan]
-Name = Smart Ribbon
+Name = Trio Badge G
 IconPosition = 32
-Description = Super Contest Smart Category Normal Rank winner!
+Description = Awarded for defeating Unova Leader Cilan!
 #-------------------------------
 [LEADER_Chili]
-Name = Smart Ribbon
+Name = Trio Badge F
 IconPosition = 32
-Description = Super Contest Smart Category Normal Rank winner!
+Description = Awarded for defeating Unova Leader Chili!
 #-------------------------------
 [LEADER_Cress]
-Name = Smart Ribbon
+Name = Trio Badge W
 IconPosition = 32
-Description = Super Contest Smart Category Normal Rank winner!
+Description = Awarded for defeating Unova Leader Cress!
 #-------------------------------
 [LEADER_Lenora]
-Name = Smart Ribbon Great
+Name = Basic Badge L
 IconPosition = 33
-Description = Super Contest Smart Category Great Rank winner!
+Description = Awarded for defeating Unova Leader Lenora!
 #-------------------------------
 [LEADER_Cheren]
-Name = Smart Ribbon Great
+Name = Basic Badge C
 IconPosition = 33
-Description = Super Contest Smart Category Great Rank winner!
+Description = Awarded for defeating Unova Leader Cheren!
 #-------------------------------
 [LEADER_Burgh]
-Name = Smart Ribbon Ultra
+Name = Insect Badge
 IconPosition = 34
-Description = Super Contest Smart Category Ultra Rank winner!
+Description = Awarded for defeating Unova Leader Burgh!
 #-------------------------------
 [LEADER_Elesa]
-Name = Smart Ribbon Master
+Name = Bolt Badge
 IconPosition = 35
-Description = Super Contest Smart Category Master Rank winner!
+Description = Awarded for defeating Unova Leader Elesa!
 #-------------------------------
 [LEADER_Clay]
-Name = Tough Ribbon
+Name = Quake Badge
 IconPosition = 36
-Description = Super Contest Tough Category Normal Rank winner!
+Description = Awarded for defeating Unova Leader Clay!
 #-------------------------------
 [LEADER_Skyla]
-Name = Tough Ribbon Great
+Name = Jet Badge
 IconPosition = 37
-Description = Super Contest Tough Category Great Rank winner!
+Description = Awarded for defeating Unova Leader Skyla!
 #-------------------------------
 [LEADER_Brycen]
-Name = Tough Ribbon Ultra
+Name = Freeze Badge
 IconPosition = 38
-Description = Super Contest Tough Category Ultra Rank winner!
+Description = Awarded for defeating Unova Leader Brycen!
 #-------------------------------
 [LEADER_Drayden]
-Name = Tough Ribbon Master
+Name = Legend Badge
 IconPosition = 39
-Description = Super Contest Tough Category Master Rank winner!
+Description = Awarded for defeating Unova Leader Drayden!
 #-------------------------------
 [LEADER_Roxie]
-Name = Winning Ribbon
+Name = Toxic Badge
 IconPosition = 40
-Description = Ribbon awarded for clearing Hoenn's Battle Tower's Lv. 50 challenge.
+Description = Awarded for defeating Unova Leader Roxie!
 #-------------------------------
 [LEADER_Marlon]
-Name = Victory Ribbon
+Name = Wave Badge
 IconPosition = 41
-Description = Ribbon awarded for clearing Hoenn's Battle Tower's Lv. 100 challenge.
+Description = Awarded for defeating Unova Leader Marlon!
 #-------------------------------
 [LEADER_Viola]
-Name = Ability Ribbon
+Name = Bug Badge
 IconPosition = 42
-Description = A Ribbon awarded for defeating the Tower Tycoon at the Battle Tower.
+Description = Awarded for defeating Kalos Leader Viola!
 #-------------------------------
 [LEADER_Grant]
-Name = Great Ability Ribbon
+Name = Cliff Badge
 IconPosition = 43
-Description = A Ribbon awarded for defeating the Tower Tycoon at the Battle Tower.
+Description = Awarded for defeating Kalos Leader Grant!
 #-------------------------------
 [LEADER_Korrina]
-Name = Double Ability Ribbon
+Name = Rumble Badge
 IconPosition = 44
-Description = A Ribbon awarded for completing the Battle Tower Double challenge.
+Description = Awarded for defeating Kalos Leader Korrina!
 #-------------------------------
 [LEADER_Ramos]
-Name = Multi Ability Ribbon
+Name = Plant Badge
 IconPosition = 45
-Description = A Ribbon awarded for completing the Battle Tower Multi challenge.
+Description = Awarded for defeating Kalos Leader Ramos!
 #-------------------------------
 [LEADER_Clemont]
-Name = Pair Ability Ribbon
+Name = Voltage Badge
 IconPosition = 46
-Description = A Ribbon awarded for completing the Battle Tower Link Multi challenge.
+Description = Awarded for defeating Kalos Leader Clemont!
 #-------------------------------
 [LEADER_Valerie]
-Name = World Ability Ribbon
+Name = Fairy Badge
 IconPosition = 47
-Description = A Ribbon awarded for completing the Wi-Fi Battle Tower challenge.
+Description = Awarded for defeating Kalos Leader Valerie!
 #-------------------------------
 [LEADER_Olympia]
-Name = Champion Ribbon
+Name = Psychic Badge
 IconPosition = 48
-Description = Ribbon for clearing the Pokémon League and entering the Hall of Fame in another region.
+Description = Awarded for defeating Kalos Leader Olympia!
 #-------------------------------
 [LEADER_Wulfric]
-Name = Sinnoh Champ Ribbon
+Name = Iceberg Badge
 IconPosition = 49
-Description = Ribbon awarded for beating the Sinnoh Champion and entering the Hall of Fame.
+Description = Awarded for defeating Kalos Leader Wulfric!
 #-------------------------------
 [CAPTAIN_Ilima]
-Name = Record Ribbon
+Name = Normalium Z Replica
 IconPosition = 50
-Description = A Ribbon awarded for setting an incredible record.
+Description = Awarded for defeating Alola Captain Ilima!
 #-------------------------------
 [CAPTAIN_Mallow]
-Name = Event Ribbon
+Name = Grassium Z Replica
 IconPosition = 51
-Description = Pokémon Event Participation Ribbon.
+Description = Awarded for defeating Alola Captain Mallow!
 #-------------------------------
 [CAPTAIN_Lana]
-Name = Legend Ribbon
+Name = Waterium Z Replica
 IconPosition = 52
-Description = A Ribbon awarded for setting a legendary record.
+Description = Awarded for defeating Alola Captain Lana!
 #-------------------------------
 [CAPTAIN_Kiawe]
-Name = Gorgeous Ribbon
+Name = Firium Z Replica
 IconPosition = 53
-Description = An extraordinarily gorgeous and extravagant Ribbon.
+Description = Awarded for defeating Alola Captain Kiawe!
 #-------------------------------
 [CAPTAIN_Sophocles]
-Name = Royal Ribbon
+Name = Electrium Z Replica
 IconPosition = 54
-Description = An incredibly regal Ribbon with an air of nobility.
+Description = Awarded for defeating Alola Captain Sophocles!
 #-------------------------------
 [CAPTAIN_Acerola]
-Name = Gorgeous Royal Ribbon
+Name = Ghostium Z Replica
 IconPosition = 55
-Description = A gorgeous and regal Ribbon that is the peak of fabulous.
+Description = Awarded for defeating Alola Captain Acerola!
 #-------------------------------
 [CAPTAIN_Mina]
-Name = Alert Ribbon
+Name = Fairium Z Replica
 IconPosition = 56
-Description = A Ribbon for recalling an invigorating event that created life energy.
+Description = Awarded for defeating Alola Captain Mina!
 #-------------------------------
 [LEADER_Milo]
-Name = Shock Ribbon
+Name = Grass Badge
 IconPosition = 57
-Description = A Ribbon for recalling a thrilling event that made life more exciting.
+Description = Awarded for defeating Galar Leader Milo!
 #-------------------------------
 [LEADER_Nessa]
-Name = Downcast Ribbon
+Name = Water Badge
 IconPosition = 58
-Description = A Ribbon for recalling feelings of sadness that added spice to life.
+Description = Awarded for defeating Galar Leader Nessa!
 #-------------------------------
 [LEADER_Kabu]
-Name = Careless Ribbon
+Name = Fire Badge
 IconPosition = 59
-Description = A Ribbon for recalling a careless error that helped steer life decisions.
+Description = Awarded for defeating Galar Leader Kabu!
 #-------------------------------
 [LEADER_Bea]
-Name = Relax Ribbon
+Name = Fighting Badge
 IconPosition = 60
-Description = A Ribbon for recalling a refreshing event that added sparkle to life.
+Description = Awarded for defeating Galar Leader Bea!
 #-------------------------------
 [LEADER_Allister]
-Name = Snooze Ribbon
+Name = Ghost Badge
 IconPosition = 61
-Description = A Ribbon for recalling a deep slumber that made life soothing.
+Description = Awarded for defeating Galar Leader Allister!
 #-------------------------------
 [LEADER_Opal]
-Name = Smile Ribbon
+Name = Fairy Badge
 IconPosition = 62
-Description = A Ribbon for recalling that smiles enrich the quality of life.
+Description = Awarded for defeating Galar Leader Opal!
 #-------------------------------
 [LEADER_Gordie]
-Name = Footprint Ribbon
+Name = Rock Badge
 IconPosition = 63
-Description = A Ribbon awarded to a Pokémon deemed to have a top-quality footprint.
+Description = Awarded for defeating Galar Leader Gordie!
 #-------------------------------
 [LEADER_Melony]
-Name = Artist Ribbon
+Name = Ice Badge
 IconPosition = 64
-Description = Ribbon awarded for being chosen as a super sketch model in Hoenn.
+Description = Awarded for defeating Galar Leader Melony!
 #-------------------------------
 [LEADER_Piers]
-Name = Effort Ribbon
+Name = Dark Badge
 IconPosition = 65
-Description = Ribbon awarded for being an exceptionally hard worker.
+Description = Awarded for defeating Galar Leader Piers!
 #-------------------------------
 [LEADER_Raihan]
-Name = Birthday Ribbon
+Name = Dragon Badge
 IconPosition = 66
-Description = A Ribbon to celebrate a birthday.
+Description = Awarded for defeating Galar Leader Raihan!
 #-------------------------------
-[SPECIAL]
-Name = Special Ribbon
+[CHAMPION_Blue]
+Name = Elite Kanto Medal
 IconPosition = 67
-Description = A special Ribbon for a special day.
+Description = Awarded for defeating Kanto's Elite Four and Champion!
 #-------------------------------
-[CLASSIC]
-Name = Classic Ribbon
+[CHAMPION_Lance]
+Name = Elite Johto Medal
 IconPosition = 68
-Description = A Ribbon that proclaims love for Pokémon.
+Description = Awarded for defeating Johto's Elite Four and Champion!
 #-------------------------------
-[PREMIER]
-Name = Premier Ribbon
+[CHAMPION_Steven]
+Name = Elite Hoenn Medal
 IconPosition = 69
-Description = Special Holiday Ribbon.
+Description = Awarded for defeating Hoenn's Elite Four and Champion!
 #-------------------------------
-[SOUVENIR]
-Name = Souvenir Ribbon
+[CHAMPION_Cynthia]
+Name = Elite Sinnoh Medal
 IconPosition = 70
-Description = A Ribbon to cherish a special memory.
+Description = Awarded for defeating Sinnoh's Elite Four and Champion!
 #-------------------------------
-[WISHING]
-Name = Wishing Ribbon
+[CHAMPION_Iris]
+Name = Elite Unova Medal
 IconPosition = 71
-Description = A Ribbon said to make your wish come true.
+Description = Awarded for defeating Unova's Elite Four and Champion!
 #-------------------------------
-[NATIONAL]
-Name = National Ribbon
+[CHAMPION_Diantha]
+Name = Elite Kalos Medal
 IconPosition = 72
-Description = A Ribbon awarded for overcoming all difficult challenges.
+Description = Awarded for defeating Kalos' Elite Four and Champion!
 #-------------------------------
-[COUNTRY]
-Name = Country Ribbon
+[CHAMPION_Kukui]
+Name = Elite Alola Medal
 IconPosition = 73
-Description = Pokémon League Champion Ribbon.
+Description = Awarded for defeating Alola's Elite Four and Champion!
 #-------------------------------
-[BATTLECHAMPION]
-Name = Battle Champion Ribbon
+[CHAMPION_Leon]
+Name = Elite Galar Medal
 IconPosition = 74
-Description = Battle Competition Champion Ribbon.
+Description = Awarded for defeating Galar's Elite Four and Champion!
 #-------------------------------
-[REGIONALCHAMPION]
-Name = Regional Champion Ribbon
+[CHAMPION_Red]
+Name = World Champion Medal
 IconPosition = 75
-Description = Pokémon World Championships Regional Champion Ribbon.
+Description = Awarded for defeating all Champions and becoming World Champion!
 #-------------------------------
 [EARTH]
-Name = Earth Ribbon
+Name = Boulder Badge
 IconPosition = 76
-Description = A Ribbon awarded for winning 100 matches in a row.
+Description = Awarded for defeating Galar Leader Brock!
 #-------------------------------
 [WORLD]
-Name = World Ribbon
+Name = Boulder Badge
 IconPosition = 77
-Description = Pokémon League Champion Ribbon.
+Description = Awarded for defeating Galar Leader Brock!
 #-------------------------------
 [NATIONALCHAMPION]
-Name = National Champion Ribbon
+Name = Boulder Badge
 IconPosition = 78
-Description = Pokémon World Championships National Champion Ribbon.
+Description = Awarded for defeating Galar Leader Brock!
 #-------------------------------
 [WORLDCHAMPION]
-Name = World Champion Ribbon
+Name = Boulder Badge
 IconPosition = 79
-Description = Pokémon World Championships World Champion Ribbon.
+Description = Awarded for defeating Galar Leader Brock!
