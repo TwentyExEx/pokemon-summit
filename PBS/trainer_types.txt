@@ -1518,7 +1518,7 @@ Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galartrainer
+BattleBGM = galarleader
 VictoryBGM = galarleaderw
 #-------------------------------
 [ELITE_Avery]
@@ -1526,7 +1526,7 @@ Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galartrainer
+BattleBGM = galarleader
 VictoryBGM = galarleaderw
 #-------------------------------
 [ELITE_Mustard]
