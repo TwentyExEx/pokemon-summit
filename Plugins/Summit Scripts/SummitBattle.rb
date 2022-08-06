@@ -749,7 +749,7 @@ def pbSummitPrepMainTrainer(bracket)
       when "elite_koga"
         $game_map.events[1].character_name = "trainer_Sheet1"
         $game_map.events[1].direction = 8
-        $game_map.events[1].pattern = 2
+        $game_map.events[1].pattern = 0
       when "elite_bruno2"
         $game_map.events[1].character_name = "trainer_Sheet1"
         $game_map.events[1].direction = 6
@@ -996,17 +996,20 @@ def pbSummitMainTrainer
   type = $game_variables[30][0]
   name = $game_variables[30][1]
   version = $game_variables[15]
+  if $game_variables[31] > 8
+    version += 4
+  end
 
   $DiscordRPC.details = "VS #{GameData::TrainerType.get($game_variables[30][0]).name} #{$game_variables[30][1]}"
   $DiscordRPC.large_image = $game_variables[30][0].downcase
-  if $game_variables[35] == "challenge" || "bosses" || "gauntlet"
+  if $game_variables[35] == "challenge" || $game_variables[35] == "bosses" || $game_variables[35] == "gauntlet"
     $DiscordRPC.state = "#{$bracketnames[$game_variables[31]]} (#{$game_variables[33].to_int+1} of 4)"
   elsif $game_variables[35] == "arcade"
     $DiscordRPC.state = "Arcade (Win Streak: #{$game_variables[43].to_int})"
   end
   $DiscordRPC.update
 
-  if $game_variables[35] == ("challenge" || "gauntlet")
+  if $game_variables[35] == "challenge" || $game_variables[35] == "gauntlet"
     setBattleRule("backdrop", $bg.to_s)
     setBattleRule("base", $bg.to_s)
   elsif $game_variables[35] == "bosses"
@@ -1017,7 +1020,7 @@ def pbSummitMainTrainer
   TrainerBattle.start(type, name, version)
 
   $Trainer.party = $game_variables[27]
-  if $game_variables[35] == "challenge" || "bosses" || "gauntlet" # Main mode
+  if $game_variables[35] == "challenge" || $game_variables[35] == "bosses" || $game_variables[35] == "gauntlet" # Main mode
     if $game_variables[32] == 1
       $game_variables[33] += 1
       $game_variables[46] += 1
@@ -1031,8 +1034,12 @@ def pbSummitMainTrainer
       if $game_variables[33] == 4
         $game_switches[42] = true # break
       end
-    elsif $game_variables[35] == "gauntlet" && $game_variables[33] == 4
-      $game_switches[42] = true # break
+    elsif $game_variables[35] == "gauntlet"# when cleared bracket
+      if $game_variables[31] < 16 && $game_variables[33] == 5 # when cleared bracket
+        $game_variables[31] += 1 # next bracket
+      elsif $game_variables[31] > 16 && $game_variables[33] == 4
+        $game_switches[42] = true # break
+      end
     end
   end
 end

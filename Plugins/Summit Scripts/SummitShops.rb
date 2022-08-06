@@ -29,6 +29,7 @@ def pbSummitSuperTrain
                   @stat2 = stat
                 end
               end
+            @chosenstats = [@stat1, @stat2]
             pkmn = pbGetPokemon(1)
             loop do
               cmd = pbMessage(_INTL("\\bDo you want us to train your #{pbGetPokemon(1).species.downcase.capitalize} in {1} and {2}?",@chosenstats[0],@chosenstats[1]),["Yes","No"],-1)
