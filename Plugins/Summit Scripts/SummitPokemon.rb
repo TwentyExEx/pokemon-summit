@@ -30,6 +30,13 @@ end
 
 def pbSummitGivePokemon(specform)
   pbSummitMakePokemon(specform)
+  naturelist = []
+  for i in GameData::Nature::DATA.keys
+    if GameData::Nature.try_get(i).stat_changes.empty?
+      naturelist.push(i)
+    end
+  end
+  @givepkmn.nature = naturelist[rand(0...naturelist.length)]
   @givepkmn.obtain_map = 2
   @givepkmn.obtain_text = "Summit Lobby"
   pbAddPokemonSilent(@givepkmn)
@@ -136,6 +143,14 @@ def pbSummitGiveGiftPokemon
   pbShowPokemonSprite(gift[:species])
   pbSummitMakePokemon(gift[:species])
   @givepkmn.owner = Pokemon::Owner.new_foreign(trainer[1].to_s, GameData::TrainerType.get(trainer[0]).gender)
+  naturelist = []
+  for i in GameData::Nature::DATA.keys
+    naturename = i.to_s.downcase
+    if GameData::Nature.try_get(i).stat_changes.empty?
+      naturelist.push(naturename.capitalize.to_sym)
+    end
+  end
+  @givepkmn.nature = naturelist[rand(0...naturelist.length)]
   pbAddPokemonSilent(@givepkmn)
   pbMessage("\\rTake good care of that #{$dispname}!")
 end
