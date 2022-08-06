@@ -1,6 +1,6 @@
 Credits
 
-Graphic Credits: 
+~~ Graphics ~~ 
 
 Overworlds for the following: 
 
@@ -59,10 +59,16 @@ Standard Trainer Classes, Oak - kensuyjin33, Flamejow, AutumnSpire and duncapham
 Roxanne, Brawly, Wattson, Flannery, Norman, Winona, Tate, Liza, Wallace - ChromusSama and Shir0n
 Team Aqua Grunts (M/F), Team Magma Grunts (M/F) - IceJkai
 
+Other Sprites
 
 Gym Badges - VictorV111
 Z Crystals - Pixel3r
 
+Pokemon Emerald UI Pack
+	
+	Voltseon (For Bag, Relearn, Party, Summary)
+	Shashu-Greninja, Gazza teh Fox, ENLS (For Trainer Card UI)
+	Pokémon Splice Team (For Battle UI)
 
 ~~ Pokemon Generation 8 Project for v20.1 ~~
 

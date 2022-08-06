@@ -1076,6 +1076,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = ghetsis
+VictoryBGM = ghetsisw
 #-------------------------------
 [BOSS_Lysandre]
 Name = Team Flare Boss
@@ -1343,6 +1344,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = shauntal
+VictoryBGM = unovaleaderw
 #-------------------------------
 [ELITE_Marshal]
 Name = Elite Four
@@ -1350,6 +1352,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = marshal
+VictoryBGM = unovaleaderw
 #-------------------------------
 [ELITE_Grimsley]
 Name = Elite Four
@@ -1357,6 +1360,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = grimsley
+VictoryBGM = unovaleaderw
 #-------------------------------
 [ELITE_Caitlin]
 Name = Elite Four
@@ -1364,6 +1368,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = caitlin
+VictoryBGM = unovaleaderw
 #-------------------------------
 [ELITE_N]
 Name = Pokémon Trainer
@@ -1399,6 +1404,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kaloselitefour
+VictoryBGM = kalosleaderw
 #-------------------------------
 [ELITE_Siebold]
 Name = Elite Four
@@ -1406,6 +1412,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kaloselitefour
+VictoryBGM = kalosleaderw
 #-------------------------------
 [ELITE_Wikstrom]
 Name = Elite Four
@@ -1413,6 +1420,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kaloselitefour
+VictoryBGM = kalosleaderw
 #-------------------------------
 [ELITE_Drasna]
 Name = Elite Four
@@ -1420,6 +1428,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kaloselitefour
+VictoryBGM = kalosleaderw
 #-------------------------------
 [ELITE_Sycamore]
 Name = Professor
@@ -1448,6 +1457,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = hala
+VictoryBGM = alolacaptainw
 #-------------------------------
 [ELITE_Olivia]
 Name = Elite Four
@@ -1455,6 +1465,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = olivia
+VictoryBGM = alolacaptainw
 #-------------------------------
 [ELITE_Nanu]
 Name = Kahuna
@@ -1462,6 +1473,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kahuna
+VictoryBGM = alolacaptainw
 #-------------------------------
 [ELITE_Hapu]
 Name = Kahuna
@@ -1469,6 +1481,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kahuna
+VictoryBGM = alolacaptainw
 #-------------------------------
 [ELITE_Molayne]
 Name = Elite Four
@@ -1476,6 +1489,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = molayne
+VictoryBGM = alolacaptainw
 #-------------------------------
 [ELITE_Kahili]
 Name = Elite Four
@@ -1483,6 +1497,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kahili
+VictoryBGM = alolacaptainw
 #-------------------------------
 [ELITE_Gladion]
 Name = Pokémon Trainer
@@ -1504,6 +1519,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = galartrainer
+VictoryBGM = galarleaderw
 #-------------------------------
 [ELITE_Avery]
 Name = Pokémon Trainer
@@ -1511,13 +1527,15 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = galartrainer
+VictoryBGM = galarleaderw
 #-------------------------------
 [ELITE_Mustard]
 Name = Dojo Master
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galartrainer
+BattleBGM = mustard
+VictoryBGM = galarleaderw
 #-------------------------------
 [ELITE_Marnie]
 Name = Pokémon Trainer
@@ -1545,7 +1563,8 @@ Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galartrainer
+BattleBGM = peony
+VictoryBGM = galarleaderw
 #-------------------------------
 [PROTAG_Red]
 Name = Pokémon Trainer
@@ -1722,6 +1741,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = diantha
+VictoryBGM = dianthaw
 #-------------------------------
 [CHAMPION_Iris]
 Name = Champion
@@ -1729,6 +1749,7 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = iris
+VictoryBGM = irisw
 #-------------------------------
 [CHAMPION_Alder]
 Name = Champion
@@ -1736,6 +1757,7 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = alder
+VictoryBGM = alderw
 #-------------------------------
 [CHAMPION_Cynthia]
 Name = Champion
