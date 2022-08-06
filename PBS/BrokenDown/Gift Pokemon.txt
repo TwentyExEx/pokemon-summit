@@ -107,8 +107,21 @@
 :ELITE_Drasna => {:name =>"Kalos Elite Four Drasna", :giftmon => :NOIVERN, :form => 0}
 :ELITE_Hala => {:name =>"Alola Elite Four Hala", :giftmon => :CRABOMINABLE, :form => 0}
 :ELITE_Olivia => {:name =>"Alola Elite Four Olivia", :giftmon => :LYCANROC, :form => 1}
-:ELITE_Hapu => {:name =>"Alola Elite Four Hapu", :giftmon => :PERSIAN, :form => 1}
 :ELITE_Molayne => {:name =>"Alola Elite Four Molayne", :giftmon => :DUGTRIO, :form => 1}
 :ELITE_Kahili => {:name =>"Alola Elite Four Kahili", :giftmon => :TOUCANNON, :form => 0}
 :ELITE_Klara => {:name =>"Pokémon Trainer Klara", :giftmon => :SLOWKING, :form => 1
 :ELITE_Avery => {:name =>"Pokémon Trainer Avery", :giftmon => :SLOWBRO, :form => 1}
+:ELITE_Mustard => {:name =>"Pokémon Trainer Mustard", :giftmon => :MIENSHAO, :form => 0}
+:ELITE_Mustard => {:name =>"Pokémon Trainer Mustard", :giftmon => :COPPERAJAH, :form => 0}
+:CHAMPION_Leon => {:name =>"Champion Leon", :giftmon => :CHARIZARD, :form => 0}
+:CHAMPION_Hau => {:name =>"Champion Leon", :giftmon => :RAICHU, :form => 1}
+:CHAMPION_Kukui => {:name =>"Champion Kukui", :giftmon => :INCINEROAR, :form => 0}
+:CHAMPION_Diantha => {:name =>"Champion Diantha", :giftmon => :GARDEVOIR, :form => 0}
+:CHAMPION_Iris => {:name =>"Champion Iris", :giftmon => :HAXORUS, :form => 0}
+:CHAMPION_Alder => {:name =>"Champion Alder", :giftmon => :VOLCARONA, :form => 0}
+:CHAMPION_Cynthia => {:name =>"Champion Cynthia", :giftmon => :GARCHOMP, :form => 0}
+:CHAMPION_Wallace => {:name =>"Champion Wallace", :giftmon => :MILOTIC, :form => 0}
+:CHAMPION_Steven => {:name =>"Champion Steven", :giftmon => :METAGROSS, :form => 0}
+:CHAMPION_Lance => {:name =>"Champion Lance", :giftmon => :DRAGONITE, :form => 0}
+:CHAMPION_Blue => {:name =>"Champion Blue", :giftmon => :BLASTOISE, :form => 0}
+:CHAMPION_Red => {:name =>"Champion Red", :giftmon => :LAPRAS, :form => 0}
