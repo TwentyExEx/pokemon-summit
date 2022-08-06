@@ -1,4 +1,4 @@
-$bracketnames = ["Kanto Leaders", "Johto Leaders", "Hoenn Leaders", "Sinnoh Leaders", "Unova Leaders", "Kalos Leaders", "Alola Captains", "Galar Leaders", "Team Bosses"]
+$bracketnames = ["Kanto Leaders", "Johto Leaders", "Hoenn Leaders", "Sinnoh Leaders", "Unova Leaders", "Kalos Leaders", "Alola Captains", "Galar Leaders", "Team Bosses","Kanto Elite 4","Johto Elite 4","Hoenn Elite 4","Sinnoh Elite 4","Unova Elite 4","Kalos Elite 4","Alola Elite 4","Galar Elite 4","Champions"]
 $poketypes = ["normal", "fighting", "flying", "poison", "ground", "rock", "bug", "ghost", "steel", "fire", "water", "grass", "electric", "psychic", "ice", "dragon", "dark", "fairy"]
 $trbytype = [
   normal = [
@@ -375,56 +375,56 @@ def pbSummitPrepMainTrainer(bracket)
   when 0, 1 # Kanto and Johto Leaders
     $game_map.events[1].character_name = "trainer_Sheet2"
     case opponent[0].downcase
-    when "leader_brock"
-      $game_map.events[1].direction = 2
-      $game_map.events[1].pattern = 0
-    when "leader_misty"
-      $game_map.events[1].direction = 2
-      $game_map.events[1].pattern = 1
-    when "leader_surge"
-      $game_map.events[1].direction = 2
-      $game_map.events[1].pattern = 2
-    when "leader_erika"
-      $game_map.events[1].direction = 2
-      $game_map.events[1].pattern = 3
-    when "leader_janine"
-      $game_map.events[1].direction = 4
-      $game_map.events[1].pattern = 0
-    when "leader_sabrina"
-      $game_map.events[1].direction = 4
-      $game_map.events[1].pattern = 1
-    when "leader_blaine"
-      $game_map.events[1].direction = 4
-      $game_map.events[1].pattern = 2
-    when "leader_giovanni"
-      $game_map.events[1].direction = 4
-      $game_map.events[1].pattern = 3
-    when "leader_falkner"
-      $game_map.events[1].direction = 6
-      $game_map.events[1].pattern = 0
-    when "leader_bugsy"
-      $game_map.events[1].direction = 6
-      $game_map.events[1].pattern = 1
-    when "leader_whitney"
-      $game_map.events[1].direction = 6
-      $game_map.events[1].pattern = 2
-    when "leader_morty"
-      $game_map.events[1].direction = 6
-      $game_map.events[1].pattern = 3
-    when "leader_chuck"
-      $game_map.events[1].direction = 8
-      $game_map.events[1].pattern = 0
-    when "leader_jasmine"
-      $game_map.events[1].direction = 8
-      $game_map.events[1].pattern = 1
-    when "leader_pryce"
-      $game_map.events[1].direction = 8
-      $game_map.events[1].pattern = 2
-    when "leader_clair"
-      $game_map.events[1].direction = 8
-      $game_map.events[1].pattern = 3
-    end
-  when 2 # Hoenn Leaders, add || num for Elite Hoenn
+      when "leader_brock"
+        $game_map.events[1].direction = 2
+        $game_map.events[1].pattern = 0
+      when "leader_misty"
+        $game_map.events[1].direction = 2
+        $game_map.events[1].pattern = 1
+      when "leader_surge"
+        $game_map.events[1].direction = 2
+        $game_map.events[1].pattern = 2
+      when "leader_erika"
+        $game_map.events[1].direction = 2
+        $game_map.events[1].pattern = 3
+      when "leader_janine"
+        $game_map.events[1].direction = 4
+        $game_map.events[1].pattern = 0
+      when "leader_sabrina"
+        $game_map.events[1].direction = 4
+        $game_map.events[1].pattern = 1
+      when "leader_blaine"
+        $game_map.events[1].direction = 4
+        $game_map.events[1].pattern = 2
+      when "leader_giovanni"
+        $game_map.events[1].direction = 4
+        $game_map.events[1].pattern = 3
+      when "leader_falkner"
+        $game_map.events[1].direction = 6
+        $game_map.events[1].pattern = 0
+      when "leader_bugsy"
+        $game_map.events[1].direction = 6
+        $game_map.events[1].pattern = 1
+      when "leader_whitney"
+        $game_map.events[1].direction = 6
+        $game_map.events[1].pattern = 2
+      when "leader_morty"
+        $game_map.events[1].direction = 6
+        $game_map.events[1].pattern = 3
+      when "leader_chuck"
+        $game_map.events[1].direction = 8
+        $game_map.events[1].pattern = 0
+      when "leader_jasmine"
+        $game_map.events[1].direction = 8
+        $game_map.events[1].pattern = 1
+      when "leader_pryce"
+        $game_map.events[1].direction = 8
+        $game_map.events[1].pattern = 2
+      when "leader_clair"
+        $game_map.events[1].direction = 8
+        $game_map.events[1].pattern = 3
+      end
+  when 2, 11
     $game_map.events[1].character_name = "trainer_Sheet3"
     case opponent[0].downcase
     when "leader_roxanne"
@@ -454,6 +454,24 @@ def pbSummitPrepMainTrainer(bracket)
     when "leader_juan"
       $game_map.events[1].direction = 6
       $game_map.events[1].pattern = 0
+    when "elite_sidney"
+      $game_map.events[1].direction = 6
+      $game_map.events[1].pattern = 1
+    when "elite_phoebe"
+      $game_map.events[1].direction = 6
+      $game_map.events[1].pattern = 2
+    when "elite_sidney"
+      $game_map.events[1].direction = 6
+      $game_map.events[1].pattern = 3
+    when "elite_glacia"
+      $game_map.events[1].direction = 6
+      $game_map.events[1].pattern = 4
+    when "elite_drake"
+      $game_map.events[1].direction = 8
+      $game_map.events[1].pattern = 0
+    when "champion_steven"
+      $game_map.events[1].direction = 8
+      $game_map.events[1].pattern = 3
     end
   when 3, 8 # Sinnoh Leaders, Team Bosses
     $game_map.events[1].character_name = "trainer_Sheet4"
@@ -683,38 +701,146 @@ def pbSummitPrepMainTrainer(bracket)
         $game_map.events[1].direction = 6
         $game_map.events[1].pattern = 1
       end
-   when 8 # Team Bosses
-      $game_map.events[1].character_name = "trainer_Sheet4"
+   when 9 # Kanto E4
+      $game_map.events[1].character_name = "trainer_Sheet1"
       case opponent[0].downcase
-      when "boss_rose"
+      when "elite_lorelei"
+        $game_map.events[1].direction = 6
+        $game_map.events[1].pattern = 1
+      when "elite_bruno"
+        $game_map.events[1].direction = 6
+        $game_map.events[1].pattern = 2
+      when "elite_agatha"
+        $game_map.events[1].direction = 6
+        $game_map.events[1].pattern = 3
+      when "elite_lance"
+        $game_map.events[1].direction = 8
+        $game_map.events[1].pattern = 1
+      when "champion_blue"
         $game_map.events[1].direction = 2
         $game_map.events[1].pattern = 0
-      when "leader_nessa"
+      end
+   when 10 # Johto E4
+      case opponent[0].downcase
+      when "elite_will"
+        $game_map.events[1].character_name = "trainer_Sheet8"
+        $game_map.events[1].direction = 2
+        $game_map.events[1].pattern = 0
+      when "elite_koga"
+        $game_map.events[1].character_name = "trainer_Sheet1"
+        $game_map.events[1].direction = 8
+        $game_map.events[1].pattern = 2
+      when "elite_bruno2"
+        $game_map.events[1].character_name = "trainer_Sheet1"
+        $game_map.events[1].direction = 6
+        $game_map.events[1].pattern = 2
+      when "elite_karen"
+        $game_map.events[1].character_name = "trainer_Sheet8"
         $game_map.events[1].direction = 2
         $game_map.events[1].pattern = 1
-      when "leader_kabu"
+      when "champion_lance"
+        $game_map.events[1].character_name = "trainer_Sheet1"
+        $game_map.events[1].direction = 8
+        $game_map.events[1].pattern = 1
+      end
+    when 12 # Sinnoh E4
+       $game_map.events[1].character_name = "trainer_Sheet8"
+       case opponent[0].downcase
+       when "elite_aaron"
+         $game_map.events[1].direction = 2
+         $game_map.events[1].pattern = 1
+       when "elite_bertha"
+         $game_map.events[1].direction = 2
+         $game_map.events[1].pattern = 2
+       when "elite_flint"
+         $game_map.events[1].direction = 2
+         $game_map.events[1].pattern = 3
+       when "elite_lucian"
+         $game_map.events[1].direction = 4
+         $game_map.events[1].pattern = 0
+       when "champion_cynthia"
+         $game_map.events[1].character_name = "trainer_Sheet13"
+         $game_map.events[1].direction = 6
+         $game_map.events[1].pattern = 0
+       end
+   when 13 # Unova E4
+      $game_map.events[1].character_name = "trainer_Sheet9"
+      case opponent[0].downcase
+      when "elite_shauntal"
+        $game_map.events[1].direction = 2
+        $game_map.events[1].pattern = 0
+      when "elite_marshal"
+        $game_map.events[1].direction = 2
+        $game_map.events[1].pattern = 1
+      when "elite_grimsley"
         $game_map.events[1].direction = 2
         $game_map.events[1].pattern = 2
-      when "leader_bea"
+      when "elite_caitlin"
         $game_map.events[1].direction = 2
         $game_map.events[1].pattern = 3
-      when "leader_allister"
-        $game_map.events[1].direction = 4
+      when "champion_iris"
+         $game_map.events[1].character_name = "trainer_Sheet13"
+        $game_map.events[1].direction = 2
+        $game_map.events[1].pattern = 3
+      end
+   when 14 # Kalos E4
+      $game_map.events[1].character_name = "trainer_Sheet6"
+      case opponent[0].downcase
+      when "elite_malva"
+        $game_map.events[1].direction = 2
         $game_map.events[1].pattern = 0
-      when "leader_opal"
+      when "elite_siebold"
+        $game_map.events[1].direction = 2
+        $game_map.events[1].pattern = 1
+      when "elite_wikstrom"
+        $game_map.events[1].direction = 2
+        $game_map.events[1].pattern = 2
+      when "elite_drasna"
+        $game_map.events[1].direction = 2
+        $game_map.events[1].pattern = 3
+      when "champion_diantha"
+         $game_map.events[1].character_name = "trainer_Sheet13"
+        $game_map.events[1].direction = 2
+        $game_map.events[1].pattern = 2
+      end
+   when 15 # Alola E4
+      $game_map.events[1].character_name = "trainer_Sheet7"
+      case opponent[0].downcase
+      when "elite_hala"
+        $game_map.events[1].direction = 4
+        $game_map.events[1].pattern = 4
+      when "elite_molayne"
+        $game_map.events[1].direction = 6
+        $game_map.events[1].pattern = 4
+      when "elite_olivia"
+        $game_map.events[1].direction = 6
+        $game_map.events[1].pattern = 1
+      when "elite_kahili"
+        $game_map.events[1].direction = 8
+        $game_map.events[1].pattern = 1
+      when "champion_kukui"
+         $game_map.events[1].character_name = "trainer_Sheet13"
         $game_map.events[1].direction = 4
         $game_map.events[1].pattern = 1
-      when "leader_geordie"
-        $game_map.events[1].direction = 4
+      end
+   when 16 # Galar E4
+      $game_map.events[1].character_name = "trainer_Sheet9"
+      case opponent[0].downcase
+      when "elite_klara"
+        $game_map.events[1].direction = 2
+        $game_map.events[1].pattern = 4
+      when "elite_avery"
+        $game_map.events[1].direction = 6
+        $game_map.events[1].pattern = 1
+      when "elite_mustard"
+        $game_map.events[1].direction = 6
         $game_map.events[1].pattern = 2
-      when "leader_melony"
-        $game_map.events[1].direction = 4
-        $game_map.events[1].pattern = 3
-      when "leader_piers"
-        $game_map.events[1].direction = 6
-        $game_map.events[1].pattern = 0
-      when "leader_raihan"
-        $game_map.events[1].direction = 6
+      when "elite_peony"
+        $game_map.events[1].direction = 8
+        $game_map.events[1].pattern = 2
+      when "champion_leon"
+         $game_map.events[1].character_name = "trainer_Sheet13"
+        $game_map.events[1].direction = 2
         $game_map.events[1].pattern = 1
       end
   end
