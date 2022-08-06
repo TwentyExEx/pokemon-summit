@@ -937,6 +937,12 @@ class Battle
       if index == their_indices.last
         # TODO: patch this up to be index agnostic.
         # Would work fine if restricted to single/double battles
+        @connection.send do |writer|
+          cur_seed=srand
+          srand(cur_seed)
+          writer.sym(:seed)
+          writer.int(cur_seed)
+        end
         target_order = CableClub::pokemon_target_order(@battle.client_id)
         for our_index in our_indices
           @battle.connection.send do |writer|
@@ -980,6 +986,10 @@ class Battle
                 @battle.pbDisplay(_INTL("{1} forfeited the match!", @battle.opponent[0].full_name))
                 @battle.decision = 1
                 @battle.pbAbort
+                
+              when :seed
+                seed=record.int()
+                srand(seed) if @client_id==1
   
               when :choice
                 their_index = their_indices.shift
