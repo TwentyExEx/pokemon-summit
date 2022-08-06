@@ -369,6 +369,7 @@ def pbSummitPartyCheck
     else
       $game_variables[5] = "three"
       return false
+    end
   elsif $game_variables[31] >= 9
     if $player.pokemon_count == 6
       return true
