@@ -1,4 +1,4 @@
-$bracketnames = ["Kanto Leaders", "Johto Leaders", "Hoenn Leaders", "Sinnoh Leaders", "Unova Leaders", "Kalos Leaders", "Alola Captains", "Galar Leaders", "Team Bosses","Kanto Elite 4","Johto Elite 4","Hoenn Elite 4","Sinnoh Elite 4","Unova Elite 4","Kalos Elite 4","Alola Elite 4","Galar Elite 4","Champions"]
+$bracketnames = ["Kanto Leaders", "Johto Leaders", "Hoenn Leaders", "Sinnoh Leaders", "Unova Leaders", "Kalos Leaders", "Alola Captains", "Galar Leaders", "Team Bosses","Kanto Elite Four","Johto Elite Four","Hoenn Elite Four","Sinnoh Elite Four","Unova Elite Four","Kalos Elite Four","Alola Elite Four","Galar Elite Four","Champions"]
 $poketypes = ["normal", "fighting", "flying", "poison", "ground", "rock", "bug", "ghost", "steel", "fire", "water", "grass", "electric", "psychic", "ice", "dragon", "dark", "fairy"]
 $trbytype = [
   normal = [
@@ -363,12 +363,14 @@ def pbSummitBracketAnnounce
 end
 
 def pbSummitPrepMainTrainer(bracket)
-  trainers = $game_variables[29]
   if $game_variables[35] == "challenge" || "bosses"
+    trainers = $game_variables[29]
     fightnum = $game_variables[33]
     opponent = trainers[fightnum]
   else
-    opponent = trainers.sample
+    trainers = $game_variables[44]
+    fightnum = rand(0...trainers.length)
+    opponent = trainers[fightnum][0]
   end
   $game_variables[30] = opponent
   case bracket
