@@ -208,7 +208,6 @@ def pbSummitGiveGiftPokemon
   size = alltrainers.size
   num = rand(0..size)
   trainer = alltrainers[num]
-  p trainer
   loop do
     @gift = SummitGifts.const_get(trainer[0].to_s)
     pkmn = @gift[:species]
