@@ -64,7 +64,7 @@ case $bg.to_s.downcase
     typemessages = [
         ["The smell of fresh rain fills the arena alongside #{opp}.","Time to go for a swim, Challenger #{$player.name}!"],
         ["#{opp} and their elegant H2O-lovers certainly know how to make a splash!","Challenger #{$player.name} needs to evaporate their momentum!"],
-        ["A team of fresh Water-type Pokémon from #{opp} stare down Challenger #{$player.name}.","The energy in here is just Electric!"],
+        ["A team of fresh Water-type Pokémon from #{opp} stare down Challenger #{$player.name}.","The energy in here is Electric!"],
     ]
   when "grass"
     typemessages = [
@@ -81,7 +81,19 @@ case $bg.to_s.downcase
   when "psychic"
     typemessages = [
         ["Can #{opp} read my mind? I don't think I'm ready for that...","Challenger #{$player.name}! Distract them!"],
-        ["#{opp} and their team of Psychic-type Pokémon"],
+        ["A magical battle is about to unfold between the enchanting #{opp} and Challenger #{$player.name}!"],
         ["#{opp} and their team of Psychic-type Pokémon prove that the mind is mightier than muscle.","Challenger #{$player.name}! Show off your Dark side..."],
+    ]
+  when "ice"
+    typemessages = [
+        ["Pour yourself a piping hot cup of joe viewers, the chilling battle is about to begin!","Here comes #{opp} and Challenger #{$player.name}!"],
+        ["This one is going to be one cool match... It's funny because #{opp} is using Ice-type Pokémon...","sigh... Take it from here Challenger #{$player.name}!"],
+        ["#{opp} and their freezing Ice-type Pokémon look comfortable and confident.","But here comes Challenger #{$player.name} to Rock the boat!"],
+    ]
+  when "dragon"
+    typemessages = [
+        ["An ancient and powerful tension fills the arena...","A tension that can only be made by Challenger #{$player.name} and #{opp} in the same room!"],
+        ["#{opp} demands respect with the power of their Dragon-type Pokémon...","Can Challenger #{$player.name}v"],
+        ["",""],
     ]
 end
