@@ -45,7 +45,7 @@ end
 def pbSummitVendingPokemon
   loop do
     pkmn = pbSummitSelectPokemon
-    if $game_variables[42].include?(pkmn) # obtained
+    if $game_variables[42].include?(pkmn.to_s) # obtained
       return false
       break
     else
