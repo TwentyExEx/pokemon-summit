@@ -16079,7 +16079,7 @@ Pokemon = CRADILY,50
 [LEADER_Melony,Melony]
 LoseText = I think you took breaking the ice a little too literally...
 Pokemon = DARMANITAN,50
-    Form = 1
+    Form = 2
     Moves = UTURN,ICICLECRASH,FLAREBLITZ,ROCKSLIDE
     AbilityIndex = 0
     Nature = HARDY
@@ -16098,7 +16098,7 @@ Pokemon = EISCUE,50
 [LEADER_Melony,Melony,1]
 LoseText = I think you took breaking the ice a little too literally...
 Pokemon = DARMANITAN,50
-    Form = 1
+    Form = 2
     Moves = UTURN,ICICLECRASH,FLAREBLITZ,ROCKSLIDE
     AbilityIndex = 0
     Nature = JOLLY
@@ -16117,7 +16117,7 @@ Pokemon = EISCUE,50
 [LEADER_Melony,Melony,2]
 LoseText = I think you took breaking the ice a little too literally...
 Pokemon = DARMANITAN,50
-    Form = 1
+    Form = 2
     Moves = UTURN,ICICLECRASH,FLAREBLITZ,ROCKSLIDE
     AbilityIndex = 0
     Item = EXPERTBELT
@@ -16139,7 +16139,7 @@ Pokemon = EISCUE,50
 [LEADER_Melony,Melony,3]
 LoseText = I think you took breaking the ice a little too literally...
 Pokemon = DARMANITAN,50
-    Form = 1
+    Form = 2
     Moves = UTURN,ICICLECRASH,FLAREBLITZ,ROCKSLIDE
     AbilityIndex = 1
     Item = EXPERTBELT
@@ -16164,7 +16164,7 @@ Pokemon = EISCUE,50
 [LEADER_Melony,Melony,4]
 LoseText = I think you took breaking the ice a little too literally...
 Pokemon = DARMANITAN,50
-    Form = 1
+    Form = 2
     Moves = UTURN,ICICLECRASH,FLAREBLITZ,ROCKSLIDE
     AbilityIndex = 0
     Nature = HARDY
@@ -16198,7 +16198,7 @@ Pokemon = MAMOSWINE,50
 [LEADER_Melony,Melony,5]
 LoseText = I think you took breaking the ice a little too literally...
 Pokemon = DARMANITAN,50
-    Form = 1
+    Form = 2
     Moves = UTURN,ICICLECRASH,FLAREBLITZ,ROCKSLIDE
     AbilityIndex = 0
     Nature = JOLLY
@@ -16232,7 +16232,7 @@ Pokemon = MAMOSWINE,50
 [LEADER_Melony,Melony,6]
 LoseText = I think you took breaking the ice a little too literally...
 Pokemon = DARMANITAN,50
-    Form = 1
+    Form = 2
     Moves = UTURN,ICICLECRASH,FLAREBLITZ,ROCKSLIDE
     AbilityIndex = 0
     Item = EXPERTBELT
@@ -16272,7 +16272,7 @@ Pokemon = MAMOSWINE,50
 [LEADER_Melony,Melony,7]
 LoseText = I think you took breaking the ice a little too literally...
 Pokemon = DARMANITAN,50
-    Form = 1
+    Form = 2
     Moves = UTURN,ICICLECRASH,FLAREBLITZ,ROCKSLIDE
     AbilityIndex = 0
     Item = EXPERTBELT
