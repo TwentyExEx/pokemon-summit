@@ -1,5 +1,7 @@
 Credits
 
+Pokemon Essentials Creators - Flameguru, Poccil (Peter O.), Maruno
+
 ~~ Graphics ~~ 
 
 Overworlds for the following: 
@@ -106,8 +108,20 @@ Compilation of Resources:
 
 Golisopod User, UberDunsparce
 
+~~Music~~
+
 ~~Animations~~ 
 
 Pokemon Reborn
 Gen 8 move animation project by StCooler, DarryBD99, WolfPP, ardicoozer, riddlemeree.
 Sound Effects - BellBlitzKing 
+
+~~Scripts~~
+
+BW Key Items - KleinStudio, DeepBlue PacificWaves, Izanagi
+Discord Rich Presence API - rainefall
+Luka's Scripting Utilities, Modular Title Screen - Luka S.J.
+Ultimate Move Tutor - Grogro
+Rename from Party - TechSkylander1518
+Better Speed Up - Marin for the original script, Phantombass for updating to 19.1
+v20.1 Hotfixes - Maruno
