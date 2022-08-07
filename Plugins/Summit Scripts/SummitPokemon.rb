@@ -33,7 +33,7 @@ def pbSummitGivePokemon(specform)
   naturelist = []
   for i in GameData::Nature::DATA.keys
     if GameData::Nature.try_get(i).stat_changes.empty?
-      naturelist.push(i)
+      naturelist.push(i.name)
     end
   end
   @givepkmn.nature = naturelist[rand(0...naturelist.length)]
@@ -195,20 +195,37 @@ def pbSummitGetStarterSet(region) # Unused
 end
 
 def pbSummitGiveGiftPokemon
-  size = $game_variables[44].length
-  trainer = $game_variables[44][rand(0...size)]
-  gift = SummitGifts.const_get(trainer[0].to_s)
-  pkmn = gift[:species]
+  alltrainers = []
+  for trainer in $game_variables[44]
+    if !trainer.is_a?(Array)
+      name = trainer.clone
+      name.gsub!(/(\w+)_/) {|word| ""}
+        alltrainers.push([trainer, name, 0])
+    else 
+      alltrainers.push(trainer)
+    end
+  end
+  size = alltrainers.size
+  num = rand(0..size)
+  trainer = alltrainers[num]
+  p trainer
+  loop do
+    @gift = SummitGifts.const_get(trainer[0].to_s)
+    pkmn = @gift[:species]
+    if $game_variables[42].include?(pkmn) # obtained
+      break
+    end
+    break
+  end
   pbMessage("\\rHello, \\PN!")
-  pbMessage("\\r#{gift[:name]} left this for you.")
-  pbShowPokemonSprite(gift[:species])
-  pbSummitMakePokemon(gift[:species])
+  pbMessage("\\r#{@gift[:name]} left this for you.")
+  pbShowPokemonSprite(@gift[:species])
+  pbSummitMakePokemon(@gift[:species])
   @givepkmn.owner = Pokemon::Owner.new_foreign(trainer[1].to_s, GameData::TrainerType.get(trainer[0]).gender)
   naturelist = []
   for i in GameData::Nature::DATA.keys
-    naturename = i.to_s.downcase
     if GameData::Nature.try_get(i).stat_changes.empty?
-      naturelist.push(naturename.capitalize.to_sym)
+      naturelist.push(i.name)
     end
   end
   @givepkmn.nature = naturelist[rand(0...naturelist.length)]

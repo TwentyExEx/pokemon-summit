@@ -6,6 +6,7 @@ module SummitGifts
 	LEADER_Janine = {:name =>"Kanto Leader Janine", :species => :ARIADOS}
 	LEADER_Sabrina = {:name =>"Kanto Leader Sabrina", :species => :ALAKAZAM}
 	LEADER_Blaine = {:name =>"Kanto Leader Blaine", :species => :RAPIDASH}
+	LEADER_Giovanni = {:name =>"Kanto Leader Giovanni", :species => :NIDOKING}
 	LEADER_Falkner = {:name =>"Johto Leader Falkner", :species => :PIDGEOT}
 	LEADER_Bugsy = {:name =>"Johto Leader Bugsy", :species => :SCIZOR}
 	LEADER_Whitney = {:name =>"Johto Leader Whitney", :species => :MILTANK}
@@ -87,6 +88,7 @@ module SummitGifts
 	ELITE_Lorelei = {:name =>"Kanto Elite Four Lorelei", :species => :DEWGONG}
 	ELITE_Bruno = {:name =>"Kanto and Johto Elite Four Bruno", :species => :HITMONCHAN}
 	ELITE_Agatha = {:name =>"Kanto Elite Four Agatha", :species => :GENGAR}
+	ELITE_Lance = {:name =>"Kanto Elite Four Lance", :species => :DRAGONITE}
 	ELITE_Will = {:name =>"Johto Elite Four Will", :species => :XATU}
 	ELITE_Karen = {:name =>"Johto Elite Four Karen", :species => :HOUNDOOM}
 	ELITE_Koga = {:name =>"Johto Elite Four Koga", :species => :CROBAT }
