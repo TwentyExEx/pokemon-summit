@@ -306,7 +306,7 @@ def pbSummitBracketSelection(group)
   end
   case
     when group < 8
-      until trainerSelection.length == 5 do
+      until trainerSelection.length == 4 do
         num = rand(0...(trainerlist.length))
         trainer = trainerlist[num]
         if !trainerSelection.include?(trainer)
