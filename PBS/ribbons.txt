@@ -275,20 +275,20 @@ Name = Normalium Z Replica
 IconPosition = 50
 Description = Awarded for defeating Alola Captain Ilima!
 #-------------------------------
-[CAPTAIN_Mallow]
-Name = Grassium Z Replica
-IconPosition = 51
-Description = Awarded for defeating Alola Captain Mallow!
-#-------------------------------
 [CAPTAIN_Lana]
 Name = Waterium Z Replica
-IconPosition = 52
+IconPosition = 51
 Description = Awarded for defeating Alola Captain Lana!
 #-------------------------------
 [CAPTAIN_Kiawe]
 Name = Firium Z Replica
-IconPosition = 53
+IconPosition = 52
 Description = Awarded for defeating Alola Captain Kiawe!
+#-------------------------------
+[CAPTAIN_Mallow]
+Name = Grassium Z Replica
+IconPosition = 53
+Description = Awarded for defeating Alola Captain Mallow!
 #-------------------------------
 [CAPTAIN_Sophocles]
 Name = Electrium Z Replica
