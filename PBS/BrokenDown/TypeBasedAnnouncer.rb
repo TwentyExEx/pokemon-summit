@@ -74,7 +74,7 @@ case $bg.to_s.downcase
     ]
   when "electric"
     typemessages = [
-        ["Bzzzt... Bzzzt...ZAP! Did you guys like my impression of electricity? No?!","Fine... It's battle time between Challenger #{$player.name} and #{opp}!"],
+        ["Bzzzt... Bzzzt... ZAP! Did you guys like my impression of electricity? No?!","Fine... It's battle time between Challenger #{$player.name} and #{opp}!"],
         ["Challenger #{$player.name}! is about to be shocked by the Electric-type power of #{opp}!"],
         ["With their battery of Electric-type Pokémon, #{opp} is ready to fry the competition.","Challenger #{$player.name}, make sure to Ground yourself!"],
     ]
@@ -86,14 +86,26 @@ case $bg.to_s.downcase
     ]
   when "ice"
     typemessages = [
-        ["Pour yourself a piping hot cup of joe viewers, the chilling battle is about to begin!","Here comes #{opp} and Challenger #{$player.name}!"],
+        ["Pour yourself a piping hot cup of joe, viewers, the chilling battle is about to begin!","Here comes #{opp} and Challenger #{$player.name}!"],
         ["This one is going to be one cool match... It's funny because #{opp} is using Ice-type Pokémon...","sigh... Take it from here Challenger #{$player.name}!"],
         ["#{opp} and their freezing Ice-type Pokémon look comfortable and confident.","But here comes Challenger #{$player.name} to Rock the boat!"],
     ]
   when "dragon"
     typemessages = [
         ["An ancient and powerful tension fills the arena...","A tension that can only be made by Challenger #{$player.name} and #{opp} in the same room!"],
-        ["#{opp} demands respect with the power of their Dragon-type Pokémon...","Can Challenger #{$player.name}v"],
-        ["",""],
+        ["#{opp} demands respect with the power of their Dragon-type Pokémon...","Can Challenger #{$player.name} come out on top against their fierce team?"],
+        ["#{opp} approaches with their team of powerful Dragon-type Pokémon...","Will Challenger #{$player.name} be able to find a <i>Fair</i>-y and N-<i>Ice</i> way to win this fight?","<i>Okay, that one was a stretch...</i>"],
+    ]
+  when "dark"
+    typemessages = [
+        ["Did someone turn out the lights? No, it's just some Dark-type Pokémon!","Let's get a spotlight on the arena and watch this fight unfold against #{opp} and Challenger #{$player.name}!"],
+        ["Look closely, folks! #{opp} has snuck into the arena.","This calculating trainer and their equally cunning Pokémon are sure to give Challenger #{$player.name} a tough fight!"],
+        ["#{opp} and their Dark-type Pokémon seem to have a crystal clear focus...","Maybe if Challenger #{$player.name} Bugs them enough, they'll distract them enough to win this!"],
+    ]
+  when "fairy"
+    typemessages = [
+        ["Oh. My. Goodness. Look at the adorable Fairy-type Pokémon alongside #{opp}!","Challenger #{$player.name}, don't you hurt them! I mean--give it all you've got!"],
+        ["#{opp} turns fantasy into reality with their magical Fairy-type Pokémon!","Can Challenger #{$player.name} make a little magic of their own?"],
+        ["#{opp} and their Fairy-type Pokémon are prepared to cast a spell on us!","Challenger #{$player.name} will have to have nerves of Steel to close this out!"],
     ]
 end
