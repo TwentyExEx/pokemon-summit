@@ -43,6 +43,50 @@ def pbSummitGivePokemon(specform)
   pbAddPokemonSilent(@givepkmn)
 end
 
+def pbSummitStorePokemon(pkmn)
+  # Store the Pokémon
+  cmds = [_INTL("Add to your party"),
+          _INTL("Send to a Box"),
+          _INTL("See {1}'s summary", pkmn.name),
+          _INTL("Check party")]
+  loop do
+    cmd = pbMessage(_INTL("Where do you want to send {1} to?", pkmn.name), cmds, 99)
+    cmd = 1 if cmd == 99   # Cancelling = send to a Box
+    case cmd
+    when 0   # Add to your party
+      pbMessage(_INTL("Choose a Pokémon in your party to send to your Boxes."))
+      pbChoosePokemon(1,3)
+      choice = pbGet(3)
+      next if choice == ""   # Cancelled
+      party_index = pbGet(1)
+      send_pkmn = pbGetPokemon(1)
+      party_size = $player.party.length
+      stored_box = $PokemonStorage.pbStoreCaught(send_pkmn)
+      $player.party[party_index] = pkmn
+      box_name  = $PokemonStorage[stored_box].name
+      pbMessage(_INTL("{1} has been sent to Box \"{2}\".", send_pkmn.name, box_name))
+      break
+    when 1   # Send to a Box
+      stored_box = $PokemonStorage.pbStoreCaught(pkmn)
+      box_name   = $PokemonStorage[stored_box].name
+      pbMessage(_INTL("{1} has been sent to Box \"{2}\"!", pkmn.name, box_name))
+    when 2   # See X's summary
+      pbFadeOutIn {
+        summary_scene = PokemonSummary_Scene.new
+        summary_screen = PokemonSummaryScreen.new(summary_scene, true)
+        summary_screen.pbStartScreen([pkmn], 0)
+      }
+    when 3   # Check party
+      pbFadeOutIn {
+        sscene = PokemonParty_Scene.new
+        sscreen = PokemonPartyScreen.new(sscene, $player.party)
+        sscreen.pbPokemonScreen
+      }
+    end
+  end
+  # Messages saying the Pokémon was stored in a PC box
+end
+
 def pbSummitVendingPokemon
   if (SummitPokeInfo.allspecies.clone.uniq-$game_variables[42].clone.uniq).empty?
     return false

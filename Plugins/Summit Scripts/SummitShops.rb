@@ -1,3 +1,26 @@
+def pbSummitShopUnlock
+  if $game_variables[35] == "challenge" || $game_variables[35] == "gauntlet"
+    textcolor = "r"
+  elsif $game_variables[35] == "arcade" || $game_variables[35] == "grunts"
+    textcolor = "b"
+  end
+  if $game_variables[46] >= 15 # Super Training
+    pbMessage("\\#{textcolor}You have proven yourself as a strong trainer! The Super Trainer can now help you strengthen your Pokémon further.")
+    return true
+  elsif $game_variables[46] >= 10 # Pokémon Lover
+    pbMessage("\\#{textcolor}The Pokémon Lover sees your potential and will let you use her services to enhance your Pokémon.")
+    return true
+  elsif $game_variables[46] >= 7 # Move Teacher
+    pbMessage("\\#{textcolor}Due to your multiple successes in battle, the Move Teacher is now open to share his knowledge with you.")
+    return true
+  elsif $game_variables[46] >= 5 # Item Collector
+    pbMessage("\\#{textcolor}Since you have won a few battles, you have unlocked the Item Collector's shop.")
+    return true
+  else
+    return false
+  end
+end
+
 def pbSummitSuperTrain
   @evstats = ["HP","Attack","Defense","Special Attack","Special Defense","Speed"]
   @selection = @evstats.clone
