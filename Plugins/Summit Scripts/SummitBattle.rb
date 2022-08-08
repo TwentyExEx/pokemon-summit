@@ -1096,6 +1096,8 @@ def pbSummitMainTrainer
     end
     if $game_variables[35] == "challenge" && $game_variables[33] == 4 # when cleared bracket
       $game_variables[31] += 1 # next bracket
+    elsif $game_variables[35] == "gauntlet" && $game_variables[33] == 5 # when cleared bracket
+      $game_variables[31] += 1 # next bracket
     elsif $game_variables[35] == "bosses"
       if $game_variables[33] == 8
         $game_variables[31] += 1 # next bracket
