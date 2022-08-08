@@ -549,6 +549,11 @@ module TrainerIntros
 		:rematch => "\\bIt's been a while since the last time I battled like this...but I think you can handle it!"
 	}
 	
+	ELITE_Peony = {
+		:meeting => "\\bThe name's Peony! Brace yourself--I'm pretty ferocious in battle!",
+		:rematch => "\\bGahaha! Aren't you the brave one, pickin' a fight with a onetime Gym Leader!"
+	}
+	
 	CHAMPION_Leon = {
 		:meeting => "\\bI've been waiting for you. I have been watching you rise to every challenge ahead of you. Now, how about you take on Champion Leon with everything that you've got?",
 		:rematch => "\\bLet's make this a final match that'll go down in history! No! A match that'll change the world forever!"
