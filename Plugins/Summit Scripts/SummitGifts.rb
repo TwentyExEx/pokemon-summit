@@ -93,6 +93,7 @@ module SummitGifts
 	BOSS_Rose = {:name =>"Macro Cosmos President Rose", :species => :PERRSERKER}
 	ELITE_Lorelei = {:name =>"Kanto Elite Four Lorelei", :species => :DEWGONG}
 	ELITE_Bruno = {:name =>"Kanto and Johto Elite Four Bruno", :species => :HITMONCHAN}
+	ELITE_Bruno2 = {:name =>"Kanto and Johto Elite Four Bruno", :species => :HITMONCHAN}
 	ELITE_Agatha = {:name =>"Kanto Elite Four Agatha", :species => :GENGAR}
 	ELITE_Lance = {:name =>"Kanto Elite Four Lance", :species => :DRAGONITE}
 	ELITE_Will = {:name =>"Johto Elite Four Will", :species => :XATU}
