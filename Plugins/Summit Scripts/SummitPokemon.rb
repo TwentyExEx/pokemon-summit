@@ -70,6 +70,7 @@ def pbSummitStorePokemon(pkmn)
       stored_box = $PokemonStorage.pbStoreCaught(pkmn)
       box_name   = $PokemonStorage[stored_box].name
       pbMessage(_INTL("{1} has been sent to Box \"{2}\"!", pkmn.name, box_name))
+      break
     when 2   # See X's summary
       pbFadeOutIn {
         summary_scene = PokemonSummary_Scene.new
