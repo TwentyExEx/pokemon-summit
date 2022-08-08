@@ -25,6 +25,7 @@ $trbytype = [
     :LEADER_Chuck,
     :LEADER_Maylene,
     :LEADER_Bea,
+	:ELITE_Mustard,
     :LEADER_Korrina],      
   flying = [
     :LEADER_Falkner,
@@ -63,6 +64,7 @@ $trbytype = [
       :LEADER_Jasmine,
       :LEADER_Byron,
       :ELITE_Wikstrom,
+	  :ELITE_Peony,
       :ELITE_Molayne],
   fire = [
       :LEADER_Blaine,
