@@ -444,7 +444,7 @@ def pbSummitPrepMainTrainer(bracket)
         $game_map.events[1].direction = 8
         $game_map.events[1].pattern = 3
       end
-  when 2, 11
+  when 2, 11 # Hoenn Leaders and Hoenn E4
     $game_map.events[1].character_name = "trainer_Sheet3"
     case opponent[0].downcase
     when "leader_roxanne"
@@ -767,16 +767,16 @@ def pbSummitPrepMainTrainer(bracket)
        $game_map.events[1].character_name = "trainer_Sheet8"
        case opponent[0].downcase
        when "elite_aaron"
-         $game_map.events[1].direction = 2
+         $game_map.events[1].direction = 4
          $game_map.events[1].pattern = 1
        when "elite_bertha"
-         $game_map.events[1].direction = 2
+         $game_map.events[1].direction = 4
          $game_map.events[1].pattern = 2
        when "elite_flint"
-         $game_map.events[1].direction = 2
+         $game_map.events[1].direction = 4
          $game_map.events[1].pattern = 3
        when "elite_lucian"
-         $game_map.events[1].direction = 4
+         $game_map.events[1].direction = 6
          $game_map.events[1].pattern = 0
        when "champion_cynthia"
          $game_map.events[1].character_name = "trainer_Sheet13"
@@ -807,16 +807,16 @@ def pbSummitPrepMainTrainer(bracket)
       $game_map.events[1].character_name = "trainer_Sheet6"
       case opponent[0].downcase
       when "elite_malva"
-        $game_map.events[1].direction = 2
+        $game_map.events[1].direction = 6
         $game_map.events[1].pattern = 0
       when "elite_siebold"
-        $game_map.events[1].direction = 2
+        $game_map.events[1].direction = 6
         $game_map.events[1].pattern = 1
       when "elite_wikstrom"
-        $game_map.events[1].direction = 2
+        $game_map.events[1].direction = 6
         $game_map.events[1].pattern = 2
       when "elite_drasna"
-        $game_map.events[1].direction = 2
+        $game_map.events[1].direction = 6
         $game_map.events[1].pattern = 3
       when "champion_diantha"
          $game_map.events[1].character_name = "trainer_Sheet13"
