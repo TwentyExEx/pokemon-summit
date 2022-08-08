@@ -137,24 +137,16 @@ def pbSummitRocketInventory
 end
 
 def pbSummitRocketPokemon
-  if $game_switches[44] == false
-    pbMessage("\\rWe're all out o' stock, actually. Come back another time.")
-    return false
-  else
-    $game_switches[44] = true
-  end
   if $game_switches[43] == true
     pbSummitRocketInventory
     $game_switches[43] = false
   end
   cmd = pbMessage("\\rWhich of these Pokémon would you like to purchase?",@pokesale,3)
   if cmd < 0 || cmd == 3
-    pbMessage("\\rYour loss.")
     return false
   else
     pbMessage("\\rOne #{@pokesale[cmd]}... That'll be $1,000. Sound good to you?",["Yes","No"],2)
     if cmd == 2
-      pbMessage("\\rYour loss.")
       return false
     else
       pkmn = @pokelist[cmd].upcase.to_sym
