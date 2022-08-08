@@ -242,7 +242,7 @@ end
 
 def pbSummitGiveGiftPokemon
   for i in $game_variables[44]
-    possiblegift = SummitGifts.const_get(i.to_s)[:species]
+    possiblegift = SummitGifts.const_get(i[0].to_s)[:species]
     allgifts = []
     for pkmn in possiblegift
       allgifts.push(pkmn)
