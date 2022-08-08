@@ -800,9 +800,9 @@ def pbSummitPrepMainTrainer(bracket)
         $game_map.events[1].direction = 2
         $game_map.events[1].pattern = 3
       when "champion_iris"
-         $game_map.events[1].character_name = "trainer_Sheet13"
-        $game_map.events[1].direction = 2
-        $game_map.events[1].pattern = 3
+        $game_map.events[1].character_name = "trainer_Sheet13"
+        $game_map.events[1].direction = 4
+        $game_map.events[1].pattern = 2
       end
    when 14 # Kalos E4
       $game_map.events[1].character_name = "trainer_Sheet6"
@@ -821,48 +821,48 @@ def pbSummitPrepMainTrainer(bracket)
         $game_map.events[1].pattern = 3
       when "champion_diantha"
          $game_map.events[1].character_name = "trainer_Sheet13"
-        $game_map.events[1].direction = 2
-        $game_map.events[1].pattern = 2
+        $game_map.events[1].direction = 4
+        $game_map.events[1].pattern = 1
       end
    when 15 # Alola E4
       $game_map.events[1].character_name = "trainer_Sheet7"
       case opponent[0].downcase
       when "elite_hala"
         $game_map.events[1].direction = 4
-        $game_map.events[1].pattern = 4
+        $game_map.events[1].pattern = 3
       when "elite_molayne"
         $game_map.events[1].direction = 6
-        $game_map.events[1].pattern = 4
+        $game_map.events[1].pattern = 3
       when "elite_olivia"
         $game_map.events[1].direction = 6
-        $game_map.events[1].pattern = 1
+        $game_map.events[1].pattern = 0
       when "elite_kahili"
         $game_map.events[1].direction = 8
-        $game_map.events[1].pattern = 1
+        $game_map.events[1].pattern = 0
       when "champion_kukui"
-         $game_map.events[1].character_name = "trainer_Sheet13"
+        $game_map.events[1].character_name = "trainer_Sheet13"
         $game_map.events[1].direction = 4
-        $game_map.events[1].pattern = 1
+        $game_map.events[1].pattern = 0
       end
    when 16 # Galar E4
       $game_map.events[1].character_name = "trainer_Sheet9"
       case opponent[0].downcase
       when "elite_klara"
-        $game_map.events[1].direction = 2
-        $game_map.events[1].pattern = 4
+        $game_map.events[1].direction = 4
+        $game_map.events[1].pattern = 3
       when "elite_avery"
         $game_map.events[1].direction = 6
-        $game_map.events[1].pattern = 1
+        $game_map.events[1].pattern = 0
       when "elite_mustard"
         $game_map.events[1].direction = 6
-        $game_map.events[1].pattern = 2
+        $game_map.events[1].pattern = 1
       when "elite_peony"
         $game_map.events[1].direction = 8
-        $game_map.events[1].pattern = 2
-      when "champion_leon"
-         $game_map.events[1].character_name = "trainer_Sheet13"
-        $game_map.events[1].direction = 2
         $game_map.events[1].pattern = 1
+      when "champion_leon"
+        $game_map.events[1].character_name = "trainer_Sheet13"
+        $game_map.events[1].direction = 2
+        $game_map.events[1].pattern = 0
       end
   end
   
@@ -1142,9 +1142,10 @@ def pbSummitBracketUnlock(announce = true)
   if $game_variables[31] == 4 # Sinnoh beat
     $game_switches[39] = true
     $game_switches[40] = true
-  end
-  if $game_variables[31] == 8 # Galar beat
+  elsif $game_variables[31] == 8 # Galar beat
     $game_switches[41] = true
+  elsif $game_variables[31] == 16 # Galar beat
+    $game_switches[45] = true
   end
 end
 
