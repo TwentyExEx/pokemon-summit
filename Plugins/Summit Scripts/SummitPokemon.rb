@@ -103,6 +103,7 @@ end
 
 def pbSummitRocketInventory
   @pokesale = []
+  @pokelist = []
   3.times do
     pkmn = pbSummitSelectPokemon
     @pokemon=SummitPokeInfo.const_get(pkmn.to_s)[:species].to_s
@@ -128,8 +129,10 @@ def pbSummitRocketInventory
         dispname << " "<< GameData::Species.get(@specform).real_name
     end
     @pokesale.push(dispname)
+    @pokelist.push(@pokemon)
   end
   @pokesale.push("Cancel")
+  return SummitPokeInfo.const_get(pkmn.to_s)[:species]
 end
 
 def pbSummitRocketPokemon
@@ -153,7 +156,7 @@ def pbSummitRocketPokemon
       pbMessage("\\rYour loss.")
       return false
     else
-      pkmn = @pokesale[cmd].upcase.to_sym
+      pkmn = @pokelist[cmd].upcase.to_sym
       pbShowPokemonSprite(pkmn)
       pbSummitGivePokemon(pkmn)
       pbMessage("\\G\\rI'll take that cash now.")
