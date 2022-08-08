@@ -48,12 +48,17 @@ def initialize(pokemon)
  @form=SummitPokeInfo.const_get(pokemon.to_s)[:form].to_s
  case @form
   when "0"
-    @dispform=""
+    if GameData::Species.get(@pokemon).form_name
+      @dispform = GameData::Species.get(@pokemon).form_name
+    else
+      @dispform=""
+    end
+    @specform = @pokemon
   else
     @dispform="_"
     @dispform << @form
+    @specform = @pokemon.clone << @dispform
   end
- @specform = @pokemon.clone << @dispform
 end
 
 def pbStartScene
@@ -180,7 +185,6 @@ end
   end
   pbMessage(_INTL("{1} obtained {2}!\\wtnp[60]\1",$Trainer.name,$dispname))
   # Register as obtained
-  $game_variables[42].push(@pokemon)
   18.times do
   Graphics.update  
   @sprites["bg"].zoom_y-=0.15/2 
