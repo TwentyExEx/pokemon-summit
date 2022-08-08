@@ -25,7 +25,7 @@ $trbytype = [
     :LEADER_Chuck,
     :LEADER_Maylene,
     :LEADER_Bea,
-	:ELITE_Mustard,
+    :ELITE_Mustard,
     :LEADER_Korrina],      
   flying = [
     :LEADER_Falkner,
@@ -64,7 +64,7 @@ $trbytype = [
       :LEADER_Jasmine,
       :LEADER_Byron,
       :ELITE_Wikstrom,
-	  :ELITE_Peony,
+	    :ELITE_Peony,
       :ELITE_Molayne],
   fire = [
       :LEADER_Blaine,
@@ -120,7 +120,8 @@ $trbytype = [
       :LEADER_Raihan,
       :ELITE_Lance,
       :ELITE_Drake,
-      :ELITE_Drasna],
+      :ELITE_Drasna,
+      :CHAMPION_Lance],
   dark = [
       :ELITE_Karen,
       :ELITE_Sidney,
@@ -482,18 +483,16 @@ def pbSummitPrepMainTrainer(bracket)
     when "elite_phoebe"
       $game_map.events[1].direction = 6
       $game_map.events[1].pattern = 2
-    when "elite_sidney"
-      $game_map.events[1].direction = 6
-      $game_map.events[1].pattern = 3
     when "elite_glacia"
       $game_map.events[1].direction = 6
-      $game_map.events[1].pattern = 4
+      $game_map.events[1].pattern = 3
     when "elite_drake"
       $game_map.events[1].direction = 8
       $game_map.events[1].pattern = 0
     when "champion_steven"
-      $game_map.events[1].direction = 8
-      $game_map.events[1].pattern = 3
+      $game_map.events[1].character_name = "trainer_Sheet13"
+      $game_map.events[1].direction = 6
+      $game_map.events[1].pattern = 2
     end
   when 3, 8 # Sinnoh Leaders, Team Bosses
     $game_map.events[1].character_name = "trainer_Sheet4"
@@ -903,13 +902,13 @@ def pbSummitAnnounceMainTrainer
     ["Audience, strap in, this round is going to be incredible.","Challenger #{$player.name} vs #{opp}, starting in just a moment!"],
     ["#{opp} is looking ready for a intense fight!","Here comes Challenger #{$player.name} to give them what they want!"],
     ["Don't turn off your television sets, dear viewers at home.","Challenger #{$player.name} is about to face the legendary #{opp}!"],
-    ["I can't believe my eyes, is #{opp} really in the building?","Sorry Challenger #{$player.name}, you are cool too."],
+    ["I can't believe my eyes, is #{opp} really in the building?","Sorry, Challenger #{$player.name}, you're cool too."],
     ["Challenger #{$player.name} vs #{opp}?","This is going to get ugly..."],
     ["The energy in the arena grows evermore intense as Challenger #{$player.name} and #{opp} prepare their Pokémon."],
     ["What kind of battle can we expect from Challenger #{$player.name} and #{opp} today?"],
     ["The potential battle of the century quietly begins today between Challenger #{$player.name} and #{opp}."],
-    ["Everyone please welcome Challenger #{$player.name} and #{opp}!","There's no doubt that this is an important battle for both trainers."],
-    ["The once peaceful air is now turning thick with tension at the appearance of #{$player.name} and #{opp}."],
+    ["Everyone, please welcome Challenger #{$player.name} and #{opp}!","There's no doubt that this is an important battle for both trainers."],
+    ["The once peaceful air is now turning thick with tension at the appearance of #{$player.name} and #{opp}!"],
     ["We got a special one today, folks.","Challenger #{$player.name}, up against the incredible #{opp}!"]
   ]
   
@@ -923,7 +922,7 @@ def pbSummitAnnounceMainTrainer
     when "fighting"
       typemessages = [
           ["Straight from the dojo, #{opp} is here to show us the ropes!","Challenger #{$player.name} better bring their best."],
-          ["With Pokémon that can chop right through concrete, #{opp} enters the ring.","Will this force prove too strong for Challenger #{$player.name}?"],
+          ["With Pokémon that can chop right through concrete, #{opp} enters the ring!","Will this force prove too strong for Challenger #{$player.name}?"],
           ["#{opp} has a whole team of intense Fighting-type Pokémon.","Challenger #{$player.name} would need to be a Psychic to break down this trainer!"]
     ]
     when "flying"
@@ -941,7 +940,7 @@ def pbSummitAnnounceMainTrainer
     when "ground"
       typemessages = [
           ["With the power of the earth behind them, #{opp} seems unstoppable.","Will Challenger #{$player.name} make it through?"],
-          ["The ground rumbles with anticipation for #{opp} and their earth-shattering Pokémon","Challenger #{$player.name} had better hold on to something."],
+          ["The ground rumbles with anticipation for #{opp} and their earth-shattering Pokémon...","Challenger #{$player.name} had better hold on to something."],
           ["#{opp} weilds a team of expert Ground-type Pokémon.","Challenger #{$player.name} will have to Water down their expectations of a easy fight!"]
     ]
     when "rock"
@@ -955,7 +954,7 @@ def pbSummitAnnounceMainTrainer
       typemessages = [
           ["Oh my... so many Bug Pokémon...","I'm sorry Challenger #{$player.name} and #{opp}, I just can't watch this one."],
           ["#{opp} has a whole team of creepy-crawly Bug Pokémon!","I don't know how Challenger #{$player.name} can be in the same room..."],
-          ["I try not to be bias, but the Bug-type Pokémon of #{opp} give me no choice.","Send 'em Flying, Challenger #{$player.name}."]
+          ["I try not to be biased, but the Bug-type Pokémon of #{opp} give me no choice.","Send 'em Flying, Challenger #{$player.name}."]
       ]
     when "ghost"
       typemessages = [
@@ -1122,7 +1121,7 @@ def pbSummitLobby
   $DiscordRPC.update
 end
 
-def pbSummitBracketUnlock
+def pbSummitBracketUnlock(announce = true)
   bracketwon = $bracketnames[$game_variables[31]-1]
   bracketunlocked = $bracketnames[$game_variables[31]]
   $game_variables[41] = $game_variables[31] # Change var to last completed bracket
@@ -1132,12 +1131,13 @@ def pbSummitBracketUnlock
     end
     $game_variables[44].push(trainer) # Add trainers defeated to array
   end
-
-  pbMessage(_INTL("\\rCongratulations on defeating the {1}!",bracketwon))
-  pbSEPlay("Slots coin")
-  $Trainer.money += 700
-  pbMessage("\\G\\rYou have earned $700 for your performance.")
-  pbMessage(_INTL("\\rYou have also successfully unlocked the {1}!",bracketunlocked))
+  if announce == true
+    pbMessage(_INTL("\\rCongratulations on defeating the {1}!",bracketwon))
+    pbSEPlay("Slots coin")
+    $Trainer.money += 700
+    pbMessage("\\G\\rYou have earned $700 for your performance.")
+    pbMessage(_INTL("\\rYou have also successfully unlocked the {1}!",bracketunlocked))
+  end
   $game_variables[29] = [] # Clear previous bracket selection
   if $game_variables[31] == 4 # Sinnoh beat
     $game_switches[39] = true
@@ -1373,6 +1373,7 @@ $difficulties = ["Easy","Standard","Hard","Extreme","Cancel"]
 
 def pbSummitDifficultySet
   cmd = pbMessage("\\rWhich difficulty would you like to select?",$difficulties,5)
+  p cmd
   $game_variables[15] = cmd
   choice = $difficulties[cmd]
   if cmd != 4

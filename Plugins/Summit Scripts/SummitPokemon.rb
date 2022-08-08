@@ -241,13 +241,15 @@ def pbSummitGetStarterSet(region) # Unused
 end
 
 def pbSummitGiveGiftPokemon
-  possiblegift = SummitGifts.const_get(trainer[0].to_s)[:species]
-  allgifts = []
-  for pkmn in possiblegift
-    allgifts.push(pkmn)
-  end
-  if (allgifts.uniq-$game_variables[44].clone.uniq).empty?
-    return false
+  for i in $game_variables[44]
+    possiblegift = SummitGifts.const_get(i.to_s)[:species]
+    allgifts = []
+    for pkmn in possiblegift
+      allgifts.push(pkmn)
+    end
+    if (allgifts.uniq-$game_variables[44].clone.uniq).empty?
+      return false
+    end
   end
   loop do
     alltrainers = []
@@ -291,6 +293,9 @@ def pbSummitGiveGiftPokemon
 end
 
 def pbSummitCallGift
+  if $game_switches[40] == true
+    return true
+  end
   if $game_switches[39] == true
     num = rand(1..100)
     if ($game_variables[35] == "challenge" && $game_variables[32] == 1) && num > 75
