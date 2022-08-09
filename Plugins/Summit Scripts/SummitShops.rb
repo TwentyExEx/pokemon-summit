@@ -1,39 +1,65 @@
 def pbSummitShopUnlock
-  # if $game_variables[35] == "challenge" || $game_variables[35] == "gauntlet"
-  #   @textcolor = "\\r"
-  # elsif $game_variables[35] == "arcade" || $game_variables[35] == "grunts"
-  #   @textcolor = "\\b"
-  # end
-  # if $game_variables[46] >= 15 # Super Training
-  #   $game_switches[49] = true
-  #   msg = @textcolor.clone << "You have proven yourself as a strong trainer! The Super Trainer can now help you strengthen your Pokémon further."
-  #   unlocks.push(msg)
-  # elsif $game_variables[46] >= 10 # Pokémon Lover
-  #   $game_switches[48] = true
-  #   msg = @textcolor.clone << "The Pokémon Lover sees your potential and will let you use her services to enhance your Pokémon."
-  #   unlocks.push(msg)
-  # elsif $game_variables[46] >= 7 # Move Teacher
-  #   $game_switches[47] = true
-  #   msg = @textcolor.clone << "Due to your multiple successes in battle, the Move Teacher is now open to share his knowledge with you."
-  #   unlocks.push(msg)
-  # elsif $game_variables[46] >= 5 # Item Collector
-  #   $game_switches[46] = true
-  #   msg = @textcolor.clone << "Since you have won a few battles, you have unlocked the Item Collector's shop."
-  #   unlocks.push("item")
-  # else
-  #   return false
-  # end
+  if $game_variables[35] == "challenge" || $game_variables[35] == "gauntlet"
+    @textcolor = "\\r"
+  elsif $game_variables[35] == "arcade" || $game_variables[35] == "grunts"
+    @textcolor = "\\b"
+  else
+    @textcolor = ""
+  end
+  unlocks = []
+  checkswitches = [46,47,48,49]
+  msgs = Hash.new
+  msgs[49] = "You have proven yourself as a strong trainer! The Super Trainer can now help you strengthen your Pokémon further."
+  msgs[48] = "The Pokémon Lover sees your potential and will let you use her services to enhance your Pokémon."
+  msgs[47] = "Due to your multiple successes in battle, the Move Teacher is now open to share his knowledge with you."
+  msgs[46] = "Since you have won a few battles, you have unlocked the Item Collector's shop."
+  announce = []
+  dispannounce = []
 
-  
-
-  # $game_variables[48].times do
-  #   unlocks.push(msg)
-
-  # case $game_variables[48]
-  # for msg in unlocks
-  #   pbMessage(msg)
-  #   return true
-  # end
+  if $game_variables[46] >= 15 # Super Training
+    latest = [49]
+    $game_switches[49] = true
+  elsif $game_variables[46] >= 10 # Pokémon Lover
+    latest = [48]
+    $game_switches[48] = true
+  elsif $game_variables[46] >= 7 # Move Teacher
+    latest = [47]
+    $game_switches[47] = true
+  elsif $game_variables[46] >= 5 # Item Collector
+    latest = [46]
+    $game_switches[46] = true
+  else
+    return false
+  end
+  checkswitches = checkswitches-latest
+  @newswitches = checkswitches.clone
+  for i in checkswitches
+    if i > latest[0]
+      remove = []
+      remove.push(i)
+      @newswitches=@newswitches-remove
+    end
+  end
+  for i in @newswitches
+    if latest[0] > @newswitches[0] && $game_switches[i] == false
+      recap = true
+      announce.push(msgs[i])
+    end
+  end
+  num = latest[0]
+  announce.push(msgs[num])
+  if recap == true
+    for msg in announce
+      colorannounce = @textcolor.clone << msg
+      dispannounce.push(colorannounce)
+    end
+  else
+    colorannounce = @textcolor.clone << msgs[num]
+    dispannounce.push(colorannounce)
+  end
+  for msg in dispannounce
+    pbMessage(msg)
+  end
 end
 
 def pbSummitSuperTrain
