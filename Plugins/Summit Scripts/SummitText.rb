@@ -606,7 +606,7 @@ module TrainerIntros
 	
 	CHAMPION_Blue = {
 		:meeting => "\\bI'll know if you are good or not by battling you right now. This is what I, Kanto's top-level Trainer, can really do!",
-		:rematch => "\\bYou're the real deal. You are a good Trainer. But I'm going to stop your journey right here. Show it to me—the true power of your Pokémon!"
+		:rematch => "\\bYou're the real deal. You are a good Trainer. But I'm going to stop your journey right here. Show it to me--the true power of your Pokémon!"
 	}
 	
 	CHAMPION_Red = {
