@@ -952,21 +952,51 @@ end
 
 def pbSummitAnnounceMainTrainer
   opp = GameData::TrainerType.get($game_variables[30][0]).name.clone << " " << $game_variables[30][1]
-  messages = [
-    ["Now, I've been looking forward to this matchup.","Challenger #{$player.name} and #{opp} in the same room, let alone battling for us!?"],
-    ["Audience, strap in, this round is going to be incredible.","Challenger #{$player.name} vs #{opp}, starting in just a moment!"],
-    ["#{opp} is looking ready for a intense fight!","Here comes Challenger #{$player.name} to give them what they want!"],
-    ["Don't turn off your television sets, dear viewers at home.","Challenger #{$player.name} is about to face the legendary #{opp}!"],
-    ["I can't believe my eyes, is #{opp} really in the building?","Sorry, Challenger #{$player.name}, you're cool too."],
-    ["Challenger #{$player.name} vs #{opp}?","This is going to get ugly..."],
-    ["The energy in the arena grows evermore intense as Challenger #{$player.name} and #{opp} prepare their Pokémon."],
-    ["What kind of battle can we expect from Challenger #{$player.name} and #{opp} today?"],
-    ["The potential battle of the century quietly begins today between Challenger #{$player.name} and #{opp}."],
-    ["Everyone, please welcome Challenger #{$player.name} and #{opp}!","There's no doubt that this is an important battle for both trainers."],
-    ["The once peaceful air is now turning thick with tension at the appearance of #{$player.name} and #{opp}!"],
-    ["We got a special one today, folks.","Challenger #{$player.name}, up against the incredible #{opp}!"]
-  ]
-  
+  if $game_switches[45] == true
+    case $game_variables[30][0]
+      when "Leon"
+        messages = ["All the way from Galar, we have their league's very own Chairman and Champion, Leon!"]
+      when "Kukui"
+        messages = ["Is that The Masked Royal? Wait, even better--it's Professor Kukui!"]
+      when "Hau"
+        messages = ["From humble beginnings to an international competetion, next up, we have Champion Hau!"]
+      when "Diantha"
+        messages = ["The famed Grand Duchess graces our presence! Everybody put your hands together for Champion Diantha!"]
+      when "Iris"
+        messages = ["Hailing from the Village of dragons, Champion Iris is definitely not one to underestimate!"]
+      when "Alder"
+        messages = ["One of Unova's most acclaimed trainers, Champion Alder stands strong against all foes.","Certainly a intense wall to overcome!"]
+      when "Cynthia"
+        messages = ["Terrifyingly powerful and a force to be reckoned with, Champion Cynthia is here to crush the competition.","Did you know she is a archeologist too?"]
+      when "Wallace"
+        messages = ["Contest Master and beauty king with some of the most gorgeous Pokémon.","On top of that, Champion Wallace is an ace Water-type trainer."]
+      when "Steven"
+        messages = ["President of a massive company and a ruthless Steel-type user.","Champion Steven is a far more successful Chairman Rose!"]
+      when "Lance"
+        messages = ["From Kanto Elite, to Johto Champion...","Johto's favorite Champion  Lance has come to fight again!"]
+      when "Blue"
+        messages = ["Not many trainers can claim as many titles as Champion Blue has in his time.","This is sure to be a immense battle!"]
+      when "Red"
+        messages = ["This is it. The final fight.","No need for words anymore, just like Champion Red."]
+    end
+    for i in messages
+      pbMessage("\\xn[Announcer]\\ml[ANNOUNCER]\\p<outln2>#{i}</outln2>")
+    end
+  else  
+    messages = [
+      ["Now, I've been looking forward to this matchup.","Challenger #{$player.name} and #{opp} in the same room, let alone battling for us!?"],
+      ["Audience, strap in, this round is going to be incredible.","Challenger #{$player.name} vs #{opp}, starting in just a moment!"],
+      ["#{opp} is looking ready for a intense fight!","Here comes Challenger #{$player.name} to give them what they want!"],
+      ["Don't turn off your television sets, dear viewers at home.","Challenger #{$player.name} is about to face the legendary #{opp}!"],
+      ["I can't believe my eyes, is #{opp} really in the building?","Sorry, Challenger #{$player.name}, you're cool too."],
+      ["Challenger #{$player.name} vs #{opp}?","This is going to get ugly..."],
+      ["The energy in the arena grows evermore intense as Challenger #{$player.name} and #{opp} prepare their Pokémon."],
+      ["What kind of battle can we expect from Challenger #{$player.name} and #{opp} today?"],
+      ["The potential battle of the century quietly begins today between Challenger #{$player.name} and #{opp}."],
+      ["Everyone, please welcome Challenger #{$player.name} and #{opp}!","There's no doubt that this is an important battle for both trainers."],
+      ["The once peaceful air is now turning thick with tension at the appearance of #{$player.name} and #{opp}!"],
+      ["We got a special one today, folks.","Challenger #{$player.name}, up against the incredible #{opp}!"]
+    ]
   case $bg.to_s.downcase
     when "normal"
       typemessages = [
@@ -1077,20 +1107,20 @@ def pbSummitAnnounceMainTrainer
           ["#{opp} turns fantasy into reality with their magical Fairy-type Pokémon!","Can Challenger #{$player.name} make a little magic of their own?"],
           ["#{opp} and their Fairy-type Pokémon are prepared to cast a spell on us!","Challenger #{$player.name} will have to have nerves of Steel to close this out!"],
       ]
-  end
-  num = rand(100)
-  if num < 50
-    set = "standard"
-    chosen = messages
-  else
-    if typemessages.is_a?(Array)
-      set = "type"
-      chosen = typemessages
-    else
+    end
+    num = rand(100)
+    if num < 50
       set = "standard"
       chosen = messages
+    else
+      if typemessages.is_a?(Array)
+        set = "type"
+        chosen = typemessages
+      else
+        set = "standard"
+        chosen = messages
+      end
     end
-  end
   loop do
     @msgnum = rand(0...chosen.length)
     newmessage = [set, @msgnum]
@@ -1100,6 +1130,7 @@ def pbSummitAnnounceMainTrainer
     pbMessage("\\xn[Announcer]\\ml[ANNOUNCER]\\p<outln2>#{i}</outln2>")
   end
   $game_variables[45] = [set, @msgnum]
+  end
 end
 
 def pbSummitMainTrainerSpeech
