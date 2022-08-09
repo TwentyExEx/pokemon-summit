@@ -1,24 +1,39 @@
 def pbSummitShopUnlock
-  if $game_variables[35] == "challenge" || $game_variables[35] == "gauntlet"
-    textcolor = "r"
-  elsif $game_variables[35] == "arcade" || $game_variables[35] == "grunts"
-    textcolor = "b"
-  end
-  if $game_variables[46] >= 15 # Super Training
-    pbMessage("\\#{textcolor}You have proven yourself as a strong trainer! The Super Trainer can now help you strengthen your Pokémon further.")
-    return true
-  elsif $game_variables[46] >= 10 # Pokémon Lover
-    pbMessage("\\#{textcolor}The Pokémon Lover sees your potential and will let you use her services to enhance your Pokémon.")
-    return true
-  elsif $game_variables[46] >= 7 # Move Teacher
-    pbMessage("\\#{textcolor}Due to your multiple successes in battle, the Move Teacher is now open to share his knowledge with you.")
-    return true
-  elsif $game_variables[46] >= 5 # Item Collector
-    pbMessage("\\#{textcolor}Since you have won a few battles, you have unlocked the Item Collector's shop.")
-    return true
-  else
-    return false
-  end
+  # if $game_variables[35] == "challenge" || $game_variables[35] == "gauntlet"
+  #   @textcolor = "\\r"
+  # elsif $game_variables[35] == "arcade" || $game_variables[35] == "grunts"
+  #   @textcolor = "\\b"
+  # end
+  # if $game_variables[46] >= 15 # Super Training
+  #   $game_switches[49] = true
+  #   msg = @textcolor.clone << "You have proven yourself as a strong trainer! The Super Trainer can now help you strengthen your Pokémon further."
+  #   unlocks.push(msg)
+  # elsif $game_variables[46] >= 10 # Pokémon Lover
+  #   $game_switches[48] = true
+  #   msg = @textcolor.clone << "The Pokémon Lover sees your potential and will let you use her services to enhance your Pokémon."
+  #   unlocks.push(msg)
+  # elsif $game_variables[46] >= 7 # Move Teacher
+  #   $game_switches[47] = true
+  #   msg = @textcolor.clone << "Due to your multiple successes in battle, the Move Teacher is now open to share his knowledge with you."
+  #   unlocks.push(msg)
+  # elsif $game_variables[46] >= 5 # Item Collector
+  #   $game_switches[46] = true
+  #   msg = @textcolor.clone << "Since you have won a few battles, you have unlocked the Item Collector's shop."
+  #   unlocks.push("item")
+  # else
+  #   return false
+  # end
+
+  
+
+  # $game_variables[48].times do
+  #   unlocks.push(msg)
+
+  # case $game_variables[48]
+  # for msg in unlocks
+  #   pbMessage(msg)
+  #   return true
+  # end
 end
 
 def pbSummitSuperTrain

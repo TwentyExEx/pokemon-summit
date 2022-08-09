@@ -130,10 +130,9 @@ def pbSummitRocketInventory
         dispname << " "<< GameData::Species.get(@specform).real_name
     end
     @pokesale.push(dispname)
-    @pokelist.push(@pokemon)
+    @pokelist.push(pkmn)
   end
   @pokesale.push("Cancel")
-  return SummitPokeInfo.const_get(pkmn.to_s)[:species]
 end
 
 def pbSummitRocketPokemon
@@ -141,12 +140,12 @@ def pbSummitRocketPokemon
     pbSummitRocketInventory
     $game_switches[43] = false
   end
-  cmd = pbMessage("\\rWhich of these Pokémon would you like to purchase?",@pokesale,3)
+  cmd = pbMessage("\\rWhich of these Pokémon would you like to purchase?",@pokesale,4)
   if cmd < 0 || cmd == 3
     return false
   else
-    pbMessage("\\rOne #{@pokesale[cmd]}... That'll be $1,000. Sound good to you?",["Yes","No"],2)
-    if cmd == 2
+    cmd2 = pbMessage("\\rOne #{@pokesale[cmd]}... That'll be $1,000. Sound good to you?",["Yes","No"],-1)
+    if cmd2 == 1 || cmd2 < 0
       return false
     else
       pkmn = @pokelist[cmd].upcase.to_sym
@@ -155,7 +154,6 @@ def pbSummitRocketPokemon
       pbMessage("\\G\\rI'll take that cash now.")
       pbSEPlay("Slots coin")
       $Trainer.money -= 1000
-      pbMessage("\\rYour brand new #{@pokesale[cmd]} has been put into your PC.")
       pbMessage("\\rAnd remember, no refunds!")
       $game_switches[44] = false
       return true

@@ -306,6 +306,21 @@ def pbSummitBracketSelection(group)
         ["ELITE_Peony","Peony"],
         ["CHAMPION_Leon","Leon"]
       ]
+    when 17 # Champions
+        trainerlist = [
+          ["CHAMPION_Leon","Leon"],
+          ["CHAMPION_Hau","Hau"],
+          ["CHAMPION_Kukui","Kukui"],
+          ["CHAMPION_Diantha","Diantha"],
+          ["CHAMPION_Iris","Iris"],
+          ["CHAMPION_Alder","Alder"],
+          ["CHAMPION_Cynthia","Cynthia"],
+          ["CHAMPION_Wallace","Wallace"],
+          ["CHAMPION_Steven","Steven"],
+          ["CHAMPION_Lance","Lance"],
+          ["CHAMPION_Blue","Blue"],
+          ["CHAMPION_Red","Red"]
+        ]
   end
   case
     when group < 8
@@ -768,21 +783,21 @@ def pbSummitPrepMainTrainer(bracket)
        $game_map.events[1].character_name = "trainer_Sheet8"
        case opponent[0].downcase
        when "elite_aaron"
-         $game_map.events[1].direction = 4
-         $game_map.events[1].pattern = 1
+        $game_map.events[1].direction = 4
+        $game_map.events[1].pattern = 1
        when "elite_bertha"
-         $game_map.events[1].direction = 4
-         $game_map.events[1].pattern = 2
+        $game_map.events[1].direction = 4
+        $game_map.events[1].pattern = 2
        when "elite_flint"
-         $game_map.events[1].direction = 4
-         $game_map.events[1].pattern = 3
+        $game_map.events[1].direction = 4
+        $game_map.events[1].pattern = 3
        when "elite_lucian"
-         $game_map.events[1].direction = 6
-         $game_map.events[1].pattern = 0
+        $game_map.events[1].direction = 6
+        $game_map.events[1].pattern = 0
        when "champion_cynthia"
-         $game_map.events[1].character_name = "trainer_Sheet13"
-         $game_map.events[1].direction = 6
-         $game_map.events[1].pattern = 0
+        $game_map.events[1].character_name = "trainer_Sheet13"
+        $game_map.events[1].direction = 6
+        $game_map.events[1].pattern = 0
        end
    when 13 # Unova E4
       $game_map.events[1].character_name = "trainer_Sheet9"
@@ -820,7 +835,7 @@ def pbSummitPrepMainTrainer(bracket)
         $game_map.events[1].direction = 6
         $game_map.events[1].pattern = 3
       when "champion_diantha"
-         $game_map.events[1].character_name = "trainer_Sheet13"
+        $game_map.events[1].character_name = "trainer_Sheet13"
         $game_map.events[1].direction = 4
         $game_map.events[1].pattern = 1
       end
@@ -863,6 +878,46 @@ def pbSummitPrepMainTrainer(bracket)
         $game_map.events[1].character_name = "trainer_Sheet13"
         $game_map.events[1].direction = 2
         $game_map.events[1].pattern = 0
+      end
+   when 17 # Champions
+      $game_map.events[1].character_name = "trainer_Sheet13"
+      case opponent[0].downcase
+      when "champion_leon"
+        $game_map.events[1].direction = 2
+        $game_map.events[1].pattern = 0
+      when "champion_hau"
+        $game_map.events[1].direction = 2
+        $game_map.events[1].pattern = 3
+      when "champion_kukui"
+        $game_map.events[1].direction = 4
+        $game_map.events[1].pattern = 0
+      when "champion_diantha"
+        $game_map.events[1].direction = 4
+        $game_map.events[1].pattern = 1
+      when "champion_iris"
+        $game_map.events[1].direction = 4
+        $game_map.events[1].pattern = 2
+      when "champion_alder"
+        $game_map.events[1].direction = 4
+        $game_map.events[1].pattern = 3
+      when "champion_cynthia"
+        $game_map.events[1].direction = 6
+        $game_map.events[1].pattern = 0
+      when "champion_wallace"
+        $game_map.events[1].direction = 6
+        $game_map.events[1].pattern = 1
+      when "champion_steven"
+        $game_map.events[1].direction = 6
+        $game_map.events[1].pattern = 2
+      when "champion_lance"
+        $game_map.events[1].direction = 6
+        $game_map.events[1].pattern = 3
+      when "champion_blue"
+        $game_map.events[1].direction = 8
+        $game_map.events[1].pattern = 0
+      when "champion_red"
+        $game_map.events[1].direction = 8
+        $game_map.events[1].pattern = 1
       end
   end
   
@@ -966,7 +1021,7 @@ def pbSummitAnnounceMainTrainer
       typemessages = [
           ["Shining of brilliant silver, #{opp} and their Steel-type Pokémon are here to put pressure on Challenger #{$player.name} and their team!"],
           ["Challenger #{$player.name} vs #{opp} live on your screens in a moment.","This battle will be metal!"],
-          ["With their sturdy Steel-type Pokémon, #{opp} has come to shake things up.","But Challenger #{$player.name} is here to stoke the Fire of battle"],
+          ["With their sturdy Steel-type Pokémon, #{opp} has come to shake things up.","But Challenger #{$player.name} is here to stoke the Fire of battle!"],
       ]
     when "fire"
       typemessages = [
@@ -1095,8 +1150,6 @@ def pbSummitMainTrainer
     end
     if $game_variables[35] == "challenge" && $game_variables[33] == 4 # when cleared bracket
       $game_variables[31] += 1 # next bracket
-    elsif $game_variables[35] == "gauntlet" && $game_variables[33] == 5 # when cleared bracket
-      $game_variables[31] += 1 # next bracket
     elsif $game_variables[35] == "bosses"
       if $game_variables[33] == 8
         $game_variables[31] += 1 # next bracket
@@ -1104,11 +1157,16 @@ def pbSummitMainTrainer
       if $game_variables[33] == 4
         $game_switches[42] = true # break
       end
-    elsif $game_variables[35] == "gauntlet"# when cleared bracket
-      if $game_variables[31] < 16 && $game_variables[33] == 5 # when cleared bracket
+    elsif $game_variables[35] == "gauntlet"
+      breakrounds = [3,6,9]
+      if $game_variables[31] <= 16 && $game_variables[33] == 5 # when cleared bracket
         $game_variables[31] += 1 # next bracket
-      elsif $game_variables[31] > 16 && $game_variables[33] == 4
+      elsif $game_switches[45] == true && breakrounds.include?($game_variables[33])
         $game_switches[42] = true # break
+      elsif $game_switches[45] == true && $game_variables[33] == 11
+        $game_switches[50] = true # red battle
+      elsif $game_switches[45] == true && $game_variables[33] == 12
+        $game_variables[31] += 1 # next bracket
       end
     end
   end
@@ -1374,7 +1432,6 @@ $difficulties = ["Easy","Standard","Hard","Extreme","Cancel"]
 
 def pbSummitDifficultySet
   cmd = pbMessage("\\rWhich difficulty would you like to select?",$difficulties,5)
-  p cmd
   $game_variables[15] = cmd
   choice = $difficulties[cmd]
   if cmd != 4
@@ -1434,7 +1491,8 @@ def pbSummitRainbowRocket
   pbMessage("\\xnr[Giovanni]\\mr[LEADER_Giovanni]\\b<outln2>This building is now under the control of Team Rainbow Rocket.</outln2>")
   pbMessage("\\xnr[Giovanni]\\mr[LEADER_Giovanni]\\b<outln2>We are about to make our way down to the lobby to collect all of your resources.</outln2>")
   pbMessage("\\xnr[Giovanni]\\mr[LEADER_Giovanni]\\b<outln2>Stay out of our way or experience a world of pain.</outln2>")
-  pbBGMFade(1)
+  pbBGMFade(2)
+  pbWait(80)
   pbBGMPlay("bosslobby")
   pbMessage("\\rThis is awful! Somebody needs to stop them!")
   pbMessage("\\rYou're a strong trainer... Please, you have to do something!")
