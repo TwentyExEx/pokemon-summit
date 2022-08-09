@@ -7,7 +7,7 @@ Name = Intro
 Name = Summit Lobby
 Outdoor = false
 #-------------------------------
-[003]   # Main Arena
+[003]   # Challenge Arena
 Name = Main Arena
 Outdoor = false
 TrainerVictoryBGM = win.ogg
@@ -17,3 +17,10 @@ Name = Arcade Arena
 Outdoor = false
 TrainerVictoryBGM = win.ogg
 #-------------------------------
+[008]   # Hometown
+Name = Hometown
+ShowArea = true
+#-------------------------------
+[011]   # Outside Port
+Name = Outside Port
+SnapEdges = true
