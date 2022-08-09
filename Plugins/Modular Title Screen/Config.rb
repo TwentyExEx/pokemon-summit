@@ -63,7 +63,7 @@ module ModularTitle
   #-------------------------------------------------------------------------------
   #                  V V     add your modifiers in here     V V
   #-------------------------------------------------------------------------------
-"background3", "intro:7", "effect5", "effect6", "overlay6", "logo:shine", "bgm:title_sm"
+"background11", "overlay2", "logoY:220", "intro:5", "bgm:title"
 
   ] # end of config constant
   #-------------------------------------------------------------------------------
@@ -88,6 +88,6 @@ module ModularTitle
   START_POS = [nil, nil]
 
   # set to true to show Title Screen even when running the game in Debug mode
-  SHOW_IN_DEBUG = false
+  SHOW_IN_DEBUG = true
 
 end
