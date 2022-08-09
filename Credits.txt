@@ -123,6 +123,6 @@ BW Key Items - KleinStudio, DeepBlue PacificWaves, Izanagi
 Discord Rich Presence API - rainefall
 Luka's Scripting Utilities, Modular Title Screen - Luka S.J.
 Ultimate Move Tutor - Grogro
-Rename from Party - TechSkylander1518
 Better Speed Up - Marin for the original script, Phantombass for updating to 19.1
 v20.1 Hotfixes - Maruno
+Summit Scripts - kallisto
