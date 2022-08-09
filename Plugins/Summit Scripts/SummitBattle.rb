@@ -1202,7 +1202,7 @@ def pbSummitBracketUnlock(announce = true)
     $game_switches[40] = true
   elsif $game_variables[31] == 8 # Galar beat
     $game_switches[41] = true
-  elsif $game_variables[31] == 16 # Galar beat
+  elsif $game_variables[31] == 17 # Galar beat
     $game_switches[45] = true
   end
 end
