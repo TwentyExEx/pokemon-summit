@@ -953,7 +953,7 @@ end
 def pbSummitAnnounceMainTrainer
   opp = GameData::TrainerType.get($game_variables[30][0]).name.clone << " " << $game_variables[30][1]
   if $game_switches[45] == true
-    case $game_variables[30][0]
+    case $game_variables[30][1]
       when "Leon"
         messages = ["All the way from Galar, we have their league's very own Chairman and Champion, Leon!"]
       when "Kukui"
