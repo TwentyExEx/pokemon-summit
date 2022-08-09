@@ -722,7 +722,7 @@ def pbSummitPrepMainTrainer(bracket)
       when "leader_opal"
         $game_map.events[1].direction = 4
         $game_map.events[1].pattern = 1
-      when "leader_geordie"
+      when "leader_gordie"
         $game_map.events[1].direction = 4
         $game_map.events[1].pattern = 2
       when "leader_melony"
