@@ -1136,7 +1136,12 @@ def pbSummitMainTrainer
 
   if $game_variables[35] == "challenge" || $game_variables[35] == "gauntlet"
     setBattleRule("backdrop", $bg.to_s)
-    setBattleRule("base", $bg.to_s)
+    if $game_switches[45] == true
+      championbg = "champion_" << $bg.to_s
+      setBattleRule("base", championbg)
+    else
+      setBattleRule("base", $bg.to_s)
+    end
   elsif $game_variables[35] == "bosses"
     setBattleRule("backdrop", "dark")
     setBattleRule("base", "dark")
