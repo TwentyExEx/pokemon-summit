@@ -341,25 +341,25 @@ def pbSummitBracketSelection(group)
               break
             end
           elsif group == 4 && trainer[0] == ("LEADER_Cheren")
-            if !trainerSelection.include?(["LEADER_Cheren","Cheren"])
-              trainerSelection.push(trainer)
-            else
-              break
-            end
-          elsif group == 4 && trainer[0] == ("LEADER_Lenora")
             if !trainerSelection.include?(["LEADER_Lenora","Lenora"])
               trainerSelection.push(trainer)
             else
               break
             end
+          elsif group == 4 && trainer[0] == ("LEADER_Lenora")
+            if !trainerSelection.include?(["LEADER_Cheren","Cheren"])
+              trainerSelection.push(trainer)
+            else
+              break
+            end
           elsif group == 4 && trainer[0] == ("LEADER_Cress")
-            if !trainerSelection.include?(["LEADER_Cress","Cress"])
+            if !trainerSelection.include?(["LEADER_Marlon","Marlon"])
               trainerSelection.push(trainer)
             else
               break
             end
           elsif group == 4 && trainer[0] == ("LEADER_Marlon")
-            if !trainerSelection.include?(["LEADER_Marlon","Marlon"])
+            if !trainerSelection.include?(["LEADER_Cress","Cress"])
               trainerSelection.push(trainer)
             else
               break
