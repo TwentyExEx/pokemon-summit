@@ -931,11 +931,13 @@ end
 
 def pbSummitTestIntro # Debug
     testgroup = [
-    ["LEADER_Wake","Crasher Wake"],
-    ["LEADER_Roxie","Roxie"],
-    ["LEADER_Olympia","Olympia"],
-    ["LEADER_Clemont","Clemont"],
-    ["LEADER_Wulfric","Wulfric"]
+    ["BOSS_Lysandre","Lysandre"],
+    ["CHAMPION_Steven","Steven"],
+    ["CHAMPION_Cynthia","Cynthia"],
+    ["ELITE_Shauntal","Shauntal"],
+    ["ELITE_Marshal","Marshal"],
+    ["ELITE_Caitlin","Caitlin"],
+    ["ELITE_Wikstrom","Wikstrom"]
   ]
   for trainer in testgroup
     for i in 0...$trbytype.size
@@ -945,7 +947,7 @@ def pbSummitTestIntro # Debug
       end
     end
   $game_variables[30] = trainer
-  pbSummitAnnounceMainTrainer
+  # pbSummitAnnounceMainTrainer
   pbSummitMainTrainerSpeech
   end
 end
