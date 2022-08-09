@@ -15,52 +15,56 @@ def pbSummitShopUnlock
   msgs[46] = "Since you have won a few battles, you have unlocked the Item Collector's shop."
   announce = []
   dispannounce = []
+  recap = false
 
   if $game_variables[46] >= 15 # Super Training
     latest = [49]
-    $game_switches[49] = true
   elsif $game_variables[46] >= 10 # Pokémon Lover
     latest = [48]
-    $game_switches[48] = true
   elsif $game_variables[46] >= 7 # Move Teacher
     latest = [47]
-    $game_switches[47] = true
   elsif $game_variables[46] >= 5 # Item Collector
     latest = [46]
-    $game_switches[46] = true
   else
     return false
   end
-  checkswitches = checkswitches-latest
-  @newswitches = checkswitches.clone
-  for i in checkswitches
+  checkswitches = checkswitches-latest # remove highest/most recent unlock from list
+  @newswitches = checkswitches.clone # make separate list of all shops
+  for i in checkswitches # for each shop
     if i > latest[0] # if shop is later unlock than latest
       remove = []
       remove.push(i)
       @newswitches=@newswitches-remove # remove it from announcements
     end
   end
-  for i in @newswitches
+  for i in @newswitches # for all lower unlocks
     if latest[0] > @newswitches[0] && $game_switches[i] == false # if it hasnt been switched on yet
       recap = true
-      $game_switches[i] = true
-      announce.push(msgs[i])
+      announce.push(msgs[i]) # add the unlock message to the list of announcements
     end
   end
   num = latest[0]
-  announce.push(msgs[num])
-  if recap == true
-    for msg in announce
-      colorannounce = @textcolor.clone << msg
-      dispannounce.push(colorannounce)
-    end
+  if $game_switches[num] == false
+    announce.push(msgs[num]) # add the most recent unlock message
   else
+    return false
+  end
+  if recap == true
+    for msg in announce # for all announcements
+      colorannounce = @textcolor.clone << msg
+      dispannounce.push(colorannounce) # add color
+    end
+  else # no lower
     colorannounce = @textcolor.clone << msgs[num]
     dispannounce.push(colorannounce)
   end
   for msg in dispannounce
     pbMessage(msg)
   end
+  for i in @newswitches
+    $game_switches[i] = true # turn the switch on
+  end
+  $game_switches[num] = true
 end
 
 def pbSummitSuperTrain
