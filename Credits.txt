@@ -62,6 +62,7 @@ Team Aqua Grunts (M/F), Team Magma Grunts (M/F) - IceJkai
 
 Other Sprites
 
+Player Sprite - WolfHeretic (via Advanced Character Customization)
 Gym Badges - VictorV111
 Z Crystals - Pixel3r
 
