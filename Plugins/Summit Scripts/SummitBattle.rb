@@ -1,4 +1,4 @@
-$bracketnames = ["Kanto Leaders", "Johto Leaders", "Hoenn Leaders", "Sinnoh Leaders", "Unova Leaders", "Kalos Leaders", "Alola Captains", "Galar Leaders", "Team Bosses","Kanto Elite Four","Johto Elite Four","Hoenn Elite Four","Sinnoh Elite Four","Unova Elite Four","Kalos Elite Four","Alola Elite Four","Galar Elite Four","Champions"]
+$bracketnames = ["Kanto Leaders", "Johto Leaders", "Hoenn Leaders", "Sinnoh Leaders", "Unova Leaders", "Kalos Leaders", "Alola Captains", "Galar Leaders", "Team Bosses","Kanto Elite","Johto Elite","Hoenn Elite","Sinnoh Elite","Unova Elite","Kalos Elite","Alola Elite","Galar Elite","Champions"]
 $poketypes = ["normal", "fighting", "flying", "poison", "ground", "rock", "bug", "ghost", "steel", "fire", "water", "grass", "electric", "psychic", "ice", "dragon", "dark", "fairy"]
 $trbytype = [
   normal = [
