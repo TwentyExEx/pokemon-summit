@@ -63,7 +63,7 @@ module ModularTitle
   #-------------------------------------------------------------------------------
   #                  V V     add your modifiers in here     V V
   #-------------------------------------------------------------------------------
-"background11", "overlay2", "logoY:220", "intro:5", "bgm:title"
+"background11", "overlay2", "logoY:220", "intro:5", "bgm:title_xy"
 
   ] # end of config constant
   #-------------------------------------------------------------------------------
@@ -72,7 +72,7 @@ module ModularTitle
   # Config used for determining the cry of species to play, along with displaying
   # a certain Pokemon sprite if applicable. Leave it as nil in order not to play
   # a species cry, otherwise set as a symbolic value
-  SPECIES = :PIKACHU
+  SPECIES = :CHARIZARD
   # Applies a form to Pokemon species
   SPECIES_FORM = 0
   # Applies female form
