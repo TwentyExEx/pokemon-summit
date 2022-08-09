@@ -601,7 +601,7 @@ module TrainerIntros
 	
 	CHAMPION_Lance = {
 		:meeting => "\\bYou are brimming with love and trust toward Pokémon. I think we will be able to have a fantastic battle so, I, Lance the Dragon-type master, accept your challenge!",
-		:rematch => "\\bI knew that you, with your skills, would eventually reach me here.We will battle to determine who is the stronger of the two of us."
+		:rematch => "\\bI knew that you, with your skills, would eventually reach me here. We will battle to determine who is the stronger of the two of us."
 	}
 	
 	CHAMPION_Blue = {

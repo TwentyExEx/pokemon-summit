@@ -34,15 +34,16 @@ def pbSummitShopUnlock
   checkswitches = checkswitches-latest
   @newswitches = checkswitches.clone
   for i in checkswitches
-    if i > latest[0]
+    if i > latest[0] # if shop is later unlock than latest
       remove = []
       remove.push(i)
-      @newswitches=@newswitches-remove
+      @newswitches=@newswitches-remove # remove it from announcements
     end
   end
   for i in @newswitches
-    if latest[0] > @newswitches[0] && $game_switches[i] == false
+    if latest[0] > @newswitches[0] && $game_switches[i] == false # if it hasnt been switched on yet
       recap = true
+      $game_switches[i] = true
       announce.push(msgs[i])
     end
   end

@@ -955,15 +955,15 @@ def pbSummitAnnounceMainTrainer
   if $game_switches[45] == true
     case $game_variables[30][1]
       when "Leon"
-        messages = ["All the way from Galar, we have their league's very own Chairman and Champion, Leon!"]
+        messages = ["All the way from Galar, their league's very own Chairman and Champion comes to grace our arena.","Give it up for Champion Leon!"]
       when "Kukui"
-        messages = ["Is that The Masked Royal? Wait, even better--it's Professor Kukui!"]
+        messages = ["Is that The Masked Royal? Surely not...","Wait, even better--it's Professor Kukui!"]
       when "Hau"
-        messages = ["From humble beginnings to an international competetion, next up, we have Champion Hau!"]
+        messages = ["From humble beginnings, rising up to become a well renowned Trainer...","Next up, we have Champion Hau!"]
       when "Diantha"
-        messages = ["The famed Grand Duchess graces our presence! Everybody put your hands together for Champion Diantha!"]
+        messages = ["The famed Grand Duchess graces our presence, bringing both beauty and power!","Everybody put your hands together for Champion Diantha!"]
       when "Iris"
-        messages = ["Hailing from the Village of dragons, Champion Iris is definitely not one to underestimate!"]
+        messages = ["She may look unassuming to the unaware, but don't dare underestimate her.","Hailing from the Village of Dragons, here comes Champion Iris!"]
       when "Alder"
         messages = ["One of Unova's most acclaimed trainers, Champion Alder stands strong against all foes.","Certainly a intense wall to overcome!"]
       when "Cynthia"
@@ -973,7 +973,7 @@ def pbSummitAnnounceMainTrainer
       when "Steven"
         messages = ["President of a massive company and a ruthless Steel-type user.","Champion Steven is a far more successful Chairman Rose!"]
       when "Lance"
-        messages = ["From Kanto Elite, to Johto Champion...","Johto's favorite Champion  Lance has come to fight again!"]
+        messages = ["From Kanto Elite, to Johto Champion...","Johto's favorite Champion Lance has come to fight again!"]
       when "Blue"
         messages = ["Not many trainers can claim as many titles as Champion Blue has in his time.","This is sure to be a immense battle!"]
       when "Red"
