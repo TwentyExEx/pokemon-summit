@@ -16,7 +16,6 @@ $trbytype = [
     :LEADER_Norman,
     :LEADER_Whitney],       
   fighting = [
-    :CHAMPION_Kukui,
     :ELITE_Bruno,
     :ELITE_Bruno2,
     :ELITE_Hala,
@@ -120,8 +119,7 @@ $trbytype = [
       :LEADER_Raihan,
       :ELITE_Lance,
       :ELITE_Drake,
-      :ELITE_Drasna,
-      :CHAMPION_Lance],
+      :ELITE_Drasna],
   dark = [
       :ELITE_Karen,
       :ELITE_Sidney,
@@ -1135,11 +1133,14 @@ def pbSummitMainTrainer
   $DiscordRPC.update
 
   if $game_variables[35] == "challenge" || $game_variables[35] == "gauntlet"
-    setBattleRule("backdrop", $bg.to_s)
+    
     if $game_switches[45] == true
-      championbg = "champion_" << $bg.to_s
-      setBattleRule("base", championbg)
+      back = $game_variables[30][1].to_s.downcase
+      base = $game_variables[30][1].to_s.downcase
+      setBattleRule("backdrop", back)
+      setBattleRule("base", base)
     else
+      setBattleRule("backdrop", $bg.to_s)
       setBattleRule("base", $bg.to_s)
     end
   elsif $game_variables[35] == "bosses"
