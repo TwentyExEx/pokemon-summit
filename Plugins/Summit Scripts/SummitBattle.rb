@@ -1161,7 +1161,7 @@ def pbSummitMainTrainer
       breakrounds = [3,6,9]
       if $game_variables[31] <= 16 && $game_variables[33] == 5 # when cleared bracket
         $game_variables[31] += 1 # next bracket
-      elsif $game_switches[45] == true && breakrounds.include?($game_variables[33])
+      elsif $game_variables[31] == 17 && breakrounds.include?($game_variables[33])
         $game_switches[42] = true # break
       elsif $game_switches[45] == true && $game_variables[33] == 11
         $game_switches[50] = true # red battle
