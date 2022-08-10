@@ -1,7 +1,3 @@
-Credits
-
-Pokemon Essentials Creators - Flameguru, Poccil (Peter O.), Maruno
-
 ~~ Graphics ~~ 
 
 Overworlds for the following: 
@@ -111,6 +107,8 @@ Golisopod User, UberDunsparce
 
 ~~Music~~
 
+Pokemon Masters EX
+
 ~~Animations~~ 
 
 Pokemon Reborn
@@ -123,6 +121,38 @@ BW Key Items - KleinStudio, DeepBlue PacificWaves, Izanagi
 Discord Rich Presence API - rainefall
 Luka's Scripting Utilities, Modular Title Screen - Luka S.J.
 Ultimate Move Tutor - Grogro
+Rename from Party - TechSkylander1518
 Better Speed Up - Marin for the original script, Phantombass for updating to 19.1
 v20.1 Hotfixes - Maruno
-Summit Scripts - kallisto
+
+"Pokémon Essentials" was created by:
+Flameguru
+Poccil (Peter O.)
+Maruno
+
+With contributions from:
+AvatarMonkeyKirby,Marin
+Boushy,MiDas Mike
+Brother1440,Near Fantastica
+FL.,PinkMan
+Genzai Kawakami,Popper
+Golisopod User,Rataime
+help-14,Savordez
+IceGod64,SoundSpawn
+Jacob O. Wobbrock,the__end
+KitsuneKouta,Venom12
+Lisa Anthony,Wachunga
+Luka S.J.,
+and everyone else who helped out
+
+"mkxp-z" by:
+Roza
+Based on "mkxp" by Ancurio et al.
+
+"RPG Maker XP" by:
+Enterbrain
+
+Pokémon is owned by:
+The Pokémon Company
+Nintendo
+Affiliated with Game Freak
