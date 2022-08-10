@@ -306,7 +306,7 @@ module SummitPokeInfo
 	DURANT = {:species => :DURANT, :moves => [:FIRSTIMPRESSION, :SUPERPOWER, :ROCKSLIDE, :IRONHEAD], :form => 0, :ability_index => 0}
 	HYDREIGON = {:species => :HYDREIGON, :moves => [:DRACOMETEOR, :DARKPULSE, :FLAMETHROWER, :ROOST], :form => 0, :ability_index => 1}
 	VOLCARONA = {:species => :VOLCARONA, :moves => [:QUIVERDANCE, :FLAMETHROWER, :BUGBUZZ, :PSYCHIC], :form => 0, :ability_index => 0}
-	CHESNAUGHT = {:species => :CHESNAUGHT, :moves => [:WOODHAMMER, :DRAINPUNCH, :SYNTHESIS, :SPIKEYSHIELD], :form => 0, :ability_index => 0}
+	CHESNAUGHT = {:species => :CHESNAUGHT, :moves => [:WOODHAMMER, :DRAINPUNCH, :SYNTHESIS, :SPIKYSHIELD], :form => 0, :ability_index => 0}
 	DELPHOX = {:species => :DELPHOX, :moves => [:CALMMIND, :FIREBLAST, :PSYCHIC, :GRASSKNOT], :form => 0, :ability_index => 0}
 	GRENINJA = {:species => :GRENINJA, :moves => [:HYDROPUMP, :DARKPULSE, :WATERSHURIKEN, :SPIKES], :form => 0, :ability_index => 0}
 	DIGGERSBY = {:species => :DIGGERSBY, :moves => [:EARTHQUAKE, :HAMMERARM, :SWORDSDANCE, :BOUNCE], :form => 0, :ability_index => 0}
@@ -345,7 +345,7 @@ module SummitPokeInfo
 	GUMSHOOS = {:species => :GUMSHOOS, :moves => [:HYPERFANG, :CRUNCH, :BULLDOZE, :SUBSTITUTE], :form => 0, :ability_index => 1}
 	VIKAVOLT = {:species => :VIKAVOLT, :moves => [:ZAPCANNON, :THUNDERBOLT, :BUGBUZZ, :FLASHCANNON], :form => 0, :ability_index => 0}
 	CRABOMINABLE = {:species => :CRABOMINABLE, :moves => [:DRAINPUNCH, :ICEHAMMER, :EARTHQUAKE, :THUNDERPUNCH], :form => 0, :ability_index => 1}
-	RIBOMBEE = {:species => :RIBOMBEE, :moves => [:POLLENPUFF, :MOONBLAST, :QUIVERDANCE, :STICKYWEB], :form => 0, :ability_index => 1}
+	RIBOMBEE = {:species => :RIBOMBEE, :moves => [:POLLENPUFF, :DRAININGKISS, :QUIVERDANCE, :STICKYWEB], :form => 0, :ability_index => 1}
 	WISHIWASHI = {:species => :WISHIWASHI, :moves => [:LIQUIDATION, :EARTHQUAKE, :ICEBEAM, :ENDURE], :form => 0, :ability_index => 0}
 	LYCANROC_MIDDAY = {:species => :LYCANROC, :moves => [:ACCELEROCK, :STONEEDGE, :CRUNCH, :THUNDERFANG], :form => 0, :ability_index => 0}
 	LYCANROC_MIDNIGHT = {:species => :LYCANROC, :moves => [:SWORDSDANCE, :STONEEDGE, :CLOSECOMBAT, :SUCKERPUNCH], :form => 1, :ability_index => 0}
