@@ -1,5 +1,52 @@
 $allstats = [:HP, :ATTACK, :DEFENSE, :SPECIAL_ATTACK, :SPECIAL_DEFENSE, :SPEED]
 
+def pbSummitFindIllegals # Debug
+  allpkmn = SummitPokeInfo.allspecies
+  for specform in allpkmn
+    species = SummitPokeInfo.const_get(specform)[:species]
+    form = SummitPokeInfo.const_get(specform)[:form]
+    setmoves = SummitPokeInfo.const_get(specform)[:moves]
+    illegalmoves = []
+    pokedata = GameData::Species.get_species_form(species, form)
+    learnmoves = []
+    if pokedata.tutor_moves
+      tutormoves = pokedata.tutor_moves
+    end
+    for movedata in pokedata.moves
+      if movedata[0] > 50
+        illegalmoves.push("#{movedata[1]} (LearnMoves)") if !tutormoves.include?(movedata[1])
+      end
+      learnmoves.push(movedata[1])
+    end
+    eggmoves = pokedata.egg_moves
+    allmoves = (learnmoves.clone << tutormoves.clone << eggmoves.clone).flatten!
+    for move in setmoves
+      if !allmoves.include?(move) && move != nil
+        illegalmoves.push("#{move} (Unlearnable)") 
+      end
+    end
+    if !illegalmoves.empty?
+      File.open("illegal.txt",'a') do |file|
+        file.write "#{specform.to_s} - "
+      end
+      for move in illegalmoves
+        File.open("illegal.txt",'a') do |file|
+          file.write "#{move}"
+        end
+        if illegalmoves.index(move)+1 != illegalmoves.length
+          File.open("illegal.txt",'a') do |file|
+            file.write ", "
+          end
+        end
+      end
+      File.open("illegal.txt",'a') do |file|
+        file.write "#{$/}"
+      end
+    end
+  end
+  pbMessage("All illegal mons found and listed.")
+end
+
 def pbSummitSelectPokemon
   allpkmn = SummitPokeInfo.allspecies
   num = rand(0...(allpkmn.length))
