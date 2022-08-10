@@ -221,7 +221,7 @@ module CableClub
         # Choosing an activity (leader only).
         when :choose_activity
           pbMessageDisplay(msgwindow, _INTL("Choose an activity.\\^"))
-          command = pbShowCommands(msgwindow, [_INTL("Single Battle"), _INTL("Double Battle"), _INTL("Trade")], -1)
+          command = pbShowCommands(msgwindow, [_INTL("Single Battle"), _INTL("Double Battle")], -1)
           case command
           when 0..1 # Battle
             if command == 1 && $player.party_count < 2
@@ -244,12 +244,12 @@ module CableClub
               state = :await_accept_activity
             end
 
-            when 2 # Trade
-              connection.send do |writer|
-                writer.sym(:trade)
-              end
-              activity = :trade
-              state = :await_accept_activity
+            # when 2 # Trade
+            #   connection.send do |writer|
+            #     writer.sym(:trade)
+            #   end
+            #   activity = :trade
+            #   state = :await_accept_activity
 
             else # Cancel
               # TODO: Confirmation box?
