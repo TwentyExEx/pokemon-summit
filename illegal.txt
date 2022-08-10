@@ -1,6 +1,0 @@
-WAILORD - BLOCK (Unlearnable)
-METAGROSS - TOXIC (Unlearnable)
-PANGORO - KNOCKOFF (Unlearnable)
-HAWLUCHA - ENDEAVOR (LearnMoves), SKYATTACK (LearnMoves)
-INCINEROAR - THRASH (LearnMoves)
-RIBOMBEE - MOONBLAST (Unlearnable), STICKYWEB (Unlearnable)
