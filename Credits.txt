@@ -124,6 +124,7 @@ Ultimate Move Tutor - Grogro
 Rename from Party - TechSkylander1518
 Better Speed Up - Marin for the original script, Phantombass for updating to 19.1
 v20.1 Hotfixes - Maruno
+Cable Club - mGriffin,Khaikaa,Vendily
 
 "Pokémon Essentials" was created by:
 Flameguru
