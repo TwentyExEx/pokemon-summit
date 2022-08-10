@@ -266,7 +266,7 @@ module SummitPokeInfo
 	MARACTUS = {:species => :MARACTUS, :moves => [:SPIKES, :ENDEAVOR, :ENERGYBALL, :SUCKERPUNCH], :form => 0, :ability_index => 1}
 	CRUSTLE = {:species => :CRUSTLE, :moves => [:XSCISSOR, :STEALTHROCK, :SHELLSMASH, :ROCKSLIDE], :form => 0, :ability_index => 1}
 	SCRAFTY = {:species => :SCRAFTY, :moves => [:DRAGONDANCE, :CLOSECOMBAT, :KNOCKOFF, :IRONHEAD], :form => 0, :ability_index => 1}
-	SIGILYPH = {:species => :SIGILYPH, :moves => [:CALMMIND, :AIRSLASH, :ROOST, :PSYCHICH], :form => 0, :ability_index => 0}
+	SIGILYPH = {:species => :SIGILYPH, :moves => [:CALMMIND, :AIRSLASH, :ROOST, :PSYCHIC], :form => 0, :ability_index => 0}
 	COFAGRIGUS = {:species => :COFAGRIGUS, :moves => [:IRONDEFENSE, :BODYPRESS, :SHADOWBALL, :REST], :form => 0, :ability_index => 0}
 	CARRACOSTA = {:species => :CARRACOSTA, :moves => [:SHELLSMASH, :STONEEDGE, :AQUAJET, :LIQUIDATION], :form => 0, :ability_index => 1}
 	ARCHEOPS = {:species => :ARCHEOPS, :moves => [:STONEEDGE, :EARTHQUAKE, :DUALWINGBEAT, :ROOST], :form => 0, :ability_index => 0}
