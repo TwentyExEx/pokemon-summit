@@ -370,7 +370,7 @@ def pbSummitBracketSelection(group)
     when group >= 8
       trainerSelection = trainerlist
   end
-  if $game_variables[35] != arena
+  if $game_variables[35] != "arcade"
     $game_variables[29] = trainerSelection
   end
 end
