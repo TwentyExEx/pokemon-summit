@@ -155,7 +155,7 @@ class Battle::Scene::FightMenu < Battle::Scene::MenuBase
     @battleButton.z = self.z - 1
     @visibility["battleButton"] = (@mode > 0)
   end
-  
+
   def refreshButtonNames
     moves = (@battler) ? @battler.moves : []
     if !USE_GRAPHICS
@@ -173,11 +173,11 @@ class Battle::Scene::FightMenu < Battle::Scene::MenuBase
       next if !@visibility["button_#{i}"]
       x = button.x - self.x + (button.src_rect.width / 2)
       y = button.y - self.y + 14
-      moveNameBase = TEXT_BASE_COLOR
+      moveNameBase = TEXT_SHADOW_COLOR
       if GET_MOVE_TEXT_COLOR_FROM_MOVE_BUTTON && moves[i].display_type(@battler)
         moveNameBase = button.bitmap.get_pixel(10, button.src_rect.y + 34)
       end
-      textPos.push([moves[i].short_name, x, y, 2, moveNameBase, TEXT_SHADOW_COLOR])
+      textPos.push([moves[i].short_name, x-68, y, 0, moveNameBase, TEXT_BASE_COLOR])
       if PluginManager.installed?("PLA Battle Styles") && @battler.style_trigger > 0
         next if !moves[i].mastered?
         imagePos.push(["Graphics/Plugins/PLA Battle Styles/mastered_icon", button.x - self.x, button.y - self.y + 3])
