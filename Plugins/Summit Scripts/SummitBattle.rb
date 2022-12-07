@@ -1166,22 +1166,26 @@ def pbSummitMainTrainer
   $DiscordRPC.update
 
   if $game_variables[35] == "challenge" || $game_variables[35] == "gauntlet"
-    
-    if $game_switches[45] == true
-      back = $game_variables[30][1].to_s.downcase
-      base = $game_variables[30][1].to_s.downcase
-      setBattleRule("backdrop", back)
-      setBattleRule("base", base)
+    if $game_switches[45] == true # Champion bracket
+      battleback = $game_variables[30][1].to_s.downcase
+      battlebase = $game_variables[30][1].to_s.downcase
     else
-      setBattleRule("backdrop", $bg.to_s)
-      setBattleRule("base", $bg.to_s)
+      battleback = $bg.to_s
+      battlebase = $bg.to_s
     end
   elsif $game_variables[35] == "bosses"
-    setBattleRule("backdrop", "dark")
-    setBattleRule("base", "dark")
+      battleback = "dark"
+      battlebase = "dark"
   end
   
-  TrainerBattle.start(type, name, version)
+  TrainerBattle.dx_start([type.to_sym, name, version], {
+    :canlose => true,
+    :noExp => true,
+    :nomoney => true,
+    :setstyle => true,
+    :outcome => 32, 
+    :backdrop => [battleback, battlebase]
+  })
 
   $Trainer.party = $game_variables[27]
   if $game_variables[35] == "challenge" || $game_variables[35] == "bosses" || $game_variables[35] == "gauntlet" # Main mode
@@ -1249,13 +1253,6 @@ def pbSummitBracketUnlock(announce = true)
 end
 
 def pbSummitPrepBattle
-  setBattleRule("canLose")
-  setBattleRule("cannotRun")
-  setBattleRule("noExp")
-  setBattleRule("noMoney")
-  setBattleRule("disablePokeBalls")
-  setBattleRule("setStyle")
-  setBattleRule("outcomeVar", 32)
   tempParty = []
   for poke in $Trainer.party
     clonepoke = poke.clone
@@ -1323,7 +1320,13 @@ def pbSummitArcadeTrainer(party_size = 3)
   $DiscordRPC.large_image = "arcade_trainer"
   $DiscordRPC.state = "Arcade (Win Streak: #{$game_variables[43].to_int})"
   $DiscordRPC.update
-  TrainerBattle.start(@arcadetype, @arcadename)
+  TrainerBattle.dx_start([@arcadetype, @arcadename], {
+    :canlose => true,
+    :noExp => true,
+    :nomoney => true,
+    :setstyle => true,
+    :outcome => 32
+  })
   pbSummitEndBattle(@arcadetype, @arcadename)
   if $game_variables[32] == 1
     $game_variables[46] += 1
