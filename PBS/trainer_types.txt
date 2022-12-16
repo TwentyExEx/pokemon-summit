@@ -1806,3 +1806,11 @@ BaseMoney = 60
 SkillLevel = 100
 BattleBGM = red2
 VictoryBGM = kantoleaderw
+#-------------------------------
+[TRAINER_Arven]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = red2
+VictoryBGM = kantoleaderw
