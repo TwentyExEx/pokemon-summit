@@ -1147,7 +1147,7 @@ SkillLevel = 100
 BattleBGM = lance
 VictoryBGM = kantoleaderw
 #-------------------------------
-[ELITE_Green]
+[SPECIAL_Green]
 Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 60
@@ -1155,7 +1155,7 @@ SkillLevel = 100
 BattleBGM = green
 VictoryBGM = kantoleaderw
 #-------------------------------
-[ELITE_Oak]
+[SPECIAL_Oak]
 Name = Professor
 Gender = Male
 BaseMoney = 60
@@ -1179,7 +1179,7 @@ SkillLevel = 100
 BattleBGM = karen
 VictoryBGM = johtoleaderw
 #-------------------------------
-[ELITE_Elm]
+[SPECIAL_Elm]
 Name = Professor
 Gender = Male
 BaseMoney = 60
@@ -1187,7 +1187,7 @@ SkillLevel = 100
 BattleBGM = johtotrainer
 VictoryBGM = johtotrainerw
 #-------------------------------
-[ELITE_Eusine]
+[SPECIAL_Eusine]
 Name = Mystery Man
 Gender = Male
 BaseMoney = 60
@@ -1195,7 +1195,7 @@ SkillLevel = 100
 BattleBGM = johtotrainer
 VictoryBGM = johtotrainerw
 #-------------------------------
-[ELITE_Kris]
+[SPECIAL_Kris]
 Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 60
@@ -1235,7 +1235,7 @@ SkillLevel = 100
 BattleBGM = hoennelitefour
 VictoryBGM = hoennleaderw
 #-------------------------------
-[ELITE_Birch]
+[SPECIAL_Birch]
 Name = Professor
 Gender = Male
 BaseMoney = 60
@@ -1243,14 +1243,14 @@ SkillLevel = 100
 BattleBGM = birch
 VictoryBGM = hoenntrainerw
 #-------------------------------
-[ELITE_Zinnia]
+[SPECIAL_Zinnia]
 Name = Lorekeeper
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = zinnia
 #-------------------------------
-[ELITE_Lisia]
+[SPECIAL_Lisia]
 Name = Pokémon Coordinator
 Gender = Female
 BaseMoney = 60
@@ -1290,7 +1290,7 @@ SkillLevel = 100
 BattleBGM = lucian
 VictoryBGM = sinnohelitefourw
 #-------------------------------
-[ELITE_Riley]
+[SPECIAL_Riley]
 Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
@@ -1298,7 +1298,7 @@ SkillLevel = 100
 BattleBGM = sinnohtrainer
 VictoryBGM = sinnohtrainerw
 #-------------------------------
-[ELITE_Cheryl]
+[SPECIAL_Cheryl]
 Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 60
@@ -1306,7 +1306,7 @@ SkillLevel = 100
 BattleBGM = sinnohtrainer
 VictoryBGM = sinnohtrainerw
 #-------------------------------
-[ELITE_Buck]
+[SPECIAL_Buck]
 Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
@@ -1314,7 +1314,7 @@ SkillLevel = 100
 BattleBGM = sinnohtrainer
 VictoryBGM = sinnohtrainerw
 #-------------------------------
-[ELITE_Mira]
+[SPECIAL_Mira]
 Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 60
@@ -1322,7 +1322,7 @@ SkillLevel = 100
 BattleBGM = sinnohtrainer
 VictoryBGM = sinnohtrainerw
 #-------------------------------
-[ELITE_Marley]
+[SPECIAL_Marley]
 Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 60
@@ -1330,7 +1330,7 @@ SkillLevel = 100
 BattleBGM = sinnohtrainer
 VictoryBGM = sinnohtrainerw
 #-------------------------------
-[ELITE_Rowan]
+[SPECIAL_Rowan]
 Name = Professor
 Gender = Male
 BaseMoney = 60
@@ -1370,28 +1370,28 @@ SkillLevel = 100
 BattleBGM = caitlin
 VictoryBGM = unovaleaderw
 #-------------------------------
-[ELITE_N]
+[SPECIAL_N]
 Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = n
 #-------------------------------
-[ELITE_Benga]
+[SPECIAL_Benga]
 Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = unovatrainer
 #-------------------------------
-[ELITE_Colress]
+[SPECIAL_Colress]
 Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = unovatrainer
 #-------------------------------
-[ELITE_Juniper]
+[SPECIAL_Juniper]
 Name = Professor
 Gender = Female
 BaseMoney = 60
@@ -1430,21 +1430,21 @@ SkillLevel = 100
 BattleBGM = kaloselitefour
 VictoryBGM = kalosleaderw
 #-------------------------------
-[ELITE_Sycamore]
+[SPECIAL_Sycamore]
 Name = Professor
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sycamore
 #-------------------------------
-[ELITE_Looker]
+[SPECIAL_Looker]
 Name = Police Officer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = looker
 #-------------------------------
-[ELITE_Trevor]
+[SPECIAL_Trevor]
 Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
@@ -1467,7 +1467,7 @@ SkillLevel = 100
 BattleBGM = olivia
 VictoryBGM = alolacaptainw
 #-------------------------------
-[ELITE_Nanu]
+[SPECIAL_Nanu]
 Name = Kahuna
 Gender = Male
 BaseMoney = 60
@@ -1475,7 +1475,7 @@ SkillLevel = 100
 BattleBGM = kahuna
 VictoryBGM = alolacaptainw
 #-------------------------------
-[ELITE_Hapu]
+[SPECIAL_Hapu]
 Name = Kahuna
 Gender = Female
 BaseMoney = 60
@@ -1499,14 +1499,14 @@ SkillLevel = 100
 BattleBGM = kahili
 VictoryBGM = alolacaptainw
 #-------------------------------
-[ELITE_Gladion]
+[SPECIAL_Gladion]
 Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = gladion
 #-------------------------------
-[ELITE_Lusamine]
+[SPECIAL_Lusamine]
 Name = Aether President
 Gender = Female
 BaseMoney = 60
@@ -1537,21 +1537,21 @@ SkillLevel = 100
 BattleBGM = mustard
 VictoryBGM = galarleaderw
 #-------------------------------
-[ELITE_Marnie]
+[SPECIAL_Marnie]
 Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = marnie
 #-------------------------------
-[ELITE_Bede]
+[SPECIAL_Bede]
 Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = bede
 #-------------------------------
-[ELITE_Sonia]
+[SPECIAL_Sonia]
 Name = Professor
 Gender = Female
 BaseMoney = 60
