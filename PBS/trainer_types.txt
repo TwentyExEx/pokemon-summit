@@ -1015,7 +1015,7 @@ Name = Rival
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = unovatrainer
+BattleBGM = hugh
 #-------------------------------
 [RIVAL_Hau]
 Name = Rival
@@ -1208,7 +1208,7 @@ Name = Elite Four
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = hoennelitefour
+BattleBGM = glacia
 VictoryBGM = hoennleaderw
 #-------------------------------
 [ELITE_Phoebe]
@@ -1216,7 +1216,7 @@ Name = Elite Four
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = hoennelitefour
+BattleBGM = glacia
 VictoryBGM = hoennleaderw
 #-------------------------------
 [ELITE_Glacia]
@@ -1224,7 +1224,7 @@ Name = Elite Four
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = hoennelitefour
+BattleBGM = glacia
 VictoryBGM = hoennleaderw
 #-------------------------------
 [ELITE_Drake]
@@ -1232,7 +1232,7 @@ Name = Elite Four
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = hoennelitefour
+BattleBGM = drake
 VictoryBGM = hoennleaderw
 #-------------------------------
 [SPECIAL_Birch]
@@ -1389,7 +1389,7 @@ Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = unovatrainer
+BattleBGM = colress
 #-------------------------------
 [SPECIAL_Juniper]
 Name = Professor
@@ -1617,7 +1617,7 @@ Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = kalostrainer
+BattleBGM = protagkalos
 #-------------------------------
 [PROTAG_Elio]
 Name = Pokémon Trainer
@@ -1684,7 +1684,7 @@ Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = kalostrainer
+BattleBGM = protagkalos
 #-------------------------------
 [PROTAG_Selene]
 Name = Pokémon Trainer
@@ -1889,7 +1889,7 @@ BaseMoney = 60
 SkillLevel = 100
 BattleBGM = galacticcommander
 #-------------------------------
-[SPECIAL_Mars]
+[SPECIAL_Jupiter]
 Name = Team Galactic Commander
 Gender = Female
 BaseMoney = 60

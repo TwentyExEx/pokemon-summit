@@ -28433,3 +28433,7 @@ Pokemon = LAPRAS,50
 	Item = SITRUSBERRY
 	Nature = QUIET
 #-------------------------------
+[SPECIAL_Colress,Colress]
+LoseText = I am a test trainer. Please report as a bug if encountered
+Pokemon = MAGIKARP,50
+#-------------------------------
