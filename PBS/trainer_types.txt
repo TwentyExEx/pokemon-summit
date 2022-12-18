@@ -1806,3 +1806,387 @@ BaseMoney = 60
 SkillLevel = 100
 BattleBGM = red2
 VictoryBGM = kantoleaderw
+#-------------------------------
+[SPECIAL_Ash]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = ash
+VictoryBGM = kantoleaderw
+#-------------------------------
+[SPECIAL_Archer]
+Name = Team Rocket Executive
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = rocketexecutive
+VictoryBGM = kantoleaderw
+#-------------------------------
+[SPECIAL_Petrel]
+Name = Team Rocket Executive
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = rocketexecutive
+VictoryBGM = kantoleaderw
+#-------------------------------
+[SPECIAL_Ariana]
+Name = Team Rocket Executive
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = rocketexecutive
+VictoryBGM = kantoleaderw
+#-------------------------------
+[SPECIAL_Proton]
+Name = Team Rocket Executive
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = rocketexecutive
+VictoryBGM = kantoleaderw
+#-------------------------------
+[SPECIAL_Tabitha]
+Name = Team Magma Admin
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = magmaaquaadmin
+#-------------------------------
+[SPECIAL_Courtney]
+Name = Team Magma Admin
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = magmaaquaadmin
+#-------------------------------
+[SPECIAL_Matt]
+Name = Team Aqua Admin
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = magmaaquaadmin
+#-------------------------------
+[SPECIAL_Shelly]
+Name = Team Aqua Admin
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = magmaaquaadmin
+#-------------------------------
+[SPECIAL_Saturn]
+Name = Team Galactic Commander
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = galacticcommander
+#-------------------------------
+[SPECIAL_Mars]
+Name = Team Galactic Commander
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = galacticcommander
+#-------------------------------
+[SPECIAL_Mars]
+Name = Team Galactic Commander
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = galacticcommander
+#-------------------------------
+[SPECIAL_Faba]
+Name = Aether Branch Chief
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = faba
+#-------------------------------
+[SPECIAL_Plumeria]
+Name = Team Skull Admin
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = plumeria
+#-------------------------------
+[SPECIAL_Lillie]
+Name = Pokémon Trainer
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = lillie
+#-------------------------------
+[HISUI_Mai]
+Name = Warden
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = warden
+#-------------------------------
+[HISUI_Lian]
+Name = Warden
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = warden
+#-------------------------------
+[HISUI_Calaba]
+Name = Warden
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = warden
+#-------------------------------
+[HISUI_Arezu]
+Name = Warden
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = warden
+#-------------------------------
+[HISUI_Iscan]
+Name = Warden
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = warden
+#-------------------------------
+[HISUI_Palina]
+Name = Warden
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = warden
+#-------------------------------
+[HISUI_Ingo]
+Name = Warden
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = warden
+#-------------------------------
+[HISUI_Melli]
+Name = Warden
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = warden
+#-------------------------------
+[HISUI_Gaeric]
+Name = Warden
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = warden
+#-------------------------------
+[HISUI_Sabi]
+Name = Warden
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = warden
+#-------------------------------
+[HISUI_Adaman]
+Name = Clan Leader
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = warden
+#-------------------------------
+[HISUI_Irida]
+Name = Clan Leader
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = warden
+#-------------------------------
+[HISUI_Kamado]
+Name = The Galaxy Team's
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = warden
+#-------------------------------
+[HISUI_Volo]
+Name = Pokémon Wielder
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = volo
+#-------------------------------
+[LEADER_Katy]
+Name = Paldea Leader
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = paldealeader
+#-------------------------------
+[LEADER_Brassius]
+Name = Paldea Leader
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = paldealeader
+#-------------------------------
+[LEADER_Iono]
+Name = Paldea Leader
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = paldealeader
+#-------------------------------
+[LEADER_Kofu]
+Name = Paldea Leader
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = paldealeader
+#-------------------------------
+[LEADER_Larry]
+Name = Paldea Leader
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = paldealeader
+#-------------------------------
+[LEADER_Ryme]
+Name = Paldea Leader
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = paldealeader
+#-------------------------------
+[LEADER_Tulip]
+Name = Paldea Leader
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = paldealeader
+#-------------------------------
+[LEADER_Grusha]
+Name = Paldea Leader
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = paldealeader
+#-------------------------------
+[ELITE_Rika]
+Name = Paldea Elite Four
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = paldeaelitefour
+#-------------------------------
+[ELITE_Poppy]
+Name = Paldea Elite Four
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = paldeaelitefour
+#-------------------------------
+[ELITE_Larry]
+Name = Paldea Elite Four
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = paldeaelitefour
+#-------------------------------
+[ELITE_Hassel]
+Name = Paldea Elite Four
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = paldeaelitefour
+#-------------------------------
+[CHAMPION_Geeta]
+Name = Champion
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = geeta
+#-------------------------------
+[SPECIAL_Giacomo]
+Name = Team Star
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = teamstaradmin
+#-------------------------------
+[SPECIAL_Mela]
+Name = Team Star
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = teamstaradmin
+#-------------------------------
+[SPECIAL_Atticus]
+Name = Team Star
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = teamstaradmin
+#-------------------------------
+[SPECIAL_Ortega]
+Name = Team Star
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = teamstaradmin
+#-------------------------------
+[SPECIAL_Eri]
+Name = Team Star
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = teamstaradmin
+#-------------------------------
+[SPECIAL_Cassiopeia]
+Name = Team Star Leader
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = cassiopeia
+#-------------------------------
+[SPECIAL_Arven]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = arven
+#-------------------------------
+[SPECIAL_Clavell]
+Name = Director
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = clavell
+#-------------------------------
+[SPECIAL_Jacq]
+Name = Instructor
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = jacq
+#-------------------------------
+[RIVAL_Nemona]
+Name = Rival
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = nemona
+#-------------------------------
+[PROTAG_Florian]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = paldeatrainer
+#-------------------------------
+[PROTAG_Juliana]
+Name = Pokémon Trainer
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = paldeatrainer
+#-------------------------------
