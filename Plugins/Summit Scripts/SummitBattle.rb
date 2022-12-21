@@ -1542,3 +1542,21 @@ def pbSummitRainbowRocket
   pbMessage("\\rYou're a strong trainer... Please, you have to do something!")
   pbMessage("\\rTalk to me when you're prepared... I can take you to the floor they're on.")
 end
+
+# Adds opponent trainer outfits
+class Battle::Scene
+  def pbCreateTrainerFrontSprite(idxTrainer, trainerType, numTrainers = 1)
+    if $game_switches[100] == true # Christmas event
+      trainerFile = "Graphics/Trainers/"+trainerType.to_s+"_christmas"
+    else
+      trainerFile = GameData::TrainerType.front_sprite_filename(trainerType)
+    end
+    spriteX, spriteY = Battle::Scene.pbTrainerPosition(1, idxTrainer, numTrainers)
+    trainer = pbAddSprite("trainer_#{idxTrainer + 1}", spriteX, spriteY, trainerFile, @viewport)
+    return if !trainer.bitmap
+    # Alter position of sprite
+    trainer.z  = 7 + idxTrainer
+    trainer.ox = trainer.src_rect.width / 2
+    trainer.oy = trainer.bitmap.height
+  end
+end
