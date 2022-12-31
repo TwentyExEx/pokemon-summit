@@ -27,6 +27,13 @@ ItemHandlers::UseOnPokemon.add(:REVEALGLASS, proc { |item, qty, pkmn, scene|
   next true
 })
 #===============================================================================
+# Hopo Berry
+#===============================================================================
+Battle::ItemEffects::OnEndOfUsingMove.copy(:LEPPABERRY, :HOPOBERRY)
+ItemHandlers::UseOnPokemon.copy(:ETHER, :HOPOBERRY)
+ItemHandlers::CanUseInBattle.copy(:ETHER, :HOPOBERRY)
+ItemHandlers::BattleUseOnPokemon.copy(:ETHER, :HOPOBERRY)
+#===============================================================================
 # Poke Ball Items
 #===============================================================================
 Battle::PokeBallEffects::ModifyCatchRate.add(:HISUIANPOKEBALL, proc { |ball, catchRate, battle, battler|

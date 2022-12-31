@@ -7090,3 +7090,175 @@ NamePlural = Gimmighoul Coins
 Pocket = 1
 Price = 0
 Description = An item that accidentally dropped by a Pokémon. It seems that Gimmighoul treasure and hoard these.
+#-------------------------------
+[TINYBAMBOOSHOOT]
+Name = Tiny Bamboo Shoot
+NamePlural = Tiny Bamboo Shoots
+Pocket = 1
+Price = 1500
+Description = A small and rare bamboo shoot. It's quite popular with a certain class of gourmands.
+#-------------------------------
+[BIGBAMBOOSHOOT]
+Name = Big Bamboo Shoot
+NamePlural = Big Bamboo Shoots
+Pocket = 1
+Price = 6000
+Description = A large and rare bamboo shoot. It's extremely popular with a certain class of gourmands.
+#-------------------------------
+[ROTOMPHONE]
+Name = Rotom Phone
+NamePlural = Rotom Phones
+Pocket = 1
+Price = 0
+Flags = KeyItem
+Description = The latest model of smartphone. A Rotom lives within it, and it can be used to run all sorts of handy apps.
+#-------------------------------
+[SCARLETBOOK]
+Name = Scarlet Book
+NamePlural = Scarlet Books
+Pocket = 1
+Price = 0
+Flags = KeyItem
+Description = A record of the Heath's expedition on the Great Crater of Paldea. The book has the name "Sada" written in clumsy handwriting.
+#-------------------------------
+[VIOLETBOOK]
+Name = Violet Book
+NamePlural = Violet Books
+Pocket = 1
+Price = 0
+Flags = KeyItem
+Description = A record of the Heath's expedition on the Great Crater of Paldea. The book has the name "Turo" written in clumsy handwriting.
+#-------------------------------
+[TERAORB]
+Name = Tera Orb
+NamePlural = Tera Orbs
+Pocket = 1
+Price = 0
+Flags = KeyItem
+Description = An orb that holds the power to crystallize. When it is charged, it can be used on Pokémon to Terastallize.
+#-------------------------------
+[NORMALTERASHARD]
+Name = Normal Tera Shard
+NamePlural = Normal Tera Shards
+Pocket = 1
+Price = 2000
+Description =	On rare occasions, these shards form when a Tera Pokémon falls in battle and its Tera Jewel shatters.
+#-------------------------------
+[FIGHTINGTERASHARD]
+Name = Fighting Tera Shard
+NamePlural = Fighting Tera Shards
+Pocket = 1
+Price = 2000
+Description =	On rare occasions, these shards form when a Tera Pokémon falls in battle and its Tera Jewel shatters.
+#-------------------------------
+[FLYINGTERASHARD]
+Name = Flying Tera Shard
+NamePlural = Flying Tera Shards
+Pocket = 1
+Price = 2000
+Description =	On rare occasions, these shards form when a Tera Pokémon falls in battle and its Tera Jewel shatters.
+#-------------------------------
+[POISONTERASHARD]
+Name = Poison Tera Shard
+NamePlural = Poison Tera Shards
+Pocket = 1
+Price = 2000
+Description =	On rare occasions, these shards form when a Tera Pokémon falls in battle and its Tera Jewel shatters.
+#-------------------------------
+[GROUNDTERASHARD]
+Name = Ground Tera Shard
+NamePlural = Ground Tera Shards
+Pocket = 1
+Price = 2000
+Description =	On rare occasions, these shards form when a Tera Pokémon falls in battle and its Tera Jewel shatters.
+#-------------------------------
+[ROCKTERASHARD]
+Name = Rock Tera Shard
+NamePlural = Rock Tera Shards
+Pocket = 1
+Price = 2000
+Description =	On rare occasions, these shards form when a Tera Pokémon falls in battle and its Tera Jewel shatters.
+#-------------------------------
+[BUGTERASHARD]
+Name = Bug Tera Shard
+NamePlural = Bug Tera Shards
+Pocket = 1
+Price = 2000
+Description =	On rare occasions, these shards form when a Tera Pokémon falls in battle and its Tera Jewel shatters.
+#-------------------------------
+[GHOSTTERASHARD]
+Name = Ghost Tera Shard
+NamePlural = Ghost Tera Shards
+Pocket = 1
+Price = 2000
+Description =	On rare occasions, these shards form when a Tera Pokémon falls in battle and its Tera Jewel shatters.
+#-------------------------------
+[STEELTERASHARD]
+Name = Steel Tera Shard
+NamePlural = Steel Tera Shards
+Pocket = 1
+Price = 2000
+Description =	On rare occasions, these shards form when a Tera Pokémon falls in battle and its Tera Jewel shatters.
+#-------------------------------
+[FIRETERASHARD]
+Name = Fire Tera Shard
+NamePlural = Fire Tera Shards
+Pocket = 1
+Price = 2000
+Description =	On rare occasions, these shards form when a Tera Pokémon falls in battle and its Tera Jewel shatters.
+#-------------------------------
+[WATERTERASHARD]
+Name = Water Tera Shard
+NamePlural = Water Tera Shards
+Pocket = 1
+Price = 2000
+Description =	On rare occasions, these shards form when a Tera Pokémon falls in battle and its Tera Jewel shatters.
+#-------------------------------
+[GRASSTERASHARD]
+Name = Grass Tera Shard
+NamePlural = Grass Tera Shards
+Pocket = 1
+Price = 2000
+Description =	On rare occasions, these shards form when a Tera Pokémon falls in battle and its Tera Jewel shatters.
+#-------------------------------
+[ELECTRICTERASHARD]
+Name = Electric Tera Shard
+NamePlural = Electric Tera Shards
+Pocket = 1
+Price = 2000
+Description =	On rare occasions, these shards form when a Tera Pokémon falls in battle and its Tera Jewel shatters.
+#-------------------------------
+[PSYCHICTERASHARD]
+Name = Psychic Tera Shard
+NamePlural = Psychic Tera Shards
+Pocket = 1
+Price = 2000
+Description =	On rare occasions, these shards form when a Tera Pokémon falls in battle and its Tera Jewel shatters.
+#-------------------------------
+[ICETERASHARD]
+Name = Ice Tera Shard
+NamePlural = Ice Tera Shards
+Pocket = 1
+Price = 2000
+Description =	On rare occasions, these shards form when a Tera Pokémon falls in battle and its Tera Jewel shatters.
+#-------------------------------
+[DRAGONTERASHARD]
+Name = Dragon Tera Shard
+NamePlural = Dragon Tera Shards
+Pocket = 1
+Price = 2000
+Description =	On rare occasions, these shards form when a Tera Pokémon falls in battle and its Tera Jewel shatters.
+#-------------------------------
+[DARKTERASHARD]
+Name = Dark Tera Shard
+NamePlural = Dark Tera Shards
+Pocket = 1
+Price = 2000
+Description =	On rare occasions, these shards form when a Tera Pokémon falls in battle and its Tera Jewel shatters.
+#-------------------------------
+[FAIRYTERASHARD]
+Name = Fairy Tera Shard
+NamePlural = Fairy Tera Shards
+Pocket = 1
+Price = 2000
+Description =	On rare occasions, these shards form when a Tera Pokémon falls in battle and its Tera Jewel shatters.

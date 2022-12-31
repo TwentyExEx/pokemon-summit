@@ -141,6 +141,7 @@ class Battle
   def pbSetDefeated(battler)
     return if !battler || !@internalBattle
     # echoln [@lastMoveUser,battler.lastAttacker,battler.lastFoeAttacker,battler.lastHPLostFromFoe]
+    return if battler.lastAttacker.empty?
     attacker = @battlers[battler.lastAttacker[0]]
     evo = GameData::Species.get_species_form(attacker.species,attacker.form).get_evolutions
     evo.each{|e|
@@ -148,8 +149,8 @@ class Battle
       when :LevelDefeatItsKindWithItem
         next if battler.item != e[2]
         next if battler.species != attacker.species
+        attacker.pokemon.add_defeated_species(battler.species)
       end
-      attacker.pokemon.add_defeated_species(battler.species)
     }
     bisharp_pbSetDefeated(battler)
   end
