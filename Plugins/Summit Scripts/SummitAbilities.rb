@@ -185,7 +185,7 @@ Battle::AbilityEffects::EndOfRoundHealing.add(:VOLTSTRIKER,
 #===============================================================================
 # Insectivorous
 #===============================================================================
-Battle::AbilityEffects::MoveImmunity.add(:SAPSIPPER,
+Battle::AbilityEffects::MoveImmunity.add(:INSECTIVOROUS,
   proc { |ability, user, target, move, type, battle, show_message|
     next target.pbMoveImmunityStatRaisingAbility(user, move, type,
        :BUG, :ATTACK, 1, show_message)
