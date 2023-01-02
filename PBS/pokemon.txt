@@ -25847,7 +25847,7 @@ Generation = 9
 #-------------------------------
 [MIRAIDON]
 Name = Miraidon
-Types = ELECTRIC,WATER
+Types = ELECTRIC,DRAGON
 BaseStats = 100,85,100,135,135,115
 GenderRatio = Genderless
 GrowthRate = Slow
