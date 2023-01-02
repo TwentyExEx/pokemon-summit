@@ -2190,3 +2190,17 @@ BaseMoney = 60
 SkillLevel = 100
 BattleBGM = paldeatrainer
 #-------------------------------
+[IMPOSTER_Sada]
+Name = Rouge AI
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = sadaturo
+#-------------------------------
+[IMPOSTER_Turo]
+Name = Rouge AI
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = sadaturo
+#-------------------------------
