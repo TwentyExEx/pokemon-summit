@@ -154,7 +154,7 @@ Battle::AbilityEffects::EndOfRoundWeather.add(:DELUGEPOWER,
 Battle::AbilityEffects::DamageCalcFromUser.add(:GRASSFURY,
   proc { |ability, user, target, move, mults, baseDmg, type|
     if move.specialMove? && battler.battle.field.terrain == :Grassy
-      mults[:attack_multiplier] *= 1.5
+      mults[:attack_multiplier] *= 2
     end
   }
 )

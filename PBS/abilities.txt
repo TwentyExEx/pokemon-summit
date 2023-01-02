@@ -1194,3 +1194,51 @@ Description = Boosts Attack in Tailwind or by wind damage.
 [ZEROTOHERO]
 Name = Zero to Hero
 Description = Transforms into its Hero Form when it switches out.
+#-------------------------------
+[MODERNIZE]
+Name = Modernize
+Description = Physical Normal-type moves become Fighting-type moves while special Normal-type moves become Fairy-type. The power of these moves are boosted.
+#-------------------------------
+[DEMONIZE]
+Name = Demonize
+Description = Normal-type moves become Dark-type and power up.
+#-------------------------------
+[PARASITICVINE]
+Name = Parasitic Vine
+Description = Grass-type moves heal the user by half of the damage dealt.
+#-------------------------------
+[CLEARMIND]
+Name = Clear Mind
+Description = Psychic-type moves are given priority. The power of these moves are boosted a little.
+#-------------------------------
+[DRAININGTOUCH]
+Name = Draining Touch
+Description = Contact moves heal the user by a small amount
+#-------------------------------
+[THUNDERLEGS]
+Name = Thunder Legs
+Description = Boosts the power of kicking moves.
+#-------------------------------
+[DEEPPUDDLE]
+Name = Deep Puddle
+Description = Prevents Water-type Pokémon from escaping.
+#-------------------------------
+[WARCOAT]
+Name = War Coat
+Description = Raises the user's Attack when hit by a special move.
+#-------------------------------
+[DELUGEPOWER]
+Name = Deluge Power
+Description = In the rain, Sp. Atk is boosted but HP decreases.
+#-------------------------------
+[GRASSFURY]
+Name = Grass Fury
+Description = Doubles Sp. Atk when the terrain is grassy.
+#-------------------------------
+[VOLTSTRIKER]
+Name = Volt Striker
+Description = During electric terrain, Attack is boosted but HP decreases.
+#-------------------------------
+[INSECTIVOROUS]
+Name = Insectivorous
+Description = Boosts Attack when hit by a Bug-type move.
