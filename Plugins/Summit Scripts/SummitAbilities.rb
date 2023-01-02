@@ -58,7 +58,7 @@ Battle::AbilityEffects::OnDealingHit.add(:PARASITICVINE,
 #===============================================================================
 Battle::AbilityEffects::DamageCalcFromUser.add(:CLEARMIND,
   proc { |ability, user, target, move, mults, baseDmg, type|
-    mults[:base_damage_multiplier] *= 1.3 if move.type = :PSYCHIC
+    mults[:base_damage_multiplier] *= 1.5 if move.type == :PSYCHIC
   }
 )
 
