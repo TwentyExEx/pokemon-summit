@@ -107,7 +107,7 @@ class Battle::AI
       when :GROUND
         return true if target.airborne? && !move.hitsFlyingTargets?
       when :FIRE
-        return true if target.hasActiveAbility?(:FLASHFIRE)
+        return true if target.hasActiveAbility?([:FLASHFIRE, :HEATSINK])
       when :WATER
         return true if target.hasActiveAbility?([:DRYSKIN, :STORMDRAIN, :WATERABSORB])
       when :GRASS

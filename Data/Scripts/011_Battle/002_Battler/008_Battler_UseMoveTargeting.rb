@@ -143,6 +143,8 @@ class Battle::Battler
     targets = pbChangeTargetByAbility(:LIGHTNINGROD, :ELECTRIC, move, user, targets, priority, nearOnly)
     # Storm Drain
     targets = pbChangeTargetByAbility(:STORMDRAIN, :WATER, move, user, targets, priority, nearOnly)
+    # Heat Sink
+    targets = pbChangeTargetByAbility(:HEATSINK, :FIRE, move, user, targets, priority, nearOnly)
     return targets
   end
 

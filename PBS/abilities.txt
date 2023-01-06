@@ -1242,3 +1242,8 @@ Description = During electric terrain, Attack is boosted but HP decreases.
 [INSECTIVOROUS]
 Name = Insectivorous
 Description = Boosts Attack when hit by a Bug-type move.
+#-------------------------------
+[HEATSINK]
+Name = Heat Sink
+Description = Draws in all Fire-type moves to up Attack.
+#-------------------------------

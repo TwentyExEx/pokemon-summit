@@ -191,3 +191,19 @@ Battle::AbilityEffects::MoveImmunity.add(:INSECTIVOROUS,
        :BUG, :ATTACK, 1, show_message)
   }
 )
+
+#===============================================================================
+# Heat Sink
+#===============================================================================
+Battle::AbilityEffects::MoveImmunity.add(:HEATSINK,
+  proc { |ability, user, target, move, type, battle, show_message|
+    next target.pbMoveImmunityStatRaisingAbility(user, move, type,
+       :FIRE, :ATTACK, 1, show_message)
+  }
+)
+
+Battle::AbilityEffects::AccuracyCalcFromTarget.add(:HEATSINK,
+  proc { |ability, mods, user, target, move, type|
+    mods[:base_accuracy] = 0 if type == :FIRE
+  }
+)

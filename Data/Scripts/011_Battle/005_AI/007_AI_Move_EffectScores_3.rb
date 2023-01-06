@@ -936,7 +936,8 @@ class Battle::AI
            b.effects[PBEffects::Spotlight] > 0 ||
            b.effects[PBEffects::FollowMe] > 0 ||
            (b.hasActiveAbility?(:LIGHTNINGROD) && move.pbCalcType == :ELECTRIC) ||
-           (b.hasActiveAbility?(:STORMDRAIN) && move.pbCalcType == :WATER)
+           (b.hasActiveAbility?(:STORMDRAIN) && move.pbCalcType == :WATER) ||
+           (b.hasActiveAbility?(:HEATSINK) && move.pbCalcType == :FIRE)
           redirection = true
           break
         end
