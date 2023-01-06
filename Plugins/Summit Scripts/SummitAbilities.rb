@@ -217,3 +217,19 @@ Battle::AbilityEffects::CriticalCalcFromUser.add(:UNRELENTINGFLAME,
     next 99 if target.burned?
   }
 )
+
+#===============================================================================
+# Kilkenny Cat
+#===============================================================================
+Battle::AbilityEffects::MoveImmunity.add(:KILKENNYCAT,
+  proc { |ability, user, target, move, type, battle, show_message|
+    next target.pbMoveImmunityStatRaisingAbility(user, move, type,
+       :FIGHTING, :ATTACK, 1, show_message)
+  }
+)
+
+Battle::AbilityEffects::AccuracyCalcFromTarget.add(:KILKENNYCAT,
+  proc { |ability, mods, user, target, move, type|
+    mods[:base_accuracy] = 0 if type == :FIGHTING
+  }
+)

@@ -112,6 +112,8 @@ class Battle::AI
         return true if target.hasActiveAbility?([:DRYSKIN, :STORMDRAIN, :WATERABSORB])
       when :GRASS
         return true if target.hasActiveAbility?(:SAPSIPPER)
+      when :FIGHTING
+        return true if target.hasActiveAbility?(:KILKENNYCAT)
       when :ELECTRIC
         return true if target.hasActiveAbility?([:LIGHTNINGROD, :MOTORDRIVE, :VOLTABSORB])
       end
