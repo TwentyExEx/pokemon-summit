@@ -784,7 +784,7 @@ Description = Sharply ups Defense when hit by a Water-type move.
 #-------------------------------
 [MERCILESS]
 Name = Merciless
-Description = Its attacks are critical hits when it is poisoned.
+Description = The Pokémon's attacks become critical hits if the target is poisoned.
 #-------------------------------
 [SHIELDSDOWN]
 Name = Shields Down
@@ -1246,4 +1246,8 @@ Description = Boosts Attack when hit by a Bug-type move.
 [HEATSINK]
 Name = Heat Sink
 Description = Draws in all Fire-type moves to up Attack.
+#-------------------------------
+[UNRELENTINGFLAME]
+Name = Unrelenting Flame
+Description = The Pokémon's attacks become critical hits if the target is burnt.
 #-------------------------------

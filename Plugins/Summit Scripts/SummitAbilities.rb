@@ -207,3 +207,13 @@ Battle::AbilityEffects::AccuracyCalcFromTarget.add(:HEATSINK,
     mods[:base_accuracy] = 0 if type == :FIRE
   }
 )
+
+#===============================================================================
+# Unrelenting Flame
+#===============================================================================
+
+Battle::AbilityEffects::CriticalCalcFromUser.add(:UNRELENTINGFLAME,
+  proc { |ability, user, target, c|
+    next 99 if target.burned?
+  }
+)
