@@ -10,5 +10,10 @@ class NPCTrainer < Trainer
   def teraIndex=(i)
 	@teraIndex = i
   end
+
+  def teraIndexForceType(type,index=-5)
+	index = @teraIndex if @teraIndex >= 0
+	self.party[index].tera_type = [type] if index >= 0
+  end
   
 end

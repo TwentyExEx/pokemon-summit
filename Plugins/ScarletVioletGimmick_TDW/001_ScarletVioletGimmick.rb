@@ -1,11 +1,16 @@
 module TDWSettings
 
 #The ID of the item you want to be the Tera Item needed to Terastallize
-TERA_ITEM_ID 				= :TERAORB
+TERA_ITEM_ID 				= :TERAITEM
+
+#The ID of the items you want to use to manipulate a Pokemon's Tera Type
+TERA_SWAP_ITEM_ID 				= :TERASWAPITEM
+TERA_RANDOM_ITEM_ID 			= :TERARANDOMITEM
+TERA_CHOOSE_ITEM_ID 			= :TERACHOOSEITEM
 
 #If true, then you need 100 Tera Energy in order to Terastallize
 #If false, then you can always Terastallize if you have the item
-TERA_ITEM_GENERATE			= false
+TERA_ITEM_GENERATE			= true
 
 #The ID of the Switch that needs to be TRUE in order to Terastallize
 TERA_ITEM_ENABLED_SWITCH 	= 64
@@ -23,10 +28,9 @@ WEIGHT_PERCENT				= 50 #integer out of 100; Default 50
 #If false, a Pokemon's Tera Type will not be shown in Summary
 SHOW_TERA_TYPE_IN_SUMMARY	= true
 
-#If true, a Pokemon's sprite will change color to match their Tera Type when Terastallized
-#If false, a Pokemon's sprite will not change color
-#If you wish to change the RGB overlay for each type, go to 006_ColorEffects and edit the red, green, and blue values for each type in getTeraColor (at the top).
-SHOW_TERA_COLOR				= true #EXPERIMENTAL
+#If true, a Pokemon's sprite will get a diamond overlay when Terastallized
+#If false, a Pokemon's sprite will not change
+SHOW_TERA_OVERLAY				= false #EXPERIMENTAL
 
 end
 #=========================
@@ -273,22 +277,23 @@ class Battle
   end
 
   def pbCanTerastallize?(idxBattler)
+	ownedByPlayer = pbOwnedByPlayer?(idxBattler)
     return false if !$game_switches[TDWSettings::TERA_ITEM_ENABLED_SWITCH]
     return false if @battlers[idxBattler].wild?
-    return false if pbCanMegaEvolve?(idxBattler)
-    if PluginManager.installed?("ZUD Mechanics")
+    return false if pbCanMegaEvolve?(idxBattler) && ownedByPlayer
+    if PluginManager.installed?("ZUD Mechanics") && ownedByPlayer
       return false if pbCanZMove?(idxBattler)
       return false if pbCanUltraBurst?(idxBattler)
       return false if pbCanDynamax?(idxBattler)
       return false if @battlers[idxBattler].dynamax?
     end
-    if PluginManager.installed?("PLA Battle Styles")
+    if PluginManager.installed?("PLA Battle Styles") && ownedByPlayer
       return false if pbCanUseStyle?(idxBattler)
     end
-    if PluginManager.installed?("Pokémon Birthsigns")
+    if PluginManager.installed?("Pokémon Birthsigns") && ownedByPlayer
       return false if pbCanZodiacPower?(idxBattler)
     end
-    if PluginManager.installed?("Focus Meter System")
+    if PluginManager.installed?("Focus Meter System") && ownedByPlayer
       return false if pbCanUseFocus?(idxBattler)
     end
     return true if $DEBUG && Input.press?(Input::CTRL)
@@ -344,7 +349,7 @@ class Battle
     battler.pbUpdate(true)
     @scene.pbChangePokemon(battler, battler.pokemon)
     @scene.pbRefreshOne(idxBattler)
-	teraColorizeSprite(@scene.sprites["pokemon_#{idxBattler}"],battler.pokemon.tera_type[0]) if TDWSettings::SHOW_TERA_COLOR && PluginManager.installed?("ZUD Mechanics")
+	teraColorizeSprite(@scene.sprites["pokemon_#{idxBattler}"],battler.pokemon.tera_type[0]) if TDWSettings::SHOW_TERA_OVERLAY #&& PluginManager.installed?("ZUD Mechanics")
     pbCommonAnimation("MegaEvolution2", battler)
     pbDisplay(_INTL("{1} Terastallized! Their Tera Type is {2}!", battler.pbThis, battler.pokemon.tera_type[0].name))
     side  = battler.idxOwnSide
@@ -490,9 +495,30 @@ class Battle::Scene
   def pbFaintBattler(battler)
     if @battle.battlers[battler.index].tera_active
       @battle.battlers[battler.index].unTerastallize
+	  self.sprites["pokemon_#{battler.index}"].unTera if TDWSettings::SHOW_TERA_OVERLAY
     end
     tdwFaintBattler(battler)
   end
+  
+  alias tdwRecall pbRecall
+  def pbRecall(idxBattler)
+	tdwRecall(idxBattler)
+	self.sprites["pokemon_#{idxBattler}"].unTera if TDWSettings::SHOW_TERA_OVERLAY
+  end
+  
+  alias tdwSendOutBattlers pbSendOutBattlers
+  def pbSendOutBattlers(sendOuts, startBattle = false)
+    return if sendOuts.length == 0
+	if TDWSettings::SHOW_TERA_OVERLAY
+		sendOuts.each do |array|
+			if @battle.battlers[array[0]].tera_active
+				self.sprites["pokemon_#{array[0]}"].applyTera
+			end
+		end
+	end
+	tdwSendOutBattlers(sendOuts, startBattle)
+  end  
+  
 end
 
 #=========================
@@ -636,7 +662,7 @@ class Battle::Scene
     battler = @battle.battlers[idxBattler]
     cw = @sprites["fightWindow"]
     cw.battler = battler
-    cw.battle = @battle
+    #cw.battle = @battle
     moveIndex = 0
 	cw.button_mode = 0
     if battler.moves[@lastMove[idxBattler]]&.id
@@ -829,6 +855,86 @@ ItemHandlers::UseFromBag.add(TDWSettings::TERA_ITEM_ID, proc { |item|
   next 0
 })
 
+ItemHandlers::UseOnPokemon.add(TDWSettings::TERA_SWAP_ITEM_ID, proc { |item, qty, pkmn, scene|
+  pkmnTypes = pkmn.types
+  if pkmnTypes.length>1
+	if pkmn.tera_type[0] == pkmnTypes[0]
+		pkmn.tera_type=[pkmnTypes[1]]
+		scene.pbDisplay(_INTL("{1}'s Tera type is now {2}.", pkmn.name, pkmn.tera_type[0].name))
+		next true
+	elsif pkmn.tera_type[0] == pkmnTypes[1]
+		pkmn.tera_type=[pkmnTypes[0]]
+		scene.pbDisplay(_INTL("{1}'s Tera type is now {2}.", pkmn.name, pkmn.tera_type[0].name))
+		next true
+	else
+		pkmn.tera_type=[pkmnTypes[0]]
+		scene.pbDisplay(_INTL("{1}'s Tera type is now {2}.", pkmn.name, pkmn.tera_type[0].name))
+		next true
+	end
+  elsif pkmnTypes.length == 0 && pkmnTypes[0] != pkmn.tera_type[0]
+	pkmn.tera_type=[pkmnTypes[0]]
+	scene.pbDisplay(_INTL("{1}'s Tera type is now {2}.", pkmn.name, pkmn.tera_type[0].name))
+	next true
+  else
+	scene.pbDisplay(_INTL("It won't have any effect as {1} only has one type.", pkmn.name))
+	next false
+  end
+  scene.pbDisplay(_INTL("It won't have any effect."))
+  next false
+})
+
+ItemHandlers::UseOnPokemon.add(TDWSettings::TERA_RANDOM_ITEM_ID, proc { |item, qty, pkmn, scene|
+	types = []
+	game_data_module = GameData.const_get(:Type.to_sym)
+	game_data_module.each do |data|
+		# name = data.name
+		# name = yield(data) if block_given?
+		# next if !name
+		next if data.id == :QMARKS
+		types.push(data.id)
+	end
+	pkmn.tera_type=[types[rand(types.length)]]
+	scene.pbDisplay(_INTL("{1}'s Tera type is now {2}.", pkmn.name, pkmn.tera_type[0].name))
+	next true
+})
+
+ItemHandlers::UseOnPokemon.add(TDWSettings::TERA_CHOOSE_ITEM_ID, proc { |item, qty, pkmn, scene|
+	pkmn.tera_type=pkmn.generateTeraType if !pkmn.tera_type
+		scene.pbDisplay(_INTL("{1}'s current Tera type is {2}.\nChoose a new Tera type.", pkmn.name, pkmn.tera_type[0].name))
+		oldType = pkmn.tera_type
+		default = GameData::Type.get(pkmn.tera_type[0]).icon_position
+		newType = pbChooseTypeListSimple(default < 10 ? default+1 : default)
+		pkmn.tera_type = newType ? [newType] : oldType 
+		
+	if !newType
+		scene.pbDisplay(_INTL("{1}'s Tera type didn't change.", pkmn.name))
+		next false
+	end
+	scene.pbDisplay(_INTL("{1}'s Tera type is now {2}.", pkmn.name, pkmn.tera_type[0].name))
+	next true
+})
+
+
+def pbChooseTypeListSimple(default = nil)
+  return pbChooseFromGameDataListSimple(:Type, default) { |data|
+    next (data.pseudo_type) ? nil : data.real_name
+  }
+end
+
+def pbChooseFromGameDataListSimple(game_data, default = nil)
+  if !GameData.const_defined?(game_data.to_sym)
+    raise _INTL("Couldn't find class {1} in module GameData.", game_data.to_s)
+  end
+  game_data_module = GameData.const_get(game_data.to_sym)
+  commands = []
+  game_data_module.each do |data|
+    name = data.real_name
+    name = yield(data) if block_given?
+    next if !name
+    commands.push([commands.length + 1, name, data.id])
+  end
+  return pbChooseList(commands, default, nil, 1)
+end
 
 #===============================================================================
 # This move is physical if user's Attack is higher than its Special Attack

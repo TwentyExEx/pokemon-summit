@@ -9600,3 +9600,28 @@ EffectChance = 10
 FunctionCode = SleepTarget
 Flags = CanProtect
 Description = This move is only used by a Starmobile.
+#-------------------------------
+[TENMILLIONVOLTTHUNDERBOLT]
+Name = 10_000_000 Volt Thunderbolt
+Type = ELECTRIC
+Category = Special
+Power = 195
+Accuracy = 0
+TotalPP = 1
+Target = NearOther
+FunctionCode = None
+Flags = HighCriticalHitRate
+Description = Pikachu wearing a cap unleashes a jolt of electricity. Critical hits land more easily.
+#-------------------------------
+[SPARKSURFER]
+Name = Sparksurfer
+Type = ELECTRIC
+Category = Special
+Power = 120
+Accuracy = 80
+TotalPP = 5
+Target = NearOther
+FunctionCode = StartElectricTerrain
+Flags = 
+EffectChance = 100
+Description = This move sets up Electric Terrain when landing.

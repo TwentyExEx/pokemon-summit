@@ -1,4 +1,4 @@
-
+=begin
 def getTeraColor(teraType)
 	red = 0
 	green = 0
@@ -184,4 +184,32 @@ class Battle::Scene
 	
   end
 
+end
+=end
+
+def teraColorizeSprite(sprite,teraType)
+	sprite.applyTera(teraType)
+end
+
+#===============================================================================
+# SpriteWrapper additions for Tera sprites.
+#===============================================================================
+#https://github.com/mkxp-z/mkxp-z/wiki/Extensions-(RGSS,-Classes)#sprite-pattern-overlays
+class Sprite
+  def applyTera(teraType=nil)
+      #tera_color = getTeraColor(teraType)
+	  self.pattern= Bitmap.new("Graphics/Pictures/teraCrystal")
+	  self.pattern_opacity = 185
+	  rand1 = rand(5)-2
+	  rand2 = rand(5)-2
+	  rand3 = rand(5)-2
+	  self.pattern_scroll_x += rand1*5
+	  self.pattern_scroll_y += rand2*5
+  end
+  
+  def unTera
+    #if self.color == TERA_COLOR
+      self.pattern= nil
+    #end
+  end
 end
