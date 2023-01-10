@@ -9624,3 +9624,14 @@ Target = UserSide
 FunctionCode = StartWeakenDamageAgainstUserSideIfGrassyTerrain
 Description = This move reduces damage from attacks for five turns. This can be used only in Grassy Terrain.
 #-------------------------------
+[PETALSTORM]
+Name = Petal Storm
+Type = GRASS
+Category = Special
+Power = 90
+Accuracy = 100
+TotalPP = 15
+Target = AllNearOthers
+Flags = CanProtect,CanMirrorMove
+Description = The user barrages all around it with a flurry of leaves and petals. 
+#-------------------------------
