@@ -812,6 +812,7 @@ module GameData
       when "175" then new_code = "HitTwoTimesFlinchTarget"
       when "176" then new_code = "PriorityWhenTerrainActiveEndsTerrain"
 	  when "177" then new_code = "UseTargetSpDefInsteadOfTargetDef"
+	  when "178" then new_code = "PoisonParalyzeOrSleepAllFoes"
       end
       data[:function_code] = new_code
       return data

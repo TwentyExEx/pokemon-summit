@@ -9610,7 +9610,7 @@ Accuracy = 80
 TotalPP = 5
 Target = NearOther
 FunctionCode = StartElectricTerrain
-Flags = 
+Flags = CanProtect,CanMirrorMove
 EffectChance = 100
 Description = This move sets up Electric Terrain when landing.
 #-------------------------------
@@ -9634,4 +9634,17 @@ TotalPP = 15
 Target = AllNearOthers
 Flags = CanProtect,CanMirrorMove
 Description = The user barrages all around it with a flurry of leaves and petals. 
+#-------------------------------
+[BEFUDDLE]
+Name = Befuddle
+Type = BUG
+Category = Special
+Power = 90
+Accuracy = 90
+TotalPP = 10
+Target = NearOther
+FunctionCode = PoisonParalyzeOrSleepAllFoes
+Flags = CanProtect,CanMirrorMove
+EffectChance = 30
+Description = This move has a chance of inflicting poison, paralysis or sleep.
 #-------------------------------

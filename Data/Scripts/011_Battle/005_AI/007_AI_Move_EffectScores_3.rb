@@ -1387,6 +1387,70 @@ class Battle::AI
         score -= 110
       end
     #---------------------------------------------------------------------------
+    # Befuddle
+    #---------------------------------------------------------------------------
+    when "PoisonParalyzeOrSleepAllFoes"
+      case move.function
+      when "PoisonParalyzeOrSleepAllFoes"; statuses = [:POISON, :PARALYSIS, :SLEEP]
+      end
+      @battle.allSameSideBattlers(target.index).each do |b|
+        statuses.each do |status|
+          case status
+          when :POISON
+            if b.pbCanPoison?(user, false)
+              score += 30
+              if skill >= PBTrainerAI.mediumSkill
+                score += 30 if b.hp <= b.totalhp / 4
+                score += 50 if b.hp <= b.totalhp / 8
+                score -= 40 if b.effects[PBEffects::Yawn] > 0
+              end
+              if skill >= PBTrainerAI.highSkill
+                score += 10 if pbRoughStat(b, :DEFENSE, skill) > 100
+                score += 10 if pbRoughStat(b, :SPECIAL_DEFENSE, skill) > 100
+                score -= 40 if b.hasActiveAbility?([:GUTS, :MARVELSCALE, :TOXICBOOST])
+              end
+            elsif skill >= PBTrainerAI.mediumSkill
+              score -= 90 if move.statusMove?
+            end
+          when :PARALYSIS
+            if b.pbCanParalyze?(user, false)
+              score += 30
+              if skill >= PBTrainerAI.mediumSkill
+                aspeed = pbRoughStat(user, :SPEED, skill)
+                ospeed = pbRoughStat(b, :SPEED, skill)
+                if aspeed < ospeed
+                  score += 30
+                elsif aspeed > ospeed
+                  score -= 40
+                end
+              end
+              if skill >= PBTrainerAI.highSkill
+                score -= 40 if b.hasActiveAbility?([:GUTS, :MARVELSCALE, :QUICKFEET])
+              end
+            elsif skill >= PBTrainerAI.mediumSkill
+              score -= 90 if move.statusMove?
+            end
+          when :SLEEP
+            if b.pbCanSleep?(user, false)
+              score += 30
+              if skill >= PBTrainerAI.mediumSkill
+                score -= 30 if b.effects[PBEffects::Yawn] > 0
+              end
+              if skill >= PBTrainerAI.highSkill
+                score -= 30 if b.hasActiveAbility?(:MARVELSCALE)
+              end
+              if skill >= PBTrainerAI.bestSkill
+                if b.pbHasMoveFunction?("FlinchTargetFailsIfUserNotAsleep",
+                                        "UseRandomUserMoveIfAsleep")
+                  score -= 50
+                end
+              end
+            elsif skill >= PBTrainerAI.mediumSkill
+              score -= 90 if move.statusMove?
+            end
+          end
+        end
+      end
     else
       return aiEffectScorePart2_pbGetMoveScoreFunctionCode(score, move, user, target, skill)
     end

@@ -60,3 +60,15 @@ class Battle::Move::UseTargetSpDefInsteadOfTargetDef < Battle::Move
     return target.spdef, target.stages[:SPECIAL_DEFENSE] + 6
   end
 end
+
+#===============================================================================
+# Randomly poisons, paralyzes or sleeps the target and its allies. (Befuddle)
+#===============================================================================
+class Battle::PowerMove::PoisonParalyzeOrSleepAllFoes < Battle::Move
+  def initialize(battle, move)
+    super
+    @statuses = {
+      :opponents => [:POISON, :PARALYSIS, :SLEEP]
+    }
+  end
+end
