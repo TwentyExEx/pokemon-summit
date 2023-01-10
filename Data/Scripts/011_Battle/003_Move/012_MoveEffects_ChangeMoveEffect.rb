@@ -39,24 +39,25 @@ class Battle::Move::CannotBeRedirected < Battle::Move
 end
 
 #===============================================================================
-# Randomly damages the target or heals all Pokemon on the field. (Present)
+# Randomly damages all adjacent Pokémon or heals all Pokémon on the field. (Present)
 # NOTE: Apparently a Normal Gem should be consumed even if this move will heal,
 #       but I think that's silly so I've omitted that effect.
 #===============================================================================
 class Battle::Move::RandomlyDamageOrHealTarget < Battle::Move
   def pbOnStartUse(user, targets)
-    case @battle.pbRandom(2)
-    when 0
-      @presentDmg = 0  
-    when 1
+    r = @battle.pbRandom(100)
+    if r < 20
+      @presentDmg = 0 
+    else
       @presentDmg = 120
     end
   end
 
   def pbFailsAgainstTarget?(user, target, show_message)
-    return false if @presentDmg > 0
-    if !target.canHeal?
-      @battle.pbDisplay(_INTL("But it failed!")) if show_message
+    return false if (@presentDmg > 0 && user != target)
+    return true if (user == target && @presentDmg > 0) # Doesn't damage self
+    if (!target.canHeal? && @presentDmg == 0)
+      @battle.pbDisplay(_INTL("{1}'s HP is already full!",target.pbThis)) if show_message
       return true
     end
     return false
@@ -79,6 +80,7 @@ class Battle::Move::RandomlyDamageOrHealTarget < Battle::Move
 
   def pbShowAnimation(id, user, targets, hitNum = 0, showAnimation = true)
     hitNum = 1 if @presentDmg == 0   # Healing anim
+    targets.delete_at(0) if @presentDmg > 0 # Don't show anim on self if damaging anim
     super
   end
 end
