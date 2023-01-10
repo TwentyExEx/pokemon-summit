@@ -101,6 +101,7 @@ class Battle::AI
       score += 40 if @battle.field.terrain == :Electric && target.affectedByTerrain?
     #---------------------------------------------------------------------------
     when "ParalyzeIfTerrainRemoveTerrain"
+	  score += 40 if @battle.field.terrain != :None
     #---------------------------------------------------------------------------
     when "DoublePowerIfAllyFaintedLastTurn"
     #---------------------------------------------------------------------------

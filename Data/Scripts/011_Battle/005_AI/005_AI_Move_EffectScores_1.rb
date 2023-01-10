@@ -102,8 +102,6 @@ class Battle::AI
     #---------------------------------------------------------------------------
     when "StartPsychicTerrain"
     #---------------------------------------------------------------------------
-    when "RemoveTerrain"
-      score -= 100 if @battle.field.terrain == :None
     #---------------------------------------------------------------------------
     when "AddSpikesToFoeSide"
       if user.pbOpposingSide.effects[PBEffects::Spikes] >= 3

@@ -284,8 +284,6 @@ class Battle::AI
         baseDmg = (baseDmg.to_f * mult / Effectiveness::NORMAL_EFFECTIVE).round
       end
       baseDmg *= 2 if skill >= PBTrainerAI.mediumSkill && target.effects[PBEffects::Minimize]
-    when "ParalyzeIfTerrainRemoveTerrain"   # Stomping Tantrum
-      baseDmg *= 2 if user.lastRoundMoveFailed
     when "HitTwoTimesFlinchTarget"   # Double Iron Bash
       baseDmg *= 2
       baseDmg *= 2 if skill >= PBTrainerAI.mediumSkill && target.effects[PBEffects::Minimize]
