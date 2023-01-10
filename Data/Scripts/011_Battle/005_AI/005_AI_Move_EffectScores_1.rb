@@ -139,7 +139,7 @@ class Battle::AI
       if skill >= PBTrainerAI.mediumSkill
         good_effects = [:Reflect, :LightScreen, :AuroraVeil, :SeaOfFire,
                         :Swamp, :Rainbow, :Mist, :Safeguard,
-                        :Tailwind].map! { |e| PBEffects.const_get(e) }
+                        :Tailwind, :FungusVeil].map! { |e| PBEffects.const_get(e) }
         bad_effects = [:Spikes, :StickyWeb, :ToxicSpikes, :StealthRock].map! { |e| PBEffects.const_get(e) }
         bad_effects.each do |e|
           score += 10 if ![0, false, nil].include?(user.pbOwnSide.effects[e])
@@ -1211,6 +1211,7 @@ class Battle::AI
         score += 20
       end
       score += 30 if target.pbOwnSide.effects[PBEffects::AuroraVeil] > 0 ||
+					 target.pbOwnSide.effects[PBEffects::FungusVeil] > 0 ||
                      target.pbOwnSide.effects[PBEffects::Reflect] > 0 ||
                      target.pbOwnSide.effects[PBEffects::LightScreen] > 0 ||
                      target.pbOwnSide.effects[PBEffects::Mist] > 0 ||

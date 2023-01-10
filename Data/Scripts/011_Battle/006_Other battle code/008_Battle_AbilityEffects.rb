@@ -2979,15 +2979,21 @@ Battle::AbilityEffects::OnSwitchIn.add(:SANDSTREAM,
 Battle::AbilityEffects::OnSwitchIn.add(:SCREENCLEANER,
   proc { |ability, battler, battle, switch_in|
     next if battler.pbOwnSide.effects[PBEffects::AuroraVeil] == 0 &&
+			battler.pbOwnSide.effects[PBEffects::FungusVeil] == 0 &&
             battler.pbOwnSide.effects[PBEffects::LightScreen] == 0 &&
             battler.pbOwnSide.effects[PBEffects::Reflect] == 0 &&
             battler.pbOpposingSide.effects[PBEffects::AuroraVeil] == 0 &&
+			battler.pbOpposingSide.effects[PBEffects::FungusVeil] == 0 &&
             battler.pbOpposingSide.effects[PBEffects::LightScreen] == 0 &&
             battler.pbOpposingSide.effects[PBEffects::Reflect] == 0
     battle.pbShowAbilitySplash(battler)
     if battler.pbOpposingSide.effects[PBEffects::AuroraVeil] > 0
       battler.pbOpposingSide.effects[PBEffects::AuroraVeil] = 0
       battle.pbDisplay(_INTL("{1}'s Aurora Veil wore off!", battler.pbOpposingTeam))
+    end
+    if battler.pbOpposingSide.effects[PBEffects::FungusVeil] > 0
+      battler.pbOpposingSide.effects[PBEffects::FungusVeil] = 0
+      battle.pbDisplay(_INTL("{1}'s Fungus Veil wore off!", battler.pbOpposingTeam))
     end
     if battler.pbOpposingSide.effects[PBEffects::LightScreen] > 0
       battler.pbOpposingSide.effects[PBEffects::LightScreen] = 0
@@ -3000,6 +3006,10 @@ Battle::AbilityEffects::OnSwitchIn.add(:SCREENCLEANER,
     if battler.pbOwnSide.effects[PBEffects::AuroraVeil] > 0
       battler.pbOwnSide.effects[PBEffects::AuroraVeil] = 0
       battle.pbDisplay(_INTL("{1}'s Aurora Veil wore off!", battler.pbTeam))
+    end
+    if battler.pbOwnSide.effects[PBEffects::FungusVeil] > 0
+      battler.pbOwnSide.effects[PBEffects::FungusVeil] = 0
+      battle.pbDisplay(_INTL("{1}'s Fungus Veil wore off!", battler.pbTeam))
     end
     if battler.pbOwnSide.effects[PBEffects::LightScreen] > 0
       battler.pbOwnSide.effects[PBEffects::LightScreen] = 0

@@ -455,10 +455,16 @@ class Battle::Move
        !user.hasActiveAbility?(:GUTS)
       multipliers[:final_damage_multiplier] /= 2
     end
-    # Aurora Veil, Reflect, Light Screen
+    # Aurora Veil, Reflect, Light Screen, Fungus Veil
     if !ignoresReflect? && !target.damageState.critical &&
        !user.hasActiveAbility?(:INFILTRATOR)
       if target.pbOwnSide.effects[PBEffects::AuroraVeil] > 0
+        if @battle.pbSideBattlerCount(target) > 1
+          multipliers[:final_damage_multiplier] *= 2 / 3.0
+        else
+          multipliers[:final_damage_multiplier] /= 2
+        end
+      elsif target.pbOwnSide.effects[PBEffects::FungusVeil] > 0
         if @battle.pbSideBattlerCount(target) > 1
           multipliers[:final_damage_multiplier] *= 2 / 3.0
         else

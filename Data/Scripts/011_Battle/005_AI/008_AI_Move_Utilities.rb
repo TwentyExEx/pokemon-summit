@@ -517,6 +517,12 @@ class Battle::AI
         else
           multipliers[:final_damage_multiplier] /= 2
         end
+      elsif target.pbOwnSide.effects[PBEffects::FungusVeil] > 0
+        if @battle.pbSideBattlerCount(target) > 1
+          multipliers[:final_damage_multiplier] *= 2 / 3.0
+        else
+          multipliers[:final_damage_multiplier] /= 2
+        end
       elsif target.pbOwnSide.effects[PBEffects::Reflect] > 0 && move.physicalMove?(type)
         if @battle.pbSideBattlerCount(target) > 1
           multipliers[:final_damage_multiplier] *= 2 / 3.0

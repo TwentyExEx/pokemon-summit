@@ -1200,6 +1200,7 @@ class Battle::Move::LowerTargetEvasion1RemoveSideEffects < Battle::Move::TargetS
     targetSide = target.pbOwnSide
     targetOpposingSide = target.pbOpposingSide
     return false if targetSide.effects[PBEffects::AuroraVeil] > 0 ||
+					targetSide.effects[PBEffects::FungusVeil] > 0 ||
                     targetSide.effects[PBEffects::LightScreen] > 0 ||
                     targetSide.effects[PBEffects::Reflect] > 0 ||
                     targetSide.effects[PBEffects::Mist] > 0 ||
@@ -1224,6 +1225,10 @@ class Battle::Move::LowerTargetEvasion1RemoveSideEffects < Battle::Move::TargetS
     if target.pbOwnSide.effects[PBEffects::AuroraVeil] > 0
       target.pbOwnSide.effects[PBEffects::AuroraVeil] = 0
       @battle.pbDisplay(_INTL("{1}'s Aurora Veil wore off!", target.pbTeam))
+    end
+    if target.pbOwnSide.effects[PBEffects::FungusVeil] > 0
+      target.pbOwnSide.effects[PBEffects::FungusVeil] = 0
+      @battle.pbDisplay(_INTL("{1}'s Fungus Veil wore off!", target.pbTeam))
     end
     if target.pbOwnSide.effects[PBEffects::LightScreen] > 0
       target.pbOwnSide.effects[PBEffects::LightScreen] = 0

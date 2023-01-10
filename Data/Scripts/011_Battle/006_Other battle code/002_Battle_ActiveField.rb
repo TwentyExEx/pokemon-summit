@@ -64,6 +64,7 @@ class Battle::ActiveSide
     @effects[PBEffects::Tailwind]           = 0
     @effects[PBEffects::ToxicSpikes]        = 0
     @effects[PBEffects::WideGuard]          = false
+    @effects[PBEffects::FungusVeil]         = 0
   end
 end
 

@@ -427,6 +427,9 @@ class Battle
     # Aurora Veil
     pbEORCountDownSideEffect(side, PBEffects::AuroraVeil,
                              _INTL("{1}'s Aurora Veil wore off!", @battlers[side].pbTeam))
+    # Fungus Veil
+    pbEORCountDownSideEffect(side, PBEffects::FungusVeil,
+                             _INTL("{1}'s Fungus Veil wore off!", @battlers[side].pbTeam))
   end
 
   #=============================================================================

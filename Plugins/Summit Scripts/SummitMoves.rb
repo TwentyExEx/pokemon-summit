@@ -23,3 +23,30 @@ class Battle::Move::PriorityWhenTerrainActiveEndsTerrain < Battle::Move
     @battle.field.terrain = :None
   end
 end
+
+#===============================================================================
+# For 5 rounds, lowers power of attacks against the user's side. Fails if
+# terrain is not Grassy. (Fungus Veil)
+#===============================================================================
+class Battle::Move::StartWeakenDamageAgainstUserSideIfGrassyTerrain < Battle::Move
+  def canSnatch?; return true; end
+
+  def pbMoveFailed?(user, targets)
+    if @battle.field.terrain != :Grassy
+      @battle.pbDisplay(_INTL("But it failed!"))
+      return true
+    end
+    if user.pbOwnSide.effects[PBEffects::FungusVeil] > 0
+      @battle.pbDisplay(_INTL("But it failed!"))
+      return true
+    end
+    return false
+  end
+
+  def pbEffectGeneral(user)
+    user.pbOwnSide.effects[PBEffects::FungusVeil] = 5
+    user.pbOwnSide.effects[PBEffects::FungusVeil] = 8 if user.hasActiveItem?(:LIGHTCLAY)
+    @battle.pbDisplay(_INTL("{1} made {2} stronger against physical and special moves!",
+                            @name, user.pbTeam(true)))
+  end
+end

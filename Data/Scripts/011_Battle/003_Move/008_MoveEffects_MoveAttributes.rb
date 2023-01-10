@@ -832,7 +832,7 @@ class Battle::Move::StartWeakenDamageAgainstUserSideIfHail < Battle::Move
 end
 
 #===============================================================================
-# Ends the opposing side's Light Screen, Reflect and Aurora Break. (Brick Break,
+# Ends the opposing side's Light Screen, Reflect, Aurora Veil and Fungus Veil Break. (Brick Break,
 # Psychic Fangs)
 #===============================================================================
 class Battle::Move::RemoveScreens < Battle::Move
@@ -851,12 +851,17 @@ class Battle::Move::RemoveScreens < Battle::Move
       user.pbOpposingSide.effects[PBEffects::AuroraVeil] = 0
       @battle.pbDisplay(_INTL("{1}'s Aurora Veil wore off!", user.pbOpposingTeam))
     end
+    if user.pbOpposingSide.effects[PBEffects::FungusVeil] > 0
+      user.pbOpposingSide.effects[PBEffects::FungusVeil] = 0
+      @battle.pbDisplay(_INTL("{1}'s Fungus Veil wore off!", user.pbOpposingTeam))
+    end
   end
 
   def pbShowAnimation(id, user, targets, hitNum = 0, showAnimation = true)
     if user.pbOpposingSide.effects[PBEffects::LightScreen] > 0 ||
        user.pbOpposingSide.effects[PBEffects::Reflect] > 0 ||
-       user.pbOpposingSide.effects[PBEffects::AuroraVeil] > 0
+       user.pbOpposingSide.effects[PBEffects::AuroraVeil] > 0 ||
+	   user.pbOpposingSide.effects[PBEffects::FungusVeil] > 0 
       hitNum = 1   # Wall-breaking anim
     end
     super

@@ -9613,3 +9613,14 @@ FunctionCode = StartElectricTerrain
 Flags = 
 EffectChance = 100
 Description = This move sets up Electric Terrain when landing.
+#-------------------------------
+[FUNGUSVEIL]
+Name = Fungus Veil
+Type = GRASS
+Category = Status
+Accuracy = 0
+TotalPP = 20
+Target = UserSide
+FunctionCode = StartWeakenDamageAgainstUserSideIfGrassyTerrain
+Description = This move reduces damage from attacks for five turns. This can be used only in Grassy Terrain.
+#-------------------------------

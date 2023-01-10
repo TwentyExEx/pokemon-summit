@@ -124,6 +124,7 @@ module Battle::DebugVariables
 
   SIDE_EFFECTS = {
     PBEffects::AuroraVeil         => { name: "Aurora Veil duration",                   default: 0 },
+    PBEffects::FungusVeil         => { name: "Fungus Veil duration",                   default: 0 },
     PBEffects::CraftyShield       => { name: "Crafty Shield applies this round",       default: false },
     PBEffects::EchoedVoiceCounter => { name: "Echoed Voice rounds used (max. 5)",      default: 0, max: 5 },
     PBEffects::EchoedVoiceUsed    => { name: "Echoed Voice used this round",           default: false },

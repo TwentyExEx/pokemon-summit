@@ -460,6 +460,7 @@ class Battle::Move::SwapSideEffects < Battle::Move
     super
     @number_effects = [
       PBEffects::AuroraVeil,
+	  PBEffects::FungusVeil,
       PBEffects::LightScreen,
       PBEffects::Mist,
       PBEffects::Rainbow,

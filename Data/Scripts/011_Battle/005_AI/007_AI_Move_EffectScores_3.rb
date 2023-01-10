@@ -171,8 +171,16 @@ class Battle::AI
         score += 40
       end
     #---------------------------------------------------------------------------
+    when "StartWeakenDamageAgainstUserSideIfGrassyTerrain"
+      if user.pbOwnSide.effects[PBEffects::FungusVeil] > 0 || @battle.field.terrain != :Grassy
+        score -= 90
+      else
+        score += 40
+      end
+    #---------------------------------------------------------------------------
     when "RemoveScreens"
       score += 20 if user.pbOpposingSide.effects[PBEffects::AuroraVeil] > 0
+	  score += 20 if user.pbOpposingSide.effects[PBEffects::FungusVeil] > 0
       score += 20 if user.pbOpposingSide.effects[PBEffects::Reflect] > 0
       score += 20 if user.pbOpposingSide.effects[PBEffects::LightScreen] > 0
     #---------------------------------------------------------------------------
@@ -1365,11 +1373,13 @@ class Battle::AI
     when "RemoveAllScreens"
       score += 20   # Shadow moves are more preferable
       if target.pbOwnSide.effects[PBEffects::AuroraVeil] > 0 ||
+		 target.pbOwnSide.effects[PBEffects::FungusVeil] > 0 ||
          target.pbOwnSide.effects[PBEffects::Reflect] > 0 ||
          target.pbOwnSide.effects[PBEffects::LightScreen] > 0 ||
          target.pbOwnSide.effects[PBEffects::Safeguard] > 0
         score += 30
         score -= 90 if user.pbOwnSide.effects[PBEffects::AuroraVeil] > 0 ||
+					   user.pbOwnSide.effects[PBEffects::FungusVeil] > 0 ||
                        user.pbOwnSide.effects[PBEffects::Reflect] > 0 ||
                        user.pbOwnSide.effects[PBEffects::LightScreen] > 0 ||
                        user.pbOwnSide.effects[PBEffects::Safeguard] > 0
