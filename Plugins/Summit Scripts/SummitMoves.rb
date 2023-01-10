@@ -50,3 +50,13 @@ class Battle::Move::StartWeakenDamageAgainstUserSideIfGrassyTerrain < Battle::Mo
                             @name, user.pbTeam(true)))
   end
 end
+
+#===============================================================================
+# Target's Special Defense is used instead of its Defense for this move's
+# calculations. (Enzuigiri Kick)
+#===============================================================================
+class Battle::Move::UseTargetSpDefInsteadOfTargetDef < Battle::Move
+  def pbGetDefenseStats(user, target)
+    return target.spdef, target.stages[:SPECIAL_DEFENSE] + 6
+  end
+end

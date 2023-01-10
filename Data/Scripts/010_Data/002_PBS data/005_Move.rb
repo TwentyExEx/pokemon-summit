@@ -811,6 +811,7 @@ module GameData
       when "174" then new_code = "FailsIfNotUserFirstTurn"
       when "175" then new_code = "HitTwoTimesFlinchTarget"
       when "176" then new_code = "PriorityWhenTerrainActiveEndsTerrain"
+	  when "177" then new_code = "UseTargetSpDefInsteadOfTargetDef"
       end
       data[:function_code] = new_code
       return data

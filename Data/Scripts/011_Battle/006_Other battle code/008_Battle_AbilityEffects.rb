@@ -1555,7 +1555,8 @@ Battle::AbilityEffects::DamageCalcFromTarget.add(:HEATPROOF,
 
 Battle::AbilityEffects::DamageCalcFromTarget.add(:ICESCALES,
   proc { |ability, user, target, move, mults, baseDmg, type|
-    mults[:final_damage_multiplier] /= 2 if move.specialMove?
+    mults[:final_damage_multiplier] /= 2 if move.specialMove? ||
+											move.function == "UseTargetSpDefInsteadOfTargetDef" 
   }
 )
 
