@@ -1293,18 +1293,21 @@ class Battle::AI
         score -= 90
       end
     #---------------------------------------------------------------------------
-    when "RaisePlusMinusUserAndAlliesDefSpDef1"
+    when "RaisePlusMinusUserAndAlliesDefSpDefSpd1"
       hasEffect = user.statStageAtMax?(:DEFENSE) &&
-                  user.statStageAtMax?(:SPECIAL_DEFENSE)
+                  user.statStageAtMax?(:SPECIAL_DEFENSE) &&
+                  user.statStageAtMax?(:SPEED)
       user.allAllies.each do |b|
-        next if b.statStageAtMax?(:DEFENSE) && b.statStageAtMax?(:SPECIAL_DEFENSE)
+        next if b.statStageAtMax?(:DEFENSE) && b.statStageAtMax?(:SPECIAL_DEFENSE) && b.statStageAtMax?(:SPEED)
         hasEffect = true
         score -= b.stages[:DEFENSE] * 10
         score -= b.stages[:SPECIAL_DEFENSE] * 10
+        score -= b.stages[:SPEED] * 10
       end
       if hasEffect
         score -= user.stages[:DEFENSE] * 10
         score -= user.stages[:SPECIAL_DEFENSE] * 10
+        score -= user.stages[:SPEED] * 10
       else
         score -= 90
       end

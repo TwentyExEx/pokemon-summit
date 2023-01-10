@@ -100,7 +100,7 @@ class Battle::AI
     when "DoublePowerInElectricTerrain"
       score += 40 if @battle.field.terrain == :Electric && target.affectedByTerrain?
     #---------------------------------------------------------------------------
-    when "DoublePowerIfUserLastMoveFailed"
+    when "ParalyzeIfTerrainRemoveTerrain"
     #---------------------------------------------------------------------------
     when "DoublePowerIfAllyFaintedLastTurn"
     #---------------------------------------------------------------------------

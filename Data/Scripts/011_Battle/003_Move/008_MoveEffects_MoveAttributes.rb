@@ -553,15 +553,28 @@ class Battle::Move::DoublePowerInElectricTerrain < Battle::Move
 end
 
 #===============================================================================
-# Power is doubled if the user's last move failed. (Stomping Tantrum)
+# Paralyzes the target if there is a terrain active and ends the terrain. (Stomping Tantrum)
 #===============================================================================
-class Battle::Move::DoublePowerIfUserLastMoveFailed < Battle::Move
-  def pbBaseDamage(baseDmg, user, target)
-    baseDmg *= 2 if user.lastRoundMoveFailed
-    return baseDmg
+class Battle::Move::ParalyzeIfTerrainRemoveTerrain < Battle::Move::ParalyzeTarget
+  def pbAdditionalEffect(user, target)
+    super if @battle.field.terrain != :None
+  end
+
+
+  def pbEffectGeneral(user)
+    case @battle.field.terrain
+    when :Electric
+      @battle.pbDisplay(_INTL("The electricity disappeared from the battlefield."))
+    when :Grassy
+      @battle.pbDisplay(_INTL("The grass disappeared from the battlefield."))
+    when :Misty
+      @battle.pbDisplay(_INTL("The mist disappeared from the battlefield."))
+    when :Psychic
+      @battle.pbDisplay(_INTL("The weirdness disappeared from the battlefield."))
+    end
+    @battle.field.terrain = :None
   end
 end
-
 #===============================================================================
 # Power is doubled if a user's teammate fainted last round. (Retaliate)
 #===============================================================================

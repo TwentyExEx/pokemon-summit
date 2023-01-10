@@ -342,17 +342,15 @@ class Battle::Move::StartPsychicTerrain < Battle::Move
 end
 
 #===============================================================================
-# Removes the current terrain. Fails if there is no terrain in effect.
+# Removes the current terrain. Power doubles in terrain.
 # (Steel Roller)
 #===============================================================================
 class Battle::Move::RemoveTerrain < Battle::Move
-  def pbMoveFailed?(user, targets)
-    if @battle.field.terrain == :None
-      @battle.pbDisplay(_INTL("But it failed!"))
-      return true
-    end
-    return false
+  def pbModifyDamage(damageMult, user, target)
+    damageMult *= 2 if @battle.field.terrain != :None
+    return damageMult
   end
+
 
   def pbEffectGeneral(user)
     case @battle.field.terrain
@@ -368,7 +366,6 @@ class Battle::Move::RemoveTerrain < Battle::Move
     @battle.field.terrain = :None
   end
 end
-
 #===============================================================================
 # Entry hazard. Lays spikes on the opposing side (max. 3 layers). (Spikes)
 #===============================================================================

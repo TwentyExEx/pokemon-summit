@@ -1497,7 +1497,7 @@ end
 #       aren't protected by their substitute/ability/etc., but they are in Gen
 #       6+). We achieve this by not targeting any battlers in Gen 5, since
 #       pbSuccessCheckAgainstTarget is only called for targeted battlers.
-class Battle::Move::RaisePlusMinusUserAndAlliesDefSpDef1 < Battle::Move
+class Battle::Move::RaisePlusMinusUserAndAlliesDefSpDefSpd1 < Battle::Move
   def ignoresSubstitute?(user); return true; end
   def canSnatch?; return true; end
 
@@ -1506,7 +1506,8 @@ class Battle::Move::RaisePlusMinusUserAndAlliesDefSpDef1 < Battle::Move
     @battle.allSameSideBattlers(user).each do |b|
       next if !b.hasActiveAbility?([:MINUS, :PLUS])
       next if !b.pbCanRaiseStatStage?(:DEFENSE, user, self) &&
-              !b.pbCanRaiseStatStage?(:SPECIAL_DEFENSE, user, self)
+              !b.pbCanRaiseStatStage?(:SPECIAL_DEFENSE, user, self) &&
+			  !b.pbCanRaiseStatStage?(:SPEED, user, self)
       @validTargets.push(b)
     end
     if @validTargets.length == 0
@@ -1530,6 +1531,9 @@ class Battle::Move::RaisePlusMinusUserAndAlliesDefSpDef1 < Battle::Move
     end
     if target.pbCanRaiseStatStage?(:SPECIAL_DEFENSE, user, self)
       target.pbRaiseStatStage(:SPECIAL_DEFENSE, 1, user, showAnim)
+    end
+    if target.pbCanRaiseStatStage?(:SPEED, user, self)
+      target.pbRaiseStatStage(:SPEED, 1, user, showAnim)
     end
   end
 
