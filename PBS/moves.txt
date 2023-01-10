@@ -5606,8 +5606,8 @@ Description = The user draws power to attack by using its held Berry. The Berry 
 #-------------------------------
 [PRESENT]
 Name = Present
-Type = NORMAL
-Category = Physical
+Type = ICE
+Category = Special
 Power = 1
 Accuracy = 90
 TotalPP = 15

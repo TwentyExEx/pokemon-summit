@@ -39,19 +39,16 @@ class Battle::Move::CannotBeRedirected < Battle::Move
 end
 
 #===============================================================================
-# Randomly damages or heals the target. (Present)
+# Randomly damages the target or heals all Pokemon on the field. (Present)
 # NOTE: Apparently a Normal Gem should be consumed even if this move will heal,
 #       but I think that's silly so I've omitted that effect.
 #===============================================================================
 class Battle::Move::RandomlyDamageOrHealTarget < Battle::Move
   def pbOnStartUse(user, targets)
-    @presentDmg = 0   # 0 = heal, >0 = damage
-    r = @battle.pbRandom(100)
-    if r < 40
-      @presentDmg = 40
-    elsif r < 70
-      @presentDmg = 80
-    elsif r < 80
+    case @battle.pbRandom(2)
+    when 0
+      @presentDmg = 0  
+    when 1
       @presentDmg = 120
     end
   end
