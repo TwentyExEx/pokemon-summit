@@ -1299,3 +1299,15 @@ Description = Boosts its Defense stat with every able Poison-type on the team.
 Name = Kilkenny Cat
 Description = This Pokemon is immune to Fighting-type moves and raises its Attack by 1 stage when hit by an Fighting-type move.
 #-------------------------------
+[THUNDERFEET]
+Name = Thunder Feet
+Description = Causes the power of affected kicking moves to increase by 30%.
+#-------------------------------
+[BOXBARRIER]
+Name = Box Barrier
+Description = When Reflect is up, this Pokemon's Attack is boosted. When Light Screen is up, this Pokemon's Sp. Atk is boosted.
+#-------------------------------
+[SNARINGENTRANCE]
+Name = Snaring Entrance
+Description = Prevents opposing Pokémon from escaping. This works only once each time the Pokémon enters battle.
+#-------------------------------
