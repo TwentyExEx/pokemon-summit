@@ -233,3 +233,121 @@ Battle::AbilityEffects::AccuracyCalcFromTarget.add(:KILKENNYCAT,
     mods[:base_accuracy] = 0 if type == :FIGHTING
   }
 )
+
+#===============================================================================
+# Hail Hurl
+#===============================================================================
+
+Battle::AbilityEffects::OnBeingHit.add(:HAILHURL,
+  proc { |ability, user, target, move, battle|
+    battle.pbStartWeatherAbility(:Hail, target)
+  }
+)
+
+Battle::AbilityEffects::DamageCalcFromTarget.add(:HAILHURL,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    mults[:final_damage_multiplier] /= 2 if type == :ICE
+  }
+)
+
+#===============================================================================
+# Sunny Sputum
+#===============================================================================
+
+Battle::AbilityEffects::OnBeingHit.add(:SUNNYSPUTUM,
+  proc { |ability, user, target, move, battle|
+    battle.pbStartWeatherAbility(:Sun, target)
+  }
+)
+
+Battle::AbilityEffects::DamageCalcFromTarget.add(:SUNNYSPUTUM,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    mults[:final_damage_multiplier] /= 2 if type == :FIRE
+  }
+)
+
+#===============================================================================
+# Drizzle Dribble
+#===============================================================================
+
+Battle::AbilityEffects::OnBeingHit.add(:DRIZZLEDRIBBLE,
+  proc { |ability, user, target, move, battle|
+    battle.pbStartWeatherAbility(:Rain, target)
+  }
+)
+
+Battle::AbilityEffects::DamageCalcFromTarget.add(:DRIZZLEDRIBBLE,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    mults[:final_damage_multiplier] /= 2 if type == :WATER
+  }
+)
+
+#===============================================================================
+# Spark Starter
+#===============================================================================
+
+Battle::AbilityEffects::OnBeingHit.add(:SPARKSTARTER,
+  proc { |ability, user, target, move, battle|
+    next if !move.damagingMove?
+    next if battle.field.terrain == :Electric
+    battle.pbShowAbilitySplash(target)
+    battle.pbDisplay(_INTL("An electric current runs across the battlefield!"))
+    battle.pbStartTerrain(target, :Electric)
+  }
+)
+
+Battle::AbilityEffects::DamageCalcFromTarget.add(:SPARKSTARTER,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    mults[:final_damage_multiplier] /= 2 if type == :ELECTRIC
+  }
+)
+
+#===============================================================================
+# Steam Sprinkler
+#===============================================================================
+
+Battle::AbilityEffects::OnBeingHit.add(:STEAMSPRINKLER,
+  proc { |ability, user, target, move, battle|
+    next if !move.damagingMove?
+    next if battle.field.terrain == :Misty
+    battle.pbShowAbilitySplash(target)
+    battle.pbDisplay(_INTL("Mist swirled about the battlefield!"))
+    battle.pbStartTerrain(target, :Misty)
+  }
+)
+
+Battle::AbilityEffects::DamageCalcFromTarget.add(:STEAMSPRINKLER,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    mults[:final_damage_multiplier] /= 2 if type == :FAIRY
+  }
+)
+
+#===============================================================================
+# Psyche Spreader
+#===============================================================================
+
+Battle::AbilityEffects::OnBeingHit.add(:PSYCHESPREADER,
+  proc { |ability, user, target, move, battle|
+    next if !move.damagingMove?
+    next if battle.field.terrain == :Psychic
+    battle.pbShowAbilitySplash(target)
+    battle.pbDisplay(_INTL("The battlefield got weird!"))
+    battle.pbStartTerrain(target, :Psychic)
+  }
+)
+
+Battle::AbilityEffects::DamageCalcFromTarget.add(:PSYCHESPREADER,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    mults[:final_damage_multiplier] /= 2 if type == :PSYCHIC
+  }
+)
+
+#===============================================================================
+# Sharpshooter
+#===============================================================================
+
+Battle::AbilityEffects::DamageCalcFromUser.add(:SHARPSHOOTER,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    mults[:base_damage_multiplier] *= 1.3 if move.bombMove?
+  }
+)

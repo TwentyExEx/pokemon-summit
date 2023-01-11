@@ -1259,3 +1259,31 @@ Description = When attacking, the user goes for a second, weaker hit in the same
 Name = Disquiet
 Description = Lowers the foe's Special Attack stat.
 #-------------------------------
+[SPARKSTARTER]
+Name = Spark Starter
+Description = Turns the ground into Electric Terrain when the Pokémon is hit by an attack. Halves the damage taken of Electric-type moves.
+#-------------------------------
+[STEAMSPRINKLER]
+Name = Steam Sprinkler
+Description = Turns the ground into Misty Terrain when the Pokémon is hit by an attack. Halves the damage taken of Fairy-type moves.
+#-------------------------------
+[PSYCHESPREADER]
+Name = Psyche Spreader
+Description = Turns the ground into Psychic Terrain when the Pokémon is hit by an attack. Halves the damage taken of Psychic-type moves.
+#-------------------------------
+[HAILHURL]
+Name = Hail Hurl
+Description = The Pokémon creates a hailstorm when it's hit by an attack. Halves the damage taken of Ice-type moves.
+#-------------------------------
+[SUNNYSPUTUM]
+Name = Sunny Sputum
+Description = The Pokémon turns the sunlight harsh when it's hit by an attack. Halves the damage taken of Fire-type moves.
+#-------------------------------
+[DRIZZLEDRIBBLE]
+Name = Drizzle Dribble
+Description = The Pokémon makes it rain when it's hit by an attack. Halves the damage taken of Water-type moves.
+#-------------------------------
+[SHARPSHOOTER]
+Name = Sharpshooter
+Description = Powers up ball and bomb moves.
+#-------------------------------
