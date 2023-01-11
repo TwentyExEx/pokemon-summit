@@ -1295,3 +1295,7 @@ Description = Boosts its Attack stat with every able Poison-type on the team.
 Name = Hail to the Queen
 Description = Boosts its Defense stat with every able Poison-type on the team.
 #-------------------------------
+[KILKENNYCAT]
+Name = Kilkenny Cat
+Description = This Pokemon is immune to Fighting-type moves and raises its Attack by 1 stage when hit by an Fighting-type move.
+#-------------------------------
