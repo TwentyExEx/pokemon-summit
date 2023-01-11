@@ -61,6 +61,7 @@ module Battle::AbilityEffects
   OnBattlerFainting                = AbilityHandlerHash.new   # Soul-Heart
   OnTerrainChange                  = AbilityHandlerHash.new   # Mimicry
   OnIntimidated                    = AbilityHandlerHash.new   # Rattled (Gen 8)
+  OnDisquieted                     = AbilityHandlerHash.new   # Rattled (Gen 8)
   # Running from battle
   CertainEscapeFromBattle          = AbilityHandlerHash.new   # Run Away
 
@@ -283,6 +284,10 @@ module Battle::AbilityEffects
 
   def self.triggerOnIntimidated(ability, battler, battle)
     OnIntimidated.trigger(ability, battler, battle)
+  end
+  
+  def self.triggerOnDisquieted(ability, battler, battle)
+    OnDisquieted.trigger(ability, battler, battle)
   end
 
   #=============================================================================
@@ -2868,6 +2873,25 @@ Battle::AbilityEffects::OnSwitchIn.add(:INTIMIDATE,
   }
 )
 
+Battle::AbilityEffects::OnSwitchIn.add(:DISQUIET,
+  proc { |ability, battler, battle, switch_in|
+    battle.pbShowAbilitySplash(battler)
+    battle.allOtherSideBattlers(battler.index).each do |b|
+      next if !b.near?(battler)
+      check_item = true
+      if b.hasActiveAbility?(:CONTRARY)
+        check_item = false if b.statStageAtMax?(:SPECIAL_ATTACK)
+      elsif b.statStageAtMin?(:SPECIAL_ATTACK)
+        check_item = false
+      end
+      check_ability = b.pbLowerSpecialAttackStatStageDisquiet(battler)
+      b.pbAbilitiesOnDisquieted if check_ability
+      b.pbItemOnDisquietedCheck if check_item
+    end
+    battle.pbHideAbilitySplash(battler)
+  }
+)
+
 Battle::AbilityEffects::OnSwitchIn.add(:INTREPIDSWORD,
   proc { |ability, battler, battle, switch_in|
     battler.pbRaiseStatStageByAbility(:ATTACK, 1, battler)
@@ -3202,6 +3226,17 @@ Battle::AbilityEffects::OnTerrainChange.add(:MIMICRY,
 #===============================================================================
 
 Battle::AbilityEffects::OnIntimidated.add(:RATTLED,
+  proc { |ability, battler, battle|
+    next if Settings::MECHANICS_GENERATION < 8
+    battler.pbRaiseStatStageByAbility(:SPEED, 1, battler)
+  }
+)
+
+#===============================================================================
+# OnDisquieted handlers
+#===============================================================================
+
+Battle::AbilityEffects::OnDisquieted.add(:RATTLED,
   proc { |ability, battler, battle|
     next if Settings::MECHANICS_GENERATION < 8
     battler.pbRaiseStatStageByAbility(:SPEED, 1, battler)

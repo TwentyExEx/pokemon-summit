@@ -50,6 +50,12 @@ class Battle::Battler
     Battle::AbilityEffects.triggerOnIntimidated(self.ability, self, @battle)
   end
 
+  # Used for Rattled's Gen 8 effect. Called when Intimidate is triggered.
+  def pbAbilitiesOnDisquieted
+    return if !abilityActive?
+    Battle::AbilityEffects.triggerOnDisquieted(self.ability, self, @battle)
+  end
+
   def pbAbilitiesOnNeutralizingGasEnding
     return if @battle.pbCheckGlobalAbility(:NEUTRALIZINGGAS)
     @battle.pbDisplay(_INTL("The effects of the neutralizing gas wore off!"))
@@ -363,6 +369,15 @@ class Battle::Battler
   # Used for Adrenaline Orb. Called when Intimidate is triggered (even if
   # Intimidate has no effect on the Pokémon).
   def pbItemOnIntimidatedCheck
+    return if !itemActive?
+    if Battle::ItemEffects.triggerOnIntimidated(self.item, self, @battle)
+      pbHeldItemTriggered(self.item)
+    end
+  end
+  
+  # Used for Adrenaline Orb. Called when Disquiet is triggered (even if
+  # Disquiet has no effect on the Pokémon).
+  def pbItemOnDisquietedCheck
     return if !itemActive?
     if Battle::ItemEffects.triggerOnIntimidated(self.item, self, @battle)
       pbHeldItemTriggered(self.item)

@@ -1255,3 +1255,7 @@ Description = The Pokémon's attacks become critical hits if the target is burnt
 Name = Hidden Blow
 Description = When attacking, the user goes for a second, weaker hit in the same turn.
 #-------------------------------
+[DISQUIET]
+Name = Disquiet
+Description = Lowers the foe's Special Attack stat.
+#-------------------------------

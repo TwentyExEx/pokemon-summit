@@ -45,6 +45,7 @@ module Battle::ItemEffects
   TrappingByTarget                = ItemHandlerHash.new   # None!
   OnSwitchIn                      = ItemHandlerHash.new   # Air Balloon
   OnIntimidated                   = ItemHandlerHash.new   # Adrenaline Orb
+  OnDisquieted                    = ItemHandlerHash.new   # Adrenaline Orb
   # Running from battle
   CertainEscapeFromBattle         = ItemHandlerHash.new   # Smoke Ball
 
@@ -205,6 +206,10 @@ module Battle::ItemEffects
 
   def self.triggerOnIntimidated(item, battler, battle)
     return trigger(OnIntimidated, item, battler, battle)
+  end
+ 
+  def self.triggerOnDisquieted(item, battler, battle)
+    return trigger(OnDisquieted, item, battler, battle)
   end
 
   #=============================================================================
@@ -1938,6 +1943,19 @@ Battle::ItemEffects::OnSwitchIn.add(:ROOMSERVICE,
 #===============================================================================
 
 Battle::ItemEffects::OnIntimidated.add(:ADRENALINEORB,
+  proc { |item, battler, battle|
+    next false if !battler.pbCanRaiseStatStage?(:SPEED, battler)
+    itemName = GameData::Item.get(item).name
+    battle.pbCommonAnimation("UseItem", battler)
+    next battler.pbRaiseStatStageByCause(:SPEED, 1, battler, itemName)
+  }
+)
+
+#===============================================================================
+# OnDisquieted handlers
+#===============================================================================
+
+Battle::ItemEffects::OnDisquieted.add(:ADRENALINEORB,
   proc { |item, battler, battle|
     next false if !battler.pbCanRaiseStatStage?(:SPEED, battler)
     itemName = GameData::Item.get(item).name
