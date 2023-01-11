@@ -151,6 +151,14 @@ class Battle::Move
       if battler.isSpecies?(:MORPEKO) || battler.effects[PBEffects::TransformSpecies] == :MORPEKO
         return pbBaseType(battler)
       end
+	when "TypeDependsOnSquawkabillyForm"
+      if battler.isSpecies?(:SQUAWKABILLY) || battler.effects[PBEffects::TransformSpecies] == :SQUAWKABILLY
+        return pbBaseType(battler)
+      end
+	when "TypeDependsOnSawsbuckForm"
+      if battler.isSpecies?(:SAWSBUCK) || battler.effects[PBEffects::TransformSpecies] == :SAWSBUCK
+        return pbBaseType(battler)
+      end
 =begin
     when "TypeDependsOnUserPlate", "TypeDependsOnUserMemory",
          "TypeDependsOnUserDrive", "TypeAndPowerDependOnUserBerry",

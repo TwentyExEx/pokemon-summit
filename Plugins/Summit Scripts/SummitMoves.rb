@@ -64,11 +64,63 @@ end
 #===============================================================================
 # Randomly poisons, paralyzes or sleeps the target and its allies. (Befuddle)
 #===============================================================================
-class Battle::PowerMove::PoisonParalyzeOrSleepAllFoes < Battle::Move
+class Battle::Move::PoisonParalyzeOrSleepAllFoes < Battle::Move
   def initialize(battle, move)
     super
     @statuses = {
       :opponents => [:POISON, :PARALYSIS, :SLEEP]
     }
+  end
+end
+
+#===============================================================================
+# Effectiveness against Dragon-type is 2x. (Arcane Trunk)
+#===============================================================================
+class Battle::Move::SuperEffectiveAgainstDragonTypes < Battle::Move
+  def pbCalcTypeModSingle(moveType, defType, user, target)
+    return Effectiveness::SUPER_EFFECTIVE_ONE if defType == :DRAGON
+    return super
+  end
+end
+
+#===============================================================================
+# This move's type depends on the user's form. Fails if the user is not
+# Squawkabilly (works if transformed into Squawkabilly). (Plume Boom)
+#===============================================================================
+class Battle::Move::TypeDependsOnSquawkabillyForm < Battle::Move
+  def pbMoveFailed?(user, targets)
+    if !user.isSpecies?(:SQUAWKABILLY) && user.effects[PBEffects::TransformSpecies] != :SQUAWKABILLY
+      @battle.pbDisplay(_INTL("But {1} can't use the move!", user.pbThis))
+      return true
+    end
+    return false
+  end
+
+  def pbBaseType(user)
+    return :FIGHTING if user.form == 1 && GameData::Type.exists?(:FIGHTING)
+	return :DARK if user.form == 2 && GameData::Type.exists?(:DARK)
+	return :STEEL if user.form == 3 && GameData::Type.exists?(:STEEL)
+    return @type
+  end
+end
+
+#===============================================================================
+# This move's type depends on the user's form. Fails if the user is not
+# Sawsbuck (works if transformed into Sawsbuck). (Seasonal Charge)
+#===============================================================================
+class Battle::Move::TypeDependsOnSawsbuckForm < Battle::Move
+  def pbMoveFailed?(user, targets)
+    if !user.isSpecies?(:SAWSBUCK) && user.effects[PBEffects::TransformSpecies] != :SAWSBUCK
+      @battle.pbDisplay(_INTL("But {1} can't use the move!", user.pbThis))
+      return true
+    end
+    return false
+  end
+
+  def pbBaseType(user)
+    return :FIRE if user.form == 1 && GameData::Type.exists?(:FIRE)
+	return :GROUND if user.form == 2 && GameData::Type.exists?(:GROUND)
+	return :ICE if user.form == 3 && GameData::Type.exists?(:ICE)
+    return @type
   end
 end

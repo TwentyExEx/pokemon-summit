@@ -813,6 +813,7 @@ module GameData
       when "176" then new_code = "PriorityWhenTerrainActiveEndsTerrain"
 	  when "177" then new_code = "UseTargetSpDefInsteadOfTargetDef"
 	  when "178" then new_code = "PoisonParalyzeOrSleepAllFoes"
+      when "179" then new_code = "SuperEffectiveAgainstDragonTypes"
       end
       data[:function_code] = new_code
       return data

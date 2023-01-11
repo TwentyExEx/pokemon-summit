@@ -9645,6 +9645,92 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = PoisonParalyzeOrSleepAllFoes
 Flags = CanProtect,CanMirrorMove
-EffectChance = 30
+EffectChance = 100
 Description = This move has a chance of inflicting poison, paralysis or sleep.
+#-------------------------------
+[CONSTELLATIONPUNCH]
+Name = Constellation Punch
+Type = BUG
+Category = Physical
+Power = 30
+Accuracy = 90
+TotalPP = 15
+Target = NearOther
+FunctionCode = HitThreeTimesPowersUpWithEachHit
+Flags = Contact,CanProtect,CanMirrorMove
+Description = A consecutive three-punch attack that becomes more powerful with each successful hit.
+#-------------------------------
+[ARCANETRUNK]
+Name = Arcane Trunk
+Type = GRASS
+Category = Physical
+Power = 70
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+FunctionCode = SuperEffectiveAgainstDragonTypes
+Flags = Contact,CanProtect,CanMirrorMove
+Description = This move is super-effective on Dragon types.
+#-------------------------------
+[PLUMEBOOM]
+Name = Plume Boom
+Type = NORMAL
+Category = Physical
+Power = 90
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = TypeDependsOnSquawkabillyForm
+Flags = Contact,CanProtect
+Description = This move's typing depends on the user's form.
+#-------------------------------
+[SEASONALCHARGE]
+Name = Seasonal Charge
+Type = FAIRY
+Category = Physical
+Power = 90
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = TypeDependsOnSawsbuckForm
+Flags = Contact,CanProtect
+Description = The user absorbs the power of the seasons and charges at the target. This move's typing changes based on the user's form.
+#-------------------------------
+[HARSHJAB]
+Name = Harsh Jab
+Type = DARK
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+FunctionCode = LowerTargetDefense2
+Flags = Contact,CanProtect,CanMirrorMove
+EffectChance = 100
+Description = The user performs a violent jab that works to severely injure the target. This also harshly lowers the target's Defense stat.
+#-------------------------------
+[SLITHERSTRIKE]
+Name = Slither Strike
+Type = POISON
+Category = Physical
+Power = 70
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+FunctionCode = RaiseUserSpeed1
+Flags = Contact,CanProtect,CanMirrorMove
+EffectChance = 100
+Description = Slithering in venom, the user attacks the target. Then, building up momentum, the user boosts its Speed stat.
+#-------------------------------
+[ENZUIGIRIKICK]
+Name = Enzuigiri Kick
+Type = FIGHTING
+Category = Physical
+Power = 80
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = UseTargetSpDefInsteadOfTargetDef
+Flags = CanProtect,CanMirrorMove
+Description = Hits the foe with a kick to the back of its head. This move does special damage.
 #-------------------------------
