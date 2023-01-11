@@ -1287,3 +1287,7 @@ Description = The Pokémon makes it rain when it's hit by an attack. Halves the 
 Name = Sharpshooter
 Description = Powers up ball and bomb moves.
 #-------------------------------
+[HAILTOTHEKING]
+Name = Hail to the King
+Description = Boosts its Attack stat with every able Poison-type on the team.
+#-------------------------------

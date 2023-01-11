@@ -372,3 +372,67 @@ Battle::AbilityEffects::DamageCalcFromUser.add(:SHARPSHOOTER,
     mults[:base_damage_multiplier] *= 1.3 if move.bombMove?
   }
 )
+
+#===============================================================================
+# Hail to the King
+#===============================================================================
+Battle::AbilityEffects::DamageCalcFromUser.add(:HAILTOTHEKING,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    user.effects[PBEffects::HailToTheKing] = 0 if user.effects[PBEffects::HailToTheKing].nil?
+    next if user.effects[PBEffects::HailToTheKing] <= 0
+    mult = 1
+    mult += 0.1 * user.effects[PBEffects::HailToTheKing]
+    mults[:attack_multiplier] *= mult if move.physicalMove?
+  }
+)
+
+Battle::AbilityEffects::OnSwitchIn.add(:HAILTOTHEKING,
+  proc { |ability, battler, battle, switch_in|
+  poisonList = []
+  numPsn = 0
+  party = battle.pbParty(0)
+  party.delete_at(0) # Ignore user
+  for pkmn in party
+    next if !pkmn.able? || pkmn.status != :NONE || !pkmn.types.include?(:POISON)
+    numPsn += 1
+  end
+  numPsn = 5 if numPsn > 5
+  next if numPsn <= 0
+  battle.pbShowAbilitySplash(battler)
+  battle.pbDisplay(_INTL("{1}'s physical power was boosted by its royalty!", battler.pbThis))
+  battler.effects[PBEffects::HailToTheKing] = numPsn
+  battle.pbHideAbilitySplash(battler)
+  }
+)
+
+#===============================================================================
+# Hail to the Queen
+#===============================================================================
+Battle::AbilityEffects::DamageCalcFromUser.add(:HAILTOTHEQUEEN,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    user.effects[PBEffects::HailToTheQueen] = 0 if user.effects[PBEffects::HailToTheQueen].nil?
+    next if user.effects[PBEffects::HailToTheQueen] <= 0
+    mult = 1
+    mult += 0.1 * user.effects[PBEffects::HailToTheQueen]
+    mults[:defense_multiplier] *= mult
+  }
+)
+
+Battle::AbilityEffects::OnSwitchIn.add(:HAILTOTHEQUEEN,
+  proc { |ability, battler, battle, switch_in|
+  poisonList = []
+  numPsn = 0
+  party = battle.pbParty(0)
+  party.delete_at(0) # Ignore user
+  for pkmn in party
+    next if !pkmn.able? || pkmn.status != :NONE || !pkmn.types.include?(:POISON)
+    numPsn += 1
+  end
+  numPsn = 5 if numPsn > 5
+  next if numPsn <= 0
+  battle.pbShowAbilitySplash(battler)
+  battle.pbDisplay(_INTL("{1}'s physical defense was boosted by its royalty!", battler.pbThis))
+  battler.effects[PBEffects::HailToTheQueen] = numPsn
+  battle.pbHideAbilitySplash(battler)
+  }
+)
