@@ -317,10 +317,6 @@ class Battle::Move::TrapTargetInBattle < Battle::Move
       @battle.pbDisplay(_INTL("But it failed!")) if show_message
       return true
     end
-    if Settings::MORE_TYPE_EFFECTS && target.pbHasType?(:GHOST)
-      @battle.pbDisplay(_INTL("It doesn't affect {1}...", target.pbThis(true))) if show_message
-      return true
-    end
     return false
   end
 
@@ -333,7 +329,6 @@ class Battle::Move::TrapTargetInBattle < Battle::Move
   def pbAdditionalEffect(user, target)
     return if target.fainted? || target.damageState.substitute
     return if target.effects[PBEffects::MeanLook] >= 0
-    return if Settings::MORE_TYPE_EFFECTS && target.pbHasType?(:GHOST)
     target.effects[PBEffects::MeanLook] = user.index
     @battle.pbDisplay(_INTL("{1} can no longer escape!", target.pbThis))
   end
@@ -349,10 +344,6 @@ class Battle::Move::TrapTargetInBattleLowerTargetDefSpDef1EachTurn < Battle::Mov
     return false if damagingMove?
     if target.effects[PBEffects::Octolock] >= 0
       @battle.pbDisplay(_INTL("But it failed!")) if show_message
-      return true
-    end
-    if Settings::MORE_TYPE_EFFECTS && target.pbHasType?(:GHOST)
-      @battle.pbDisplay(_INTL("It doesn't affect {1}...", target.pbThis(true))) if show_message
       return true
     end
     return false
@@ -372,7 +363,6 @@ end
 class Battle::Move::TrapUserAndTargetInBattle < Battle::Move
   def pbAdditionalEffect(user, target)
     return if user.fainted? || target.fainted? || target.damageState.substitute
-    return if Settings::MORE_TYPE_EFFECTS && target.pbHasType?(:GHOST)
     return if user.trappedInBattle? || target.trappedInBattle?
     target.effects[PBEffects::JawLock] = user.index
     @battle.pbDisplay(_INTL("Neither Pokémon can run away!"))

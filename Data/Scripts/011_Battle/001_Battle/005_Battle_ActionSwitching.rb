@@ -61,8 +61,6 @@ class Battle
        Battle::ItemEffects.triggerCertainSwitching(battler.item, battler, self)
       return true
     end
-    # Other certain switching effects
-    return true if Settings::MORE_TYPE_EFFECTS && battler.pbHasType?(:GHOST)
     # Other certain trapping effects
     if battler.trappedInBattle?
       partyScene&.pbDisplay(_INTL("{1} can't be switched out!", battler.pbThis))

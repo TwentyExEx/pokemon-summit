@@ -2558,7 +2558,7 @@ Battle::AbilityEffects::EndOfRoundGainItem.add(:PICKUP,
 
 Battle::AbilityEffects::TrappingByTarget.add(:ARENATRAP,
   proc { |ability, switcher, bearer, battle|
-    next true if !switcher.airborne?
+    next true if switcher.pbHasType?(:GROUND)
   }
 )
 
@@ -2570,7 +2570,7 @@ Battle::AbilityEffects::TrappingByTarget.add(:MAGNETPULL,
 
 Battle::AbilityEffects::TrappingByTarget.add(:SHADOWTAG,
   proc { |ability, switcher, bearer, battle|
-    next true if !switcher.hasActiveAbility?(:SHADOWTAG)
+    next true if switcher.pbHasType?(:GHOST)
   }
 )
 

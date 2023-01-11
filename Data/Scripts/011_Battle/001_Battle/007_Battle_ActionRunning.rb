@@ -6,7 +6,6 @@ class Battle
     return false if trainerBattle?
     battler = @battlers[idxBattler]
     return false if !@canRun && !battler.opposes?
-    return true if battler.pbHasType?(:GHOST) && Settings::MORE_TYPE_EFFECTS
     return true if battler.abilityActive? &&
                    Battle::AbilityEffects.triggerCertainEscapeFromBattle(battler.ability, battler)
     return true if battler.itemActive? &&
@@ -68,12 +67,6 @@ class Battle
       return 0
     end
     if !duringBattle
-      if battler.pbHasType?(:GHOST) && Settings::MORE_TYPE_EFFECTS
-        pbSEPlay("Battle flee")
-        pbDisplayPaused(_INTL("You got away safely!"))
-        @decision = 3
-        return 1
-      end
       # Abilities that guarantee escape
       if battler.abilityActive? &&
          Battle::AbilityEffects.triggerCertainEscapeFromBattle(battler.ability, battler)
