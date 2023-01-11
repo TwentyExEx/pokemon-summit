@@ -38,6 +38,11 @@ class Battle::AI
          defType == :GHOST
         ret = Effectiveness::NORMAL_EFFECTIVE_ONE
       end
+      # Foresight
+      if (user.hasActiveAbility?(:CORROSION) || target.effects[PBEffects::Foresight]) &&
+         defType == :STEEL
+        ret = Effectiveness::NORMAL_EFFECTIVE_ONE
+      end
       # Miracle Eye
       if target.effects[PBEffects::MiracleEye] && defType == :DARK
         ret = Effectiveness::NORMAL_EFFECTIVE_ONE

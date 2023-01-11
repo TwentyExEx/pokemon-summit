@@ -433,6 +433,13 @@ Battle::AbilityEffects::StatusImmunity.add(:FLOWERVEIL,
   }
 )
 
+Battle::AbilityEffects::StatusImmunity.add(:WHITESMOKE,
+  proc { |ability, battler, status|
+    next true if battler.pbHasType?(:FIRE)
+  }
+)
+
+
 Battle::AbilityEffects::StatusImmunity.add(:IMMUNITY,
   proc { |ability, battler, status|
     next true if status == :POISON
@@ -696,11 +703,25 @@ Battle::AbilityEffects::StatLossImmunity.add(:CLEARBODY,
   }
 )
 
-Battle::AbilityEffects::StatLossImmunity.copy(:CLEARBODY, :WHITESMOKE)
-
 Battle::AbilityEffects::StatLossImmunity.add(:FLOWERVEIL,
   proc { |ability, battler, stat, battle, showMessages|
     next false if !battler.pbHasType?(:GRASS)
+    if showMessages
+      battle.pbShowAbilitySplash(battler)
+      if Battle::Scene::USE_ABILITY_SPLASH
+        battle.pbDisplay(_INTL("{1}'s stats cannot be lowered!", battler.pbThis))
+      else
+        battle.pbDisplay(_INTL("{1}'s {2} prevents stat loss!", battler.pbThis, battler.abilityName))
+      end
+      battle.pbHideAbilitySplash(battler)
+    end
+    next true
+  }
+)
+
+Battle::AbilityEffects::StatLossImmunity.add(:WHITESMOKE,
+  proc { |ability, battler, stat, battle, showMessages|
+    next false if !battler.pbHasType?(:FIRE)
     if showMessages
       battle.pbShowAbilitySplash(battler)
       if Battle::Scene::USE_ABILITY_SPLASH
