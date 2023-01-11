@@ -56,7 +56,7 @@ Evolutions = VENUSAUR,Level,32
 [VENUSAUR]
 Name = Venusaur
 Types = GRASS,POISON
-BaseStats = 80,82,83,80,100,100
+BaseStats = 90,67,83,80,100,110
 GenderRatio = FemaleOneEighth
 GrowthRate = Parabolic
 BaseExp = 263
@@ -134,7 +134,7 @@ Evolutions = CHARIZARD,Level,36
 [CHARIZARD]
 Name = Charizard
 Types = FIRE,FLYING
-BaseStats = 78,84,78,100,109,85
+BaseStats = 78,80,78,100,109,85
 GenderRatio = FemaleOneEighth
 GrowthRate = Parabolic
 BaseExp = 267
@@ -212,7 +212,7 @@ Evolutions = BLASTOISE,Level,36
 [BLASTOISE]
 Name = Blastoise
 Types = WATER
-BaseStats = 79,83,100,78,85,105
+BaseStats = 84,65,100,73,103,105
 GenderRatio = FemaleOneEighth
 GrowthRate = Parabolic
 BaseExp = 265
@@ -288,7 +288,7 @@ Evolutions = BUTTERFREE,Level,10
 [BUTTERFREE]
 Name = Butterfree
 Types = BUG,FLYING
-BaseStats = 60,45,50,70,90,80
+BaseStats = 60,40,50,95,135,80
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 198
@@ -365,7 +365,7 @@ Evolutions = BEEDRILL,Level,10
 [BEEDRILL]
 Name = Beedrill
 Types = BUG,POISON
-BaseStats = 65,90,40,75,45,80
+BaseStats = 65,125,40,105,45,80
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 198
@@ -444,7 +444,7 @@ Evolutions = PIDGEOT,Level,36
 [PIDGEOT]
 Name = Pidgeot
 Types = NORMAL,FLYING
-BaseStats = 83,80,75,101,70,70
+BaseStats = 83,90,55,101,111,50
 GenderRatio = Female50Percent
 GrowthRate = Parabolic
 BaseExp = 240
@@ -497,7 +497,7 @@ Evolutions = RATICATE,Level,20
 [RATICATE]
 Name = Raticate
 Types = NORMAL
-BaseStats = 55,81,60,97,50,70
+BaseStats = 70,118,60,107,50,70
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 145
@@ -551,7 +551,7 @@ Evolutions = FEAROW,Level,20
 [FEAROW]
 Name = Fearow
 Types = NORMAL,FLYING
-BaseStats = 65,90,65,100,61,61
+BaseStats = 65,120,65,100,61,61
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 155
@@ -604,7 +604,7 @@ Evolutions = ARBOK,Level,22
 [ARBOK]
 Name = Arbok
 Types = POISON
-BaseStats = 60,95,69,80,65,79
+BaseStats = 80,115,69,90,35,79
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 157
@@ -656,7 +656,7 @@ Evolutions = RAICHU,Item,THUNDERSTONE
 [RAICHU]
 Name = Raichu
 Types = ELECTRIC
-BaseStats = 60,90,55,110,90,80
+BaseStats = 60,110,55,110,70,80
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 243
@@ -709,7 +709,7 @@ Evolutions = SANDSLASH,Level,22
 [SANDSLASH]
 Name = Sandslash
 Types = GROUND
-BaseStats = 75,100,110,65,45,55
+BaseStats = 75,120,110,65,45,55
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 158
@@ -789,7 +789,7 @@ Evolutions = NIDOQUEEN,Item,MOONSTONE
 [NIDOQUEEN]
 Name = Nidoqueen
 Types = POISON,GROUND
-BaseStats = 90,92,87,76,75,85
+BaseStats = 100,72,87,76,95,85
 GenderRatio = AlwaysFemale
 GrowthRate = Parabolic
 BaseExp = 253
@@ -868,7 +868,7 @@ Evolutions = NIDOKING,Item,MOONSTONE
 [NIDOKING]
 Name = Nidoking
 Types = POISON,GROUND
-BaseStats = 81,102,77,85,85,75
+BaseStats = 91,122,67,85,85,65
 GenderRatio = AlwaysMale
 GrowthRate = Parabolic
 BaseExp = 253
@@ -974,7 +974,7 @@ Evolutions = NINETALES,Item,FIRESTONE
 [NINETALES]
 Name = Ninetales
 Types = FIRE
-BaseStats = 73,76,75,100,81,100
+BaseStats = 73,76,75,100,101,80
 GenderRatio = Female75Percent
 GrowthRate = Medium
 BaseExp = 177
@@ -1027,7 +1027,7 @@ Evolutions = WIGGLYTUFF,Item,MOONSTONE
 [WIGGLYTUFF]
 Name = Wigglytuff
 Types = NORMAL,FAIRY
-BaseStats = 140,70,45,45,85,50
+BaseStats = 140,30,75,45,105,80
 GenderRatio = Female75Percent
 GrowthRate = Fast
 BaseExp = 218
@@ -1161,7 +1161,7 @@ Evolutions = VILEPLUME,Item,LEAFSTONE,BELLOSSOM,Item,SUNSTONE
 [VILEPLUME]
 Name = Vileplume
 Types = GRASS,POISON
-BaseStats = 75,80,85,50,110,90
+BaseStats = 95,50,85,40,130,90
 GenderRatio = Female50Percent
 GrowthRate = Parabolic
 BaseExp = 245
@@ -1216,7 +1216,7 @@ Evolutions = PARASECT,Level,24
 [PARASECT]
 Name = Parasect
 Types = BUG,GRASS
-BaseStats = 60,95,80,30,60,80
+BaseStats = 90,105,100,30,35,100
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 142
@@ -1270,7 +1270,7 @@ Evolutions = VENOMOTH,Level,31
 [VENOMOTH]
 Name = Venomoth
 Types = BUG,POISON
-BaseStats = 70,65,60,90,90,75
+BaseStats = 70,55,60,90,110,75
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 158
@@ -1324,7 +1324,7 @@ Evolutions = DUGTRIO,Level,26
 [DUGTRIO]
 Name = Dugtrio
 Types = GROUND
-BaseStats = 35,100,50,120,50,70
+BaseStats = 60,110,50,120,50,70
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 149
@@ -1378,7 +1378,7 @@ Evolutions = PERSIAN,Level,28,PERRSERKER,None,
 [PERSIAN]
 Name = Persian
 Types = NORMAL
-BaseStats = 65,70,60,115,65,65
+BaseStats = 65,115,60,115,50,65
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 154
@@ -1431,7 +1431,7 @@ Evolutions = GOLDUCK,Level,33
 [GOLDUCK]
 Name = Golduck
 Types = WATER
-BaseStats = 80,82,78,85,95,80
+BaseStats = 70,40,78,105,127,80
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 175
@@ -1615,7 +1615,7 @@ Evolutions = POLIWRATH,Item,WATERSTONE,POLITOED,TradeItem,KINGSROCK
 [POLIWRATH]
 Name = Poliwrath
 Types = WATER,FIGHTING
-BaseStats = 90,95,95,70,70,90
+BaseStats = 90,125,95,80,50,90
 GenderRatio = Female50Percent
 GrowthRate = Parabolic
 BaseExp = 255
@@ -1777,7 +1777,7 @@ Evolutions = MACHAMP,Trade,
 [MACHAMP]
 Name = Machamp
 Types = FIGHTING
-BaseStats = 90,130,80,55,65,85
+BaseStats = 100,130,70,55,45,105
 GenderRatio = Female25Percent
 GrowthRate = Parabolic
 BaseExp = 253
@@ -1856,7 +1856,7 @@ Evolutions = VICTREEBEL,Item,LEAFSTONE
 [VICTREEBEL]
 Name = Victreebel
 Types = GRASS,POISON
-BaseStats = 80,105,65,70,100,70
+BaseStats = 70,120,65,90,100,70
 GenderRatio = Female50Percent
 GrowthRate = Parabolic
 BaseExp = 245
@@ -1909,7 +1909,7 @@ Evolutions = TENTACRUEL,Level,30
 [TENTACRUEL]
 Name = Tentacruel
 Types = WATER,POISON
-BaseStats = 80,70,65,100,80,120
+BaseStats = 100,50,65,100,80,120
 GenderRatio = Female50Percent
 GrowthRate = Slow
 BaseExp = 180
@@ -1990,7 +1990,7 @@ Evolutions = GOLEM,Trade,
 [GOLEM]
 Name = Golem
 Types = ROCK,GROUND
-BaseStats = 80,120,130,45,55,65
+BaseStats = 80,120,130,75,35,75
 GenderRatio = Female50Percent
 GrowthRate = Parabolic
 BaseExp = 248
@@ -2043,7 +2043,7 @@ Evolutions = RAPIDASH,Level,40
 [RAPIDASH]
 Name = Rapidash
 Types = FIRE
-BaseStats = 65,100,70,105,80,80
+BaseStats = 75,110,70,115,65,80
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 175
@@ -2096,7 +2096,7 @@ Evolutions = SLOWBRO,Level,37,SLOWKING,TradeItem,KINGSROCK
 [SLOWBRO]
 Name = Slowbro
 Types = WATER,PSYCHIC
-BaseStats = 95,75,110,30,100,80
+BaseStats = 105,65,120,30,100,80
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 172
@@ -2232,7 +2232,7 @@ Evolutions = DODRIO,Level,31
 [DODRIO]
 Name = Dodrio
 Types = NORMAL,FLYING
-BaseStats = 60,110,70,110,60,60
+BaseStats = 60,120,80,110,50,80
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 165
@@ -2285,7 +2285,7 @@ Evolutions = DEWGONG,Level,34
 [DEWGONG]
 Name = Dewgong
 Types = WATER,ICE
-BaseStats = 90,70,80,70,70,95
+BaseStats = 90,40,70,90,110,95
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 166
@@ -2338,7 +2338,7 @@ Evolutions = MUK,Level,38
 [MUK]
 Name = Muk
 Types = POISON
-BaseStats = 105,105,75,50,65,100
+BaseStats = 120,135,75,50,35,100
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 175
@@ -2549,7 +2549,7 @@ Evolutions = HYPNO,Level,26
 [HYPNO]
 Name = Hypno
 Types = PSYCHIC
-BaseStats = 85,73,70,67,73,115
+BaseStats = 85,98,70,74,48,115
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 169
@@ -2601,7 +2601,7 @@ Evolutions = KINGLER,Level,28
 [KINGLER]
 Name = Kingler
 Types = WATER
-BaseStats = 55,130,115,75,50,50
+BaseStats = 75,145,115,75,30,50
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 166
@@ -2652,7 +2652,7 @@ Evolutions = ELECTRODE,Level,30
 [ELECTRODE]
 Name = Electrode
 Types = ELECTRIC
-BaseStats = 60,50,70,150,80,80
+BaseStats = 60,40,70,150,100,80
 GenderRatio = Genderless
 GrowthRate = Medium
 BaseExp = 172
@@ -2705,7 +2705,7 @@ Evolutions = EXEGGUTOR,Item,LEAFSTONE
 [EXEGGUTOR]
 Name = Exeggutor
 Types = GRASS,PSYCHIC
-BaseStats = 95,95,85,55,125,75
+BaseStats = 95,75,85,55,145,75
 GenderRatio = Female50Percent
 GrowthRate = Slow
 BaseExp = 186
@@ -2758,7 +2758,7 @@ Evolutions = MAROWAK,Level,28
 [MAROWAK]
 Name = Marowak
 Types = GROUND
-BaseStats = 60,80,110,45,50,80
+BaseStats = 85,90,110,45,50,80
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 149
@@ -2784,7 +2784,7 @@ WildItemUncommon = THICKCLUB
 [HITMONLEE]
 Name = Hitmonlee
 Types = FIGHTING
-BaseStats = 50,120,53,87,35,110
+BaseStats = 50,110,53,112,35,100
 GenderRatio = AlwaysMale
 GrowthRate = Medium
 BaseExp = 159
@@ -2809,7 +2809,7 @@ Generation = 1
 [HITMONCHAN]
 Name = Hitmonchan
 Types = FIGHTING
-BaseStats = 50,105,79,76,35,110
+BaseStats = 50,120,79,101,35,75
 GenderRatio = AlwaysMale
 GrowthRate = Medium
 BaseExp = 159
@@ -2890,7 +2890,7 @@ Evolutions = WEEZING,Level,35
 [WEEZING]
 Name = Weezing
 Types = POISON
-BaseStats = 65,90,120,60,85,70
+BaseStats = 85,65,120,60,110,70
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 172
@@ -3133,7 +3133,7 @@ Evolutions = SEAKING,Level,33
 [SEAKING]
 Name = Seaking
 Types = WATER
-BaseStats = 80,92,65,68,65,80
+BaseStats = 80,102,65,93,65,80
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 158
@@ -3187,7 +3187,7 @@ Evolutions = STARMIE,Item,WATERSTONE
 [STARMIE]
 Name = Starmie
 Types = WATER,PSYCHIC
-BaseStats = 60,75,85,115,100,85
+BaseStats = 60,75,85,125,100,85
 GenderRatio = Genderless
 GrowthRate = Slow
 BaseExp = 182
@@ -3214,7 +3214,7 @@ WildItemUncommon = STARPIECE
 [MRMIME]
 Name = Mr. Mime
 Types = PSYCHIC,FAIRY
-BaseStats = 40,45,65,90,100,120
+BaseStats = 40,75,65,90,110,110
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 161
@@ -3268,7 +3268,7 @@ Evolutions = SCIZOR,TradeItem,METALCOAT,KLEAVOR,Item,BLACKAUGURITE
 [JYNX]
 Name = Jynx
 Types = ICE,PSYCHIC
-BaseStats = 65,50,35,95,115,95
+BaseStats = 80,50,55,95,135,95
 GenderRatio = AlwaysFemale
 GrowthRate = Medium
 BaseExp = 159
@@ -3347,7 +3347,7 @@ Evolutions = MAGMORTAR,TradeItem,MAGMARIZER
 [PINSIR]
 Name = Pinsir
 Types = BUG
-BaseStats = 65,125,100,85,55,70
+BaseStats = 55,140,100,92,43,70
 GenderRatio = Female50Percent
 GrowthRate = Slow
 BaseExp = 175
@@ -3373,7 +3373,7 @@ Generation = 1
 [TAUROS]
 Name = Tauros
 Types = NORMAL
-BaseStats = 75,100,95,110,40,70
+BaseStats = 75,120,95,110,20,70
 GenderRatio = AlwaysMale
 GrowthRate = Slow
 BaseExp = 172
@@ -3449,7 +3449,7 @@ Generation = 1
 [LAPRAS]
 Name = Lapras
 Types = WATER,ICE
-BaseStats = 130,85,80,60,85,95
+BaseStats = 130,55,80,60,115,95
 GenderRatio = Female50Percent
 GrowthRate = Slow
 BaseExp = 187
@@ -3659,7 +3659,7 @@ Evolutions = OMASTAR,Level,40
 [OMASTAR]
 Name = Omastar
 Types = ROCK,WATER
-BaseStats = 70,60,125,55,115,70
+BaseStats = 70,55,125,75,125,70
 GenderRatio = FemaleOneEighth
 GrowthRate = Medium
 BaseExp = 173
@@ -3711,7 +3711,7 @@ Evolutions = KABUTOPS,Level,40
 [KABUTOPS]
 Name = Kabutops
 Types = ROCK,WATER
-BaseStats = 60,115,105,80,65,70
+BaseStats = 60,130,105,90,60,70
 GenderRatio = FemaleOneEighth
 GrowthRate = Medium
 BaseExp = 173
@@ -3736,7 +3736,7 @@ Generation = 1
 [AERODACTYL]
 Name = Aerodactyl
 Types = ROCK,FLYING
-BaseStats = 80,105,65,130,60,75
+BaseStats = 80,120,65,130,50,75
 GenderRatio = FemaleOneEighth
 GrowthRate = Slow
 BaseExp = 180
@@ -3762,7 +3762,7 @@ Generation = 1
 [SNORLAX]
 Name = Snorlax
 Types = NORMAL
-BaseStats = 160,110,65,30,65,110
+BaseStats = 160,115,70,30,65,110
 GenderRatio = FemaleOneEighth
 GrowthRate = Slow
 BaseExp = 189
@@ -4052,7 +4052,7 @@ Evolutions = MEGANIUM,Level,32
 [MEGANIUM]
 Name = Meganium
 Types = GRASS
-BaseStats = 80,82,100,80,83,100
+BaseStats = 95,72,100,80,83,100
 GenderRatio = FemaleOneEighth
 GrowthRate = Parabolic
 BaseExp = 263
@@ -4130,7 +4130,7 @@ Evolutions = TYPHLOSION,Level,36
 [TYPHLOSION]
 Name = Typhlosion
 Types = FIRE
-BaseStats = 78,84,78,100,109,85
+BaseStats = 78,60,78,100,129,85
 GenderRatio = FemaleOneEighth
 GrowthRate = Parabolic
 BaseExp = 267
@@ -4208,7 +4208,7 @@ Evolutions = FERALIGATR,Level,30
 [FERALIGATR]
 Name = Feraligatr
 Types = WATER
-BaseStats = 85,105,100,78,79,83
+BaseStats = 85,115,100,88,59,83
 GenderRatio = FemaleOneEighth
 GrowthRate = Parabolic
 BaseExp = 265
@@ -4260,7 +4260,7 @@ Evolutions = FURRET,Level,15
 [FURRET]
 Name = Furret
 Types = NORMAL
-BaseStats = 85,76,64,90,45,55
+BaseStats = 85,108,64,118,45,55
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 145
@@ -4312,7 +4312,7 @@ Evolutions = NOCTOWL,Level,20
 [NOCTOWL]
 Name = Noctowl
 Types = NORMAL,FLYING
-BaseStats = 100,50,50,70,86,96
+BaseStats = 90,50,50,85,119,96
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 158
@@ -4364,7 +4364,7 @@ Evolutions = LEDIAN,Level,18
 [LEDIAN]
 Name = Ledian
 Types = BUG,FLYING
-BaseStats = 55,35,50,85,55,110
+BaseStats = 75,105,70,115,25,70
 GenderRatio = Female50Percent
 GrowthRate = Fast
 BaseExp = 137
@@ -4416,7 +4416,7 @@ Evolutions = ARIADOS,Level,22
 [ARIADOS]
 Name = Ariados
 Types = BUG,POISON
-BaseStats = 70,90,70,40,60,70
+BaseStats = 100,130,85,40,20,85
 GenderRatio = Female50Percent
 GrowthRate = Fast
 BaseExp = 140
@@ -4441,7 +4441,7 @@ Generation = 2
 [CROBAT]
 Name = Crobat
 Types = POISON,FLYING
-BaseStats = 85,90,80,130,70,80
+BaseStats = 85,100,80,130,60,80
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 268
@@ -4494,7 +4494,7 @@ Evolutions = LANTURN,Level,27
 [LANTURN]
 Name = Lanturn
 Types = WATER,ELECTRIC
-BaseStats = 125,58,58,67,76,76
+BaseStats = 125,41,70,77,101,76
 GenderRatio = Female50Percent
 GrowthRate = Slow
 BaseExp = 161
@@ -4682,7 +4682,7 @@ Evolutions = XATU,Level,25
 [XATU]
 Name = Xatu
 Types = PSYCHIC,FLYING
-BaseStats = 65,75,70,95,95,70
+BaseStats = 75,45,80,105,105,70
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 165
@@ -4760,7 +4760,7 @@ Evolutions = AMPHAROS,Level,30
 [AMPHAROS]
 Name = Ampharos
 Types = ELECTRIC
-BaseStats = 90,75,85,55,115,90
+BaseStats = 90,60,85,70,125,90
 GenderRatio = Female50Percent
 GrowthRate = Parabolic
 BaseExp = 255
@@ -4785,7 +4785,7 @@ Generation = 2
 [BELLOSSOM]
 Name = Bellossom
 Types = GRASS
-BaseStats = 75,80,95,50,90,100
+BaseStats = 75,95,95,75,50,100
 GenderRatio = Female50Percent
 GrowthRate = Parabolic
 BaseExp = 245
@@ -4838,7 +4838,7 @@ Evolutions = AZUMARILL,Level,18
 [AZUMARILL]
 Name = Azumarill
 Types = WATER,FAIRY
-BaseStats = 100,50,80,50,60,80
+BaseStats = 100,70,90,60,50,90
 GenderRatio = Female50Percent
 GrowthRate = Fast
 BaseExp = 210
@@ -4863,7 +4863,7 @@ Generation = 2
 [SUDOWOODO]
 Name = Sudowoodo
 Types = ROCK
-BaseStats = 70,100,115,30,30,65
+BaseStats = 70,120,145,30,30,65
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 144
@@ -4889,7 +4889,7 @@ Generation = 2
 [POLITOED]
 Name = Politoed
 Types = WATER
-BaseStats = 90,75,75,70,90,100
+BaseStats = 100,45,85,80,90,110
 GenderRatio = Female50Percent
 GrowthRate = Parabolic
 BaseExp = 250
@@ -4968,7 +4968,7 @@ Evolutions = JUMPLUFF,Level,27
 [JUMPLUFF]
 Name = Jumpluff
 Types = GRASS,FLYING
-BaseStats = 75,55,70,110,55,95
+BaseStats = 75,95,70,120,55,65
 GenderRatio = Female50Percent
 GrowthRate = Parabolic
 BaseExp = 230
@@ -5047,7 +5047,7 @@ Evolutions = SUNFLORA,Item,SUNSTONE
 [SUNFLORA]
 Name = Sunflora
 Types = GRASS
-BaseStats = 75,75,55,30,105,85
+BaseStats = 85,35,75,85,115,85
 GenderRatio = Female50Percent
 GrowthRate = Parabolic
 BaseExp = 149
@@ -5127,7 +5127,7 @@ Evolutions = QUAGSIRE,Level,20
 [QUAGSIRE]
 Name = Quagsire
 Types = WATER,GROUND
-BaseStats = 95,85,85,35,65,65
+BaseStats = 115,85,95,35,65,75
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 151
@@ -5229,7 +5229,7 @@ Evolutions = HONCHKROW,Item,DUSKSTONE
 [SLOWKING]
 Name = Slowking
 Types = WATER,PSYCHIC
-BaseStats = 95,75,80,30,100,110
+BaseStats = 95,55,90,30,100,120
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 172
@@ -5306,7 +5306,7 @@ Generation = 2
 [WOBBUFFET]
 Name = Wobbuffet
 Types = PSYCHIC
-BaseStats = 190,33,58,33,33,58
+BaseStats = 190,33,78,48,33,78
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 142
@@ -5385,7 +5385,7 @@ Evolutions = FORRETRESS,Level,31
 [FORRETRESS]
 Name = Forretress
 Types = BUG,STEEL
-BaseStats = 75,90,140,40,60,60
+BaseStats = 85,90,140,55,30,80
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 163
@@ -5464,7 +5464,7 @@ Evolutions = GLISCOR,NightHoldItem,RAZORFANG
 [STEELIX]
 Name = Steelix
 Types = STEEL,GROUND
-BaseStats = 75,85,200,30,55,65
+BaseStats = 80,100,200,20,35,85
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 179
@@ -5517,7 +5517,7 @@ Evolutions = GRANBULL,Level,23
 [GRANBULL]
 Name = Granbull
 Types = FAIRY
-BaseStats = 90,120,75,45,60,60
+BaseStats = 90,138,85,67,40,60
 GenderRatio = Female75Percent
 GrowthRate = Fast
 BaseExp = 158
@@ -5542,7 +5542,7 @@ Generation = 2
 [QWILFISH]
 Name = Qwilfish
 Types = WATER,POISON
-BaseStats = 65,95,85,85,55,55
+BaseStats = 85,95,105,85,35,75
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 88
@@ -5623,7 +5623,7 @@ WildItemRare = BERRYJUICE
 [HERACROSS]
 Name = Heracross
 Types = BUG,FIGHTING
-BaseStats = 80,125,75,85,40,95
+BaseStats = 80,140,75,90,20,95
 GenderRatio = Female50Percent
 GrowthRate = Slow
 BaseExp = 175
@@ -5757,7 +5757,7 @@ Evolutions = MAGCARGO,Level,38
 [MAGCARGO]
 Name = Magcargo
 Types = FIRE,ROCK
-BaseStats = 60,50,120,30,90,80
+BaseStats = 70,30,140,30,120,80
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 151
@@ -5835,7 +5835,7 @@ Evolutions = MAMOSWINE,HasMove,ANCIENTPOWER
 [CORSOLA]
 Name = Corsola
 Types = WATER,ROCK
-BaseStats = 65,55,95,35,65,95
+BaseStats = 95,55,105,35,85,105
 GenderRatio = Female75Percent
 GrowthRate = Fast
 BaseExp = 144
@@ -5890,7 +5890,7 @@ Evolutions = OCTILLERY,Level,25
 [OCTILLERY]
 Name = Octillery
 Types = WATER
-BaseStats = 75,105,75,45,105,75
+BaseStats = 95,85,75,45,135,75
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 168
@@ -5915,7 +5915,7 @@ Generation = 2
 [DELIBIRD]
 Name = Delibird
 Types = ICE,FLYING
-BaseStats = 45,55,45,75,65,45
+BaseStats = 65,55,65,110,120,65
 GenderRatio = Female50Percent
 GrowthRate = Fast
 BaseExp = 116
@@ -5941,7 +5941,7 @@ Generation = 2
 [MANTINE]
 Name = Mantine
 Types = WATER,FLYING
-BaseStats = 85,40,70,70,80,140
+BaseStats = 85,35,80,75,80,140
 GenderRatio = Female50Percent
 GrowthRate = Slow
 BaseExp = 170
@@ -5967,7 +5967,7 @@ Generation = 2
 [SKARMORY]
 Name = Skarmory
 Types = STEEL,FLYING
-BaseStats = 65,80,140,70,40,70
+BaseStats = 75,80,150,70,30,70
 GenderRatio = Female50Percent
 GrowthRate = Slow
 BaseExp = 163
@@ -5994,7 +5994,7 @@ WildItemUncommon = METALCOAT
 [HOUNDOUR]
 Name = Houndour
 Types = DARK,FIRE
-BaseStats = 45,60,30,65,80,50
+BaseStats = 80,70,50,95,135,80
 GenderRatio = Female50Percent
 GrowthRate = Slow
 BaseExp = 66
@@ -6046,7 +6046,7 @@ Generation = 2
 [KINGDRA]
 Name = Kingdra
 Types = WATER,DRAGON
-BaseStats = 75,95,95,85,95,95
+BaseStats = 75,75,95,85,115,95
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 270
@@ -6099,7 +6099,7 @@ Evolutions = DONPHAN,Level,25
 [DONPHAN]
 Name = Donphan
 Types = GROUND
-BaseStats = 90,120,120,50,60,60
+BaseStats = 100,120,120,65,45,75
 GenderRatio = Female50Percent
 GrowthRate = Medium
 BaseExp = 175
@@ -6228,7 +6228,7 @@ Evolutions = HITMONLEE,AttackGreater,20,HITMONCHAN,DefenseGreater,20,HITMONTOP,A
 [HITMONTOP]
 Name = Hitmontop
 Types = FIGHTING
-BaseStats = 50,95,95,70,35,110
+BaseStats = 50,105,105,70,20,110
 GenderRatio = AlwaysMale
 GrowthRate = Medium
 BaseExp = 159
@@ -6336,7 +6336,7 @@ Evolutions = MAGMAR,Level,30
 [MILTANK]
 Name = Miltank
 Types = NORMAL
-BaseStats = 95,80,105,100,40,70
+BaseStats = 95,95,120,90,20,70
 GenderRatio = AlwaysFemale
 GrowthRate = Slow
 BaseExp = 172
