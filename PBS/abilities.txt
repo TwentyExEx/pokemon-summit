@@ -1,4 +1,4 @@
-﻿# See the documentation on the wiki to learn how to edit this file.
+# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
 [STENCH]
 Name = Stench
@@ -1290,4 +1290,8 @@ Description = Powers up ball and bomb moves.
 [HAILTOTHEKING]
 Name = Hail to the King
 Description = Boosts its Attack stat with every able Poison-type on the team.
+#-------------------------------
+[HAILTOTHEQUEEN]
+Name = Hail to the Queen
+Description = Boosts its Defense stat with every able Poison-type on the team.
 #-------------------------------
