@@ -4,6 +4,87 @@
 
 
 #-------------------------------------------------------------------------------
+# Placeholder message types for plugin compatibility.
+#-------------------------------------------------------------------------------
+module MessageTypes
+  ItemPortionNames       = 100
+  ItemPortionNamePlurals = 101
+  ItemHeldDescriptions   = 102
+  GMaxNames              = 103
+  GMaxEntries            = 104
+  Birthsigns             = 105 
+  ZodiacPowers           = 106
+  Celestials             = 107
+  BirthsignEffects       = 108
+  ZodiacEffects          = 109
+  BirthsignLore          = 110
+end
+
+
+#-------------------------------------------------------------------------------
+# Placeholder item data for plugin compatibility.
+#-------------------------------------------------------------------------------
+module GameData
+  class Item
+    SCHEMA["HeldDescription"] = [:real_held_description, "q"]
+	
+    alias dx_initialize initialize
+    def initialize(hash)
+      dx_initialize(hash)
+      @real_held_description = hash[:real_held_description]
+    end
+	
+    def held_description
+      return description if !@real_held_description
+      return pbGetMessageFromHash(MessageTypes::ItemHeldDescriptions, @real_held_description)
+    end
+	
+    def portion_name
+      return name
+    end
+
+    def portion_name_plural
+      return name_plural
+    end
+  end
+end
+
+
+#-------------------------------------------------------------------------------
+# Adds Ultra Space habitat for Ultra Beasts.
+#-------------------------------------------------------------------------------
+GameData::Habitat.register({
+  :id   => :UltraSpace,
+  :name => _INTL("Ultra Space")
+})
+
+
+#-------------------------------------------------------------------------------
+# Gets all eligible moves that a species's entire evolutionary line can learn.
+#-------------------------------------------------------------------------------
+module GameData
+  class Species
+    def get_family_moves
+      moves = []
+      baby = GameData::Species.get_species_form(get_baby_species, @form)
+      prev = GameData::Species.get_species_form(get_previous_species, @form)
+      if baby.species != @species
+        baby.moves.each { |m| moves.push(m[1]) }
+      end
+      if prev.species != @species && prev.species != baby.species
+        prev.moves.each { |m| moves.push(m[1]) }
+      end
+      @moves.each { |m| moves.push(m[1]) }
+      @tutor_moves.each { |m| moves.push(m) }
+      get_egg_moves.each { |m| moves.push(m) }
+      moves |= []
+      return moves
+    end
+  end
+end
+
+
+#-------------------------------------------------------------------------------
 # Orders Egg Groups numerically, including Legendary groups.
 #-------------------------------------------------------------------------------
 def egg_group_hash
@@ -63,7 +144,7 @@ class DayCare
       inherit_moves(egg, mother_data, father_data)
       inherit_IVs(egg, mother, father)
       inherit_poke_ball(egg, mother_data, father_data)
-      birthsign_inheritance(egg, mother, father) if PluginManager.installed?("Pokémon Birthsigns")
+      inherit_birthsign(egg, mother, father) if PluginManager.installed?("Pokémon Birthsigns")
       set_shininess(egg, mother, father)
       set_pokerus(egg)
       egg.calc_stats
@@ -80,15 +161,6 @@ def legendary_egg_group?(groups)
   egg_groups = egg_group_hash
   return egg_groups[groups[0]] > 13 || (groups[1] && egg_groups[groups[1]] > 13)
 end
-
-
-#-------------------------------------------------------------------------------
-# Adds Ultra Space habitat for Ultra Beasts.
-#-------------------------------------------------------------------------------
-GameData::Habitat.register({
-  :id   => :UltraSpace,
-  :name => _INTL("Ultra Space")
-})
 
 
 #-------------------------------------------------------------------------------
@@ -168,12 +240,14 @@ class PokemonPartyScreen
           command_list.push([name, 1])
         elsif PluginManager.installed?("Legendary Breeding") && option == :egg_skill
           command_list.push([name, 2])
-        elsif PluginManager.installed?("Pokémon Birthsigns") && option == :birthsign_skill
-          command_list.push([name, 3])
+        elsif PluginManager.installed?("Pokémon Birthsigns") && option.to_s.include?("birthsign_skill")
+          color = BirthsignHandlers::triggerMenuCommandOption(pkmn.birthsign.id, pkmn)
+          command_list.push([name, color])
+          option = :birthsign_skill
         else
           command_list.push(name)
         end
-        commands.push(hash)
+        commands.push([option, hash])
       end
       command_list.push(_INTL("Cancel"))
       if !PluginManager.installed?("Improved Field Skills") && !pkmn.egg?
@@ -189,12 +263,12 @@ class PokemonPartyScreen
       choice = @scene.pbShowCommands(_INTL("Do what with {1}?", pkmn.name), command_list)
       next if choice < 0 || choice >= commands.length
       case commands[choice]
-      when Hash
-        if command_list[choice] == _INTL("Skills")
-          ret = commands[choice]["effect"].call(self, @party, party_idx)
+      when Array
+        if [:field_skill, :birthsign_skill].include?(commands[choice][0])
+          ret = commands[choice][1]["effect"].call(self, @party, party_idx)
           break if !ret.nil?
         else
-          commands[choice]["effect"].call(self, @party, party_idx)
+          commands[choice][1]["effect"].call(self, @party, party_idx)
         end
       when Integer
         move = pkmn.moves[commands[choice]]
@@ -251,31 +325,6 @@ class PokemonPartyScreen
     end
     @scene.pbEndScene
     return ret
-  end
-end
-
-
-#-------------------------------------------------------------------------------
-# Gets all eligible moves that a species's entire evolutionary line can learn.
-#-------------------------------------------------------------------------------
-module GameData
-  class Species
-    def get_family_moves
-      moves = []
-      baby = GameData::Species.get_species_form(get_baby_species, @form)
-      prev = GameData::Species.get_species_form(get_previous_species, @form)
-      if baby.species != @species
-        baby.moves.each { |m| moves.push(m[1]) }
-      end
-      if prev.species != @species && prev.species != baby.species
-        prev.moves.each { |m| moves.push(m[1]) }
-      end
-      @moves.each { |m| moves.push(m[1]) }
-      @tutor_moves.each { |m| moves.push(m) }
-      get_egg_moves.each { |m| moves.push(m) }
-      moves |= []
-      return moves
-    end
   end
 end
 

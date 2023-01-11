@@ -111,7 +111,7 @@ class Battle
   alias dx_pbEndOfRoundPhase pbEndOfRoundPhase
   def pbEndOfRoundPhase
     ret = dx_pbEndOfRoundPhase
-    @scene.dx_midbattle(nil, nil, "turnEnd", "turnEnd_" + @turnCount.to_s)
+    @scene.dx_midbattle(nil, nil, "turnEnd", "turnEnd_" + (1 + @turnCount).to_s)
     return ret
   end
   

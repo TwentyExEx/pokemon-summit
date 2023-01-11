@@ -1,5 +1,5 @@
 Name         = Essentials Deluxe
-Version      = 1.1.5
+Version      = 1.1.9
 Essentials   = 20.1
 Requires     = v20.1 Hotfixes,1.0.7
 Optional     = Generation 8 Pack Scripts,1.0.3

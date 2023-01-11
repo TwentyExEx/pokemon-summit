@@ -21,6 +21,15 @@ class Pokemon
   def ace?; return @trainer_ace || false; end
   def ace=(value); @trainer_ace = value;  end
   
+  
+  alias dx_baseStats baseStats
+  def baseStats
+	base_stats = dx_baseStats
+	form_stats = MultipleForms.call("baseStats", self)
+	form_stats = celestial_data["BaseStats"] if celestial?
+	return form_stats || base_stats
+  end
+  
   alias dx_initialize initialize  
   def initialize(*args)
     dx_initialize(*args)
@@ -103,7 +112,142 @@ class Battle::Battler
     @base_moves.clear
   end
   
+  #-----------------------------------------------------------------------------
+  # Checks for form changes upon changing the battler's held item.
+  #-----------------------------------------------------------------------------
+  def pbCheckFormOnHeldItemChange
+    return if fainted? || @effects[PBEffects::Transform]
+    #---------------------------------------------------------------------------
+    # Dialga - holding Adamant Crystal
+    if isSpecies?(:DIALGA)
+      newForm = 0
+      newForm = 1 if self.item == :ADAMANTCRYSTAL
+      pbChangeForm(newForm, _INTL("{1} transformed!", pbThis))
+    end
+    #---------------------------------------------------------------------------
+    # Palkia - holding Lustrous Globe
+    if isSpecies?(:PALKIA)
+      newForm = 0
+      newForm = 1 if self.item == :LUSTROUSGLOBE
+      pbChangeForm(newForm, _INTL("{1} transformed!", pbThis))
+    end
+    #---------------------------------------------------------------------------
+    # Giratina - holding Griseous Orb/Core
+    if isSpecies?(:GIRATINA)
+      return if $game_map && GameData::MapMetadata.get($game_map.map_id)&.has_flag?("DistortionWorld")
+      newForm = 0
+      newForm = 1 if [:GRISEOUSORB, :GRISEOUSCORE].include?(self.item)
+      pbChangeForm(newForm, _INTL("{1} transformed!", pbThis))
+    end
+    #---------------------------------------------------------------------------
+    # Arceus - holding a Plate with Multi-Type
+    if isSpecies?(:ARCEUS) && self.ability == :MULTITYPE
+      newForm = 0
+      type = GameData::Type.get(:NORMAL)
+      if self.item
+        typeArray = {
+          1  => [:FIGHTING, [:FISTPLATE,   :FIGHTINIUMZ]],
+          2  => [:FLYING,   [:SKYPLATE,    :FLYINIUMZ]],
+          3  => [:POISON,   [:TOXICPLATE,  :POISONIUMZ]],
+          4  => [:GROUND,   [:EARTHPLATE,  :GROUNDIUMZ]],
+          5  => [:ROCK,     [:STONEPLATE,  :ROCKIUMZ]],
+          6  => [:BUG,      [:INSECTPLATE, :BUGINIUMZ]],
+          7  => [:GHOST,    [:SPOOKYPLATE, :GHOSTIUMZ]],
+          8  => [:STEEL,    [:IRONPLATE,   :STEELIUMZ]],
+          10 => [:FIRE,     [:FLAMEPLATE,  :FIRIUMZ]],
+          11 => [:WATER,    [:SPLASHPLATE, :WATERIUMZ]],
+          12 => [:GRASS,    [:MEADOWPLATE, :GRASSIUMZ]],
+          13 => [:ELECTRIC, [:ZAPPLATE,    :ELECTRIUMZ]],
+          14 => [:PSYCHIC,  [:MINDPLATE,   :PSYCHIUMZ]],
+          15 => [:ICE,      [:ICICLEPLATE, :ICIUMZ]],
+          16 => [:DRAGON,   [:DRACOPLATE,  :DRAGONIUMZ]],
+          17 => [:DARK,     [:DREADPLATE,  :DARKINIUMZ]],
+          18 => [:FAIRY,    [:PIXIEPLATE,  :FAIRIUMZ]]
+        }
+        typeArray.each do |form, data|
+          next if !data.last.include?(self.item.id)
+          type = GameData::Type.get(data.first)
+          newForm = form
+        end
+      end
+      pbChangeForm(newForm, _INTL("{1} transformed into the {2}-type!", pbThis, type.name))
+    end
+    #---------------------------------------------------------------------------
+    # Genesect - holding a Drive
+    if isSpecies?(:GENESECT)
+      newForm = 0
+      drives = [:SHOCKDRIVE, :BURNDRIVE, :CHILLDRIVE, :DOUSEDRIVE]
+      drives.each_with_index do |drive, i|
+        newForm = i + 1 if self.item == drive
+      end
+      pbChangeForm(newForm, nil)
+    end
+    #---------------------------------------------------------------------------
+    # Silvally - holding a Memory with RKS System
+    if isSpecies?(:SILVALLY) && self.ability == :RKSSYSTEM
+      newForm = 0
+      type = GameData::Type.get(:NORMAL)
+      if self.item
+        typeArray = {
+          1  => [:FIGHTING, [:FIGHTINGMEMORY]],
+          2  => [:FLYING,   [:FLYINGMEMORY]],
+          3  => [:POISON,   [:POISONMEMORY]],
+          4  => [:GROUND,   [:GROUNDMEMORY]],
+          5  => [:ROCK,     [:ROCKMEMORY]],
+          6  => [:BUG,      [:BUGMEMORY]],
+          7  => [:GHOST,    [:GHOSTMEMORY]],
+          8  => [:STEEL,    [:STEELMEMORY]],
+          10 => [:FIRE,     [:FIREMEMORY]],
+          11 => [:WATER,    [:WATERMEMORY]],
+          12 => [:GRASS,    [:GRASSMEMORY]],
+          13 => [:ELECTRIC, [:ELECTRICMEMORY]],
+          14 => [:PSYCHIC,  [:PSYCHICMEMORY]],
+          15 => [:ICE,      [:ICEMEMORY]],
+          16 => [:DRAGON,   [:DRAGONMEMORY]],
+          17 => [:DARK,     [:DARKMEMORY]],
+          18 => [:FAIRY,    [:FAIRYMEMORY]]
+        }
+        typeArray.each do |form, data|
+          next if !data.last.include?(self.item.id)
+          type = GameData::Type.get(data.first)
+          newForm = form
+        end
+      end
+      pbChangeForm(newForm, _INTL("{1} transformed into the {2}-type!", pbThis, type.name))
+    end
+    #---------------------------------------------------------------------------
+    # Zacian - holding Rusted Sword
+    if isSpecies?(:ZACIAN)
+      newForm = 0
+      newForm = 1 if self.item == :RUSTEDSWORD
+      moves = [:IRONHEAD, :BEHEMOTHBLADE]
+      @moves.each_with_index do |m, i|
+        next if m.id != moves[self.form]
+        move = Pokemon::Move.new(moves.reverse[self.form])
+        move.pp = m.pp
+        @moves[i] = Battle::Move.from_pokemon_move(@battle, move)
+      end
+      pbChangeForm(newForm, _INTL("{1} transformed!", pbThis))
+    end
+    #---------------------------------------------------------------------------
+    # Zamazenta - holding Rusted Shield
+    if isSpecies?(:ZAMAZENTA)
+      newForm = 0
+      newForm = 1 if self.item == :RUSTEDSHIELD
+      moves = [:IRONHEAD, :BEHEMOTHBASH]
+      @moves.each_with_index do |m, i|
+        next if m.id != moves[self.form]
+        move = Pokemon::Move.new(moves.reverse[self.form])
+        move.pp = m.pp
+        @moves[i] = Battle::Move.from_pokemon_move(@battle, move)
+      end
+      pbChangeForm(newForm, _INTL("{1} transformed!", pbThis))
+    end
+  end
+  
+  #-----------------------------------------------------------------------------
   # Compatibility across multiple plugins.
+  #-----------------------------------------------------------------------------
   def hasZMove?;       return false; end
   def hasUltra?;       return false; end
   def ultra?;          return false; end
@@ -132,18 +276,23 @@ class Battle::FakeBattler
     @effects = {}
   end
   
+  #-----------------------------------------------------------------------------
   # Compatibility across multiple plugins.
-  def hasZMove?;       return false; end
-  def hasUltra?;       return false; end
-  def ultra?;          return false; end
-  def hasDynamax?;     return false; end
-  def dynamax?;        return false; end
-  def gmax?;           return false; end
-  def gmax_factor?;    return false; end
-  def hasStyles?;      return false; end
-  def hasZodiacPower?; return false; end
-  def celestial?;      return false; end
-  def focus_meter;     return 0;     end
+  #-----------------------------------------------------------------------------
+  def hasZMove?;            return false; end
+  def hasUltra?;            return false; end
+  def ultra?;               return false; end
+  def hasDynamax?;          return false; end
+  def dynamax?;             return false; end
+  def gmax?;                return false; end
+  def gmax_factor?;         return false; end
+  def hasStyles?;           return false; end
+  def birthsign;            return nil;   end
+  def celestial?;           return false; end
+  def blessed?;             return false; end
+  def hasBirthsign?(*args); return false; end
+  def hasZodiacPower?;      return false; end
+  def focus_meter;          return 0;     end
 end
 
 
@@ -220,7 +369,9 @@ class Battle::Scene
     end
   end
   
+  #-----------------------------------------------------------------------------
   # Compatibility with SOS Battles.
+  #-----------------------------------------------------------------------------
   if PluginManager.installed?("SOS Battles")
     alias dx_pbSOSJoin pbSOSJoin
     def pbSOSJoin(battlerindex, pkmn)
