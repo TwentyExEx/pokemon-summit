@@ -9645,7 +9645,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = PoisonParalyzeOrSleepAllFoes
 Flags = CanProtect,CanMirrorMove
-EffectChance = 100
+EffectChance = 30
 Description = This move has a chance of inflicting poison, paralysis or sleep.
 #-------------------------------
 [CONSTELLATIONPUNCH]

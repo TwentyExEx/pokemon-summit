@@ -65,11 +65,13 @@ end
 # Randomly poisons, paralyzes or sleeps the target and its allies. (Befuddle)
 #===============================================================================
 class Battle::Move::PoisonParalyzeOrSleepAllFoes < Battle::Move
-  def initialize(battle, move)
-    super
-    @statuses = {
-      :opponents => [:POISON, :PARALYSIS, :SLEEP]
-    }
+  def pbAdditionalEffect(user, target)
+    return if target.damageState.substitute
+    case @battle.pbRandom(3)
+    when 0 then target.pbPoison(user) if target.pbCanPoison?(user, false, self)
+    when 1 then target.pbParalyze(user) if target.pbCanParalyze?(user, false, self)
+    when 2 then target.pbSleep if target.pbCanSleep?(user, false, self)
+    end
   end
 end
 
