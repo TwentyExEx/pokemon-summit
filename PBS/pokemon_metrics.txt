@@ -18,6 +18,12 @@ FrontSprite = 5,14
 ShadowX = 0
 ShadowSize = 2
 #-------------------------------
+[BASCULEGION,1]
+BackSprite = 0,0
+FrontSprite = 0,17
+ShadowX = 0
+ShadowSize = 2
+#-------------------------------
 [BRAVIARY]
 BackSprite = -5,38
 FrontSprite = 2,5
@@ -6429,7 +6435,7 @@ ShadowX = 0
 ShadowSize = 1
 #-------------------------------
 [ARMAROUGE]
-BackSprite = 0,0
+BackSprite = 0,53
 FrontSprite = 7,9
 ShadowX = 0
 ShadowSize = 1
@@ -6477,7 +6483,7 @@ ShadowX = 0
 ShadowSize = 1
 #-------------------------------
 [CERULEDGE]
-BackSprite = 0,0
+BackSprite = 0,54
 FrontSprite = 0,5
 ShadowX = 0
 ShadowSize = 2
@@ -6495,7 +6501,7 @@ ShadowX = 0
 ShadowSize = 1
 #-------------------------------
 [CHARCADET]
-BackSprite = 0,0
+BackSprite = 0,42
 FrontSprite = 6,16
 ShadowX = 0
 ShadowSize = 1

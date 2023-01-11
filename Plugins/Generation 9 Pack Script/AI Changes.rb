@@ -598,8 +598,11 @@ class Battle::AI
     return false if !item
     # Determine target of item (always the Pokémon choosing the action)
     useType = GameData::Item.get(item).battle_use
-    if [1, 2, 3].include?(useType)   # Use on Pokémon
-      idxTarget = @battle.battlers[idxTarget].pokemonIndex if @battle.battlers[idxTarget]   # Party Pokémon
+    reviveItems = [
+      :SACREDASH, :REVIVE, :MAXREVIVE, :REVIVALHERB
+    ]
+    if [1, 2, 3].include?(useType) && !reviveItems.include?(item)   # Use on Pokémon
+      idxTarget = @battle.battlers[idxTarget].pokemonIndex   # Party Pokémon
     end
     # Register use of item
     @battle.pbRegisterItem(idxBattler, item, idxTarget)
