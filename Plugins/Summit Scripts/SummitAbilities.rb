@@ -342,6 +342,27 @@ Battle::AbilityEffects::DamageCalcFromTarget.add(:PSYCHESPREADER,
   }
 )
 
+
+#===============================================================================
+# Additions to Seed Sower
+#===============================================================================
+
+Battle::AbilityEffects::DamageCalcFromTarget.add(:SEEDSOWER,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    mults[:final_damage_multiplier] /= 2 if type == :GRASS
+  }
+)
+
+#===============================================================================
+# Additions to Sand Spit
+#===============================================================================
+
+Battle::AbilityEffects::DamageCalcFromTarget.add(:SANDSPIT,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    mults[:final_damage_multiplier] /= 2 if type == :GROUND
+  }
+)
+
 #===============================================================================
 # Sharpshooter
 #===============================================================================

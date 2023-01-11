@@ -1492,6 +1492,12 @@ Battle::AbilityEffects::DamageCalcFromUser.add(:WATERBUBBLE,
   }
 )
 
+Battle::AbilityEffects::DamageCalcFromUser.add(:MAGMAARMOR,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    mults[:attack_multiplier] *= 2 if type == :FIRE
+  }
+)
+
 #===============================================================================
 # DamageCalcFromAlly handlers
 #===============================================================================
@@ -1615,6 +1621,12 @@ Battle::AbilityEffects::DamageCalcFromTarget.add(:THICKFAT,
 Battle::AbilityEffects::DamageCalcFromTarget.add(:WATERBUBBLE,
   proc { |ability, user, target, move, mults, baseDmg, type|
     mults[:final_damage_multiplier] /= 2 if type == :FIRE
+  }
+)
+
+Battle::AbilityEffects::DamageCalcFromTarget.add(:MAGMAARMOR,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    mults[:final_damage_multiplier] /= 2 if type == :WATER
   }
 )
 
