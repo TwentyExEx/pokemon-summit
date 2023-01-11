@@ -1251,3 +1251,7 @@ Description = Draws in all Fire-type moves to up Attack.
 Name = Unrelenting Flame
 Description = The Pokémon's attacks become critical hits if the target is burnt.
 #-------------------------------
+[HIDDENBLOW]
+Name = Hidden Blow
+Description = When attacking, the user goes for a second, weaker hit in the same turn.
+#-------------------------------

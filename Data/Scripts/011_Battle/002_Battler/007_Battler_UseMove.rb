@@ -585,8 +585,9 @@ class Battle::Battler
     # For two-turn attacks being used in a single turn
     move.pbInitialEffect(user, targets, hitNum)
     numTargets = 0   # Number of targets that are affected by this hit
-    # Count a hit for Parental Bond (if it applies)
+    # Count a hit for Parental Bond and Hidden Blow (if it applies)
     user.effects[PBEffects::ParentalBond] -= 1 if user.effects[PBEffects::ParentalBond] > 0
+    user.effects[PBEffects::HiddenBlow] -= 1 if user.effects[PBEffects::HiddenBlow] > 0
     # Accuracy check (accuracy/evasion calc)
     if hitNum == 0 || move.successCheckPerHit?
       targets.each do |b|

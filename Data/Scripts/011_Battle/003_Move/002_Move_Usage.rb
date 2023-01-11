@@ -12,6 +12,7 @@ class Battle::Move
   def pbChangeUsageCounters(user, specialUsage)
     user.effects[PBEffects::FuryCutter]   = 0
     user.effects[PBEffects::ParentalBond] = 0
+    user.effects[PBEffects::HiddenBlow] = 0
     user.effects[PBEffects::ProtectRate]  = 1
     @battle.field.effects[PBEffects::FusionBolt]  = false
     @battle.field.effects[PBEffects::FusionFlare] = false
@@ -49,6 +50,12 @@ class Battle::Move
       user.effects[PBEffects::ParentalBond] = 3
       return 2
     end
+    if user.hasActiveAbility?(:HIDDENBLOW) && pbDamagingMove? &&
+       !chargingTurnMove? && targets.length == 1
+      # Record that Hidden Blow applies, to weaken the second attack
+      user.effects[PBEffects::HiddenBlow] = 3
+      return 2
+    end
     return 1
   end
 
@@ -63,7 +70,7 @@ class Battle::Move
 
   def pbShowAnimation(id, user, targets, hitNum = 0, showAnimation = true)
     return if !showAnimation
-    if user.effects[PBEffects::ParentalBond] == 1
+    if user.effects[PBEffects::ParentalBond] == 1 or user.effects[PBEffects::HiddenBlow] == 1 
       @battle.pbCommonAnimation("ParentalBond", user, targets)
     else
       @battle.pbAnimation(id, user, targets, hitNum)
@@ -313,7 +320,7 @@ class Battle::Move
       end
     end
     # Effectiveness message, for moves with 1 hit
-    if !multiHitMove? && user.effects[PBEffects::ParentalBond] == 0
+    if !multiHitMove? && user.effects[PBEffects::ParentalBond] == 0 or user.effects[PBEffects::HiddenBlow] == 0
       pbEffectivenessMessage(user, target, numTargets)
     end
     if target.damageState.substitute && target.effects[PBEffects::Substitute] == 0

@@ -276,6 +276,7 @@ class Battle::Battler
     @effects[PBEffects::WaterSport]          = false
     @effects[PBEffects::WeightChange]        = 0
     @effects[PBEffects::Yawn]                = 0
+    @effects[PBEffects::HiddenBlow]          = 0
   end
 
   #=============================================================================
