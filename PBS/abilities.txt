@@ -672,7 +672,7 @@ Description = Restores HP as well when the Pokémon eats a Berry.
 #-------------------------------
 [PROTEAN]
 Name = Protean
-Description = It changes type to that of the move it's about to use.
+Description = Changes the Pokémon's type to the type of the move it's about to use. This works only once each time the Pokémon enters battle. 
 #-------------------------------
 [FURCOAT]
 Name = Fur Coat
@@ -944,7 +944,7 @@ Description = Boosts Defense when entering a battle.
 #-------------------------------
 [LIBERO]
 Name = Libero
-Description = It changes type to that of the move it's about to use.
+Description = Changes the Pokémon's type to the type of the move it's about to use. This works only once each time the Pokémon enters battle. 
 #-------------------------------
 [BALLFETCH]
 Name = Ball Fetch
@@ -1215,10 +1215,6 @@ Description = Psychic-type moves are given priority. The power of these moves ar
 Name = Draining Touch
 Description = Contact moves heal the user by a small amount
 #-------------------------------
-[THUNDERLEGS]
-Name = Thunder Legs
-Description = Boosts the power of kicking moves.
-#-------------------------------
 [DEEPPUDDLE]
 Name = Deep Puddle
 Description = Prevents Water-type Pokémon from escaping.
@@ -1310,4 +1306,12 @@ Description = When Reflect is up, this Pokemon's Attack is boosted. When Light S
 [SNARINGENTRANCE]
 Name = Snaring Entrance
 Description = Prevents opposing Pokémon from escaping. This works only once each time the Pokémon enters battle.
+#-------------------------------
+[WARFORGED]
+Name = War Forged
+Description = The Pokémon's Defense stat is lowered when it takes damage from physical moves, but its Attack stat is boosted. 
+#-------------------------------
+[RAINBOWSCALES]
+Name = Rainbow Scales
+Description = Changes the Pokémon's type to the type of the move it's about to use. 
 #-------------------------------

@@ -436,3 +436,19 @@ Battle::AbilityEffects::OnSwitchIn.add(:HAILTOTHEQUEEN,
   battle.pbHideAbilitySplash(battler)
   }
 )
+
+#===============================================================================
+# War Forged
+#===============================================================================
+
+Battle::AbilityEffects::OnBeingHit.add(:WARFORGED,
+  proc { |ability, user, target, move, battle|
+    next if !move.physicalMove?
+    next if !target.pbCanLowerStatStage?(:DEFENSE, target) &&
+            !target.pbCanRaiseStatStage?(:ATTACK, target)
+    battle.pbShowAbilitySplash(target)
+    target.pbLowerStatStageByAbility(:DEFENSE, 1, target, false)
+    target.pbRaiseStatStageByAbility(:ATTACK, 1, target, false)
+    battle.pbHideAbilitySplash(target)
+  }
+)

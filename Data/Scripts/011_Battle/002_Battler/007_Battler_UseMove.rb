@@ -361,6 +361,25 @@ class Battle::Battler
         targets = pbFindTargets(choice, move, user)
       end
     end
+    # Rainbow Scales
+    if user.hasActiveAbility?([:RAINBOWSCALES]) &&
+       !move.callsAnotherMove? && !move.snatched &&
+       user.pbHasOtherType?(move.calcType) && !GameData::Type.get(move.calcType).pseudo_type
+      @battle.pbShowAbilitySplash(user)
+      user.pbChangeTypes(move.calcType)
+      typeName = GameData::Type.get(move.calcType).name
+      @battle.pbDisplay(_INTL("{1}'s type changed to {2}!", user.pbThis, typeName))
+      @battle.pbHideAbilitySplash(user)
+      # NOTE: The GF games say that if Curse is used by a non-Ghost-type
+      #       Pokémon which becomes Ghost-type because of Protean, it should
+      #       target and curse itself. I think this is silly, so I'm making it
+      #       choose a random opponent to curse instead.
+      if move.function == "CurseTargetOrLowerUserSpd1RaiseUserAtkDef1" && targets.length == 0
+        choice[3] = -1
+        targets = pbFindTargets(choice, move, user)
+      end
+    end
+	
     #---------------------------------------------------------------------------
     magicCoater  = -1
     magicBouncer = -1
