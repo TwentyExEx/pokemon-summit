@@ -120,6 +120,8 @@ module PBEffects
   WeightChange        = 115
   Yawn                = 116
   HiddenBlow          = 117
+  HailToTheKing       = 118
+  HailToTheQueen      = 119
 
   #=============================================================================
   # These effects apply to a battler position

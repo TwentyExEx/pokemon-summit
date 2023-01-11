@@ -443,10 +443,11 @@ end
 #   }
 # )
 Battle::AbilityEffects::DamageCalcFromUser.add(:SUPREMEOVERLORD,
-  proc { |ability, user, target, move, mults, baseDmg, type|
+  proc { |ability, user, target, move, mults, baseDmg, type, |
+    user.effects[PBEffects::SupremeOverlord] = 0 if user.effects[PBEffects::SupremeOverlord].nil?
     next if user.effects[PBEffects::SupremeOverlord] <= 0
     mult = 1
-    mult += 0.1 * battler.effects[PBEffects::SupremeOverlord]
+    mult += 0.1 * user.effects[PBEffects::SupremeOverlord]
     mults[:base_damage_multiplier] *= mult
   }
 )
