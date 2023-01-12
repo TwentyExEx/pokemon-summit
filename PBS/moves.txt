@@ -9806,4 +9806,16 @@ FunctionCode = None
 Flags = Contact,CanProtect,CanMirrorMove
 Description = A physical attack in which the user charges and slams into the target with its whole body.
 #-------------------------------
+[FOSSILFURY]
+Name = Fossil Fury
+Type = ROCK
+Category = Physical
+Power = 100
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = CategoryDependsOnHigherDamage
+Flags = CanProtect,CanMirrorMove
+Description = Inflicts physical or special damage, whichever will be more effective.
+#-------------------------------
 
