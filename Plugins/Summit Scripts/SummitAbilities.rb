@@ -390,9 +390,9 @@ Battle::AbilityEffects::OnSwitchIn.add(:HAILTOTHEKING,
   proc { |ability, battler, battle, switch_in|
   poisonList = []
   numPsn = 0
-  party = battle.pbParty(0)
-  party.delete_at(0) # Ignore user
-  for pkmn in party
+  tempParty = $Trainer.party.clone
+  tempParty.delete_at(0) # Ignore user
+  for pkmn in tempParty
     next if !pkmn.able? || pkmn.status != :NONE || !pkmn.types.include?(:POISON)
     numPsn += 1
   end
@@ -422,9 +422,9 @@ Battle::AbilityEffects::OnSwitchIn.add(:HAILTOTHEQUEEN,
   proc { |ability, battler, battle, switch_in|
   poisonList = []
   numPsn = 0
-  party = battle.pbParty(0)
-  party.delete_at(0) # Ignore user
-  for pkmn in party
+  tempParty = $Trainer.party.clone
+  tempParty.delete_at(0) # Ignore user
+  for pkmn in tempParty
     next if !pkmn.able? || pkmn.status != :NONE || !pkmn.types.include?(:POISON)
     numPsn += 1
   end
