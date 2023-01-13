@@ -4995,13 +4995,13 @@ Description = Seeking an opening, the user strikes continually. The foe's stat c
 Name = Dizzy Punch
 Type = NORMAL
 Category = Physical
-Power = 70
+Power = 80
 Accuracy = 100
 TotalPP = 10
 Target = NearOther
 FunctionCode = ConfuseTarget
 Flags = Contact,CanProtect,CanMirrorMove,Punching
-EffectChance = 20
+EffectChance = 50
 Description = The target is hit with rhythmically launched punches that may also leave it confused.
 #-------------------------------
 [FACADE]
