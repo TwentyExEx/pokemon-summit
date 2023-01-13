@@ -408,6 +408,9 @@ class Battle::Move::RecoilMove < Battle::Move
     return if !user.takesIndirectDamage?
     return if user.hasActiveAbility?(:ROCKHEAD)
     amt = pbRecoilDamage(user, target)
+	if user.hasActiveItem?(:CRASHGEAR)
+		amt = amt * 0.5
+	end
     amt = 1 if amt < 1
     user.pbReduceHP(amt, false)
     @battle.pbDisplay(_INTL("{1} is damaged by recoil!", user.pbThis))

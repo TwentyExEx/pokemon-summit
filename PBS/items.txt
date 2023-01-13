@@ -7262,3 +7262,12 @@ NamePlural = Fairy Tera Shards
 Pocket = 1
 Price = 2000
 Description =	On rare occasions, these shards form when a Tera Pokémon falls in battle and its Tera Jewel shatters.
+#-------------------------------
+[CRASHGEAR]
+Name = Crash Gear
+NamePlural = Crash Gears
+Pocket = 1
+Price = 4000
+Flags = Fling_30
+Description = An item to be held by a Pokémon. Halves the amount of recoil taken from moves. 
+#-------------------------------
