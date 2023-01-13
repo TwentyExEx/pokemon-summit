@@ -452,3 +452,15 @@ Battle::AbilityEffects::OnBeingHit.add(:WARFORGED,
     battle.pbHideAbilitySplash(target)
   }
 )
+
+#===============================================================================
+# Flutter Wing
+#===============================================================================
+
+Battle::AbilityEffects::PriorityChange.add(:FLUTTERWING,
+  proc { |ability, battler, move, pri|
+    next pri + 1 if (Settings::MECHANICS_GENERATION <= 6 || battler.hp == battler.totalhp) &&
+                    move.type == :BUG
+  }
+)
+

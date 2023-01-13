@@ -1315,3 +1315,7 @@ Description = The Pokémon's Defense stat is lowered when it takes damage from p
 Name = Rainbow Scales
 Description = Changes the Pokémon's type to the type of the move it's about to use. 
 #-------------------------------
+[FLUTTERWING]
+Name = Flutter Wing
+Description = Bug-type moves gain priority when its HP is full.
+#-------------------------------
