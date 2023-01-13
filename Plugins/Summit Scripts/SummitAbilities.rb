@@ -464,3 +464,24 @@ Battle::AbilityEffects::PriorityChange.add(:FLUTTERWING,
   }
 )
 
+#===============================================================================
+# Imbalance
+#===============================================================================
+
+Battle::AbilityEffects::OnBeingHit.add(:IMBALANCE,
+  proc { |ability, user, target, move, battle|
+    next if !move.pbContactMove?(user)
+    next if battle.pbRandom(100) >= 30
+    battle.pbShowAbilitySplash(target)
+    if user.pbCanConfuse?(target, Battle::Scene::USE_ABILITY_SPLASH) &&
+       user.affectedByContactEffect?(Battle::Scene::USE_ABILITY_SPLASH)
+      msg = nil
+      if Battle::Scene::USE_ABILITY_SPLASH
+        msg = _INTL("{1}'s {2} put {3} off balance! It may hit itself in confusion!",
+           target.pbThis, target.abilityName, user.pbThis(true))
+      end
+      user.pbConfuse(msg)
+    end
+    battle.pbHideAbilitySplash(target)
+  }
+)

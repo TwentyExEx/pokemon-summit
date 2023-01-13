@@ -1319,3 +1319,7 @@ Description = Changes the Pokémon's type to the type of the move it's about to 
 Name = Flutter Wing
 Description = Bug-type moves gain priority when its HP is full.
 #-------------------------------
+[IMBALANCE]
+Name = Imbalance
+Description = Contact with the Pokémon may cause confusion.
+#-------------------------------
