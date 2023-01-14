@@ -14677,6 +14677,7 @@ Pokemon = TSAREENA,50
     EV = 252,252,0,0,0,0
 #-------------------------------
 [LEADER_Nessa,Nessa]
+Items = TERAORB
 LoseText = You had no problem handling our surging might. It's no wonder that you won.
 Pokemon = INTELEON,50
     Moves = SNIPESHOT,ICEBEAM,AIRSLASH,RAINDANCE
@@ -14695,6 +14696,7 @@ Pokemon = DREDNAW,50
     IV = 15,15,15,15,15,15
 #-------------------------------
 [LEADER_Nessa,Nessa,1]
+Items = TERAORB
 LoseText = You had no problem handling our surging might. It's no wonder that you won.
 Pokemon = INTELEON,50
     Moves = SNIPESHOT,ICEBEAM,AIRSLASH,RAINDANCE
@@ -14713,6 +14715,7 @@ Pokemon = DREDNAW,50
     IV = 25,25,25,25,25,25
 #-------------------------------
 [LEADER_Nessa,Nessa,2]
+Items = TERAORB
 LoseText = You had no problem handling our surging might. It's no wonder that you won.
 Pokemon = INTELEON,50
     Moves = SNIPESHOT,ICEBEAM,AIRSLASH,RAINDANCE
@@ -14734,6 +14737,7 @@ Pokemon = DREDNAW,50
     IV = 31,31,31,31,31,31
 #-------------------------------
 [LEADER_Nessa,Nessa,3]
+Items = TERAORB
 LoseText = You had no problem handling our surging might. It's no wonder that you won.
 Pokemon = INTELEON,50
     Moves = SNIPESHOT,ICEBEAM,AIRSLASH,RAINDANCE

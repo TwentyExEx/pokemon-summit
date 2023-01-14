@@ -7132,10 +7132,11 @@ Description = A record of the Heath's expedition on the Great Crater of Paldea. 
 [TERAORB]
 Name = Tera Orb
 NamePlural = Tera Orbs
-Pocket = 1
+Pocket = 8
 Price = 0
+FieldUse = Direct
 Flags = KeyItem
-Description = An orb that holds the power to crystallize. When it is charged, it can be used on Pokémon to Terastallize.
+Description = Allows Pokémon to Terastallize.
 #-------------------------------
 [NORMALTERASHARD]
 Name = Normal Tera Shard

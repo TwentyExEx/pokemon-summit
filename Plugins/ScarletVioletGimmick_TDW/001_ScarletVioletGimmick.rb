@@ -1,7 +1,7 @@
 module TDWSettings
 
 #The ID of the item you want to be the Tera Item needed to Terastallize
-TERA_ITEM_ID 				= :TERAITEM
+TERA_ITEM_ID 				= :TERAORB
 
 #The ID of the items you want to use to manipulate a Pokemon's Tera Type
 TERA_SWAP_ITEM_ID 				= :TERASWAPITEM
@@ -10,7 +10,7 @@ TERA_CHOOSE_ITEM_ID 			= :TERACHOOSEITEM
 
 #If true, then you need 100 Tera Energy in order to Terastallize
 #If false, then you can always Terastallize if you have the item
-TERA_ITEM_GENERATE			= true
+TERA_ITEM_GENERATE			= false
 
 #The ID of the Switch that needs to be TRUE in order to Terastallize
 TERA_ITEM_ENABLED_SWITCH 	= 64
@@ -30,7 +30,7 @@ SHOW_TERA_TYPE_IN_SUMMARY	= true
 
 #If true, a Pokemon's sprite will get a diamond overlay when Terastallized
 #If false, a Pokemon's sprite will not change
-SHOW_TERA_OVERLAY				= false #EXPERIMENTAL
+SHOW_TERA_OVERLAY				= true #EXPERIMENTAL
 
 end
 #=========================
