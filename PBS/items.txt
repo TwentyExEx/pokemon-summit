@@ -7132,7 +7132,7 @@ Description = A record of the Heath's expedition on the Great Crater of Paldea. 
 [TERAORB]
 Name = Tera Orb
 NamePlural = Tera Orbs
-Pocket = 8
+Pocket = 1
 Price = 0
 FieldUse = Direct
 Flags = KeyItem
