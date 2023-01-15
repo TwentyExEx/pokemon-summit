@@ -9815,7 +9815,20 @@ Accuracy = 100
 TotalPP = 10
 Target = NearOther
 FunctionCode = CategoryDependsOnHigherDamage
-Flags = CanProtect,CanMirrorMove
+Flags = Contact,CanProtect,CanMirrorMove
 Description = Inflicts physical or special damage, whichever will be more effective.
+#-------------------------------
+[COSMICCHIME]
+Name = Cosmic Chime
+Type = PSYCHIC
+Category = Special
+Power = 80
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = CureUserPartyStatus
+EffectChance = 30
+Flags = Contact,CanProtect,CanMirrorMove,Sound
+Description = The user chime its bell calling cosmic energies to attack the target. This may also cure the user's party of all status conditions.
 #-------------------------------
 
