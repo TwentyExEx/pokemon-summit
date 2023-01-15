@@ -1323,3 +1323,7 @@ Description = Bug-type moves gain priority when its HP is full.
 Name = Imbalance
 Description = Contact with the Pokémon may cause confusion.
 #-------------------------------
+[CACAPHONY]
+Name = Cacaphony
+Description = Boosts sound-based moves if used repeatedly.
+#-------------------------------

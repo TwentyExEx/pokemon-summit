@@ -485,3 +485,33 @@ Battle::AbilityEffects::OnBeingHit.add(:IMBALANCE,
     battle.pbHideAbilitySplash(target)
   }
 )
+
+#===============================================================================
+# Cacaphony
+#===============================================================================
+
+Battle::AbilityEffects::DamageCalcFromUser.add(:CACAPHONY,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    user.effects[PBEffects::Cacaphony] = 0 if user.effects[PBEffects::Cacaphony].nil?
+    if move.soundMove?
+      chain = 1 + (0.1 * [user.effects[PBEffects::Cacaphony], 5].min)
+      mults[:final_damage_multiplier] *= chain
+    end
+  }
+)
+
+Battle::AbilityEffects::OnEndOfUsingMove.add(:CACAPHONY,
+  proc { |ability, user, target, move, battle|
+    if !move.soundMove? && user.effects[PBEffects::Cacaphony] > 0
+      battle.pbShowAbilitySplash(user)
+      battle.pbDisplay(_INTL("{1}'s {2} dissipates.", user.pbThis, user.abilityName))
+      user.effects[PBEffects::Cacaphony] = 0
+      battle.pbHideAbilitySplash(user)
+    else
+      battle.pbShowAbilitySplash(user)
+      battle.pbDisplay(_INTL("{1}'s {2} gets louder!", user.pbThis, user.abilityName))
+      user.effects[PBEffects::Cacaphony] += 1
+      battle.pbHideAbilitySplash(user)
+    end
+  }
+)

@@ -122,6 +122,7 @@ module PBEffects
   HiddenBlow          = 117
   HailToTheKing       = 118
   HailToTheQueen      = 119
+  Cacaphony           = 120
 
   #=============================================================================
   # These effects apply to a battler position
