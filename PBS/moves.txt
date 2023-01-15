@@ -9831,4 +9831,16 @@ EffectChance = 30
 Flags = Contact,CanProtect,CanMirrorMove,Sound
 Description = The user chime its bell calling cosmic energies to attack the target. This may also cure the user's party of all status conditions.
 #-------------------------------
+[GIFTRUSH]
+Name = Gift Rush
+Type = FLYING
+Category = Special
+Power = 20
+Accuracy = 90
+TotalPP = 10
+Target = NearOther
+FunctionCode = HitTenTimesPopulationBomb
+Flags = Contact,CanProtect,CanMirrorMove
+Description = The user bombards the target with festive gifts that hit the target one to ten times in a row. 
+#-------------------------------
 
