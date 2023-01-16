@@ -9681,7 +9681,7 @@ Accuracy = 100
 TotalPP = 10
 Target = NearOther
 FunctionCode = TypeDependsOnSquawkabillyForm
-Flags = Contact,CanProtect
+Flags = Contact,CanProtect,CanMirrorMove
 Description = This move's typing depends on the user's form.
 #-------------------------------
 [SEASONALCHARGE]
@@ -9693,7 +9693,7 @@ Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = TypeDependsOnSawsbuckForm
-Flags = Contact,CanProtect
+Flags = Contact,CanProtect,CanMirrorMove
 Description = The user absorbs the power of the seasons and charges at the target. This move's typing changes based on the user's form.
 #-------------------------------
 [HARSHJAB]
@@ -9828,7 +9828,7 @@ TotalPP = 15
 Target = NearOther
 FunctionCode = CureUserPartyStatus
 EffectChance = 30
-Flags = Contact,CanProtect,CanMirrorMove,Sound
+Flags = CanProtect,CanMirrorMove,Sound
 Description = The user chime its bell calling cosmic energies to attack the target. This may also cure the user's party of all status conditions.
 #-------------------------------
 [GIFTRUSH]
