@@ -9843,4 +9843,29 @@ FunctionCode = HitTenTimesPopulationBomb
 Flags = Contact,CanProtect,CanMirrorMove
 Description = The user bombards the target with festive gifts that hit the target one to ten times in a row. 
 #-------------------------------
+[SPECTRALBEAM]
+Name = Spectral Beam
+Type = GHOST
+Category = Special
+Power = 110
+Accuracy = 95
+TotalPP = 10
+Target = NearOther
+FunctionCode = RecoilQuarterOfDamageDealt
+Flags = CanProtect,CanMirrorMove
+Description = The user calls outworldly powers and harness it in a powerful beam attack. This also damages the user.
+#-------------------------------
+[LUSTROUSDANCE]
+Name = Lustrous Dance
+Type = PSYCHIC
+Category = Special
+Power = 70
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = RaiseUserSpAtk1
+Flags = CanProtect,CanMirrorMove,Dance
+EffectChance = 50
+Description = The user attacks the target with a shining blast after dancing with lustrous steps. It may also raise the user's Sp. Atk stat.
+#-------------------------------
 
