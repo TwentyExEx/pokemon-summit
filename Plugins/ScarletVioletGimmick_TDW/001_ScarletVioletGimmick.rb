@@ -236,7 +236,7 @@ class PokemonSummary_Scene
 			  overlay = @sprites["overlay"].bitmap
 			  tera_rect = Rect.new(0, type_number * 32, 32, 32)
 			  @terabitmap    = AnimatedBitmap.new(_INTL("Graphics/Pictures/Battle/icon_teraTypes"))
-			  overlay.blt(330, 143, @terabitmap.bitmap, tera_rect)
+			  overlay.blt(440, 143, @terabitmap.bitmap, tera_rect)
 		  end
 		elsif @pokemon.tera_active
 		  overlay = @sprites["overlay"].bitmap
