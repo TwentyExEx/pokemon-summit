@@ -2110,8 +2110,8 @@ ShadowSize = 1
 #-------------------------------
 [SWELLOW]
 BackSprite = 0,52
-FrontSprite = 9,25
-ShadowX = 0
+FrontSprite = 2,9
+ShadowX = -1
 ShadowSize = 2
 #-------------------------------
 [WINGULL]
