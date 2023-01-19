@@ -1285,11 +1285,11 @@ Description = Powers up ball and bomb moves.
 #-------------------------------
 [HAILTOTHEKING]
 Name = Hail to the King
-Description = Boosts its Attack stat with every able Poison-type on the team.
+Description = Boosts Attack for every able Poison-type on the team.
 #-------------------------------
 [HAILTOTHEQUEEN]
 Name = Hail to the Queen
-Description = Boosts its Defense stat with every able Poison-type on the team.
+Description = Boosts Defense for every able Poison-type on the team.
 #-------------------------------
 [KILKENNYCAT]
 Name = Kilkenny Cat
@@ -1297,7 +1297,7 @@ Description = This Pokemon is immune to Fighting-type moves and raises its Attac
 #-------------------------------
 [THUNDERFEET]
 Name = Thunder Feet
-Description = Causes the power of affected kicking moves to increase by 30%.
+Description = Boosts the power of kicking moves.
 #-------------------------------
 [BOXBARRIER]
 Name = Box Barrier
