@@ -1,3 +1,18 @@
+def pbSummitCourtyardTest
+  # trainerlist = []
+  # trainerlist.push($game_variables[44].uniq)
+  trainerlist = [:LEADER_Brock,:LEADER_Nessa,:LEADER_Flannery]
+  trainersonmap = []
+
+  until trainersonmap.length == 3 do
+    trainer = trainerlist[rand(trainerlist.length)]
+    p trainer
+    next if trainersonmap.include?(trainer)
+    trainersonmap.push(trainer)
+    $game_map.events[trainersonmap.length+1].character_name = trainer.to_s
+  end
+end
+
 def pbSummitArcadeTest
   p "prep"
   pbSummitPrepTestTrainer
