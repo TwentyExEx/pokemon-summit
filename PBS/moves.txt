@@ -9881,4 +9881,16 @@ FunctionCode = None
 Flags = CanProtect,CanMirrorMove
 Description = The user creates a silent but quick and harsh wind with its wings. This move usually goes first.
 #-------------------------------
-
+[DRACOMELODY]
+Name = Draco Melody
+Type = DRAGON
+Category = Special
+Power = 90
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = RaiseUserStatOrDamageFoe
+Flags = CanProtect,CanMirrorMove,Sound
+EffectChance = 100
+Description = The user sings a dragon-made fight song and damages the target with it. If the target is a Fairy-type Pokémon, raises the user's Sp. Atk stat instead. 
+#-------------------------------

@@ -1,5 +1,5 @@
 #===============================================================================
-# If there is a terrain active, +1 priority and end terrain (Brutal Swing)
+# If there is a terrain active, +1 priority and end terrain. (Brutal Swing)
 #===============================================================================
 class Battle::Move::PriorityWhenTerrainActiveEndsTerrain < Battle::Move
   def pbPriority(user)
@@ -170,6 +170,47 @@ class Battle::Move::CategoryDependsOnHigherDamage < Battle::Move
 
   def pbShowAnimation(id, user, targets, hitNum = 0, showAnimation = true)
     hitNum = 1 if physicalMove?
+    super
+  end
+end
+
+#===============================================================================
+# The user sings a dragon-made fight song and damages the target with it. 
+# If the target is a Fairy-type Pokémon, raises the user's Sp. Atk stat
+# instead. (Draco Melody)
+#===============================================================================
+class Battle::Move::RaiseUserStatOrDamageFoe < Battle::Move
+  def pbOnStartUse(user, targets)
+    @fairy = false
+    for poke in targets
+      if poke.types.include?(:FAIRY)
+        @fairy = true 
+        break
+      end
+    end
+  end
+
+  def pbFailsAgainstTarget?(user, target, show_message)
+    return false if !@fairy
+    if target.effects[PBEffects::Substitute] > 0 && !ignoresSubstitute?(user)
+      @battle.pbDisplay(_INTL("But it failed!")) if show_message
+      return true
+    end
+    return false
+  end
+
+  def pbDamagingMove?
+    return false if @fairy
+    return super
+  end
+
+  def pbEffectAgainstTarget(user, target)
+    return if !@fairy
+    user.pbRaiseStatStage(:SPECIAL_ATTACK, 1, user)
+  end
+
+  def pbShowAnimation(id, user, targets, hitNum = 0, showAnimation = true)
+    showAnimation = false if @fairy
     super
   end
 end
