@@ -214,3 +214,55 @@ class Battle::Move::RaiseUserStatOrDamageFoe < Battle::Move
     super
   end
 end
+
+#===============================================================================
+# Effect changes based on the user's stockpile (X). Resets the stockpile to
+# 0. Decreases the user's Defense and Special Defense by X stages each. 
+# (Toxic Retch)
+#===============================================================================
+class Battle::Move::PoisonDependsOnUserStockpile < Battle::Move::PoisonTarget
+  def pbMoveFailed?(user, targets)
+    if user.effects[PBEffects::Stockpile] == 0
+      @battle.pbDisplay(_INTL("But it failed to spit up a thing!"))
+      return true
+    elsif user.pbOpposingSide.effects[PBEffects::ToxicSpikes] >= 2
+      @battle.pbDisplay(_INTL("But it failed!"))
+      return true
+    end
+    return false
+  end
+
+  def pbEffectAfterAllHits(user, target)
+    return if user.fainted? || user.effects[PBEffects::Stockpile] == 0
+    return if target.damageState.unaffected
+    if user.effects[PBEffects::Stockpile] == 1
+      target.pbPoison(user, nil, @toxic) if target.pbCanPoison?(user, false, self)
+    end
+    if user.effects[PBEffects::Stockpile] == 2
+      target.pbPoison(user, nil, @toxic) if target.pbCanPoison?(user, false, self)
+      user.pbOpposingSide.effects[PBEffects::ToxicSpikes] += 1
+      @battle.pbDisplay(_INTL("Poison spikes were scattered all around {1}'s feet!",
+                              user.pbOpposingTeam(true)))
+    end
+    if user.effects[PBEffects::Stockpile] == 3
+      target.pbPoison(user, nil, @toxic) if target.pbCanPoison?(user, false, self)
+      user.pbOpposingSide.effects[PBEffects::ToxicSpikes] += 2
+      @battle.pbDisplay(_INTL("Poison spikes were scattered all around {1}'s feet!",
+                              user.pbOpposingTeam(true)))
+    end
+    @battle.pbDisplay(_INTL("{1}'s stockpiled effect wore off!", user.pbThis))
+    return if @battle.pbAllFainted?(target.idxOwnSide)
+    showAnim = true
+    if user.effects[PBEffects::StockpileDef] > 0 &&
+       user.pbCanLowerStatStage?(:DEFENSE, user, self)
+      showAnim = false if user.pbLowerStatStage(:DEFENSE, user.effects[PBEffects::StockpileDef], user, showAnim)
+    end
+    if user.effects[PBEffects::StockpileSpDef] > 0 &&
+       user.pbCanLowerStatStage?(:SPECIAL_DEFENSE, user, self)
+      user.pbLowerStatStage(:SPECIAL_DEFENSE, user.effects[PBEffects::StockpileSpDef], user, showAnim)
+    end
+    user.effects[PBEffects::Stockpile]      = 0
+    user.effects[PBEffects::StockpileDef]   = 0
+    user.effects[PBEffects::StockpileSpDef] = 0
+  end
+end

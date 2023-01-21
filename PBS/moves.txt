@@ -9894,3 +9894,14 @@ Flags = CanProtect,CanMirrorMove,Sound
 EffectChance = 100
 Description = The user sings a dragon-made fight song and damages the target with it. If the target is a Fairy-type Pokémon, raises the user's Sp. Atk stat instead. 
 #-------------------------------
+[TOXICRETCH]
+Name = Toxic Retch
+Type = POISON
+Category = Special
+Power = 70
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = PoisonDependsOnUserStockpile
+Flags = CanProtect
+Description = The power stored using the move Stockpile is retched onto the target. The effect of this move changes based on how many times Stockpile was used beforehand.
