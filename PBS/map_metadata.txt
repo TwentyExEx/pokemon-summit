@@ -24,3 +24,7 @@ ShowArea = true
 [011]   # Outside Port
 Name = Outside Port
 SnapEdges = true
+#-------------------------------
+[018]   # Verdanturf
+Name = Verdanturf
+SnapEdges = true
