@@ -9868,4 +9868,17 @@ Flags = CanProtect,CanMirrorMove,Dance
 EffectChance = 50
 Description = The user attacks the target with a shining blast after dancing with lustrous steps. It may also raise the user's Sp. Atk stat.
 #-------------------------------
+[SILENTWIND]
+Name = Silent Wind
+Type = FLYING
+Category = Special
+Power = 40
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+Priority = 1
+FunctionCode = None
+Flags = CanProtect,CanMirrorMove
+Description = The user creates a silent but quick and harsh wind with its wings. This move usually goes first.
+#-------------------------------
 
