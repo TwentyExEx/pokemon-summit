@@ -1,3 +1,27 @@
+def pbSummitTest
+  for species in SummitPokeTest.allspecies
+    pkmn = SummitPokeTest.const_get(species)
+    specformformatted = pkmn[:species].clone.to_s
+    if pkmn[:form] != 0
+      specformformatted << "_" << pkmn[:form].to_s
+    end
+    @givepkmn = Pokemon.new(specformformatted, 50)
+    num = 0
+    for stat in $allstats
+      @givepkmn.iv[stat] = 31
+      @givepkmn.ev[stat] = pkmn[:evs][num]
+      num += 1
+    end
+    @givepkmn.happiness = 255
+    @givepkmn.cannot_release = true
+    for move in pkmn[:moves]
+      @givepkmn.learn_move(move)
+    end
+    @givepkmn.ability_index = pkmn[:ability_index]
+    pbAddPokemonSilent(@givepkmn)
+  end
+end
+
 def pbSummitCourtyardTest
   # trainerlist = []
   # trainerlist.push($game_variables[44].uniq)
