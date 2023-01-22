@@ -1,12 +1,12 @@
 module SummitPokeTest
 	# Array of all species listed
-	@allspecies = [:KABUTOPS,:AERODACTYL,:GOLEM]
+	@allspecies = [:PKMN1,:PKMN2,:PKMN3]
 
 	def self.allspecies
 		return @allspecies
 	end
 
-	KABUTOPS = {
+	PKMN1 = {
 		:species => :KABUTOPS,
 		:tera_type => :ELECTRIC,
 		:moves => [:RAZORSHELL,:STONEAXE,:AQUAJET,:XSCISSOR],
@@ -16,7 +16,7 @@ module SummitPokeTest
 		:nature => :JOLLY,
 		:evs => [0,252,0,252,0,4]
 	}
-	AERODACTYL = {
+	PKMN2 = {
 		:species => :AERODACTYL,
 		:tera_type => :ELECTRIC,
 		:moves => [:DRAGONDANCE,:DUALWINGBEAT,:THUNDERFANG,:ROCKSLIDE],
@@ -26,7 +26,7 @@ module SummitPokeTest
 		:nature => :ADAMANT,
 		:evs => [0,252,0,252,0,4]
 	}
-	GOLEM = {
+	PKMN3 = {
 		:species => :GOLEM,
 		:tera_type => :ELECTRIC,
 		:moves => [:STONEEDGE,:BODYPRESS,:EARTHQUAKE,:FIREPUNCH],
