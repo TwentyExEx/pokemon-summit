@@ -8,6 +8,7 @@ module SummitPokeTest
 
 	KABUTOPS = {
 		:species => :KABUTOPS,
+		:tera_type => :ELECTRIC,
 		:moves => [:RAZORSHELL,:STONEAXE,:AQUAJET,:XSCISSOR],
 		:form => 0,
 		:ability_index => 1,
@@ -17,6 +18,7 @@ module SummitPokeTest
 	}
 	AERODACTYL = {
 		:species => :AERODACTYL,
+		:tera_type => :ELECTRIC,
 		:moves => [:DRAGONDANCE,:DUALWINGBEAT,:THUNDERFANG,:ROCKSLIDE],
 		:form => 0,
 		:ability_index => 1,
@@ -26,6 +28,7 @@ module SummitPokeTest
 	}
 	GOLEM = {
 		:species => :GOLEM,
+		:tera_type => :ELECTRIC,
 		:moves => [:STONEEDGE,:BODYPRESS,:EARTHQUAKE,:FIREPUNCH],
 		:form => 0,
 		:ability_index => 1,

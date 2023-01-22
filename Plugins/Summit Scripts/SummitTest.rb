@@ -20,6 +20,9 @@ def pbSummitTest
     @givepkmn.ability_index = pkmn[:ability_index]
     @givepkmn.nature = pkmn[:nature]
     @givepkmn.item = pkmn[:item]
+    teratype = []
+    teratype.push(pkmn[:tera_type])
+    @givepkmn.tera_type = teratype
     pbAddPokemonSilent(@givepkmn)
   end
 end
