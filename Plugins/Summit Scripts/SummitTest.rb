@@ -18,6 +18,8 @@ def pbSummitTest
       @givepkmn.learn_move(move)
     end
     @givepkmn.ability_index = pkmn[:ability_index]
+    @givepkmn.nature = pkmn[:nature]
+    @givepkmn.item = pkmn[:item]
     pbAddPokemonSilent(@givepkmn)
   end
 end
