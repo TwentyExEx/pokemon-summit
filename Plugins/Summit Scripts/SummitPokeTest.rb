@@ -1,6 +1,6 @@
 module SummitPokeTest
 	# Array of all species listed
-	@allspecies = [:PKMN1,:PKMN2,:PKMN3]
+	@allspecies = [:PKMN1,:PKMN2,:PKMN3,:PKMN4,:PKMN5,:PKMN6]
 
 	def self.allspecies
 		return @allspecies
@@ -36,5 +36,34 @@ module SummitPokeTest
 		:nature => :ADAMANT,
 		:evs => [252,252,0,0,0,4]
 	}
-
+	PKMN4 = {
+		:species => :GOLEM,
+		:tera_type => :ELECTRIC,
+		:moves => [:STONEEDGE,:BODYPRESS,:EARTHQUAKE,:FIREPUNCH],
+		:form => 0,
+		:ability_index => 1,
+		:item => :FOCUSSASH,
+		:nature => :ADAMANT,
+		:evs => [252,252,0,0,0,4]
+	}
+	PKMN5 = {
+		:species => :GOLEM,
+		:tera_type => :ELECTRIC,
+		:moves => [:STONEEDGE,:BODYPRESS,:EARTHQUAKE,:FIREPUNCH],
+		:form => 0,
+		:ability_index => 1,
+		:item => :FOCUSSASH,
+		:nature => :ADAMANT,
+		:evs => [252,252,0,0,0,4]
+	}
+	PKMN6 = {
+		:species => :GOLEM,
+		:tera_type => :ELECTRIC,
+		:moves => [:STONEEDGE,:BODYPRESS,:EARTHQUAKE,:FIREPUNCH],
+		:form => 0,
+		:ability_index => 1,
+		:item => :FOCUSSASH,
+		:nature => :ADAMANT,
+		:evs => [252,252,0,0,0,4]
+	}
 end
