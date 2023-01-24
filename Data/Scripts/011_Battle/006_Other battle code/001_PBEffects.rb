@@ -123,6 +123,7 @@ module PBEffects
   HailToTheKing       = 118
   HailToTheQueen      = 119
   Cacaphony           = 120
+  HoneyHoncho	      = 121
 
   #=============================================================================
   # These effects apply to a battler position

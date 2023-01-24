@@ -515,3 +515,35 @@ Battle::AbilityEffects::OnEndOfUsingMove.add(:CACAPHONY,
     end
   }
 )
+
+#===============================================================================
+# Honey Honcho
+#===============================================================================
+Battle::AbilityEffects::DamageCalcFromUser.add(:HONEYHONCHO,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    user.effects[PBEffects::HoneyHoncho] = 0 if user.effects[PBEffects::HoneyHoncho].nil?
+    next if user.effects[PBEffects::HoneyHoncho] <= 0
+    mult = 1
+    mult += 0.1 * user.effects[PBEffects::HoneyHoncho]
+    mults[:attack_multiplier] *= mult if move.physicalMove?
+  }
+)
+
+Battle::AbilityEffects::OnSwitchIn.add(:HONEYHONCHO,
+  proc { |ability, battler, battle, switch_in|
+  poisonList = []
+  numPsn = 0
+  tempParty = $Trainer.party.clone
+  tempParty.delete_at(0) # Ignore user
+  for pkmn in tempParty
+    next if !pkmn.able? || pkmn.status != :NONE || !pkmn.types.include?(:BUG)
+    numPsn += 1
+  end
+  numPsn = 5 if numPsn > 5
+  next if numPsn <= 0
+  battle.pbShowAbilitySplash(battler)
+  battle.pbDisplay(_INTL("{1}'s physical power was boosted by its royalty!", battler.pbThis))
+  battler.effects[PBEffects::HoneyHoncho] = numPsn
+  battle.pbHideAbilitySplash(battler)
+  }
+)
