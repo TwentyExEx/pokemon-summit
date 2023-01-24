@@ -815,6 +815,7 @@ module GameData
 	    when "178" then new_code = "PoisonParalyzeOrSleepAllFoes"
       when "179" then new_code = "SuperEffectiveAgainstDragonTypes"
       when "180" then new_code = "RaiseUserStatOrDamageFoe"
+      when "181" then new_code = "SuperEffectiveAgainstSteel"
       end
       data[:function_code] = new_code
       return data

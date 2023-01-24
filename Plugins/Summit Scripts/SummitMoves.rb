@@ -266,3 +266,13 @@ class Battle::Move::PoisonDependsOnUserStockpile < Battle::Move::PoisonTarget
     user.effects[PBEffects::StockpileSpDef] = 0
   end
 end
+
+#===============================================================================
+# Effectiveness against Steel-type is 2x. (Gigaton Hammer)
+#===============================================================================
+class Battle::Move::SuperEffectiveAgainstSteel < Battle::Move
+  def pbCalcTypeModSingle(moveType, defType, user, target)
+    return Effectiveness::SUPER_EFFECTIVE_ONE if defType == :STEEL
+    return super
+  end
+end

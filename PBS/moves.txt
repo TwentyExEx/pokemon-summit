@@ -9221,11 +9221,11 @@ Description = The user throws a rigged bouquet of flowers at the target. This at
 Name = Gigaton Hammer
 Type = STEEL
 Category = Physical
-Power = 160
+Power = 140
 Accuracy = 100
 TotalPP = 5
 Target = NearOther
-FunctionCode = None
+FunctionCode = SuperEffectiveAgainstSteel
 Flags = CanProtect,CanMirrorMove
 Description = The user swings its whole body around to attack with its huge hammer. This move can't be used twice in a row.
 #-------------------------------
