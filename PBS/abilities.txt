@@ -1327,3 +1327,7 @@ Description = Contact with the Pokémon may cause confusion.
 Name = Cacaphony
 Description = Boosts sound-based moves if used repeatedly.
 #-------------------------------
+[MAESTRO]
+Name = Maestro
+Description = Powers up own sound moves. Resists other sound moves.
+#-------------------------------

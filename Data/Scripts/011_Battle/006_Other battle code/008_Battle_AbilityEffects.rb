@@ -1356,6 +1356,12 @@ Battle::AbilityEffects::DamageCalcFromUser.add(:PUNKROCK,
   }
 )
 
+Battle::AbilityEffects::DamageCalcFromUser.add(:MAESTRO,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    mults[:attack_multiplier] *= 1.3 if move.soundMove?
+  }
+)
+
 Battle::AbilityEffects::DamageCalcFromUser.add(:RECKLESS,
   proc { |ability, user, target, move, mults, baseDmg, type|
     mults[:base_damage_multiplier] *= 1.2 if move.recoilMove?
@@ -1607,6 +1613,12 @@ Battle::AbilityEffects::DamageCalcFromTarget.add(:MULTISCALE,
 )
 
 Battle::AbilityEffects::DamageCalcFromTarget.add(:PUNKROCK,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    mults[:final_damage_multiplier] /= 2 if move.soundMove?
+  }
+)
+
+Battle::AbilityEffects::DamageCalcFromTarget.add(:MAESTRO,
   proc { |ability, user, target, move, mults, baseDmg, type|
     mults[:final_damage_multiplier] /= 2 if move.soundMove?
   }
