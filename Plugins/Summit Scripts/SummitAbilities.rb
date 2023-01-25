@@ -547,3 +547,36 @@ Battle::AbilityEffects::OnSwitchIn.add(:HONEYHONCHO,
   battle.pbHideAbilitySplash(battler)
   }
 )
+
+#===============================================================================
+# Snaring Entrance
+#===============================================================================
+
+Battle::AbilityEffects::TrappingByTarget.add(:SNARINGENTRANCE,
+  proc { |ability, switcher, bearer, battle|
+    next true if battler.effects[PBEffects::SnaringEntrance] == false
+  }
+)
+
+Battle::AbilityEffects::OnSwitchIn.add(:SNARINGENTRANCE,
+  proc { |ability, battler, battle, switch_in|
+    next if @deactivate == true
+    if Battle::Scene::USE_ABILITY_SPLASH
+      battle.pbShowAbilitySplash(battler)
+      msg = _INTL("{1} is ensnared by {2}!", battler.pbOpposingTeam, battler.pbThis)
+      battler.effects[PBEffects::SnaringEntrance] = true
+      @displayed = true
+      battle.pbDisplay(msg)
+      battle.pbHideAbilitySplash(battler)
+    end
+  }
+)
+
+Battle::AbilityEffects::OnBattlerFainting.add(:SNARINGENTRANCE,
+  proc { |ability, battler, fainted, battle|
+    battler.effects[PBEffects::SnaringEntrance] = false
+    @deactivate = true
+    battle.pbDisplay(_INTL("{1}'s ensnarement disappeared.", battler.pbThis))
+    battle.pbHideAbilitySplash(battler)
+  }
+)
