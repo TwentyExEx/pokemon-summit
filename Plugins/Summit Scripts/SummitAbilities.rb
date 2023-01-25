@@ -580,3 +580,20 @@ Battle::AbilityEffects::OnBattlerFainting.add(:SNARINGENTRANCE,
     battle.pbHideAbilitySplash(battler)
   }
 )
+
+#===============================================================================
+# Soul Snatcher
+#===============================================================================
+
+Battle::AbilityEffects::OnEndOfUsingMove.add(:SOULSNATCHER,
+  proc { |ability, user, targets, move, battle|
+    next if battle.pbAllFainted?(user.idxOpposingSide)
+    numFainted = 0
+    targets.each { |b| numFainted += 1 if b.damageState.fainted }
+    next if numFainted == 0
+    battle.pbShowAbilitySplash(user)
+    user.pbRecoverHP(user.totalhp / 4)
+    battle.pbDisplay(_INTL("{1} restored health from from the fallen's soul!", user.pbThis))
+    battle.pbHideAbilitySplash(user)
+  }
+)

@@ -9905,3 +9905,28 @@ Target = NearOther
 FunctionCode = PoisonDependsOnUserStockpile
 Flags = CanProtect
 Description = The power stored using the move Stockpile is retched onto the target. The effect of this move changes based on how many times Stockpile was used beforehand.
+#-------------------------------
+[ECHOBURST]
+Name = Tackle
+Type = NORMAL
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 35
+Target = NearOther
+FunctionCode = None
+Flags = Contact,CanProtect,CanMirrorMove
+Description = A physical attack in which the user charges and slams into the target with its whole body.
+#-------------------------------
+[STEELSURGE]
+Name = Tackle
+Type = NORMAL
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 35
+Target = NearOther
+FunctionCode = None
+Flags = Contact,CanProtect,CanMirrorMove
+Description = A physical attack in which the user charges and slams into the target with its whole body.
+#-------------------------------

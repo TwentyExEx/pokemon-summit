@@ -1323,11 +1323,23 @@ Description = Bug-type moves gain priority when its HP is full.
 Name = Imbalance
 Description = Contact with the Pokémon may cause confusion.
 #-------------------------------
-[CACAPHONY]
-Name = Cacaphony
+[CACOPHONY]
+Name = Cacophony
 Description = Boosts sound-based moves if used repeatedly.
 #-------------------------------
 [MAESTRO]
 Name = Maestro
 Description = Powers up own sound moves. Resists other sound moves.
+#-------------------------------
+[HONEYHONCHO]
+Name = Honey Honcho
+Description = Boosts Attack for every able Bug-type on the team.
+#-------------------------------
+[CASTLEWALLS]
+Name = Castle Walls
+Description = This ability is disabled at this time.
+#-------------------------------
+[SOULSNATCHER]
+Name = Soul Snatcher
+Description = Heals HP each time it deals a KO.
 #-------------------------------
