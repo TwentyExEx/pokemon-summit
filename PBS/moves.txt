@@ -2746,14 +2746,13 @@ Description = The user bites with flame-cloaked fangs. It may also make the targ
 Name = Flame Wheel
 Type = FIRE
 Category = Physical
-Power = 60
+Power = 90
 Accuracy = 100
 TotalPP = 25
 Target = NearOther
-FunctionCode = BurnTarget
+FunctionCode = RecoilQuarterOfDamageDealt
 Flags = Contact,CanProtect,CanMirrorMove,ThawsUser
-EffectChance = 10
-Description = The user cloaks itself in fire and charges at the target. It may also leave the target with a burn.
+Description = The user cloaks itself in fire and charges at the target. It also damages the user a little.
 #-------------------------------
 [INCINERATE]
 Name = Incinerate
@@ -6814,7 +6813,7 @@ Description = The user bites the target with toxic fangs. It may also leave the 
 Name = Poison Tail
 Type = POISON
 Category = Physical
-Power = 50
+Power = 75
 Accuracy = 100
 TotalPP = 25
 Target = NearOther
@@ -8368,12 +8367,13 @@ Name = Aqua Tail
 Type = WATER
 Category = Physical
 Power = 90
-Accuracy = 90
+Accuracy = 100
 TotalPP = 10
 Target = NearOther
-FunctionCode = None
+FunctionCode = LowerTargetDef1
 Flags = Contact,CanProtect,CanMirrorMove
-Description = The user attacks by swinging its tail as if it were a vicious wave in a raging storm.
+EffectChance = 10
+Description = The user attacks by swinging its tail as if it were a vicious wave. This may also lower the target's Defense.
 #-------------------------------
 [MUDDYWATER]
 Name = Muddy Water
@@ -8435,7 +8435,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = LowerTargetDefense1
 Flags = Contact,CanProtect,CanMirrorMove
-EffectChance = 20
+EffectChance = 30
 Description = The user slams into the target using a full-force blast of water. May lower the target's Defense.
 #-------------------------------
 [DIVE]
