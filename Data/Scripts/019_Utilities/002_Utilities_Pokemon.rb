@@ -81,13 +81,14 @@ def pbAddPokemonSilent(pkmn, level = 1, see_form = true)
   $player.pokedex.set_owned(pkmn.species)
   $player.pokedex.register(pkmn) if see_form
   pkmn.record_first_moves
-  if $player.party.length >= 3 && $game_variables[31] < 9 # edit here
-    pbSummitStorePokemon(pkmn)
-  elsif $player.party.length >= 6 && $game_variables[31] >= 9 # edit here
-    pbSummitStorePokemon(pkmn)
-  else
-    $player.party[$player.party.length] = pkmn
-  end
+  # if $player.party.length >= 3 && $game_variables[31] < 9 # edit here
+  #   pbSummitStorePokemon(pkmn)
+  # elsif $player.party.length >= 6 && $game_variables[31] >= 9 # edit here
+  #   pbSummitStorePokemon(pkmn)
+  # else
+  #   $player.party[$player.party.length] = pkmn
+  # end
+  $player.party[$player.party.length] = pkmn
   return true
 end
 
