@@ -605,18 +605,21 @@ Generation = 6
 #-------------------------------
 [CASTFORM,1]
 FormName = Sunny Form
+BaseStats = 80,110,45,80,110,45
 Types = FIRE
 Color = Red
 Pokedex = This is the form Castform takes on the brightest of days. Its skin is unexpectedly hot to the touch, so approach with care.
 #-------------------------------
 [CASTFORM,2]
 FormName = Rainy Form
+BaseStats = 80,60,110,50,60,110
 Types = WATER
 Color = Blue
 Pokedex = This is the form Castform takes when soaked with rain. When its body is compressed, water will seep out as if from a sponge.
 #-------------------------------
 [CASTFORM,3]
 FormName = Snowy Form
+BaseStats = 80,75,60,120,75,60
 Types = ICE
 Color = White
 Pokedex = This is the form Castform takes when covered in snow. Its body becomes an ice-like material, with a temperature near -5 degrees Celsius.
@@ -755,23 +758,22 @@ TutorMoves = AERIALACE,ALLYSWITCH,AVALANCHE,BIND,BRICKBREAK,BRUTALSWING,CALMMIND
 [WORMADAM,1]
 FormName = Sandy Cloak
 Types = BUG,GROUND
-BaseStats = 60,79,105,36,59,85
+BaseStats = 80,89,125,36,49,85
 EVs = DEFENSE,2
-Moves = 0,QUIVERDANCE,1,QUIVERDANCE,1,SUCKERPUNCH,1,TACKLE,1,PROTECT,1,BUGBITE,10,PROTECT,15,BUGBITE,20,STRINGSHOT,23,CONFUSION,26,ROCKBLAST,29,HARDEN,32,PSYBEAM,35,INFESTATION,38,FLAIL,41,ATTRACT,44,PSYCHIC,47,FISSURE,50,BUGBUZZ
-TutorMoves = ALLYSWITCH,ATTRACT,BUGBITE,BUGBUZZ,BULLDOZE,CONFIDE,DIG,DOUBLETEAM,DREAMEATER,EARTHPOWER,EARTHQUAKE,ELECTROWEB,ENDEAVOR,ENDURE,FACADE,FLASH,FRUSTRATION,GIGADRAIN,GIGAIMPACT,HIDDENPOWER,HYPERBEAM,INFESTATION,PROTECT,PSYCHIC,PSYCHUP,RAINDANCE,REST,RETURN,ROCKTOMB,ROUND,SAFEGUARD,SANDSTORM,SHADOWBALL,SIGNALBEAM,SKILLSWAP,SLEEPTALK,SNORE,SOLARBEAM,STEALTHROCK,STRUGGLEBUG,SUBSTITUTE,SUNNYDAY,SWAGGER,TELEKINESIS,THIEF,UPROAR,VENOSHOCK
+Moves = 1,ALLYSWITCH,1,ATTRACT,1,BUGBITE,1,BUGBUZZ,1,BULLDOZE,1,CAPTIVATE,1,CONFIDE,1,CONFUSION,1,DIG,1,DOUBLETEAM,1,DREAMEATER,1,EARTHPOWER,1,EARTHQUAKE,1,ELECTROWEB,1,ENDEAVOR,1,ENDURE,1,FACADE,1,FISSURE,1,FLAIL,1,FLASH,1,FRUSTRATION,1,GIGAIMPACT,1,HARDEN,1,HIDDENPOWER,1,HYPERBEAM,1,INFESTATION,1,MUDSLAP,1,NATURALGIFT,1,PROTECT,1,PSYBEAM,1,PSYCHIC,1,PSYCHUP,1,QUIVERDANCE,1,RAINDANCE,1,REST,1,RETURN,1,ROCKBLAST,1,ROCKTOMB,1,ROLLOUT,1,ROUND,1,SAFEGUARD,1,SANDSTORM,1,SECRETPOWER,1,SHADOWBALL,1,SIGNALBEAM,1,SKILLSWAP,1,SLEEPTALK,1,SNORE,1,STEALTHROCK,1,STRINGSHOT,1,STRUGGLEBUG,1,SUBSTITUTE,1,SUCKERPUNCH,1,SUNNYDAY,1,SWAGGER,1,TACKLE,1,TELEKINESIS,1,THIEF,1,UPROAR,1,VENOSHOCK,1,RECOVER
 Color = Brown
 #-------------------------------
 [WORMADAM,2]
 FormName = Trash Cloak
 Types = BUG,STEEL
-BaseStats = 60,69,95,36,69,95
+BaseStats = 80,69,105,36,69,105
 EVs = DEFENSE,1,SPECIAL_DEFENSE,1
-Moves = 0,QUIVERDANCE,1,QUIVERDANCE,1,METALBURST,1,SUCKERPUNCH,1,TACKLE,1,PROTECT,1,BUGBITE,10,PROTECT,15,BUGBITE,20,STRINGSHOT,23,CONFUSION,26,METALBURST,29,METALSOUND,32,PSYBEAM,35,INFESTATION,38,FLAIL,41,ATTRACT,44,PSYCHIC,47,IRONHEAD,50,BUGBUZZ
-TutorMoves = ALLYSWITCH,ATTRACT,BUGBITE,BUGBUZZ,CONFIDE,DIG,DOUBLETEAM,DREAMEATER,ELECTROWEB,ENDEAVOR,ENDURE,FACADE,FLASH,FLASHCANNON,FRUSTRATION,GIGADRAIN,GIGAIMPACT,GUNKSHOT,GYROBALL,HIDDENPOWER,HYPERBEAM,INFESTATION,IRONDEFENSE,IRONHEAD,MAGNETRISE,PROTECT,PSYCHIC,PSYCHUP,RAINDANCE,REST,RETURN,ROUND,SAFEGUARD,SEEDBOMB,SHADOWBALL,SIGNALBEAM,SKILLSWAP,SLEEPTALK,SNORE,SOLARBEAM,STEALTHROCK,STRUGGLEBUG,SUBSTITUTE,SUNNYDAY,SWAGGER,TELEKINESIS,THIEF,UPROAR,VENOSHOCK
+Moves = 1,ALLYSWITCH,1,ATTRACT,1,BUGBITE,1,BUGBUZZ,1,CAPTIVATE,1,CONFIDE,1,CONFUSION,1,DOUBLETEAM,1,DREAMEATER,1,ELECTROWEB,1,ENDEAVOR,1,ENDURE,1,FACADE,1,FLAIL,1,FLASH,1,FLASHCANNON,1,FRUSTRATION,1,GIGAIMPACT,1,GUNKSHOT,1,GYROBALL,1,HIDDENPOWER,1,HYPERBEAM,1,INFESTATION,1,IRONDEFENSE,1,IRONHEAD,1,MAGNETRISE,1,METALBURST,1,METALSOUND,1,MIRRORSHOT,1,NATURALGIFT,1,PROTECT,1,PSYBEAM,1,PSYCHIC,1,PSYCHUP,1,QUIVERDANCE,1,RAINDANCE,1,REST,1,RETURN,1,ROUND,1,SAFEGUARD,1,SECRETPOWER,1,SHADOWBALL,1,SIGNALBEAM,1,SKILLSWAP,1,SLEEPTALK,1,SNORE,1,STEALTHROCK,1,STRINGSHOT,1,STRUGGLEBUG,1,SUBSTITUTE,1,SUCKERPUNCH,1,SUNNYDAY,1,SWAGGER,1,TACKLE,1,TELEKINESIS,1,THIEF,1,UPROAR,1,VENOSHOCK,1,RECOVER
 Color = Red
 #-------------------------------
 [CHERRIM,1]
 FormName = Sunshine Form
+BaseStats = 80,90,80,85,67,118
 Color = Pink
 Pokedex = After absorbing plenty of sunlight, Cherrim takes this form. It's full of energy while it's like this, and its liveliness will go on until sundown.
 #-------------------------------
@@ -839,6 +841,8 @@ Generation = 6
 FormName = Heat Rotom
 Types = ELECTRIC,FIRE
 BaseStats = 50,65,107,86,105,107
+Abilities = LEVITATE,FLASHFIRE
+HiddenAbilities = FLAMEBODY
 BaseExp = 182
 Pokedex = This Rotom has possessed a convection microwave oven that uses a special motor. It also has a flair for manipulating flames.
 #-------------------------------
@@ -846,6 +850,8 @@ Pokedex = This Rotom has possessed a convection microwave oven that uses a speci
 FormName = Wash Rotom
 Types = ELECTRIC,WATER
 BaseStats = 50,65,107,86,105,107
+Abilities = LEVITATE,WATERABSORB
+HiddenAbilities = WATERVEIL
 BaseExp = 182
 Pokedex = This form of Rotom enjoys coming up with water-based pranks. Be careful with it if you don't want your room flooded.
 #-------------------------------
@@ -853,6 +859,8 @@ Pokedex = This form of Rotom enjoys coming up with water-based pranks. Be carefu
 FormName = Frost Rotom
 Types = ELECTRIC,ICE
 BaseStats = 50,65,107,86,105,107
+Abilities = LEVITATE,THERMALEXCHANGE
+HiddenAbilities = REFRIGERATE
 BaseExp = 182
 Pokedex = Rotom assumes this form when it takes over a refrigerator powered by a special motor. It battles by spewing cold air.
 #-------------------------------
@@ -860,6 +868,8 @@ Pokedex = Rotom assumes this form when it takes over a refrigerator powered by a
 FormName = Fan Rotom
 Types = ELECTRIC,FLYING
 BaseStats = 50,65,107,86,105,107
+Abilities = LEVITATE,WINDRIDER
+HiddenAbilities = WINDPOWER
 BaseExp = 182
 Pokedex = In this form, Rotom applies its new power over wind to its love of pranks. It will happily blow away any important documents it can find.
 #-------------------------------
@@ -867,6 +877,8 @@ Pokedex = In this form, Rotom applies its new power over wind to its love of pra
 FormName = Mow Rotom
 Types = ELECTRIC,GRASS
 BaseStats = 50,65,107,86,105,107
+Abilities = LEVITATE,SAPSIPPER
+HiddenAbilities = LEAFGUARD
 BaseExp = 182
 Pokedex = This is Rotom after it's seized control of a lawn mower that has a special motor. As it mows down grass, it scatters the clippings everywhere.
 #-------------------------------
