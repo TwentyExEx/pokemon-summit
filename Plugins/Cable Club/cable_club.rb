@@ -583,6 +583,7 @@ module CableClub
     writer.int(pkmn.owner.gender)
     writer.int(pkmn.exp)
     writer.int(pkmn.form)
+    writer.sym(pkmn.tera_type[0])
     writer.nil_or(:sym, pkmn.item_id)
     writer.int(pkmn.numMoves)
     pkmn.moves.each do |move|
@@ -687,6 +688,7 @@ module CableClub
     pkmn.owner.gender = record.int
     pkmn.exp = record.int
     form = record.int
+    tera_type = record.sym
     #pkmn.forced_form = form if MultipleForms.hasFunction?(pkmn.species,"getForm")
     pkmn.form_simple = form
     pkmn.item = record.sym
