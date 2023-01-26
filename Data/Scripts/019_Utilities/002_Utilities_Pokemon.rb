@@ -88,7 +88,11 @@ def pbAddPokemonSilent(pkmn, level = 1, see_form = true)
   # else
   #   $player.party[$player.party.length] = pkmn
   # end
-  $player.party[$player.party.length] = pkmn
+  if $Trainer.party_full?
+    $PokemonStorage.pbStoreCaught(pkmn)
+  else
+    $player.party[$Trainer.party.length] = pkmn
+  end
   return true
 end
 
