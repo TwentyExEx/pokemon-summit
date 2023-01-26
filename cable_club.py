@@ -428,6 +428,7 @@ def make_party_validator(pbs_dir):
                     smart = record.int()
                     tough = record.int()
                     sheen = record.int()
+                    tera_type = record.str()
                     # ribbons
                     for _ in range(record.int()):
                         ribbon = record.str()
