@@ -12,9 +12,9 @@ from distutils.version import StrictVersion
 
 # This is the v20 version of the server. It is not compatible with earlier versions of the script
 
-HOST = r"127.0.0.1"
+HOST = r"0.0.0.0"
 PORT = 9999
-PBS_DIR = r"./PBS"
+PBS_DIR = r"./home/goffotv/PBS"
 
 GAME_VERSION = StrictVersion("1.0.0")
 
