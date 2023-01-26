@@ -688,7 +688,7 @@ module CableClub
     pkmn.owner.gender = record.int
     pkmn.exp = record.int
     form = record.int
-    tera_type = record.sym
+    pkmn.tera_type[0] = record.sym
     #pkmn.forced_form = form if MultipleForms.hasFunction?(pkmn.species,"getForm")
     pkmn.form_simple = form
     pkmn.item = record.sym
