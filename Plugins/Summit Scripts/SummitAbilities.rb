@@ -554,7 +554,7 @@ Battle::AbilityEffects::OnSwitchIn.add(:HONEYHONCHO,
 
 Battle::AbilityEffects::TrappingByTarget.add(:SNARINGENTRANCE,
   proc { |ability, switcher, bearer, battle|
-    next true if battler.effects[PBEffects::SnaringEntrance] == false
+    next true if bearer.effects[PBEffects::SnaringEntrance] == false
   }
 )
 
