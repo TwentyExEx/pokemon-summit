@@ -959,6 +959,9 @@ class Battle
             mega=@battle.megaEvolution[0][0]
             mega^=1 if mega>=0
             writer.int(mega) # mega fix?
+            tera=@battle.terastallize[0][0]
+            tera^=1 if tera>=0
+            writer.int(tera) # tera fix?
           end
         end
         frame = 0
@@ -990,6 +993,7 @@ class Battle
                 @battle.choices[their_index][2] = move && partner_pkmn.moves[move]
                 @battle.choices[their_index][3] = record.int
                 @battle.megaEvolution[1][0] = record.int # mega fix?
+                @battle.terastallize[1][0] = record.int # mega fix?
                 return if their_indices.empty?
   
               else
