@@ -291,7 +291,7 @@ def make_party_validator(pbs_dir):
             item_syms.add(internal_id)
 
     try:
-        pokemonforms_pbs = io.open(os.path.join(pbs_dir, r'pokemonforms.txt'), 'r', encoding='utf-8-sig')
+        pokemonforms_pbs = io.open(os.path.join(pbs_dir, r'pokemon_forms.txt'), 'r', encoding='utf-8-sig')
     except Exception:
         default_forms = Universe()
     else:
