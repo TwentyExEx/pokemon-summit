@@ -1263,7 +1263,7 @@ def pbSummitPrepBattle
     clonepoke.nature = poke.nature.clone
     clonepoke.gender = poke.gender.clone
     teratype = []
-    for type in pkmn[:tera_type]
+    for type in poke.tera_type
       teratype.push(type)
     end
     clonepoke.tera_type = teratype
