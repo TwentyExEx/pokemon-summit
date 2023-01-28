@@ -50,4 +50,64 @@ module SummitTeamBuilder
 		:nature => :TIMID,
 		:evs => [4,0,0,252,0,252]
 	}
+	PKMN2 = {
+		:species => :SUNFLORA,
+		:tera_type => :DRAGON,
+		:moves => [:CUT,:FLASH,:SNORE,:PROTECT],
+		:form => 0,
+		:shiny => true,
+		:ability_index => 0,
+		:poke_ball => :MASTERBALL,
+		:item => :LEFTOVERS,
+		:nature => :TIMID,
+		:evs => [4,0,0,252,0,252]
+	}
+	PKMN3 = {
+		:species => :SUNFLORA,
+		:tera_type => :DRAGON,
+		:moves => [:CUT,:FLASH,:SNORE,:PROTECT],
+		:form => 0,
+		:shiny => true,
+		:ability_index => 0,
+		:poke_ball => :MASTERBALL,
+		:item => :LEFTOVERS,
+		:nature => :TIMID,
+		:evs => [4,0,0,252,0,252]
+	}
+	PKMN4 = {
+		:species => :SUNFLORA,
+		:tera_type => :DRAGON,
+		:moves => [:CUT,:FLASH,:SNORE,:PROTECT],
+		:form => 0,
+		:shiny => true,
+		:ability_index => 0,
+		:poke_ball => :MASTERBALL,
+		:item => :LEFTOVERS,
+		:nature => :TIMID,
+		:evs => [4,0,0,252,0,252]
+	}
+	PKMN5 = {
+		:species => :SUNFLORA,
+		:tera_type => :DRAGON,
+		:moves => [:CUT,:FLASH,:SNORE,:PROTECT],
+		:form => 0,
+		:shiny => true,
+		:ability_index => 0,
+		:poke_ball => :MASTERBALL,
+		:item => :LEFTOVERS,
+		:nature => :TIMID,
+		:evs => [4,0,0,252,0,252]
+	}
+	PKMN6 = {
+		:species => :SUNFLORA,
+		:tera_type => :DRAGON,
+		:moves => [:CUT,:FLASH,:SNORE,:PROTECT],
+		:form => 0,
+		:shiny => true,
+		:ability_index => 0,
+		:poke_ball => :MASTERBALL,
+		:item => :LEFTOVERS,
+		:nature => :TIMID,
+		:evs => [4,0,0,252,0,252]
+	}
 end
