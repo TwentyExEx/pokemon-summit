@@ -1,18 +1,18 @@
 def pbChangeOnlineTrainerType
   old_trainer_type = $player.online_trainer_type
   if $player.online_trainer_type==$player.trainer_type
-    pbMessage(_INTL("Hmmm...!\\1"))
-    pbMessage(_INTL("What is your favorite kind of Trainer?\\nCan you tell me?\\1"))
+    pbMessage(_INTL("\\bYou look like a strong trainer!"))
+    pbMessage(_INTL("\\bTell me..."))
   else
     trainername=GameData::TrainerType.get($player.online_trainer_type).name
     if ['a','e','i','o','u'].include?(trainername[0,1].downcase)
-      msg=_INTL("Hello! You've been mistaken for an {1}, haven't you?\\1",trainername)
+      msg=_INTL("\\bYou seem like an {1}!\\1",trainername)
     else
-      msg=_INTL("Hello! You've been mistaken for a {1}, haven't you?\\1",trainername)
+      msg=_INTL("\\bYou seem like a {1}!\\1",trainername)
     end
     pbMessage(msg)
-    pbMessage(_INTL("But I think you can also pass for a different kind of Trainer.\\1"))
-    pbMessage(_INTL("So, how about telling me what kind of Trainer that you like?\\1"))
+    pbMessage(_INTL("\\bBut I think you could also be a different kind of trainer.\\1"))
+    pbMessage(_INTL("\\bTell me..."))
   end
   commands=[]
   trainer_types=[]
@@ -24,22 +24,22 @@ def pbChangeOnlineTrainerType
   end
   commands.push(_INTL("Cancel"))
   loop do
-    cmd=pbMessage(_INTL("Which kind of Trainer would you like to be?"),commands,-1)
+    cmd=pbMessage(_INTL("\\bWhat kind of trainer would you like to be?"),commands,-1)
     if cmd>=0 && cmd<commands.length-1
       trainername=commands[cmd]
       if ['a','e','i','o','u'].include?(trainername[0,1].downcase)
-        msg=_INTL("An {1} is the kind of Trainer you want to be?",trainername)
+        msg=_INTL("\\bYou want to be an {1}?",trainername)
       else
-        msg=_INTL("A {1} is the kind of Trainer you want to be?",trainername)
+        msg=_INTL("\\bYou want to be a {1}?",trainername)
       end
       if pbConfirmMessage(msg)
         if ['a','e','i','o','u'].include?(trainername[0,1].downcase)
-          msg=_INTL("I see! So an {1} is the kind of Trainer you like.\\1",trainername)
+          msg=_INTL("\\bI see! So you'd like to be an {1}.\\1",trainername)
         else
-          msg=_INTL("I see! So a {1} is the kind of Trainer you like.\\1",trainername)
+          msg=_INTL("\\bI see! So you'd like to be a {1}.\\1",trainername)
         end
         pbMessage(msg)
-        pbMessage(_INTL("If that's the case, others may come to see you in the same way.\\1"))
+        pbMessage(_INTL("\\bIf that's how you feel about yourself, others will surely see you that way too!\\1"))
         $player.online_trainer_type=trainer_types[cmd]
         break
       end
@@ -47,7 +47,7 @@ def pbChangeOnlineTrainerType
       break
     end
   end
-  pbMessage(_INTL("OK, then I'll just talk to you later!"))
+  pbMessage(_INTL("\\bOK, talk to you later!"))
   if old_trainer_type != $player.online_trainer_type
     EventHandlers.trigger(:cable_club_trainer_type_updated,$player.online_trainer_type)
   end
