@@ -32,3 +32,4 @@ SnapEdges = true
 [024]   # Online Room
 Name = Online Room
 BattleBack = online
+TrainerBattleBGM = sinnohtrainer.ogg
