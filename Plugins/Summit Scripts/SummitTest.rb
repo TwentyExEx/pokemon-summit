@@ -12,12 +12,14 @@ def pbSummitTeamCollect
       @givepkmn.ev[stat] = pkmn[:evs][num]
       num += 1
     end
+    @givepkmn.shiny = pkmn[:shiny]
     @givepkmn.happiness = 255
     @givepkmn.cannot_release = true
     for move in pkmn[:moves]
       @givepkmn.learn_move(move)
     end
     @givepkmn.ability_index = pkmn[:ability_index]
+    @givepkmn.poke_ball = pkmn[:poke_ball]
     @givepkmn.nature = pkmn[:nature]
     @givepkmn.item = pkmn[:item]
     teratype = []

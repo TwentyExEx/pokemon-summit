@@ -29,7 +29,9 @@ module SummitTeamBuilder
 #		:tera_type => :DRAGON,
 #		:moves => [:CUT,:FLASH,:SNORE,:PROTECT],
 #		:form => 0,
+#		:shiny => true,
 #		:ability_index => 0,
+#		:poke_ball => :MASTERBALL,
 #		:item => :LEFTOVERS,
 #		:nature => :TIMID,
 #		:evs => [4,0,0,252,0,252]
@@ -42,7 +44,9 @@ module SummitTeamBuilder
 		:tera_type => :DRAGON,
 		:moves => [:CUT,:FLASH,:SNORE,:PROTECT],
 		:form => 0,
+		:shiny => true,
 		:ability_index => 0,
+		:poke_ball => :MASTERBALL,
 		:item => :LEFTOVERS,
 		:nature => :TIMID,
 		:evs => [4,0,0,252,0,252]
