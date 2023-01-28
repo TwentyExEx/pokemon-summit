@@ -1,6 +1,6 @@
-def pbSummitTest
-  for species in SummitPokeTest.allspecies
-    pkmn = SummitPokeTest.const_get(species)
+def pbSummitTeamCollect
+  for species in SummitTeamBuilder.team
+    pkmn = SummitTeamBuilder.const_get(species)
     specformformatted = pkmn[:species].clone.to_s
     if pkmn[:form] != 0
       specformformatted << "_" << pkmn[:form].to_s

@@ -1,0 +1,50 @@
+module SummitTeamBuilder
+#===============================================================================
+#  DO NOT EDIT THIS SECTION
+#===============================================================================
+	@team = [:PKMN1,:PKMN2,:PKMN3,:PKMN4,:PKMN5,:PKMN6]
+	def self.team
+		return @team
+	end
+
+#===============================================================================
+# TEAM BUILDING STARTS BELOW
+#===============================================================================
+# Notes:
+# - Team must have 6 Pokémon.
+# - Double check the TOURNEY MOVESET sheet on the Summit EX Pokémon Changes
+# spreadsheet to make sure all moves are legal.
+# - All Pokémon can legally have Tera Blast, even if not listed in the spreadsheet.
+# - Please refrain from changing a Pokémon's species or moveset using the
+# in-game debug menu as this may make it invalid/illegal for online use.
+# - Ability index starts at 0. This means that, in order to use Ability 1,
+# you must set the ability_index to 0. To use Ability 2, set ability_index to 1.
+# To use Ability 3 (Hidden Ability), set ability_index to 2.
+# - Alolan and Galarian forms are allowed. We haven't tested Paldean forms, but
+# we have experienced validity issues with Hisuian forms.
+# - Make sure to maintain the proper formatting.
+# Sample:
+#	PKMN1 = {
+#		:species => :SUNFLORA,
+#		:tera_type => :DRAGON,
+#		:moves => [:CUT,:FLASH,:SNORE,:PROTECT],
+#		:form => 0,
+#		:ability_index => 0,
+#		:item => :LEFTOVERS,
+#		:nature => :TIMID,
+#		:evs => [4,0,0,252,0,252]
+#	}
+#===============================================================================
+# TEAM BUILDING STARTS BELOW
+#===============================================================================
+	PKMN1 = {
+		:species => :SUNFLORA,
+		:tera_type => :DRAGON,
+		:moves => [:CUT,:FLASH,:SNORE,:PROTECT],
+		:form => 0,
+		:ability_index => 0,
+		:item => :LEFTOVERS,
+		:nature => :TIMID,
+		:evs => [4,0,0,252,0,252]
+	}
+end
