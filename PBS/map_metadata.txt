@@ -28,3 +28,7 @@ SnapEdges = true
 [018]   # Verdanturf
 Name = Verdanturf
 SnapEdges = true
+#-------------------------------
+[024]   # Online Room
+Name = Online Room
+BattleBack = online
