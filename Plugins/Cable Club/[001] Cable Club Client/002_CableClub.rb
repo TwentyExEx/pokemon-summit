@@ -81,6 +81,10 @@ module CableClub
               partner_name = record.str
               partner_trainer_type = record.sym
               partner_party = parse_party(record)
+              # Sprite change
+              $game_map.events[1].direction = 4
+              $game_map.events[1].animation_id = 7
+              $game_map.events[1].character_name = partner_trainer_type.to_s
               pbMessageDisplay(msgwindow, _INTL("{1} {2} connected!",GameData::TrainerType.get(partner_trainer_type).name, partner_name))
               if client_id == 0
                 state = :choose_activity
@@ -400,6 +404,7 @@ module CableClub
   end
 
   def self.do_battle(connection, client_id, seed, battle_type, partner, partner_party)
+    # Battle start
     $player.heal_party # Avoids having to transmit damaged state.
     partner_party.each{|pkmn| pkmn.heal} # back to back battles desync without it.
     scene = BattleCreationHelperMethods.create_battle_scene
