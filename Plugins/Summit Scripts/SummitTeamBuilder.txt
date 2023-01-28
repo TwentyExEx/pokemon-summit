@@ -20,8 +20,7 @@ module SummitTeamBuilder
 # - Ability index starts at 0. This means that, in order to use Ability 1,
 # you must set the ability_index to 0. To use Ability 2, set ability_index to 1.
 # To use Ability 3 (Hidden Ability), set ability_index to 2.
-# - Alolan and Galarian forms are allowed. We haven't tested Paldean forms, but
-# we have experienced validity issues with Hisuian forms.
+# - Regional forms are allowed.
 # - Make sure to maintain the proper formatting.
 # Sample:
 #	PKMN1 = {
