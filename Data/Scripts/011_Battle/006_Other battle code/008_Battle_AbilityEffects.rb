@@ -2712,7 +2712,6 @@ Battle::AbilityEffects::OnSwitchIn.add(:CURIOUSMEDICINE,
           b.stages[s.id] = 0
         end
       end
-      end
       if Battle::Scene::USE_ABILITY_SPLASH
         battle.pbDisplay(_INTL("{1}'s stat drops were removed!", b.pbThis))
       else
