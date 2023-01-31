@@ -1963,7 +1963,7 @@ Battle::AbilityEffects::OnBeingHit.add(:MUMMY,
       user.ability = ability
       battle.pbReplaceAbilitySplash(user) if user.opposes?(target)
       if Battle::Scene::USE_ABILITY_SPLASH
-        battle.pbDisplay(_INTL("{1}'s Ability became {2}!", user.pbThis, user.abilityName))
+        battle.pbDisplay(_INTL("{1} can't use !", target.pbThis(true))
       else
         battle.pbDisplay(_INTL("{1}'s Ability became {2} because of {3}!",
            user.pbThis, user.abilityName, target.pbThis(true)))
@@ -2708,7 +2708,7 @@ Battle::AbilityEffects::OnSwitchIn.add(:CURIOUSMEDICINE,
     battler.allAllies.each do |b|
       next if !b.hasAlteredStatStages?
       GameData::Stat.each_battle do |s|
-        if stages[s.id] < 0
+        if b.stages[s.id] < 0
           b.stages[s.id] = 0
         end
       end
