@@ -2708,7 +2708,7 @@ Battle::AbilityEffects::OnSwitchIn.add(:CURIOUSMEDICINE,
     battler.allAllies.each do |b|
       next if !b.hasAlteredStatStages?
       GameData::Stat.each_battle do |s|
-        if stages[s.id] < 0
+        if b.stages[s.id] < 0
           b.stages[s.id] = 0
         end
       end
