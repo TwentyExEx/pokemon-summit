@@ -276,3 +276,70 @@ class Battle::Move::SuperEffectiveAgainstSteel < Battle::Move
     return super
   end
 end
+
+#===============================================================================
+# Increases the user's Special Attack and accuracy by 1 stage each. (Kinesis)
+#===============================================================================
+class Battle::Move::RaiseUserSpAtkAcc1 < Battle::Move::MultiStatUpMove
+  def initialize(battle, move)
+    super
+    @statUp = [:SPECIAL_ATTACK, 1, :ACCURACY, 1]
+  end
+end
+
+#===============================================================================
+# Two turn attack. Ups user's Defense, Special Defense and Attack by 1 stage first turn, attacks second turn.
+# (Skull Bash)
+#===============================================================================
+class Battle::Move::TwoTurnAttackChargeRaiseUserDefenseSpDefenseAttack1 < Battle::Move::TwoTurnMove
+  def pbChargingTurnMessage(user, targets)
+    @battle.pbDisplay(_INTL("{1} tucked in its head!", user.pbThis))
+  end
+
+  def pbChargingTurnEffect(user, target)
+    if user.pbCanRaiseStatStage?(:DEFENSE, user, self)
+      user.pbRaiseStatStage(:DEFENSE, 1, user)
+    end
+    if user.pbCanRaiseStatStage?(:SPECIAL_DEFENSE, user, self)
+      user.pbRaiseStatStage(:SPECIAL_DEFENSE, 1, user)
+    end
+    if user.pbCanRaiseStatStage?(:ATTACK, user, self)
+      user.pbRaiseStatStage(:ATTACK, 1, user)
+    end
+  end
+end
+
+#===============================================================================
+# Target can no longer switch out or flee, as long as the user remains active. Lowers Speed.
+# (Spider Web)
+#===============================================================================
+class Battle::Move::SpiderWebTrap < Battle::Move::TargetStatDownMove
+  def canMagicCoat?; return true; end
+  
+  def initialize(battle, move)
+    super
+    @statDown = [:SPEED, 1]
+  end
+
+  def pbFailsAgainstTarget?(user, target, show_message)
+    return false if damagingMove?
+    if target.effects[PBEffects::MeanLook] >= 0
+      @battle.pbDisplay(_INTL("But it failed!")) if show_message
+      return true
+    end
+    return false
+  end
+
+  def pbEffectAgainstTarget(user, target)
+    return if damagingMove?
+    target.effects[PBEffects::MeanLook] = user.index
+    @battle.pbDisplay(_INTL("{1} can no longer escape!", target.pbThis))
+  end
+
+  def pbAdditionalEffect(user, target)
+    return if target.fainted? || target.damageState.substitute
+    return if target.effects[PBEffects::MeanLook] >= 0
+    target.effects[PBEffects::MeanLook] = user.index
+    @battle.pbDisplay(_INTL("{1} can no longer escape!", target.pbThis))
+  end
+end

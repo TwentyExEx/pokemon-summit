@@ -498,6 +498,17 @@ class Battle::AI
         score += 20
       end
     #---------------------------------------------------------------------------
+    when "TwoTurnAttackChargeRaiseUserDefenseSpDefenseAttack1"
+      if move.statusMove?
+        if user.statStageAtMax?(:DEFENSE)
+          score -= 90
+        else
+          score -= user.stages[:DEFENSE] * 20
+        end
+      elsif user.stages[:DEFENSE] < 0
+        score += 20
+      end
+    #---------------------------------------------------------------------------
     when "TwoTurnAttackChargeRaiseUserSpAtk1"
       aspeed = pbRoughStat(user, :SPEED, skill)
       ospeed = pbRoughStat(target, :SPEED, skill)
@@ -1231,6 +1242,9 @@ class Battle::AI
       score += 40 if target.effects[PBEffects::Trapping] == 0
     #---------------------------------------------------------------------------
     when "TrapTargetInBattle"
+      score -= 90 if target.effects[PBEffects::MeanLook] >= 0
+    #---------------------------------------------------------------------------
+    when "SpiderWebTrap"
       score -= 90 if target.effects[PBEffects::MeanLook] >= 0
     #---------------------------------------------------------------------------
     when "TrapTargetInBattleLowerTargetDefSpDef1EachTurn"

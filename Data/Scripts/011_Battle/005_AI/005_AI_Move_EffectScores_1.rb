@@ -689,6 +689,28 @@ class Battle::AI
         end
       end
     #---------------------------------------------------------------------------
+    when "RaiseUserSpAtkAcc1"
+      if user.statStageAtMax?(:SPECIAL_ATTACK) &&
+         user.statStageAtMax?(:ACCURACY)
+        score -= 90
+      else
+        score -= user.stages[:SPECIAL_ATTACK] * 10
+        score -= user.stages[:ACCURACY] * 10
+        if skill >= PBTrainerAI.mediumSkill
+          hasSpecialAttack = false
+          user.eachMove do |m|
+            next if !m.specialMove?(m.type)
+            hasSpecialAttack = true
+            break
+          end
+          if hasSpecialAttack
+            score += 20
+          elsif skill >= PBTrainerAI.highSkill
+            score -= 90
+          end
+        end
+      end
+    #---------------------------------------------------------------------------
     when "RaiseUserDefSpDef1"
       if user.statStageAtMax?(:DEFENSE) &&
          user.statStageAtMax?(:SPECIAL_DEFENSE)
@@ -707,7 +729,7 @@ class Battle::AI
         score -= user.stages[:SPECIAL_ATTACK] * 10
         score -= user.stages[:SPECIAL_DEFENSE] * 10
         if skill >= PBTrainerAI.mediumSkill
-          hasSpecicalAttack = false
+          hasSpecialAttack = false
           user.eachMove do |m|
             next if !m.specialMove?(m.type)
             hasSpecicalAttack = true

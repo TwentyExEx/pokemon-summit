@@ -503,7 +503,7 @@ class Battle::AI
     #---------------------------------------------------------------------------
     when "HitTenTimesPopulationBomb"
     #---------------------------------------------------------------------------
-    when "IncreaseDamage50EachGotHit" # Rage Fist
+    when "IncreaseDamage30EachGotHit" # Rage Fist
       score += [@battle.getBattlerHit(user),10].min * 10
     #---------------------------------------------------------------------------
     when "TypeDependsOnUserForm"

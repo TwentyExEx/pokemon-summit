@@ -145,7 +145,7 @@ class Battle::Move::DamageTargetAlly < Battle::Move
       next if !b.near?(target.index)
       next if !b.takesIndirectDamage?
       hitAlly.push([b.index, b.hp])
-      b.pbReduceHP(b.totalhp / 16, false)
+      b.pbReduceHP(b.totalhp / 6, false)
     end
     if hitAlly.length == 2
       @battle.pbDisplay(_INTL("The bursting flame hit {1} and {2}!",

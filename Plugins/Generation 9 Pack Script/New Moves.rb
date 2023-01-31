@@ -317,7 +317,7 @@ end
 class Battle::Move::IncreaseDamage50EachGotHit < Battle::Move
   def pbBaseDamage(baseDmg, user, target)
     rage_hit = @battle.getBattlerHit(user)
-    dmg = [baseDmg + 50  * rage_hit,350].min
+    dmg = [baseDmg + 30  * rage_hit,350].min
     return dmg
   end
 end

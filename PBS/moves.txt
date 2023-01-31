@@ -96,7 +96,7 @@ Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = None
-Flags = Contact,CanProtect,CanMirrorMove,Slicing
+Flags = Contact,CanProtect,CanMirrorMove,Slicing,HighCriticalHitRate
 Description = The user slashes at the foe by crossing its scythes or claws as if they were a pair of scissors.
 #-------------------------------
 [SIGNALBEAM]
@@ -228,13 +228,13 @@ Description = Sharp spikes are shot at the target in rapid succession. They hit 
 Name = Twineedle
 Type = BUG
 Category = Physical
-Power = 25
+Power = 45
 Accuracy = 100
 TotalPP = 20
 Target = NearOther
 FunctionCode = HitTwoTimesPoisonTarget
 Flags = CanProtect,CanMirrorMove
-EffectChance = 20
+EffectChance = 10
 Description = The foe is stabbed twice by a pair of stingers. It may also poison the target.
 #-------------------------------
 [INFESTATION]
@@ -310,9 +310,9 @@ Category = Status
 Accuracy = 0
 TotalPP = 10
 Target = NearOther
-FunctionCode = TrapTargetInBattle
+FunctionCode = SpiderWebTrap
 Flags = CanMirrorMove
-Description = The user ensnares the target with thin, gooey silk so it can't flee from battle.
+Description = The user ensnares the target with thin, gooey silk so it can't flee from battle and lowers its Speed.
 #-------------------------------
 [STICKYWEB]
 Name = Sticky Web
@@ -1363,7 +1363,7 @@ Name = Thunder Fang
 Type = ELECTRIC
 Category = Physical
 Power = 65
-Accuracy = 95
+Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = ParalyzeFlinchTarget
@@ -1387,7 +1387,7 @@ Description = The user strikes the target with a quick jolt of electricity. This
 Name = Electroweb
 Type = ELECTRIC
 Category = Special
-Power = 55
+Power = 65
 Accuracy = 95
 TotalPP = 15
 Target = AllNearFoes
@@ -2734,7 +2734,7 @@ Name = Fire Fang
 Type = FIRE
 Category = Physical
 Power = 65
-Accuracy = 95
+Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = BurnFlinchTarget
@@ -4186,7 +4186,7 @@ Description = The user attacks by hurling a blob of mud at the target. It also r
 Name = Bonemerang
 Type = GROUND
 Category = Physical
-Power = 50
+Power = 60
 Accuracy = 90
 TotalPP = 10
 Target = NearOther
@@ -4452,7 +4452,7 @@ Name = Ice Fang
 Type = ICE
 Category = Physical
 Power = 65
-Accuracy = 95
+Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = FreezeFlinchTarget
@@ -4688,11 +4688,11 @@ Description = This move can be used only after the user has used all the other m
 Name = Skull Bash
 Type = NORMAL
 Category = Physical
-Power = 130
+Power = 100
 Accuracy = 100
 TotalPP = 10
 Target = NearOther
-FunctionCode = TwoTurnAttackChargeRaiseUserDefense1
+FunctionCode = TwoTurnAttackChargeRaiseUserDefenseSpDefenseAttack1
 Flags = Contact,CanProtect,CanMirrorMove
 Description = The user tucks in its head to raise its Defense in the first turn, then rams the foe on the next turn.
 #-------------------------------
@@ -5067,15 +5067,15 @@ Description = The target is attacked with a slash of claws or blades. Critical h
 #-------------------------------
 [SMELLINGSALTS]
 Name = Smelling Salts
-Type = NORMAL
+Type = FIGHTING
 Category = Physical
 Power = 70
 Accuracy = 100
 TotalPP = 10
 Target = NearOther
-FunctionCode = DoublePowerIfTargetParalyzedCureTarget
+FunctionCode = DoublePowerIfTargetStatusProblem
 Flags = Contact,CanProtect,CanMirrorMove
-Description = This attack inflicts double damage on a paralyzed foe. It also cures the target's paralysis, however.
+Description = This attack inflicts double damage to targets affected by status problems.
 #-------------------------------
 [HORNATTACK]
 Name = Horn Attack
@@ -5165,15 +5165,15 @@ Description = The target is gripped and squeezed from both sides to inflict dama
 #-------------------------------
 [CUT]
 Name = Cut
-Type = NORMAL
+Type = STEEL
 Category = Physical
-Power = 50
+Power = 70
 Accuracy = 95
 TotalPP = 30
 Target = NearOther
 FunctionCode = None
-Flags = Contact,CanProtect,CanMirrorMove, Slicing
-Description = The target is cut with a scythe or a claw. It can also be used to cut down thin trees.
+Flags = Contact,CanProtect,CanMirrorMove,Slicing,HighCriticalHitRate
+Description = The target is cut with a scythe or a claw. Critical hits land more easily.
 #-------------------------------
 [RAPIDSPIN]
 Name = Rapid Spin
@@ -5399,15 +5399,15 @@ Description = As long as this move is in use, the user's Attack rises each time 
 #-------------------------------
 [SPIKECANNON]
 Name = Spike Cannon
-Type = NORMAL
-Category = Physical
-Power = 20
-Accuracy = 100
+Type = GRASS
+Category = Special
+Power = 65
+Accuracy = 90
 TotalPP = 15
 Target = NearOther
-FunctionCode = HitTwoToFiveTimes
-Flags = CanProtect,CanMirrorMove
-Description = Sharp spikes are shot at the target in rapid succession. They hit two to five times in a row.
+FunctionCode = AddSpikesToFoeSide
+Flags = CanProtect,CanMirrorMove,Bomb
+Description = Sharp spikes are shot at the target in rapid succession. Spikes remain scattered under the target.
 #-------------------------------
 [COMETPUNCH]
 Name = Comet Punch
@@ -6800,13 +6800,13 @@ Description = The user attacks by throwing a clump of special mud. All status ch
 Name = Poison Fang
 Type = POISON
 Category = Physical
-Power = 50
+Power = 65
 Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = BadPoisonTarget
 Flags = Contact,CanProtect,CanMirrorMove,Biting
-EffectChance = 50
+EffectChance = 20
 Description = The user bites the target with toxic fangs. It may also leave the target badly poisoned.
 #-------------------------------
 [POISONTAIL]
@@ -7484,12 +7484,11 @@ Description = The user instructs the target to use the target's last move again.
 Name = Kinesis
 Type = PSYCHIC
 Category = Status
-Accuracy = 80
+Accuracy = 0
 TotalPP = 15
-Target = NearOther
-FunctionCode = LowerTargetAccuracy1
-Flags = CanProtect,CanMirrorMove
-Description = The user distracts the target by bending a spoon. It lowers the target's accuracy.
+Target = User
+FunctionCode = RaiseUserSpAtkAcc1
+Description = The user bends a spoon to boost its Special Attack stat and accuracy.
 #-------------------------------
 [LIGHTSCREEN]
 Name = Light Screen
@@ -9294,7 +9293,7 @@ Description = The user slashes at the target after kowtowing to make the target 
 Name = Last Respects
 Type = GHOST
 Category = Physical
-Power = 50
+Power = 40
 Accuracy = 100
 TotalPP = 10
 Target = NearOther
@@ -9407,11 +9406,11 @@ Description = The user attacks by pouncing on the target. This also lowers the t
 Name = Rage Fist
 Type = GHOST
 Category = Physical
-Power = 50
+Power = 30
 Accuracy = 100
 TotalPP = 10
 Target = NearOther
-FunctionCode = IncreaseDamage50EachGotHit
+FunctionCode = IncreaseDamage30EachGotHit
 Flags = Contact,CanProtect,CanMirrorMove,Punching
 Description = The user converts its rage into energy to attack. The more times the user has been hit by attacks, the greater the move's power.
 #-------------------------------

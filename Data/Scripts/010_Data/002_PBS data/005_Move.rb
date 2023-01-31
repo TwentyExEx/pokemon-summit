@@ -814,8 +814,11 @@ module GameData
 	    when "177" then new_code = "UseTargetSpDefInsteadOfTargetDef"
 	    when "178" then new_code = "PoisonParalyzeOrSleepAllFoes"
       when "179" then new_code = "SuperEffectiveAgainstDragonTypes"
-      when "180" then new_code = "RaiseUserStatOrDamageFoe"
-      when "181" then new_code = "SuperEffectiveAgainstSteel"
+      when "17A" then new_code = "RaiseUserStatOrDamageFoe"
+      when "17B" then new_code = "SuperEffectiveAgainstSteel"
+      when "17C" then new_code = "RaiseUserSpAtkAcc1"
+      when "17D" then new_code = "TwoTurnAttackChargeRaiseUserDefenseSpDefenseAttack1"
+      when "17E" then new_code = "SpiderWebTrap"
       end
       data[:function_code] = new_code
       return data

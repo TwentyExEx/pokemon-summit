@@ -1060,6 +1060,7 @@ class Battle::Move::UseRandomMoveFromUserParty < Battle::Move
         "TwoTurnAttackInvulnerableInSkyTargetCannotAct",   # Sky Drop
         "AllBattlersLoseHalfHPUserSkipsNextTurn",          # Shadow Half
         "TwoTurnAttackRaiseUserSpAtkSpDefSpd2",            # Geomancy                  # Not listed on Bulbapedia
+        "TwoTurnAttackChargeRaiseUserDefenseSpDefenseAttack1",            # Skull Bash                # Not listed on Bulbapedia
         # Target-switching moves
         "SwitchOutTargetStatusMove"                        # Roar, Whirlwind
       ]

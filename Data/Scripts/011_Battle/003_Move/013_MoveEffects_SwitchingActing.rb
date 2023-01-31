@@ -572,7 +572,8 @@ class Battle::Move::TargetUsesItsLastUsedMoveAgain < Battle::Move
       # Moves that start focussing at the start of the round
       "FailsIfUserDamagedThisTurn",   # Focus Punch
       "UsedAfterUserTakesPhysicalDamage",   # Shell Trap
-      "BurnAttackerBeforeUserActs"   # Beak Blast
+      "BurnAttackerBeforeUserActs" ,  # Beak Blast
+      "TwoTurnAttackChargeRaiseUserDefenseSpDefenseAttack1"   # Skull Bash
     ]
   end
 
