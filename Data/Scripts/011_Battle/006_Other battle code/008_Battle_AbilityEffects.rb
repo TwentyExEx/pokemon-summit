@@ -2707,7 +2707,12 @@ Battle::AbilityEffects::OnSwitchIn.add(:CURIOUSMEDICINE,
     battle.pbShowAbilitySplash(battler)
     battler.allAllies.each do |b|
       next if !b.hasAlteredStatStages?
-      b.pbResetStatStages
+      GameData::Stat.each_battle do |s|
+        if stages[s.id] < 0
+          b.stages[s.id] = 0
+        end
+      end
+      end
       if Battle::Scene::USE_ABILITY_SPLASH
         battle.pbDisplay(_INTL("{1}'s stat changes were removed!", b.pbThis))
       else
