@@ -2714,9 +2714,9 @@ Battle::AbilityEffects::OnSwitchIn.add(:CURIOUSMEDICINE,
       end
       end
       if Battle::Scene::USE_ABILITY_SPLASH
-        battle.pbDisplay(_INTL("{1}'s stat changes were removed!", b.pbThis))
+        battle.pbDisplay(_INTL("{1}'s stat drops were removed!", b.pbThis))
       else
-        battle.pbDisplay(_INTL("{1}'s stat changes were removed by {2}'s {3}!",
+        battle.pbDisplay(_INTL("{1}'s stat drops were removed by {2}'s {3}!",
            b.pbThis, battler.pbThis(true), battler.abilityName))
       end
     end
