@@ -671,23 +671,6 @@ Battle::AbilityEffects::StatusCure.copy(:WATERVEIL, :WATERBUBBLE)
 # StatLossImmunity handlers
 #===============================================================================
 
-Battle::AbilityEffects::StatLossImmunity.add(:BIGPECKS,
-  proc { |ability, battler, stat, battle, showMessages|
-    next false if stat != :DEFENSE
-    if showMessages
-      battle.pbShowAbilitySplash(battler)
-      if Battle::Scene::USE_ABILITY_SPLASH
-        battle.pbDisplay(_INTL("{1}'s {2} cannot be lowered!", battler.pbThis, GameData::Stat.get(stat).name))
-      else
-        battle.pbDisplay(_INTL("{1}'s {2} prevents {3} loss!", battler.pbThis,
-           battler.abilityName, GameData::Stat.get(stat).name))
-      end
-      battle.pbHideAbilitySplash(battler)
-    end
-    next true
-  }
-)
-
 Battle::AbilityEffects::StatLossImmunity.add(:CLEARBODY,
   proc { |ability, battler, stat, battle, showMessages|
     if showMessages
@@ -830,6 +813,13 @@ Battle::AbilityEffects::OnStatLoss.add(:DEFIANT,
   proc { |ability, battler, stat, user|
     next if user && !user.opposes?(battler)
     battler.pbRaiseStatStageByAbility(:ATTACK, 2, battler)
+  }
+)
+
+Battle::AbilityEffects::OnStatLoss.add(:BIGPECKS,
+  proc { |ability, battler, stat, user|
+    next if user && !user.opposes?(battler)
+    battler.pbRaiseStatStageByAbility(:DEFENSE, 2, battler)
   }
 )
 
@@ -1001,6 +991,23 @@ Battle::AbilityEffects::MoveImmunity.add(:SOUNDPROOF,
   }
 )
 
+Battle::AbilityEffects::MoveImmunity.add(:ILLUMINATE,
+  proc { |ability, user, target, move, type, battle, show_message|
+    next false if !move.lightMove?
+    next false if Settings::MECHANICS_GENERATION >= 8 && user.index == target.index
+    if show_message
+      battle.pbShowAbilitySplash(target)
+      if Battle::Scene::USE_ABILITY_SPLASH
+        battle.pbDisplay(_INTL("It doesn't affect {1}...", target.pbThis(true)))
+      else
+        battle.pbDisplay(_INTL("{1}'s {2} blocks {3}!", target.pbThis, target.abilityName, move.name))
+      end
+      battle.pbHideAbilitySplash(target)
+    end
+    next true
+  }
+)
+
 Battle::AbilityEffects::MoveImmunity.add(:STORMDRAIN,
   proc { |ability, user, target, move, type, battle, show_message|
     next target.pbMoveImmunityStatRaisingAbility(user, move, type,
@@ -1116,6 +1123,8 @@ Battle::AbilityEffects::AccuracyCalcFromUser.add(:COMPOUNDEYES,
     mods[:accuracy_multiplier] *= 1.3
   }
 )
+
+Battle::AbilityEffects::AccuracyCalcFromUser.copy(:COMPOUNDEYES, :KEENEYE)
 
 Battle::AbilityEffects::AccuracyCalcFromUser.add(:HUSTLE,
   proc { |ability, mods, user, target, move, type|
@@ -1242,6 +1251,14 @@ Battle::AbilityEffects::DamageCalcFromUser.add(:ANALYTIC,
 Battle::AbilityEffects::DamageCalcFromUser.add(:BLAZE,
   proc { |ability, user, target, move, mults, baseDmg, type|
     if user.hp <= user.totalhp / 3 && type == :FIRE
+      mults[:attack_multiplier] *= 1.5
+    end
+  }
+)
+
+Battle::AbilityEffects::DamageCalcFromUser.add(:BATTERY,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    if user.hp <= user.totalhp / 3 && type == :ELECTRIC
       mults[:attack_multiplier] *= 1.5
     end
   }
@@ -1635,6 +1652,8 @@ Battle::AbilityEffects::DamageCalcFromTarget.add(:WATERBUBBLE,
     mults[:final_damage_multiplier] /= 2 if type == :FIRE
   }
 )
+
+Battle::AbilityEffects::DamageCalcFromTarget.copy(:WATERBUBBLE, :FLOWERGIFT)
 
 Battle::AbilityEffects::DamageCalcFromTarget.add(:MAGMAARMOR,
   proc { |ability, user, target, move, mults, baseDmg, type|
@@ -2232,6 +2251,26 @@ Battle::AbilityEffects::OnEndOfUsingMove.add(:MOXIE,
     targets.each { |b| numFainted += 1 if b.damageState.fainted }
     next if numFainted == 0 || !user.pbCanRaiseStatStage?(:ATTACK, user)
     user.pbRaiseStatStageByAbility(:ATTACK, numFainted, user)
+  }
+)
+
+Battle::AbilityEffects::OnEndOfUsingMove.add(:ILLUMINATE,
+  proc { |ability, user, targets, move, battle|
+    next if battle.pbAllFainted?(user.idxOwnSide) ||
+            battle.pbAllFainted?(user.idxOpposingSide)
+    next if !move.lightMove?
+    next if !user.pbCanRaiseStatStage?(:ACCURACY, user)
+    user.pbRaiseStatStageByAbility(:ACCURACY, 1, user)
+  }
+)
+
+Battle::AbilityEffects::OnEndOfUsingMove.add(:MYCELIUMMIGHT,
+  proc { |ability, user, targets, move, battle|
+    next if battle.pbAllFainted?(user.idxOwnSide) ||
+            battle.pbAllFainted?(user.idxOpposingSide)
+    next if !move.statusMove?
+    next if !user.pbCanRaiseStatStage?(:SPEED, user)
+    user.pbRaiseStatStageByAbility(:SPEED, 1, user)
   }
 )
 

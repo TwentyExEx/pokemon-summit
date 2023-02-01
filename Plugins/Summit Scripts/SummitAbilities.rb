@@ -597,3 +597,15 @@ Battle::AbilityEffects::OnEndOfUsingMove.add(:SOULSNATCHER,
     battle.pbHideAbilitySplash(user)
   }
 )
+
+#===============================================================================
+# Head First
+#===============================================================================
+
+Battle::AbilityEffects::DamageCalcFromUser.add(:HEADFIRST,
+  proc { |ability, user, target, move, mults, baseDmg, type, battle|
+    if user.turnCount <= 1
+      mults[:base_damage_multiplier] *= 1.5
+    end
+  }
+)

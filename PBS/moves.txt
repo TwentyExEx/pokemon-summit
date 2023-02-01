@@ -108,7 +108,7 @@ Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = ConfuseTarget
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,Light
 EffectChance = 10
 Description = The user attacks with a sinister beam of light. It may also confuse the target.
 #-------------------------------
@@ -343,6 +343,7 @@ Accuracy = 0
 TotalPP = 20
 Target = User
 FunctionCode = RaiseUserSpAtk3
+Flags = Light
 Description = The user stares at flashing lights to focus its mind, drastically raising its Sp. Atk stat.
 #-------------------------------
 [HYPERSPACEFURY]
@@ -1142,7 +1143,7 @@ Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = RecoilThirdOfDamageDealtParalyzeTarget
-Flags = Contact,CanProtect,CanMirrorMove
+Flags = Contact,CanProtect,CanMirrorMove,Light
 EffectChance = 10
 Description = The user electrifies itself, then charges at the foe. It causes considerable damage to the user as well.
 #-------------------------------
@@ -1255,7 +1256,7 @@ Accuracy = 100
 TotalPP = 15
 Target = AllNearOthers
 FunctionCode = ParalyzeTarget
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,Light
 EffectChance = 30
 Description = A flare of electricity is loosed to strike the area around the user. It may also cause paralysis.
 #-------------------------------
@@ -1342,7 +1343,7 @@ Accuracy = 100
 TotalPP = 20
 Target = AllNearOthers
 FunctionCode = HealUserByHalfOfDamageDone
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,Light
 Description = The user attacks everything around it. The user's HP is restored by half the damage dealt.
 #-------------------------------
 [SPARK]
@@ -1354,7 +1355,7 @@ Accuracy = 100
 TotalPP = 20
 Target = NearOther
 FunctionCode = ParalyzeTarget
-Flags = Contact,CanProtect,CanMirrorMove
+Flags = Contact,CanProtect,CanMirrorMove,Light
 EffectChance = 30
 Description = The user throws an electrically charged tackle at the target. It may also leave the target with paralysis.
 #-------------------------------
@@ -1380,7 +1381,7 @@ Accuracy = 0
 TotalPP = 20
 Target = NearOther
 FunctionCode = None
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,Light
 Description = The user strikes the target with a quick jolt of electricity. This attack cannot be evaded.
 #-------------------------------
 [ELECTROWEB]
@@ -1405,7 +1406,7 @@ Accuracy = 90
 TotalPP = 10
 Target = NearOther
 FunctionCode = RaiseUserSpAtk1
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,Light
 EffectChance = 70
 Description = The user fires a concentrated bundle of electricity. It may also raise the user's Sp. Atk stat.
 #-------------------------------
@@ -1615,7 +1616,7 @@ Accuracy = 100
 TotalPP = 10
 Target = AllNearFoes
 FunctionCode = None
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,Light
 Description = The user damages opposing Pokémon by emitting a powerful flash.
 #-------------------------------
 [SPIRITBREAK]
@@ -1794,6 +1795,7 @@ Accuracy = 0
 TotalPP = 5
 Target = User
 FunctionCode = HealUserDependingOnWeather
+Flags = Light
 Description = The user restores its own HP. The amount of HP regained varies with the weather.
 #-------------------------------
 [SWEETKISS]
@@ -2571,7 +2573,7 @@ Accuracy = 95
 TotalPP = 5
 Target = NearOther
 FunctionCode = BurnTarget
-Flags = CanProtect,CanMirrorMove,ThawsUser
+Flags = CanProtect,CanMirrorMove,ThawsUser,Light
 EffectChance = 50
 Description = The target is razed with a mystical fire of great intensity. It may also leave the target with a burn.
 #-------------------------------
@@ -2726,7 +2728,7 @@ Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = DamageTargetAlly
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,Light
 Description = The user attacks the foe with a bursting flame. It also damages Pokémon next to the target.
 #-------------------------------
 [FIREFANG]
@@ -2824,6 +2826,7 @@ Accuracy = 0
 TotalPP = 5
 Target = BothSides
 FunctionCode = StartSunWeather
+Flags = Light
 Description = The user intensifies the sun for five turns, powering up Fire-type moves.
 #-------------------------------
 [WILLOWISP]
@@ -3367,7 +3370,7 @@ Accuracy = 100
 TotalPP = 10
 Target = NearOther
 FunctionCode = ConfuseTarget
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,Light
 Description = The target is exposed to a sinister ray that triggers confusion.
 #-------------------------------
 [CURSE]
@@ -3515,7 +3518,7 @@ Accuracy = 100
 TotalPP = 10
 Target = NearOther
 FunctionCode = TwoTurnAttackOneTurnInSun
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,Light
 Description = A two-turn attack. The user gathers light, then blasts a bundled beam on the second turn.
 #-------------------------------
 [WOODHAMMER]
@@ -3708,7 +3711,7 @@ Description = The user scatters curious leaves that chase the target. This attac
 Name = Needle Arm
 Type = GRASS
 Category = Physical
-Power = 60
+Power = 80
 Accuracy = 100
 TotalPP = 15
 Target = NearOther
@@ -5925,7 +5928,7 @@ Accuracy = 100
 TotalPP = 20
 Target = NearOther
 FunctionCode = LowerTargetAccuracy1
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,Light
 Description = The user flashes a light that cuts the target's accuracy. It can also be used to illuminate caves.
 #-------------------------------
 [FOCUSENERGY]
@@ -6190,6 +6193,7 @@ Accuracy = 0
 TotalPP = 5
 Target = User
 FunctionCode = HealUserDependingOnWeather
+Flags = Light
 Description = The user restores its own HP. The amount of HP regained varies with the weather.
 #-------------------------------
 [NATUREPOWER]
@@ -7207,7 +7211,7 @@ Accuracy = 100
 TotalPP = 5
 Target = NearOther
 FunctionCode = LowerTargetSpDef1
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,Light
 EffectChance = 50
 Description = The user lets loose a damaging burst of light. It may also reduce the target's Sp. Def stat.
 #-------------------------------
@@ -7498,6 +7502,7 @@ Accuracy = 0
 TotalPP = 30
 Target = UserSide
 FunctionCode = StartWeakenSpecialDamageAgainstUserSide
+Flags = Light
 Description = A wondrous wall of light is put up to suppress damage from special attacks for five turns.
 #-------------------------------
 [LUNARDANCE]
@@ -7626,6 +7631,7 @@ Accuracy = 0
 TotalPP = 20
 Target = UserSide
 FunctionCode = StartWeakenPhysicalDamageAgainstUserSide
+Flags = Light
 Description = A wondrous wall of light is put up to suppress damage from physical attacks for five turns.
 #-------------------------------
 [REST]
@@ -8786,7 +8792,7 @@ Accuracy = 100
 TotalPP = 5
 Target = NearOther
 FunctionCode = RecoilHalfOfDamageDealt
-Flags = CanProtect,CanMirrorMove 
+Flags = CanProtect,CanMirrorMove,Light
 Description = The user launches its amassed chlorophyll to inflict damage on the target. This also damages the user.
 #-------------------------------
 [MOUNTAINGALE]
@@ -8890,7 +8896,7 @@ TotalPP = 10
 Target = AllNearFoes
 FunctionCode = ParalyzeTarget
 EffectChance = 20
-Flags = CanProtect,CanMirrorMove 
+Flags = CanProtect,CanMirrorMove,Light
 Description = The user summons a thunderous tempest and savagely attacks with lightning and wind. This may also leave opposing Pokémon with paralysis.
 #-------------------------------
 [SANDSEARSTORM]
@@ -9609,7 +9615,7 @@ Accuracy = 80
 TotalPP = 5
 Target = NearOther
 FunctionCode = StartElectricTerrain
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,Light
 EffectChance = 100
 Description = This move sets up Electric Terrain when landing.
 #-------------------------------
