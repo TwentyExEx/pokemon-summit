@@ -1401,13 +1401,13 @@ Description = The user captures and attacks foes by using an electric net, which
 Name = Charge Beam
 Type = ELECTRIC
 Category = Special
-Power = 50
+Power = 40
 Accuracy = 90
 TotalPP = 10
 Target = NearOther
 FunctionCode = RaiseUserSpAtk1
 Flags = CanProtect,CanMirrorMove,Light
-EffectChance = 70
+EffectChance = 100
 Description = The user fires a concentrated bundle of electricity. It may also raise the user's Sp. Atk stat.
 #-------------------------------
 [THUNDERSHOCK]
@@ -7193,7 +7193,7 @@ Description = The user materializes an odd psychic wave to attack the target. Th
 Name = Zen Headbutt
 Type = PSYCHIC
 Category = Physical
-Power = 80
+Power = 90
 Accuracy = 90
 TotalPP = 15
 Target = NearOther
@@ -7256,8 +7256,8 @@ Description = The target is attacked with a peculiar ray. It may also cause conf
 [HEARTSTAMP]
 Name = Heart Stamp
 Type = PSYCHIC
-Category = Physical
-Power = 60
+Category = Special
+Power = 80
 Accuracy = 100
 TotalPP = 25
 Target = NearOther
