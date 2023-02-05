@@ -21,7 +21,7 @@ class Sprite
       if pokemon.dynamax?
         self.applyDynamax(pokemon)
       elsif pokemon.tera?
-        self.applyTera
+        self.applyTera(pokemon.tera_type)
       end
     end
   end
@@ -31,7 +31,7 @@ class Sprite
     if @pokemon&.dynamax?
       self.applyDynamaxIcon
     elsif @pokemon&.tera?
-      self.applyTeraIcon
+      self.applyTeraIcon(pokemon.tera_type)
     end
   end
   

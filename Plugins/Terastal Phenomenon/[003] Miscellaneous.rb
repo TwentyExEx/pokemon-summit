@@ -66,10 +66,47 @@ end
 # Sprite data for Terastal sprite patterns.
 #-------------------------------------------------------------------------------
 class Sprite
-  def applyTera
+  def applyTera(tera_type=nil)
     self.unDynamax
     return if !Settings::SHOW_TERA_OVERLAY
-    self.pattern = Bitmap.new("Graphics/Plugins/Terastal Phenomenon/tera_pattern")
+	  case tera_type
+	  when :NORMAL
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalnormal")
+      when :FIRE
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalfire")
+      when :WATER
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalwater")
+      when :GRASS
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalgrass")
+      when :ELECTRIC
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalelectric")
+      when :ICE
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalice")
+      when :FIGHTING
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalfighting")
+      when :POISON
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalpoison")
+      when :GROUND
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalground")
+      when :FLYING
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalflying")
+      when :PSYCHIC
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalpsychic")
+      when :BUG
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalbug")
+      when :ROCK
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalrock")
+      when :GHOST
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalghost")
+      when :DRAGON
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystaldragon")
+      when :DARK
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystaldark")
+      when :STEEL
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalsteel")
+      when :FAIRY
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalfairy")
+    end
     self.pattern_opacity = 150
     rand1 = rand(5) - 2
     rand2 = rand(5) - 2
@@ -81,10 +118,47 @@ class Sprite
     self.pattern = nil
   end
   
-  def applyTeraIcon
+  def applyTeraIcon(tera_type=nil)
     self.unDynamax
     if Settings::SHOW_TERA_OVERLAY && self.pokemon&.tera?
-      self.pattern = Bitmap.new("Graphics/Plugins/Terastal Phenomenon/tera_pattern")
+	  case tera_type
+	  when :NORMAL
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalnormal")
+      when :FIRE
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalfire")
+      when :WATER
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalwater")
+      when :GRASS
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalgrass")
+      when :ELECTRIC
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalelectric")
+      when :ICE
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalice")
+      when :FIGHTING
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalfighting")
+      when :POISON
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalpoison")
+      when :GROUND
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalground")
+      when :FLYING
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalflying")
+      when :PSYCHIC
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalpsychic")
+      when :BUG
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalbug")
+      when :ROCK
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalrock")
+      when :GHOST
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalghost")
+      when :DRAGON
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystaldragon")
+      when :DARK
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystaldark")
+      when :STEEL
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalsteel")
+      when :FAIRY
+	  self.pattern= Bitmap.new("Graphics/Pictures/Tera Crystal/teraCrystalfairy")
+    end
       self.pattern_opacity = 150
       rand1 = rand(5) - 2
       rand2 = rand(5) - 2
