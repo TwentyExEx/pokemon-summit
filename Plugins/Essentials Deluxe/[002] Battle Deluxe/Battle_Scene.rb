@@ -7,26 +7,27 @@
 # Animation used to toggle visibility of data boxes.
 #-------------------------------------------------------------------------------
 class Battle::Scene::Animation::ToggleDataBoxes < Battle::Scene::Animation
-  def initialize(sprites, viewport, battlers)
+  def initialize(sprites, viewport, battlers, toggle)
     @battlers = battlers
+    @toggle = toggle
     super(sprites, viewport)
   end
 
   def createProcesses
     delay = 0
     @battlers.each do |b|
-	  next if b.fainted?
+      next if !b || b.fainted? && !@sprites["pokemon_#{b.index}"].visible
       if @sprites["dataBox_#{b.index}"]
-        toggle = !@sprites["dataBox_#{b.index}"].visible
         box = addSprite(@sprites["dataBox_#{b.index}"])
-        case toggle
+        case @toggle
+        when false
+          box.moveOpacity(delay, 3, 0)
+          box.setVisible(delay + 3, false)
         when true
           box.setOpacity(delay, 0)
           box.moveOpacity(delay, 3, 255)
-        when false
-          box.moveOpacity(delay, 3, 0)
+          box.setVisible(delay + 3, true)
         end
-        box.setVisible(delay + 3, toggle)
       end
     end
   end
@@ -43,7 +44,7 @@ class Battle::Scene::Animation::ToggleBlackBars < Battle::Scene::Animation
   end
 
   def createProcesses
-    delay = 10
+    delay = 5
     topBar = addSprite(@sprites["topBar"], PictureOrigin::TOP_LEFT)
     topBar.setZ(0, 200)
     bottomBar = addSprite(@sprites["bottomBar"], PictureOrigin::BOTTOM_RIGHT)
@@ -55,11 +56,11 @@ class Battle::Scene::Animation::ToggleBlackBars < Battle::Scene::Animation
       bottomBar.setOpacity(0, 255)
       topBar.setXY(0, Graphics.width, 0)
       bottomBar.setXY(0, 0, Graphics.height)
-      topBar.moveXY(delay, 10, (Graphics.width-toMoveTop), 0)
-      bottomBar.moveXY(delay, 10, toMoveBottom, Graphics.height)
+      topBar.moveXY(delay, 5, (Graphics.width-toMoveTop), 0)
+      bottomBar.moveXY(delay, 5, toMoveBottom, Graphics.height)
     else
-      topBar.moveOpacity(delay, 8, 0)
-      bottomBar.moveOpacity(delay, 8, 0)
+      topBar.moveOpacity(delay, 4, 0)
+      bottomBar.moveOpacity(delay, 4, 0)
       topBar.setXY(delay + 5, Graphics.width, 0)
       bottomBar.setXY(delay + 5, 0, Graphics.height)
     end
@@ -99,8 +100,8 @@ class Battle::Scene
     end
   end
   
-  def pbToggleDataboxes
-    dataBoxAnim = Animation::ToggleDataBoxes.new(@sprites, @viewport, @battle.battlers)
+  def pbToggleDataboxes(toggle = false)
+    dataBoxAnim = Animation::ToggleDataBoxes.new(@sprites, @viewport, @battle.battlers, toggle)
     loop do
       dataBoxAnim.update
       pbUpdate
@@ -110,8 +111,8 @@ class Battle::Scene
   end
   
   def pbToggleBlackBars(toggle = false)
-    pbAddSprite("topBar", Graphics.width, 0, "Graphics/Plugins/Essentials Deluxe/blackbar_top", @viewport) if !@sprites["topBar"]
-    pbAddSprite("bottomBar", 0, Graphics.height, "Graphics/Plugins/Essentials Deluxe/blackbar_bottom", @viewport) if !@sprites["bottomBar"]
+    pbAddSprite("topBar", Graphics.width, 0, "Graphics/Plugins/Essentials Deluxe/Animations/blackbar_top", @viewport) if !@sprites["topBar"]
+    pbAddSprite("bottomBar", 0, Graphics.height, "Graphics/Plugins/Essentials Deluxe/Animations/blackbar_bottom", @viewport) if !@sprites["bottomBar"]
     blackBarAnim = Animation::ToggleBlackBars.new(@sprites, @viewport, toggle)
     loop do
       blackBarAnim.update

@@ -393,6 +393,9 @@ class PokemonStorageScene
       if PluginManager.installed?("ZUD Mechanics")
         pbDisplayGmaxFactor(pokemon, plugin_overlay, 8, 52)
       end
+      if PluginManager.installed?("Terastal Phenomenon") && Settings::STORAGE_TERA_TYPES
+        pbDisplayTeraType(pokemon, plugin_overlay, 8, 164)
+      end
       if PluginManager.installed?("Pokémon Birthsigns")
         pbDisplayToken(pokemon, plugin_overlay, 149, 167, true)
       end
@@ -400,8 +403,8 @@ class PokemonStorageScene
         pbDisplayShinyLeaf(pokemon, plugin_overlay, 158, 50)      if Settings::STORAGE_SHINY_LEAF
         pbDisplayIVRatings(pokemon, plugin_overlay, 8, 198, true) if Settings::STORAGE_IV_RATINGS
       end
-      typebitmap = AnimatedBitmap.new(_INTL("Graphics/Pictures/types"))
-      pokemon.types.each_with_index do |type, i|
+        typebitmap = AnimatedBitmap.new(_INTL("Graphics/Pictures/types"))
+        pokemon.types.each_with_index do |type, i|
         type_number = GameData::Type.get(type).icon_position
         type_rect = Rect.new(0, type_number * 28, 64, 28)
         type_x = (pokemon.types.length == 1) ? 52 : 18 + (70 * i)
@@ -412,21 +415,6 @@ class PokemonStorageScene
     end
     pbDrawTextPositions(overlay, textstrings)
     @sprites["pokemon"].setPokemonBitmap(pokemon)
-  end
-end
-
-
-#-------------------------------------------------------------------------------
-# Checks if a common animation exists.
-#-------------------------------------------------------------------------------
-class Battle::Scene
-  def pbCommonAnimationExists?(animName)
-    animations = pbLoadBattleAnimations
-    animations.each do |a|
-      next if !a || a.name != "Common:" + animName
-      return true
-    end
-    return false
   end
 end
 
@@ -570,3 +558,52 @@ MultipleForms.register(:CALYREX, {
     end
   }
 })
+
+
+#===============================================================================
+# Transform
+#===============================================================================
+# Edited for compatibility with battle effects that alter battler sprites.
+#-------------------------------------------------------------------------------
+class Battle::Move::TransformUserIntoTarget < Battle::Move
+  alias dx_pbFailsAgainstTarget? pbFailsAgainstTarget?
+  def pbFailsAgainstTarget?(user, target, show_message)
+    if user.dynamax? && !target.dynamax_able?
+      @battle.pbDisplay(_INTL("But it failed!"))
+      return true
+    end
+    return dx_pbFailsAgainstTarget?(user, target, show_message)
+  end
+  
+  def pbShowAnimation(id, user, targets, hitNum = 0, showAnimation = true)
+    super
+	user.effects[PBEffects::TransformPokemon] = targets[0].pokemon
+    @battle.scene.pbChangePokemon(user, targets[0].pokemon)
+  end
+end
+
+
+#===============================================================================
+# Imposter
+#===============================================================================
+# Edited for compatibility with battle effects that alter battler sprites.
+#-------------------------------------------------------------------------------
+Battle::AbilityEffects::OnSwitchIn.add(:IMPOSTER,
+  proc { |ability, battler, battle, switch_in|
+    next if !switch_in || battler.effects[PBEffects::Transform]
+    choice = battler.pbDirectOpposing
+    next if choice.fainted?
+    next if battler.dynamax? && !choice.dynamax_able?
+    next if choice.effects[PBEffects::Transform] ||
+            choice.effects[PBEffects::Illusion] ||
+            choice.effects[PBEffects::Substitute] > 0 ||
+            choice.effects[PBEffects::SkyDrop] >= 0 ||
+            choice.semiInvulnerable?
+    battle.pbShowAbilitySplash(battler, true)
+    battle.pbHideAbilitySplash(battler)
+	battler.effects[PBEffects::TransformPokemon] = choice.pokemon
+    battle.pbAnimation(:TRANSFORM, battler, choice)
+    battle.scene.pbChangePokemon(battler, choice.pokemon)
+    battler.pbTransform(choice)
+  }
+)

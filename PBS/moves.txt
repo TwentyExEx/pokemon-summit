@@ -3106,7 +3106,7 @@ Accuracy = 0
 TotalPP = 15
 Target = NearOther
 FunctionCode = LowerTargetEvasion1RemoveSideEffects
-Flags = CanProtect,CanMirrorMove, Wind
+Flags = CanProtect,CanMirrorMove,Wind
 Description = A strong wind blows away the foe's obstacles such as Light Screen. It also lowers their evasion.
 #-------------------------------
 [FEATHERDANCE]
@@ -8730,8 +8730,6 @@ Target = User
 FunctionCode = RaiseUserDefense1
 Description = The user withdraws its body into its hard shell, raising its Defense stat.
 #-------------------------------
-# Updated PLA Moves
-#-------------------------------
 [DIRECLAW]
 Name = Dire Claw
 Type = POISON
@@ -8741,8 +8739,8 @@ Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = PoisonParalyzeOrSleepTarget
+Flags = Contact,CanProtect
 EffectChance = 50
-Flags = Contact,CanProtect 
 Description = The user lashes out at the target with ruinous claws, aiming to land a critical hit. This may also leave the target poisoned, paralyzed, or asleep.
 #-------------------------------
 [SPRINGTIDESTORM]
@@ -8754,8 +8752,8 @@ Accuracy = 80
 TotalPP = 5
 Target = AllNearFoes
 FunctionCode = LowerTargetAttack1
-EffectChance = 30
 Flags = CanProtect
+EffectChance = 30
 Description = The user attacks by wrapping opposing Pokémon in fierce winds brimming with love and hate. This may also lower their Attack stats.
 #-------------------------------
 [RAGINGFURY]
@@ -8767,7 +8765,7 @@ Accuracy = 100
 TotalPP = 10
 Target = RandomNearFoe
 FunctionCode = MultiTurnAttackConfuseUserAtEnd
-Flags = Contact,CanProtect 
+Flags = Contact,CanProtect
 Description = The user rampages around spewing flames for two to three turns. The user then becomes confused.
 #-------------------------------
 [WAVECRASH]
@@ -8779,8 +8777,8 @@ Accuracy = 100
 TotalPP = 10
 Target = NearOther
 FunctionCode = RecoilAndRaiseUserSpeed
+Flags = Contact,CanProtect
 EffectChance = 100
-Flags = Contact,CanProtect 
 Description = The user shrouds itself in water and slams into the target with its whole body to inflict damage. This also damages the user and raises the user’s action speed.
 #-------------------------------
 [CHLOROBLAST]
@@ -8804,8 +8802,8 @@ Accuracy = 95
 TotalPP = 10
 Target = NearOther
 FunctionCode = FlinchTarget
+Flags = CanProtect,CanMirrorMove
 EffectChance = 30
-Flags = CanProtect,CanMirrorMove 
 Description = The user hurls giant chunks of ice at the target to inflict damage. This may also make the target flinch.
 #-------------------------------
 [HEADLONGRUSH]
@@ -8817,8 +8815,8 @@ Accuracy = 100
 TotalPP = 5
 Target = NearOther
 FunctionCode = LowerUserDefSpDef1
-EffectChance = 100
 Flags = Contact,CanProtect,Punching
+EffectChance = 100
 Description = The user smashes into the target in a full-body tackle. This also lowers the user’s Defense and Sp. Def stats.
 #-------------------------------
 [BARBBARRAGE]
@@ -8830,8 +8828,8 @@ Accuracy = 100
 TotalPP = 10
 Target = NearOther
 FunctionCode = DoublePowerIfTargetPoisonedPoisonTarget
+Flags = CanProtect,CanMirrorMove
 EffectChance = 50
-Flags = CanProtect,CanMirrorMove 
 Description = The user launches countless toxic barbs to inflict damage. This may also poison the target. This move’s power is doubled if the target is already poisoned.
 #-------------------------------
 [ESPERWING]
@@ -8843,8 +8841,8 @@ Accuracy = 100
 TotalPP = 10
 Target = NearOther
 FunctionCode = RaiseUserSpeed1
+Flags = Contact,CanProtect
 EffectChance = 100
-Flags = Contact,CanProtect 
 Description = The user slashes the target with aura-enriched wings. This also boosts the user's Speed stat. This move has a heightened chance of landing a critical hit.
 #-------------------------------
 [BITTERMALICE]
@@ -8856,8 +8854,8 @@ Accuracy = 100
 TotalPP = 10
 Target = NearOther
 FunctionCode = LowerTargetAttack1
+Flags = CanProtect,CanMirrorMove
 EffectChance = 30
-Flags = CanProtect,CanMirrorMove 
 Description = The user attacks the target with spine-chilling resentment. This also lowers the target’s Attack stat.
 #-------------------------------
 [TRIPLEARROWS]
@@ -8869,8 +8867,8 @@ Accuracy = 100
 TotalPP = 10
 Target = NearOther
 FunctionCode = LowerDefenseTarget1Flinch
+Flags = Contact,CanProtect,HighCriticalHitRate
 EffectChance = 50
-Flags = Contact,CanProtect ,HighCriticalHitRate 
 Description = The user kicks, then fires three arrows. This move has a heightened chance of landing a critical hit and may also lower the target’s Defense stat or make it flinch.
 #-------------------------------
 [BLEAKWINDSTORM]
@@ -8882,9 +8880,9 @@ Accuracy = 80
 TotalPP = 10
 Target = AllNearFoes
 FunctionCode = LowerTargetSpeed1
+Flags = CanProtect,CanMirrorMove
 EffectChance = 30
-Flags = CanProtect,CanMirrorMove 
-Description =  The user attacks with savagely cold winds that cause both body and spirit to tremble. This may also lower the Speed stats of opposing Pokémon.
+Description = The user attacks with savagely cold winds that cause both body and spirit to tremble. This may also lower the Speed stats of opposing Pokémon.
 #-------------------------------
 [WILDBOLTSTORM]
 Name = Wildbolt Storm
@@ -8895,8 +8893,8 @@ Accuracy = 80
 TotalPP = 10
 Target = AllNearFoes
 FunctionCode = ParalyzeTarget
-EffectChance = 20
 Flags = CanProtect,CanMirrorMove,Light
+EffectChance = 20
 Description = The user summons a thunderous tempest and savagely attacks with lightning and wind. This may also leave opposing Pokémon with paralysis.
 #-------------------------------
 [SANDSEARSTORM]
@@ -8908,8 +8906,8 @@ Accuracy = 80
 TotalPP = 10
 Target = AllNearFoes
 FunctionCode = BurnTarget
+Flags = CanProtect,CanMirrorMove
 EffectChance = 20
-Flags = CanProtect,CanMirrorMove 
 Description = The user attacks by wrapping opposing Pokémon in fierce winds and searingly hot sand. This may also leave them with a burn.
 #-------------------------------
 [LUNARBLESSING]
@@ -8918,7 +8916,7 @@ Type = PSYCHIC
 Category = Status
 Accuracy = 0
 TotalPP = 10
-Target = UserAndAllies 
+Target = UserAndAllies
 FunctionCode = HealAndCureStatusUser
 Description = The user receives a blessing from the crescent moon, restoring HP and curing status conditions for itself and its ally Pokémon currently in the battle.
 #-------------------------------
@@ -8931,8 +8929,8 @@ Accuracy = 100
 TotalPP = 10
 Target = NearOther
 FunctionCode = RaiseUserDefense1
+Flags = Contact,CanProtect
 EffectChance = 100
-Flags = Contact,CanProtect 
 Description = Cloaking itself in psychic energy, the user slams into the target. This also boosts the user’s Defense stat.
 #-------------------------------
 [POWERSHIFT]
@@ -8977,8 +8975,8 @@ Accuracy = 0
 TotalPP = 5
 Target = User
 FunctionCode = RaiseUserAtkDefSpd1
-EffectChance = 100
 Flags = Dance
+EffectChance = 100
 Description = The user performs an intense dance to usher in victory, boosting its Attack, Defense, and Speed stats.
 #-------------------------------
 [SHELTER]
@@ -9001,8 +8999,8 @@ Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = DoublePowerIfTargetStatusProblemBurnTarget
+Flags = CanProtect,CanMirrorMove
 EffectChance = 30
-Flags = CanProtect,CanMirrorMove 
 Description = The user attacks with myriad fireballs. This may also leave the target with a burn. This move’s power is doubled if the target has a status condition.
 #-------------------------------
 [CEASELESSEDGE]
@@ -9028,8 +9026,6 @@ FunctionCode = RaiseStatsAndCureStatus
 EffectChance = 100
 Description = The user lifts its spirits, curing its own status conditions and boosting its Sp. Atk and Sp. Def stats.
 #-------------------------------
-# Gen IX
-#-------------------------------
 [AQUACUTTER]
 Name = Aqua Cutter
 Type = WATER
@@ -9039,7 +9035,7 @@ Accuracy = 100
 TotalPP = 20
 Target = NearOther
 FunctionCode = None
-Flags = CanProtect,CanMirrorMove,Contact, Slicing, HighCriticalHitRate
+Flags = CanProtect,CanMirrorMove,Contact,Slicing,HighCriticalHitRate
 Description = The user expels pressurized water to cut at the target like a blade. This move has a heightened chance of landing a critical hit.
 #-------------------------------
 [AQUASTEP]
@@ -9050,9 +9046,9 @@ Power = 80
 Accuracy = 100
 TotalPP = 10
 Target = NearOther
-EffectChance = 100
 FunctionCode = RaiseUserSpeed1
 Flags = Dance,Contact
+EffectChance = 100
 Description = The user toys with the target and attacks it using light and fluid dance steps. This also boosts the user's Speed stat.
 #-------------------------------
 [ARMORCANNON]
@@ -9063,9 +9059,9 @@ Power = 120
 Accuracy = 100
 TotalPP = 5
 Target = NearOther
-EffectChance = 100
 FunctionCode = LowerUserDefSpDef1
 Flags = CanProtect,CanMirrorMove
+EffectChance = 100
 Description = The user shoots its own armor out as blazing projectiles. This also lowers the user's Defense and Sp. Def stats.
 #-------------------------------
 [AXEKICK]
@@ -9076,9 +9072,9 @@ Power = 120
 Accuracy = 90
 TotalPP = 10
 Target = NearOther
-EffectChance = 30
 FunctionCode = InflictConfuseCrashDamageIfFailsUnusableInGravity
 Flags = Contact,CanProtect,CanMirrorMove
+EffectChance = 30
 Description = The user attacks by kicking up into the air and slamming its heel down upon the target. This may also confuse the target. If it misses, the user takes damage instead.
 #-------------------------------
 [BITTERBLADE]
@@ -9090,7 +9086,7 @@ Accuracy = 100
 TotalPP = 10
 Target = NearOther
 FunctionCode = HealUserByHalfOfDamageDone
-Flags = Contact, Slicing,CanMirrorMove
+Flags = Contact,Slicing,CanMirrorMove
 Description = The user focuses its bitter feelings toward the world of the living into a slashing attack. The user's HP is restored by up to half the damage taken by the target.
 #-------------------------------
 [BLAZINGTORQUE]
@@ -9101,9 +9097,9 @@ Power = 80
 Accuracy = 100
 TotalPP = 10
 Target = NearOther
-EffectChance = 30
 FunctionCode = BurnTarget
 Flags = CanProtect
+EffectChance = 30
 Description = This move is only used by a Starmobile. It may Burn the opponent.
 #-------------------------------
 [CHILLINGWATER]
@@ -9114,9 +9110,9 @@ Power = 50
 Accuracy = 100
 TotalPP = 20
 Target = NearOther
-EffectChance = 100
 FunctionCode = LowerTargetAttack1
 Flags = CanProtect,CanMirrorMove
+EffectChance = 100
 Description = The user attacks the target by showering it with water that's so cold it saps the target's power. This also lowers the target's Attack stat.
 #-------------------------------
 [CHILLYRECEPTION]
@@ -9149,9 +9145,9 @@ Power = 100
 Accuracy = 100
 TotalPP = 10
 Target = NearOther
-EffectChance = 30
 FunctionCode = ParalyzeTarget
 Flags = CanProtect
+EffectChance = 30
 Description = This move is only used by a Starmobile. It may lower the opponent's Defense.
 #-------------------------------
 [COMEUPPANCE]
@@ -9292,7 +9288,7 @@ Accuracy = 0
 TotalPP = 10
 Target = NearOther
 FunctionCode = None
-Flags = Slicing, Contact,CanProtect,CanMirrorMove
+Flags = Slicing,Contact,CanProtect,CanMirrorMove
 Description = The user slashes at the target after kowtowing to make the target let down its guard. This attack never misses.
 #-------------------------------
 [LASTRESPECTS]
@@ -9315,9 +9311,9 @@ Power = 80
 Accuracy = 100
 TotalPP = 10
 Target = NearOther
-EffectChance = 100
 FunctionCode = LowerTargetSpDef2
 Flags = CanProtect,CanMirrorMove
+EffectChance = 100
 Description = The user attacks by unleashing a peculiar light that even affects the mind. This also harshly lowers the target's Sp. Def stat.
 #-------------------------------
 [MAGICALTORQUE]
@@ -9328,9 +9324,9 @@ Power = 100
 Accuracy = 100
 TotalPP = 10
 Target = NearOther
-EffectChance = 30
 FunctionCode = ConfuseTarget
 Flags = CanProtect
+EffectChance = 30
 Description = This move is only used by a Starmobile. It may confuse the opponent.
 #-------------------------------
 [MAKEITRAIN]
@@ -9353,9 +9349,9 @@ Power = 30
 Accuracy = 100
 TotalPP = 15
 Target = AllNearFoes
-EffectChance = 100
 FunctionCode = RemoveUserBindingAndEntryHazardsPoisonTarget
 Flags = CanProtect,CanMirrorMove
+EffectChance = 100
 Description = The user performs a spin attack that can also eliminate the effects of such moves as Bind, Wrap, and Leech Seed. This also poisons opposing Pokémon.
 #-------------------------------
 [NOXIOUSTORQUE]
@@ -9366,9 +9362,9 @@ Power = 100
 Accuracy = 100
 TotalPP = 10
 Target = NearOther
-EffectChance = 30
 FunctionCode = PoisonTarget
 Flags = CanProtect
+EffectChance = 30
 Description = This move is only used by a Starmobile. It may Poison the opponent.
 #-------------------------------
 [ORDERUP]
@@ -9403,9 +9399,9 @@ Power = 50
 Accuracy = 100
 TotalPP = 20
 Target = NearOther
-EffectChance = 100
 FunctionCode = LowerTargetSpeed1
 Flags = Contact,CanProtect,CanMirrorMove
+EffectChance = 100
 Description = The user attacks by pouncing on the target. This also lowers the target's Speed stat.
 #-------------------------------
 [RAGEFIST]
@@ -9493,7 +9489,7 @@ Type = ICE
 Category = Status
 Accuracy = 0
 TotalPP = 10
-Target = BothSides 
+Target = BothSides
 FunctionCode = StartHailWeather
 Description = The user summons a snowstorm lasting five turns. This boosts the Defense stats of Ice types.
 #-------------------------------
@@ -9530,7 +9526,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = CategoryDependsOnHigherDamageTera
 Flags = CanProtect,CanMirrorMove
-Description = If the user has Terastallized, it unleashes energy of its Tera Type. This move uses the higher of the user's Attack or Sp. Atk stat.
+Description = Move type changes to match a Terastallized user's Tera Type. Deals damage based on user's higher stat.
 #-------------------------------
 [TIDYUP]
 Name = Tidy Up
@@ -9539,8 +9535,8 @@ Category = Status
 Accuracy = 0
 TotalPP = 10
 Target = NearOther
-EffectChance = 100
 FunctionCode = RemoveBothEntryHazardsRaiseAtkSpeed
+EffectChance = 100
 Description = The user tidies up and removes the effects of Spikes, Stealth Rock, Sticky Web, Toxic Spikes, and Substitute. This also boosts the user's Attack and Speed stats.
 #-------------------------------
 [TORCHSONG]
@@ -9551,9 +9547,9 @@ Power = 80
 Accuracy = 100
 TotalPP = 10
 Target = NearOther
-EffectChance = 100
 FunctionCode = RaiseUserSpAtk1
 Flags = Sound,CanProtect,CanMirrorMove
+EffectChance = 100
 Description = The user blows out raging flames as if singing a song, scorching the target. This also boosts the user's Sp. Atk stat.
 #-------------------------------
 [TRAILBLAZE]
@@ -9564,9 +9560,9 @@ Power = 50
 Accuracy = 100
 TotalPP = 20
 Target = NearOther
-EffectChance = 100
 FunctionCode = RaiseUserSpeed1
 Flags = Contact,CanProtect,CanMirrorMove
+EffectChance = 100
 Description = The user attacks suddenly as if leaping out from tall grass. The user's nimble footwork boosts its Speed stat.
 #-------------------------------
 [TRIPLEDIVE]
@@ -9601,9 +9597,9 @@ Power = 80
 Accuracy = 100
 TotalPP = 10
 Target = NearOther
-EffectChance = 10
 FunctionCode = SleepTarget
 Flags = CanProtect
+EffectChance = 10
 Description = This move is only used by a Starmobile.
 #-------------------------------
 [SPARKSURFER]
@@ -9637,8 +9633,9 @@ Power = 90
 Accuracy = 100
 TotalPP = 15
 Target = AllNearOthers
+FunctionCode = None
 Flags = CanProtect,CanMirrorMove
-Description = The user barrages all around it with a flurry of leaves and petals. 
+Description = The user barrages all around it with a flurry of leaves and petals.
 #-------------------------------
 [BEFUDDLE]
 Name = Befuddle
@@ -9832,8 +9829,8 @@ Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = CureUserPartyStatus
-EffectChance = 30
 Flags = CanProtect,CanMirrorMove,Sound
+EffectChance = 30
 Description = The user chime its bell calling cosmic energies to attack the target. This may also cure the user's party of all status conditions.
 #-------------------------------
 [GIFTRUSH]
@@ -9846,7 +9843,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = HitTenTimesPopulationBomb
 Flags = Contact,CanProtect,CanMirrorMove
-Description = The user bombards the target with festive gifts that hit the target one to ten times in a row. 
+Description = The user bombards the target with festive gifts that hit the target one to ten times in a row.
 #-------------------------------
 [SPECTRALBEAM]
 Name = Spectral Beam
@@ -9897,7 +9894,7 @@ Target = NearOther
 FunctionCode = RaiseUserStatOrDamageFoe
 Flags = CanProtect,CanMirrorMove,Sound
 EffectChance = 100
-Description = The user sings a dragon-made fight song and damages the target with it. If the target is a Fairy-type Pokémon, raises the user's Sp. Atk stat instead. 
+Description = The user sings a dragon-made fight song and damages the target with it. If the target is a Fairy-type Pokémon, raises the user's Sp. Atk stat instead.
 #-------------------------------
 [TOXICRETCH]
 Name = Toxic Retch
@@ -9934,4 +9931,3 @@ Target = NearOther
 FunctionCode = None
 Flags = Contact,CanProtect,CanMirrorMove
 Description = A physical attack in which the user charges and slams into the target with its whole body.
-#-------------------------------

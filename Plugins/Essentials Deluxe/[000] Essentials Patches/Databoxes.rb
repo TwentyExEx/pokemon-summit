@@ -96,7 +96,6 @@ class Battle::Scene::PokemonDataBox < SpriteWrapper
     draw_status
     draw_shiny_icon
     draw_special_form_icon
-    draw_custom_icon
     draw_owned_icon
     refreshHP
     refreshExp

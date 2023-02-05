@@ -163,6 +163,6 @@ def pbUpdateOutline(sprite, pokemon, battle = false)
     key = sprite + "_outline#{i}"
     next if !@sprites[key] || !(@sprites[key].is_a?(PokemonSprite) || @sprites[key].is_a?(PokemonIconSprite))
     @sprites[key].pokemon = pokemon
-    @sprites[key].applyDynamaxIcon(battle)
+    @sprites[key].applyIconEffects
   end
 end

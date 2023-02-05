@@ -1,6 +1,0 @@
-Name       = ScarletVioletGimmick_TDW
-Version    = 1.4.2
-Essentials = 20.1
-Website    = https://reliccastle.com/resources/987/
-Credits    = wrigty12
-Optional   = Essentials Deluxe,1.1.4

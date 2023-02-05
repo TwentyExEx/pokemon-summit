@@ -217,13 +217,18 @@ module GameData
       pkmn    = params[0]
       back    = params[1]
       species = params[2]
-      target  = params[3]
+      setDmax = params[3]
       species = pkmn.species if !species
       species = GameData::Species.get(species).species
       return self.egg_sprite_bitmap(species, pkmn.form) if pkmn.egg?
-      gmax   = (target) ? (target.gmax_factor? && target.dynamax? && pkmn.dynamax?) : pkmn.gmax?
-      sprite = [species, pkmn.form, pkmn.gender, pkmn.shiny?, pkmn.shadowPokemon?, back, pkmn.egg?, pkmn.dynamax?, gmax, pkmn.celestial?]
-      ret    = (back) ? self.back_sprite_bitmap(*sprite) : self.front_sprite_bitmap(*sprite)
+      case setDmax
+      when :none then dmax = gmax = false
+      when :dmax then dmax = true; gmax = false
+      when :gmax then dmax = true; gmax = true
+      else dmax = pkmn.dynamax?; gmax = pkmn.gmax?
+      end
+      sprite = [species, pkmn.form, pkmn.gender, pkmn.shiny?, pkmn.shadowPokemon?, back, pkmn.egg?, dmax, gmax, pkmn.celestial?]
+      ret = (back) ? self.back_sprite_bitmap(*sprite) : self.front_sprite_bitmap(*sprite)
       if PluginManager.installed?("Generation 8 Pack Scripts")
         alter_bitmap_function = (ret && ret.total_frames == 1) ? MultipleForms.getFunction(species, "alterBitmap") : nil
         if ret && alter_bitmap_function
@@ -269,6 +274,37 @@ module GameData
     def self.icon_bitmap_from_pokemon(pkmn)
       return self.icon_bitmap(pkmn.species, pkmn.form, pkmn.gender, pkmn.shiny?, pkmn.shadowPokemon?, pkmn.egg?, 
                               pkmn.dynamax?, pkmn.gmax?, pkmn.celestial?)
+    end
+  
+    #---------------------------------------------------------------------------
+    # Shadows
+    #---------------------------------------------------------------------------
+    def self.shadow_filename(*params)
+      species = params[0]
+      form = params[1]
+      species_data = self.get_species_form(species, form)
+      return nil if species_data.nil?
+      if form > 0
+        ret = pbResolveBitmap(sprintf("Graphics/Pokemon/Shadow/%s_%d", species_data.species, form))
+        return ret if ret
+      end
+      ret = pbResolveBitmap(sprintf("Graphics/Pokemon/Shadow/%s", species_data.species))
+      return ret if ret
+      metrics_data = GameData::SpeciesMetrics.get_species_form(species_data.species, form)
+      return pbResolveBitmap(sprintf("Graphics/Pokemon/Shadow/%d", metrics_data.shadow_size))
+    end
+
+    def self.shadow_bitmap(*params)
+      species = params[0]
+      form = params[1]
+      filename = self.shadow_filename(species, form)
+      return (filename) ? AnimatedBitmap.new(filename) : nil
+    end
+
+    def self.shadow_bitmap_from_pokemon(*params)
+      pkmn = params[0]
+      filename = self.shadow_filename(pkmn.species, pkmn.form)
+      return (filename) ? AnimatedBitmap.new(filename) : nil
     end
   
     #---------------------------------------------------------------------------
@@ -396,32 +432,21 @@ end
 # Pokemon bitmaps (Out of battle)
 #-------------------------------------------------------------------------------
 class PokemonSprite < SpriteWrapper
-  def setPokemonBitmap(pokemon, back = false)
+  def setPokemonBitmap(*params)
+    pokemon = params[0]
     @_iconbitmap&.dispose
-    @_iconbitmap = (pokemon) ? GameData::Species.sprite_bitmap_from_pokemon(pokemon, back) : nil
+    @_iconbitmap = (pokemon) ? GameData::Species.sprite_bitmap_from_pokemon(*params) : nil
     self.bitmap = (@_iconbitmap) ? @_iconbitmap.bitmap : nil
     self.color = Color.new(0, 0, 0, 0)
-    if PluginManager.installed?("ZUD Mechanics")
-      if pokemon.dynamax?
-        self.applyDynamax(pokemon.isSpecies?(:CALYREX))
-      else
-        self.unDynamax
-      end
-    end
+    self.applyEffects(pokemon)
     changeOrigin
   end
 
-  def setPokemonBitmapSpecies(pokemon, species, back = false, target = nil)
+  def setPokemonBitmapSpecies(pokemon, species, back = false)
     @_iconbitmap&.dispose
-    @_iconbitmap = (pokemon) ? GameData::Species.sprite_bitmap_from_pokemon(pokemon, back, species, target) : nil
+    @_iconbitmap = (pokemon) ? GameData::Species.sprite_bitmap_from_pokemon(pokemon, back, species) : nil
     self.bitmap = (@_iconbitmap) ? @_iconbitmap.bitmap : nil
-    if PluginManager.installed?("ZUD Mechanics")
-      if pokemon.dynamax?
-        self.applyDynamax(pokemon.isSpecies?(:CALYREX))
-      else
-        self.unDynamax
-      end
-    end
+    self.applyEffects(pokemon)
     changeOrigin
   end
 
@@ -430,13 +455,6 @@ class PokemonSprite < SpriteWrapper
     @_iconbitmap&.dispose
     @_iconbitmap = GameData::Species.sprite_bitmap(*data.values)
     self.bitmap = (@_iconbitmap) ? @_iconbitmap.bitmap : nil
-    if PluginManager.installed?("ZUD Mechanics")
-      if data[:dmax] || data[:gmax]
-        self.applyDynamax(data[:species] == :CALYREX)
-      else
-        self.unDynamax
-      end
-    end
     changeOrigin
   end
 end
@@ -446,27 +464,19 @@ end
 # Pokemon bitmaps (In battle)
 #-------------------------------------------------------------------------------
 class Battle::Scene::BattlerSprite < RPG::Sprite
+  attr_accessor :dynamax
+
   def setPokemonBitmap(*params)
-    @pkmn    = params[0]
-    back     = params[1]
-    target   = params[2]
-    @dynamax = 0
-    @calyrex = @pkmn.isSpecies?(:CALYREX)
-    @_iconBitmap&.dispose
-    @_iconBitmap = GameData::Species.sprite_bitmap_from_pokemon(@pkmn, back, nil, target)
-    self.bitmap = (@_iconBitmap) ? @_iconBitmap.bitmap : nil
-    if PluginManager.installed?("ZUD Mechanics")
-      if target
-        if target.dynamax?
-          @dynamax = (target.gmax_factor? && @pkmn.gmax?) ? 2 : 1 
-        end
-      else
-        if @pkmn.dynamax?
-          @dynamax = (@pkmn.gmax?) ? 2 : 1
-        end
-      end
-      self.applyDynamax(@calyrex) if @dynamax > 0
+    @pkmn = params[0]
+    case params[3]
+    when :none then @dynamax = 0
+    when :dmax then @dynamax = 1
+    when :gmax then @dynamax = 2
+    else @dynamax = (@pkmn.gmax?) ? 2 : (@pkmn.dynamax?) ? 1 : 0
     end
+    @_iconBitmap&.dispose
+    @_iconBitmap = GameData::Species.sprite_bitmap_from_pokemon(*params)
+    self.bitmap = (@_iconBitmap) ? @_iconBitmap.bitmap : nil
     pbSetPosition
   end
   
@@ -483,32 +493,37 @@ class Battle::Scene::BattlerSprite < RPG::Sprite
     @spriteY = p[1]
     @pkmn.species_data.apply_metrics_to_sprite(self, @index, false, @dynamax)
   end
+end
+
+
+#-------------------------------------------------------------------------------
+# Shadow sprite for Pokémon (used in battle)
+#-------------------------------------------------------------------------------
+class Battle::Scene::BattlerShadowSprite < RPG::Sprite
+  attr_accessor :dynamax
   
-  def update(frameCounter = 0)
+  def setPokemonBitmap(*params)
+    @pkmn = params[0]
+    case params[1]
+    when :none then @dynamax = 0
+    when :dmax then @dynamax = 1
+    when :gmax then @dynamax = 2
+    else @dynamax = (@pkmn.gmax?) ? 2 : (@pkmn.dynamax?) ? 1 : 0
+    end
+    @_iconBitmap&.dispose
+    @_iconBitmap = GameData::Species.shadow_bitmap_from_pokemon(@pkmn, @dynamax > 0)
+    self.bitmap = (@_iconBitmap) ? @_iconBitmap.bitmap : nil
+    pbSetPosition
+  end
+
+  def pbSetPosition
     return if !@_iconBitmap
-    @updating = true
-    @_iconBitmap.update
-    self.bitmap = @_iconBitmap.bitmap
-    @spriteYExtra = 0
-    if @selected==1
-      case (frameCounter / QUARTER_ANIM_PERIOD).floor
-      when 1 then @spriteYExtra = 2
-      when 3 then @spriteYExtra = -2
-      end
-    end
-    self.x       = self.x
-    self.y       = self.y
-    if PluginManager.installed?("ZUD Mechanics")
-      self.applyDynamax(@calyrex) if @dynamax > 0
-    end
-    self.visible = @spriteVisible
-    if @selected==2 && @spriteVisible
-      case (frameCounter / SIXTH_ANIM_PERIOD).floor
-      when 2, 5; self.visible = false
-      else;      self.visible = true
-      end
-    end
-    @updating = false
+    pbSetOrigin
+    self.z = 3
+    p = Battle::Scene.pbBattlerPosition(@index, @sideSize)
+    self.x = p[0]
+    self.y = p[1]
+    @pkmn.species_data.apply_metrics_to_sprite(self, @index, true, @dynamax)
   end
 end
 
@@ -532,6 +547,7 @@ class PokemonIconSprite < SpriteWrapper
     self.bitmap = @animBitmap.bitmap
     self.src_rect.width  = @animBitmap.height
     self.src_rect.height = @animBitmap.height
+    self.applyIconEffects
     @numFrames    = @animBitmap.width / @animBitmap.height
     @currentFrame = 0 if @currentFrame >= @numFrames
     changeOrigin
@@ -553,7 +569,7 @@ class PokemonSpeciesIconSprite < SpriteWrapper
     @species      = species
     @gender       = 0
     @form         = 0
-    @shiny        = 0
+    @shiny        = false
     @shadow       = false
     @dmax         = false
     @gmax         = false

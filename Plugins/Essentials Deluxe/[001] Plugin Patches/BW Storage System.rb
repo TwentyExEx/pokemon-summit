@@ -63,6 +63,9 @@ if PluginManager.installed?("BW Storage System")
         if PluginManager.installed?("ZUD Mechanics")
           pbDisplayGmaxFactor(pokemon, plugin_overlay, 8, 52)
         end
+        if PluginManager.installed?("Terastal Phenomenon") && Settings::STORAGE_TERA_TYPES
+          pbDisplayTeraType(pokemon, plugin_overlay, 8, 192)
+        end
         if PluginManager.installed?("Pokémon Birthsigns")
           pbDisplayToken(pokemon, plugin_overlay, 149, 162, true)
         end

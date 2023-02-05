@@ -5,14 +5,25 @@
 
 class Battle::Scene
   #-----------------------------------------------------------------------------
+  # Compiles a list of all viable triggers of each type to check for.
+  #-----------------------------------------------------------------------------
+  def pbDeluxeTriggers(battler, idxBattler, triggers)
+    array = []
+    battler = @battle.battlers[battler] if battler.is_a?(Integer)
+    triggers.each { |t| array.push((battler.pbOwnedByPlayer?) ? t : (battler.opposes?) ? t + "_foe" : t + "_ally") }
+    dx_midbattle(battler.index, idxBattler, *array) if !array.empty?
+  end
+
+  #-----------------------------------------------------------------------------
   # Mid-battle triggers for when a Pokemon faints.
   #-----------------------------------------------------------------------------
   alias dx_pbFaintBattler pbFaintBattler
   def pbFaintBattler(battler)
     dx_pbFaintBattler(battler)
     if !@battle.pbAllFainted?(battler.index)
-      trigger = (battler.pbOwnedByPlayer?) ? "fainted" : (battler.opposes?) ? "fainted_foe" : "fainted_ally"
-      dx_midbattle(battler.index, nil, trigger)
+      triggers = ["fainted", "fainted" + battler.species.to_s]
+      battler.pokemon.types.each { |t| triggers.push("fainted" + t.to_s) }
+      pbDeluxeTriggers(battler, nil, triggers)
     end
   end
 end
@@ -23,41 +34,24 @@ class Battle
   # Mid-battle triggers for when items are used.
   #-----------------------------------------------------------------------------
   alias dx_pbUseItemOnPokemon pbUseItemOnPokemon
-  def pbUseItemOnPokemon(*args)
-    trigger = (args[2].pbOwnedByPlayer?) ? "item" : (args[2].opposes?) ? "item_foe" : "item_ally"
-    @scene.dx_midbattle(args[2].index, nil, trigger)
-    dx_pbUseItemOnPokemon(*args)
+  def pbUseItemOnPokemon(item, idxParty, userBattler)
+    triggers = ["item", "item" + item.to_s]
+    @scene.pbDeluxeTriggers(userBattler, nil, triggers)
+    dx_pbUseItemOnPokemon(item, idxParty, userBattler)
   end
 
   alias dx_pbUseItemOnBattler pbUseItemOnBattler
-  def pbUseItemOnBattler(*args)
-    trigger = (args[2].pbOwnedByPlayer?) ? "item" : (args[2].opposes?) ? "item_foe" : "item_ally"
-    @scene.dx_midbattle(args[2].index, nil, trigger)
-    dx_pbUseItemOnBattler(*args)
+  def pbUseItemOnBattler(item, idxParty, userBattler)
+    triggers = ["item", "item" + item.to_s]
+    @scene.pbDeluxeTriggers(userBattler, nil, triggers)
+    dx_pbUseItemOnBattler(item, idxParty, userBattler)
   end
   
   alias dx_pbUseItemInBattle pbUseItemInBattle
   def pbUseItemInBattle(item, idxBattler, userBattler)
-    trigger = (userBattler.pbOwnedByPlayer?) ? "item" : (userBattler.opposes?) ? "item_foe" : "item_ally"
-    @scene.dx_midbattle(userBattler.index, idxBattler, trigger)
+    triggers = ["item", "item" + item.to_s]
+    @scene.pbDeluxeTriggers(userBattler, idxBattler, triggers)
     dx_pbUseItemInBattle(item, idxBattler, userBattler)
-  end
-  
-  #-----------------------------------------------------------------------------
-  # Mid-battle triggers for when a Poke Ball was used.
-  #-----------------------------------------------------------------------------
-  alias dx_pbUsePokeBallInBattle pbUsePokeBallInBattle
-  def pbUsePokeBallInBattle(item, idxBattler, userBattler)
-    personal_id = @battlers[idxBattler].pokemon.personalID
-    @scene.dx_midbattle(userBattler.index, idxBattler, "beforeCapture")
-    dx_pbUsePokeBallInBattle(item, idxBattler, userBattler)
-    captured = false
-    @caughtPokemon.each { |p| captured = true if p.personalID == personal_id }
-    if captured
-      @scene.dx_midbattle(userBattler.index, idxBattler, "afterCapture") 
-    else
-      @scene.dx_midbattle(userBattler.index, idxBattler, "failedCapture") 
-    end
   end
   
   #-----------------------------------------------------------------------------
@@ -65,44 +59,32 @@ class Battle
   #-----------------------------------------------------------------------------
   alias dx_pbMessageOnRecall pbMessageOnRecall
   def pbMessageOnRecall(battler)
-    trigger = (battler.pbOwnedByPlayer?) ? "recall" : (battler.opposes?) ? "recall_foe" : "recall_ally"
-    @scene.dx_midbattle(battler.index, nil, trigger) if !battler.fainted?
+    if !battler.fainted?
+      triggers = ["recall", "recall" + battler.species.to_s]
+      battler.pokemon.types.each { |t| triggers.push("recall" + t.to_s) }
+      @scene.pbDeluxeTriggers(battler, nil, triggers)
+    end
     dx_pbMessageOnRecall(battler)
   end
   
   alias dx_pbMessagesOnReplace pbMessagesOnReplace
   def pbMessagesOnReplace(idxBattler, idxParty)
-    if pbAbleNonActiveCount(idxBattler) == 1
-      trigger = (pbOwnedByPlayer?(idxBattler)) ? "beforeLast" : (opposes?(idxBattler)) ? "beforeLast_foe" : "beforeLast_ally"
-    else
-      trigger = (pbOwnedByPlayer?(idxBattler)) ? "beforeNext" : (opposes?(idxBattler)) ? "beforeNext_foe" : "beforeNext_ally"
-    end
-    @scene.dx_midbattle(idxBattler, nil, trigger)
+    nextPoke = pbParty(idxBattler)[idxParty]
+    triggers = ["beforeNext", "beforeNext" + nextPoke.species.to_s]
+    nextPoke.types.each { |t| triggers.push("beforeNext" + t.to_s) }
+    triggers.push("beforeLast") if pbAbleNonActiveCount(idxBattler) == 1
+    @scene.pbDeluxeTriggers(idxBattler, nil, triggers)
     dx_pbMessagesOnReplace(idxBattler, idxParty)
   end
   
   alias dx_pbReplace pbReplace
-  def pbReplace(*args)
-    dx_pbReplace(*args)
-    if pbAbleNonActiveCount(args[0]) == 0
-      trigger = (pbOwnedByPlayer?(args[0])) ? "afterLast" : (opposes?(args[0])) ? "afterLast_foe" : "afterLast_ally"
-    else
-      trigger = (pbOwnedByPlayer?(args[0])) ? "afterNext" : (opposes?(args[0])) ? "afterNext_foe" : "afterNext_ally"
-    end
-    @scene.dx_midbattle(args[0], nil, trigger)
-  end
-  
-  #-----------------------------------------------------------------------------
-  # Mid-battle triggers for Mega Evolution.
-  #-----------------------------------------------------------------------------
-  alias dx_pbMegaEvolve pbMegaEvolve
-  def pbMegaEvolve(idxBattler)
+  def pbReplace(idxBattler, idxParty, batonPass = false)
+    dx_pbReplace(idxBattler, idxParty, batonPass)
     battler = @battlers[idxBattler]
-    return if !battler || !battler.pokemon
-    return if !battler.hasMega? || battler.mega?
-    trigger = (pbOwnedByPlayer?(idxBattler)) ? "mega" : (opposes?(idxBattler)) ? "mega_foe" : "mega_ally"
-    @scene.dx_midbattle(idxBattler, nil, trigger)
-    dx_pbMegaEvolve(idxBattler)
+    triggers = ["afterNext", "afterNext" + battler.species.to_s]
+    battler.pokemon.types.each { |t| triggers.push("afterNext" + t.to_s) }
+    triggers.push("afterLast") if pbAbleNonActiveCount(idxBattler) == 0
+    @scene.pbDeluxeTriggers(idxBattler, nil, triggers)
   end
   
   #-----------------------------------------------------------------------------
@@ -126,6 +108,32 @@ class Battle
 end
 
 
+module Battle::CatchAndStoreMixin
+  #-----------------------------------------------------------------------------
+  # Mid-battle triggers during the capture process.
+  #-----------------------------------------------------------------------------
+  alias dx_pbThrowPokeBall pbThrowPokeBall
+  def pbThrowPokeBall(*args)
+    idxBattler = args[0]
+    if opposes?(idxBattler)
+      battler = @battlers[idxBattler]
+    else
+      battler = @battlers[idxBattler].pbDirectOpposing(true)
+    end
+    personalID = battler.pokemon.personalID
+    @scene.dx_midbattle(idxBattler, battler.index, "beforeCapture")
+    dx_pbThrowPokeBall(*args)
+    captured = false
+    @caughtPokemon.each { |p| captured = true if p.personalID == personalID }
+    if captured
+      @scene.dx_midbattle(nil, nil, "afterCapture") 
+    else
+      @scene.dx_midbattle(nil, nil, "failedCapture") 
+    end
+  end
+end
+
+
 class Battle::Battler
   #-----------------------------------------------------------------------------
   # Mid-battle triggers for when a move is used.
@@ -134,12 +142,16 @@ class Battle::Battler
   def pbTryUseMove(*args)
     ret = dx_pbTryUseMove(*args)
     if ret
+      type = args[1].type.to_s
+      triggers = ["move", "move" + type, "move" + args[1].id.to_s]
       if args[1].damagingMove?
-        trigger = (pbOwnedByPlayer?) ? "attack" : (opposes?) ? "attack_foe" : "attack_ally"
+        triggers.push("damageMove", "damageMove" + type)
+        triggers.push("physicalMove", "physicalMove" + type) if args[1].physicalMove?
+        triggers.push("specialMove", "specialMove" + type) if args[1].specialMove?
       else
-        trigger = (pbOwnedByPlayer?) ? "status" : (opposes?) ? "status_foe" : "status_ally"
+        triggers.push("statusMove", "statusMove" + type)
       end
-      @battle.scene.dx_midbattle(@index, args[0][3], trigger)
+      @battle.scene.pbDeluxeTriggers(self, args[0][3], triggers)
     end
     return ret
   end
@@ -165,6 +177,19 @@ class Battle::Battler
     dx_pbMissMessage(move, user, target)
     trigger = (user.pbOwnedByPlayer?) ? "miss" : (user.opposes?) ? "miss_foe" : "miss_ally"
     @battle.scene.dx_midbattle(user.index, target.index, trigger)
+  end
+  
+  #-----------------------------------------------------------------------------
+  # Mid-battle triggers for when a status condition is inflicted.
+  #-----------------------------------------------------------------------------
+  alias dx_pbInflictStatus pbInflictStatus 
+  def pbInflictStatus(*args)
+    oldStatus = self.status
+    dx_pbInflictStatus(*args)
+    if ![:NONE, oldStatus].include?(self.status)
+      triggers = ["inflictStatus", "inflictStatus" + self.status.to_s]
+      @battle.scene.pbDeluxeTriggers(self, nil, triggers)
+    end
   end
 end
 
@@ -234,29 +259,25 @@ class Battle::Move
     end
     if !target.damageState.substitute
       @battle.scene.dx_midbattle(user.index, target.index, *user_triggers) if user_triggers.length > 0
-      target_triggers.push((target.pbOwnedByPlayer?) ? "damage" : (target.opposes?) ? "damage_foe" : "damage_ally") if user.opposes?(target.index)
+      if user.opposes?(target.index)
+        target_triggers.push((target.pbOwnedByPlayer?) ? "damageTaken" : (target.opposes?) ? "damageTaken_foe" : "damageTaken_ally")
+      end
       if !target.fainted? && user.opposes?(target.index)
-        if target.hp <= target.totalhp / 4
+        if target.hp <= target.totalhp / 2
+          lowHP = target.hp <= target.totalhp / 4
           if @battle.pbParty(target.index).length > @battle.pbSideSize(target.index)
             if @battle.pbAbleNonActiveCount(target.index) == 0
-              target_triggers.push((target.pbOwnedByPlayer?) ? "lowhp_final" : (target.opposes?) ? "lowhp_final_foe" : "lowhp_final_ally")
+              target_triggers.push((target.pbOwnedByPlayer?) ? "halfHPFinal" : (target.opposes?) ? "halfHPFinal_foe" : "halfHPFinal_ally")
+              target_triggers.push((target.pbOwnedByPlayer?) ? "lowHPFinal" : (target.opposes?) ? "lowHPFinal_foe" : "lowHPFinal_ally") if lowHP
             else
-              target_triggers.push((target.pbOwnedByPlayer?) ? "lowhp" : (target.opposes?) ? "lowhp_foe" : "lowhp_ally")
+              target_triggers.push((target.pbOwnedByPlayer?) ? "halfHP" : (target.opposes?) ? "halfHP_foe" : "halfHP_ally")
+              target_triggers.push((target.pbOwnedByPlayer?) ? "lowHP" : (target.opposes?) ? "lowHP_foe" : "lowHP_ally") if lowHP
             end
           else
-            target_triggers.push((target.pbOwnedByPlayer?) ? "lowhp" : (target.opposes?) ? "lowhp_foe" : "lowhp_ally")
-            target_triggers.push((target.pbOwnedByPlayer?) ? "lowhp_final" : (target.opposes?) ? "lowhp_final_foe" : "lowhp_final_ally")
-          end
-        elsif target.hp <= target.totalhp / 2
-          if @battle.pbParty(target.index).length > @battle.pbSideSize(target.index)
-            if @battle.pbAbleNonActiveCount(target.index) == 0
-              target_triggers.push((target.pbOwnedByPlayer?) ? "halfhp_final" : (target.opposes?) ? "halfhp_final_foe" : "halfhp_final_ally")
-            else
-              target_triggers.push((target.pbOwnedByPlayer?) ? "halfhp" : (target.opposes?) ? "halfhp_foe" : "halfhp_ally")
-            end
-          else
-            target_triggers.push((target.pbOwnedByPlayer?) ? "halfhp" : (target.opposes?) ? "halfhp_foe" : "halfhp_ally")
-            target_triggers.push((target.pbOwnedByPlayer?) ? "halfhp_final" : (target.opposes?) ? "halfhp_final_foe" : "halfhp_final_ally")
+            target_triggers.push((target.pbOwnedByPlayer?) ? "halfHP" : (target.opposes?) ? "halfHP_foe" : "halfHP_ally")
+            target_triggers.push((target.pbOwnedByPlayer?) ? "halfHPFinal" : (target.opposes?) ? "halfHPFinal_foe" : "halfHPFinal_ally")
+            target_triggers.push((target.pbOwnedByPlayer?) ? "lowHP" : (target.opposes?) ? "lowHP_foe" : "lowHP_ally") if lowHP
+            target_triggers.push((target.pbOwnedByPlayer?) ? "lowHPFinal" : (target.opposes?) ? "lowHPFinal_foe" : "lowHPFinal_ally") if lowHP
           end
         end
       end

@@ -80,7 +80,7 @@ class Battle::Scene
       #-------------------------------------------------------------------------
       # When trigger is set to a String or Array, plays trainer speech if possible.
       when String, Array
-        pbMidbattleSpeech(base_trainer, idxTarget, base_battler, midbattle[trigger])
+        pbMidbattleSpeech(base_trainer, idxTarget, base_battler, midbattle[trigger], true)
         next if trigger.include?("_repeat") || trigger.include?("_every_")
         $game_temp.dx_midbattle.delete(trigger)
       #-------------------------------------------------------------------------
@@ -135,8 +135,9 @@ class Battle::Scene
           when :playsound, :playSE    then pbSEPlay(value)
           #---------------------------------------------------------------------
           # Displays text and speech.
-          when :text, :message        then pbMidbattleSpeech(trainer, idxTarget, battler, value, false)
-          when :speech, :dialogue     then pbMidbattleSpeech(trainer, idxTarget, battler, value)
+          when :text, :message        then pbMidbattleSpeech(trainer, idxTarget, battler, value)
+          when :speech, :dialogue     then pbMidbattleSpeech(trainer, idxTarget, battler, value, true)
+          when :blankspeech           then pbMidbattleSpeech(trainer, idxTarget, battler, value, :Blank)
           #---------------------------------------------------------------------
           # Plays an animation.
           when :anim, :animation      then midbattle_PlayAnimation(battler, idxTarget, value)
@@ -147,8 +148,15 @@ class Battle::Scene
           # Uses an item on a battler.
           when :useitem               then midbattle_UseItem(battler, value)
           #---------------------------------------------------------------------
-          # Triggers the use of a special battle mechanic (Mega, Z-Move, etc.).
+          # Forces a battler to select a particular move.
+          when :usemove               then midbattle_UseMove(battler, value)
+          #---------------------------------------------------------------------
+          # Handles special battle mechanics (Mega, Z-Move, etc.).
           when :usespecial            then midbattle_TriggerBattleMechanic(battler, value)
+          when :lockspecial           then midbattle_ToggleBattleMechanic(battler, value)
+          #---------------------------------------------------------------------
+          # Toggles the charge state of the player's Tera Orb.
+          when :teracharge            then $player.tera_charge = value
           #---------------------------------------------------------------------
           # Renames a battler.	
           when :rename
@@ -190,7 +198,7 @@ class Battle::Scene
   #-----------------------------------------------------------------------------
   # Displays mid-battle text.
   #-----------------------------------------------------------------------------
-  def pbMidbattleSpeech(idxTrainer, idxTarget, battler, speech = [], dialogue = true)
+  def pbMidbattleSpeech(idxTrainer, idxTarget, battler, speech = [], speaker = nil)
     return if speech.empty?
     pbWait(8)
     #---------------------------------------------------------------------------
@@ -198,49 +206,66 @@ class Battle::Scene
     if @battle.opponent.nil?
       trainer = @battle.player[idxTrainer]
       foe_trainer = false
-    elsif dialogue || @battle.decision == 2 || @battle.pbAllFainted? 
+    elsif speaker && speaker != :Blank && (@battle.decision == 2 || @battle.pbAllFainted?)
       trainer = @battle.opponent[idxTrainer]
       foe_trainer = true
+	elsif battler.index.odd?
+	  trainer = @battle.opponent[idxTrainer]
+	  foe_trainer = true
     else
       trainer = @battle.player[idxTrainer]
       foe_trainer = false
     end
-    if foe_trainer
+    if speaker
       pbToggleDataboxes
       pbToggleBlackBars(true)
-      pbShowOpponent(idxTrainer)
+      pbShowOpponent(idxTrainer) if foe_trainer && speaker != :Blank
     end
     index = battler.index
+    showName = true
+    playSE = playCry = playAnim = false
     #---------------------------------------------------------------------------
     # Displays the inputted text either as a message or dialogue.
     if speech.is_a?(Array)
-      speech.each_with_index do |text, i|
+      speech.each do |text|
         case text
         when String
           next if !battler
-          if foe_trainer
-            name = (i == 0) ? "#{trainer.name.upcase}: " : ""
+          battler.pokemon.play_cry if playCry
+          midbattle_PlayAnimation(battler, idxTarget, playAnim) if playAnim.is_a?(Symbol)
+          if playSE
+            pbSEPlay(text)
+          elsif playAnim && !playAnim.is_a?(Symbol)
+            midbattle_PlayAnimation(battler, idxTarget, text)
+          elsif speaker
+            name = (showName && speaker != :Blank) ? "#{trainer.name.upcase}: " : ""
             @battle.pbDisplayPaused(_INTL("#{name}#{text}", battler.name, trainer.name))
+            showName = false
           else
             lowercase = (text[0] == "{" && text[1] == "1") ? false : true
             @battle.pbDisplay(_INTL("#{text}", battler.pbThis(lowercase), trainer.name))
           end
-        else
-          battler = midbattle_Battler(battler.index, idxTarget, text)
+          playSE = playCry = playAnim = false
+        when Integer then battler = midbattle_Battler(battler.index, idxTarget, text)
+        when :SE     then playSE   = true
+        when :Cry    then playCry  = true
+        when :Anim   then playAnim = true
+        when Symbol  then playAnim = text
         end
       end
     else
-      if foe_trainer
-        @battle.pbDisplayPaused(_INTL("#{trainer.name.upcase}: #{speech}", battler.name, trainer.name))
+      if speaker
+        name = (speaker != :Blank) ? "#{trainer.name.upcase}: " : ""
+        @battle.pbDisplayPaused(_INTL("#{name}#{speech}", battler.name, trainer.name))
       else
         lowercase = (speech[0] == "{" && speech[1] == "1") ? false : true
         @battle.pbDisplay(_INTL("#{speech}", battler.pbThis(lowercase), trainer.name))
       end
     end
-    if foe_trainer
+    if speaker
       pbToggleBlackBars
-      pbToggleDataboxes
-      pbHideOpponent(idxTrainer)
+      pbToggleDataboxes(true)
+      pbHideOpponent(idxTrainer) if foe_trainer && speaker != :Blank
     end
   end
   
@@ -307,6 +332,16 @@ class Battle::Scene
       anim, index = value, nil
     end
     target = (index) ? midbattle_Battler(battler.index, idxTarget, index) : nil
+    if !target && GameData::Move.exists?(anim)
+      case GameData::Move.get(anim).target
+      when :NearAlly
+        target = midbattle_Battler(battler.index, idxTarget, :Ally)
+      when :Foe, :NearFoe, :RandomNearFoe, :NearOther, :Other
+        target = midbattle_Battler(battler.index, idxTarget, :Opposing)
+      else
+        target = midbattle_Battler(battler.index, idxTarget, :Self)
+      end
+    end
     case anim
     when Symbol then pbAnimation(anim, battler, target)
     when String then pbCommonAnimation(anim, battler, target)
@@ -355,7 +390,7 @@ class Battle::Scene
         end
         if newPkmn >= 0
           lowercase = (msg && msg[0] == "{" && msg[1] == "1") ? false : true
-          trainerName = @battle.pbGetOwnerName(battler.index)
+          trainerName = (battler.wild?) ? "" : @battle.pbGetOwnerName(battler.index)
           @battle.pbDisplay(_INTL("#{msg}", battler.pbThis(lowercase), trainerName)) if msg
           if switch == :Forced
             @battle.pbDisplay(_INTL("{1} went back to {2}!", battler.pbThis, trainerName))
@@ -416,6 +451,131 @@ class Battle::Scene
   
   
   #-----------------------------------------------------------------------------
+  # Forces the battler to use a specified move.
+  #-----------------------------------------------------------------------------
+  def midbattle_UseMove(battler, value)
+    return if !battler || battler.fainted? || @battle.decision > 0
+    return if battler.movedThisRound? ||
+              battler.effects[PBEffects::ChoiceBand]    ||
+              battler.effects[PBEffects::Instructed]    ||
+              battler.effects[PBEffects::TwoTurnAttack] ||
+              battler.effects[PBEffects::Encore]    > 0 ||
+              battler.effects[PBEffects::HyperBeam] > 0 ||
+              battler.effects[PBEffects::Outrage]   > 0 ||
+              battler.effects[PBEffects::Rollout]   > 0 ||
+              battler.effects[PBEffects::Uproar]    > 0 ||
+              battler.effects[PBEffects::SkyDrop]  >= 0
+    choice = @battle.choices[battler.index]
+    return if choice[0] != :UseMove
+    return if PluginManager.installed?("ZUD Mechanics") && choice[2].zMove?
+    index = -1
+    if value.is_a?(Array)
+      move = value[0]
+      target = value[1] || -1
+    else
+      move, target = value, -1
+    end
+    targBattler = @battle.battlers[target]
+    reTarget = !targBattler || targBattler.fainted? || !targBattler.near?(battler)
+    case move
+    #---------------------------------------------------------------------------
+    # Forces a particular kind of move.
+    #---------------------------------------------------------------------------
+    when :DamageSelf, :DamageAlly, :DamageFoe,     # Damaging moves
+         :StatusSelf, :StatusAlly, :StatusFoe,     # Status moves
+         :HealSelf,   :HealAlly,   :HealFoe        # Healing moves
+      #-------------------------------------------------------------------------
+      # Finalizes target.
+      case move
+      when :DamageSelf, :StatusSelf, :HealSelf     # Targets self
+        target = battler.index
+      when :DamageAlly, :StatusAlly, :HealAlly     # Targets an ally
+        if reTarget || targBattler.idxOwnSide != battler.idxOwnSide
+          battler.allAllies.each { |b| target = b.index if battler.near?(b) }
+          return if target == -1
+        end
+      when :DamageFoe, :StatusFoe, :HealFoe        # Targets a foe
+        if reTarget || targBattler.idxOwnSide == battler.idxOwnSide
+          target = battler.pbDirectOpposing(true).index
+        end
+      end
+      #-------------------------------------------------------------------------
+      # Finalizes move.
+      battler.moves.each_with_index do |m, i|
+        case move
+        when :DamageSelf, :DamageAlly
+          next if !m.damagingMove?                 # Finds any damaging move.
+        when :DamageFoe                            # Finds an effective damage-dealing move.
+          next if !m.damagingMove?
+          targBattler = @battle.battlers[target]
+          effct = Effectiveness.calculate(m.pbCalcType(battler), *targBattler.pbTypes(true))
+          next if Effectiveness.ineffective?(effct)
+          next if Effectiveness.not_very_effective?(effct)
+        when :StatusSelf, :StatusAlly, :StatusFoe  # Finds a status move.
+          next if !m.statusMove?
+          next if m.healingMove?
+        when :HealSelf, :HealAlly, :HealFoe        # Finds a healing move. 
+          next if !m.healingMove?		  
+        end
+        targ = GameData::Move.get(m.id).target
+        targ = GameData::Target.get(targ)
+        case move
+        when :DamageSelf, :StatusSelf, :HealSelf   # Finds a self-targeting move.
+          next if ![:User, :UserOrNearAlly, :UserAndAllies].include?(targ.id)
+        when :DamageAlly, :StatusAlly, :HealAlly   # Finds a move that targets an ally.
+          next if targ.num_targets == 0
+          next if ![:NearAlly, :UserOrNearAlly, :AllAllies, :NearOther, :Other].include?(targ.id)
+        when :DamageFoe, :StatusFoe, :HealFoe      # Finds a move that targets a foe.
+          next if targ.num_targets == 0
+          next if !targ.targets_foe
+        end
+        index = i
+      end
+      return if index == -1
+    #---------------------------------------------------------------------------
+    # Forces a move with a specified index or ID.
+    #---------------------------------------------------------------------------
+    when Integer, Symbol
+      #-------------------------------------------------------------------------
+      # Finalizes move.
+      if move.is_a?(Symbol)
+        return if !battler.pbHasMove?(move)
+        battler.moves.each_with_index { |m, i| index = i if m.id == move }
+      else
+        index = move
+      end
+      return if !battler.moves[index]
+      #-------------------------------------------------------------------------
+      # Finalizes target.
+      targ = GameData::Target.get(battler.moves[index].target)
+      if targ.num_targets != 0
+        if targ.targets_foe
+          if reTarget || targBattler.idxOwnSide == battler.idxOwnSide
+            target = battler.pbDirectOpposing(true).index
+          end
+        elsif targ == :NearAlly
+          if reTarget || targBattler.idxOwnSide != battler.idxOwnSide
+            target = -1
+            battler.allAllies.each { |b| target = b.index if battler.near?(b) }
+            return if target == -1
+          end
+        end
+      else
+        target = battler.index
+      end
+    end
+    #---------------------------------------------------------------------------
+    # Sets the battler's new choices for the forced move.
+    #---------------------------------------------------------------------------
+    if index >= 0 && @battle.pbCanChooseMove?(battler.index, index, false)
+      choice[1] = index
+      choice[2] = battler.moves[index]
+    end
+    choice[3] = target
+  end
+  
+  
+  #-----------------------------------------------------------------------------
   # Triggers the use of a special battle mechanic (Mega Evolution, Z-Moves, etc).
   #-----------------------------------------------------------------------------
   def midbattle_TriggerBattleMechanic(battler, value)
@@ -428,7 +588,7 @@ class Battle::Scene
       special, msg = value, nil
     end
     lowercase = (msg && msg[0] == "{" && msg[1] == "1") ? false : true
-    trainerName = @battle.pbGetOwnerName(battler.index)
+    trainerName = (battler.wild?) ? "" : @battle.pbGetOwnerName(battler.index)
     case special
     #---------------------------------------------------------------------------
     # Mega Evolution
@@ -491,6 +651,14 @@ class Battle::Scene
       battler.toggle_style_moves(battler.style_trigger)
       @battle.pbBattleStyle(battler.index)
     #---------------------------------------------------------------------------
+    # Terastallization
+    when :Terastallize, :Tera
+      return if !PluginManager.installed?("Terastal Phenomenon")
+      $player.tera_charged = true if battler.pbOwnedByPlayer?
+      return if !@battle.pbCanTerastallize?(battler.index)
+      @battle.pbDisplay(_INTL("#{msg}", battler.pbThis(lowercase), trainerName)) if msg
+      @battle.pbTerastallize(battler.index)
+    #---------------------------------------------------------------------------
     # Zodiac Powers
     when :ZodiacPower, :Zodiacpower, :Zodiac
       return if !PluginManager.installed?("Pokémon Birthsigns")
@@ -511,18 +679,59 @@ class Battle::Scene
       @battle.pbDisplay(_INTL("#{msg}", battler.pbThis(lowercase), trainerName)) if msg
       @battle.pbUseFocus(battler.index)
     #---------------------------------------------------------------------------
-    # Terastallization
-    when :Terastallize, :Tera
-      return if !PluginManager.installed?("ScarletVioletGimmick_TDW")
-      return if !@battle.pbCanTerastallize?(battler.index)
-      @battle.pbDisplay(_INTL("#{msg}", battler.pbThis(lowercase), trainerName)) if msg
-      @battle.pbTerastallize(battler.index)
-    #---------------------------------------------------------------------------
     # Custom Mechanic
     when :Custom
       return if !@battle.pbCanCustom?(battler.index)
       @battle.pbDisplay(_INTL("#{msg}", battler.pbThis(lowercase), trainerName)) if msg
       @battle.pbCustomMechanic(battler.index)
+    end
+  end
+  
+  
+  #-----------------------------------------------------------------------------
+  # Toggles the availability of a special battle mechanic (Mega Evolution, Z-Moves, etc).
+  #-----------------------------------------------------------------------------
+  def midbattle_ToggleBattleMechanic(battler, value)
+    case value
+    #---------------------------------------------------------------------------
+    # Mega Evolution
+    when :MegaEvolution, :Megaevolution, :MegaEvolve, :Megaevolve, :Mega
+      $game_switches[Settings::NO_MEGA_EVOLUTION] = !$game_switches[Settings::NO_MEGA_EVOLUTION]
+    #---------------------------------------------------------------------------
+    # Z-Moves
+    when :ZMove, :Zmove
+      return if !PluginManager.installed?("ZUD Mechanics")
+      $game_switches[Settings::NO_Z_MOVE] = !$game_switches[Settings::NO_Z_MOVE]
+    #---------------------------------------------------------------------------
+    # Ultra Burst
+    when :UltraBurst, :Ultraburst, :Ultra
+      return if !PluginManager.installed?("ZUD Mechanics")
+      $game_switches[Settings::NO_ULTRA_BURST] = !$game_switches[Settings::NO_ULTRA_BURST]
+    #---------------------------------------------------------------------------
+    # Dynamax
+    when :Dynamax, :Dmax
+      return if !PluginManager.installed?("ZUD Mechanics")
+      $game_switches[Settings::NO_DYNAMAX] = !$game_switches[Settings::NO_DYNAMAX]
+    #---------------------------------------------------------------------------
+    # Battle Styles
+    when :BattleStyle, :BattleStyles, :Battlestyle, :Battlestyles, :Style, :Styles
+      return if !PluginManager.installed?("PLA Battle Styles")
+      $game_switches[Settings::NO_STYLE_MOVES] = !$game_switches[Settings::NO_STYLE_MOVES]
+    #---------------------------------------------------------------------------
+    # Terastallization
+    when :Terastallize, :Tera
+      return if !PluginManager.installed?("Terastal Phenomenon")
+      $game_switches[Settings::NO_TERASTALLIZE] = !$game_switches[Settings::NO_TERASTALLIZE]
+    #---------------------------------------------------------------------------
+    # Zodiac Powers
+    when :ZodiacPower, :ZodiacPowers, :Zodiacpower, :Zodiacpowers, :Zodiac
+      return if !PluginManager.installed?("Pokémon Birthsigns")
+      $game_switches[Settings::NO_ZODIAC_POWER] = !$game_switches[Settings::NO_ZODIAC_POWER]
+    #---------------------------------------------------------------------------
+    # Focus Meter
+    when :Focus, :FocusFull, :FocusEmpty
+      return if !PluginManager.installed?("Focus Meter System")
+      $game_switches[Settings::NO_FOCUS_MECHANIC] = !$game_switches[Settings::NO_FOCUS_MECHANIC]
     end
   end
   
@@ -538,7 +747,7 @@ class Battle::Scene
       amt, msg = value, nil
     end
     lowercase = (msg && msg[0] == "{" && msg[1] == "1") ? false : true
-    trainerName = @battle.pbGetOwnerName(battler.index)
+    trainerName = (battler.wild?) ? "" : @battle.pbGetOwnerName(battler.index)
     #---------------------------------------------------------------------------
     # Recovers HP
     if amt > 0
@@ -616,7 +825,7 @@ class Battle::Scene
     end
     if msg.is_a?(String)
       lowercase = (msg[0] == "{" && msg[1] == "1") ? false : true
-      trainerName = @battle.pbGetOwnerName(battler.index)
+      trainerName = (battler.wild?) ? "" : @battle.pbGetOwnerName(battler.index)
       msg = _INTL("#{msg}", battler.pbThis(lowercase), trainerName)
     end
     case form
@@ -655,6 +864,7 @@ class Battle::Scene
       abil, msg = value, nil
     end
     abil = abil.sample if abil.is_a?(Array)
+    abil = battler.pokemon.ability_id if abil == :Reset
     if GameData::Ability.exists?(abil) && !battler.unstoppableAbility? && battler.ability != abil
       @battle.pbShowAbilitySplash(battler, true, false) if msg
       oldAbil = battler.ability
@@ -663,7 +873,7 @@ class Battle::Scene
         @battle.pbReplaceAbilitySplash(battler)
         if msg.is_a?(String)
           lowercase = (msg[0] == "{" && msg[1] == "1") ? false : true
-          trainerName = @battle.pbGetOwnerName(battler.index)
+          trainerName = (battler.wild?) ? "" : @battle.pbGetOwnerName(battler.index)
           @battle.pbDisplay(_INTL("#{msg}", battler.pbThis(lowercase), trainerName))
         else
           @battle.pbDisplay(_INTL("{1} acquired {2}!", battler.pbThis, battler.abilityName))
@@ -698,7 +908,7 @@ class Battle::Scene
       if msg
         if msg.is_a?(String)
           lowercase = (msg[0] == "{" && msg[1] == "1") ? false : true
-          trainerName = @battle.pbGetOwnerName(battler.index)
+          trainerName = (battler.wild?) ? "" : @battle.pbGetOwnerName(battler.index)
           @battle.pbDisplay(_INTL("#{msg}", battler.pbThis(lowercase), trainerName))
         else
           if battler.item

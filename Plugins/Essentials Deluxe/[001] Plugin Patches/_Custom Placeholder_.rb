@@ -40,10 +40,3 @@ end
 class Battle::AI
   def pbEnemyShouldCustom?(idxBattler); return false; end
 end
-
-#-------------------------------------------------------------------------------
-# Placeholder Databox icon display.
-#-------------------------------------------------------------------------------
-class Battle::Scene::PokemonDataBox < SpriteWrapper
-  def draw_custom_icon; end
-end

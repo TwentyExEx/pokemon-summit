@@ -16,12 +16,9 @@ class PokemonPokedexInfo_Scene
     @celestial = false
     metrics_data = GameData::SpeciesMetrics.get_species_form(@species, @form)
     @sprites["infosprite"].setSpeciesBitmap(@species, @gender, @form, @shiny, @shadow, false, false, false, @gmax, @celestial)
-    @sprites["infosprite"].unDynamax
     @sprites["formfront"]&.setSpeciesBitmap(@species, @gender, @form, @shiny, @shadow, false, false, false, @gmax, @celestial)
-    @sprites["formfront"]&.unDynamax
     if @sprites["formback"]
       @sprites["formback"].setSpeciesBitmap(@species, @gender, @form, @shiny, @shadow, true, false, false, @gmax, @celestial)
-      @sprites["formback"].unDynamax
       @sprites["formback"].y = 256
       @sprites["formback"].y += metrics_data.back_sprite[1] * 2
     end
@@ -208,7 +205,6 @@ class PokemonPokedex_Scene
     shiny = false if !Settings::POKEDEX_SHINY_FORMS
     shadow = false if !Settings::POKEDEX_SHADOW_FORMS
     @sprites["icon"].setSpeciesBitmap(species, gender, form, shiny, shadow, false, false, false, gmax)
-    @sprites["icon"].unDynamax
     if PluginManager.installed?("Generation 8 Pack Scripts")
       @sprites["icon"].constrict([224, 216]) if !defined?(EliteBattle)
     end

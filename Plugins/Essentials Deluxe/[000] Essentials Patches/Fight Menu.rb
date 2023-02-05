@@ -5,18 +5,27 @@
 
 
 #-------------------------------------------------------------------------------
+# Numbers associated with Fight Menu selections.
+#-------------------------------------------------------------------------------
+module DXTriggers
+  MENU_TRIGGER_CANCEL          = -1
+  MENU_TRIGGER_SHIFT_BATTLER   = -2
+  MENU_TRIGGER_MEGA_EVOLUTION  = -3
+  MENU_TRIGGER_Z_MOVE          = -4
+  MENU_TRIGGER_ULTRA_BURST     = -5
+  MENU_TRIGGER_DYNAMAX         = -6
+  MENU_TRIGGER_BATTLE_STYLE    = -7
+  MENU_TRIGGER_TERASTALLIZE    = -8
+  MENU_TRIGGER_ZODIAC_POWER    = -9
+  MENU_TRIGGER_CUSTOM_MECHANIC = -10
+  MENU_TRIGGER_FOCUS_METER     = -11
+end
+
+
+#-------------------------------------------------------------------------------
 # Revamped Fight Menu class.
 #-------------------------------------------------------------------------------
 class Battle::Scene::FightMenu < Battle::Scene::MenuBase
-  NoButton         =-1 
-  MegaButton       = 0
-  UltraBurstButton = 1
-  ZMoveButton      = 2
-  DynamaxButton    = 3
-  StylesButton     = 4
-  ZodiacButton     = 5
-  CustomButton	   = 6
-
   def initialize(viewport, z)
     super(viewport)
     self.x = 0
@@ -25,30 +34,35 @@ class Battle::Scene::FightMenu < Battle::Scene::MenuBase
     @shiftMode   = 0
     @focusMode   = 0
     @battleStyle = -1
+    @teraType    = -1
     if USE_GRAPHICS
       @buttonBitmap  = AnimatedBitmap.new(_INTL("Graphics/Pictures/Battle/cursor_fight"))
       @typeBitmap    = AnimatedBitmap.new(_INTL("Graphics/Pictures/types"))
       @shiftBitmap   = AnimatedBitmap.new(_INTL("Graphics/Pictures/Battle/cursor_shift"))
       @battleButtonBitmap = {}
-      @battleButtonBitmap[MegaButton] = AnimatedBitmap.new(_INTL("Graphics/Pictures/Battle/cursor_mega"))
+      @battleButtonBitmap[:mega] = AnimatedBitmap.new(_INTL("Graphics/Pictures/Battle/cursor_mega"))
       if PluginManager.installed?("ZUD Mechanics")
         path = "Graphics/Plugins/ZUD/Battle/"
-        @battleButtonBitmap[UltraBurstButton] = AnimatedBitmap.new(path + "cursor_ultra")
-        @battleButtonBitmap[ZMoveButton]      = AnimatedBitmap.new(path + "cursor_zmove")
-        @battleButtonBitmap[DynamaxButton]    = AnimatedBitmap.new(path + "cursor_dynamax")
+        @battleButtonBitmap[:ultra] = AnimatedBitmap.new(path + "cursor_ultra")
+        @battleButtonBitmap[:zmove] = AnimatedBitmap.new(path + "cursor_zmove")
+        @battleButtonBitmap[:dynamax] = AnimatedBitmap.new(path + "cursor_dynamax")
       end
       if PluginManager.installed?("PLA Battle Styles")
         path = "Graphics/Plugins/PLA Battle Styles/"
-        @battleButtonBitmap[StylesButton]     = AnimatedBitmap.new(path + "cursor_styles")
+        @battleButtonBitmap[:style] = AnimatedBitmap.new(path + "cursor_styles")
+      end
+      if PluginManager.installed?("Terastal Phenomenon")
+        path = "Graphics/Plugins/Terastal Phenomenon/"
+        @battleButtonBitmap[:tera] = AnimatedBitmap.new(path + "cursor_tera")
       end
       if PluginManager.installed?("Pokémon Birthsigns")
         path = "Graphics/Plugins/Birthsigns/UI/"
-        @battleButtonBitmap[ZodiacButton]     = AnimatedBitmap.new(path + "cursor_zodiac")
+        @battleButtonBitmap[:zodiac] = AnimatedBitmap.new(path + "cursor_zodiac")
       end
       if !nil_or_empty?(Settings::CUSTOM_MECH_BUTTON_PATH)
-        @battleButtonBitmap[CustomButton] = AnimatedBitmap.new(_INTL(Settings::CUSTOM_MECH_BUTTON_PATH))
+        @battleButtonBitmap[:custom] = AnimatedBitmap.new(_INTL(Settings::CUSTOM_MECH_BUTTON_PATH))
       end
-      @chosen_button = NoButton
+      @chosen_button = :none
       background = IconSprite.new(0, Graphics.height - 96, viewport)
       background.setBitmap("Graphics/Pictures/Battle/overlay_fight")
       addSprite("background", background)
@@ -134,17 +148,21 @@ class Battle::Scene::FightMenu < Battle::Scene::MenuBase
   
   def refreshBattleButton
     return if !USE_GRAPHICS
-    if @chosen_button == NoButton
+    if @chosen_button == :none
       @visibility["battleButton"] = false
       return
     end
     @battleButton.bitmap = @battleButtonBitmap[@chosen_button].bitmap
     @battleButton.x = self.x + 120
     case @chosen_button
-    when StylesButton
+    when :style
       @battleButton.y = self.y - @battleButtonBitmap[@chosen_button].height / 6
       @battleButton.src_rect.height = @battleButtonBitmap[@chosen_button].height / 6
       @battleButton.src_rect.y = @battleStyle * @battleButtonBitmap[@chosen_button].height / 6
+    when :tera
+      @battleButton.y = self.y - @battleButtonBitmap[@chosen_button].height / 20
+      @battleButton.src_rect.height = @battleButtonBitmap[@chosen_button].height / 20
+      @battleButton.src_rect.y = @teraType * @battleButtonBitmap[@chosen_button].height / 20
     else
       @battleButton.y = self.y - @battleButtonBitmap[@chosen_button].height / 2
       @battleButton.src_rect.height = @battleButtonBitmap[@chosen_button].height / 2
@@ -198,11 +216,7 @@ class Battle::Scene::FightMenu < Battle::Scene::MenuBase
 end
 
 def pbPlayBattleButton
-  if FileTest.audio_exist?("Audio/SE/GUI ZUD Button")
-    pbSEPlay("GUI ZUD Button", 80)
-  else
-    pbPlayDecisionSE
-  end
+  pbSEPlay("DX Power Button", 80)
 end
 
 
@@ -216,43 +230,47 @@ class Battle
     ret = false
     mechanics = []
     mechanics.push(pbCanMegaEvolve?(idxBattler))
-    mechanics.push((PluginManager.installed?("ZUD Mechanics"))      ? pbCanUltraBurst?(idxBattler)  : false)
-    mechanics.push((PluginManager.installed?("ZUD Mechanics"))      ? pbCanZMove?(idxBattler)       : false)
-    mechanics.push((PluginManager.installed?("ZUD Mechanics"))      ? pbCanDynamax?(idxBattler)     : false)
-    mechanics.push((PluginManager.installed?("PLA Battle Styles"))  ? pbCanUseStyle?(idxBattler)    : false)
-    mechanics.push((PluginManager.installed?("Pokémon Birthsigns")) ? pbCanZodiacPower?(idxBattler) : false)
+    mechanics.push((PluginManager.installed?("ZUD Mechanics"))       ? pbCanUltraBurst?(idxBattler)   : false)
+    mechanics.push((PluginManager.installed?("ZUD Mechanics"))       ? pbCanZMove?(idxBattler)        : false)
+    mechanics.push((PluginManager.installed?("ZUD Mechanics"))       ? pbCanDynamax?(idxBattler)      : false)
+    mechanics.push((PluginManager.installed?("PLA Battle Styles"))   ? pbCanUseStyle?(idxBattler)     : false)
+    mechanics.push((PluginManager.installed?("Terastal Phenomenon")) ? pbCanTerastallize?(idxBattler) : false)
+    mechanics.push((PluginManager.installed?("Pokémon Birthsigns"))  ? pbCanZodiacPower?(idxBattler)  : false)
     mechanics.push(pbCanCustom?(idxBattler))
-    [:mega, :ultra, :zmove, :dynamax, :style, :zodiac, :custom].each_with_index do |mechanic, i|
+    [:mega, :ultra, :zmove, :dynamax, :style, :tera, :zodiac, :custom].each_with_index do |mechanic, i|
       mechanics[i] = false if pbScriptedMechanic?(idxBattler, mechanic)
     end
     @scene.pbFightMenu(idxBattler, *mechanics) { |cmd|
       case cmd
-      when Settings::MENU_TRIGGER_CANCEL          # Cancel
-      when Settings::MENU_TRIGGER_MEGA_EVOLUTION  # Mega Evolution
+      when DXTriggers::MENU_TRIGGER_CANCEL           # Cancel
+      when DXTriggers::MENU_TRIGGER_MEGA_EVOLUTION   # Mega Evolution
         pbToggleRegisteredMegaEvolution(idxBattler)
         next false
-      when Settings::MENU_TRIGGER_ULTRA_BURST     # Ultra Burst
-        pbToggleRegisteredUltraBurst(idxBattler)  if PluginManager.installed?("ZUD Mechanics")
+      when DXTriggers::MENU_TRIGGER_ULTRA_BURST      # Ultra Burst
+        pbToggleRegisteredUltraBurst(idxBattler)   if PluginManager.installed?("ZUD Mechanics")
         next false
-      when Settings::MENU_TRIGGER_Z_MOVE          # Z-Moves
-        pbToggleRegisteredZMove(idxBattler)       if PluginManager.installed?("ZUD Mechanics")
+      when DXTriggers::MENU_TRIGGER_Z_MOVE           # Z-Moves
+        pbToggleRegisteredZMove(idxBattler)        if PluginManager.installed?("ZUD Mechanics")
         next false
-      when Settings::MENU_TRIGGER_DYNAMAX         # Dynamax
-        pbToggleRegisteredDynamax(idxBattler)     if PluginManager.installed?("ZUD Mechanics")
+      when DXTriggers::MENU_TRIGGER_DYNAMAX          # Dynamax
+        pbToggleRegisteredDynamax(idxBattler)      if PluginManager.installed?("ZUD Mechanics")
         next false
-      when Settings::MENU_TRIGGER_BATTLE_STYLE    # Style
-        pbToggleRegisteredStyle(idxBattler)       if PluginManager.installed?("PLA Battle Styles")
+      when DXTriggers::MENU_TRIGGER_BATTLE_STYLE     # Style
+        pbToggleRegisteredStyle(idxBattler)        if PluginManager.installed?("PLA Battle Styles")
         next false
-      when Settings::MENU_TRIGGER_ZODIAC_POWER    # Zodiac Powers
-        pbToggleRegisteredZodiacPower(idxBattler) if PluginManager.installed?("Pokémon Birthsigns")
+      when DXTriggers::MENU_TRIGGER_TERASTALLIZE     # Terastallize
+        pbToggleRegisteredTerastallize(idxBattler) if PluginManager.installed?("Terastal Phenomenon")
         next false
-      when Settings::MENU_TRIGGER_FOCUS_METER     # Focus
-        pbToggleRegisteredFocus(idxBattler)       if PluginManager.installed?("Focus Meter System")
+      when DXTriggers::MENU_TRIGGER_ZODIAC_POWER     # Zodiac Powers
+        pbToggleRegisteredZodiacPower(idxBattler)  if PluginManager.installed?("Pokémon Birthsigns")
         next false
-      when Settings::MENU_TRIGGER_CUSTOM_MECHANIC # Custom mechanic
+      when DXTriggers::MENU_TRIGGER_FOCUS_METER      # Focus
+        pbToggleRegisteredFocus(idxBattler)        if PluginManager.installed?("Focus Meter System")
+        next false
+      when DXTriggers::MENU_TRIGGER_CUSTOM_MECHANIC  # Custom mechanic
         pbToggleRegisteredCustom(idxBattler)
         next false
-      when Settings::MENU_TRIGGER_SHIFT_BATTLER   # Shift
+      when DXTriggers::MENU_TRIGGER_SHIFT_BATTLER    # Shift
         pbUnregisterMegaEvolution(idxBattler)
         if PluginManager.installed?("ZUD Mechanics")
           pbUnregisterUltraBurst(idxBattler)
@@ -261,9 +279,10 @@ class Battle
           @battlers[idxBattler].power_trigger = false
           @battlers[idxBattler].display_base_moves
         end
-        pbUnregisterStyle(idxBattler)       if PluginManager.installed?("PLA Battle Styles")
-        pbUnregisterZodiacPower(idxBattler) if PluginManager.installed?("Pokémon Birthsigns")
-        pbUnregisterFocus(idxBattler)       if PluginManager.installed?("Focus Meter System")
+        pbUnregisterStyle(idxBattler)        if PluginManager.installed?("PLA Battle Styles")
+        pbUnregisterTerastallize(idxBattler) if PluginManager.installed?("Terastal Phenomenon")
+        pbUnregisterZodiacPower(idxBattler)  if PluginManager.installed?("Pokémon Birthsigns")
+        pbUnregisterFocus(idxBattler)        if PluginManager.installed?("Focus Meter System")
         pbRegisterShift(idxBattler)
         pbUnregisterCustom(idxBattler)
         ret = true
@@ -293,8 +312,9 @@ class Battle::Scene
       :zmove    => params[2] || false,
       :dynamax  => params[3] || false,
       :style    => params[4] || false,
-      :zodiac   => params[5] || false,
-      :custom  	=> params[6] || false
+      :tera     => params[5] || false,
+      :zodiac   => params[6] || false,
+      :custom  	=> params[7] || false
     }
     return data
   end
@@ -317,6 +337,9 @@ class Battle::Scene
     end
     if PluginManager.installed?("PLA Battle Styles") && !@battle.pbScriptedMechanic?(idxBattler, :style)
       cw.battleStyle = battler.style_trigger if @battle.pbCanUseStyle?(idxBattler)
+    end
+    if PluginManager.installed?("Terastal Phenomenon")
+      cw.teraType = 0 if @battle.pbCanTerastallize?(idxBattler)
     end
     mechanic = pbFightMenu_BattleMechanic(data, cw)
     cw.setIndexAndMode(moveIndex, (mechanic) ? 1 : 0)
@@ -401,19 +424,10 @@ class Battle::Scene
   #-----------------------------------------------------------------------------
   def pbFightMenu_BattleMechanic(data, cw)
     mechanic = nil
-    button = Battle::Scene::FightMenu::NoButton
+    button = :none
     data.keys.each do |key|
       next if !data[key]
-      case key
-      when :mega    then button = Battle::Scene::FightMenu::MegaButton
-      when :ultra   then button = Battle::Scene::FightMenu::UltraButton
-      when :zmove   then button = Battle::Scene::FightMenu::ZMoveButton
-      when :dynamax then button = Battle::Scene::FightMenu::DynamaxButton
-      when :style   then button = Battle::Scene::FightMenu::StylesButton
-      when :zodiac  then button = Battle::Scene::FightMenu::ZodiacButton
-      when :custom  then button = Battle::Scene::FightMenu::CustomButton
-      end
-      mechanic = key
+      mechanic = button = key
     end
     cw.chosen_button = button
     return mechanic
@@ -430,6 +444,7 @@ class Battle::Scene
       when :zmove   then register = @battle.pbRegisteredZMove?(idxBattler)
       when :dynamax then register = @battle.pbRegisteredDynamax?(idxBattler)
       when :style   then register = @battle.pbRegisteredStyle?(idxBattler)
+      when :tera    then register = @battle.pbRegisteredTerastallize?(idxBattler)
       when :zodiac  then register = @battle.pbRegisteredZodiacPower?(idxBattler)
       when :custom  then register = @battle.pbRegisteredCustom?(idxBattler)
       end
@@ -445,10 +460,8 @@ class Battle::Scene
   def pbFightMenu_Confirm(mechanic, battler, cw)
     pbHidePluginUI
     ret = cw.index
-    cancel = Settings::MENU_TRIGGER_CANCEL
+    cancel = DXTriggers::MENU_TRIGGER_CANCEL
     case mechanic
-    when :ultra
-      battler.power_trigger = false
     when :zmove
       if cw.mode == 2
         if !battler.hasCompatibleZMove?(battler.moves[cw.index])
@@ -472,6 +485,8 @@ class Battle::Scene
           ret = cancel
         end
       end
+    else
+      battler.power_trigger = false
     end
     pbPlayDecisionSE if ret != cancel
     return ret
@@ -492,14 +507,14 @@ class Battle::Scene
         battler.display_base_moves
         battler.power_trigger = false
       end
-    when :ultra
-      battler.power_trigger = false
     when :style
       battler.style_trigger = 0
       battler.toggle_style_moves
+    else
+      battler.power_trigger = false
     end
     pbPlayCancelSE
-    return Settings::MENU_TRIGGER_CANCEL
+    return DXTriggers::MENU_TRIGGER_CANCEL
   end
   
   #-----------------------------------------------------------------------------
@@ -513,6 +528,7 @@ class Battle::Scene
     when :zmove   then ret, refresh = pbFightMenu_ZMove(battler, cw)
     when :dynamax then ret, refresh = pbFightMenu_Dynamax(battler, cw)
     when :style   then ret, refresh = pbFightMenu_BattleStyle(battler, cw)
+    when :tera    then ret, refresh = pbFightMenu_Terastallize(battler, cw)
     when :zodiac  then ret, refresh = pbFightMenu_ZodiacPower(battler, cw)
     when :custom  then ret, refresh = pbFightMenu_CustomMechanic(battler, cw)
     end
@@ -523,8 +539,13 @@ class Battle::Scene
   # Toggles the use of Mega Evolution.
   #-----------------------------------------------------------------------------
   def pbFightMenu_MegaEvolution(battler, cw)
-    pbPlayDecisionSE
-    return Settings::MENU_TRIGGER_MEGA_EVOLUTION, false
+	battler.power_trigger = !battler.power_trigger
+    if battler.power_trigger
+      pbPlayBattleButton
+    else
+      pbPlayCancelSE
+    end
+    return DXTriggers::MENU_TRIGGER_MEGA_EVOLUTION, false
   end
   
   #-----------------------------------------------------------------------------
@@ -532,7 +553,7 @@ class Battle::Scene
   #-----------------------------------------------------------------------------
   def pbFightMenu_CustomMechanic(battler, cw)
     pbPlayDecisionSE
-    return Settings::MENU_TRIGGER_CUSTOM_MECHANIC, false
+    return DXTriggers::MENU_TRIGGER_CUSTOM_MECHANIC, false
   end
   
   #-----------------------------------------------------------------------------
@@ -541,7 +562,7 @@ class Battle::Scene
   def pbFightMenu_Shift
     pbHidePluginUI
     pbPlayDecisionSE
-    return Settings::MENU_TRIGGER_SHIFT_BATTLER
+    return DXTriggers::MENU_TRIGGER_SHIFT_BATTLER
   end
   
   #-----------------------------------------------------------------------------

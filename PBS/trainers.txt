@@ -78,7 +78,6 @@ Pokemon = GOLEM,50
     IV = 21,21,21,21,21,21
 #-------------------------------
 [LEADER_Brock,Brock,4]
-Items = TERAORB
 LoseText = Your Pokémon's powerful attacks overcame my rock-hard resistance...
 Pokemon = KABUTOPS,50
     Moves = RAZORSHELL,STONEAXE,AQUAJET,XSCISSOR
@@ -100,7 +99,6 @@ Pokemon = GOLEM,50
     IV = 23,23,23,23,23,23
 #-------------------------------
 [LEADER_Brock,Brock,5]
-Items = TERAORB
 LoseText = Your Pokémon's powerful attacks overcame my rock-hard resistance...
 Pokemon = KABUTOPS,50
     Moves = RAZORSHELL,STONEAXE,AQUAJET,XSCISSOR

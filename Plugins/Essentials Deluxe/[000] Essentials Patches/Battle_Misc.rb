@@ -1,5 +1,5 @@
 #===============================================================================
-# Revamps miscellaneous Pokemon and battler-related code in base Essentials to 
+# Revamps miscellaneous Pokemon and battle-related code in base Essentials to 
 # allow for plugin compatibility.
 #===============================================================================
 
@@ -33,28 +33,14 @@ class Pokemon
   alias dx_initialize initialize  
   def initialize(*args)
     dx_initialize(*args)
-    @trainer_ace  = nil
+    @trainer_ace = false
   end
   
   # Compatibility across multiple plugins.
   def dynamax?;   return false; end
   def gmax?;      return false; end
+  def tera?;      return false; end
   def celestial?; return false; end
-end
-
-
-#-------------------------------------------------------------------------------
-# Pokemon sprite compatibility.
-#-------------------------------------------------------------------------------
-class Sprite
-  def applyDynamax(arg);     end
-  def unDynamax;             end
-  def applyDynamaxIcon(arg); end
-end
-
-class Battle::Scene::BattlerSprite < RPG::Sprite
-  def applyDynamax(arg); end
-  def unDynamax;         end
 end
 
 
@@ -63,6 +49,7 @@ end
 #-------------------------------------------------------------------------------
 class Battle::Battler
   attr_accessor :base_moves
+  attr_accessor :power_trigger
   
   def ace?; return @pokemon&.ace?; end
   
@@ -70,7 +57,8 @@ class Battle::Battler
   def pbInitEffects(batonPass)
     dx_pbInitEffects(batonPass)
     @base_moves = []
-    @effects[PBEffects::CriticalBoost]    = 0
+    @power_trigger = false
+    @effects[PBEffects::CriticalBoost]    = 0 if !batonPass
     @effects[PBEffects::EncoreRestore]    = []
     @effects[PBEffects::TransformPokemon] = nil
   end
@@ -89,7 +77,7 @@ class Battle::Battler
         c = @power_index
         pbSetPP(@base_moves[c], @base_moves[c].pp - 1)
       end
-      if PluginManager.installed?("PLA Battle Styles") && @battle_style > 0
+      if PluginManager.installed?("PLA Battle Styles") && inStyle?
         pbSetPP(move, move.pp - 1) if move.pp > 0 && move.mastered?
       end
     end
@@ -248,19 +236,23 @@ class Battle::Battler
   #-----------------------------------------------------------------------------
   # Compatibility across multiple plugins.
   #-----------------------------------------------------------------------------
-  def hasZMove?;       return false; end
-  def hasUltra?;       return false; end
-  def ultra?;          return false; end
-  def hasDynamax?;     return false; end
-  def dynamax?;        return false; end
-  def dynamax_able?;   return false; end
-  def hasGmax?;        return false; end
-  def gmax?;           return false; end
-  def gmax_factor?;    return false; end
-  def hasStyles?;      return false; end
-  def hasZodiacPower?; return false; end
-  def celestial?;      return false; end
-  def focus_meter;     return 0;     end
+  def hasZMove?;       		return false; end
+  def hasUltra?;       		return false; end
+  def ultra?;          		return false; end
+  def hasDynamax?;     		return false; end
+  def hasDynamaxAvail?;		return false; end
+  def dynamax?;        		return false; end
+  def dynamax_able?;   		return false; end
+  def hasGmax?;        		return false; end
+  def gmax?;           		return false; end
+  def gmax_factor?;    		return false; end
+  def hasStyles?;      		return false; end
+  def inStyle?;        		return false; end
+  def tera?;           		return false; end
+  def hasTera?;        		return false; end
+  def hasZodiacPower?; 		return false; end
+  def celestial?;      		return false; end
+  def focus_meter;     		return 0;     end
 end
 
 
@@ -283,14 +275,18 @@ class Battle::FakeBattler
   def hasUltra?;            return false; end
   def ultra?;               return false; end
   def hasDynamax?;          return false; end
+  def hasDynamaxAvail?;     return false; end
   def dynamax?;             return false; end
   def gmax?;                return false; end
   def gmax_factor?;         return false; end
   def hasStyles?;           return false; end
+  def inStyle?;             return false; end
+  def hasTera?;             return false; end
+  def tera?;                return false; end
   def birthsign;            return nil;   end
   def celestial?;           return false; end
   def blessed?;             return false; end
-  def hasBirthsign?(*args); return false; end
+  def hasBirthsign?(arg);   return false; end
   def hasZodiacPower?;      return false; end
   def focus_meter;          return 0;     end
 end
@@ -352,43 +348,6 @@ end
 
 
 #-------------------------------------------------------------------------------
-# Sets up battler icons for displays used in other plugins.
-#-------------------------------------------------------------------------------
-class Battle::Scene
-  alias dx_pbInitSprites pbInitSprites
-  def pbInitSprites
-    dx_pbInitSprites
-    if !pbInSafari?
-      @battle.allBattlers.each do |b|
-        @sprites["battler_icon#{b.index}"] = PokemonIconSprite.new(b.pokemon, @viewport)
-        @sprites["battler_icon#{b.index}"].setOffset(PictureOrigin::CENTER)
-        @sprites["battler_icon#{b.index}"].visible = false
-        @sprites["battler_icon#{b.index}"].z = 400
-        pbAddSpriteOutline(["battler_icon#{b.index}", @viewport, b.pokemon, PictureOrigin::CENTER])
-      end
-    end
-  end
-  
-  #-----------------------------------------------------------------------------
-  # Compatibility with SOS Battles.
-  #-----------------------------------------------------------------------------
-  if PluginManager.installed?("SOS Battles")
-    alias dx_pbSOSJoin pbSOSJoin
-    def pbSOSJoin(battlerindex, pkmn)
-      dx_pbSOSJoin(battlerindex, pkmn)
-      if !@sprites["battler_icon#{battlerindex}"]
-        @sprites["battler_icon#{battlerindex}"] = PokemonIconSprite.new(pkmn, @viewport)
-        @sprites["battler_icon#{battlerindex}"].setOffset(PictureOrigin::CENTER)
-        @sprites["battler_icon#{battlerindex}"].visible = false
-        @sprites["battler_icon#{battlerindex}"].z = 400
-        pbAddSpriteOutline(["battler_icon#{battlerindex}", @viewport, pkmn, PictureOrigin::CENTER])
-      end
-    end
-  end
-end
-
-
-#-------------------------------------------------------------------------------
 # Correctly records seen shadow Pokemon.
 #-------------------------------------------------------------------------------
 class Battle
@@ -425,5 +384,11 @@ module Battle::CatchAndStoreMixin
       pbStorePokemon(pkmn)
     end
     @caughtPokemon.clear
+  end
+  
+  alias dx_pbStorePokemon pbStorePokemon
+  def pbStorePokemon(pkmn)
+    pkmn.ace = false
+    dx_pbStorePokemon(pkmn)
   end
 end

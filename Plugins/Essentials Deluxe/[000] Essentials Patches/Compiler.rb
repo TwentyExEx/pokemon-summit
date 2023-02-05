@@ -22,6 +22,8 @@ module GameData
     attr_accessor :pocket
     attr_accessor :real_description
     attr_accessor :real_held_description
+    attr_accessor :field_use
+    attr_accessor :battle_use
     attr_accessor :flags
   end
 
@@ -164,7 +166,8 @@ module Compiler
           f.write(sprintf("    Birthsign = %s\r\n", pkmn[:birthsign])) if PluginManager.installed?("Pokémon Birthsigns") && pkmn[:birthsign]
           f.write(sprintf("    DynamaxLvl = %d\r\n", pkmn[:dynamax_lvl])) if PluginManager.installed?("ZUD Mechanics") && pkmn[:dynamax_lvl]
           f.write("    Gigantamax = yes\r\n") if PluginManager.installed?("ZUD Mechanics") && pkmn[:gmaxfactor]
-          f.write("    Mastery = yes\r\n") if PluginManager.installed?("PLA Battle Styles") && pkmn[:mastery] 
+          f.write("    Mastery = yes\r\n") if PluginManager.installed?("PLA Battle Styles") && pkmn[:mastery]
+          f.write(sprintf("    TeraType = %s\r\n", pkmn[:teratype])) if PluginManager.installed?("Terastal Phenomenon") && pkmn[:teratype]
         end
       end
     }
@@ -382,6 +385,16 @@ module Compiler
             when "Pocket"
               if item.pocket != contents[key]
                 item.pocket = contents[key]
+                compiled = true
+              end
+            when "FieldUse"
+              if item.field_use != contents[key]
+                item.field_use = contents[key]
+                compiled = true
+              end
+            when "BattleUse"
+              if item.battle_use != contents[key]
+                item.battle_use = contents[key]
                 compiled = true
               end
             end
@@ -940,15 +953,16 @@ module PluginManager
   end
   
   # Used to ensure all plugins that rely on Essentials Deluxe are up to date.
-  def self.dx_plugin_check(version = "1.1.9")
+  def self.dx_plugin_check(version = "1.2.1")
     if self.installed?("Essentials Deluxe", version, true)
-      {"ZUD Mechanics"         => "1.1.4",
-       "Enhanced UI"           => "1.0.8",
-       "Focus Meter System"    => "1.0.7",
-       "PLA Battle Styles"     => "1.0.5",
+      {"ZUD Mechanics"         => "1.1.6",
+       "Enhanced UI"           => "1.0.9",
+       "Focus Meter System"    => "1.0.9",
+       "PLA Battle Styles"     => "1.0.7",
        "Improved Field Skills" => "1.0.4",
        "Legendary Breeding"    => "1.0.1",
-       "Improved Item Text"    => "1.0",
+       "Improved Item Text"    => "1.0.1",
+       "Terastal Phenomenon"   => "1.0",
        "Pokémon Birthsigns"    => "1.0"
       }.each do |p_name, v_num|
         next if !self.installed?(p_name)
@@ -964,7 +978,7 @@ end
 
 
 #-------------------------------------------------------------------------------
-# Debug menus.
+# General debug menus.
 #-------------------------------------------------------------------------------
 MenuHandlers.add(:debug_menu, :dx_menu, {
   "name"        => _INTL("Deluxe Plugins..."),
@@ -973,7 +987,46 @@ MenuHandlers.add(:debug_menu, :dx_menu, {
 })
 
 
+MenuHandlers.add(:debug_menu, :deluxe_menu, {
+  "name"        => _INTL("Essentials Deluxe..."),
+  "parent"      => :dx_menu,
+  "description" => _INTL("Edit settings related to the Essentials Deluxe plugin.")
+})
+
+
+MenuHandlers.add(:debug_menu, :debug_mega, {
+  "name"        => _INTL("Toggle Switch"),
+  "parent"      => :deluxe_menu,
+  "description" => _INTL("Toggles the availability of Mega Evolution functionality."),
+  "effect"      => proc {
+    $game_switches[Settings::NO_MEGA_EVOLUTION] = !$game_switches[Settings::NO_MEGA_EVOLUTION]
+    toggle = ($game_switches[Settings::NO_MEGA_EVOLUTION]) ? "disabled" : "enabled"
+    pbMessage(_INTL("Mega Evolution {1}.", toggle))
+  }
+})
+
+
+#-------------------------------------------------------------------------------
+# Pokemon debug menus.
+#-------------------------------------------------------------------------------
 MenuHandlers.add(:pokemon_debug_menu, :dx_pokemon_menu, {
-  "name"        => _INTL("Deluxe Options..."),
-  "parent"      => :main
+  "name"   => _INTL("Deluxe Options..."),
+  "parent" => :main
+})
+
+
+MenuHandlers.add(:pokemon_debug_menu, :set_ace, {
+  "name"   => _INTL("Toggle Ace"),
+  "parent" => :dx_pokemon_menu,
+  "effect" => proc { |pkmn, pkmnid, heldpoke, settingUpBattle, screen|
+    if pkmn.ace?
+      pkmn.ace = false
+      toggle = "unflagged"
+    else
+      pkmn.ace = true
+      toggle = "flagged"
+    end
+    screen.pbDisplay(_INTL("{1} is {2} as an ace Pokémon.", pkmn.name, toggle))
+    next false
+  }
 })
