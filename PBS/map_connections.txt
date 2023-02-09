@@ -1,2 +1,4 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
+# Courtyard B2 (25) - Courtyard B1 (27)
+25,West,0,27,East,0
