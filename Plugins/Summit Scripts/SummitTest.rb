@@ -33,14 +33,21 @@ def pbSummitCourtyardTest
   # trainerlist = []
   # trainerlist.push($game_variables[44].uniq)
   trainerlist = [:LEADER_Brock,:LEADER_Misty,:LEADER_Erika,:LEADER_Janine,:LEADER_Sabrina,:LEADER_Blaine]
-  trainersonmap = []
+  trainersvisible = []
 
-  until trainersonmap.length == 3 do
-    trainer = trainerlist[rand(trainerlist.length)]
-    next if trainersonmap.include?(trainer)
-    trainersonmap.push(trainer)
-    $game_map.events[trainersonmap.length].character_name = trainer.to_s
-  end
+  for map in $MapFactory.maps
+      for event in map.events.values
+        pbMessage("reroll event")
+        if event.name.include?("courtyardTrainer")
+          trainer = trainerlist[rand(trainerlist.length)]
+          p trainer
+          next if trainersvisible.include?(trainer.to_s)
+          trainersvisible.push(trainer.to_s)
+          event.character_name = trainer.to_s
+          pbMessage("set")
+        end
+      end
+    end
 end
 
 def pbSummitCourtyardTalkTest
