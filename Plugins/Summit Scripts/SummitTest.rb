@@ -1,24 +1,183 @@
 def pbSummitTeamBuilder
   loop do 
+    # Start, select species
     msgwindow = pbCreateMessageWindow()
-    pbMessageDisplay(msgwindow, _ISPRINTF("Enter a Pokémon species.",))
-    @species = pbFreeText(msgwindow,"",false,12)
+    pbMessageDisplay(msgwindow, _ISPRINTF("Enter a Pokémon species."))
+    species = pbFreeText(msgwindow,"",false,12)
     pbDisposeMessageWindow(msgwindow)
-    @pkmn = @species.upcase.to_sym
-    if GameData::Species.try_get(@pkmn)
-      dispname = GameData::Species.get(@pkmn).real_name
-      if dispname.starts_with_vowel?
-        pbMessage(_INTL("You have received an {1}.",dispname))
+    @species = species.upcase.to_sym
+    if GameData::Species.try_get(@species)
+      dispname = GameData::Species.get(@species).real_name
+      pbMessage(_INTL("Creating {1}...",dispname))
+      pbSummitGivePokemon(@species)
+      @pkmn = $player.party[$player.party.length-1]
+
+        # Set form, if any
+        cmd2 = 0
+        formcmds = [[], []]
+        GameData::Species.each do |sp|
+          next if sp.species != @pkmn.species
+          form_name = sp.form_name
+          form_name = _INTL("Unnamed form") if !form_name || form_name.empty?
+          form_name = sprintf("%d: %s", sp.form, form_name)
+          formcmds[0].push(sp.form)
+          formcmds[1].push(form_name)
+          cmd2 = sp.form if @pkmn.form == sp.form
+        end
+        if formcmds[0].length > 1
+          cmd2 = pbMessage(_INTL("Set the Pokémon's form."), formcmds[1], cmd2)
+          next if cmd2 < 0
+          f = formcmds[0][cmd2]
+          if f != @pkmn.form
+            if MultipleForms.hasFunction?(@pkmn, "getForm")
+              next if !pbConfirm(_INTL("This species decides its own form. Override?"))
+              @pkmn.forced_form = f
+            end
+            @pkmn.form = f
+          end
+        end
+
+        # Set possible ability
+        abils = @pkmn.getAbilityList
+        ability_commands = []
+        abil_cmd = 0
+        abils.each do |i|
+          ability_commands.push(((i[1] < 2) ? "" : "(H) ") + GameData::Ability.get(i[0]).name)
+          abil_cmd = ability_commands.length - 1 if @pkmn.ability_id == i[0]
+        end
+        abil_cmd = pbMessage(_INTL("Choose an ability."), ability_commands, abil_cmd)
+        next if abil_cmd < 0
+        @pkmn.ability_index = abils[abil_cmd][1]
+        @pkmn.ability = nil
+
+        # Set tera type
+        pbMessage(_INTL("Set Pokémon's Tera Type."))
+        default = GameData::Type.get(@pkmn.tera_type).icon_position
+        newType = pbChooseTypeList(default < 10 ? default + 1 : default)
+        @pkmn.tera_type = newType
+
+        # Select moves
+        4.times do |i|
+          @pkmn.forget_move_at_index(0)
+        end
+        pbMessage(_INTL("Select moves for your {1}.",dispname))
+        loop do
+          if @pkmn.moves.length <= 3
+          @scene = MoveRelearner_Scene.new
+          screen = MoveRelearnerScreen.new(@scene)
+          retval = screen.pbStartScreen(@pkmn)
+          else
+            break
+          end
+        end
+
+        # Set EVs
+        loop do
+          totalev = 0
+          evcommands = []
+          ev_id = []
+          GameData::Stat.each_main do |s|
+            evcommands.push(s.name + " (#{@pkmn.ev[s.id]})")
+            ev_id.push(s.id)
+            totalev += @pkmn.ev[s.id]
+          end
+          cmd2 = pbMessage(_INTL("Change which EV?\nTotal: {1}/{2} ({3}%)",
+                                             totalev, Pokemon::EV_LIMIT,
+                                             100 * totalev / Pokemon::EV_LIMIT), evcommands, -1)
+          if cmd2 != -1
+            params = ChooseNumberParams.new
+            upperLimit = 0
+            GameData::Stat.each_main { |s| upperLimit += @pkmn.ev[s.id] if s.id != ev_id[cmd2] }
+            upperLimit = Pokemon::EV_LIMIT - upperLimit
+            upperLimit = [upperLimit, Pokemon::EV_STAT_LIMIT].min
+            thisValue = [@pkmn.ev[ev_id[cmd2]], upperLimit].min
+            params.setRange(0, upperLimit)
+            params.setDefaultValue(thisValue)
+            params.setCancelValue(thisValue)
+            f = pbMessageChooseNumber(_INTL("Set the EV for {1} (max. {2}).",
+                                            GameData::Stat.get(ev_id[cmd2]).name, upperLimit), params)
+            if f != @pkmn.ev[ev_id[cmd2]]
+              @pkmn.ev[ev_id[cmd2]] = f
+              @pkmn.calc_stats
+            end
+          elsif cmd2 == -1
+            if totalev != Pokemon::EV_LIMIT
+              cmd = pbConfirmMessage(_INTL("You have not allocated all possible EVs.\\n Allocate remaining EVs?"))
+              if cmd == false
+                cmd = pbConfirmMessage(_INTL("Create Pokémon with unallocated EVs?"))
+                break if cmd == true
+              end
+            else
+              cmd = pbConfirmMessage(_INTL("Confirm EV allocation?"))
+              if cmd == true
+                break
+              end
+            end
+          end
+        end
+
+        # Set nature
+        loop do
+          commands = []
+          ids = []
+          GameData::Nature.each do |nature|
+            if nature.stat_changes.length == 0
+              commands.push(_INTL("{1} (---)", nature.real_name))
+            else
+              plus_text = ""
+              minus_text = ""
+              nature.stat_changes.each do |change|
+                if change[1] > 0
+                  plus_text += "/" if !plus_text.empty?
+                  plus_text += GameData::Stat.get(change[0]).name_brief
+                elsif change[1] < 0
+                  minus_text += "/" if !minus_text.empty?
+                  minus_text += GameData::Stat.get(change[0]).name_brief
+                end
+              end
+              commands.push(_INTL("{1} (+{2}, -{3})", nature.real_name, plus_text, minus_text))
+            end
+            ids.push(nature.id)
+          end
+          cmd = pbMessage("Set Pokémon's nature.", commands)
+          if cmd >= 0
+            @pkmn.nature = ids[cmd]
+            break
+          end
+        end
+
+        # Set item
+        loop do
+          msgwindow = pbCreateMessageWindow()
+          pbMessageDisplay(msgwindow, _ISPRINTF("Enter an item to hold."))
+          item = pbFreeText(msgwindow,"",false,12)
+          item = item.gsub(/\s+/, "")
+          pbDisposeMessageWindow(msgwindow)
+          @item = item.upcase.to_sym
+          if GameData::Item.try_get(@item)
+            @pkmn = $player.party[$player.party.length-1]
+            @pkmn.item = @item
+            break
+          else
+            pbMessage(_INTL("Invalid held item."))
+          end
+        end
+
+      # End, ask if adding
+      if $player.party.length < 6
+        cmd = pbMessage(_INTL("You have {1} Pokémon in your party.\\1 Create another Pokémon?",$player.party.length),["Yes","No"],1)
+        break if cmd == 1
       else
-        pbMessage(_INTL("You have received a {1}.",dispname))
+        cmd = pbMessage(_INTL("Team creation complete."))
+        break
       end
-      pbSummitGivePokemon(@pkmn)
-      cmd = pbMessage(_INTL("You have {1} Pokémon in your party.\\n Create another Pokémon?",$player.party.length),["Yes","No"],1)
-      break if cmd == 1
     else
       pbMessage(_INTL("Invalid Pokémon species."))
-      cmd = pbMessage(_INTL("Cancel Pokémon creation?"),["Yes","No"],1)
-      pbMessage(_INTL("Pokémon creation cancelled.")) if cmd == 1
+      cmd = pbConfirmMessageSerious(_INTL("Cancel Pokémon creation?"))
+      if cmd == true
+        pbMessage(_INTL("Pokémon creation cancelled.")) 
+        break
+      end
     end
   end
 end
