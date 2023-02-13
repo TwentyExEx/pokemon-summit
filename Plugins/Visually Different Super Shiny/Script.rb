@@ -239,13 +239,9 @@ end
 class Battle::Scene::PokemonDataBox < Sprite
 	def draw_shiny_icon
 		return if !@battler.shiny?
-		if @battler.effects[PBEffects::MaxRaidBoss]
-			pbDrawImagePositions(self.bitmap, [["Graphics/Plugins/ZUD/Battle/shiny", 0, 30]])
-		else
-			shiny_x = (@battler.opposes?(0)) ? 206 : -6
-			shiny_filename = (@battler.super_shiny?) ? "Graphics/Plugins/Visually Different Super Shiny/super shiny" : "Graphics/Pictures/shiny"
-			pbDrawImagePositions(self.bitmap, [[shiny_filename, @spriteBaseX + shiny_x, 36]])
-		end
+		shiny_x = (@battler.opposes?(0)) ? 206 : -6
+		shiny_filename = (@battler.super_shiny?) ? "Graphics/Plugins/Visually Different Super Shiny/super shiny" : "Graphics/Pictures/shiny"
+		pbDrawImagePositions(self.bitmap, [[shiny_filename, @spriteBaseX + shiny_x, 36]])
 	end
 end
 
