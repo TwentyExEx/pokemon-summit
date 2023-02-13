@@ -48,7 +48,7 @@ class PokemonSummary_Scene
     tera_drawPageOne
     if Settings::SUMMARY_TERA_TYPES
       overlay = @sprites["overlay"].bitmap
-      coords = (PluginManager.installed?("BW Summary Screen")) ? [122, 129] : [330, 143]
+      coords = (PluginManager.installed?("BW Summary Screen")) ? [122, 129] : [419, 123]
       pbDisplayTeraType(@pokemon, overlay, coords[0], coords[1])
     end
   end

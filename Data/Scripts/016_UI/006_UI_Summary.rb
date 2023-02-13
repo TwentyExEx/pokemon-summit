@@ -427,7 +427,8 @@ class PokemonSummary_Scene
     # Write various bits of text
     textpos = [
       [_INTL("OT/"), 238, 68, 0, base, shadow],
-      [_INTL("Type/"), 238, 96, 0, base_dark, shadow_dark]
+      [_INTL("Type/"), 238, 96, 0, base_dark, shadow_dark],
+      [_INTL("Tera Type/"), 238, 130, 0, base_dark, shadow_dark]
     ]
     # Write Original Trainer's name and ID number
     if @pokemon.owner.name.empty?
@@ -552,30 +553,8 @@ class PokemonSummary_Scene
       memo += _INTL("<c3=000000,D0D0C8>{1} {2}, {3}\n", date, month, year)
     end
     # Write map name Pokémon was received on
-    mapname = pbGetMapNameFromId(@pokemon.obtain_map)
-    mapname = @pokemon.obtain_text if @pokemon.obtain_text && !@pokemon.obtain_text.empty?
-    mapname = _INTL("Faraway place") if nil_or_empty?(mapname)
-    memo += sprintf("<c3=E00808,F8B870>%s\n", mapname)
     # Write how Pokémon was obtained
-    mettext = [_INTL("Met at Lv. {1}.", @pokemon.obtain_level),
-               _INTL("Egg received."),
-               _INTL("Traded at Lv. {1}.", @pokemon.obtain_level),
-               "",
-               _INTL("Had a fateful encounter at Lv. {1}.", @pokemon.obtain_level)][@pokemon.obtain_method]
-    memo += sprintf("<c3=000000,D0D0C8>%s\n", mettext) if mettext && mettext != ""
     # If Pokémon was hatched, write when and where it hatched
-    if @pokemon.obtain_method == 1
-      if @pokemon.timeEggHatched
-        date  = @pokemon.timeEggHatched.day
-        month = pbGetMonthName(@pokemon.timeEggHatched.mon)
-        year  = @pokemon.timeEggHatched.year
-        memo += _INTL("<c3=000000,D0D0C8>{1} {2}, {3}\n", date, month, year)
-      end
-      mapname = pbGetMapNameFromId(@pokemon.hatched_map)
-      mapname = _INTL("Faraway place") if nil_or_empty?(mapname)
-      memo += sprintf("<c3=E00808,F8B870>%s\n", mapname)
-      memo += _INTL("<c3=000000,D0D0C8>Egg hatched.\n")
-    end
     # Write characteristic
     if showNature
       best_stat = nil
@@ -624,7 +603,7 @@ class PokemonSummary_Scene
       memo += sprintf("<c3=000000,D0D0C8>%s\n", characteristics[best_stat][best_iv % 5])
     end
     # Write all text
-    drawFormattedTextEx(overlay, 238, 130, 268, memo)
+    drawFormattedTextEx(overlay, 238, 164, 268, memo)
   end
 
   def drawPageTwo
