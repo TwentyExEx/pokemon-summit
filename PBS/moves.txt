@@ -399,13 +399,13 @@ Description = The user swings both arms and hits the target. Ignores the target'
 Name = Night Daze
 Type = DARK
 Category = Special
-Power = 85
-Accuracy = 95
+Power = 90
+Accuracy = 90
 TotalPP = 10
 Target = NearOther
 FunctionCode = LowerTargetAccuracy1
 Flags = CanProtect,CanMirrorMove
-EffectChance = 40
+EffectChance = 30
 Description = The user lets loose a pitch-black shock wave at its target. It may also lower the target's accuracy.
 #-------------------------------
 [CRUNCH]
@@ -2931,7 +2931,7 @@ Description = The user soars, then strikes on the second turn. It can also be us
 Name = Bounce
 Type = FLYING
 Category = Physical
-Power = 85
+Power = 95
 Accuracy = 85
 TotalPP = 5
 Target = Other
@@ -3203,7 +3203,7 @@ Description = The user emits a sinister ray. This move can be used on the target
 Name = Phantom Force
 Type = GHOST
 Category = Physical
-Power = 90
+Power = 100
 Accuracy = 100
 TotalPP = 10
 Target = NearOther
@@ -4910,12 +4910,12 @@ Description = The target is slugged by a punch thrown with muscle-packed power.
 Name = Razor Wind
 Type = NORMAL
 Category = Special
-Power = 80
+Power = 120
 Accuracy = 100
 TotalPP = 10
 Target = AllNearFoes
 FunctionCode = TwoTurnAttack
-Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
+Flags = CanProtect,CanMirrorMove,HighCriticalHitRate,Wind
 Description = A two-turn attack. Blades of wind hit the foe on the second turn. Critical hits land more easily.
 #-------------------------------
 [SLAM]
@@ -5462,9 +5462,9 @@ Description = Things such as long bodies or tentacles are used to bind and squee
 #-------------------------------
 [DOUBLESLAP]
 Name = Double Slap
-Type = NORMAL
+Type = FAIRY
 Category = Physical
-Power = 15
+Power = 25
 Accuracy = 85
 TotalPP = 10
 Target = NearOther
@@ -5500,14 +5500,14 @@ Description = A long body or vines are used to wrap and squeeze the target for f
 Name = Constrict
 Type = NORMAL
 Category = Physical
-Power = 10
+Power = 60
 Accuracy = 100
 TotalPP = 35
 Target = NearOther
 FunctionCode = LowerTargetSpeed1
 Flags = Contact,CanProtect,CanMirrorMove
-EffectChance = 10
-Description = The foe is attacked with long, creeping tentacles or vines. It may also lower the target's Speed.
+EffectChance = 100
+Description = The foe is attacked with long, creeping tentacles or vines. It also lowers the target's Speed.
 #-------------------------------
 [BIDE]
 Name = Bide
@@ -7802,8 +7802,9 @@ Power = 80
 Accuracy = 100
 TotalPP = 20
 Target = NearOther
-FunctionCode = None
+FunctionCode = LowerTargetSpAtk1
 Flags = CanProtect,CanMirrorMove
+EffectChance = 20
 Description = The user attacks with a ray of light that sparkles as if it were made of gemstones.
 #-------------------------------
 [ROCKSLIDE]
@@ -8137,13 +8138,13 @@ Description = The user rotates, centering the hex nut in its chest, and then str
 Name = Mirror Shot
 Type = STEEL
 Category = Special
-Power = 65
+Power = 110
 Accuracy = 85
 TotalPP = 10
 Target = NearOther
 FunctionCode = LowerTargetAccuracy1
 Flags = CanProtect,CanMirrorMove
-EffectChance = 30
+EffectChance = 10
 Description = The user looses a flash of energy from its polished body. It may also lower the target's accuracy.
 #-------------------------------
 [MAGNETBOMB]
@@ -8174,13 +8175,13 @@ Description = The user attacks by throwing two steel gears at its target.
 Name = Metal Claw
 Type = STEEL
 Category = Physical
-Power = 50
-Accuracy = 95
+Power = 70
+Accuracy = 90
 TotalPP = 35
 Target = NearOther
-FunctionCode = RaiseUserAttack1
+FunctionCode = LowerTargetAttack1
 Flags = Contact,CanProtect,CanMirrorMove
-EffectChance = 10
+EffectChance = 20
 Description = The target is raked with steel claws. It may also raise the user's Attack stat.
 #-------------------------------
 [BULLETPUNCH]
@@ -8659,7 +8660,7 @@ Description = Hits three times in a row with mastery of the Water style. This at
 Name = Water Shuriken
 Type = WATER
 Category = Special
-Power = 15
+Power = 25
 Accuracy = 100
 TotalPP = 20
 Target = NearOther
