@@ -1,3 +1,28 @@
+def pbSummitTeamBuilder
+  loop do 
+    msgwindow = pbCreateMessageWindow()
+    pbMessageDisplay(msgwindow, _ISPRINTF("Enter a Pokémon species.",))
+    @species = pbFreeText(msgwindow,"",false,12)
+    pbDisposeMessageWindow(msgwindow)
+    @pkmn = @species.upcase.to_sym
+    if GameData::Species.try_get(@pkmn)
+      dispname = GameData::Species.get(@pkmn).real_name
+      if dispname.starts_with_vowel?
+        pbMessage(_INTL("You have received an {1}.",dispname))
+      else
+        pbMessage(_INTL("You have received a {1}.",dispname))
+      end
+      pbSummitGivePokemon(@pkmn)
+      cmd = pbMessage(_INTL("You have {1} Pokémon in your party.\\n Create another Pokémon?",$player.party.length),["Yes","No"],1)
+      break if cmd == 1
+    else
+      pbMessage(_INTL("Invalid Pokémon species."))
+      cmd = pbMessage(_INTL("Cancel Pokémon creation?"),["Yes","No"],1)
+      pbMessage(_INTL("Pokémon creation cancelled.")) if cmd == 1
+    end
+  end
+end
+
 def pbSummitTeamCollect
   for species in SummitTeamBuilder.team
     pkmn = SummitTeamBuilder.const_get(species)
