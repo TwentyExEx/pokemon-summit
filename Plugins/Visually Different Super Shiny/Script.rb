@@ -63,7 +63,7 @@ module GameData
 			dmax      = params[:dmax]
 			gmax      = params[:gmax]
 			celestial = params[:celestial]
-			supershiny= params[:supershiny]
+			supershiny = params[:supershiny]
 			try_dmax_folder = ""
 			try_subfolder = sprintf("%s/", subfolder)
 			try_species = species
@@ -117,7 +117,9 @@ module GameData
 			species = pkmn.species if !species
 			species = GameData::Species.get(species).species
 			return self.egg_sprite_bitmap(species, pkmn.form) if pkmn.egg?
-			gmax   = (target) ? (target.gmax_factor? && target.dynamax? && pkmn.dynamax?) : pkmn.gmax?
+			if PluginManager.installed?("ZUD Mechanics")
+				gmax   = (target) ? (target.gmax_factor? && target.dynamax? && pkmn.dynamax?) : pkmn.gmax?
+			end
 			sprite = [species, pkmn.form, pkmn.gender, pkmn.shiny?, pkmn.shadowPokemon?, back, pkmn.egg?, pkmn.dynamax?, gmax, pkmn.celestial?, pkmn.super_shiny?]
 			ret    = (back) ? self.back_sprite_bitmap(*sprite) : self.front_sprite_bitmap(*sprite)
 			if PluginManager.installed?("Generation 8 Pack Scripts")
