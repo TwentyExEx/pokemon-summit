@@ -367,7 +367,7 @@ class PokemonSummary_Scene
 		imagepos = []
 		# Show the Poké Ball containing the Pokémon
 		ballimage = sprintf("Graphics/Pictures/Summary/icon_ball_%s", @pokemon.poke_ball)
-		imagepos.push([ballimage, 14, 60])
+		imagepos.push([ballimage, 14, 342])
 		# Show status/fainted/Pokérus infected icon
 		status = -1
 		if @pokemon.fainted?
@@ -378,47 +378,42 @@ class PokemonSummary_Scene
 			status = GameData::Status.count
 		end
 		if status >= 0
-			imagepos.push(["Graphics/Pictures/statuses", 124, 100, 0, 16 * status, 44, 16])
+			imagepos.push(["Graphics/Pictures/statuses", 94, 348, 0, 16 * status, 44, 16])	
 		end
 		# Show Pokérus cured icon
 		if @pokemon.pokerusStage == 2
 			imagepos.push([sprintf("Graphics/Pictures/Summary/icon_pokerus"), 176, 100])
 		end
-		# Show shininess star
-		if @pokemon.shiny?
-			shiny_filename = (@pokemon.super_shiny?) ? "Graphics/Plugins/Visually Different Super Shiny/super shiny" : "Graphics/Pictures/shiny"
-			imagepos.push([sprintf(shiny_filename), 2, 134])
-		end
 		# Draw all images
 		pbDrawImagePositions(overlay, imagepos)
 		# Write various bits of text
 		pagename = [_INTL("INFO"),
-			_INTL("TRAINER MEMO"),
-			_INTL("SKILLS"),
-			_INTL("MOVES"),
-			_INTL("RIBBONS")][page - 1]
+					_INTL("SKILLS"),
+					_INTL("MOVES"),
+					_INTL("EVS / IVS"),
+					_INTL("RIBBONS")][page - 1]
 		textpos = [
-			[pagename, 26, 22, 0, base, shadow],
-			[@pokemon.name, 46, 68, 0, base, shadow],
-			[@pokemon.level.to_s, 46, 98, 0, Color.new(64, 64, 64), Color.new(176, 176, 176)],
-			[_INTL("Item"), 66, 324, 0, base, shadow]
+			[pagename, 12, 6, 0, base, shadow],
+			[@pokemon.name, 70, 262, 0, base, shadow],
+			["/#{@pokemon.species.name}", 68, 290, 0, base, shadow],
+			[@pokemon.level.to_s, 166, 346, 0, base, shadow]
 		]
 		# Write the held item's name
 		if @pokemon.hasItem?
-			textpos.push([@pokemon.item.name, 16, 358, 0, Color.new(64, 64, 64), Color.new(176, 176, 176)])
+			textpos.push([@pokemon.item.name, 16, 318, 0, base, shadow])
 		else
-			textpos.push([_INTL("None"), 16, 358, 0, Color.new(192, 200, 208), Color.new(208, 216, 224)])
+			textpos.push([_INTL("None"), 16, 318, 0, base, shadow])
 		end
 		# Write the gender symbol
 		if @pokemon.male?
-			textpos.push([_INTL("♂"), 178, 68, 0, Color.new(24, 112, 216), Color.new(136, 168, 208)])
+			textpos.push([_INTL("♂"), 72, 345, 0, Color.new(136, 240, 248), Color.new(24, 160, 208)])
 		elsif @pokemon.female?
-			textpos.push([_INTL("♀"), 178, 68, 0, Color.new(248, 56, 32), Color.new(224, 152, 144)])
+			textpos.push([_INTL("♀"), 72, 345, 0, Color.new(224, 8, 8), Color.new(248, 184, 112)])
 		end
 		# Draw all text
 		pbDrawTextPositions(overlay, textpos)
 		# Draw the Pokémon's markings
-		drawMarkings(overlay, 84, 292)
+		drawMarkings(overlay, 104, 42)
 		# Draw page-specific information
 		case page
 		when 1 then drawPageOne
