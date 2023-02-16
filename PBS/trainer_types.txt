@@ -5,404 +5,6 @@ Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 #-------------------------------
-[POKEMONTRAINER_Red]
-Name = Pokémon Trainer
-Gender = Male
-BaseMoney = 60
-#-------------------------------
-[POKEMONTRAINER_Leaf]
-Name = Pokémon Trainer
-Gender = Female
-BaseMoney = 60
-#-------------------------------
-[POKEMONTRAINER_James]
-Name = Pokémon Trainer
-Gender = Male
-BaseMoney = 60
-#-------------------------------
-[POKEMONTRAINER_Kieran]
-Name = Pokémon Trainer
-Gender = Male
-BaseMoney = 60
-#-------------------------------
-[POKEMONTRAINER_Brendan]
-Name = Pokémon Trainer
-Gender = Male
-BaseMoney = 60
-#-------------------------------
-[POKEMONTRAINER_May]
-Name = Pokémon Trainer
-Gender = Female
-BaseMoney = 60
-#-------------------------------
-[RIVAL1]
-Name = Rival
-Gender = Male
-BaseMoney = 16
-#-------------------------------
-[RIVAL2]
-Name = Rival
-Gender = Male
-BaseMoney = 36
-#-------------------------------
-[ARCADE_AROMALADY]
-Name = Aroma Lady
-Gender = Female
-BaseMoney = 32
-#-------------------------------
-[ARCADE_BEAUTY]
-Name = Beauty
-Gender = Female
-BaseMoney = 56
-#-------------------------------
-[ARCADE_BIKER]
-Name = Biker
-Gender = Male
-BaseMoney = 32
-#-------------------------------
-[ARCADE_BIRDKEEPER]
-Name = Bird Keeper
-Gender = Male
-BaseMoney = 32
-#-------------------------------
-[ARCADE_BUGCATCHER]
-Name = Bug Catcher
-Gender = Male
-BaseMoney = 16
-#-------------------------------
-[ARCADE_BURGLAR]
-Name = Burglar
-Gender = Male
-BaseMoney = 88
-SkillLevel = 32
-#-------------------------------
-[ARCADE_CHANELLER]
-Name = Channeler
-Gender = Female
-BaseMoney = 32
-#-------------------------------
-[ARCADE_CUEBALL]
-Name = Cue Ball
-Gender = Male
-BaseMoney = 24
-#-------------------------------
-[ARCADE_ENGINEER]
-Name = Engineer
-Gender = Male
-BaseMoney = 48
-#-------------------------------
-[ARCADE_FISHERMAN]
-Name = Fisherman
-Gender = Male
-BaseMoney = 32
-#-------------------------------
-[ARCADE_GAMBLER]
-Name = Gambler
-Gender = Male
-BaseMoney = 72
-SkillLevel = 32
-#-------------------------------
-[ARCADE_GENTLEMAN]
-Name = Gentleman
-Gender = Male
-BaseMoney = 72
-#-------------------------------
-[ARCADE_HIKER]
-Name = Hiker
-Gender = Male
-BaseMoney = 32
-#-------------------------------
-[ARCADE_JUGGLER]
-Name = Juggler
-Gender = Male
-BaseMoney = 32
-#-------------------------------
-[ARCADE_LADY]
-Name = Lady
-Gender = Female
-BaseMoney = 160
-SkillLevel = 72
-#-------------------------------
-[ARCADE_PAINTER]
-Name = Painter
-Gender = Female
-BaseMoney = 16
-#-------------------------------
-[ARCADE_POKEMANIAC]
-Name = Poké Maniac
-Gender = Male
-BaseMoney = 64
-#-------------------------------
-[ARCADE_POKEMONBREEDER]
-Name = Pokémon Breeder
-Gender = Female
-BaseMoney = 48
-#-------------------------------
-[ARCADE_PROFESSOR]
-Name = Professor
-Gender = Male
-BaseMoney = 100
-#-------------------------------
-[ARCADE_ROCKER]
-Name = Rocker
-Gender = Male
-BaseMoney = 24
-#-------------------------------
-[ARCADE_RUINMANIAC]
-Name = Ruin Maniac
-Gender = Male
-BaseMoney = 48
-#-------------------------------
-[ARCADE_SAILOR]
-Name = Sailor
-Gender = Male
-BaseMoney = 32
-#-------------------------------
-[ARCADE_SCIENTIST]
-Name = Scientist
-Gender = Male
-BaseMoney = 48
-#-------------------------------
-[ARCADE_SUPERNERD]
-Name = Super Nerd
-Gender = Male
-BaseMoney = 48
-#-------------------------------
-[ARCADE_TAMER]
-Name = Tamer
-Gender = Male
-BaseMoney = 40
-#-------------------------------
-[ARCADE_BLACKBELT]
-Name = Black Belt
-Gender = Male
-BaseMoney = 32
-#-------------------------------
-[ARCADE_CRUSHGIRL]
-Name = Crush Girl
-Gender = Female
-BaseMoney = 24
-#-------------------------------
-[ARCADE_CAMPER]
-Name = Camper
-Gender = Male
-BaseMoney = 16
-#-------------------------------
-[ARCADE_PICNICKER]
-Name = Picnicker
-Gender = Female
-BaseMoney = 16
-#-------------------------------
-[ARCADE_COOLTRAINER_M]
-Name = Ace Trainer
-Gender = Male
-BaseMoney = 60
-#-------------------------------
-[ARCADE_COOLTRAINER_F]
-Name = Ace Trainer
-Gender = Female
-BaseMoney = 60
-#-------------------------------
-[ARCADE_YOUNGSTER]
-Name = Youngster
-Gender = Male
-BaseMoney = 16
-#-------------------------------
-[ARCADE_LASS]
-Name = Lass
-Gender = Female
-BaseMoney = 16
-#-------------------------------
-[ARCADE_POKEMONRANGER_M]
-Name = Pokémon Ranger
-Gender = Male
-BaseMoney = 60
-#-------------------------------
-[ARCADE_POKEMONRANGER_F]
-Name = Pokémon Ranger
-Gender = Female
-BaseMoney = 60
-#-------------------------------
-[ARCADE_PSYCHIC_M]
-Name = Psychic
-Gender = Male
-BaseMoney = 32
-#-------------------------------
-[ARCADE_PSYCHIC_F]
-Name = Psychic
-Gender = Female
-BaseMoney = 32
-#-------------------------------
-[ARCADE_SWIMMER_M]
-Name = Swimmer
-Gender = Male
-BaseMoney = 16
-SkillLevel = 32
-#-------------------------------
-[ARCADE_SWIMMER_F]
-Name = Swimmer
-Gender = Female
-BaseMoney = 16
-SkillLevel = 32
-#-------------------------------
-[ARCADE_SWIMMER2_M]
-Name = Swimmer
-Gender = Male
-BaseMoney = 16
-SkillLevel = 32
-#-------------------------------
-[ARCADE_SWIMMER2_F]
-Name = Swimmer
-Gender = Female
-BaseMoney = 16
-SkillLevel = 32
-#-------------------------------
-[ARCADE_TUBER_M]
-Name = Tuber
-Gender = Male
-BaseMoney = 4
-SkillLevel = 16
-#-------------------------------
-[ARCADE_TUBER_F]
-Name = Tuber
-Gender = Female
-BaseMoney = 4
-SkillLevel = 16
-#-------------------------------
-[ARCADE_TUBER2_M]
-Name = Tuber
-Gender = Male
-BaseMoney = 4
-SkillLevel = 16
-#-------------------------------
-[ARCADE_TUBER2_F]
-Name = Tuber
-Gender = Female
-BaseMoney = 4
-SkillLevel = 16
-#-------------------------------
-[ARCADE_COOLCOUPLE]
-Name = Cool Couple
-Gender = Unknown
-BaseMoney = 72
-SkillLevel = 48
-#-------------------------------
-[ARCADE_CRUSHKIN]
-Name = Crush Kin
-Gender = Unknown
-BaseMoney = 48
-#-------------------------------
-[ARCADE_SISANDBRO]
-Name = Sis and Bro
-Gender = Unknown
-BaseMoney = 16
-SkillLevel = 48
-#-------------------------------
-[ARCADE_TWINS]
-Name = Twins
-Gender = Unknown
-BaseMoney = 24
-#-------------------------------
-[ARCADE_YOUNGCOUPLE]
-Name = Young Couple
-Gender = Unknown
-BaseMoney = 60
-#-------------------------------
-[ARCADE_DRAGONTAMER]
-Name = Dragon Tamer
-Gender = Male
-BaseMoney = 60
-#-------------------------------
-[ARCADE_KINDLER]
-Name = Kindler
-Gender = Male
-BaseMoney = 60
-#-------------------------------
-[ARCADE_KIMONOGIRL]
-Name = Kimono Girl
-Gender = Female
-BaseMoney = 60
-#-------------------------------
-[ARCADE_BOARDER]
-Name = Boarder
-Gender = Male
-BaseMoney = 60
-#-------------------------------
-[ARCADE_TEAMROCKET_M]
-Name = Team Rocket Grunt
-Gender = Male
-BaseMoney = 60
-#-------------------------------
-[ARCADE_TEAMROCKET_F]
-Name = Team Rocket Grunt
-Gender = Female
-BaseMoney = 60
-#-------------------------------
-[ARCADE_AQUA_M]
-Name = Team Aqua Grunt
-Gender = Male
-BaseMoney = 60
-#-------------------------------
-[ARCADE_AQUA_F]
-Name = Team Aqua Grunt
-Gender = Female
-BaseMoney = 60
-#-------------------------------
-[ARCADE_MAGMA_M]
-Name = Team Magma Grunt
-Gender = Male
-BaseMoney = 60
-#-------------------------------
-[ARCADE_MAGMA_F]
-Name = Team Magma Grunt
-Gender = Female
-BaseMoney = 60
-#-------------------------------
-[ARCADE_GALACTIC_M]
-Name = Team Galactic Grunt
-Gender = Male
-BaseMoney = 60
-#-------------------------------
-[ARCADE_GALACTIC_F]
-Name = Team Galactic Grunt
-Gender = Female
-BaseMoney = 60
-#-------------------------------
-[ARCADE_PLASMA_M]
-Name = Team Plasma Grunt
-Gender = Male
-BaseMoney = 60
-#-------------------------------
-[ARCADE_PLASMA_F]
-Name = Team Plasma Grunt
-Gender = Female
-BaseMoney = 60
-#-------------------------------
-[ARCADE_FLARE_M]
-Name = Team Flare Grunt
-Gender = Male
-BaseMoney = 60
-#-------------------------------
-[ARCADE_FLARE_F]
-Name = Team Flare Grunt
-Gender = Female
-BaseMoney = 60
-#-------------------------------
-[ARCADE_FAIRYTALEGIRL]
-Name = Fairy Tale Girl
-Gender = Female
-BaseMoney = 60
-#-------------------------------
-[ARCADE_HEXMANIAC]
-Name = Hex Maniac
-Gender = Female
-BaseMoney = 60
-#-------------------------------
-[ARCADE_SCHOOLKID]
-Name = School Kid
-Gender = Male
-BaseMoney = 60
-#-------------------------------
 [LEADER_Brock]
 Name = Kanto Leader
 Gender = Male
@@ -2203,4 +1805,1944 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sadaturo
+#-------------------------------
+[TRAINER_ACETRAINER_ALOLA_M]
+Name = Ace Trainer
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ACETRAINER_ALOLA_F]
+Name = Ace Trainer
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ACETRAINER_HOENN_M]
+Name = Ace Trainer
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ACETRAINER_HOENN_F]
+Name = Ace Trainer
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ACETRAINER_JOHTO_M]
+Name = Ace Trainer
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ACETRAINER_JOHTO_F]
+Name = Ace Trainer
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ACETRAINER_KALOS_M]
+Name = Ace Trainer
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ACETRAINER_KALOS_F]
+Name = Ace Trainer
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ACETRAINER_KANTO_M]
+Name = Ace Trainer
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ACETRAINER_KANTO_F]
+Name = Ace Trainer
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ACETRAINER_SINNOH_M]
+Name = Ace Trainer
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ACETRAINER_SINNOH_F]
+Name = Ace Trainer
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ACETRAINER_SINNOH_WINTER_M]
+Name = Ace Trainer
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ACETRAINER_SINNOH_WINTER_F]
+Name = Ace Trainer
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ACETRAINER_UNOVA_M]
+Name = Ace Trainer
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ACETRAINER_UNOVA_F]
+Name = Ace Trainer
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_AETHER_M]
+Name = Aether Employee
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_AETHER_F]
+Name = Aether Employee
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_AQUA_M]
+Name = Team Aqua Grunt
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_AQUA_F]
+Name = Team Aqua Grunt
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_AROMALADY_HOENN]
+Name = Aroma Lady
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_AROMALADY_KANTO]
+Name = Aroma Lady
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_AROMALADY_SINNOH]
+Name = Aroma Lady
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ARTIST_GALAR]
+Name = Artist
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ARTIST_KALOS_F]
+Name = Artist
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ARTIST_KALOS_M]
+Name = Artist
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ARTIST_KANTO]
+Name = Artist
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ARTIST_SINNOH]
+Name = Artist
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ARTIST_UNOVA]
+Name = Artist
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BACKPACKER_GALAR]
+Name = Backpacker
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BACKPACKER_KALOS]
+Name = Backpacker
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BACKPACKER_UNOVA_F]
+Name = Backpacker
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BACKPACKER_UNOVA_M]
+Name = Backpacker
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BAKER]
+Name = Baker
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BATTLEGIRL_HOENN]
+Name = Battle Girl
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BATTLEGIRL_KALOS]
+Name = Battle Girl
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BATTLEGIRL_KANTO]
+Name = Battle Girl
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BATTLEGIRL_SINNOH]
+Name = Battle Girl
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BATTLEGIRL_UNOVA]
+Name = Battle Girl
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BEAUTY_ALOLA]
+Name = Beauty
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BEAUTY_GALAR]
+Name = Beauty
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BEAUTY_HOENN]
+Name = Beauty
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BEAUTY_JOHTO]
+Name = Beauty
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BEAUTY_KALOS]
+Name = Beauty
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BEAUTY_KANTO]
+Name = Beauty
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BEAUTY_PALDEA]
+Name = Beauty
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BEAUTY_SINNOH]
+Name = Beauty
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BEAUTY_UNOVA]
+Name = Beauty
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BELLHOP]
+Name = Bellhop
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BIKER_JOHTO]
+Name = Biker
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BIKER_KANTO]
+Name = Biker
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BIKER_UNOVA]
+Name = Biker
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BIRDKEEPER_HOENN]
+Name = Bird Keeper
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BIRDKEEPER_JOHTO]
+Name = Bird Keeper
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BIRDKEEPER_KANTO]
+Name = Bird Keeper
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BIRDKEEPER_SINNOH]
+Name = Bird Keeper
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BLACKBELT_ALOLA]
+Name = Black Belt
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BLACKBELT_GALAR]
+Name = Black Belt
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BLACKBELT_JOHTO]
+Name = Black Belt
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BLACKBELT_KALOS]
+Name = Black Belt
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BLACKBELT_KANTO]
+Name = Black Belt
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BLACKBELT_SINNOH]
+Name = Black Belt
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BLACKBELT_UNOVA]
+Name = Black Belt
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BOARDER]
+Name = Boarder
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BUGCATCHER_HOENN]
+Name = Bug Catcher
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BUGCATCHER_JOHTO]
+Name = Bug Catcher
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BUGCATCHER_KANTO]
+Name = Bug Catcher
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BUGCATCHER_SINNOH]
+Name = Bug Catcher
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BUGMANIAC]
+Name = Bug Maniac
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BURGLAR_JOHTO]
+Name = Burglar
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BURGLAR_KANTO]
+Name = Burglar
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BUTLER]
+Name = Butler
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_CABBIE]
+Name = Cabbie
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_CAFEMASTER]
+Name = Café Master
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_CAMERAMAN_GALAR]
+Name = Camera Man
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_CAMERAMAN_HOENN]
+Name = Camera Man
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_CAMERAMAN_SINNOH]
+Name = Camera Man
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_CAMPER_HOENN_F]
+Name = Camper
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_CAMPER_HOENN_M]
+Name = Camper
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_CAMPER_KANTO_F]
+Name = Camper
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_CAMPER_KANTO_M]
+Name = Camper
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_CAMPER_SINNOH_F]
+Name = Camper
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_CAMPER_SINNOH_M]
+Name = Camper
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_CHANNELER]
+Name = Channeler
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_CAMPER_ALOLA_F]
+Name = Clerk
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_CAMPER_ALOLA_M]
+Name = Clerk
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_CAMPER_GALAR_F]
+Name = Clerk
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_CAMPER_GALAR_M]
+Name = Clerk
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_CAMPER_UNOVA_F]
+Name = Clerk
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_CAMPER_UNOVA_M]
+Name = Clerk
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_CLOWN]
+Name = Clown
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_COLLECTOR_ALOLA]
+Name = Collector
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_COLLECTOR_HOENN]
+Name = Collector
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_COLLECTOR_SINNOH]
+Name = Collector
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_COOK_ALOLA]
+Name = Cook
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_COOK_GALAR]
+Name = Cook
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_COOK_KALOS]
+Name = Cook
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_CYCLIST_SINNOH_F]
+Name = Cyclist
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_CYCLIST_SINNOH_M]
+Name = Cyclist
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_CYCLIST_UNOVA_F]
+Name = Cyclist
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_CYCLIST_UNOVA_M]
+Name = Cyclist
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_DANCER_ALOLA]
+Name = Dancer
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_DANCER_GALAR]
+Name = Dancer
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_DANCER_UNOVA]
+Name = Dancer
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_DIVER_F]
+Name = Diver
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_DIVER_M]
+Name = Diver
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_DOCTOR_GALAR_F]
+Name = Doctor
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_DOCTOR_GALAR_M]
+Name = Doctor
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_DOCTOR_UNOVA]
+Name = Doctor
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_DRAGONTAMER_HOENN]
+Name = Dragon Tamer
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_DRAGONTAMER_KANTO]
+Name = Dragon Tamer
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_DRAGONTAMER_SINNOH]
+Name = Dragon Tamer
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_EXPERT_F]
+Name = Expert
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_EXPERT_M]
+Name = Expert
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_FAIRYTALEGIRL]
+Name = Fairy Tale Girl
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_FIREBREATHER]
+Name = Fire Breather
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_FIREFIGHTER]
+Name = Fire Fighter
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_FISHER_ALOLA]
+Name = Fisher
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_FISHER_GALAR]
+Name = Fisher
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_FISHER_HOENN]
+Name = Fisher
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_FISHER_KALOS]
+Name = Fisher
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_FISHER_KANTO]
+Name = Fisher
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_FISHER_SINNOH]
+Name = Fisher
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_FISHER_UNOVA]
+Name = Fisher
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_FLARE_F]
+Name = Team Flare Grunt
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_FLARE_M]
+Name = Team Flare Grunt
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_FURISODEGIRL_BLACK]
+Name = Furisode Girl
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_FURISODEGIRL_BLUE]
+Name = Furisode Girl
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_FURISODEGIRL_PURPLE]
+Name = Furisode Girl
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_FURISODEGIRL_WHITE]
+Name = Furisode Girl
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_GALACTIC_F]
+Name = Team Galactic Grunt
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_GALACTIC_M]
+Name = Team Galactic Grunt
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_GAMBLER_KANTO]
+Name = Gambler
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_GAMBLER_SINNOH]
+Name = Gambler
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_GARDENER_F]
+Name = Gardener
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_GARDENER_M]
+Name = Gardener
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_GENTLEMAN_ALOLA]
+Name = Gentleman
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_GENTLEMAN_GALAR]
+Name = Gentleman
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_GENTLEMAN_HOENN]
+Name = Gentleman
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_GENTLEMAN_JOHTO]
+Name = Gentleman
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_GENTLEMAN_KALOS]
+Name = Gentleman
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_GENTLEMAN_KANTO]
+Name = Gentleman
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_GENTLEMAN_SINNOH]
+Name = Gentleman
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_GENTLEMAN_UNOVA]
+Name = Gentleman
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_GOLFER]
+Name = Golfer
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_HARLEQUIN]
+Name = Harlequin
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_HEXMANIAC]
+Name = Hex Maniac
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_HIKER_ALOLA]
+Name = Hiker
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_HIKER_GALAR]
+Name = Hiker
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_HIKER_KALOS]
+Name = Hiker
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_HIKER_KANTO]
+Name = Hiker
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_HIKER_SINNOH]
+Name = Hiker
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_HIKER_UNOVA]
+Name = Hiker
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_HOOPSTER]
+Name = Hoopster
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_IDOL]
+Name = Idol
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_INFIELDER]
+Name = Infielder
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_JANITOR_ALOLA]
+Name = Janitor
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_JANITOR_UNOVA]
+Name = Janitor
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_JUGGLER]
+Name = Juggler
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_KIMONOGIRL]
+Name = Kimono Girl
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_KINDLER]
+Name = Kindler
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_LADY_HOENN]
+Name = Lady
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_LADY_KALOS]
+Name = Lady
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_LADY_KANTO]
+Name = Lady
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_LADY_SINNOH]
+Name = Lady
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_LADY_UNOVA]
+Name = Lady
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_LASS_ALOLA]
+Name = Lass
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_LASS_GALAR]
+Name = Lass
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_LASS_HOENN]
+Name = Lass
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_LASS_JOHTO]
+Name = Lass
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_LASS_KALOS]
+Name = Lass
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_LASS_KANTO]
+Name = Lass
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_LASS_SINNOH]
+Name = Lass
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_LASS_UNOVA]
+Name = Lass
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_LEAGUESTAFF_F]
+Name = League Staff
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_LEAGUESTAFF_M]
+Name = League Staff
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_LINEBACKER]
+Name = Linebacker
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_MADAME_ALOLA]
+Name = Madame
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_MADAME_GALAR]
+Name = Madame
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_MADAME_KALOS]
+Name = Madame
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_MADAME_SINNOH]
+Name = Madame
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_MAGMA_F]
+Name = Team Magma Grunt
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_MAGMA_M]
+Name = Team Magma Grunt
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_MAID_KALOS]
+Name = Maid
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_MAID_SINNOH]
+Name = Maid
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_MAID_UNOVA]
+Name = Maid
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_MEDIUM]
+Name = Medium
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_MODEL]
+Name = Model
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_MUSICIAN_GALAR]
+Name = Musician
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_MUSICIAN_HOENN]
+Name = Musician
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_MUSICIAN_SINNOH]
+Name = Musician
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_MUSICIAN_UNOVA_F]
+Name = Musician
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_MUSICIAN_UNOVA_M]
+Name = Musician
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_MUSICIAN_GALAR]
+Name = Musician
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_NINJABOY_HOENN]
+Name = Ninja Boy
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_NINJABOY_SINNOH]
+Name = Ninja Boy
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_NURSE_ALOLA]
+Name = Nurse
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_NURSE_SINNOH]
+Name = Nurse
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_NURSE_ALOLA]
+Name = Nurse
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_NURSERYAIDE]
+Name = Nursery Aide
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_OFFICER_ALOLA]
+Name = Officer
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_OFFICER_GALAR]
+Name = Officer
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_OFFICER_SINNOH]
+Name = Officer
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_OFFICER_UNOVA]
+Name = Officer
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_PARASOLLADY_HOENN]
+Name = Parasol Lady
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_PARASOLLADY_SINNOH]
+Name = Parasol Lady
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_PARASOLLADY_UNOVA]
+Name = Parasol Lady
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_PILOT]
+Name = Pilot
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_PLASMA_F]
+Name = Team Plasma Grunt
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_PLASMA_M]
+Name = Team Plasma Grunt
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_PLASMANEO_F]
+Name = Team Plasma Grunt
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_PLASMANEO_M]
+Name = Team Plasma Grunt
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEFAN_HOENN_F]
+Name = Poké Fan
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEFAN_HOENN_M]
+Name = Poké Fan
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEFAN_KALOS_F]
+Name = Poké Fan
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEFAN_KALOS_M]
+Name = Poké Fan
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEFAN_SINNOH_F]
+Name = Poké Fan
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEFAN_SINNOH_M]
+Name = Poké Fan
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEFAN_UNOVA_F]
+Name = Poké Fan
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEFAN_UNOVA_M]
+Name = Poké Fan
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEKID_GALAR_F]
+Name = Poké Kid
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEKID_GALAR_M]
+Name = Poké Kid
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEKID_SINNOH]
+Name = Poké Kid
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEMANIAC_HOENN]
+Name = Poké Maniac
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEMANIAC_JOHTO]
+Name = Poké Maniac
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEMANIAC_KANTO]
+Name = Poké Maniac
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEMANIAC_PALDEA]
+Name = Poké Maniac
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEMONBREEDER_GALAR_F]
+Name = Pokémon Breeder
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEMONBREEDER_GALAR_M]
+Name = Pokémon Breeder
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEMONBREEDER_HOENN_F]
+Name = Pokémon Breeder
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEMONBREEDER_HOENN_M]
+Name = Pokémon Breeder
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEMONBREEDER_KALOS_F]
+Name = Pokémon Breeder
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEMONBREEDER_KALOS_M]
+Name = Pokémon Breeder
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEMONBREEDER_SINNOH_F]
+Name = Pokémon Breeder
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEMONBREEDER_SINNOH_M]
+Name = Pokémon Breeder
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEMONBREEDER_UNOVA_F]
+Name = Pokémon Breeder
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEMONBREEDER_UNOVA_M]
+Name = Pokémon Breeder
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEMONBREEDER_KANTO]
+Name = Pokémon Breeder
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEMONRANGER_HOENN_F]
+Name = Pokémon Ranger
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEMONRANGER_HOENN_M]
+Name = Pokémon Ranger
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEMONRANGER_KALOS_F]
+Name = Pokémon Ranger
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEMONRANGER_KALOS_M]
+Name = Pokémon Ranger
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEMONRANGER_SINNOH_F]
+Name = Pokémon Ranger
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEMONRANGER_SINNOH_M]
+Name = Pokémon Ranger
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEMONRANGER_UNOVA_F]
+Name = Pokémon Ranger
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POKEMONRANGER_UNOVA_M]
+Name = Pokémon Ranger
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_POSTMAN]
+Name = Postman
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_PRESCHOOLER_ALOLA_F]
+Name = Preschooler
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_PRESCHOOLER_ALOLA_M]
+Name = Preschooler
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_PRESCHOOLER_KALOS_F]
+Name = Preschooler
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_PRESCHOOLER_KALOS_M]
+Name = Preschooler
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_PRESCHOOLER_UNOVA_F]
+Name = Preschooler
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_PRESCHOOLER_UNOVA_M]
+Name = Preschooler
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_PSYCHIC_KALOS]
+Name = Psychic
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_PSYCHIC_KANTO]
+Name = Psychic
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_PSYCHIC_SINNOH_F]
+Name = Psychic
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_PSYCHIC_SINNOH_M]
+Name = Psychic
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_PSYCHIC_UNOVA_F]
+Name = Psychic
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_PSYCHIC_UNOVA_M]
+Name = Psychic
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_PUNKGIRL_ALOLA]
+Name = Punk Girl
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_PUNKGIRL_KALOS]
+Name = Punk Girl
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_PUNKGUY_ALOLA]
+Name = Punk Guy
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_PUNKGUY_KALOS]
+Name = Punk Guy
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_RAILSTAFF]
+Name = Rail Staff
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_RANCHER_F]
+Name = Rancher
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_RANCHER_M]
+Name = Rancher
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_REPORTER_GALAR]
+Name = Reporter
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_REPORTER_HOENN]
+Name = Reporter
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_REPORTER_SINNOH]
+Name = Reporter
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_RICHBOY_HOENN]
+Name = Rich Boy
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_RICHBOY_KALOS]
+Name = Rich Boy
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_RICHBOY_SINNOH]
+Name = Rich Boy
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_RICHBOY_UNOVA]
+Name = Rich Boy
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_RISINGSTAR_ALOLA_F]
+Name = Rising Star
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_RISINGSTAR_ALOLA_M]
+Name = Rising Star
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_RISINGSTAR_KALOS_F]
+Name = Rising Star
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_RISINGSTAR_KALOS_M]
+Name = Rising Star
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ROCKER]
+Name = Rocker
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ROCKET_F]
+Name = Team Rocket Grunt
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ROCKET_M]
+Name = Team Rocket Grunt
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ROLLERSKATER_F]
+Name = Roller Skater
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ROLLERSKATER_M]
+Name = Roller Skater
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ROUGHNECK_SINNOH]
+Name = Roughneck
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ROUGHNECK_UNOVA]
+Name = Roughneck
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_RUINMANIAC_HOENN]
+Name = Ruin Maniac
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_RUINMANIAC_KANTO]
+Name = Ruin Maniac
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_RUINMANIAC_SINNOH]
+Name = Ruin Maniac
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SAGE]
+Name = Sage
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SAILOR_HOENN]
+Name = Sailor
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SAILOR_SINNOH]
+Name = Sailor
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SCHOOLKID_GALAR_F]
+Name = School Kid
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SCHOOLKID_GALAR_M]
+Name = School Kid
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SCHOOLKID_HOENN_F]
+Name = School Kid
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SCHOOLKID_HOENN_M]
+Name = School Kid
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SCHOOLKID_KALOS_F]
+Name = School Kid
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SCHOOLKID_KALOS_M]
+Name = School Kid
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SCHOOLKID_SINNOH_F]
+Name = School Kid
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SCHOOLKID_SINNOH_M]
+Name = School Kid
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SCHOOLKID_UNOVA_F]
+Name = School Kid
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SCHOOLKID_UNOVA_M]
+Name = School Kid
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SCHOOLKID_JOHTO]
+Name = School Kid
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SCHOOLKID_KANTO]
+Name = School Kid
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SCIENTIST_ALOLA]
+Name = Scientist
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SCIENTIST_JOHTO]
+Name = Scientist
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SCIENTIST_KALOS_F]
+Name = Scientist
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SCIENTIST_KALOS_M]
+Name = Scientist
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SCIENTIST_KANTO]
+Name = Scientist
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SCIENTIST_SINNOH]
+Name = Scientist
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SCIENTIST_UNOVA_F]
+Name = Scientist
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SCIENTIST_UNOVA_M]
+Name = Scientist
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SKIER_JOHTO]
+Name = Skier
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SKIER_SINNOH_F]
+Name = Skier
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SKIER_SINNOH_M]
+Name = Skier
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SKULL_F]
+Name = Team Skull Grunt
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SKULL_M]
+Name = Team Skull Grunt
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SKYTRAINER_F]
+Name = Sky Trainer
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SKYTRAINER_M]
+Name = Sky Trainer
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SMASHER]
+Name = Smasher
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_STAR_SCARLET_F]
+Name = Team Star Grunt
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_STAR_SCARLET_M]
+Name = Team Star Grunt
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_STAR_VIOLET_F]
+Name = Team Star Grunt
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_STAR_VIOLET_M]
+Name = Team Star Grunt
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_STREETTHUG_F]
+Name = Street Thug
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_STREETTHUG_M]
+Name = Street Thug
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_STRIKER]
+Name = Striker
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SUITACTOR]
+Name = Suit Actor
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SUPERNERD_JOHTO]
+Name = Super Nerd
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SUPERNERD_KANTO]
+Name = Super Nerd
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SURFER]
+Name = Surfer
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SWIMMER_ALOLA_F]
+Name = Swimmer
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SWIMMER_ALOLA_M]
+Name = Swimmer
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SWIMMER_GALAR_F]
+Name = Swimmer
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SWIMMER_GALAR_M]
+Name = Swimmer
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SWIMMER_JOHTO_F]
+Name = Swimmer
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SWIMMER_JOHTO_M]
+Name = Swimmer
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SWIMMER_KALOS_F]
+Name = Swimmer
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SWIMMER_KALOS_M]
+Name = Swimmer
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SWIMMER_SINNOH_F]
+Name = Swimmer
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SWIMMER_SINNOH_M]
+Name = Swimmer
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SWIMMER_UNOVA_F]
+Name = Swimmer
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SWIMMER_UNOVA_M]
+Name = Swimmer
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SWIMMER_HOENN]
+Name = Swimmer
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_TEACHER]
+Name = Teacher
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_TOURIST_ALOLA_F]
+Name = Tourist
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_TOURIST_ALOLA_M]
+Name = Tourist
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_TOURIST_KALOS_F]
+Name = Tourist
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_TOURIST_KALOS_M]
+Name = Tourist
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_TOURIST_HOENN]
+Name = Tourist
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_TRIALGUIDE_F]
+Name = Trial Guide
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_TRIALGUIDE_M]
+Name = Trial Guide
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_TRIATHLETE_CYCLIST]
+Name = Triathlete
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_TRIATHLETE_RUNNER]
+Name = Triathlete
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_TRIATHLETE_SWIM]
+Name = Triathlete
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_TUBER_HOENN_F]
+Name = Tuber
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_TUBER_HOENN_M]
+Name = Tuber
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_TUBER_SINNOH_F]
+Name = Tuber
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_TUBER_SINNOH_M]
+Name = Tuber
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_VETERAN_ALOLA_F]
+Name = Veteran
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_VETERAN_ALOLA_M]
+Name = Veteran
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_VETERAN_KALOS_F]
+Name = Veteran
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_VETERAN_KALOS_M]
+Name = Veteran
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_VETERAN_UNOVA_F]
+Name = Veteran
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_VETERAN_UNOVA_M]
+Name = Veteran
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_WAITER_KALOS]
+Name = Waiter
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_WAITER_SINNOH]
+Name = Waiter
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_WAITER_UNOVA]
+Name = Waiter
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_WAITRESS_KALOS]
+Name = Waitress
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_WAITRESS_SINNOH]
+Name = Waitress
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_WAITRESS_UNOVA]
+Name = Waitress
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_WORKER_ALOLA]
+Name = Worker
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_WORKER_GALAR_F]
+Name = Worker
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_WORKER_GALAR_M]
+Name = Worker
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_WORKER_KALOS]
+Name = Worker
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_WORKER_KANTO]
+Name = Worker
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_WORKER_SINNOH]
+Name = Worker
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_WORKER_UNOVA]
+Name = Worker
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_WORKER_UNOVA_WINTER]
+Name = Worker
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_YELL_F]
+Name = Team Yell Grunt
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_YELL_M]
+Name = Team Yell Grunt
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_YOUNGSTER_ALOLA]
+Name = Youngster
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_YOUNGSTER_GALAR]
+Name = Youngster
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_YOUNGSTER_HOENN]
+Name = Youngster
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_YOUNGSTER_JOHTO]
+Name = Youngster
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_YOUNGSTER_KALOS]
+Name = Youngster
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_YOUNGSTER_KANTO]
+Name = Youngster
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_YOUNGSTER_PALDEA]
+Name = Youngster
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_YOUNGSTER_SINNOAH]
+Name = Youngster
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_YOUNGSTER_UNOVA]
+Name = Youngster
+Gender = Male
+BaseMoney = 50
 #-------------------------------
