@@ -19,12 +19,3 @@ CycleCharset = boy_bike
 SurfCharset = boy_surf
 FishCharset = boy_fish_offset
 #-------------------------------
-[2]
-TrainerType = POKEMONTRAINER_James
-WalkCharset = trainer_POKEMONTRAINER_James
-RunCharset = trainer_POKEMONTRAINER_James
-#-------------------------------
-[3]
-TrainerType = POKEMONTRAINER_Kieran
-WalkCharset = trainer_POKEMONTRAINER_Kieran
-RunCharset = trainer_POKEMONTRAINER_Kieran

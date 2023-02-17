@@ -2771,11 +2771,6 @@ Name = Musician
 Gender = Male
 BaseMoney = 50
 #-------------------------------
-[TRAINER_MUSICIAN_GALAR]
-Name = Musician
-Gender = Male
-BaseMoney = 50
-#-------------------------------
 [TRAINER_NINJABOY_HOENN]
 Name = Ninja Boy
 Gender = Male
@@ -2796,7 +2791,7 @@ Name = Nurse
 Gender = Female
 BaseMoney = 50
 #-------------------------------
-[TRAINER_NURSE_ALOLA]
+[TRAINER_NURSE_UNOVA]
 Name = Nurse
 Gender = Female
 BaseMoney = 50
