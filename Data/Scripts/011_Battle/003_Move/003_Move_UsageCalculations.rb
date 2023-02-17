@@ -37,7 +37,7 @@ class Battle::Move
         ret = Effectiveness::NORMAL_EFFECTIVE_ONE
       end
       # Foresight
-      if (user.hasActiveAbility?(:SCRAPPY) || target.effects[PBEffects::Foresight]) &&
+      if (user.hasActiveAbility?(:SCRAPPY) || (user.hasActiveAbility?(:NORMALIZE) || target.effects[PBEffects::Foresight]) &&
          defType == :GHOST
         ret = Effectiveness::NORMAL_EFFECTIVE_ONE
       end

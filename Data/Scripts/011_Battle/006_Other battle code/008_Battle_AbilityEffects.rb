@@ -883,7 +883,7 @@ Battle::AbilityEffects::PriorityBracketUse.add(:QUICKDRAW,
 
 Battle::AbilityEffects::OnFlinch.add(:STEADFAST,
   proc { |ability, battler, battle|
-    battler.pbRaiseStatStageByAbility(:SPEED, 1, battler)
+    battler.pbRaiseStatStageByAbility(:SPEED, 2, battler)
   }
 )
 
@@ -1230,7 +1230,19 @@ Battle::AbilityEffects::DamageCalcFromUser.add(:AERILATE,
   }
 )
 
-Battle::AbilityEffects::DamageCalcFromUser.copy(:AERILATE, :PIXILATE, :REFRIGERATE, :GALVANIZE, :NORMALIZE)
+Battle::AbilityEffects::DamageCalcFromUser.copy(:AERILATE, :PIXILATE, :REFRIGERATE, :GALVANIZE)
+
+Battle::AbilityEffects::DamageCalcFromUser.add(:NORMALIZE,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    mults[:base_damage_multiplier] *= 1.5 if move.powerBoost
+  }
+)
+
+Battle::AbilityEffects::DamageCalcFromUser.add(:LIQUIDVOICE,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    mults[:base_damage_multiplier] *= 1.3 if move.soundMove?
+  }
+)
 
 Battle::AbilityEffects::DamageCalcFromUser.add(:ANALYTIC,
   proc { |ability, user, target, move, mults, baseDmg, type|
