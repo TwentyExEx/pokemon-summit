@@ -9934,3 +9934,41 @@ Target = NearOther
 FunctionCode = None
 Flags = Contact,CanProtect,CanMirrorMove
 Description = A physical attack in which the user charges and slams into the target with its whole body.
+#-------------------------------
+[LOCUSTRUSH]
+Name = Locust Rush
+Type = BUG
+Category = Physical
+Power = 120
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+FunctionCode = DoubleNextReceiveDamageAndNeverMiss
+Flags = CanProtect,CanMirrorMove
+Description = The user vibrates its body, then throws itself into a reckless charge. Attacks from opposing Pokémon during the next turn cannot miss and will inflict double damage.
+#-------------------------------
+[NASALLASER]
+Name = Nasal Laser
+Type = STEEL
+Category = Special
+Power = 120
+Accuracy = 85
+TotalPP = 5
+Target = NearOther
+FunctionCode = LowerTargetSpDef2
+Flags = CanProtect,CanMirrorMove
+EffectChance = 40
+Description = The user releases a powerful beam from its nose. It may harshly lower the target's Sp. Def.
+#-------------------------------
+[MINDINVASION]
+Name = Mind Invasion
+Type = PSYCHIC
+Category = Special
+Power = 110
+Accuracy = 70
+TotalPP = 10
+Target = Other
+FunctionCode = ConfuseTargetAlwaysHitsInPsychicTerrain
+Flags = CanProtect,CanMirrorMove
+EffectChance = 30
+Description = The user engulfs its foe in a mysterious beam of light. It may also confuse the foe.

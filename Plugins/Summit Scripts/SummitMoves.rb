@@ -343,3 +343,20 @@ class Battle::Move::SpiderWebTrap < Battle::Move::TargetStatDownMove
     @battle.pbDisplay(_INTL("{1} can no longer escape!", target.pbThis))
   end
 end
+
+#===============================================================================
+# Confuses the target. Accuracy perfect in psychic terrain, 50% in misty terrain. 
+# (Mind Invasion)
+#===============================================================================
+class Battle::Move::ConfuseTargetAlwaysHitsInPsychicTerrain < Battle::Move::ConfuseTarget
+
+  def pbBaseAccuracy(user, target)
+    case @battle.field.terrain
+    when :Misty
+      return 50
+    when :Psychic
+      return 0
+    end
+    return super
+  end
+end
