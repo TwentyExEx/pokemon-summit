@@ -6088,7 +6088,7 @@ Category = Status
 Accuracy = 0
 TotalPP = 5
 Target = NearOther
-FunctionCode = EnsureNextMoveAlwaysHits
+FunctionCode = EnsureNextMoveAlwaysHitsIgnoresRedirection
 Flags = CanProtect,CanMirrorMove
 Description = The user takes sure aim at the target. It ensures the next attack does not fail to hit the target.
 #-------------------------------
@@ -6173,7 +6173,7 @@ Category = Status
 Accuracy = 0
 TotalPP = 5
 Target = NearOther
-FunctionCode = EnsureNextMoveAlwaysHits
+FunctionCode = EnsureNextMoveAlwaysHitsBypassProtect
 Flags = CanProtect,CanMirrorMove
 Description = The user senses the foe's movements with its mind to ensure its next attack does not miss the foe.
 #-------------------------------

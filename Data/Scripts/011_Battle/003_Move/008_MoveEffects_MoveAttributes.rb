@@ -1265,7 +1265,7 @@ end
 # User's attack next round against the target will definitely hit.
 # (Lock-On, Mind Reader)
 #===============================================================================
-class Battle::Move::EnsureNextMoveAlwaysHitsIgnoresRedirection < Battle::Move
+class Battle::Move::EnsureNextMoveAlwaysHitsBypassProtect < Battle::Move
   def pbEffectAgainstTarget(user, target)
     user.effects[PBEffects::MindReader]    = 2
     user.effects[PBEffects::MindReaderPos] = target.index
