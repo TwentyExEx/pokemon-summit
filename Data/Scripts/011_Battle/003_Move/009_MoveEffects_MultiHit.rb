@@ -197,9 +197,16 @@ end
 # Attacks first turn, skips second turn (if successful).
 #===============================================================================
 class Battle::Move::AttackAndSkipNextTurn < Battle::Move
-  def pbEffectGeneral(user)
-    user.effects[PBEffects::HyperBeam] = 2
-    user.currentMove = @id
+  def pbEndOfMoveUsageEffect(user,targets,numHits,switchedBattlers)
+    numFainted = 0
+    targets.each { |b| numFainted += 1 if b.damageState.fainted }
+    if numFainted>0
+      user.effects[PBEffects::HyperBeam] = 0
+      user.currentMove = @id
+    else
+      user.effects[PBEffects::HyperBeam] = 2
+      user.currentMove = @id
+    end
   end
 end
 
