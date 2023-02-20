@@ -61,6 +61,8 @@ class Battle
        Battle::ItemEffects.triggerCertainSwitching(battler.item, battler, self)
       return true
     end
+    # Other certain switching effects
+    return true if battler.hasActiveAbility?(:RUNAWAY) 
     # Other certain trapping effects
     if battler.trappedInBattle?
       partyScene&.pbDisplay(_INTL("{1} can't be switched out!", battler.pbThis))

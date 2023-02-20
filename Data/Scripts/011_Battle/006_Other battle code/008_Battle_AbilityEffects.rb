@@ -720,6 +720,7 @@ Battle::AbilityEffects::StatLossImmunity.add(:WHITESMOKE,
 
 Battle::AbilityEffects::StatLossImmunity.add(:HYPERCUTTER,
   proc { |ability, battler, stat, battle, showMessages|
+    target = battler.pbDirectOpposing
     next false if stat != :ATTACK
     if showMessages
       battle.pbShowAbilitySplash(battler)
@@ -729,6 +730,7 @@ Battle::AbilityEffects::StatLossImmunity.add(:HYPERCUTTER,
         battle.pbDisplay(_INTL("{1}'s {2} prevents {3} loss!", battler.pbThis,
            battler.abilityName, GameData::Stat.get(stat).name))
       end
+      target.pbLowerStatStageByAbility(:DEFENSE, 1, battler)
       battle.pbHideAbilitySplash(battler)
     end
     next true
@@ -1200,12 +1202,6 @@ Battle::AbilityEffects::AccuracyCalcFromTarget.add(:STORMDRAIN,
   }
 )
 
-Battle::AbilityEffects::AccuracyCalcFromTarget.add(:TANGLEDFEET,
-  proc { |ability, mods, user, target, move, type|
-    mods[:accuracy_multiplier] /= 2 if target.effects[PBEffects::Confusion] > 0
-  }
-)
-
 Battle::AbilityEffects::AccuracyCalcFromTarget.add(:UNAWARE,
   proc { |ability, mods, user, target, move, type|
     mods[:accuracy_stage] = 0 if move.damagingMove?
@@ -1401,9 +1397,8 @@ Battle::AbilityEffects::DamageCalcFromUser.add(:RIVALRY,
   proc { |ability, user, target, move, mults, baseDmg, type|
     if user.gender != 2 && target.gender != 2
       if user.gender == target.gender
-        mults[:base_damage_multiplier] *= 1.25
-      else
-        mults[:base_damage_multiplier] *= 0.75
+        user.effects[PBEffects::FocusEnergy] = 2
+        @battle.pbDisplay(_INTL("{1} is getting pumped!", user.pbThis))
       end
     end
   }
@@ -2841,6 +2836,14 @@ Battle::AbilityEffects::OnSwitchIn.add(:FAIRYAURA,
   }
 )
 
+Battle::AbilityEffects::OnSwitchIn.add(:FORECAST,
+  proc { |ability, battler, battle, switch_in|
+    battle.pbStartWeatherAbility(:Sun, battler) if battler.pbHasMove?(:SUNNYDAY)
+    battle.pbStartWeatherAbility(:Rain, battler) if battler.pbHasMove?(:RAINDANCE)
+    battle.pbStartWeatherAbility(:Hail, battler) if battler.pbHasMove?(:HAIL)
+  }
+)
+
 Battle::AbilityEffects::OnSwitchIn.add(:FOREWARN,
   proc { |ability, battler, battle, switch_in|
     next if !battler.pbOwnedByPlayer?
@@ -3095,6 +3098,21 @@ Battle::AbilityEffects::OnSwitchIn.add(:PSYCHICSURGE,
   }
 )
 
+Battle::AbilityEffects::OnSwitchIn.add(:RIVALRY,
+  proc { |ability, battler, battle, switch_in|
+    target = battler.pbDirectOpposing
+    next if target.gender != battler.gender
+    if battler.gender != 2 && target.gender != 2
+      if battler.gender == target.gender
+        battle.pbShowAbilitySplash(battler)
+        battler.effects[PBEffects::FocusEnergy] = 2
+        battle.pbDisplay(_INTL("{1} is getting pumped!", battler.pbThis))
+        battle.pbHideAbilitySplash(battler)
+      end
+    end
+  }
+)
+
 Battle::AbilityEffects::OnSwitchIn.add(:SANDSTREAM,
   proc { |ability, battler, battle, switch_in|
     battle.pbStartWeatherAbility(:Sandstorm, battler)
@@ -3165,6 +3183,22 @@ Battle::AbilityEffects::OnSwitchIn.add(:SLOWSTART,
 Battle::AbilityEffects::OnSwitchIn.add(:SNOWWARNING,
   proc { |ability, battler, battle, switch_in|
     battle.pbStartWeatherAbility(:Hail, battler)
+  }
+)
+
+Battle::AbilityEffects::OnSwitchIn.add(:TANGLEDFEET,
+  proc { |ability, battler, battle, switch_in|
+    battler_side = battler.pbOwnSide
+    list = [PBEffects::StealthRock, PBEffects::Spikes, PBEffects::ToxicSpikes, PBEffects::StickyWeb]
+    for hazard in list
+      if battler_side.effects[hazard] == true
+        battle.pbShowAbilitySplash(battler)
+        #battle.pbDisplay(_INTL("man {1}'s feet be tanglin", battler.pbThis))
+        battle.pbHideAbilitySplash(battler)
+        battler.pbRaiseStatStageByAbility(:SPEED, 1, battler)
+        break
+      end
+    end
   }
 )
 

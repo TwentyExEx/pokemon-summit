@@ -551,6 +551,9 @@ Battle::AbilityEffects::OnBeingHit.add(:WINDPOWER,
     battle.pbShowAbilitySplash(target)
     target.effects[PBEffects::Charge] = 2
     battle.pbDisplay(_INTL("Being hit by {1} charged {2} with power!", move.name, target.pbThis(true)))
+      if target.pbCanRaiseStatStage?(:SPECIAL_DEFENSE, target)
+        target.pbRaiseStatStageByAbility(:SPECIAL_DEFENSE, 1, target, false)
+	  end
     battle.pbHideAbilitySplash(target)
   }
 )

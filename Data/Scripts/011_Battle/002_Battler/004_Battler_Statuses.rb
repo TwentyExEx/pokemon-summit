@@ -492,6 +492,7 @@ class Battle::Battler
 
   def pbConfusionDuration(duration = -1)
     duration = 2 + @battle.pbRandom(4) if duration <= 0
+	duration = (duration / 2).floor if hasActiveAbility?(:EARLYBIRD)
     return duration
   end
 
