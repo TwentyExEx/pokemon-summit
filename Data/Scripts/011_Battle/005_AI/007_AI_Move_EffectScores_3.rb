@@ -322,6 +322,7 @@ class Battle::AI
     when "EnsureNextMoveAlwaysHits"
       score -= 90 if target.effects[PBEffects::Substitute] > 0
       score -= 90 if user.effects[PBEffects::LockOn] > 0
+      score -= 90 if user.effects[PBEffects::MindReader] > 0
     #---------------------------------------------------------------------------
     when "StartNegateTargetEvasionStatStageAndGhostImmunity"
       if target.effects[PBEffects::Foresight]

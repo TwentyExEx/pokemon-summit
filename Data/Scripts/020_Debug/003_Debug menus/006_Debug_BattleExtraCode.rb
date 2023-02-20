@@ -55,6 +55,8 @@ module Battle::DebugVariables
     PBEffects::LeechSeed      => { name: "Battler that used Leech Seed on self",            default: -1 },   # Battler index
     PBEffects::LockOn         => { name: "Lock-On number of rounds remaining",              default: 0 },
     PBEffects::LockOnPos      => { name: "Battler that self is targeting with Lock-On",     default: -1 },   # Battler index
+    PBEffects::MindReader     => { name: "Mind Reader number of rounds remaining",              default: 0 },
+    PBEffects::MindReaderPos  => { name: "Battler that self is targeting with Mind Reader",     default: -1 },   # Battler index
 #    PBEffects::MagicBounce - only applies during use of move, not suitable for setting via debug
 #    PBEffects::MagicCoat - only applies to use of specific move, not suitable for setting via debug
     PBEffects::MagnetRise     => { name: "Magnet Rise number of rounds remaining",          default: 0 },

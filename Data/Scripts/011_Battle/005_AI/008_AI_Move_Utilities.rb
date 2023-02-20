@@ -684,6 +684,8 @@ class Battle::AI
       modifiers[:evasion_stage] = 0 if move.function == "IgnoreTargetDefSpDefEvaStatStages"   # Chip Away
       modifiers[:base_accuracy] = 0 if user.effects[PBEffects::LockOn] > 0 &&
                                        user.effects[PBEffects::LockOnPos] == target.index
+      modifiers[:base_accuracy] = 0 if user.effects[PBEffects::MindReader] > 0 &&
+                                       user.effects[PBEffects::MindReaderPos] == target.index
     end
     if skill >= PBTrainerAI.highSkill
       if move.function == "BadPoisonTarget" &&   # Toxic

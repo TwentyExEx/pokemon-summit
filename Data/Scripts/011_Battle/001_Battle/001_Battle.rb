@@ -620,6 +620,7 @@ class Battle
                      PBEffects::CounterTarget,
                      PBEffects::JawLock,
                      PBEffects::LockOnPos,
+                     PBEffects::MindReaderPos,
                      PBEffects::MeanLook,
                      PBEffects::MirrorCoatTarget,
                      PBEffects::Octolock,

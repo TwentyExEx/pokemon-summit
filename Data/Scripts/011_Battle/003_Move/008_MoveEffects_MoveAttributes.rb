@@ -1253,10 +1253,22 @@ end
 # User's attack next round against the target will definitely hit.
 # (Lock-On, Mind Reader)
 #===============================================================================
-class Battle::Move::EnsureNextMoveAlwaysHits < Battle::Move
+class Battle::Move::EnsureNextMoveAlwaysHitsIgnoresRedirection < Battle::Move
   def pbEffectAgainstTarget(user, target)
     user.effects[PBEffects::LockOn]    = 2
     user.effects[PBEffects::LockOnPos] = target.index
+    @battle.pbDisplay(_INTL("{1} took aim at {2}!", user.pbThis, target.pbThis(true)))
+  end
+end
+
+#===============================================================================
+# User's attack next round against the target will definitely hit.
+# (Lock-On, Mind Reader)
+#===============================================================================
+class Battle::Move::EnsureNextMoveAlwaysHitsIgnoresRedirection < Battle::Move
+  def pbEffectAgainstTarget(user, target)
+    user.effects[PBEffects::MindReader]    = 2
+    user.effects[PBEffects::MindReaderPos] = target.index
     @battle.pbDisplay(_INTL("{1} took aim at {2}!", user.pbThis, target.pbThis(true)))
   end
 end

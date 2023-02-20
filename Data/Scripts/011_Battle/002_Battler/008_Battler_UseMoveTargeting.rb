@@ -99,7 +99,7 @@ class Battle::Battler
     return targets if move.cannotRedirect? || move.targetsPosition?
     return targets if !target_data.can_target_one_foe? || targets.length != 1
     move.pbModifyTargets(targets, user)   # For Dragon Darts
-    return targets if user.hasActiveAbility?([:PROPELLERTAIL, :STALWART])
+    return targets if user.hasActiveAbility?([:PROPELLERTAIL, :STALWART]) || user.effects[PBEffects::LockOn] > 0
     priority = @battle.pbPriority(true)
     nearOnly = !target_data.can_choose_distant_target?
     # Spotlight (takes priority over Follow Me/Rage Powder/Lightning Rod/Storm Drain)

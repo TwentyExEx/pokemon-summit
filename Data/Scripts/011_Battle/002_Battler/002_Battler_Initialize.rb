@@ -96,6 +96,7 @@ class Battle::Battler
       # reapplied
       @effects[PBEffects::LaserFocus] = (@effects[PBEffects::LaserFocus] > 0) ? 2 : 0
       @effects[PBEffects::LockOn]     = (@effects[PBEffects::LockOn] > 0) ? 2 : 0
+      @effects[PBEffects::MindReader]     = (@effects[PBEffects::MindReader] > 0) ? 2 : 0
       if @effects[PBEffects::PowerTrick]
         @attack, @defense = @defense, @attack
       end
@@ -118,6 +119,8 @@ class Battle::Battler
       @effects[PBEffects::LeechSeed]         = -1
       @effects[PBEffects::LockOn]            = 0
       @effects[PBEffects::LockOnPos]         = -1
+      @effects[PBEffects::MindReader]            = 0
+      @effects[PBEffects::MindReaderPos]         = -1
       @effects[PBEffects::MagnetRise]        = 0
       @effects[PBEffects::PerishSong]        = 0
       @effects[PBEffects::PerishSongUser]    = -1
@@ -200,8 +203,12 @@ class Battle::Battler
     @battle.allBattlers.each do |b|   # Other battlers lose their lock-on against self
       next if b.effects[PBEffects::LockOn] == 0
       next if b.effects[PBEffects::LockOnPos] != @index
+      next if b.effects[PBEffects::MindReader] == 0
+      next if b.effects[PBEffects::MindReaderPos] != @index
       b.effects[PBEffects::LockOn]    = 0
       b.effects[PBEffects::LockOnPos] = -1
+      b.effects[PBEffects::MindReader]    = 0
+      b.effects[PBEffects::MindReaderPos] = -1
     end
     @effects[PBEffects::MagicBounce]         = false
     @effects[PBEffects::MagicCoat]           = false

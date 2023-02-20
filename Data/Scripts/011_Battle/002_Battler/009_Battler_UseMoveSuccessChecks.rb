@@ -313,7 +313,7 @@ class Battle::Battler
       @battle.successStates[user.index].protected = true
       return false
     end
-    if !(user.hasActiveAbility?(:UNSEENFIST) && move.contactMove?)
+    if !(user.hasActiveAbility?(:UNSEENFIST) && move.contactMove?) || user.effects[PBEffects::MindReader] > 0
       # Wide Guard
       if target.pbOwnSide.effects[PBEffects::WideGuard] && user.index != target.index &&
          move.pbTarget(user).num_targets > 1 &&
@@ -520,6 +520,9 @@ class Battle::Battler
     # Lock-On
     return true if user.effects[PBEffects::LockOn] > 0 &&
                    user.effects[PBEffects::LockOnPos] == target.index
+    # Mind Reader
+    return true if user.effects[PBEffects::MindReader] > 0 &&
+                   user.effects[PBEffects::MindReaderPos] == target.index
     # Toxic
     return true if move.pbOverrideSuccessCheckPerHit(user, target)
     miss = false

@@ -493,7 +493,8 @@ end
 class Battle::Move::CureTargetBurn < Battle::Move
   def pbAdditionalEffect(user, target)
     return if target.fainted? || target.damageState.substitute
-    return if target.status != :BURN
+    return if target.status != :BURN || user.status != :BURN
+    user.pbCureStatus
     target.pbCureStatus
   end
 end

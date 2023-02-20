@@ -726,9 +726,13 @@ class Battle
       battler.effects[PBEffects::HyperBeam]        -= 1 if battler.effects[PBEffects::HyperBeam] > 0
       battler.effects[PBEffects::KingsShield]      = false
       battler.effects[PBEffects::LaserFocus]       -= 1 if battler.effects[PBEffects::LaserFocus] > 0
-      if battler.effects[PBEffects::LockOn] > 0   # Also Mind Reader
+      if battler.effects[PBEffects::LockOn] > 0   
         battler.effects[PBEffects::LockOn]         -= 1
         battler.effects[PBEffects::LockOnPos]      = -1 if battler.effects[PBEffects::LockOn] == 0
+      end
+      if battler.effects[PBEffects::MindReader] > 0   
+        battler.effects[PBEffects::MindReader]         -= 1
+        battler.effects[PBEffects::MindReaderPos]      = -1 if battler.effects[PBEffects::MindReader] == 0
       end
       battler.effects[PBEffects::MagicBounce]      = false
       battler.effects[PBEffects::MagicCoat]        = false
