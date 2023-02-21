@@ -2,7 +2,7 @@
 #-------------------------------
 [0]
 StartMoney = 3000
-Home = 2,14,22,8
+Home = 8,14,22,8
 StorageCreator = Kieran
 WildBattleBGM = Battle wild
 TrainerBattleBGM = trainer
