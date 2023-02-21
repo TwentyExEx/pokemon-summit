@@ -24,15 +24,20 @@ def pbSummitTeamBuilder
           formcmds[1].push(form_name)
           cmd2 = sp.form if @pkmn.form == sp.form
         end
+        f = formcmds[0][cmd2]
         if formcmds[0].length > 1
-          cmd2 = pbMessage(_INTL("Set the Pokémon's form."), formcmds[1], cmd2)
-          next if cmd2 < 0
-          f = formcmds[0][cmd2]
-          if f != @pkmn.form
-            if MultipleForms.hasFunction?(@pkmn, "getForm")
-              @pkmn.forced_form = f
+          if MultipleForms.hasFunction?(@pkmn, "getForm") || MultipleForms.hasFunction?(@pkmn, "getFormOnLeavingBattle") && @pkmn.species != :DARMANITAN
+            @pkmn.forced_form = f
+          elsif @pkmn.species == :DARMANITAN
+            for form in formcmds[1]
+              formcmds[1].delete(form) if form.include?("Zen")
             end
-            @pkmn.form = f
+          else
+            cmd2 = pbMessage(_INTL("Set the Pokémon's form."), formcmds[1], cmd2)
+            next if cmd2 < 0
+              if f != @pkmn.form
+                @pkmn.form = f
+              end
           end
         end
 
