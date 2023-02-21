@@ -30,7 +30,6 @@ def pbSummitTeamBuilder
           f = formcmds[0][cmd2]
           if f != @pkmn.form
             if MultipleForms.hasFunction?(@pkmn, "getForm")
-              next if !pbConfirm(_INTL("This species decides its own form. Override?"))
               @pkmn.forced_form = f
             end
             @pkmn.form = f
