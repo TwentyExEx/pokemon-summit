@@ -557,6 +557,24 @@ Battle::AbilityEffects::OnStatusInflicted.add(:SYNCHRONIZE,
   }
 )
 
+Battle::AbilityEffects::OnStatusInflicted.add(:TOXICBOOST,
+  proc { |ability, battler, user, status|
+    next if status != :POISON
+    battler.battle.pbShowAbilitySplash(battler)
+    battler.battle.pbDisplay(_INTL("{1} is powered up by its {2}!", battler.pbThis, battler.abilityName))
+    battler.battle.pbHideAbilitySplash(battler)
+  }
+)
+
+Battle::AbilityEffects::OnStatusInflicted.add(:FLAREBOOST,
+  proc { |ability, battler, user, status|
+    next if status != :BURN
+    battler.battle.pbShowAbilitySplash(battler)
+    battler.battle.pbDisplay(_INTL("{1} is powered up by its {2}!", battler.pbThis, battler.abilityName))
+    battler.battle.pbHideAbilitySplash(battler)
+  }
+)
+
 #===============================================================================
 # StatusCure handlers
 #===============================================================================
@@ -1286,9 +1304,13 @@ Battle::AbilityEffects::DamageCalcFromUser.add(:DRAGONSMAW,
 
 Battle::AbilityEffects::DamageCalcFromUser.add(:FLAREBOOST,
   proc { |ability, user, target, move, mults, baseDmg, type|
-    if user.burned? && move.specialMove?
-      mults[:base_damage_multiplier] *= 1.5
+    next if user.status != :BURN
+    if user.attack > user.spatk
+      power = "phys"
+    else
+      power = "spec"
     end
+    mults[:attack_multiplier] *= 2 if (power == "phys" && move.physicalMove?) || (power == "spec" && move.specialMove?)
   }
 )
 
@@ -1502,14 +1524,6 @@ Battle::AbilityEffects::DamageCalcFromUser.add(:TOUGHCLAWS,
   }
 )
 
-Battle::AbilityEffects::DamageCalcFromUser.add(:TOXICBOOST,
-  proc { |ability, user, target, move, mults, baseDmg, type|
-    if user.poisoned? && move.physicalMove?
-      mults[:base_damage_multiplier] *= 1.5
-    end
-  }
-)
-
 Battle::AbilityEffects::DamageCalcFromUser.add(:TRANSISTOR,
   proc { |ability, user, target, move, mults, baseDmg, type|
     mults[:attack_multiplier] *= 1.5 if type == :ELECTRIC
@@ -1525,6 +1539,18 @@ Battle::AbilityEffects::DamageCalcFromUser.add(:WATERBUBBLE,
 Battle::AbilityEffects::DamageCalcFromUser.add(:MAGMAARMOR,
   proc { |ability, user, target, move, mults, baseDmg, type|
     mults[:attack_multiplier] *= 2 if type == :FIRE
+  }
+)
+
+Battle::AbilityEffects::DamageCalcFromUser.add(:TOXICBOOST,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    next if user.status != :POISON
+    if user.attack > user.spatk
+      power = "phys"
+    else
+      power = "spec"
+    end
+    mults[:attack_multiplier] *= 2 if (power == "phys" && move.physicalMove?) || (power == "spec" && move.specialMove?)
   }
 )
 

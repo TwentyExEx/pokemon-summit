@@ -526,7 +526,7 @@ module CableClub
     writer.int(pkmn.smart)
     writer.int(pkmn.tough)
     writer.int(pkmn.sheen)
-	writer.sym(pkmn.tera_type[0])
+	  writer.sym(pkmn.tera_type)
     writer.int(pkmn.numRibbons)
     pkmn.ribbons.each do |ribbon|
       writer.sym(ribbon)
@@ -634,7 +634,7 @@ module CableClub
     pkmn.smart = record.int
     pkmn.tough = record.int
     pkmn.sheen = record.int
-	pkmn.tera_type[0] = record.sym
+	  pkmn.tera_type = record.sym
     for i in 0...record.int
       pkmn.giveRibbon(record.sym)
     end
