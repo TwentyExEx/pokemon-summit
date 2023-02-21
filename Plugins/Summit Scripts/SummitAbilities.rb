@@ -738,3 +738,14 @@ Battle::AbilityEffects::MoveImmunity.add(:FLATLINE,
     next true
   }
 )
+
+#===============================================================================
+# Box Barrier
+#===============================================================================
+
+Battle::AbilityEffects::DamageCalcFromUser.add(:BOXBARRIER,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    mults[:attack_multiplier] *= 1.5 if user.effects[PBEffects::Reflect] > 0 && move.physicalMove?
+    mults[:attack_multiplier] *= 1.5 if user.effects[PBEffects::LightScreen] > 0 && move.specialMove?
+  }
+)
