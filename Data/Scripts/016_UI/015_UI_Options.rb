@@ -17,7 +17,7 @@ class PokemonSystem
   attr_accessor :textinput
 
   def initialize
-    @textspeed     = 1     # Text speed (0=slow, 1=normal, 2=fast)
+    @textspeed     = 2     # Text speed (0=slow, 1=normal, 2=fast)
     @battlescene   = 0     # Battle effects (animations) (0=on, 1=off)
     @battlestyle   = 0     # Battle style (0=switch, 1=set)
     @sendtoboxes   = 0     # Send to Boxes (0=manual, 1=automatic)

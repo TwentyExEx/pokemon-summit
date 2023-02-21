@@ -206,3 +206,12 @@ def pbRelearnMoveScreen(pkmn)
   }
   return retval
 end
+
+def pbSetMoveScreen(pkmn)
+  retval = true
+  scene = MoveRelearner_Scene.new
+  screen = MoveRelearnerScreen.new(scene)
+  retval = screen.pbStartScreen(pkmn)
+  return retval
+end
+

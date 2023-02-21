@@ -61,15 +61,17 @@ def pbSummitTeamBuilder
           @pkmn.forget_move_at_index(0)
         end
         pbMessage(_INTL("Select moves for your {1}.",dispname))
+        $game_screen.start_tone_change(Tone.new(-255,-255,-255,0), 10 * Graphics.frame_rate / 20)
+        pbWait(10)
         loop do
           if @pkmn.moves.length <= 3
-          @scene = MoveRelearner_Scene.new
-          screen = MoveRelearnerScreen.new(@scene)
-          retval = screen.pbStartScreen(@pkmn)
+            pbSetMoveScreen(@pkmn)
           else
             break
           end
         end
+        $game_screen.start_tone_change(Tone.new(0,0,0,0), 10 * Graphics.frame_rate / 20)
+        pbWait(10)
 
         # Set EVs
         loop do
