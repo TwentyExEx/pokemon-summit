@@ -1343,3 +1343,34 @@ Description = This ability is disabled at this time.
 Name = Soul Snatcher
 Description = Heals HP each time it deals a KO.
 #-------------------------------
+[HEADFIRST]
+Name = Head First
+Description = Attack is boosted on the user's first turn in battle.
+#-------------------------------
+[AMPLIFIER]
+Name = Amplifier
+Description = Draws in all sound-based moves to up Speed.
+#-------------------------------
+[KINGPIN]
+Name = Kingpin
+Description = Allies have their physical attacks boosted. This Pokemon's Speed is upped when under half HP.
+#-------------------------------
+[LIGHTSINK]
+Name = Light Sink
+Description = Light-based moves have their damage halved against this Pokemon and also heal the target for a quarter of its HP.
+#-------------------------------
+[FLATLINE]
+Name = Flatline
+Description = Gives full immunity to pulse and multi-strike moves.
+#-------------------------------
+[SOLIDIFY]
+Name = Solidify
+Description = Water-type moves become Ice-type and boosted.
+#-------------------------------
+[IRONAGE]
+Name = Iron Age
+Description = Rock-type moves become Steel-type and boosted.
+#-------------------------------
+[AUTOMATON]
+Name = Automaton
+Description = Moves that require a charge turn will skip the charge turn.

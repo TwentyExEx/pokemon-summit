@@ -609,3 +609,132 @@ Battle::AbilityEffects::DamageCalcFromUser.add(:HEADFIRST,
     end
   }
 )
+
+#===============================================================================
+# Kingpin
+#===============================================================================
+
+Battle::AbilityEffects::AfterMoveUseFromTarget.add(:KINGPIN,
+  proc { |ability, target, user, move, switched_battlers, battle|
+    next if !move.damagingMove?
+    next if !target.droppedBelowHalfHP
+    next if !target.pbCanRaiseStatStage?(:SPEED, target)
+    target.pbRaiseStatStageByAbility(:SPEED, 1, target)
+  }
+)
+
+Battle::AbilityEffects::DamageCalcFromAlly.add(:KINGPIN,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    next if !move.physicalMove?
+    mults[:final_damage_multiplier] *= 1.3
+  }
+)
+
+#===============================================================================
+# Solidify
+#===============================================================================
+
+Battle::AbilityEffects::ModifyMoveBaseType.add(:SOLIDIFY,
+  proc { |ability, user, move, type|
+    next if type != :WATER || !GameData::Type.exists?(:ICE)
+    move.powerBoost = true
+    next :ICE
+  }
+)
+
+#===============================================================================
+# Iron Age
+#===============================================================================
+
+Battle::AbilityEffects::ModifyMoveBaseType.add(:IRONAGE,
+  proc { |ability, user, move, type|
+    next if type != :ROCK || !GameData::Type.exists?(:STEEL)
+    move.powerBoost = true
+    next :STEEL
+  }
+)
+
+#===============================================================================
+# Light Sink
+#===============================================================================
+
+Battle::AbilityEffects::DamageCalcFromTarget.add(:LIGHTSINK,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    mults[:final_damage_multiplier] /= 2 if move.lightMove?
+  }
+)
+
+Battle::AbilityEffects::OnBeingHit.add(:LIGHTSINK,
+  proc { |ability, user, target, move, battle|
+    next if !move.lightMove?
+    next if !target.canHeal?
+      battle.pbShowAbilitySplash(target)
+      target.pbRecoverHP(target.totalhp / 4)
+      if Battle::Scene::USE_ABILITY_SPLASH
+        battle.pbDisplay(_INTL("{1}'s HP was restored.", target.pbThis))
+      else
+        battle.pbDisplay(_INTL("{1}'s {2} restored its HP.", target.pbThis, target.abilityName))
+      end
+      battle.pbHideAbilitySplash(target)
+  }
+)
+
+#===============================================================================
+# Amplifier
+#===============================================================================
+
+Battle::AbilityEffects::MoveImmunity.add(:AMPLIFIER,
+  proc { |ability, user, target, move, type, battle, show_message|
+    next false if !move.soundMove?
+    next false if Settings::MECHANICS_GENERATION >= 8 && user.index == target.index
+    if show_message
+      battle.pbShowAbilitySplash(target)
+      if Battle::Scene::USE_ABILITY_SPLASH
+        battle.pbDisplay(_INTL("It doesn't affect {1}...", target.pbThis(true)))
+      else
+        battle.pbDisplay(_INTL("{1}'s {2} blocks {3}!", target.pbThis, target.abilityName, move.name))
+      end
+      target.pbRaiseStatStageByAbility(:SPECIAL_ATTACK, 1, target)
+      battle.pbHideAbilitySplash(target)
+    end
+    next true
+  }
+)
+
+#===============================================================================
+# Automaton
+#===============================================================================
+
+#===============================================================================
+# Castle Walls
+#===============================================================================
+
+Battle::AbilityEffects::OnSwitchIn.add(:CASTLEWALLS,
+  proc { |ability, battler, battle|
+    battle.pbShowAbilitySplash(battler)
+    battle.pbDisplay(_INTL("{1}'s {2} set up Wide Guard!",battler.pbThis,battler.abilityName))
+    battler.pbOwnSide.effects[PBEffects::WideGuard] = true
+    battle.pbHideAbilitySplash(battler)
+  }
+)
+
+#===============================================================================
+# Flatline
+#===============================================================================
+
+Battle::AbilityEffects::MoveImmunity.add(:FLATLINE,
+  proc { |ability, user, target, move, type, battle, show_message|
+    next false if !move.pulseMove? || !move.flatlineMove?
+    next false if Settings::MECHANICS_GENERATION >= 8 && user.index == target.index
+    if show_message
+      battle.pbShowAbilitySplash(target)
+      if Battle::Scene::USE_ABILITY_SPLASH
+        battle.pbDisplay(_INTL("It doesn't affect {1}...", target.pbThis(true)))
+      else
+        battle.pbDisplay(_INTL("{1}'s {2} blocks {3}!", target.pbThis, target.abilityName, move.name))
+      end
+      battle.pbHideAbilitySplash(target)
+    end
+    next true
+  }
+)

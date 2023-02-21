@@ -1226,7 +1226,7 @@ Battle::AbilityEffects::DamageCalcFromUser.add(:AERILATE,
   }
 )
 
-Battle::AbilityEffects::DamageCalcFromUser.copy(:AERILATE, :PIXILATE, :REFRIGERATE, :GALVANIZE)
+Battle::AbilityEffects::DamageCalcFromUser.copy(:AERILATE, :PIXILATE, :REFRIGERATE, :GALVANIZE, :SOLIDIFY, :IRONAGE)
 
 Battle::AbilityEffects::DamageCalcFromUser.add(:NORMALIZE,
   proc { |ability, user, target, move, mults, baseDmg, type|
