@@ -2226,32 +2226,32 @@ Name = Channeler
 Gender = Female
 BaseMoney = 50
 #-------------------------------
-[TRAINER_CAMPER_ALOLA_F]
+[TRAINER_CLERK_ALOLA_F]
 Name = Clerk
 Gender = Female
 BaseMoney = 50
 #-------------------------------
-[TRAINER_CAMPER_ALOLA_M]
+[TRAINER_CLERK_ALOLA_M]
 Name = Clerk
 Gender = Male
 BaseMoney = 50
 #-------------------------------
-[TRAINER_CAMPER_GALAR_F]
+[TRAINER_CLERK_GALAR_F]
 Name = Clerk
 Gender = Female
 BaseMoney = 50
 #-------------------------------
-[TRAINER_CAMPER_GALAR_M]
+[TRAINER_CLERK_GALAR_M]
 Name = Clerk
 Gender = Male
 BaseMoney = 50
 #-------------------------------
-[TRAINER_CAMPER_UNOVA_F]
+[TRAINER_CLERK_UNOVA_F]
 Name = Clerk
 Gender = Female
 BaseMoney = 50
 #-------------------------------
-[TRAINER_CAMPER_UNOVA_M]
+[TRAINER_CLERK_UNOVA_M]
 Name = Clerk
 Gender = Male
 BaseMoney = 50
@@ -2596,6 +2596,11 @@ Name = Janitor
 Gender = Male
 BaseMoney = 50
 #-------------------------------
+[TRAINER_JOGGER]
+Name = Jogger
+Gender = Male
+BaseMoney = 50
+#-------------------------------
 [TRAINER_JUGGLER]
 Name = Juggler
 Gender = Male
@@ -2707,6 +2712,11 @@ Gender = Female
 BaseMoney = 50
 #-------------------------------
 [TRAINER_MADAME_SINNOH]
+Name = Madame
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_MADAME_UNOVA]
 Name = Madame
 Gender = Female
 BaseMoney = 50
@@ -3731,7 +3741,7 @@ Name = Youngster
 Gender = Male
 BaseMoney = 50
 #-------------------------------
-[TRAINER_YOUNGSTER_SINNOAH]
+[TRAINER_YOUNGSTER_SINNOH]
 Name = Youngster
 Gender = Male
 BaseMoney = 50
