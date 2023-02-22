@@ -1213,11 +1213,11 @@ Description = Psychic-type moves are given priority. The power of these moves ar
 #-------------------------------
 [DRAININGTOUCH]
 Name = Draining Touch
-Description = Contact moves heal the user by a small amount
+Description = Contact moves heal the user by a small amount.
 #-------------------------------
 [DEEPPUDDLE]
 Name = Deep Puddle
-Description = Prevents Water-type Pokémon from escaping.
+Description = Prevents Water-type Pokémon from fleeing by pulling them in with a trapping puddle.
 #-------------------------------
 [WARCOAT]
 Name = War Coat
@@ -1237,7 +1237,7 @@ Description = During electric terrain, Attack is boosted but HP decreases.
 #-------------------------------
 [INSECTIVOROUS]
 Name = Insectivorous
-Description = Boosts Attack when hit by a Bug-type move.
+Description = The Pokémon draws in all Bug-type moves. Instead of taking damage from them, its Attack stat is boosted.
 #-------------------------------
 [HEATSINK]
 Name = Heat Sink
@@ -1253,7 +1253,7 @@ Description = When attacking, the user goes for a second, weaker hit in the same
 #-------------------------------
 [DISQUIET]
 Name = Disquiet
-Description = Lowers the foe's Special Attack stat.
+Description = The Pokémon intimidates opposing Pokémon upon entering battle, lowering their Sp. Atk stat.
 #-------------------------------
 [SPARKSTARTER]
 Name = Spark Starter

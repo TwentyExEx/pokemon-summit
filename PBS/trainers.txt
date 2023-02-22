@@ -614,7 +614,7 @@ Pokemon = EISCUE,50
     EV = 252,252,0,0,0,0
 	TeraType = ICE
 #-------------------------------
-[LEADER_Clair,Clair,7]
+[LEADER_Clair,Clair]
 LoseText = It's over...
 Items = TERAORB
 Pokemon = DRAGONITE,50
