@@ -76,8 +76,10 @@ class Battle::Move::MaxUserAttackLoseHalfOfTotalHP < Battle::Move
       user.stages[:ATTACK] = -6
       user.statsLoweredThisRound = true
       user.statsDropped = true
+	  @battle.pbCommonAnimation("UseItem", user) if user.hasActiveItem?(:PINKHERB)
       @battle.pbCommonAnimation("StatDown", user)
       @battle.pbDisplay(_INTL("{1} cut its own HP and minimized its Attack!", user.pbThis))
+	  user.pbConsumeItem if user.hasActiveItem?(:PINKHERB)  
     else
       user.stages[:ATTACK] = 6
       user.statsRaisedThisRound = true
