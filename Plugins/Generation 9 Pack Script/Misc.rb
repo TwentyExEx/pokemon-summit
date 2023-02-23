@@ -58,6 +58,7 @@ class Battle::Move
   def pbContactMove?(user)
     return false if user.hasActiveAbility?(:LONGREACH)
     return false if user.hasActiveItem?(:PUNCHINGGLOVE) && punchingMove?
+    return false if user.hasActiveItem?(:IRONDENTURE) && bitingMove?
     return contactMove?
   end
   # Used by Counter/Mirror Coat/Metal Burst/Revenge/Focus Punch/Bide/Assurance.

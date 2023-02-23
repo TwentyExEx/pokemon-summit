@@ -973,12 +973,6 @@ Battle::ItemEffects::DamageCalcFromUser.add(:PIXIEPLATE,
   }
 )
 
-Battle::ItemEffects::DamageCalcFromUser.add(:PIXIEDUST,
-  proc { |item, user, target, move, mults, baseDmg, type|
-    mults[:base_damage_multiplier] *= 1.2 if type == :FAIRY
-  }
-)
-
 Battle::ItemEffects::DamageCalcFromUser.add(:POISONBARB,
   proc { |item, user, target, move, mults, baseDmg, type|
     mults[:base_damage_multiplier] *= 1.2 if type == :POISON

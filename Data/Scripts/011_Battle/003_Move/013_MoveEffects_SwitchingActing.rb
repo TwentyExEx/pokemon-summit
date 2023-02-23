@@ -622,6 +622,9 @@ class Battle::Move::StartSlowerBattlersActFirst < Battle::Move
     if @battle.field.effects[PBEffects::TrickRoom] > 0
       @battle.field.effects[PBEffects::TrickRoom] = 0
       @battle.pbDisplay(_INTL("{1} reverted the dimensions!", user.pbThis))
+    elsif user.hasActiveItem(:EXTENDEDBOOKING)
+      @battle.field.effects[PBEffects::TrickRoom] = 8
+      @battle.pbDisplay(_INTL("{1} twisted the dimensions!", user.pbThis))
     else
       @battle.field.effects[PBEffects::TrickRoom] = 5
       @battle.pbDisplay(_INTL("{1} twisted the dimensions!", user.pbThis))

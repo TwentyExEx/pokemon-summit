@@ -72,7 +72,7 @@ class Battle::Move::MaxUserAttackLoseHalfOfTotalHP < Battle::Move
   def pbEffectGeneral(user)
     hpLoss = [user.totalhp / 2, 1].max
     user.pbReduceHP(hpLoss, false, false)
-    if user.hasActiveAbility?(:CONTRARY)
+    if user.hasActiveAbility?(:CONTRARY) || user.hasActiveItem?(:PINKHERB)
       user.stages[:ATTACK] = -6
       user.statsLoweredThisRound = true
       user.statsDropped = true
@@ -1922,8 +1922,11 @@ class Battle::Move::StartSwapAllBattlersBaseDefensiveStats < Battle::Move
     if @battle.field.effects[PBEffects::WonderRoom] > 0
       @battle.field.effects[PBEffects::WonderRoom] = 0
       @battle.pbDisplay(_INTL("Wonder Room wore off, and the Defense and Sp. Def stats returned to normal!"))
-    else
-      @battle.field.effects[PBEffects::WonderRoom] = 5
+    elsif user.hasActiveItem(:EXTENDEDBOOKING)
+      @battle.field.effects[PBEffects::WonderRoom] = 8
+      @battle.pbDisplay(_INTL("It created a bizarre area in which the Defense and Sp. Def stats are swapped!"))
+	else
+	  @battle.field.effects[PBEffects::WonderRoom] = 5
       @battle.pbDisplay(_INTL("It created a bizarre area in which the Defense and Sp. Def stats are swapped!"))
     end
   end

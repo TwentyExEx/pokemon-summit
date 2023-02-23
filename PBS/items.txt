@@ -510,7 +510,7 @@ NamePlural = Heart Scales
 Pocket = 1
 Price = 100
 Flags = Fling_30
-Description = A pretty, heart-shaped scale that is extremely rare. It glows faintly in the colors of the rainbow.
+Description = An item to be held by Luvdisc. It glows faintly in the colors of the rainbow and also raises the Sp. Atk stat.
 #-------------------------------
 [SLOWPOKETAIL]
 Name = Slowpoke Tail
@@ -1558,14 +1558,6 @@ Price = 3000
 SellPrice = 500
 Flags = Fling_10
 Description = An item to be held by a Pokémon. It is a sumptuous scarf that boosts the power of Normal-type moves.
-#-------------------------------
-[PIXIEDUST]
-Name = Pixie Dust
-NamePlural = Pixie Dusts
-Pocket = 1
-Price = 3000
-Flags = Fling_10
-Description = An item to be held by a Pokémon. It is a bag of strange dust that boosts the power of Fairy-type moves.
 #-------------------------------
 [FLAMEPLATE]
 Name = Flame Plate
@@ -7122,22 +7114,6 @@ Price = 0
 Flags = KeyItem
 Description = A record of the Heath's expedition on the Great Crater of Paldea. The book has the name "Turo" written in clumsy handwriting.
 #-------------------------------
-[CRASHGEAR]
-Name = Crash Gear
-NamePlural = Crash Gears
-Pocket = 1
-Price = 4000
-Flags = Fling_30
-Description = An item to be held by a Pokémon. Halves the amount of recoil taken from moves.
-#-------------------------------
-[WINDTURBINE]
-Name = Wind Turbine
-NamePlural = Wind Turbines
-Pocket = 1
-Price = 4000
-Flags = Fling_30
-Description = Raises Sp. Atk when a Pokémon uses a wind-based move.
-#-------------------------------
 [TERAORB]
 Name = Tera Orb
 NamePlural = Tera Orbs
@@ -7334,3 +7310,91 @@ Price = 4000
 BattleUse = Direct
 Flags = Fling_50,UsesAllBattleActions
 Description = A jewel glistening with Tera energy. It can fully recharge your Tera Orb in battle.
+#-------------------------------
+[WINDTURBINE]
+Name = Wind Turbine
+NamePlural = Wind Turbines
+Pocket = 1
+Price = 4000
+Flags = Fling_30
+Description = An item to be held by a Pokémon. This machine raises Sp. Atk when a Pokémon uses a wind-based move.
+#-------------------------------
+[CRASHGEAR]
+Name = Crash Gear
+NamePlural = Crash Gears
+Pocket = 1
+Price = 4000
+Flags = Fling_30
+Description = An item to be held by a Pokémon. The gear is so sturdy that recoil taken from moves is halved.
+#-------------------------------
+[SUPPRESSORVEST]
+Name = Suppressor Vest
+NamePlural = Suppressor Vests
+Pocket = 1
+Price = 4000
+Flags = Fling_30
+Description = An item to be held by a Pokémon. This offensive vest raises Defense but negates the user's Ability.
+#-------------------------------
+[MAGNIFYINGGLASS]
+Name = Magnifying Glass
+NamePlural = Magnifying Glasses
+Pocket = 1
+Price = 4000
+Flags = Fling_30
+Description = An item to be held by a Pokémon. This glass ensures that all moves used by and against this Pokémon will always hit.
+#-------------------------------
+[KARATEBAND]
+Name = Karate Band
+NamePlural = Karate Bands
+Pocket = 1
+Price = 4000
+Flags = Fling_30
+Description = An item to be held by a Pokémon. This headband raises the user's Attack but in turn lowers its Defense.
+#-------------------------------
+[HOMINGBLASTER]
+Name = Homing Blaster
+NamePlural = Homing Blasters
+Pocket = 1
+Price = 4000
+Flags = Fling_30
+Description = An item to be held by a Pokémon. This cannon raises the user's Sp. Atk but in turn lowers its Sp. Def.
+#-------------------------------
+[PINKHERB]
+Name = Pink Herb
+NamePlural = Pink Herb
+Pocket = 1
+Price = 4000
+Flags = Fling_30
+Description = An item to be held by a Pokémon. 
+#-------------------------------
+[PIXIEDUST]
+Name = Pixie Dust
+NamePlural = Pixie Dusts
+Pocket = 1
+Price = 4000
+Flags = Fling_10
+Description = An item to be held by a Pokémon. It is a bag of strange dust that boosts the power of Fairy-type moves.
+#-------------------------------
+[KINFESHARPENER]
+Name = Knife Sharpener
+NamePlural = Knife Sharpeners
+Pocket = 1
+Price = 4000
+Flags = Fling_30
+Description = An item to be held by a Pokémon. This sharp knife will boost the user's Attack stat if it lands a critical-hit with a slicing move.
+#-------------------------------
+[EXTENDEDBOOKING]
+Name = Extended Booking
+NamePlural = Extended Bookings
+Pocket = 1
+Price = 4000
+Flags = Fling_30
+Description = An item to be held by a Pokémon. Moves that affect the dimensions like Trick Room, Wonder Room, and Magic Room will be effective longer.
+#-------------------------------
+[IRONDENTURE]
+Name = Iron Denture
+NamePlural = Iron Dentures
+Pocket = 1
+Price = 4000
+Flags = Fling_30
+Description = An item to be held by a Pokémon. It boosts the holder's biting moves and prevents direct contact with targets.

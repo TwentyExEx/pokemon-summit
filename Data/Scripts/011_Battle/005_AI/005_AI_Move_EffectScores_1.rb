@@ -789,7 +789,7 @@ class Battle::AI
     when "RaiseUserMainStats1LoseThirdOfTotalHP"
       if user.hp <= user.totalhp / 2
         score -= 100
-      elsif user.hasActiveAbility?(:CONTRARY)
+      elsif user.hasActiveAbility?(:CONTRARY) || user.hasActiveItem?(:PINKHERB)
         score -= 100
       else
         stats_maxed = true
@@ -815,7 +815,7 @@ class Battle::AI
     when "RaiseUserMainStats1TrapUserInBattle"
       if user.effects[PBEffects::NoRetreat]
         score -= 100
-      elsif user.hasActiveAbility?(:CONTRARY)
+      elsif user.hasActiveAbility?(:CONTRARY) || user.hasActiveItem?(:PINKHERB)
         score -= 100
       else
         stats_maxed = true
@@ -914,7 +914,7 @@ class Battle::AI
     when "RaiseTargetAtkSpAtk2"
       if target.opposes?(user)
         score -= 100
-      elsif skill >= PBTrainerAI.mediumSkill && target.hasActiveAbility?(:CONTRARY)
+      elsif skill >= PBTrainerAI.mediumSkill && (target.hasActiveAbility?(:CONTRARY) || target.hasActiveItem?(:PINKHERB))
         score -= 90
       else
         score -= target.stages[:ATTACK] * 20
@@ -1288,7 +1288,7 @@ class Battle::AI
         next if !b.pbCanLowerStatStage?(:ATTACK, user) &&
                 !b.pbCanLowerStatStage?(:SPECIAL_ATTACK, user)
         has_ally = true
-        if skill >= PBTrainerAI.mediumSkill && b.hasActiveAbility?(:CONTRARY)
+        if skill >= PBTrainerAI.mediumSkill && (b.hasActiveAbility?(:CONTRARY) || b.hasActiveItem?(:PINKHERB))
           score -= 90
         else
           score += 40

@@ -9,8 +9,10 @@ class Battle::Battler
   def pbCanRaiseStatStage?(stat, user = nil, move = nil, showFailMsg = false, ignoreContrary = false)
     return false if fainted?
     # Contrary
-    if hasActiveAbility?(:CONTRARY) && !ignoreContrary && !@battle.moldBreaker
-      return pbCanLowerStatStage?(stat, user, move, showFailMsg, true)
+    if (hasActiveAbility?(:CONTRARY) && !ignoreContrary && !@battle.moldBreaker) || (hasActiveItem?(:PINKHERB) && !ignoreContrary)
+	  battle.pbCommonAnimation("UseItem", user) if user.hasActiveItem?(:PINKHERB)
+	  return pbCanLowerStatStage?(stat, user, move, showFailMsg, true)
+	  user.pbConsumeItem if user.hasActiveItem?(:PINKHERB)
     end
     # Check the stat stage
     if statStageAtMax?(stat)
@@ -26,8 +28,10 @@ class Battle::Battler
   def pbRaiseStatStageBasic(stat, increment, ignoreContrary = false)
     if !@battle.moldBreaker
       # Contrary
-      if hasActiveAbility?(:CONTRARY) && !ignoreContrary
-        return pbLowerStatStageBasic(stat, increment, true)
+      if (hasActiveAbility?(:CONTRARY) && !ignoreContrary) || (hasActiveItem?(:PINKHERB) && !ignoreContrary)
+		battle.pbCommonAnimation("UseItem", user) if user.hasActiveItem?(:PINKHERB)
+		return pbLowerStatStageBasic(stat, increment, true)
+		user.pbConsumeItem if user.hasActiveItem?(:PINKHERB)
       end
       # Simple
       increment *= 2 if hasActiveAbility?(:SIMPLE)
@@ -46,8 +50,10 @@ class Battle::Battler
 
   def pbRaiseStatStage(stat, increment, user, showAnim = true, ignoreContrary = false)
     # Contrary
-    if hasActiveAbility?(:CONTRARY) && !ignoreContrary && !@battle.moldBreaker
-      return pbLowerStatStage(stat, increment, user, showAnim, true)
+    if (hasActiveAbility?(:CONTRARY) && !ignoreContrary && !@battle.moldBreaker) || (hasActiveItem?(:PINKHERB) && !ignoreContrary)
+	  battle.pbCommonAnimation("UseItem", user) if user.hasActiveItem?(:PINKHERB)
+	  return pbLowerStatStage(stat, increment, user, showAnim, true)
+	  user.pbConsumeItem if user.hasActiveItem?(:PINKHERB)  
     end
     # Perform the stat stage change
     increment = pbRaiseStatStageBasic(stat, increment, ignoreContrary)
@@ -69,8 +75,10 @@ class Battle::Battler
 
   def pbRaiseStatStageByCause(stat, increment, user, cause, showAnim = true, ignoreContrary = false)
     # Contrary
-    if hasActiveAbility?(:CONTRARY) && !ignoreContrary && !@battle.moldBreaker
-      return pbLowerStatStageByCause(stat, increment, user, cause, showAnim, true)
+    if (hasActiveAbility?(:CONTRARY) && !ignoreContrary && !@battle.moldBreaker) || (hasActiveItem?(:PINKHERB) && !ignoreContrary)
+	  battle.pbCommonAnimation("UseItem", user) if user.hasActiveItem?(:PINKHERB)
+	  return pbLowerStatStageByCause(stat, increment, user, cause, showAnim, true)
+	  user.pbConsumeItem if user.hasActiveItem?(:PINKHERB)  
     end
     # Perform the stat stage change
     increment = pbRaiseStatStageBasic(stat, increment, ignoreContrary)
@@ -125,8 +133,10 @@ class Battle::Battler
     return false if fainted?
     if !@battle.moldBreaker
       # Contrary
-      if hasActiveAbility?(:CONTRARY) && !ignoreContrary
-        return pbCanRaiseStatStage?(stat, user, move, showFailMsg, true)
+      if hasActiveAbility?(:CONTRARY) && !ignoreContrary || (hasActiveItem?(:PINKHERB) && !ignoreContrary)
+		battle.pbCommonAnimation("UseItem", user) if user.hasActiveItem?(:PINKHERB)
+		return pbCanRaiseStatStage?(stat, user, move, showFailMsg, true)
+		user.pbConsumeItem if user.hasActiveItem?(:PINKHERB)  
       end
       # Mirror Armor
       if hasActiveAbility?(:MIRRORARMOR) && !ignoreMirrorArmor &&
@@ -176,8 +186,10 @@ class Battle::Battler
   def pbLowerStatStageBasic(stat, increment, ignoreContrary = false)
     if !@battle.moldBreaker
       # Contrary
-      if hasActiveAbility?(:CONTRARY) && !ignoreContrary
+      if hasActiveAbility?(:CONTRARY) && !ignoreContrary || (hasActiveItem?(:PINKHERB) && !ignoreContrary)
+		battle.pbCommonAnimation("UseItem", user) if user.hasActiveItem?(:PINKHERB)
         return pbRaiseStatStageBasic(stat, increment, true)
+		user.pbConsumeItem if user.hasActiveItem?(:PINKHERB)  
       end
       # Simple
       increment *= 2 if hasActiveAbility?(:SIMPLE)
@@ -199,8 +211,10 @@ class Battle::Battler
                        mirrorArmorSplash = 0, ignoreMirrorArmor = false)
     if !@battle.moldBreaker
       # Contrary
-      if hasActiveAbility?(:CONTRARY) && !ignoreContrary
-        return pbRaiseStatStage(stat, increment, user, showAnim, true)
+      if hasActiveAbility?(:CONTRARY) && !ignoreContrary || (hasActiveItem?(:PINKHERB) && !ignoreContrary)
+	  battle.pbCommonAnimation("UseItem", user) if user.hasActiveItem?(:PINKHERB)
+      return pbRaiseStatStage(stat, increment, user, showAnim, true)
+	  user.pbConsumeItem if user.hasActiveItem?(:PINKHERB)  
       end
       # Mirror Armor
       if hasActiveAbility?(:MIRRORARMOR) && !ignoreMirrorArmor &&
@@ -241,8 +255,10 @@ class Battle::Battler
                               ignoreContrary = false, ignoreMirrorArmor = false)
     if !@battle.moldBreaker
       # Contrary
-      if hasActiveAbility?(:CONTRARY) && !ignoreContrary
-        return pbRaiseStatStageByCause(stat, increment, user, cause, showAnim, true)
+      if hasActiveAbility?(:CONTRARY) && !ignoreContrary || (hasActiveItem?(:PINKHERB) && !ignoreContrary)
+	  battle.pbCommonAnimation("UseItem", user) if user.hasActiveItem?(:PINKHERB)
+      return pbRaiseStatStageByCause(stat, increment, user, cause, showAnim, true)
+	  user.pbConsumeItem if user.hasActiveItem?(:PINKHERB)  
       end
       # Mirror Armor
       if hasActiveAbility?(:MIRRORARMOR) && !ignoreMirrorArmor &&
@@ -329,7 +345,7 @@ class Battle::Battler
     # NOTE: These checks exist to ensure appropriate messages are shown if
     #       Intimidate is blocked somehow (i.e. the messages should mention the
     #       Intimidate ability by name).
-    if !hasActiveAbility?(:CONTRARY)
+    if !hasActiveAbility?(:CONTRARY) || !hasActiveItem?(:PINKHERB)
       if pbOwnSide.effects[PBEffects::Mist] > 0
         @battle.pbDisplay(_INTL("{1} is protected from {2}'s {3} by Mist!",
                                 pbThis, user.pbThis(true), user.abilityName))
@@ -384,7 +400,7 @@ class Battle::Battler
     # NOTE: These checks exist to ensure appropriate messages are shown if
     #       Disquiet is blocked somehow (i.e. the messages should mention the
     #       Disquiet ability by name).
-    if !hasActiveAbility?(:CONTRARY)
+    if !hasActiveAbility?(:CONTRARY) || !hasActiveItem?(:PINKHERB)
       if pbOwnSide.effects[PBEffects::Mist] > 0
         @battle.pbDisplay(_INTL("{1} is protected from {2}'s {3} by Mist!",
                                 pbThis, user.pbThis(true), user.abilityName))

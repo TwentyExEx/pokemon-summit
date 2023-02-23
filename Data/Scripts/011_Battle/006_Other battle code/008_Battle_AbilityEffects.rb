@@ -2989,7 +2989,7 @@ Battle::AbilityEffects::OnSwitchIn.add(:INTIMIDATE,
     battle.allOtherSideBattlers(battler.index).each do |b|
       next if !b.near?(battler)
       check_item = true
-      if b.hasActiveAbility?(:CONTRARY)
+      if (b.hasActiveAbility?(:CONTRARY) || b.hasActiveItem?(:PINKHERB))
         check_item = false if b.statStageAtMax?(:ATTACK)
       elsif b.statStageAtMin?(:ATTACK)
         check_item = false
@@ -3008,7 +3008,7 @@ Battle::AbilityEffects::OnSwitchIn.add(:DISQUIET,
     battle.allOtherSideBattlers(battler.index).each do |b|
       next if !b.near?(battler)
       check_item = true
-      if b.hasActiveAbility?(:CONTRARY)
+      if (b.hasActiveAbility?(:CONTRARY) || b.hasActiveItem?(:PINKHERB))
         check_item = false if b.statStageAtMax?(:SPECIAL_ATTACK)
       elsif b.statStageAtMin?(:SPECIAL_ATTACK)
         check_item = false
