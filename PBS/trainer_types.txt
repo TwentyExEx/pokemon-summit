@@ -388,119 +388,119 @@ Name = Alola Captain
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = alola\alolatrainer
+BattleBGM = alola_ex_trainer
 #-------------------------------
 [CAPTAIN_Lana]
 Name = Alola Captain
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = alola\alolatrainer
+BattleBGM = alola_ex_trainer
 #-------------------------------
 [CAPTAIN_Kiawe]
 Name = Alola Captain
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = alola\alolatrainer
+BattleBGM = alola_ex_trainer
 #-------------------------------
 [CAPTAIN_Mallow]
 Name = Alola Captain
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = alola\alolatrainer
+BattleBGM = alola_ex_trainer
 #-------------------------------
 [CAPTAIN_Sophocles]
 Name = Alola Captain
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = alola\alolatrainer
+BattleBGM = alola_ex_trainer
 #-------------------------------
 [CAPTAIN_Acerola]
 Name = Alola Captain
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = alola\alolatrainer
+BattleBGM = alola_ex_trainer
 #-------------------------------
 [CAPTAIN_Mina]
 Name = Alola Captain
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = alola\alolatrainer
+BattleBGM = alola_ex_trainer
 #-------------------------------
 [LEADER_Milo]
 Name = Galar Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galar\galarleader
+BattleBGM = galar_ex_leader
 #-------------------------------
 [LEADER_Nessa]
 Name = Galar Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galar\galarleader
+BattleBGM = galar_ex_leader
 #-------------------------------
 [LEADER_Kabu]
 Name = Galar Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galar\galarleader
+BattleBGM = galar_ex_leader
 #-------------------------------
 [LEADER_Bea]
 Name = Galar Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galar\galarleader
+BattleBGM = galar_ex_leader
 #-------------------------------
 [LEADER_Allister]
 Name = Galar Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galar\galarleader
+BattleBGM = galar_ex_leader
 #-------------------------------
 [LEADER_Opal]
 Name = Galar Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galar\galarleader
+BattleBGM = galar_ex_leader
 #-------------------------------
 [LEADER_Gordie]
 Name = Galar Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galar\galarleader
+BattleBGM = galar_ex_leader
 #-------------------------------
 [LEADER_Melony]
 Name = Galar Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galar\galarleader
+BattleBGM = galar_ex_leader
 #-------------------------------
 [LEADER_Piers]
 Name = Galar Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galar\piers
+BattleBGM = galar_ex_piers
 #-------------------------------
 [LEADER_Raihan]
 Name = Galar Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galar\galarleader
+BattleBGM = galar_ex_leader
 #-------------------------------
 [RIVAL_Blue]
 Name = Rival
@@ -997,14 +997,14 @@ Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galar\galarleader
+BattleBGM = galar_ex_leader
 #-------------------------------
 [ELITE_Avery]
 Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galar\galarleader
+BattleBGM = galar_ex_leader
 #-------------------------------
 [ELITE_Mustard]
 Name = Dojo Master
@@ -1095,7 +1095,7 @@ Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = alola\alolatrainer
+BattleBGM = alola_ex_trainer
 #-------------------------------
 [PROTAG_Victor]
 Name = Pokémon Trainer
@@ -1158,7 +1158,7 @@ Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = alola\alolatrainer
+BattleBGM = alola_ex_trainer
 #-------------------------------
 [PROTAG_Gloria]
 Name = Pokémon Trainer
@@ -1473,56 +1473,56 @@ Name = Paldea Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea\paldealeader
+BattleBGM = paldea_ex_leader
 #-------------------------------
 [LEADER_Brassius]
 Name = Paldea Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea\paldealeader
+BattleBGM = paldea_ex_leader
 #-------------------------------
 [LEADER_Iono]
 Name = Paldea Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea\paldealeader
+BattleBGM = paldea_ex_leader
 #-------------------------------
 [LEADER_Kofu]
 Name = Paldea Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea\paldealeader
+BattleBGM = paldea_ex_leader
 #-------------------------------
 [LEADER_Larry]
 Name = Paldea Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea\paldealeader
+BattleBGM = paldea_ex_leader
 #-------------------------------
 [LEADER_Ryme]
 Name = Paldea Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea\paldealeader
+BattleBGM = paldea_ex_leader
 #-------------------------------
 [LEADER_Tulip]
 Name = Paldea Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea\paldealeader
+BattleBGM = paldea_ex_leader
 #-------------------------------
 [LEADER_Grusha]
 Name = Paldea Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea\paldealeader
+BattleBGM = paldea_ex_leader
 #-------------------------------
 [ELITE_Rika]
 Name = Paldea Elite Four

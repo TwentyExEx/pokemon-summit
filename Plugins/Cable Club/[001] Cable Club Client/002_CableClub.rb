@@ -120,7 +120,7 @@ module CableClub
                   else; raise "Unknown battle type"
                   end
                 writer.sym(battle_type)
-              end
+              end			  
               activity = :battle
               state = :await_accept_activity
             end
@@ -152,6 +152,7 @@ module CableClub
             when :ok
               case activity
               when :battle
+				$PokemonGlobal.nextBattleBGM = $game_variables[48]
                 partner = NPCTrainer.new(partner_name, partner_trainer_type)
                 (partner.partyID=0) rescue nil # EBDX compat
                 do_battle(connection, client_id, seed, battle_type, partner, partner_party)
