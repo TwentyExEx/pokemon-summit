@@ -6174,7 +6174,7 @@ Accuracy = 0
 TotalPP = 5
 Target = NearOther
 FunctionCode = EnsureNextMoveAlwaysHitsBypassProtect
-Flags = CanProtect,CanMirrorMove
+Flags = CanMirrorMove
 Description = The user senses the foe's movements with its mind to ensure its next attack does not miss the foe.
 #-------------------------------
 [MINIMIZE]

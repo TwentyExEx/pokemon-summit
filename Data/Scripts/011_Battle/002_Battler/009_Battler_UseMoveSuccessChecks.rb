@@ -313,7 +313,7 @@ class Battle::Battler
       @battle.successStates[user.index].protected = true
       return false
     end
-    if !(user.hasActiveAbility?(:UNSEENFIST) && move.contactMove?) || user.effects[PBEffects::MindReader] > 0
+    if !(user.hasActiveAbility?(:UNSEENFIST) && move.contactMove?) || user.effects[PBEffects::MindReader] == 0
       # Wide Guard
       if target.pbOwnSide.effects[PBEffects::WideGuard] && user.index != target.index &&
          move.pbTarget(user).num_targets > 1 &&
