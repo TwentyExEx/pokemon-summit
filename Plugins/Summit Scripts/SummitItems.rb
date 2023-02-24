@@ -115,6 +115,7 @@ Battle::ItemEffects::AfterMoveUseFromUser.add(:KNIFESHARPENER,
     next if !user.pbCanRaiseStatStage?(:ATTACK, user)
     battle.pbCommonAnimation("UseItem", user)
     user.pbRaiseStatStage(:ATTACK, 2, user)
+	end
   }
 )
 
