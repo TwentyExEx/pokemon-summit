@@ -7375,7 +7375,7 @@ Price = 4000
 Flags = Fling_10
 Description = An item to be held by a Pokémon. It is a bag of strange dust that boosts the power of Fairy-type moves.
 #-------------------------------
-[KINFESHARPENER]
+[KNIFESHARPENER]
 Name = Knife Sharpener
 NamePlural = Knife Sharpeners
 Pocket = 1
