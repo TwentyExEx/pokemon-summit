@@ -24,13 +24,17 @@ Battle::ItemEffects::AfterMoveUseFromUser.add(:WINDTURBINE,
 
 Battle::ItemEffects::DamageCalcFromTarget.add(:SUPPRESSORVEST,
   proc { |item, user, target, move, mults, baseDmg, type|
-    mults[:defense_multiplier] *= 1.5 if move.physicalMove?
+    mults[:defense_multiplier] *= 1.5 if move.physicalMove? && user.effects[PBEffects::GastroAcid] = true
   }
 )
 
 Battle::ItemEffects::OnSwitchIn.add(:SUPPRESSORVEST,
   proc { |item, battler, battle|
+   if battler.item == :SUPPRESSORVEST
     battler.effects[PBEffects::GastroAcid] = true
+   else
+    battler.effects[PBEffects::GastroAcid] = false
+   end
   }
 )
 

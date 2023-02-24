@@ -858,3 +858,30 @@ LoseText = WHATTTTTTTTTTTTTTTTTT
 Pokemon = DRAGONITE,50
     Moves = GROWL,GROWL,TAILWHIP,TAILWHIP
 #-------------------------------
+[TRAINER_STAR_VIOLET_M,Andrew]
+LoseText = WHATTTTTTTTTTTTTTTTTT
+Pokemon = BLISSEY,50
+    Moves = SOFTBOILED
+	IV = 31,31,31,31,31,31
+	EV = 252,0,0,252,0,0
+Pokemon = BLISSEY,50
+    Moves = SOFTBOILED
+	IV = 31,31,31,31,31,31
+	EV = 252,0,0,252,0,0
+Pokemon = BLISSEY,50
+    Moves = SOFTBOILED
+	IV = 31,31,31,31,31,31
+	EV = 252,0,0,252,0,0
+Pokemon = BLISSEY,50
+    Moves = SOFTBOILED
+	IV = 31,31,31,31,31,31
+	EV = 252,0,0,252,0,0
+Pokemon = BLISSEY,50
+    Moves = SOFTBOILED
+	IV = 31,31,31,31,31,31
+	EV = 252,0,0,252,0,0
+Pokemon = BLISSEY,50
+    Moves = SOFTBOILED
+	IV = 31,31,31,31,31,31
+	EV = 252,0,0,252,0,0
+#-------------------------------
