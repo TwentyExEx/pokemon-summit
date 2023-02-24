@@ -30,11 +30,7 @@ Battle::ItemEffects::DamageCalcFromTarget.add(:SUPPRESSORVEST,
 
 Battle::ItemEffects::OnSwitchIn.add(:SUPPRESSORVEST,
   proc { |item, battler, battle|
-   if battler.item == :SUPPRESSORVEST
     battler.effects[PBEffects::GastroAcid] = true
-   else
-    battler.effects[PBEffects::GastroAcid] = false
-   end
   }
 )
 
