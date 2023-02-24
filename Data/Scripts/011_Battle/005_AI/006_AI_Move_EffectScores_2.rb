@@ -496,7 +496,8 @@ class Battle::AI
     #---------------------------------------------------------------------------
     when "NegateTargetAbility"
       if target.effects[PBEffects::Substitute] > 0 ||
-         target.effects[PBEffects::GastroAcid]
+         target.effects[PBEffects::GastroAcid] ||
+		 target.effects[PBEffects::SuppressorVest]
         score -= 90
       elsif skill >= PBTrainerAI.highSkill
         score -= 90 if [:MULTITYPE, :RKSSYSTEM, :SLOWSTART, :TRUANT].include?(target.ability_id)

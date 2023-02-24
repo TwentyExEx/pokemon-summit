@@ -3879,7 +3879,7 @@ Category = Status
 Accuracy = 55
 TotalPP = 15
 Target = NearOther
-FunctionCode = SleepTarget
+FunctionCode = SleepTargetLowerTargetSpDef1
 Flags = CanProtect,CanMirrorMove,Sound
 Description = The user plays a pleasant melody that lulls the target into a deep sleep.
 #-------------------------------
@@ -4277,7 +4277,7 @@ Category = Status
 Accuracy = 0
 TotalPP = 10
 Target = AllBattlers
-FunctionCode = RaiseGroundedGrassBattlersAtkSpAtk1
+FunctionCode = RaiseGroundedGrassBattlersAtkSpAtk1GroundedGroundBattlersSpeed1BoostedInGrassyTerrain
 Description = The user tills the soil to encourage plant growth. This raises the Attack and Sp. Atk of Grass types.
 #-------------------------------
 [SANDATTACK]
@@ -6407,7 +6407,7 @@ Category = Status
 Accuracy = 55
 TotalPP = 15
 Target = NearOther
-FunctionCode = SleepTarget
+FunctionCode = SleepTargetLowerTargetDefense1
 Flags = CanProtect,CanMirrorMove,Sound
 Description = A soothing lullaby is sung in a calming voice that puts the target into a deep slumber.
 #-------------------------------
@@ -8856,9 +8856,9 @@ Power = 75
 Accuracy = 100
 TotalPP = 10
 Target = NearOther
-FunctionCode = LowerTargetAttack1
+FunctionCode = FreezeTargetLowerTargetAttack1
 Flags = CanProtect,CanMirrorMove
-EffectChance = 30
+EffectChance = 100
 Description = The user attacks the target with spine-chilling resentment. This also lowers the target’s Attack stat.
 #-------------------------------
 [TRIPLEARROWS]

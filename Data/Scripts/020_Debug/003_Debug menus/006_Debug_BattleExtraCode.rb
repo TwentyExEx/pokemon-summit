@@ -39,6 +39,7 @@ module Battle::DebugVariables
     PBEffects::Foresight      => { name: "Foresight applies (Ghost loses immunities)",      default: false },
     PBEffects::FuryCutter     => { name: "Fury Cutter power multiplier 2**x (0-4)",         default: 0, max: 4 },
     PBEffects::GastroAcid     => { name: "Gastro Acid is negating self's ability",          default: false },
+    PBEffects::SuppressorVest => { name: "Suppressor Vest is negating self's ability",      default: false },
 #    PBEffects::GemConsumed - only applies during use of move, not suitable for setting via debug
     PBEffects::Grudge         => { name: "Grudge will apply if self faints",                default: false },
     PBEffects::HealBlock      => { name: "Heal Block number of rounds remaining",           default: 0 },

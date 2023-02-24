@@ -338,6 +338,7 @@ class Battle::Battler
   def abilityActive?(ignore_fainted = false, check_ability = nil)
     return false if fainted? && !ignore_fainted
     return false if @effects[PBEffects::GastroAcid]
+    return false if @effects[PBEffects::SuppressorVest]
     return false if check_ability != :NEUTRALIZINGGAS && self.ability != :NEUTRALIZINGGAS &&
                     @battle.pbCheckGlobalAbility(:NEUTRALIZINGGAS)
     return true
@@ -501,6 +502,11 @@ class Battle::Battler
     return true if @effects[PBEffects::MagnetRise] > 0
     return true if @effects[PBEffects::Telekinesis] > 0
     return false
+  end
+
+  def affectedByRototiller?
+    return true if pbHasType?(:GRASS)
+    return true if pbHasType?(:GROUND)
   end
 
   def affectedByTerrain?

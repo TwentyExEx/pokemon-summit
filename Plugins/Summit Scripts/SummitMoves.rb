@@ -360,3 +360,135 @@ class Battle::Move::ConfuseTargetAlwaysHitsInPsychicTerrain < Battle::Move::Conf
     return super
   end
 end
+
+#===============================================================================
+# Freezes the target. May cause the target's Attack to drop. (Bitter Malice)
+#===============================================================================
+class Battle::Move::FreezeTargetLowerTargetAttack1 < Battle::Move
+  def flinchingMove?; return true; end
+
+  def pbAdditionalEffect(user, target)
+    return if target.damageState.substitute
+    chance = pbAdditionalEffectChance(user, target, 10)
+	chance2 = pbAdditionalEffectChance(user, target, 50)
+    return if chance == 0 || chance2 == 0
+    if target.pbCanFreeze?(user, false, self) && @battle.pbRandom(100) < chance
+      target.pbFreeze
+    end
+	if target.pbCanLowerStatStage?(:ATTACK, user, self) && @battle.pbRandom(100) < chance2
+      target.pbLowerStatStage(:ATTACK, 1, user)
+    end
+  end
+end
+
+#===============================================================================
+# Puts the target to sleep and decreases its Defense by 1 stage. (Sing)
+#===============================================================================
+class Battle::Move::SleepTargetLowerTargetDefense1 < Battle::Move
+  def canMagicCoat?; return true; end
+
+  def pbFailsAgainstTarget?(user, target, show_message)
+    if !target.pbCanSleep?(user, false, self) &&
+       !target.pbCanLowerStatStage?(:DEFENSE, user, self)
+      @battle.pbDisplay(_INTL("But it failed!")) if show_message
+      return true
+    end
+    return false
+  end
+
+  def pbEffectAgainstTarget(user, target)
+    target.pbSleep(user) if target.pbCanSleep?(user, false, self)
+    if target.pbCanLowerStatStage?(:DEFENSE, user, self)
+      target.pbLowerStatStage(:DEFENSE, 1, user)
+    end
+  end
+end
+
+#===============================================================================
+# Puts the target to sleep and decreases its Sp. Def by 1 stage. (Grass Whistle)
+#===============================================================================
+class Battle::Move::SleepTargetLowerTargetSpDef1 < Battle::Move
+  def canMagicCoat?; return true; end
+
+  def pbFailsAgainstTarget?(user, target, show_message)
+    if !target.pbCanSleep?(user, false, SPECIAL_DEFENSE) &&
+       !target.pbCanLowerStatStage?(:DEFENSE, user, self)
+      @battle.pbDisplay(_INTL("But it failed!")) if show_message
+      return true
+    end
+    return false
+  end
+
+  def pbEffectAgainstTarget(user, target)
+    target.pbSleep(user) if target.pbCanSleep?(user, false, self)
+    if target.pbCanLowerStatStage?(:SPECIAL_DEFENSE, user, self)
+      target.pbLowerStatStage(:SPECIAL_DEFENSE, 1, user)
+    end
+  end
+end
+
+#===============================================================================
+# Increases the Attack and Special Attack of all Grass-type Pokémon in battle by
+# 1 stage each and the Speed of all Ground-type Pokémon in battle by 1 stage. 
+# In Grassy Terrain, increases the Attack and Special Attack of all Grass-type 
+# Pokémon in battle by 2 stages each and the Speed of all Ground-type Pokémon in 
+# battle by 2 stages.Doesn't affect airborne Pokémon. (Rototiller)
+#===============================================================================
+class Battle::Move::RaiseGroundedGrassBattlersAtkSpAtk1GroundedGroundBattlersSpeed1BoostedInGrassyTerrain < Battle::Move
+  def pbMoveFailed?(user, targets)
+    @validTargets = []
+    @battle.allBattlers.each do |b|
+      next if !b.affectedByRototiller?
+      next if b.airborne? || b.semiInvulnerable?
+      next if !b.pbCanRaiseStatStage?(:ATTACK, user, self) &&
+              !b.pbCanRaiseStatStage?(:SPECIAL_ATTACK, user, self) ||
+			  !b.pbCanRaiseStatStage?(:SPEED, user, self)
+      @validTargets.push(b.index)
+    end
+    if @validTargets.length == 0
+      @battle.pbDisplay(_INTL("But it failed!"))
+      return true
+    end
+    return false
+  end
+
+  def pbFailsAgainstTarget?(user, target, show_message)
+    return false if @validTargets.include?(target.index)
+    return true if !target.affectedByRototiller?
+    return true if target.airborne? || target.semiInvulnerable?
+    @battle.pbDisplay(_INTL("{1}'s stats can't be raised further!", target.pbThis)) if show_message
+    return true
+  end
+
+  def pbEffectAgainstTarget(user, target)
+    showAnim = true
+	if target.pbHasType?(:GRASS)
+	  if @battle.field.terrain == :Grassy && user.affectedByTerrain?
+	    if target.pbCanRaiseStatStage?(:ATTACK, user, self)
+          showAnim = false if target.pbRaiseStatStage(:ATTACK, 2, user, showAnim)
+        end
+        if target.pbCanRaiseStatStage?(:SPECIAL_ATTACK, user, self)
+          target.pbRaiseStatStage(:SPECIAL_ATTACK, 2, user, showAnim)
+        end
+	  else
+	    if target.pbCanRaiseStatStage?(:ATTACK, user, self)
+          showAnim = false if target.pbRaiseStatStage(:ATTACK, 1, user, showAnim)
+        end
+        if target.pbCanRaiseStatStage?(:SPECIAL_ATTACK, user, self)
+          target.pbRaiseStatStage(:SPECIAL_ATTACK, 1, user, showAnim)
+		end
+	if !target.pbHasType?(:GRASS)
+	  if @battle.field.terrain == :Grassy && user.affectedByTerrain?
+	    if target.pbCanRaiseStatStage?(:SPEED, user, self)
+          showAnim = false if target.pbRaiseStatStage(:SPEED, 2, user, showAnim)
+        end
+	  else
+	    if target.pbCanRaiseStatStage?(:SPEED, user, self)
+          showAnim = false if target.pbRaiseStatStage(:SPEED, 1, user, showAnim)
+		  end
+		end
+      end
+	end
+  end
+end
+end

@@ -24,13 +24,21 @@ Battle::ItemEffects::AfterMoveUseFromUser.add(:WINDTURBINE,
 
 Battle::ItemEffects::DamageCalcFromTarget.add(:SUPPRESSORVEST,
   proc { |item, user, target, move, mults, baseDmg, type|
-    mults[:defense_multiplier] *= 1.5 if move.physicalMove? && user.effects[PBEffects::GastroAcid] = true
+    mults[:defense_multiplier] *= 1.5 if move.physicalMove? && user.effects[PBEffects::SuppressorVest] = true
   }
 )
 
 Battle::ItemEffects::OnSwitchIn.add(:SUPPRESSORVEST,
   proc { |item, battler, battle|
-    battler.effects[PBEffects::GastroAcid] = true
+    # This adds the effect onto the Pokemon, which works, but doesn't turn off when the item is removed.
+    battler.effects[PBEffects::SuppressorVest] = true
+  }
+)
+
+Battle::ItemEffects::EndOfRoundEffect.add(:SUPPRESSORVEST,
+  proc { |item, battler, battle|
+    next if !battler.effects[PBEffects::SuppressorVest] = true
+   battler.effects[PBEffects::SuppressorVest] = true
   }
 )
 

@@ -96,7 +96,7 @@ class Battle::Battler
       # reapplied
       @effects[PBEffects::LaserFocus] = (@effects[PBEffects::LaserFocus] > 0) ? 2 : 0
       @effects[PBEffects::LockOn]     = (@effects[PBEffects::LockOn] > 0) ? 2 : 0
-      @effects[PBEffects::MindReader]     = (@effects[PBEffects::MindReader] > 0) ? 2 : 0
+      @effects[PBEffects::MindReader] = (@effects[PBEffects::MindReader] > 0) ? 2 : 0
       if @effects[PBEffects::PowerTrick]
         @attack, @defense = @defense, @attack
       end
@@ -104,6 +104,7 @@ class Battle::Battler
       # cancelled in certain circumstances anyway
       @effects[PBEffects::Telekinesis] = 0 if isSpecies?(:GENGAR) && mega?
       @effects[PBEffects::GastroAcid]  = false if unstoppableAbility?
+      @effects[PBEffects::SuppressorVest]  = false if unstoppableAbility?
     else
       # These effects are passed on if Baton Pass is used
       GameData::Stat.each_battle { |stat| @stages[stat.id] = 0 }
@@ -113,6 +114,7 @@ class Battle::Battler
       @effects[PBEffects::Embargo]           = 0
       @effects[PBEffects::FocusEnergy]       = 0
       @effects[PBEffects::GastroAcid]        = false
+      @effects[PBEffects::SuppressorVest]    = false
       @effects[PBEffects::HealBlock]         = 0
       @effects[PBEffects::Ingrain]           = false
       @effects[PBEffects::LaserFocus]        = 0

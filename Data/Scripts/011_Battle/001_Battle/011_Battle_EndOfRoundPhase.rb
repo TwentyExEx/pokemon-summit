@@ -535,6 +535,10 @@ class Battle
         pbDisplay(_INTL("{1} finally got its act together!", battler.pbThis))
       end
     end
+	# Suppressor Vest
+	if battler.effects[PBEffects::SuppressorVest] == true && !battler.hasActiveItem?(:SUPPRESSORVEST)
+	  battler.effects[PBEffects::SuppressorVest] = false
+	end
   end
 
   #=============================================================================

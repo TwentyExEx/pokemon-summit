@@ -127,6 +127,7 @@ module PBEffects
   SnaringEntrance     = 122
   MindReader          = 123
   MindReaderPos       = 124
+  SuppressorVest      = 125
 
   #=============================================================================
   # These effects apply to a battler position

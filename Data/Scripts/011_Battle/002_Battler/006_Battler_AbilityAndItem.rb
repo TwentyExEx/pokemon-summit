@@ -166,9 +166,9 @@ class Battle::Battler
   # Ability change
   #=============================================================================
   def pbOnLosingAbility(oldAbil, suppressed = false)
-    if oldAbil == :NEUTRALIZINGGAS && (suppressed || !@effects[PBEffects::GastroAcid])
+    if oldAbil == :NEUTRALIZINGGAS && (suppressed || !@effects[PBEffects::GastroAcid] || !@effects[PBEffects::SuppressorVest])
       pbAbilitiesOnNeutralizingGasEnding
-    elsif oldAbil == :UNNERVE && (suppressed || !@effects[PBEffects::GastroAcid])
+    elsif oldAbil == :UNNERVE && (suppressed || !@effects[PBEffects::GastroAcid] || !@effects[PBEffects::SuppressorVest])
       pbItemsOnUnnerveEnding
     elsif oldAbil == :ILLUSION && @effects[PBEffects::Illusion]
       @effects[PBEffects::Illusion] = nil
@@ -179,6 +179,7 @@ class Battle::Battler
       end
     end
     @effects[PBEffects::GastroAcid] = false if unstoppableAbility?
+    @effects[PBEffects::SuppressorVest] = false if unstoppableAbility? && self.item != :SUPPRESSORVEST
     @effects[PBEffects::SlowStart]  = 0 if self.ability != :SLOWSTART
     @effects[PBEffects::Truant]     = false if self.ability != :TRUANT
     # Check for end of primordial weather
