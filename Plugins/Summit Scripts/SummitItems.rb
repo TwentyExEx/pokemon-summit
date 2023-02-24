@@ -111,7 +111,6 @@ Battle::ItemEffects::AfterMoveUseFromUser.add(:KNIFESHARPENER,
     next if battle.pbAllFainted?(user.idxOwnSide) ||
             battle.pbAllFainted?(user.idxOpposingSide)
     next if !move.slicingMove? || numHits == 0
-	next if !target.damageState.critical
     next if !user.pbCanRaiseStatStage?(:ATTACK, user)
     battle.pbCommonAnimation("UseItem", user)
     user.pbRaiseStatStage(:ATTACK, 2, user)
