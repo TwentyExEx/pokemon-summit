@@ -1,13 +1,16 @@
 def pbOnlineMusicChanger
-cmd = pbConfirmMessage(_INTL("Would you like to change the online music?"))
+	cmd = pbConfirmMessage(_INTL("Would you like to change the online music?"))
     if cmd == true
-        region = pbMessage(_INTL("Please choose a region."),["Kanto","Johto","Hoenn","Sinnoh","Unova","Kalos","Alola","Galar","Hisui","Paldea","Cancel"],10) # 10 is Cancel
+        region = pbMessage(_INTL("Please choose a region."),["Kanto","Johto","Hoenn","Sinnoh","Unova","Kalos","Alola","Galar","Hisui","Paldea","Cancel"],11) # 11 is Cancel
         case region
             when "Kanto"
-				soundtype = pbMessage(_INTL("Please choose a Sound Type."),["EX Remix","Retro","Cancel"],2) # 2 is Cancel
-				case soundtype
-					when "EX Remix"
-					    track = pbMessage(_INTL("Please choose a track."),["Gym Leader","Lorelei","Bruno","Agatha","Lance","Blue","Giovanni","Red","Red Alt","Leaf","Ash","Wild Battle","Cancel"],12) # 12 is Cancel
+                soundtypelist = []
+            when "Johto"
+                soundtypelist = []
+        soundtype = pbMessage(_INTL("Please choose a sound type."),["EX Remix","Retro","Cancel"],3) # 3 is Cancel
+        case soundtype
+        	when "EX Remix"
+					    track = pbMessage(_INTL("Please choose a track."),["Gym Leader","Lorelei","Bruno","Agatha","Lance","Blue","Giovanni","Red","Red Alt","Leaf","Ash","Wild Battle","Cancel"],13) # 13 is Cancel
 						case track
 							when "Gym Leader"
 								$game_variables[48] = "kanto_ex_leader"
@@ -32,9 +35,10 @@ cmd = pbConfirmMessage(_INTL("Would you like to change the online music?"))
 							when "Ash"
 								$game_variables[48] = "kanto_ex_ash"	
 							when "Wild Battle"
-								$game_variables[48] = "kanto_ex_oak"									
+								$game_variables[48] = "kanto_ex_oak"
+						end									
 					when "Retro"
-					    track = pbMessage(_INTL("Please choose a track."),["Gym Leader","Blue","Trainer","Wild","Legendary","Mewtwo","Cancel"],6) # 6 is Cancel
+					    track = pbMessage(_INTL("Please choose a track."),["Gym Leader","Blue","Trainer","Wild","Legendary","Mewtwo","Cancel"],7) # 7 is Cancel
 						case track
 							when "Gym Leader"
 								$game_variables[48] = "kanto_og_leader"
@@ -48,9 +52,8 @@ cmd = pbConfirmMessage(_INTL("Would you like to change the online music?"))
 								$game_variables[48] = "kanto_og_legend"
 							when "Mewtwo"
 								$game_variables[48] = "kanto_og_mewtwo"
+						end
 					end
-				end
-			end
-		end
+					end
     end
 end
