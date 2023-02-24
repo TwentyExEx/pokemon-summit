@@ -17,9 +17,9 @@ class Battle::Battler
   def pbRaiseStatStage(stat, increment, user, showAnim = true, ignoreContrary = false)
     # Contrary
     if (hasActiveAbility?(:CONTRARY) && !ignoreContrary) || (hasActiveItem?(:PINKHERB) && !ignoreContrary)
-		battle.pbCommonAnimation("UseItem", user) if user.hasActiveItem?(:PINKHERB)
+		battle.pbCommonAnimation("UseItem", user) if hasActiveItem?(:PINKHERB)
 		return pbLowerStatStageBasic(stat, increment, true)
-		user.pbConsumeItem if user.hasActiveItem?(:PINKHERB)
+		user.pbConsumeItem if hasActiveItem?(:PINKHERB)
       end
     # Perform the stat stage change
     increment = pbRaiseStatStageBasic(stat, increment, ignoreContrary)
@@ -47,9 +47,9 @@ class Battle::Battler
   def pbRaiseStatStageByCause(stat, increment, user, cause, showAnim = true, ignoreContrary = false)
     # Contrary
     if (hasActiveAbility?(:CONTRARY) && !ignoreContrary && !@battle.moldBreaker) || (hasActiveItem?(:PINKHERB) && !ignoreContrary)
-	  battle.pbCommonAnimation("UseItem", user) if user.hasActiveItem?(:PINKHERB)
+	  battle.pbCommonAnimation("UseItem", user) if hasActiveItem?(:PINKHERB)
 	  return pbLowerStatStageByCause(stat, increment, user, cause, showAnim, true)
-	  user.pbConsumeItem if user.hasActiveItem?(:PINKHERB)  
+	  user.pbConsumeItem if hasActiveItem?(:PINKHERB)  
     end
     # Perform the stat stage change
     increment = pbRaiseStatStageBasic(stat, increment, ignoreContrary)
@@ -95,9 +95,7 @@ class Battle::Battler
     if !affectedByMoldBreaker?
       # Contrary
       if hasActiveAbility?(:CONTRARY) && !ignoreContrary || (hasActiveItem?(:PINKHERB) && !ignoreContrary)
-		battle.pbCommonAnimation("UseItem", user) if user.hasActiveItem?(:PINKHERB)
 		return pbCanRaiseStatStage?(stat, user, move, showFailMsg, true)
-		user.pbConsumeItem if user.hasActiveItem?(:PINKHERB)  
       end
       # Mirror Armor
       if hasActiveAbility?(:MIRRORARMOR) && !ignoreMirrorArmor &&
