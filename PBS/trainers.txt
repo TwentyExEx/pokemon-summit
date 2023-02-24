@@ -45,7 +45,7 @@ Pokemon = GUMSHOOS,50
     Nature = ADAMANT
     IV = 31,31,31,31,31,31
     EV = 252,252,0,0,0,0
-	#TeraType = NORMAL
+	TeraType = NORMAL
 #-------------------------------
 [LEADER_Korrina,Korrina]
 LoseText = How could it be?!
@@ -92,7 +92,7 @@ Pokemon = HAWLUCHA,50
     Nature = ADAMANT
     IV = 31,31,31,31,31,31
     EV = 0,252,0,252,0,0
-	#TeraType = FIGHTING
+	TeraType = FIGHTING
 #-------------------------------
 [LEADER_Winona,Winona]
 LoseText = A Trainer that commands Pokémon with more grace than I...
@@ -139,7 +139,7 @@ Pokemon = ALTARIA,50
     Nature = MODEST
     IV = 31,31,31,31,31,31
     EV = 252,0,0,0,252,0
-	#TeraType = FLYING
+	TeraType = FLYING
 #-------------------------------
 [LEADER_Roxie,Roxie]
 LoseText = Next time we meet, I'm going to give you a toxic shock!
@@ -186,7 +186,7 @@ Pokemon = SCOLIPEDE,50
     Nature = JOLLY
     IV = 31,31,31,31,31,31
     EV = 0,252,0,252,0,0
-	#TeraType = POISON
+	TeraType = POISON
 #-------------------------------
 [LEADER_Clay,Clay]
 LoseText = Well, I've had enough... And just so you know, I didn't go easy on you.
@@ -233,7 +233,7 @@ Pokemon = EXCADRILL,50
     Nature = ADAMANT
     IV = 31,31,31,31,31,31
     EV = 0,252,0,252,0,0
-	#TeraType = GROUND
+	TeraType = GROUND
 #-------------------------------
 [LEADER_Brock,Brock]
 LoseText = Your Pokémon's powerful attacks overcame my rock-hard resistance...
@@ -280,7 +280,7 @@ Pokemon = GOLEM,50
     Nature = ADAMANT
     IV = 31,31,31,31,31,31
     EV = 252,252,0,0,0,0
-	#TeraType = ROCK
+	TeraType = ROCK
 #-------------------------------
 [LEADER_Bugsy,Bugsy]
 LoseText = Aw, that's the end of it...
@@ -327,7 +327,7 @@ Pokemon = SCIZOR,50
     Nature = ADAMANT
     IV = 31,31,31,31,31,31
     EV = 252,252,0,0,0,0
-	#TeraType = BUG
+	TeraType = BUG
 #-------------------------------
 [LEADER_Fantina,Fantina]
 LoseText = You are so fantastically strong. I know why I have lost.
@@ -374,7 +374,7 @@ Pokemon = DRIFBLIM,50
     Nature = MODEST
     IV = 31,31,31,31,31,31
     EV = 252,0,0,0,252,0
-	#TeraType = GHOST
+	TeraType = GHOST
 #-------------------------------
 [LEADER_Byron,Byron]
 LoseText = Hmm! My sturdy Pokémon--defeated!
@@ -422,7 +422,7 @@ Pokemon = BASTIODON,50
     Nature = ADAMANT
     IV = 31,31,31,31,31,31
     EV = 252,252,0,0,0,0
-	#TeraType = STEEL
+	TeraType = STEEL
 #-------------------------------
 [LEADER_Flannery,Flannery]
 LoseText = Oh... I guess I was trying too hard...
@@ -469,7 +469,7 @@ Pokemon = PYROAR,50
     Nature = TIMID
     IV = 31,31,31,31,31,31
     EV = 0,0,0,252,252,0
-	#TeraType = FIRE
+	TeraType = FIRE
 #-------------------------------
 [LEADER_Ramos,Ramos]
 LoseText = Yeh believe in yer Pokémon... And they believe in yeh, too..
@@ -516,7 +516,7 @@ Pokemon = GOGOAT,50
     Nature = ADAMANT
     IV = 31,31,31,31,31,31
     EV = 252,252,0,0,0,0
-	#TeraType = GRASS
+	TeraType = GRASS
 #-------------------------------
 [LEADER_Sabrina,Sabrina]
 LoseText = Was the future I saw...wrong?
@@ -564,7 +564,7 @@ Pokemon = ALAKAZAM,50
     Nature = TIMID
     IV = 31,31,31,31,31,31
     EV = 0,0,0,252,252,0
-	#TeraType = PSYCHIC
+	TeraType = PSYCHIC
 #-------------------------------
 [LEADER_Melony,Melony]
 LoseText = I think you took breaking the ice a little too literally...
@@ -612,7 +612,7 @@ Pokemon = EISCUE,50
     Nature = ADAMANT
     IV = 31,31,31,31,31,31
     EV = 252,252,0,0,0,0
-	#TeraType = ICE
+	TeraType = ICE
 #-------------------------------
 [LEADER_Clair,Clair]
 LoseText = It's over...
@@ -659,7 +659,7 @@ Pokemon = KINGDRA,50
     Nature = MODEST
     IV = 31,31,31,31,31,31
     EV = 0,0,0,252,252,0
-	#TeraType = DRAGON
+	TeraType = DRAGON
 #-------------------------------
 [LEADER_Piers,Piers]
 LoseText = Me an' my team gave it our best. Let's meet up again for a battle some time...
@@ -705,7 +705,7 @@ Pokemon = OBSTAGOON,50
     Nature = JOLLY
     IV = 31,31,31,31,31,31
     EV = 0,252,0,252,0,0
-	#TeraType = DARK
+	TeraType = DARK
 #-------------------------------
 [CAPTAIN_Mina,Mina]
 LoseText = I'm shocked at your strength!
@@ -752,7 +752,7 @@ Pokemon = RIBOMBEE,50
     Nature = MODEST
     IV = 31,31,31,31,31,31
     EV = 0,0,0,252,252,0
-	#TeraType = FAIRY
+	TeraType = FAIRY
 #-------------------------------
 [LEADER_Kofu,Kofu]
 LoseText = Gahaha! A loss as refreshing as the air at the morning market!
@@ -799,7 +799,7 @@ Pokemon = WUGTRIO,50
     Nature = ADAMANT
     IV = 31,31,31,31,31,31
     EV = 252,252,0,0,0,0
-	#TeraType = WATER
+	TeraType = WATER
 #-------------------------------
 [LEADER_Iono,Iono]
 LoseText = You sure gave me a Zing Zap, friendo! Make sure to remind the Iono Zoners at home to like and subscribe for more amaaaaazing fightin' like dat!
@@ -846,7 +846,7 @@ Pokemon = BELLIBOLT,50
     Nature = MODEST
     IV = 31,31,31,31,31,31
     EV = 0,0,252,0,0,252
-	#TeraType = ELECTRIC
+	TeraType = ELECTRIC
 #-------------------------------
 [TRAINER_STAR_VIOLET_M,Proto]
 LoseText = WHATTTTTTTTTTTTTTTTTT
