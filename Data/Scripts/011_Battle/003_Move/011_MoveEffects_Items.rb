@@ -274,7 +274,7 @@ class Battle::Move::StartNegateHeldItems < Battle::Move
     if @battle.field.effects[PBEffects::MagicRoom] > 0
       @battle.field.effects[PBEffects::MagicRoom] = 0
       @battle.pbDisplay(_INTL("The area returned to normal!"))
-	elsif user.hasActiveItem(:EXTENDEDBOOKING)
+	elsif user.hasActiveItem?(:EXTENDEDBOOKING)
 	  @battle.field.effects[PBEffects::MagicRoom] = 8
       @battle.pbDisplay(_INTL("It created a bizarre area in which Pokémon's held items lose their effects!"))
     else
