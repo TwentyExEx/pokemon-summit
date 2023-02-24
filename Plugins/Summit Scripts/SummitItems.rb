@@ -66,13 +66,13 @@ Battle::ItemEffects::DamageCalcFromTarget.add(:KARATEBAND,
 
 Battle::ItemEffects::DamageCalcFromUser.add(:HOMINGBLASTER,
   proc { |item, user, target, move, mults, baseDmg, type|
-    mults[:base_damage_multiplier] *= 1.3 if move.physicalMove?
+    mults[:base_damage_multiplier] *= 1.3 if move.specialMove?
   }
 )
 
-Battle::ItemEffects::DamageCalcFromTarget.add(:KARATEBAND,
+Battle::ItemEffects::DamageCalcFromTarget.add(:HOMINGBLASTER,
   proc { |item, user, target, move, mults, baseDmg, type|
-    mults[:defense_multiplier] *= 0.7 if move.physicalMove?
+    mults[:defense_multiplier] *= 0.7 if move.specialMove?
   }
 )
 
@@ -110,7 +110,7 @@ Battle::ItemEffects::AfterMoveUseFromUser.add(:KNIFESHARPENER,
   proc { |item, user, targets, move, numHits, battle|
     next if battle.pbAllFainted?(user.idxOwnSide) ||
             battle.pbAllFainted?(user.idxOpposingSide)
-    next if !(move.slicingMove? && target.damageState.critical) || numHits == 0
+    next if !move.slicingMove? || numHits == 0
     next if !user.pbCanRaiseStatStage?(:ATTACK, user)
     battle.pbCommonAnimation("UseItem", user)
     user.pbRaiseStatStage(:ATTACK, 2, user)
