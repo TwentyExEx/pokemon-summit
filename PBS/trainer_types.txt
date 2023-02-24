@@ -10,568 +10,497 @@ Name = Kanto Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = kantoleader
-VictoryBGM = kantoleaderw
+BattleBGM = kanto_ex_leader
 #-------------------------------
 [LEADER_Misty]
 Name = Kanto Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = kantoleader
-VictoryBGM = kantoleaderw
+BattleBGM = kanto_ex_leader
 #-------------------------------
 [LEADER_Surge]
 Name = Kanto Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = kantoleader
-VictoryBGM = kantoleaderw
+BattleBGM = kanto_ex_leader
 #-------------------------------
 [LEADER_Erika]
 Name = Kanto Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = kantoleader
-VictoryBGM = kantoleaderw
+BattleBGM = kanto_ex_leader
 #-------------------------------
 [LEADER_Janine]
 Name = Kanto Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = kantoleader
-VictoryBGM = kantoleaderw
+BattleBGM = kanto_ex_leader
 #-------------------------------
 [LEADER_Sabrina]
 Name = Kanto Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = kantoleader
-VictoryBGM = kantoleaderw
+BattleBGM = kanto_ex_leader
 #-------------------------------
 [LEADER_Blaine]
 Name = Kanto Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = kantoleader
-VictoryBGM = kantoleaderw
+BattleBGM = kanto_ex_leader
 #-------------------------------
 [LEADER_Giovanni]
 Name = Kanto Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = kantoleader
-VictoryBGM = kantoleaderw
+BattleBGM = kanto_ex_leader
 #-------------------------------
 [LEADER_Falkner]
 Name = Johto Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = johtoleader
-VictoryBGM = johtoleaderw
+BattleBGM = johto_ex_leader
 #-------------------------------
 [LEADER_Bugsy]
 Name = Johto Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = johtoleader
-VictoryBGM = johtoleaderw
+BattleBGM = johto_ex_leader
 #-------------------------------
 [LEADER_Whitney]
 Name = Johto Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = johtoleader
-VictoryBGM = johtoleaderw
+BattleBGM = johto_ex_leader
 #-------------------------------
 [LEADER_Morty]
 Name = Johto Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = johtoleader
-VictoryBGM = johtoleaderw
+BattleBGM = johto_ex_leader
 #-------------------------------
 [LEADER_Chuck]
 Name = Johto Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = johtoleader
-VictoryBGM = johtoleaderw
+BattleBGM = johto_ex_leader
 #-------------------------------
 [LEADER_Jasmine]
 Name = Johto Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = johtoleader
-VictoryBGM = johtoleaderw
+BattleBGM = johto_ex_leader
 #-------------------------------
 [LEADER_Pryce]
 Name = Johto Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = johtoleader
-VictoryBGM = johtoleaderw
+BattleBGM = johto_ex_leader
 #-------------------------------
 [LEADER_Clair]
 Name = Johto Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = johtoleader
-VictoryBGM = johtoleaderw
+BattleBGM = johto_ex_leader
 #-------------------------------
 [LEADER_Roxanne]
 Name = Hoenn Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = hoennleader
-VictoryBGM = hoennleaderw
+BattleBGM = hoenn_ex_leader
 #-------------------------------
 [LEADER_Brawly]
 Name = Hoenn Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = hoennleader
-VictoryBGM = hoennleaderw
+BattleBGM = hoenn_ex_leader
 #-------------------------------
 [LEADER_Wattson]
 Name = Hoenn Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = hoennleader
-VictoryBGM = hoennleaderw
+BattleBGM = hoenn_ex_leader
 #-------------------------------
 [LEADER_Flannery]
 Name = Hoenn Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = hoennleader
-VictoryBGM = hoennleaderw
+BattleBGM = hoenn_ex_leader
 #-------------------------------
 [LEADER_Norman]
 Name = Hoenn Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = hoennleader
-VictoryBGM = hoennleaderw
+BattleBGM = hoenn_ex_leader
 #-------------------------------
 [LEADER_Winona]
 Name = Hoenn Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = hoennleader
-VictoryBGM = hoennleaderw
+BattleBGM = hoenn_ex_leader
 #-------------------------------
 [LEADER_Tate]
 Name = Hoenn Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = hoennleader
-VictoryBGM = hoennleaderw
+BattleBGM = hoenn_ex_leader
 #-------------------------------
 [LEADER_Liza]
 Name = Hoenn Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = hoennleader
-VictoryBGM = hoennleaderw
+BattleBGM = hoenn_ex_leader
 #-------------------------------
 [LEADER_Juan]
 Name = Hoenn Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = hoennleader
-VictoryBGM = hoennleaderw
+BattleBGM = hoenn_ex_leader
 #-------------------------------
 [LEADER_Roark]
 Name = Sinnoh Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = sinnohleader
-VictoryBGM = sinnohleaderw
+BattleBGM = sinnoh_ex_leader
 #-------------------------------
 [LEADER_Gardenia]
 Name = Sinnoh Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = sinnohleader
-VictoryBGM = sinnohleaderw
+BattleBGM = sinnoh_ex_leader
 #-------------------------------
 [LEADER_Maylene]
 Name = Sinnoh Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = sinnohleader
-VictoryBGM = sinnohleaderw
+BattleBGM = sinnoh_ex_leader
 #-------------------------------
 [LEADER_Wake]
 Name = Sinnoh Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = sinnohleader
-VictoryBGM = sinnohleaderw
+BattleBGM = sinnoh_ex_leader
 #-------------------------------
 [LEADER_Fantina]
 Name = Sinnoh Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = sinnohleader
-VictoryBGM = sinnohleaderw
+BattleBGM = sinnoh_ex_leader
 #-------------------------------
 [LEADER_Byron]
 Name = Sinnoh Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = sinnohleader
-VictoryBGM = sinnohleaderw
+BattleBGM = sinnoh_ex_leader
 #-------------------------------
 [LEADER_Candice]
 Name = Sinnoh Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = sinnohleader
-VictoryBGM = sinnohleaderw
+BattleBGM = sinnoh_ex_leader
 #-------------------------------
 [LEADER_Volkner]
 Name = Sinnoh Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = sinnohleader
-VictoryBGM = sinnohleaderw
+BattleBGM = sinnoh_ex_leader
 #-------------------------------
 [LEADER_Cilan]
 Name = Unova Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = unovaleader
-VictoryBGM = unovaleaderw
+BattleBGM = unova_ex_leader
 #-------------------------------
 [LEADER_Chili]
 Name = Unova Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = unovaleader
-VictoryBGM = unovaleaderw
+BattleBGM = unova_ex_leader
 #-------------------------------
 [LEADER_Cress]
 Name = Unova Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = unovaleader
-VictoryBGM = unovaleaderw
+BattleBGM = unova_ex_leader
 #-------------------------------
 [LEADER_Lenora]
 Name = Unova Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = unovaleader
-VictoryBGM = unovaleaderw
+BattleBGM = unova_ex_leader
 #-------------------------------
 [LEADER_Burgh]
 Name = Unova Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = unovaleader
-VictoryBGM = unovaleaderw
+BattleBGM = unova_ex_leader
 #-------------------------------
 [LEADER_Elesa]
 Name = Unova Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = unovaleader
-VictoryBGM = unovaleaderw
+BattleBGM = unova_ex_leader
 #-------------------------------
 [LEADER_Clay]
 Name = Unova Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = unovaleader
-VictoryBGM = unovaleaderw
+BattleBGM = unova_ex_leader
 #-------------------------------
 [LEADER_Skyla]
 Name = Unova Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = unovaleader
-VictoryBGM = unovaleaderw
+BattleBGM = unova_ex_leader
 #-------------------------------
 [LEADER_Brycen]
 Name = Unova Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = unovaleader
-VictoryBGM = unovaleaderw
+BattleBGM = unova_ex_leader
 #-------------------------------
 [LEADER_Drayden]
 Name = Unova Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = unovaleader
-VictoryBGM = unovaleaderw
+BattleBGM = unova_ex_leader
 #-------------------------------
 [LEADER_Cheren]
 Name = Unova Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = unovaleader
-VictoryBGM = unovaleaderw
+BattleBGM = unova_ex_leader
 #-------------------------------
 [LEADER_Roxie]
 Name = Unova Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = unovaleader
-VictoryBGM = unovaleaderw
+BattleBGM = unova_ex_leader
 #-------------------------------
 [LEADER_Marlon]
 Name = Unova Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = unovaleader
-VictoryBGM = unovaleaderw
+BattleBGM = unova_ex_leader
 #-------------------------------
 [LEADER_Viola]
 Name = Kalos Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = kalosleader
-VictoryBGM = kalosleaderw
+BattleBGM = kalos_ex_leader
 #-------------------------------
 [LEADER_Grant]
 Name = Kalos Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = kalosleader
-VictoryBGM = kalosleaderw
+BattleBGM = kalos_ex_leader
 #-------------------------------
 [LEADER_Korrina]
 Name = Kalos Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = kalosleader
-VictoryBGM = kalosleaderw
+BattleBGM = kalos_ex_leader
 #-------------------------------
 [LEADER_Ramos]
 Name = Kalos Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = kalosleader
-VictoryBGM = kalosleaderw
+BattleBGM = kalos_ex_leader
 #-------------------------------
 [LEADER_Clemont]
 Name = Kalos Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = kalosleader
-VictoryBGM = kalosleaderw
+BattleBGM = kalos_ex_leader
 #-------------------------------
 [LEADER_Olympia]
 Name = Kalos Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = kalosleader
-VictoryBGM = kalosleaderw
+BattleBGM = kalos_ex_leader
 #-------------------------------
 [LEADER_Valerie]
 Name = Kalos Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = kalosleader
-VictoryBGM = kalosleaderw
+BattleBGM = kalos_ex_leader
 #-------------------------------
 [LEADER_Wulfric]
 Name = Kalos Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = kalosleader
-VictoryBGM = kalosleaderw
+BattleBGM = kalos_ex_leader
 #-------------------------------
 [CAPTAIN_Ilima]
 Name = Alola Captain
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = alolatrainer
-VictoryBGM = alolacaptainw
+BattleBGM = alola\alolatrainer
 #-------------------------------
 [CAPTAIN_Lana]
 Name = Alola Captain
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = alolatrainer
-VictoryBGM = alolacaptainw
+BattleBGM = alola\alolatrainer
 #-------------------------------
 [CAPTAIN_Kiawe]
 Name = Alola Captain
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = alolatrainer
-VictoryBGM = alolacaptainw
+BattleBGM = alola\alolatrainer
 #-------------------------------
 [CAPTAIN_Mallow]
 Name = Alola Captain
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = alolatrainer
-VictoryBGM = alolacaptainw
+BattleBGM = alola\alolatrainer
 #-------------------------------
 [CAPTAIN_Sophocles]
 Name = Alola Captain
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = alolatrainer
-VictoryBGM = alolacaptainw
+BattleBGM = alola\alolatrainer
 #-------------------------------
 [CAPTAIN_Acerola]
 Name = Alola Captain
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = alolatrainer
-VictoryBGM = alolacaptainw
+BattleBGM = alola\alolatrainer
 #-------------------------------
 [CAPTAIN_Mina]
 Name = Alola Captain
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = alolatrainer
-VictoryBGM = alolacaptainw
+BattleBGM = alola\alolatrainer
 #-------------------------------
 [LEADER_Milo]
 Name = Galar Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galarleader
-VictoryBGM = galarleaderw
+BattleBGM = galar\galarleader
 #-------------------------------
 [LEADER_Nessa]
 Name = Galar Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galarleader
-VictoryBGM = galarleaderw
+BattleBGM = galar\galarleader
 #-------------------------------
 [LEADER_Kabu]
 Name = Galar Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galarleader
-VictoryBGM = galarleaderw
+BattleBGM = galar\galarleader
 #-------------------------------
 [LEADER_Bea]
 Name = Galar Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galarleader
-VictoryBGM = galarleaderw
+BattleBGM = galar\galarleader
 #-------------------------------
 [LEADER_Allister]
 Name = Galar Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galarleader
-VictoryBGM = galarleaderw
+BattleBGM = galar\galarleader
 #-------------------------------
 [LEADER_Opal]
 Name = Galar Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galarleader
-VictoryBGM = galarleaderw
+BattleBGM = galar\galarleader
 #-------------------------------
 [LEADER_Gordie]
 Name = Galar Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galarleader
-VictoryBGM = galarleaderw
+BattleBGM = galar\galarleader
 #-------------------------------
 [LEADER_Melony]
 Name = Galar Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galarleader
-VictoryBGM = galarleaderw
+BattleBGM = galar\galarleader
 #-------------------------------
 [LEADER_Piers]
 Name = Galar Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = piers
-VictoryBGM = galarleaderw
+BattleBGM = galar\piers
 #-------------------------------
 [LEADER_Raihan]
 Name = Galar Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galarleader
-VictoryBGM = galarleaderw
+BattleBGM = galar\galarleader
 #-------------------------------
 [RIVAL_Blue]
 Name = Rival
@@ -579,7 +508,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = blue
-VictoryBGM = kantotrainerw
 #-------------------------------
 [RIVAL_Silver]
 Name = Rival
@@ -587,7 +515,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = silver
-VictoryBGM = johtotrainerw
 #-------------------------------
 [RIVAL_Wally]
 Name = Rival
@@ -595,7 +522,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = wally
-VictoryBGM = hoenntrainerw
 #-------------------------------
 [RIVAL_Barry]
 Name = Rival
@@ -603,7 +529,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = barry
-VictoryBGM = sinnohtrainerw
 #-------------------------------
 [RIVAL_Bianca]
 Name = Rival
@@ -646,7 +571,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = giovanni
-VictoryBGM = kantotrainerw
 #-------------------------------
 [BOSS_Archie]
 Name = Team Aqua Boss
@@ -654,7 +578,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = archie
-VictoryBGM = aquamagmaw
 #-------------------------------
 [BOSS_Maxie]
 Name = Team Magma Boss
@@ -662,7 +585,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = maxie
-VictoryBGM = aquamagmaw
 #-------------------------------
 [BOSS_Cyrus]
 Name = Team Galactic Boss
@@ -670,7 +592,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = cyrus
-VictoryBGM = cyrusw
 #-------------------------------
 [BOSS_Ghetsis]
 Name = Team Plasma Boss
@@ -678,7 +599,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = ghetsis
-VictoryBGM = ghetsisw
 #-------------------------------
 [BOSS_Lysandre]
 Name = Team Flare Boss
@@ -707,7 +627,6 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = lorelei
-VictoryBGM = kantoleaderw
 #-------------------------------
 [ELITE_Bruno]
 Name = Elite Four
@@ -715,7 +634,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = bruno1
-VictoryBGM = kantoleaderw
 #-------------------------------
 [ELITE_Bruno2]
 Name = Elite Four
@@ -723,7 +641,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = bruno2
-VictoryBGM = johtoleaderw
 #-------------------------------
 [ELITE_Agatha]
 Name = Elite Four
@@ -731,7 +648,6 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = agatha
-VictoryBGM = kantoleaderw
 #-------------------------------
 [ELITE_Koga]
 Name = Elite Four
@@ -739,7 +655,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = koga
-VictoryBGM = johtoleaderw
 #-------------------------------
 [ELITE_Lance]
 Name = Elite Four
@@ -747,7 +662,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = lance
-VictoryBGM = kantoleaderw
 #-------------------------------
 [SPECIAL_Green]
 Name = Pokémon Trainer
@@ -755,7 +669,6 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = green
-VictoryBGM = kantoleaderw
 #-------------------------------
 [SPECIAL_Oak]
 Name = Professor
@@ -763,7 +676,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = oak
-VictoryBGM = kantoleaderw
 #-------------------------------
 [ELITE_Will]
 Name = Elite Four
@@ -771,7 +683,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = will
-VictoryBGM = johtoleaderw
 #-------------------------------
 [ELITE_Karen]
 Name = Elite Four
@@ -779,7 +690,6 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = karen
-VictoryBGM = johtoleaderw
 #-------------------------------
 [SPECIAL_Elm]
 Name = Professor
@@ -787,7 +697,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = johtotrainer
-VictoryBGM = johtotrainerw
 #-------------------------------
 [SPECIAL_Eusine]
 Name = Mystery Man
@@ -795,7 +704,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = johtotrainer
-VictoryBGM = johtotrainerw
 #-------------------------------
 [SPECIAL_Kris]
 Name = Pokémon Trainer
@@ -803,7 +711,6 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = johtotrainer
-VictoryBGM = johtotrainerw
 #-------------------------------
 [ELITE_Sidney]
 Name = Elite Four
@@ -811,7 +718,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = glacia
-VictoryBGM = hoennleaderw
 #-------------------------------
 [ELITE_Phoebe]
 Name = Elite Four
@@ -819,7 +725,6 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = glacia
-VictoryBGM = hoennleaderw
 #-------------------------------
 [ELITE_Glacia]
 Name = Elite Four
@@ -827,7 +732,6 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = glacia
-VictoryBGM = hoennleaderw
 #-------------------------------
 [ELITE_Drake]
 Name = Elite Four
@@ -835,7 +739,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = drake
-VictoryBGM = hoennleaderw
 #-------------------------------
 [SPECIAL_Birch]
 Name = Professor
@@ -843,7 +746,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = birch
-VictoryBGM = hoenntrainerw
 #-------------------------------
 [SPECIAL_Zinnia]
 Name = Lorekeeper
@@ -858,7 +760,6 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = lisia
-VictoryBGM = hoenntrainerw
 #-------------------------------
 [ELITE_Aaron]
 Name = Elite Four
@@ -866,7 +767,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = aaron
-VictoryBGM = sinnohelitefourw
 #-------------------------------
 [ELITE_Bertha]
 Name = Elite Four
@@ -874,7 +774,6 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = bertha
-VictoryBGM = sinnohelitefourw
 #-------------------------------
 [ELITE_Flint]
 Name = Elite Four
@@ -882,7 +781,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = flint
-VictoryBGM = sinnohelitefourw
 #-------------------------------
 [ELITE_Lucian]
 Name = Elite Four
@@ -890,7 +788,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = lucian
-VictoryBGM = sinnohelitefourw
 #-------------------------------
 [SPECIAL_Riley]
 Name = Pokémon Trainer
@@ -898,7 +795,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnohtrainer
-VictoryBGM = sinnohtrainerw
 #-------------------------------
 [SPECIAL_Cheryl]
 Name = Pokémon Trainer
@@ -906,7 +802,6 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnohtrainer
-VictoryBGM = sinnohtrainerw
 #-------------------------------
 [SPECIAL_Buck]
 Name = Pokémon Trainer
@@ -914,7 +809,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnohtrainer
-VictoryBGM = sinnohtrainerw
 #-------------------------------
 [SPECIAL_Mira]
 Name = Pokémon Trainer
@@ -922,7 +816,6 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnohtrainer
-VictoryBGM = sinnohtrainerw
 #-------------------------------
 [SPECIAL_Marley]
 Name = Pokémon Trainer
@@ -930,7 +823,6 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnohtrainer
-VictoryBGM = sinnohtrainerw
 #-------------------------------
 [SPECIAL_Rowan]
 Name = Professor
@@ -938,7 +830,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnohtrainer
-VictoryBGM = sinnohtrainerw
 #-------------------------------
 [ELITE_Shauntal]
 Name = Elite Four
@@ -946,7 +837,6 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = shauntal
-VictoryBGM = unovaleaderw
 #-------------------------------
 [ELITE_Marshal]
 Name = Elite Four
@@ -954,7 +844,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = marshal
-VictoryBGM = unovaleaderw
 #-------------------------------
 [ELITE_Grimsley]
 Name = Elite Four
@@ -962,7 +851,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = grimsley
-VictoryBGM = unovaleaderw
 #-------------------------------
 [ELITE_Caitlin]
 Name = Elite Four
@@ -970,7 +858,6 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = caitlin
-VictoryBGM = unovaleaderw
 #-------------------------------
 [SPECIAL_N]
 Name = Pokémon Trainer
@@ -1006,7 +893,6 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kaloselitefour
-VictoryBGM = kalosleaderw
 #-------------------------------
 [ELITE_Siebold]
 Name = Elite Four
@@ -1014,7 +900,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kaloselitefour
-VictoryBGM = kalosleaderw
 #-------------------------------
 [ELITE_Wikstrom]
 Name = Elite Four
@@ -1022,7 +907,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kaloselitefour
-VictoryBGM = kalosleaderw
 #-------------------------------
 [ELITE_Drasna]
 Name = Elite Four
@@ -1030,7 +914,6 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kaloselitefour
-VictoryBGM = kalosleaderw
 #-------------------------------
 [SPECIAL_Sycamore]
 Name = Professor
@@ -1059,7 +942,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = hala
-VictoryBGM = alolacaptainw
 #-------------------------------
 [ELITE_Olivia]
 Name = Elite Four
@@ -1067,7 +949,6 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = olivia
-VictoryBGM = alolacaptainw
 #-------------------------------
 [SPECIAL_Nanu]
 Name = Kahuna
@@ -1075,7 +956,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kahuna
-VictoryBGM = alolacaptainw
 #-------------------------------
 [SPECIAL_Hapu]
 Name = Kahuna
@@ -1083,7 +963,6 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kahuna
-VictoryBGM = alolacaptainw
 #-------------------------------
 [ELITE_Molayne]
 Name = Elite Four
@@ -1091,7 +970,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = molayne
-VictoryBGM = alolacaptainw
 #-------------------------------
 [ELITE_Kahili]
 Name = Elite Four
@@ -1099,7 +977,6 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kahili
-VictoryBGM = alolacaptainw
 #-------------------------------
 [SPECIAL_Gladion]
 Name = Pokémon Trainer
@@ -1120,16 +997,14 @@ Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galarleader
-VictoryBGM = galarleaderw
+BattleBGM = galar\galarleader
 #-------------------------------
 [ELITE_Avery]
 Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galarleader
-VictoryBGM = galarleaderw
+BattleBGM = galar\galarleader
 #-------------------------------
 [ELITE_Mustard]
 Name = Dojo Master
@@ -1137,7 +1012,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = mustard
-VictoryBGM = galarleaderw
 #-------------------------------
 [SPECIAL_Marnie]
 Name = Pokémon Trainer
@@ -1166,7 +1040,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = peony
-VictoryBGM = galarleaderw
 #-------------------------------
 [PROTAG_Red]
 Name = Pokémon Trainer
@@ -1174,7 +1047,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = red
-VictoryBGM = kantotrainerw
 #-------------------------------
 [PROTAG_Ethan]
 Name = Pokémon Trainer
@@ -1182,7 +1054,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = johtotrainer
-VictoryBGM = johtotrainerw
 #-------------------------------
 [PROTAG_Brandan]
 Name = Pokémon Trainer
@@ -1190,7 +1061,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = protaghoenn
-VictoryBGM = hoenntrainerw
 #-------------------------------
 [PROTAG_Lucas]
 Name = Pokémon Trainer
@@ -1198,7 +1068,6 @@ Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnohtrainer
-VictoryBGM = sinnohtrainerw
 #-------------------------------
 [PROTAG_Hilbert]
 Name = Pokémon Trainer
@@ -1226,7 +1095,7 @@ Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = alolatrainer
+BattleBGM = alola\alolatrainer
 #-------------------------------
 [PROTAG_Victor]
 Name = Pokémon Trainer
@@ -1241,7 +1110,6 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = leaf
-VictoryBGM = kantotrainerw
 #-------------------------------
 [PROTAG_Lyra]
 Name = Pokémon Trainer
@@ -1249,7 +1117,6 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = johtotrainer
-VictoryBGM = johtotrainerw
 #-------------------------------
 [PROTAG_May]
 Name = Pokémon Trainer
@@ -1257,7 +1124,6 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = protaghoenn
-VictoryBGM = hoenntrainerw
 #-------------------------------
 [PROTAG_Dawn]
 Name = Pokémon Trainer
@@ -1265,7 +1131,6 @@ Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnohtrainer
-VictoryBGM = sinnohtrainerw
 #-------------------------------
 [PROTAG_Hilda]
 Name = Pokémon Trainer
@@ -1293,518 +1158,504 @@ Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = alolatrainer
+BattleBGM = alola\alolatrainer
 #-------------------------------
 [PROTAG_Gloria]
 Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galartrainer
+BattleBGM = galar\galartrainer
 #-------------------------------
 [CHAMPION_Leon]
 Name = Champion
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = leon
+BattleBGM = galar\leon
 #-------------------------------
 [CHAMPION_Peony]
 Name = Champion
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galartrainer
+BattleBGM = galar\peony
 #-------------------------------
 [CHAMPION_Mustard]
 Name = Champion
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galartrainer
+BattleBGM = galar\championmustard
 #-------------------------------
 [CHAMPION_Hau]
 Name = Champion
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = championhau
+BattleBGM = alola\championhau
 #-------------------------------
 [CHAMPION_Kukui]
 Name = Champion
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = kukui
+BattleBGM = alola\kukui
 #-------------------------------
 [CHAMPION_Diantha]
 Name = Champion
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = diantha
-VictoryBGM = dianthaw
+BattleBGM = kalos\diantha
 #-------------------------------
 [CHAMPION_Iris]
 Name = Champion
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = iris
-VictoryBGM = irisw
+BattleBGM = unova\iris
 #-------------------------------
 [CHAMPION_Alder]
 Name = Champion
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = alder
-VictoryBGM = alderw
+BattleBGM = unova\alder
 #-------------------------------
 [CHAMPION_Cynthia]
 Name = Champion
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = cynthia
-VictoryBGM = cynthiaw
+BattleBGM = sinnoh\cynthia
 #-------------------------------
 [CHAMPION_Wallace]
 Name = Champion
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = wallace
-VictoryBGM = hoennchampionw
+BattleBGM = hoenn\wallace
 #-------------------------------
 [CHAMPION_Steven]
 Name = Champion
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = steven
-VictoryBGM = hoennchampionw
+BattleBGM = hoenn\steven
 #-------------------------------
 [CHAMPION_Lance]
 Name = Champion
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = championlance
-VictoryBGM = johtoleaderw
+BattleBGM = johto\championlance
 #-------------------------------
 [CHAMPION_Blue]
 Name = Champion
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = championblue
-VictoryBGM = kantoleaderw
+BattleBGM = kanto\championblue
 #-------------------------------
 [CHAMPION_Red]
 Name = Champion
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = red2
-VictoryBGM = kantoleaderw
+BattleBGM = kanto\red2
 #-------------------------------
 [SPECIAL_Ash]
 Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = ash
-VictoryBGM = kantoleaderw
+BattleBGM = kanto\ash
 #-------------------------------
 [SPECIAL_Archer]
 Name = Team Rocket Executive
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = rocketexecutive
-VictoryBGM = kantoleaderw
+BattleBGM = johto\rocketexecutive
 #-------------------------------
 [SPECIAL_Petrel]
 Name = Team Rocket Executive
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = rocketexecutive
-VictoryBGM = kantoleaderw
+BattleBGM = johto\rocketexecutive
 #-------------------------------
 [SPECIAL_Ariana]
 Name = Team Rocket Executive
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = rocketexecutive
-VictoryBGM = kantoleaderw
+BattleBGM = johto\rocketexecutive
 #-------------------------------
 [SPECIAL_Proton]
 Name = Team Rocket Executive
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = rocketexecutive
-VictoryBGM = kantoleaderw
+BattleBGM = johto\rocketexecutive
 #-------------------------------
 [SPECIAL_Tabitha]
 Name = Team Magma Admin
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = magmaaquaadmin
+BattleBGM = hoenn\magmaaquaadmin
 #-------------------------------
 [SPECIAL_Courtney]
 Name = Team Magma Admin
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = magmaaquaadmin
+BattleBGM = hoenn\magmaaquaadmin
 #-------------------------------
 [SPECIAL_Matt]
 Name = Team Aqua Admin
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = magmaaquaadmin
+BattleBGM = hoenn\magmaaquaadmin
 #-------------------------------
 [SPECIAL_Shelly]
 Name = Team Aqua Admin
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = magmaaquaadmin
+BattleBGM = hoenn\magmaaquaadmin
 #-------------------------------
 [SPECIAL_Saturn]
 Name = Team Galactic Commander
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galacticcommander
+BattleBGM = sinnoh\galacticcommander
 #-------------------------------
 [SPECIAL_Mars]
 Name = Team Galactic Commander
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galacticcommander
+BattleBGM = sinnoh\galacticcommander
 #-------------------------------
 [SPECIAL_Jupiter]
 Name = Team Galactic Commander
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galacticcommander
+BattleBGM = sinnoh\galacticcommander
 #-------------------------------
 [SPECIAL_Faba]
 Name = Aether Branch Chief
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = faba
+BattleBGM =  alola\faba
 #-------------------------------
 [SPECIAL_Plumeria]
 Name = Team Skull Admin
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = plumeria
+BattleBGM =  alola\plumeria
 #-------------------------------
 [SPECIAL_Lillie]
 Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = lillie
+BattleBGM = alola\lillie
 #-------------------------------
 [HISUI_Mai]
 Name = Warden
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = warden
+BattleBGM = hisui\warden
 #-------------------------------
 [HISUI_Lian]
 Name = Warden
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = warden
+BattleBGM = hisui\warden
 #-------------------------------
 [HISUI_Calaba]
 Name = Warden
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = warden
+BattleBGM = hisui\warden
 #-------------------------------
 [HISUI_Arezu]
 Name = Warden
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = warden
+BattleBGM = hisui\warden
 #-------------------------------
 [HISUI_Iscan]
 Name = Warden
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = warden
+BattleBGM = hisui\warden
 #-------------------------------
 [HISUI_Palina]
 Name = Warden
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = warden
+BattleBGM = hisui\warden
 #-------------------------------
 [HISUI_Ingo]
 Name = Warden
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = warden
+BattleBGM = hisui\warden
 #-------------------------------
 [HISUI_Melli]
 Name = Warden
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = warden
+BattleBGM = hisui\warden
 #-------------------------------
 [HISUI_Gaeric]
 Name = Warden
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = warden
+BattleBGM = hisui\warden
 #-------------------------------
 [HISUI_Sabi]
 Name = Warden
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = warden
+BattleBGM = hisui\warden
 #-------------------------------
 [HISUI_Adaman]
 Name = Clan Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = warden
+BattleBGM = hisui\warden
 #-------------------------------
 [HISUI_Irida]
 Name = Clan Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = warden
+BattleBGM = hisui\warden
 #-------------------------------
 [HISUI_Kamado]
 Name = The Galaxy Team's
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = warden
+BattleBGM = hisui\warden
 #-------------------------------
 [HISUI_Volo]
 Name = Pokémon Wielder
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = volo
+BattleBGM = hisui\volo
 #-------------------------------
 [LEADER_Katy]
 Name = Paldea Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldealeader
+BattleBGM = paldea\paldealeader
 #-------------------------------
 [LEADER_Brassius]
 Name = Paldea Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldealeader
+BattleBGM = paldea\paldealeader
 #-------------------------------
 [LEADER_Iono]
 Name = Paldea Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldealeader
+BattleBGM = paldea\paldealeader
 #-------------------------------
 [LEADER_Kofu]
 Name = Paldea Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldealeader
+BattleBGM = paldea\paldealeader
 #-------------------------------
 [LEADER_Larry]
 Name = Paldea Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldealeader
+BattleBGM = paldea\paldealeader
 #-------------------------------
 [LEADER_Ryme]
 Name = Paldea Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldealeader
+BattleBGM = paldea\paldealeader
 #-------------------------------
 [LEADER_Tulip]
 Name = Paldea Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldealeader
+BattleBGM = paldea\paldealeader
 #-------------------------------
 [LEADER_Grusha]
 Name = Paldea Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldealeader
+BattleBGM = paldea\paldealeader
 #-------------------------------
 [ELITE_Rika]
 Name = Paldea Elite Four
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldeaelitefour
+BattleBGM = paldea\paldeaelitefour
 #-------------------------------
 [ELITE_Poppy]
 Name = Paldea Elite Four
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldeaelitefour
+BattleBGM = paldea\paldeaelitefour
 #-------------------------------
 [ELITE_Larry]
 Name = Paldea Elite Four
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldeaelitefour
+BattleBGM = paldea\paldeaelitefour
 #-------------------------------
 [ELITE_Hassel]
 Name = Paldea Elite Four
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldeaelitefour
+BattleBGM = paldea\paldeaelitefour
 #-------------------------------
 [CHAMPION_Geeta]
 Name = Champion
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = geeta
+BattleBGM = paldea\geeta
 #-------------------------------
 [SPECIAL_Giacomo]
 Name = Team Star
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = teamstaradmin
+BattleBGM = paldea\staradmin
 #-------------------------------
 [SPECIAL_Mela]
 Name = Team Star
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = teamstaradmin
+BattleBGM = paldea\staradmin
 #-------------------------------
 [SPECIAL_Atticus]
 Name = Team Star
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = teamstaradmin
+BattleBGM = paldea\staradmin
 #-------------------------------
 [SPECIAL_Ortega]
 Name = Team Star
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = teamstaradmin
+BattleBGM = paldea\staradmin
 #-------------------------------
 [SPECIAL_Eri]
 Name = Team Star
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = teamstaradmin
+BattleBGM = paldea\staradmin
 #-------------------------------
 [SPECIAL_Cassiopeia]
 Name = Team Star Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = cassiopeia
+BattleBGM = paldea\cassiopeia
 #-------------------------------
 [SPECIAL_Arven]
 Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = arven
+BattleBGM = paldea\arven
 #-------------------------------
 [SPECIAL_Clavell]
 Name = Director
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = clavell
+BattleBGM = paldea\clavell
 #-------------------------------
 [SPECIAL_Jacq]
 Name = Instructor
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = jacq
+BattleBGM = paldea\jacq
 #-------------------------------
 [RIVAL_Nemona]
 Name = Rival
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = nemona
+BattleBGM = paldea\nemona
 #-------------------------------
 [PROTAG_Florian]
 Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldeatrainer
+BattleBGM = paldea\paldeatrainer
 #-------------------------------
 [PROTAG_Juliana]
 Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldeatrainer
+BattleBGM = paldea\paldeatrainer
 #-------------------------------
 [IMPOSTER_Sada]
 Name = Rouge AI
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = sadaturo
+BattleBGM = paldea\sadaturo
 #-------------------------------
 [IMPOSTER_Turo]
 Name = Rouge AI
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = sadaturo
+BattleBGM = paldea\sadaturo
 #-------------------------------
 [TRAINER_ACETRAINER_ALOLA_M]
 Name = Ace Trainer

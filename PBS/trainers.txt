@@ -847,3 +847,14 @@ Pokemon = BELLIBOLT,50
     IV = 31,31,31,31,31,31
     EV = 0,0,252,0,0,252
 	TeraType = ELECTRIC
+#-------------------------------
+[TRAINER_STAR_VIOLET_M,Proto]
+LoseText = WHATTTTTTTTTTTTTTTTTT
+Pokemon = BLISSEY,50
+    Moves = PROTECT,PROTECT,PROTECT,PROTECT
+#-------------------------------
+[TRAINER_STAR_VIOLET_F,Stacy]
+LoseText = WHATTTTTTTTTTTTTTTTTT
+Pokemon = DRAGONITE,50
+    Moves = GROWL,GROWL,TAILWHIP,TAILWHIP
+#-------------------------------

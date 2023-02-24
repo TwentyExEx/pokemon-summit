@@ -5,9 +5,9 @@ StartMoney = 3000
 Home = 8,14,22,8
 StorageCreator = Kieran
 WildBattleBGM = Battle wild
-TrainerBattleBGM = trainer
+TrainerBattleBGM = world_ex_trainer
 WildVictoryBGM = Battle victory wild
-TrainerVictoryBGM = win
+TrainerVictoryBGM = jingle_win
 SurfBGM = Surfing
 BicycleBGM = Bicycle
 #-------------------------------
