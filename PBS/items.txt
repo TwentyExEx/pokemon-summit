@@ -7381,7 +7381,7 @@ NamePlural = Knife Sharpeners
 Pocket = 1
 Price = 4000
 Flags = Fling_30
-Description = An item to be held by a Pokémon. This sharp knife will boost the user's Attack stat if it lands a critical-hit with a slicing move.
+Description = An item to be held by a Pokémon. It will boost the user's Attack stat if it lands a critical-hit with a slicing move.
 #-------------------------------
 [EXTENDEDBOOKING]
 Name = Extended Booking
