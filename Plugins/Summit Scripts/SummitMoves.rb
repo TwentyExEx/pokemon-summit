@@ -466,29 +466,29 @@ class Battle::Move::RaiseGroundedGrassBattlersAtkSpAtk1GroundedGroundBattlersSpe
 	  if @battle.field.terrain == :Grassy && user.affectedByTerrain?
 	    if target.pbCanRaiseStatStage?(:ATTACK, user, self)
           showAnim = false if target.pbRaiseStatStage(:ATTACK, 2, user, showAnim)
-        end
-        if target.pbCanRaiseStatStage?(:SPECIAL_ATTACK, user, self)
-          target.pbRaiseStatStage(:SPECIAL_ATTACK, 2, user, showAnim)
-        end
+      end
+      if target.pbCanRaiseStatStage?(:SPECIAL_ATTACK, user, self)
+        target.pbRaiseStatStage(:SPECIAL_ATTACK, 2, user, showAnim)
+      end
 	  else
 	    if target.pbCanRaiseStatStage?(:ATTACK, user, self)
-          showAnim = false if target.pbRaiseStatStage(:ATTACK, 1, user, showAnim)
-        end
-        if target.pbCanRaiseStatStage?(:SPECIAL_ATTACK, user, self)
-          target.pbRaiseStatStage(:SPECIAL_ATTACK, 1, user, showAnim)
-		end
+        showAnim = false if target.pbRaiseStatStage(:ATTACK, 1, user, showAnim)
+      end
+      if target.pbCanRaiseStatStage?(:SPECIAL_ATTACK, user, self)
+        target.pbRaiseStatStage(:SPECIAL_ATTACK, 1, user, showAnim)
+		  end
+    end
+  end
 	if !target.pbHasType?(:GRASS)
 	  if @battle.field.terrain == :Grassy && user.affectedByTerrain?
 	    if target.pbCanRaiseStatStage?(:SPEED, user, self)
-          showAnim = false if target.pbRaiseStatStage(:SPEED, 2, user, showAnim)
-        end
+        showAnim = false if target.pbRaiseStatStage(:SPEED, 2, user, showAnim)
+      end
 	  else
 	    if target.pbCanRaiseStatStage?(:SPEED, user, self)
-          showAnim = false if target.pbRaiseStatStage(:SPEED, 1, user, showAnim)
+        showAnim = false if target.pbRaiseStatStage(:SPEED, 1, user, showAnim)
 		  end
 		end
-      end
-	end
   end
 end
 end
