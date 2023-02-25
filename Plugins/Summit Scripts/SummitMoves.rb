@@ -505,3 +505,120 @@ class Battle::Move::ProtectUserFromDamagingMovesShelter < Battle::Move::ProtectM
     @effect = PBEffects::Shelter
   end
 end
+
+#===============================================================================
+# Hits twice. User gets pumped up after use. (Double Hit)
+#===============================================================================
+class Battle::Move::HitTwoTimesRaiseUserCriticalHitRate2 < Battle::Move::RaiseUserCriticalHitRate2
+  def multiHitMove?;            return true; end
+  def pbNumHits(user, targets); return 2;    end
+end
+
+#===============================================================================
+# Effectiveness against every type is 2x. (Hidden Power)
+#===============================================================================
+class Battle::Move::AlwaysSuperEffective < Battle::Move
+  def initialize(battle, move)
+    super
+    @calcCategory = 1
+  end
+
+  def physicalMove?(thisType = nil); return (@calcCategory == 0); end
+  def specialMove?(thisType = nil);  return (@calcCategory == 1); end
+
+  def pbOnStartUse(user, targets)
+    target = targets[0]
+    stageMul = [2, 2, 2, 2, 2, 2, 2, 3, 4, 5, 6, 7, 8]
+    stageDiv = [8, 7, 6, 5, 4, 3, 2, 2, 2, 2, 2, 2, 2]
+    # Calculate user's effective attacking values
+    attack_stage         = user.stages[:ATTACK] + 6
+    real_attack          = (user.attack.to_f * stageMul[attack_stage] / stageDiv[attack_stage]).floor
+    special_attack_stage = user.stages[:SPECIAL_ATTACK] + 6
+    real_special_attack  = (user.spatk.to_f * stageMul[special_attack_stage] / stageDiv[special_attack_stage]).floor
+    # Calculate target's effective defending values
+    defense_stage         = target.stages[:DEFENSE] + 6
+    real_defense          = (target.defense.to_f * stageMul[defense_stage] / stageDiv[defense_stage]).floor
+    special_defense_stage = target.stages[:SPECIAL_DEFENSE] + 6
+    real_special_defense  = (target.spdef.to_f * stageMul[special_defense_stage] / stageDiv[special_defense_stage]).floor
+    # Perform simple damage calculation
+    physical_damage = real_attack.to_f / real_defense
+    special_damage = real_special_attack.to_f / real_special_defense
+    # Determine move's category
+    if physical_damage == special_damage
+      @calcCategry = @battle.pbRandom(2)
+    else
+      @calcCategory = (physical_damage > special_damage) ? 0 : 1
+    end
+  end
+
+  def pbCalcTypeModSingle(moveType, defType, user, target)
+    return Effectiveness::SUPER_EFFECTIVE_ONE
+    return super
+  end
+end
+
+#===============================================================================
+# Two turn attack. Skips first turn, attacks second turn. (Dig)
+# (Handled in Battler's pbSuccessCheckPerHit): Is semi-invulnerable during use.
+#===============================================================================
+class Battle::Move::TwoTurnAttackInvulnerableUndergroundSkipChargeIfSandstorm < Battle::Move::TwoTurnMove
+  def pbChargingTurnMessage(user, targets)
+    @battle.pbDisplay(_INTL("{1} burrowed its way under the ground!", user.pbThis))
+  end
+  
+  def pbIsChargingTurn?(user)
+    ret = super
+    if !user.effects[PBEffects::TwoTurnAttack] &&
+       [:Sandstorm].include?(user.effectiveWeather)
+      @powerHerb = false
+      @chargingTurn = true
+      @damagingTurn = true
+      return false
+    end
+    return ret
+  end
+end
+
+#===============================================================================
+# Two turn attack. Skips first turn, attacks second turn. (Dive)
+# (Handled in Battler's pbSuccessCheckPerHit): Is semi-invulnerable during use.
+#===============================================================================
+class Battle::Move::TwoTurnAttackInvulnerableUnderwaterSkipChargeIfRain < Battle::Move::TwoTurnMove
+  def pbChargingTurnMessage(user, targets)
+    @battle.pbDisplay(_INTL("{1} hid underwater!", user.pbThis))
+  end
+  
+  def pbIsChargingTurn?(user)
+    ret = super
+    if !user.effects[PBEffects::TwoTurnAttack] &&
+       [:Rain, :HeavyRain].include?(user.effectiveWeather)
+      @powerHerb = false
+      @chargingTurn = true
+      @damagingTurn = true
+      return false
+    end
+    return ret
+  end
+end
+
+#===============================================================================
+# Two turn attack. Skips first turn, attacks second turn. (Fly)
+# (Handled in Battler's pbSuccessCheckPerHit): Is semi-invulnerable during use.
+#===============================================================================
+class Battle::Move::TwoTurnAttackInvulnerableInSkySkipChargeIfTailwind < Battle::Move::TwoTurnMove
+  def pbChargingTurnMessage(user, targets)
+    @battle.pbDisplay(_INTL("{1} flew up high!", user.pbThis))
+  end
+  
+  def pbIsChargingTurn?(user)
+    ret = super
+    if !user.effects[PBEffects::TwoTurnAttack] &&
+       user.pbOwnSide.effects[PBEffects::Tailwind] > 0
+      @powerHerb = false
+      @chargingTurn = true
+      @damagingTurn = true
+      return false
+    end
+    return ret
+  end
+end

@@ -2919,11 +2919,11 @@ Description = The user heats up its beak before attacking. Making contact in thi
 Name = Fly
 Type = FLYING
 Category = Physical
-Power = 90
+Power = 120
 Accuracy = 95
 TotalPP = 15
 Target = Other
-FunctionCode = TwoTurnAttackInvulnerableInSky
+FunctionCode = TwoTurnAttackInvulnerableInSkySkipChargeIfTailwind
 Flags = Contact,CanProtect,CanMirrorMove
 Description = The user soars, then strikes on the second turn. It can also be used for flying to any familiar town.
 #-------------------------------
@@ -4090,11 +4090,11 @@ Description = The user attacks with a wave that crawls along the ground. Those i
 Name = Dig
 Type = GROUND
 Category = Physical
-Power = 80
+Power = 120
 Accuracy = 100
 TotalPP = 10
 Target = NearOther
-FunctionCode = TwoTurnAttackInvulnerableUnderground
+FunctionCode = TwoTurnAttackInvulnerableUndergroundSkipChargeIfSandstorm
 Flags = Contact,CanProtect,CanMirrorMove
 Description = The user burrows, then attacks on the second turn. It can also be used to exit dungeons.
 #-------------------------------
@@ -5123,13 +5123,13 @@ Description = The user endearingly approaches the target, then steals the target
 Name = Hidden Power
 Type = NORMAL
 Category = Special
-Power = 60
+Power = 80
 Accuracy = 100
 TotalPP = 15
 Target = NearOther
-FunctionCode = TypeDependsOnUserIVs
+FunctionCode = AlwaysSuperEffective
 Flags = CanProtect,CanMirrorMove
-Description = A unique attack that varies in type and intensity depending on the Pokémon using it.
+Description = A unique attack using mysterious powers that will always result in this move being super-effective.
 #-------------------------------
 [ROUND]
 Name = Round
@@ -5357,13 +5357,13 @@ Description = A physical attack in which the user charges and slams into the tar
 Name = Double Hit
 Type = NORMAL
 Category = Physical
-Power = 35
+Power = 45
 Accuracy = 90
 TotalPP = 10
 Target = NearOther
-FunctionCode = HitTwoTimes
+FunctionCode = HitTwoTimesRaiseUserCriticalHitRate2
 Flags = Contact,CanProtect,CanMirrorMove
-Description = The user slams the target with a long tail, vines, or tentacle. The target is hit twice in a row.
+Description = The user slams the target with a long tail, vines, or tentacle. The target is hit twice in a row and becomes pumped up after use.
 #-------------------------------
 [FEINT]
 Name = Feint
@@ -8450,11 +8450,11 @@ Description = The user slams into the target using a full-force blast of water. 
 Name = Dive
 Type = WATER
 Category = Physical
-Power = 80
+Power = 100
 Accuracy = 100
 TotalPP = 10
 Target = NearOther
-FunctionCode = TwoTurnAttackInvulnerableUnderwater
+FunctionCode = TwoTurnAttackInvulnerableUnderwaterSkipChargeIfRain
 Flags = Contact,CanProtect,CanMirrorMove
 Description = Diving on the first turn, the user rises and hits on the next turn. It can be used to dive in the ocean.
 #-------------------------------
