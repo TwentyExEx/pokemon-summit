@@ -1144,8 +1144,6 @@ Battle::AbilityEffects::AccuracyCalcFromUser.add(:COMPOUNDEYES,
   }
 )
 
-Battle::AbilityEffects::AccuracyCalcFromUser.copy(:COMPOUNDEYES, :KEENEYE)
-
 Battle::AbilityEffects::AccuracyCalcFromUser.add(:HUSTLE,
   proc { |ability, mods, user, target, move, type|
     mods[:accuracy_multiplier] *= 0.8 if move.physicalMove?
@@ -1154,7 +1152,7 @@ Battle::AbilityEffects::AccuracyCalcFromUser.add(:HUSTLE,
 
 Battle::AbilityEffects::AccuracyCalcFromUser.add(:KEENEYE,
   proc { |ability, mods, user, target, move, type|
-    mods[:evasion_stage] = 0 if mods[:evasion_stage] > 0 && Settings::MECHANICS_GENERATION >= 6
+    mods[:accuracy_multiplier] *= 1.1
   }
 )
 
@@ -2022,9 +2020,6 @@ Battle::AbilityEffects::OnBeingHit.add(:MUMMY,
       end
       battle.pbHideAbilitySplash(user) if user.opposes?(target)
     end
-    user.effects[PBEffects::Taunt] = 4
-    battle.pbDisplay(_INTL("{1} fell for the taunt!", user.pbThis))
-    user.pbItemStatusCureCheck
     battle.pbHideAbilitySplash(target) if user.opposes?(target)
     user.pbOnLosingAbility(oldAbil)
     user.pbTriggerAbilityOnGainingIt

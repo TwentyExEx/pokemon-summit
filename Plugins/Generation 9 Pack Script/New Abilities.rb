@@ -214,6 +214,11 @@ Battle::AbilityEffects::OnBeingHit.add(:LINGERINGAROMA,
       end
       battle.pbHideAbilitySplash(user) if user.opposes?(target)
     end
+	if user.effects[PBEffects::HealBlock] == 0
+	  user.effects[PBEffects::HealBlock] = 5
+	  battle.pbDisplay(_INTL("{1} was prevented from healing!", user.pbThis))
+	  user.pbItemStatusCureCheck
+	end
     battle.pbHideAbilitySplash(target) if user.opposes?(target)
     user.pbOnLosingAbility(oldAbil)
     user.pbTriggerAbilityOnGainingIt

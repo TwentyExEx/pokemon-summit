@@ -312,7 +312,7 @@ class Battle::Battler
       end
       return false
     end
-    if Settings::MECHANICS_GENERATION >= 8 && hasActiveAbility?([:OBLIVIOUS, :OWNTEMPO, :INNERFOCUS, :SCRAPPY])
+    if Settings::MECHANICS_GENERATION >= 8 && hasActiveAbility?([:OBLIVIOUS, :OWNTEMPO, :INNERFOCUS, :SCRAPPY, :KEENEYE])
       @battle.pbShowAbilitySplash(self)
       if Battle::Scene::USE_ABILITY_SPLASH
         @battle.pbDisplay(_INTL("{1}'s {2} cannot be lowered!", pbThis, GameData::Stat.get(:ATTACK).name))
@@ -367,7 +367,7 @@ class Battle::Battler
       end
       return false
     end
-    if Settings::MECHANICS_GENERATION >= 8 && hasActiveAbility?([:OBLIVIOUS, :OWNTEMPO, :INNERFOCUS, :SCRAPPY])
+    if Settings::MECHANICS_GENERATION >= 8 && hasActiveAbility?([:OBLIVIOUS, :OWNTEMPO, :INNERFOCUS, :SCRAPPY, :KEENEYE])
       @battle.pbShowAbilitySplash(self)
       if Battle::Scene::USE_ABILITY_SPLASH
         @battle.pbDisplay(_INTL("{1}'s {2} cannot be lowered!", pbThis, GameData::Stat.get(:SPECIAL_ATTACK).name))

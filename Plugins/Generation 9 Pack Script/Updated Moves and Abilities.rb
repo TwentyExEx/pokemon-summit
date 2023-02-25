@@ -330,6 +330,11 @@ Battle::AbilityEffects::OnBeingHit.add(:MUMMY,
       end
       battle.pbHideAbilitySplash(user) if user.opposes?(target)
     end
+	if user.effects[PBEffects::Taunt] == 0
+	  user.effects[PBEffects::Taunt] = 4
+	  battle.pbDisplay(_INTL("{1} fell for the taunt!", user.pbThis))
+	  user.pbItemStatusCureCheck
+	end
     battle.pbHideAbilitySplash(target) if user.opposes?(target)
     user.pbOnLosingAbility(oldAbil)
     user.pbTriggerAbilityOnGainingIt

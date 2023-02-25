@@ -539,13 +539,13 @@ class Battle::Battler
     if !hitsInvul
       # Semi-invulnerable moves
       if target.effects[PBEffects::TwoTurnAttack]
-        if target.inTwoTurnAttack?("TwoTurnAttackInvulnerableInSky",
+        if target.inTwoTurnAttack?("TwoTurnAttackInvulnerableInSkySkipChargeIfTailwind",
                                    "TwoTurnAttackInvulnerableInSkyParalyzeTarget",
                                    "TwoTurnAttackInvulnerableInSkyTargetCannotAct")
           miss = true if !move.hitsFlyingTargets?
-        elsif target.inTwoTurnAttack?("TwoTurnAttackInvulnerableUnderground")
+        elsif target.inTwoTurnAttack?("TwoTurnAttackInvulnerableUndergroundSkipChargeIfSandstorm")
           miss = true if !move.hitsDiggingTargets?
-        elsif target.inTwoTurnAttack?("TwoTurnAttackInvulnerableUnderwater")
+        elsif target.inTwoTurnAttack?("TwoTurnAttackInvulnerableUnderwaterSkipChargeIfRain")
           miss = true if !move.hitsDivingTargets?
         elsif target.inTwoTurnAttack?("TwoTurnAttackInvulnerableRemoveProtections")
           miss = true
