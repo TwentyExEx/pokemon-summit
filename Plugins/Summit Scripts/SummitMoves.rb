@@ -316,14 +316,10 @@ end
 class Battle::Move::SpiderWebTrap < Battle::Move::TargetStatDownMove
   def canMagicCoat?; return true; end
   
-  def initialize(battle, move)
-    super
-    @statDown = [:SPEED, 1]
-  end
-
   def pbFailsAgainstTarget?(user, target, show_message)
     return false if damagingMove?
-    if target.effects[PBEffects::MeanLook] >= 0
+    if target.effects[PBEffects::MeanLook] >= 0 || 
+       !target.pbCanLowerStatStage?(:SPEED, user, self)
       @battle.pbDisplay(_INTL("But it failed!")) if show_message
       return true
     end
@@ -334,6 +330,9 @@ class Battle::Move::SpiderWebTrap < Battle::Move::TargetStatDownMove
     return if damagingMove?
     target.effects[PBEffects::MeanLook] = user.index
     @battle.pbDisplay(_INTL("{1} can no longer escape!", target.pbThis))
+    if target.pbCanLowerStatStage?(:SPEED, user, self)
+      target.pbLowerStatStage(:SPEED, 1, user)
+    end
   end
 
   def pbAdditionalEffect(user, target)
@@ -341,6 +340,9 @@ class Battle::Move::SpiderWebTrap < Battle::Move::TargetStatDownMove
     return if target.effects[PBEffects::MeanLook] >= 0
     target.effects[PBEffects::MeanLook] = user.index
     @battle.pbDisplay(_INTL("{1} can no longer escape!", target.pbThis))
+    if target.pbCanLowerStatStage?(:SPEED, user, self)
+      target.pbLowerStatStage(:SPEED, 1, user)
+    end
   end
 end
 
@@ -411,8 +413,8 @@ class Battle::Move::SleepTargetLowerTargetSpDef1 < Battle::Move
   def canMagicCoat?; return true; end
 
   def pbFailsAgainstTarget?(user, target, show_message)
-    if !target.pbCanSleep?(user, false, SPECIAL_DEFENSE) &&
-       !target.pbCanLowerStatStage?(:DEFENSE, user, self)
+    if !target.pbCanSleep?(user, false, self) &&
+       !target.pbCanLowerStatStage?(:SPECIAL_DEFENSE, user, self)
       @battle.pbDisplay(_INTL("But it failed!")) if show_message
       return true
     end
