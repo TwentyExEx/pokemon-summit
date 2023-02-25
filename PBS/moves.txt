@@ -8989,9 +8989,9 @@ Category = Status
 Accuracy = 0
 TotalPP = 10
 Target = User
-FunctionCode = RaiseUserDefense2
-EffectChance = 100
-Description = The user makes its skin as hard as an iron shield, sharply boosting its Defense stat.
+Priority = 4
+FunctionCode = ProtectUserFromDamagingMovesShelter
+Description = Protects itself from damage. It also raises the Defense of of the user when a move makes contact.
 #-------------------------------
 [INFERNALPARADE]
 Name = Infernal Parade

@@ -389,7 +389,7 @@ class Battle::Battler
         @battle.pbDisplay(_INTL("{1} is protected from {2}'s {3} by Mist!",
                                 pbThis, user.pbThis(true), user.abilityName))
         return false
-      ends
+      end
       if abilityActive? &&
          (Battle::AbilityEffects.triggerStatLossImmunity(self.ability, self, :SPECIAL_ATTACK, @battle, false) ||
           Battle::AbilityEffects.triggerStatLossImmunityNonIgnorable(self.ability, self, :SPECIAL_ATTACK, @battle, false))

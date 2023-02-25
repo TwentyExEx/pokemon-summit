@@ -537,6 +537,7 @@ class Battle::Move::TargetUsesItsLastUsedMoveAgain < Battle::Move
     @moveBlacklist = [
       "MultiTurnAttackBideThenReturnDoubleDamage",   # Bide
       "ProtectUserFromDamagingMovesKingsShield",   # King's Shield
+      "ProtectUserFromDamagingMovesShelter",   # Shelter
       "TargetUsesItsLastUsedMoveAgain",   # Instruct (this move)
       # Struggle
       "Struggle",   # Struggle

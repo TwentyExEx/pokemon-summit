@@ -52,6 +52,7 @@ module Battle::DebugVariables
 #    PBEffects::Instructed - only used while Instruct is running, not suitable for setting via debug
     PBEffects::JawLock        => { name: "Battler trapping self with Jaw Lock",             default: -1 },   # Battler index
     PBEffects::KingsShield    => { name: "King's Shield applies this round",                default: false },
+    PBEffects::Shelter        => { name: "Shelter applies this round",                      default: false },
     PBEffects::LaserFocus     => { name: "Laser Focus certain critial hit duration",        default: 0 },
     PBEffects::LeechSeed      => { name: "Battler that used Leech Seed on self",            default: -1 },   # Battler index
     PBEffects::LockOn         => { name: "Lock-On number of rounds remaining",              default: 0 },

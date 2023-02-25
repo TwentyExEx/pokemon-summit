@@ -1000,6 +1000,7 @@ class Battle::Move::RemoveProtections < Battle::Move
   def pbEffectAgainstTarget(user, target)
     target.effects[PBEffects::BanefulBunker]          = false
     target.effects[PBEffects::KingsShield]            = false
+    target.effects[PBEffects::Shelter]                = false
     target.effects[PBEffects::Obstruct]               = false
     target.effects[PBEffects::Protect]                = false
     target.effects[PBEffects::SpikyShield]            = false
@@ -1019,6 +1020,7 @@ class Battle::Move::RemoveProtectionsBypassSubstitute < Battle::Move
   def pbEffectAgainstTarget(user, target)
     target.effects[PBEffects::BanefulBunker]          = false
     target.effects[PBEffects::KingsShield]            = false
+    target.effects[PBEffects::Shelter]                = false
     target.effects[PBEffects::Obstruct]               = false
     target.effects[PBEffects::Protect]                = false
     target.effects[PBEffects::SpikyShield]            = false
@@ -1055,6 +1057,7 @@ class Battle::Move::HoopaRemoveProtectionsBypassSubstituteLowerUserDef1 < Battle
   def pbEffectAgainstTarget(user, target)
     target.effects[PBEffects::BanefulBunker]          = false
     target.effects[PBEffects::KingsShield]            = false
+    target.effects[PBEffects::Shelter]                = false
     target.effects[PBEffects::Obstruct]               = false
     target.effects[PBEffects::Protect]                = false
     target.effects[PBEffects::SpikyShield]            = false

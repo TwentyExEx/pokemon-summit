@@ -484,6 +484,7 @@ class Battle::Move::TwoTurnAttackInvulnerableRemoveProtections < Battle::Move::T
   def pbAttackingTurnEffect(user, target)
     target.effects[PBEffects::BanefulBunker]          = false
     target.effects[PBEffects::KingsShield]            = false
+    target.effects[PBEffects::Shelter]                = false
     target.effects[PBEffects::Obstruct]               = false
     target.effects[PBEffects::Protect]                = false
     target.effects[PBEffects::SpikyShield]            = false

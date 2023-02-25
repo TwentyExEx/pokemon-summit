@@ -729,6 +729,7 @@ class Battle
       battler.effects[PBEffects::HelpingHand]      = false
       battler.effects[PBEffects::HyperBeam]        -= 1 if battler.effects[PBEffects::HyperBeam] > 0
       battler.effects[PBEffects::KingsShield]      = false
+      battler.effects[PBEffects::Shelter]          = false
       battler.effects[PBEffects::LaserFocus]       -= 1 if battler.effects[PBEffects::LaserFocus] > 0
       if battler.effects[PBEffects::LockOn] > 0   
         battler.effects[PBEffects::LockOn]         -= 1

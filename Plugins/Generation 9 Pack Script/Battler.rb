@@ -215,6 +215,20 @@ class Battle::Battler
             end
             return false
           end
+          # Shelter
+          if target.effects[PBEffects::Shelter] && move.damagingMove?
+            if show_message
+              @battle.pbCommonAnimation("Shelter", target)
+              @battle.pbDisplay(_INTL("{1} protected itself!", target.pbThis))
+            end
+            target.damageState.protected = true
+            @battle.successStates[user.index].protected = true
+            if move.pbContactMove?(user) && user.affectedByContactEffect? &&
+               target.pbCanRaiseStatStage?(:DEFENSE, user)
+              target.pbRaiseStatStage(:DEFENSE, 2, user)
+            end
+            return false
+          end
           # Spiky Shield
           if target.effects[PBEffects::SpikyShield]
             if show_message

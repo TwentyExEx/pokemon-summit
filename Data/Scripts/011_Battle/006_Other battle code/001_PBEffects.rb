@@ -128,6 +128,7 @@ module PBEffects
   MindReader          = 123
   MindReaderPos       = 124
   SuppressorVest      = 125
+  Shelter             = 126
 
   #=============================================================================
   # These effects apply to a battler position

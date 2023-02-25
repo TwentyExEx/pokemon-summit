@@ -202,6 +202,7 @@ class Battle::Battler
       b.effects[PBEffects::JawLock] = -1 if b.effects[PBEffects::JawLock] == @index
     end
     @effects[PBEffects::KingsShield]         = false
+    @effects[PBEffects::Shelter]             = false
     @battle.allBattlers.each do |b|   # Other battlers lose their lock-on against self
       next if b.effects[PBEffects::LockOn] == 0
       next if b.effects[PBEffects::LockOnPos] != @index

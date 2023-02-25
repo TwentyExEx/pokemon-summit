@@ -492,3 +492,14 @@ class Battle::Move::RaiseGroundedGrassBattlersAtkSpAtk1GroundedGroundBattlersSpe
   end
 end
 end
+
+#===============================================================================
+# User is protected against damaging moves this round. Increases the Defense of
+# the user by 2 stages. (Shelter)
+#===============================================================================
+class Battle::Move::ProtectUserFromDamagingMovesShelter < Battle::Move::ProtectMove
+  def initialize(battle, move)
+    super
+    @effect = PBEffects::Shelter
+  end
+end
