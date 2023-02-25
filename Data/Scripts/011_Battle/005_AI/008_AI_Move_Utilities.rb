@@ -416,6 +416,10 @@ class Battle::AI
     if skill >= PBTrainerAI.mediumSkill && user.hasActiveAbility?(:PARENTALBOND)
       multipliers[:base_damage_multiplier] *= 1.25
     end
+    # Echoburst
+    if skill >= PBTrainerAI.mediumSkill && move.id == :ECHOBURST
+      multipliers[:base_damage_multiplier] *= 1.25
+    end
     # Hidden Blow
     if skill >= PBTrainerAI.mediumSkill && user.hasActiveAbility?(:HIDDENBLOW)
       multipliers[:base_damage_multiplier] *= 1.25

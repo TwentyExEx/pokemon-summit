@@ -606,6 +606,7 @@ class Battle::Battler
     numTargets = 0   # Number of targets that are affected by this hit
     # Count a hit for Parental Bond and Hidden Blow (if it applies)
     user.effects[PBEffects::ParentalBond] -= 1 if user.effects[PBEffects::ParentalBond] > 0
+    user.effects[PBEffects::Echoburst] -= 1 if user.effects[PBEffects::Echoburst] > 0
     user.effects[PBEffects::HiddenBlow] -= 1 if user.effects[PBEffects::HiddenBlow] > 0
     # Accuracy check (accuracy/evasion calc)
     if hitNum == 0 || move.successCheckPerHit?

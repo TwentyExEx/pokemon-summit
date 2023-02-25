@@ -12,6 +12,7 @@ class Battle::Move
   def pbChangeUsageCounters(user, specialUsage)
     user.effects[PBEffects::FuryCutter]   = 0
     user.effects[PBEffects::ParentalBond] = 0
+    user.effects[PBEffects::Echoburst] = 0
     user.effects[PBEffects::HiddenBlow] = 0
     user.effects[PBEffects::ProtectRate]  = 1
     @battle.field.effects[PBEffects::FusionBolt]  = false
@@ -54,6 +55,11 @@ class Battle::Move
        !chargingTurnMove? && targets.length == 1
       # Record that Hidden Blow applies, to weaken the second attack
       user.effects[PBEffects::HiddenBlow] = 3
+      return 2
+    end
+    if id == :ECHOBURST && !chargingTurnMove? && targets.length == 1
+      # Record that Echoburst applies, to weaken the second attack
+      user.effects[PBEffects::Echoburst] = 3
       return 2
     end
     return 1
@@ -320,7 +326,7 @@ class Battle::Move
       end
     end
     # Effectiveness message, for moves with 1 hit
-    if !multiHitMove? && user.effects[PBEffects::ParentalBond] == 0 or user.effects[PBEffects::HiddenBlow] == 0
+    if !multiHitMove? && user.effects[PBEffects::ParentalBond] == 0 or user.effects[PBEffects::HiddenBlow] == 0 or user.effects[PBEffects::Echoburst] == 0
       pbEffectivenessMessage(user, target, numTargets)
     end
     if target.damageState.substitute && target.effects[PBEffects::Substitute] == 0

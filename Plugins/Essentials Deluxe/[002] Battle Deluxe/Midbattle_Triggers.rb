@@ -249,7 +249,7 @@ class Battle::Move
       end
       user_triggers.push((user.pbOwnedByPlayer?) ? "criticalHit" : (user.opposes?) ? "criticalHit_foe" : "criticalHit_ally") if user.opposes?(target.index)
     end
-    if !multiHitMove? && user.effects[PBEffects::ParentalBond] == 0
+    if !multiHitMove? && user.effects[PBEffects::ParentalBond] == 0 or user.effects[PBEffects::HiddenBlow] == 0 or user.effects[PBEffects::Echoburst] == 0
       effectiveness_trigger = pbEffectivenessMessage(user, target, numTargets)
       user_triggers.push(effectiveness_trigger) if effectiveness_trigger && user.opposes?(target.index)
     end
