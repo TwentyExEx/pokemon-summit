@@ -2,12 +2,12 @@ def pbOnlineMusicChanger
 	cmd = pbConfirmMessage(_INTL("\\bWould you like to change the online music?"))
     if cmd == true
     	regionlist = ["Kanto","Johto","Hoenn","Sinnoh","Unova","Kalos","Alola","Galar","Hisui","Paldea","Other","Cancel"]
-    	chooseregion = pbMessage(_INTL("\\bPlease choose a region."),regionlist,regionlist.length-1)
+    	chooseregion = pbMessage(_INTL("\\bPlease choose a region."),regionlist,regionlist.length)
     	region = regionlist[chooseregion]
     	case region
 		when "Kanto"
 	    	soundtypelist = ["Masters EX","RBY","FRLG","Cancel"]
-	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length-1)
+	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length)
 			soundtype = soundtypelist[choosetype]
 			case soundtype
 			when "Masters EX"
@@ -43,7 +43,7 @@ def pbOnlineMusicChanger
 			end
 		when "Johto"
 	    	soundtypelist = ["Masters EX","GSC","HGSS","Cancel"]
-	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length-1)
+	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length)
 			soundtype = soundtypelist[choosetype]
 			case soundtype
 			when "Masters EX"
@@ -84,7 +84,7 @@ def pbOnlineMusicChanger
 		    end
 		when "Hoenn"
 	    	soundtypelist = ["Masters EX","RSE","ORAS","Cancel"]
-	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length-1)
+	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length)
 			soundtype = soundtypelist[choosetype]
 			case soundtype
 			when "Masters EX"
@@ -142,7 +142,7 @@ def pbOnlineMusicChanger
 		    end
 		when "Sinnoh"
 	    	soundtypelist = ["Masters EX","DPPT","Cancel"]
-	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length-1)
+	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length)
 			soundtype = soundtypelist[choosetype]
 			case soundtype
 			when "Masters EX"
@@ -181,7 +181,7 @@ def pbOnlineMusicChanger
 		    end			
 		when "Unova"
 	    	soundtypelist = ["Masters EX","BWBW2","Cancel"]
-	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length-1)
+	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length)
 			soundtype = soundtypelist[choosetype]
 			case soundtype
 			when "Masters EX"
@@ -230,7 +230,7 @@ def pbOnlineMusicChanger
 		    end			
 		when "Kalos"
 	    	soundtypelist = ["Masters EX","XY","Cancel"]
-	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length-1)
+	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length)
 			soundtype = soundtypelist[choosetype]
 			case soundtype
 			when "Masters EX"
@@ -261,7 +261,7 @@ def pbOnlineMusicChanger
 		    end			
 		when "Alola"
 	    	soundtypelist = ["Masters EX","SMUSUM","Cancel"]
-	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length-1)
+	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length)
 			soundtype = soundtypelist[choosetype]
 			case soundtype
 			when "Masters EX"
@@ -307,7 +307,7 @@ def pbOnlineMusicChanger
 		    end			
 		when "Galar"
 	    	soundtypelist = ["Masters EX","SMUSUM","Cancel"]
-	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length-1)
+	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length)
 			soundtype = soundtypelist[choosetype]
 			case soundtype
 			when "Masters EX"
@@ -388,7 +388,7 @@ def pbOnlineMusicChanger
 			tracknames = ["Arven","Cassiopeia","Clavell","Elite Four","Geeta","Jacq","Koraidon/Miraidon","Gym Leader","Gym Leader (Tera)","Legendary","Nemona","Nemona (Final)","Paradox","Penny","Sada/Turo","Team Star Admin","Tera Raid","Titans","Trainer","Wild (Area Zero)","Wild (East)","Wild (North)","Wild (Poco Path)","Wild (South)","Wild (West)","Cancel"]		
 		when "Other"
 	    	soundtypelist = ["Battle Revolution","Mystery Dungeon","Cancel"]
-	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length-1)
+	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length)
 			soundtype = soundtypelist[choosetype]
 			case soundtype
 			when "Battle Revolution"
@@ -412,10 +412,11 @@ def pbOnlineMusicChanger
 				tracknames = ["Boss","Dialga's FttF","Cancel"]
 		    end			
 		end				
-		tracknum = pbMessage(_INTL("\\bPlease choose a track."),tracknames,tracknames.length-1)
-		if tracknum != tracknames.length-1
-			$PokemonGlobal.nextBattleBGM = tracklist[tracknum]
-			trackdisp = region + " - " << tracknames[tracknum] + " (" << soundtypelist[choosetype] + ")"
+		tracknum = pbMessage(_INTL("\\bPlease choose a track."),tracknames,tracknames.length)
+		if tracknum != tracknames.length
+			$game_variables[48] = tracklist[tracknum]
+			trackdisp = region + " - " << tracknames[tracknum]
+			trackdisp += " (" << soundtypelist[choosetype] + ")" if soundtypelist
 			pbMessage(_INTL("\\bBattle music has been set to {1}.",trackdisp))
 		else
 			pbMessage(_INTL("\\bTrack selection cancelled."))
@@ -426,7 +427,7 @@ end
 def pbOnlineAppearanceChanger
 	cmd = pbConfirmMessage(_INTL("\\bWould you like to change your online appearance?"))
     if cmd == true
-		trainerlist = ["Ace Trainer","Aether Employee","Team Aqua Grunt","Aroma Lady","Artist","Backpacker","Baker","Battle Girl","Beauty","Bellhop",
+		varlist = ["Ace Trainer","Aether Employee","Team Aqua Grunt","Aroma Lady","Artist","Backpacker","Baker","Battle Girl","Beauty","Bellhop",
 		"Biker","Bird Keeper","Black Belt","Boarder","Bug Catcher","Bug Maniac","Burglar","Butler","Cabbie","Café Master","Camera Man",
 		"Camper","Channeler","Clerk","Clown","Collector","Cook","Cyclist","Dancer","Diver","Doctor","Dragon Tamer","Expert","Fairy Tale Girl",
 		"Fire Breather","Fire Fighter","Fisher","Team Flare Grunt","Furisode Girl","Team Galactic Grunt","Gambler","Gardener","Gentleman",
@@ -437,18 +438,18 @@ def pbOnlineAppearanceChanger
 		"Rancher","Reporter","Rich Boy","Rising Star","Rocker","Team Rocket Grunt","Roller Skater","Roughneck","Ruin Maniac",
 		"Sage","Sailor","School Kid","Scientist","Skier","Team Skull Grunt","Sky Trainer","Smasher","Team Star Grunt",
 		"Street Thug","Striker","Suit Actor","Super Nerd","Surfer","Swimmer","Teacher","Tourist","Trial Guide",
-		"Triathlete","Tuber","Veteran","Waiter","Waitress","Worker","Team Yell Grunt","Youngster"]
-    	choosetype = pbMessage(_INTL("\\bPlease choose a trainer type to appear as."),trainerlist,trainerlist.length-1)
-    	type = trainerlist[choosetype]
-    	case type
+		"Triathlete","Tuber","Veteran","Waiter","Waitress","Worker","Team Yell Grunt","Youngster","Cancel"]
+    	choosevar = pbMessage(_INTL("\\bPlease choose a trainer type to appear as."),varlist,varlist.length)
+    	var = varlist[choosevar]
+    	case var
 		when "Ace Trainer"
 	    	varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
 			varlist = ["Alola","Hoenn","Johto","Kalos","Kanto","Sinnoh","Sinnoh (Winter)","Unova","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 				case var
 				when "Alola"
@@ -472,7 +473,7 @@ def pbOnlineAppearanceChanger
 				end
 			when "Female"
 			varlist = ["Alola","Hoenn","Johto","Kalos","Kanto","Sinnoh","Sinnoh (Winter)","Unova","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 				case var
 				when "Alola"
@@ -497,7 +498,7 @@ def pbOnlineAppearanceChanger
 			end
 		when "Aether Employee"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case gender
 			when "Male"
@@ -509,7 +510,7 @@ def pbOnlineAppearanceChanger
 			end
 		when "Team Aqua Grunt"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
@@ -521,7 +522,7 @@ def pbOnlineAppearanceChanger
 			end
 		when "Aroma Lady"
 			varlist = ["Hoenn","Kanto","Sinnoh","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Hoenn"
@@ -535,12 +536,12 @@ def pbOnlineAppearanceChanger
 			end
 		when "Artist"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
 				varlist = ["Galar","Kalos","Sinnoh","Unova","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Galar"
@@ -556,7 +557,7 @@ def pbOnlineAppearanceChanger
 				end
 			when "Female"
 				varlist = ["Kalos","Kanto","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Kalos"
@@ -569,12 +570,12 @@ def pbOnlineAppearanceChanger
 			end
 		when "Backpacker"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
 				varlist = ["Galar","Kalos","Unova","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Galar"
@@ -595,7 +596,7 @@ def pbOnlineAppearanceChanger
 			ttype = "TRAINER_BAKER"
 		when "Battle Girl"
 			varlist = ["Hoenn","Kalos","Kanto","Sinnoh","Unova","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Hoenn"
@@ -613,7 +614,7 @@ def pbOnlineAppearanceChanger
 			end
 		when "Beauty"
 			varlist = ["Alola","Galar","Hoenn","Johto","Kalos","Kanto","Paldea","Sinnoh","Unova","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Alola"
@@ -641,7 +642,7 @@ def pbOnlineAppearanceChanger
 			ttype = "TRAINER_BELLHOP"
 		when "Biker"
 			varlist = ["Johto","Kanto","Unova","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Johto"
@@ -655,7 +656,7 @@ def pbOnlineAppearanceChanger
 			end
 		when "Bird Keeper"
 			varlist = ["Hoenn","Johto","Kanto","Sinnoh","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Hoenn"
@@ -671,7 +672,7 @@ def pbOnlineAppearanceChanger
 			end
 		when "Black Belt"
 			varlist = ["Alola","Galar","Johto","Kalos","Kanto","Sinnoh","Unova","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Alola"
@@ -695,7 +696,7 @@ def pbOnlineAppearanceChanger
 			ttype = "TRAINER_BOARDER"
 		when "Bug Catcher"
 			varlist = ["Hoenn","Johto","Kanto","Sinnoh","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Hoenn"
@@ -711,7 +712,7 @@ def pbOnlineAppearanceChanger
 			end
 		when "Burglar"
 			varlist = ["Johto","Kanto","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Johto"
@@ -729,7 +730,7 @@ def pbOnlineAppearanceChanger
 			ttype = "TRAINER_CAFEMASTER"
 		when "Camera Man"
 			varlist = ["Galar","Hoenn","Sinnoh","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Galar"
@@ -743,12 +744,12 @@ def pbOnlineAppearanceChanger
 			end
 		when "Camper"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
 				varlist = ["Hoenn","Kanto","Sinnoh","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Hoenn"
@@ -778,12 +779,12 @@ def pbOnlineAppearanceChanger
 			ttype = "TRAINER_CHANNELER"
 		when "Clerk"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
 				varlist = ["Alola","Galar","Unova","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Alola"
@@ -797,7 +798,7 @@ def pbOnlineAppearanceChanger
 				end
 			when "Female"
 				varlist = ["Alola","Galar","Unova","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Alola"
@@ -816,7 +817,7 @@ def pbOnlineAppearanceChanger
 			ttype = "TRAINER_CLOWN"
 		when "Collector"
 			varlist = ["Alola","Hoenn","Sinnoh","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Alola"
@@ -830,7 +831,7 @@ def pbOnlineAppearanceChanger
 			end
 		when "Cook"
 			varlist = ["Alola","Galar","Kalos","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Alola"
@@ -844,12 +845,12 @@ def pbOnlineAppearanceChanger
 			end		
 		when "Cyclist"
 	    	varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
 			varlist = ["Sinnoh","Unova","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 				case var
 				when "Sinnoh"
@@ -861,7 +862,7 @@ def pbOnlineAppearanceChanger
 				end
 			when "Female"
 			varlist = ["Sinnoh","Unova","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 				case var
 				when "Sinnoh"
@@ -874,14 +875,14 @@ def pbOnlineAppearanceChanger
 			end
 		when "Dancer"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
 				ttype = "TRAINER_DANCER_UNOVA"
 			when "Female"
 				varlist = ["Alola","Galar","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Alola"
@@ -896,7 +897,7 @@ def pbOnlineAppearanceChanger
 			end
 		when "Diver"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
@@ -908,12 +909,12 @@ def pbOnlineAppearanceChanger
 			end
 		when "Doctor"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
 				varlist = ["Galar","Unova","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Galar"
@@ -930,7 +931,7 @@ def pbOnlineAppearanceChanger
 			end
 		when "Dragon Tamer"
 			varlist = ["Hoenn","Kanto","Sinnoh","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Hoenn"
@@ -944,7 +945,7 @@ def pbOnlineAppearanceChanger
 			end		
 		when "Expert"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
@@ -962,12 +963,12 @@ def pbOnlineAppearanceChanger
 			ttype = "TRAINER_FIREFIGHTER"
 		when "Fisher"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
 				varlist = ["Alola","Hoenn","Kalos","Kanto","Sinnoh","Unova","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Alola"
@@ -992,7 +993,7 @@ def pbOnlineAppearanceChanger
 			end
 		when "Team Flare Grunt"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
@@ -1004,7 +1005,7 @@ def pbOnlineAppearanceChanger
 			end
 		when "Furisode Girl"
 			varlist = ["Black Robed","Blue Robed","Purple Robed","White Robed","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a style variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a style variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Black Robed"
@@ -1020,7 +1021,7 @@ def pbOnlineAppearanceChanger
 			end	
 		when "Team Galactic Grunt"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
@@ -1032,7 +1033,7 @@ def pbOnlineAppearanceChanger
 			end
 		when "Gambler"
 			varlist = ["Kanto","Sinnoh","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Kanto"
@@ -1044,7 +1045,7 @@ def pbOnlineAppearanceChanger
 			end		
 		when "Gardener"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
@@ -1056,7 +1057,7 @@ def pbOnlineAppearanceChanger
 			end
 		when "Gentleman"
 			varlist = ["Alola","Galar","Hoenn","Johto","Kalos","Kanto","Sinnoh","Unova","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Alola"
@@ -1086,7 +1087,7 @@ def pbOnlineAppearanceChanger
 			ttype = "TRAINER_HEXMANIAC"	
 		when "Hiker"
 			varlist = ["Alola","Galar","Kalos","Kanto","Sinnoh","Unova","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Alola"
@@ -1112,7 +1113,7 @@ def pbOnlineAppearanceChanger
 			ttype = "TRAINER_INFIELDER"
 		when "Janitor"
 			varlist = ["Alola","Unova","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Alola"
@@ -1132,7 +1133,7 @@ def pbOnlineAppearanceChanger
 			ttype = "TRAINER_KINDLER"
 		when "Lady"
 			varlist = ["Hoenn","Kalos","Kanto","Sinnoh","Unova","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Hoenn"
@@ -1150,7 +1151,7 @@ def pbOnlineAppearanceChanger
 			end
 		when "Lass"
 			varlist = ["Alola","Galar","Hoenn","Johto","Kalos","Kanto","Sinnoh","Unova","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Alola"
@@ -1174,7 +1175,7 @@ def pbOnlineAppearanceChanger
 			end
 		when "League Staff"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
@@ -1188,7 +1189,7 @@ def pbOnlineAppearanceChanger
 			ttype = "TRAINER_LINEBACKER"
 		when "Madame"
 			varlist = ["Alola","Galar","Kalos","Sinnoh","Unova","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Alola"
@@ -1206,7 +1207,7 @@ def pbOnlineAppearanceChanger
 			end	
 		when "Team Magma Grunt"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
@@ -1218,7 +1219,7 @@ def pbOnlineAppearanceChanger
 			end
 		when "Maid"
 			varlist = ["Kalos","Sinnoh","Unova","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Kalos"
@@ -1236,12 +1237,12 @@ def pbOnlineAppearanceChanger
 			ttype = "TRAINER_MODEL"
 		when "Musician"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
 				varlist = ["Galar","Hoenn","Sinnoh","Unova","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Galar"
@@ -1262,7 +1263,7 @@ def pbOnlineAppearanceChanger
 			end
 		when "Ninja Boy"
 			varlist = ["Hoenn","Sinnoh","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Hoenn"
@@ -1274,7 +1275,7 @@ def pbOnlineAppearanceChanger
 			end	
 		when "Nurse"
 			varlist = ["Alola","Sinnoh","Unova","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Hoenn"
@@ -1290,7 +1291,7 @@ def pbOnlineAppearanceChanger
 			ttype = "TRAINER_NURSERYAIDE"
 		when "Officer"
 			varlist = ["Alola","Galar","Sinnoh","Unova","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Hoenn"
@@ -1306,7 +1307,7 @@ def pbOnlineAppearanceChanger
 			end	
 		when "Parasol Lady"
 			varlist = ["Hoenn","Sinnoh","Unova","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Hoenn"
@@ -1322,12 +1323,12 @@ def pbOnlineAppearanceChanger
 			ttype = "TRAINER_PILOT"
 		when "Musician"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
 				varlist = ["Plasma Standard","Plasma Neo","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Plasma Standard"
@@ -1339,7 +1340,7 @@ def pbOnlineAppearanceChanger
 				end	
 			when "Female"
 				varlist = ["Plasma Standard","Plasma Neo","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Plasma Standard"
@@ -1354,12 +1355,12 @@ def pbOnlineAppearanceChanger
 			end
 		when "Poké Fan"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
 				varlist = ["Hoenn","Kalos","Sinnoh","Unova","Galar","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Hoenn"
@@ -1375,7 +1376,7 @@ def pbOnlineAppearanceChanger
 				end	
 			when "Female"
 				varlist = ["Hoenn","Kalos","Sinnoh","Unova","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Hoenn"
@@ -1394,12 +1395,12 @@ def pbOnlineAppearanceChanger
 			end
 		when "Poké Kid"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
 				varlist = ["Galar","Sinnoh","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Galar"
@@ -1416,7 +1417,7 @@ def pbOnlineAppearanceChanger
 			end
 		when "Poké Maniac"
 			varlist = ["Hoenn","Johto","Kanto","Paldea","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Hoenn"
@@ -1432,12 +1433,12 @@ def pbOnlineAppearanceChanger
 			end	
 		when "Pokémon Breeder"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
 				varlist = ["Galar","Hoenn","Kalos","Kanto","Sinnoh","Unova","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Galar"
@@ -1457,7 +1458,7 @@ def pbOnlineAppearanceChanger
 				end	
 			when "Female"
 				varlist = ["Galar","Hoenn","Kalos","Sinnoh","Unova","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Galar"
@@ -1478,12 +1479,12 @@ def pbOnlineAppearanceChanger
 			end
 		when "Pokémon Ranger"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
 				varlist = ["Hoenn","Kalos","Sinnoh","Unova","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Hoenn"
@@ -1499,7 +1500,7 @@ def pbOnlineAppearanceChanger
 				end	
 			when "Female"
 				varlist = ["Hoenn","Kalos","Sinnoh","Unova","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Hoenn"
@@ -1520,12 +1521,12 @@ def pbOnlineAppearanceChanger
 			ttype = "TRAINER_POSTMAN"
 		when "Preschooler"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
 				varlist = ["Alola","Kalos","Unova","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Alola"
@@ -1539,7 +1540,7 @@ def pbOnlineAppearanceChanger
 				end	
 			when "Female"
 				varlist = ["Alola","Kalos","Unova","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Alola"
@@ -1556,12 +1557,12 @@ def pbOnlineAppearanceChanger
 			end
 		when "Psychic"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
 				varlist = ["Kalos","Kanto","Sinnoh","Unova","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Kalos"
@@ -1577,7 +1578,7 @@ def pbOnlineAppearanceChanger
 				end	
 			when "Female"
 				varlist = ["Sinnoh","Unova","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Sinnoh"
@@ -1592,7 +1593,7 @@ def pbOnlineAppearanceChanger
 			end
 		when "Punk Girl"
 			varlist = ["Alola","Kalos","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Alola"
@@ -1604,7 +1605,7 @@ def pbOnlineAppearanceChanger
 			end	
 		when "Punk Guy"
 			varlist = ["Alola","Kalos","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Alola"
@@ -1618,7 +1619,7 @@ def pbOnlineAppearanceChanger
 			ttype = "TRAINER_RAILSTAFF"
 		when "Rancher"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
@@ -1630,7 +1631,7 @@ def pbOnlineAppearanceChanger
 			end	
 		when "Reporter"
 			varlist = ["Galar","Hoenn","Sinnoh","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Galar"
@@ -1644,7 +1645,7 @@ def pbOnlineAppearanceChanger
 			end	
 		when "Rich Boy"
 			varlist = ["Hoenn","Kalos","Sinnoh","Unova","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Hoenn"
@@ -1660,12 +1661,12 @@ def pbOnlineAppearanceChanger
 			end	
 		when "Rising Star"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
 				varlist = ["Alola","Kalos","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Alola"
@@ -1677,7 +1678,7 @@ def pbOnlineAppearanceChanger
 				end	
 			when "Female"
 				varlist = ["Alola","Kalos","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Alola"
@@ -1694,7 +1695,7 @@ def pbOnlineAppearanceChanger
 			ttype = "TRAINER_ROCKER"
 		when "Team Rocket Grunt"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
@@ -1706,7 +1707,7 @@ def pbOnlineAppearanceChanger
 			end	
 		when "Roller Skater"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
@@ -1718,7 +1719,7 @@ def pbOnlineAppearanceChanger
 			end	
 		when "Roughneck"
 			varlist = ["Sinnoh","Unova","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Sinnoh"
@@ -1730,7 +1731,7 @@ def pbOnlineAppearanceChanger
 			end	
 		when "Ruin Maniac"
 			varlist = ["Hoenn","Kanto","Sinnoh","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Hoenn"
@@ -1746,7 +1747,7 @@ def pbOnlineAppearanceChanger
 			ttype = "TRAINER_SAGE"
 		when "Sailor"
 			varlist = ["Hoenn","Sinnoh","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Hoenn"
@@ -1758,12 +1759,12 @@ def pbOnlineAppearanceChanger
 			end	
 		when "School Kid"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
 				varlist = ["Galar","Hoenn","Johto","Kalos","Kanto","Sinnoh","Unova","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Galar"
@@ -1785,7 +1786,7 @@ def pbOnlineAppearanceChanger
 				end	
 			when "Female"
 				varlist = ["Galar","Hoenn","Kalos","Sinnoh","Unova","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Galar"
@@ -1806,12 +1807,12 @@ def pbOnlineAppearanceChanger
 			end
 		when "Scientist"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
 				varlist = ["Alola","Johto","Kalos","Kanto","Sinnoh","Unova","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Alola"
@@ -1831,7 +1832,7 @@ def pbOnlineAppearanceChanger
 				end	
 			when "Female"
 				varlist = ["Kalos","Unova","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Kalos"
@@ -1846,12 +1847,12 @@ def pbOnlineAppearanceChanger
 			end
 		when "Skier"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
 				varlist = ["Johto","Sinnoh","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Johto"
@@ -1868,7 +1869,7 @@ def pbOnlineAppearanceChanger
 			end
 		when "Team Skull Grunt"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
@@ -1880,7 +1881,7 @@ def pbOnlineAppearanceChanger
 			end
 		when "Sky Trainer"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
@@ -1894,12 +1895,12 @@ def pbOnlineAppearanceChanger
 			ttype = "TRAINER_SMASHER"
 		when "Team Star Grunt"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
 				varlist = ["Scarlet","Violet","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a version variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a version variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Scarlet"
@@ -1911,7 +1912,7 @@ def pbOnlineAppearanceChanger
 				end	
 			when "Female"
 				varlist = ["Scarlet","Violet","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a version variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a version variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Scarlet"
@@ -1926,7 +1927,7 @@ def pbOnlineAppearanceChanger
 			end
 		when "Street Thug"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
@@ -1942,7 +1943,7 @@ def pbOnlineAppearanceChanger
 			ttype = "TRAINER_SUITACTOR"
 		when "Super Nerd"
 			varlist = ["Johto","Kanto","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Johto"
@@ -1956,12 +1957,12 @@ def pbOnlineAppearanceChanger
 			ttype = "TRAINER_SURFER"
 		when "Swimmer"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
 				varlist = ["Alola","Galar","Hoenn","Johto","Kalos","Sinnoh","Unova","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Alola"
@@ -1983,7 +1984,7 @@ def pbOnlineAppearanceChanger
 				end	
 			when "Female"
 				varlist = ["Alola","Galar","Johto","Kalos","Sinnoh","Unova","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Alola"
@@ -2008,12 +2009,12 @@ def pbOnlineAppearanceChanger
 			ttype = "TRAINER_TEACHER"
 		when "Tourist"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
 				varlist = ["Alola","Hoenn","Kalos","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Alola"
@@ -2027,7 +2028,7 @@ def pbOnlineAppearanceChanger
 				end	
 			when "Female"
 				varlist = ["Alola","Kalos","Cancel"]
-	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 				var = varlist[choosevar]
 				case var
 				when "Alola"
@@ -2042,7 +2043,7 @@ def pbOnlineAppearanceChanger
 			end
 		when "Trial Guide"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
@@ -2054,7 +2055,7 @@ def pbOnlineAppearanceChanger
 			end
 		when "Triathlete"
 			varlist = ["Cyclist","Runner","Swim","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a outfit variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a outfit variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Cyclist"
@@ -2068,12 +2069,12 @@ def pbOnlineAppearanceChanger
 			end	
 		when "Tuber"
 	    	varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
 			varlist = ["Hoenn","Sinnoh","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 				case var
 				when "Hoenn"
@@ -2085,7 +2086,7 @@ def pbOnlineAppearanceChanger
 				end
 			when "Female"
 			varlist = ["Hoenn","Sinnoh","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 				case var
 				when "Hoenn"
@@ -2098,12 +2099,12 @@ def pbOnlineAppearanceChanger
 			end	
 		when "Veteran"
 	    	varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
 			varlist = ["Alola","Kalos","Unova","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 				case var
 				when "Alola"
@@ -2117,7 +2118,7 @@ def pbOnlineAppearanceChanger
 				end
 			when "Female"
 			varlist = ["Alola","Kalos","Unova","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 				case var
 				when "Alola"
@@ -2132,7 +2133,7 @@ def pbOnlineAppearanceChanger
 			end
 		when "Waiter"
 			varlist = ["Kalos","Sinnoh","Unova","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Kalos"
@@ -2146,7 +2147,7 @@ def pbOnlineAppearanceChanger
 			end	
 		when "Waitress"
 			varlist = ["Kalos","Sinnoh","Unova","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Kalos"
@@ -2160,12 +2161,12 @@ def pbOnlineAppearanceChanger
 			end	
 		when "Worker"
 	    	varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
 			varlist = ["Alola","Galar","Kalos","Kanto","Sinnoh","Unova","Unova (Winter)","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 				case var
 				when "Alola"
@@ -2190,7 +2191,7 @@ def pbOnlineAppearanceChanger
 			end
 		when "Team Yell Grunt"
 			varlist = ["Male","Female","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Male"
@@ -2202,7 +2203,7 @@ def pbOnlineAppearanceChanger
 			end
 		when "Youngster"
 			varlist = ["Alola","Galar","Hoenn","Johto","Kalos","Kanto","Paldea","Sinnoh","Unova","Cancel"]
-	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length)
 			var = varlist[choosevar]
 			case var
 			when "Alola"
