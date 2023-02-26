@@ -21,9 +21,10 @@ def pbSummitMakePokemon(specform)
   @givepkmn.happiness = 255
   @givepkmn.cannot_release = true
 
-  for move in pkmn[:moves]
-    @givepkmn.learn_move(move)
-  end
+  # for move in pkmn[:moves]
+  #   @givepkmn.learn_move(move)
+  # end
+  
   @givepkmn.ability_index = pkmn[:ability_index]
   return @givepkmn
 end
