@@ -82,7 +82,6 @@ def pbOnlineMusicChanger
 		        "johto_hgss_wild.ogg"]
 				tracklist = ["Entei","Ho-Oh","Lance/Red","Gym Leader","Lugia","Raikou","Team Rocket","Silver","Suicune","Trainer","Wild","Cancel"]
 		    end
-		end
 		when "Hoenn"
 	    	soundtypelist = ["Masters EX","RSE","ORAS","Cancel"]
 	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length-1)
@@ -180,7 +179,6 @@ def pbOnlineMusicChanger
 				"sinnoh_dppt_wild.ogg"]
 				tracknames = ["Arceus","Cynthia","Cyrus","Dialga/Palkia","Elite Four","Frontier Brain","Team Galactic Commander","Team Galactic Grunt","Giratina","Lake Trio","Gym Leader","Legendary","Barry","Trainer","Wild","Cancel"]
 		    end			
-		end
 		when "Unova"
 	    	soundtypelist = ["Masters EX","BWBW2","Cancel"]
 	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length-1)
@@ -230,7 +228,6 @@ def pbOnlineMusicChanger
 				"unova_bw_zekrom.ogg"]
 				tracknames = ["Alder","Bianca","Black/White Kyurem","Colress","Elite Four","Ghetsis","Ghetsis 2","Hugh","Iris","Kyurem","Gym Leader","Legendary","N","Team Plasma","Reshiram","Trainer","Wild","Wild 2","World Champion","Zekrom","Cancel"]
 		    end			
-		end
 		when "Kalos"
 	    	soundtypelist = ["Masters EX","XY","Cancel"]
 	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length-1)
@@ -262,7 +259,6 @@ def pbOnlineMusicChanger
 				"kalos_xy_xernyvel.ogg"]
 				tracknames = ["Diantha","Elite Four","Team Flare","Friends","Gym Leader","Lysandre","Trainer","Wild","Xerneas/Yveltal","Cancel"]
 		    end			
-		end	
 		when "Alola"
 	    	soundtypelist = ["Masters EX","SMUSUM","Cancel"]
 	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length-1)
@@ -309,7 +305,6 @@ def pbOnlineMusicChanger
 				"alola_sm_wild.ogg"]
 				tracknames = ["Aether Foundation","Battle Tree","Champion Hau","Elite Four","Gladion","Guzma","Hau","Kahuna","Kukui","Necrozma","Team Skull","Team Skull Admin","Solgaleo/Lunala","Tapu","Trainer","Ultra Beast","Ultra Necrozma","Ultra Recon Squad","Trainer Ultra","Wild","Cancel"]
 		    end			
-		end		
 		when "Galar"
 	    	soundtypelist = ["Masters EX","SMUSUM","Cancel"]
 	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length-1)
@@ -355,8 +350,7 @@ def pbOnlineMusicChanger
 				"alola_sm_utrainer.ogg",
 				"alola_sm_wild.ogg"]
 				tracknames = ["Avery","Bede","Galarian Kanto Birds","Mustard (Final)","Eternatus","Hop","Klara","Gym Leader","Leon","Marnie","Glastrier/Spectrier","Mustard","Peony","President Rose","Trainer","Wild","Team Yell","Zacian/Zamazenta","Cancel"]
-		    end			
-		end		
+		    end					
 		when "Hisui"
 			tracklist =
 			["hisui_pla_alpha.ogg",
@@ -364,7 +358,6 @@ def pbOnlineMusicChanger
 			"hisui_pla_warden.ogg",
 			"hisui_pla_wild.ogg"]
 			tracknames = ["Alpha Encounter","Volo","Warden","Wild","Cancel"]		
-		end
 		when "Paldea"
 			tracklist =
 			["paldea_sv_arven.ogg",
@@ -393,7 +386,6 @@ def pbOnlineMusicChanger
 			"paldea_sv_wildsouth.ogg",
 			"paldea_sv_wildwest.ogg"]
 			tracknames = ["Arven","Cassiopeia","Clavell","Elite Four","Geeta","Jacq","Koraidon/Miraidon","Gym Leader","Gym Leader (Tera)","Legendary","Nemona","Nemona (Final)","Paradox","Penny","Sada/Turo","Team Star Admin","Tera Raid","Titans","Trainer","Wild (Area Zero)","Wild (East)","Wild (North)","Wild (Poco Path)","Wild (South)","Wild (West)","Cancel"]		
-		end	
 		when "Other"
 	    	soundtypelist = ["Battle Revolution","Mystery Dungeon","Cancel"]
 	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length-1)
@@ -512,6 +504,8 @@ def pbOnlineAppearanceChanger
 				ttype = "TRAINER_AETHER_M"
 			when "Female"
 				ttype = "TRAINER_AETHER_F"
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
 			end
 		when "Team Aqua Grunt"
 			varlist = ["Male","Female","Cancel"]
@@ -521,7 +515,9 @@ def pbOnlineAppearanceChanger
 			when "Male"
 				ttype = "TRAINER_AQUA_M"
 			when "Female"
-				ttype = "TRAINER_AQUA_F"				when "Cancel"
+				ttype = "TRAINER_AQUA_F"
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
 			end
 		when "Aroma Lady"
 			varlist = ["Hoenn","Kanto","Sinnoh","Cancel"]
@@ -533,7 +529,9 @@ def pbOnlineAppearanceChanger
 			when "Kanto"
 				ttype = "TRAINER_AROMALADY_KANTO"
 			when "Sinnoh"
-				ttype = "TRAINER_AROMALADY_SINNOH"					pbMessage(_INTL("\\bTrainer type selection cancelled."))
+				ttype = "TRAINER_AROMALADY_SINNOH"
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
 			end
 		when "Artist"
 			varlist = ["Male","Female","Cancel"]
@@ -553,6 +551,8 @@ def pbOnlineAppearanceChanger
 					ttype = "TRAINER_ARTIST_SINNOH"
 				when "Unova"
 					ttype = "TRAINER_ARTIST_UNOVA"
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
 				end
 			when "Female"
 				varlist = ["Kalos","Kanto","Cancel"]
@@ -563,9 +563,9 @@ def pbOnlineAppearanceChanger
 					ttype = "TRAINER_ARTIST_KALOS_F"
 				when "Kanto"
 					ttype = "TRAINER_ARTIST_KANTO"
-				end
 			when "Cancel"
 				pbMessage(_INTL("\\bTrainer type selection cancelled."))
+				end
 			end
 		when "Backpacker"
 			varlist = ["Male","Female","Cancel"]
@@ -2187,7 +2187,6 @@ def pbOnlineAppearanceChanger
 				end
 			when "Female"
 				ttype = "TRAINER_WORKER_GALAR_F"
-				end
 			end
 		when "Team Yell Grunt"
 			varlist = ["Male","Female","Cancel"]
