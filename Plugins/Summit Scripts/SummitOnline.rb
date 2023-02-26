@@ -40,7 +40,7 @@ def pbOnlineMusicChanger
 				"kanto_ex_lorelei.ogg",
 				"kanto_ex_red.ogg",
 				"kanto_ex_red2.ogg",
-		        "kanto_ex_wild.ogg"]
+		    "kanto_ex_wild.ogg"]
 				tracknames = ["Agatha","Ash","Blue","Bruno","Giovanni","Lance","Gym Leader","Legendary","Lorelei","Red","Red (Alt)","Wild","Cancel"]
 			when "RBY"
 				tracklist = 
@@ -60,6 +60,7 @@ def pbOnlineMusicChanger
 				tracknames = ["Blue","Gym Leader","Legendary","Mewtwo","Trainer","Wild","Cancel"]
 			when "Cancel"
 				pbMessage(_INTL("\\bBattle music selection cancelled."))
+		    return
 			end
 		when "Johto"
 	    	soundtypelist = ["Masters EX","GSC","HGSS","Cancel"]
@@ -103,6 +104,7 @@ def pbOnlineMusicChanger
 				tracklist = ["Entei","Ho-Oh","Lance/Red","Gym Leader","Lugia","Raikou","Team Rocket","Silver","Suicune","Trainer","Wild","Cancel"]
 			when "Cancel"
 				pbMessage(_INTL("\\bBattle music selection cancelled."))
+		    return
 		    end
 		when "Hoenn"
 	    	soundtypelist = ["Masters EX","RSE","ORAS","Cancel"]
@@ -163,6 +165,7 @@ def pbOnlineMusicChanger
 				tracknames = ["Archie/Maxie","Brendan/May","Champion","Deoxys","Elite Four","Frontier Brain","Gym Leader","Team Magma/Aqua","Rayquaza","Groudon/Kyogre","Titans","Trainer","Wally","Wild","World Champion","Zinnia","Cancel"]
 			when "Cancel"
 				pbMessage(_INTL("\\bBattle music selection cancelled."))
+		    return
 		  end
 		when "Sinnoh"
 	    	soundtypelist = ["Masters EX","DPPT","Cancel"]
@@ -204,6 +207,7 @@ def pbOnlineMusicChanger
 				tracknames = ["Arceus","Cynthia","Cyrus","Dialga/Palkia","Elite Four","Frontier Brain","Team Galactic Commander","Team Galactic Grunt","Giratina","Lake Trio","Gym Leader","Legendary","Barry","Trainer","Wild","Cancel"]
 		    when "Cancel"
 		    	pbMessage(_INTL("\\bBattle music selection cancelled."))
+		    	return
 		    end			
 		when "Unova"
 	    	soundtypelist = ["Masters EX","BWBW2","Cancel"]
@@ -254,6 +258,7 @@ def pbOnlineMusicChanger
 				tracknames = ["Alder","Bianca","Black/White Kyurem","Colress","Elite Four","Ghetsis","Ghetsis 2","Hugh","Iris","Kyurem","Gym Leader","Legendary","N","Team Plasma","Reshiram","Trainer","Wild","Wild 2","World Champion","Zekrom","Cancel"]
 		    when "Cancel"
 		    	pbMessage(_INTL("\\bBattle music selection cancelled."))
+		    	return
 		    end			
 		when "Kalos"
 	    	soundtypelist = ["Masters EX","XY","Cancel"]
@@ -285,6 +290,9 @@ def pbOnlineMusicChanger
 				"kalos_xy_wild.ogg",
 				"kalos_xy_xernyvel.ogg"]
 				tracknames = ["Diantha","Elite Four","Team Flare","Friends","Gym Leader","Lysandre","Trainer","Wild","Xerneas/Yveltal","Cancel"]
+		    when "Cancel"
+		    	pbMessage(_INTL("\\bBattle music selection cancelled."))
+		    	return
 		    end			
 		when "Alola"
 	    	soundtypelist = ["Masters EX","SMUSUM","Cancel"]
@@ -333,6 +341,7 @@ def pbOnlineMusicChanger
 				tracknames = ["Aether Foundation","Battle Tree","Champion Hau","Elite Four","Gladion","Guzma","Hau","Kahuna","Kukui","Necrozma","Team Skull","Team Skull Admin","Solgaleo/Lunala","Tapu","Trainer","Ultra Beast","Ultra Necrozma","Ultra Recon Squad","Trainer Ultra","Wild","Cancel"]
 		    when "Cancel"
 		    	pbMessage(_INTL("\\bBattle music selection cancelled."))
+		    	return
 		    end			
 		when "Galar"
 	    	soundtypelist = ["Masters EX","SMUSUM","Cancel"]
@@ -373,6 +382,7 @@ def pbOnlineMusicChanger
 				tracknames = ["Avery","Bede","Galarian Kanto Birds","Mustard (Final)","Eternatus","Hop","Klara","Gym Leader","Leon","Marnie","Glastrier/Spectrier","Mustard","Peony","President Rose","Trainer","Wild","Team Yell","Zacian/Zamazenta","Cancel"]
 		    when "Cancel"
 		    	pbMessage(_INTL("\\bBattle music selection cancelled."))
+		    	return
 		    end					
 		when "Hisui"
 			tracklist =
@@ -434,11 +444,15 @@ def pbOnlineMusicChanger
 				"bonus_pmd_dialga.ogg"]
 				tracknames = ["Boss","Dialga's FttF","Cancel"]
 		  when "Cancel"
-		  	pbMessage(_INTL("\\bBattle music selection cancelled."))
-		  end			
-		end				
+		    pbMessage(_INTL("\\bBattle music selection cancelled."))
+		  	return
+		  end
+	  when "Cancel"
+	  	pbMessage(_INTL("\\bBattle music selection cancelled."))
+	  	return			
+		end	
 		tracknum = pbMessage(_INTL("\\bPlease choose a track."),tracknames,tracknames.length)
-		if tracknum != tracknames.length
+		if tracknames[tracknum] != "Cancel"
 			$game_variables[48] = tracklist[tracknum]
 			trackdisp = region + " - " << tracknames[tracknum]
 			trackdisp += " (" << soundtypelist[choosetype] + ")" if soundtypelist
