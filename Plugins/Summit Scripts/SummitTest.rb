@@ -34,7 +34,11 @@ def pbSummitTeamBuilder
               end
             end
             cmd2 = pbMessage(_INTL("Set the Pokémon's form."), formcmds[1], cmd2)
-            @pkmn.form = cmd2
+            if @pkmn.species != :DARMANITAN
+              @pkmn.form = cmd2
+            else
+              @pkmn.form = 2 if cmd2 == 1
+            end
           end
         end
 
