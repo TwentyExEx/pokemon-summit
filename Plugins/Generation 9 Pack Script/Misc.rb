@@ -161,13 +161,13 @@ class Battle::Move
     if user.effects[PBEffects::ParentalBond] == 1
       multipliers[:base_damage_multiplier] /= (Settings::MECHANICS_GENERATION >= 7) ? 4 : 2
     end
-    # Echoburst's second attack
-    if skill >= PBTrainerAI.mediumSkill && move.id == :ECHOBURST
-      multipliers[:base_damage_multiplier] *= 1.25
+    # Hidden Blow's second attack
+    if user.effects[PBEffects::HiddenBlow] == 1
+      multipliers[:base_damage_multiplier] /= (Settings::MECHANICS_GENERATION >= 7) ? 4 : 2
     end
     # Hidden Blow's second attack
-    if skill >= PBTrainerAI.mediumSkill && user.hasActiveAbility?(:HIDDENBLOW)
-      multipliers[:base_damage_multiplier] *= 1.25
+    if user.effects[PBEffects::Echoburst] == 1
+      multipliers[:base_damage_multiplier] /= 2
     end
     # Other
     if user.effects[PBEffects::MeFirst]
