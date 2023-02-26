@@ -1,20 +1,22 @@
 ~~ Graphics ~~ 
 
-Overworlds for the following: 
+~ Overworlds for the following: ~
 
-Barry, Bianca, Pryce, Clair, Drake, Professor Birch, Archie, Volkner, Professor Sycamore, Professor Elm, Bertha, Flint, Cheryl, Mira, Professor Rowan, Benga, Hilbert, Lyra, Dawn, Serena, Professor Kukui, Boarder, Rocker, Super Nerd, Tamer, Hex Maniac, Team Galactic Grunt - Aveontrainer
+Burgh, Clay, Skyla, Marlon, Viola, Grant, Korrina, Ramos, Valerie, Olympia, Shauntal, Grimsley, Malva, Siebold, Wikstrom, Drasna, Cilan, Chili, Cress, Marshal, Mustard, Bede, Sonia, Peony, President Rose, Buck, Lisia, Green, Looker, Lysandre, Guzma, Elesa, Lusamine, Maxie, Gladion, Vera - Miguel_Horo
+Acerola, Ilima, Kiawe, Sophocles, Iris, Hala, Hapu, Molayne, Olivia, Gordie, Janine, Kabu, Lenora, Melony, Milo, Nessa, Opal, Piers, Raihan, Elio, Gloria, Selene, Victor, Hop - Miguel_Horo and Alexandre 
+Faba, Plumeria, Arven, Nemona, Florian, Juliana, Penny, Clavell, Jacq, Volo, Irida, Adaman, Sabi, Kamado, Lian, Mai, Arezu, Gaeric, Melli, Ingo (Past), Calaba, Palina, Iscan, Rika, Poppy, Hassel, Geeta, Larry, Brassius, Katy, Kofu, Iono, Ryme, Grusha, Mela, Atticus, Ortega, Eri, Giacomo, Ash - Alexandre
+Barry, Bianca, Pryce, Clair, Drake, Professor Birch, Archie, Volkner, Professor Sycamore, Professor Elm, Bertha, Flint, Cheryl, Mira, Professor Rowan, Benga, Hilbert, Lyra, Dawn, Serena, Professor Kukui, Boarder, Rocker, Super Nerd, Tamer, Hex Maniac, Team Galactic Grunt, Lass, Kris, Zinzolin - Aveontrainer
 Silver - Skeizerr and Aveontrainer
-Wally, Whitney, Morty, Chuck, Jasmine, Roxanne, Wattson, Tate, Liza, Sidney, Phoebe, Ghetsis, Crasher Wake, Fantina, Byron, Drayden, Cheren, Aaron, Lucian, Marley, Caitlin, Professor Juniper, Lucas, Wallace, Steven, Team Aqua Grunt (M/F) - Starsparkless and Aveontrainer
-Hau, Shauna, Trevor, Lana, Marnie, Bea, Hau, Mina - Zender1752 and Aveontrainer
+Wally, Whitney, Morty, Chuck, Jasmine, Roxanne, Wattson, Tate, Liza, Sidney, Phoebe, Ghetsis, Crasher Wake, Fantina, Byron, Drayden, Cheren, Aaron, Lucian, Marley, Caitlin, Professor Juniper, Lucas, Wallace, Steven, Team Aqua Grunt M & F, Dahlia - Starsparkless and Aveontrainer
+Hau, Shauna, Trevor, Lana, Marnie, Bea, Hau, Mina, Alain - Zender1752 and Aveontrainer
 Falkner - BurstXShadowsX and Aveontrainer
 Bugsy, Winona, Cyrus, Brycen  - PurpleZaffre, Starsparkless and Aveontrainer
-Wulfric, Eusine, Avery, Nate, Rosa, Team Plasma Grunt (M,F),  - PurpleZaffre and Aveontrainer
+Wulfric, Eusine, Avery, Nate, Rosa, Team Plasma Grunt M & F,  - PurpleZaffre and Aveontrainer
 Glacia - Starsparkless, KalerioDion and Aveontrainer
 Nanu, Kahili - Silentninja, TSR, Furs the Fox, ShiningStar5022
 Roark, Gardenia, Maylene, Will, Karen, N, Gold - PurpleZaffre
 Candice, Roxie, Fairy Tale Girl - UlithiumDragon
-Burgh, Clay, Skyla, Marlon, Viola, Grant, Korrina, Ramos, Valerie, Olympia, Shauntal, Grimsley, Malva, Siebold, Wikstrom, Drasna, Hop, Janine, Cilan, Chili, Cress, Marshal, Milo, Nessa, Kabu, Opal, Gordie, Melony, Piers, Raihan, Selene, Gloria, Elio, Victor, Mustard, Bede, Sonia, Peony, President Rose, Buck, Lisia, Green, Looker, Lysandre, Guzma, Lenora, Elesa, Ilima, Kiawe, Sophocles, Olivia, Hala, Hapu, Acerola, Lusamine, Iris, Maxie, Molayne, Gladion - Miguel_Horo
-Clemont - pokemonrater
+Clemont - Pokémonrater
 Whitney - Starsparkless
 Hugh - SylveonGives
 Mallow - Droid779 and Aveontrainer
@@ -23,95 +25,130 @@ Klara, Allister - hekigaHoge and Aveontrainer
 Calem  - spritestealer and Aveontrainer
 Hilda - Starsparkless, kisirokitsune and Aveontrainer
 Leon - JappaWakka and PurpleZaffre
-Diantha - Lolw3e932
 Alder - KalerioDion and Aveontrainer
 Cynthia - Wobb and Aveontrainer
 Kindler - Spherical Ice and Aveontrainer
 Dragon Tamer, Burglar, Engineer, Breeder, Lady - kalerie and Aveontrainer
-Painter, PokeManiac, Pokemon Ranger F/M - MrDollSteak and Aveontrainer
+Painter, PokeManiac, Pokémon Ranger M & F - MrDollSteak and Aveontrainer
 Female Swimmer - Teraneck
-Brawly, Norman, Juan - Poffin_Case
+Brawly, Norman, Juan, Camper, Picknicker, Gentleman, Camera Team, Noland, Greta, Tucker, Lucy, Spenser, Brandon  - Poffin_Case/Poffin
 Schoolkid - Young-Dante
-Team Flare Grunt (M,F) - PurpleZaffre, izzyviscious and Aveontrainer
+Team Flare Grunt M & F - PurpleZaffre, izzyviscious and Aveontrainer
+Thorton - izzyvicious and Aveontrainer
+Beauty - AndresParcero
+Bird Keeper, Ruin Maniac,  - Spherical Ice 
+Aroma Lady, Black Belt, Crush Girl, Hiker, Tuber M & F, Twins, Psychic F, Young Couple  - kalerie
+Cue Ball - MrDollSteak
+Psychic M - Avatar
 
-Trainer Sprites 
-Milo, Nessa, Kabu, Bea, Allister, Opal, Gordie, Melony, Piers, Raihan, President Rose, Green, Lisia, Klara, Avery, Mustard, Marnie, Bede, Sonia, Peony, Gloria, Leon - Brumirage, Altthiel, Pujolly and Irpachuza. 
-Ilima, Lana, Kiawe, Mallow, Sophocles, Acerola, Mina, Hau, Guzma, Elio, Selene, Kukui, Hala, Nanu, Hapu, Kahili, Molayne, Lusamine, Gladion - Beliot419
-Viola, Korrina, Ramos, Clemont, Valerie, Olympia, Wulfric, Sidney, Malva, Siebold, Wikstrom, Drasna - Gnomowladny
-Grant, Glacia - MechanicalApe464
-Wally, Maxie, Archie, Leaf, Red, Brandan, May, Victor, Steven - hyo-oppa
-Shauna - Krokotips
-Lysandre, Brock, Misty, Surge, Erika, Koga, Sabrina, Blaine, Lorelei, Bruno, Agatha, Lance - Drawnamu
-Professor Elm - VictorV111
-Kris - Kimba616, InvaderDebz and pruighfyurgfgbvf
-Phoebe - UltimaxLugia2020
-Drake - Segesi
+~ Character Trainer Sprites ~
+
+Milo, Kabu, Bea, Green, Lisia, Mustard, Peony, Gloria, Sada, Turo, Sordward, Shielbert - Brumirage, Altthiel, Pujolly and Irpachuza. 
+Ilima, Lana, Mallow, Sophocles, Acerola, Mina, Elio, Selene, Hala, Nanu, Hapu, Kahili, Molayne, Faba, Plumeria, Ryuki - Beliot419
+Viola, Ramos, Clemont, Olympia, Sidney, Malva, Siebold - Gnomowladny
+Wally, Maxie, Archie, Leaf, Red, Brandan, May, Victor, Steven, Calem, Anabel - hyo-oppa
+Lysandre, Koga, Sabrina, Bruno, Lance - Drawnamu
 Zinnia - Jart4115
-Professor Juniper - art-56
-Professor Sycamore - Wynruelle
 Trevor - Aveontrainer
-Calem, Serena - TintjeMadelintje101
-Looker, Diantha, Fairy Tale Girl, Hex Maniac, Lord (Announcer) - KyleDove
-Standard Trainer Classes, Oak - kensuyjin33, Flamejow, AutumnSpire and duncapham
-Roxanne, Brawly, Wattson, Flannery, Norman, Winona, Tate, Liza, Wallace - ChromusSama and Shir0n
-Team Aqua Grunts (M/F), Team Magma Grunts (M/F) - IceJkai
+Serena - TintjeMadelintje101
+Brock, Misty, Erika, Lt. Surge, Blaine, Lorelei, Agatha, Lord (Announcer), Arven, Guzma, Bede, Birch, Elm, Juniper, Marnie, Oak, Sycamore, Nessa, Raihan, Rowan, Grant, Katy, Brassius, Iono, Kofu, Larry, Ryme, Tulip, Grusha, Geeta, Penny, Clavell, Jacq, Nemona, Florian, Juliana, Mai, Lian, Calaba, Arezu, Iscan, Palina, Ingo (Past), Melli, Gaeric, Sabi, Adaman, Irida, Kamado, Lillie, Giovanni, Volo, Shauna, Rika, Hassel, Poppy, Valerie, Kris, Lusamine, Sonia, Noland, Lucy, Emma, Bill, Kurt, Phoebe, Glacia, Drake, Hau, Kukui, Drasna, Olivia, Korrina, Wikstrom, Wulfric, Opal, Leon, Kiawe, Wallace, Roxanne, Piers, Brawly, Allister, Blue, Gordie, Melony, Norman, Winona, Tate, Liza, Courtney, Matt, Shelly, Tabitha, Tierno - KyleDove
+Tucker, Spenser, Brandon, Greta - kensuyjin33, Flamejow, AutumnSpire and duncapham
+Flannery - ChromusSama and Shir0n
+Diantha - kyledove and Poffin Case
+Avery, Klara, Looker, President Rose - Poffin_Case/Poffin
+Wattson, Mela, Atticus, Eri, Giacomo, Ortega, Celio, Sina, Alain - ZacWeavile
+Vera - Miguel_Horo
 
-Other Sprites
+~ Costume Character Trainer Sprites ~
+
+Christmas Nessa - KyleDove
+
+~ Arcade/Online Trainer Sprites ~
+
+Hoennian Ace Trainer M - Hyo
+Hoennian Ace Trainer F, Kalosian Ace Trainer M & F, Alolan Ace Trainer M & F, Hoennian Aroma Lady, Kalosian Artist M & F, Galarian Artist, Kalosian Backpacker, Galarian Backpacker, Hoennian Battle Girl, Alolan Beauty, Kalosian Beauty, Hoennian Beauty, Galarian Beauty, Paldean Beauty, Bellhop, Hoennian Bird Keeper, Kalosian Black Belt, Alolan Black Belt, Galarian Black Belt, Hoennian Bug Catcher, Bug Maniac, Kantonian Burglar, Butler, Cabbie, Café Master, Hoennian Cameraman, Galarian Cameraman, Hoennian Camper M & F, Channeler, Hoennian Collector, Alolan Collector, Kalosian Cook, Alolan Cook, Galarian Cook, Alolan Dancer, Galarian Dancer, Galarian Doctor M & F, Hoennian Dragon Tamer, Expert M & F, Fairy Tale Girl, Firefighter, Kalosian Fisher, Alolan Fisher, Hoennian Fisher, Galarian Fisher, Furisode Girl (Black, White, Purple, Blue), Gardener M & F, Kantonian Gentleman, Hoennian Gentleman, Kalosian Gentleman, Alolan Gentleman, Galarian Gentleman, Golfer, Hex Maniac, Alolan Hiker, Kalosian Hiker, Galarian Hiker, Alolan Janitor, Kindler, Kantonian Lady, Kalosian Lady, Hoennian Lady, Kantonian Lass, Hoennian Lass, Kalosian Lass, Alolan Lass, Galarian Lass, League Staff M & F, Kalosian Madame, Alolan Madame, Galarain Madame, Kalosian Maid, Model, Hoennian Ninja Boy, Sinnohian Nurse, Alolan Nurse, Alolan Clerk M & F, Galarian Clerk M & F, Hoennian Poké Fan M & F, Kalosian Poké Fan M & F, Galarian Poké Kid M & F, Hoennian Poké Maniac, Paldean Poké Maniac, Hoennian Pokémon Breeder M & F, Kalosian Pokémon Breeder M & F, Galarian Pokémon Breeder M & F, Hoennian Pokémon Ranger M & F, Kalosian Pokémon Ranger M & F, Postman, Alolan Preschooler M & F, Kalosian Preschooler M & F, Kantonian Psychic, Kalosian Psychic, Kalosian Punk Girl, Alolan Punk Girl, Kalosian Punk Guy, Alolan Punk Guy, Rail Staff, Hoennian Reporter, Galarian Reporter, Kalosian Rich Boy, Hoennian Rich Boy, Kalosian Rising Star M & F, Alolan Rising Star M & F, Rollerskater M & F, Kantonian Ruin Maniac, Hoennian Ruin Maniac, Hoennian Sailor, Hoennian Schoolkid M & F, Kalosian Schoolkid M & F, Galarian Schoolkid M & F, Kalosian Scientist M & F, Alolan Scientist, Diver M & F, Sky Trainer M & F, Street Thug M & F, Surfer, Kalosian Swimmer M & F, Alolan Swimmer M & F, Galarian Swimmer M & F, Hoennian Swimmer, Team Star Grunt M & F Violet & Scarlet, Kalosian Tourist M & F, Hoennian Tourist, Alolan Tourist M & F, Trial Guide M & F, Triathlete (Swimmer, Runner, Cyclist), Hoennian Tuber M & F, Kalosian Veteran M & F, Alolan Veteran M & F, Kalosian Waiter, Kalosian Waitress, Kalosian Worker, Alolan Worker, Galarian Worker M & F, Kantonian Worker, Alolan Youngster, Kalosian Youngster, Hoennian Youngster, Galarian Youngster, Paldean Youngster- KyleDove
+Aether Grunt M & F - Beliot419
+Kantonian Aroma Lady, Kantonian Beauty, Kantonian Biker, Kantonian Bug Catcher, Kantonian Hiker, Kantonian Super Nerd, Kantonian Youngster, Kantonian Bird Keeper, Kantonian Black Belt, Kantonian Camper M & F, Kantonian Fisher, Kantonian Ace Trainer M & F, Kantonian Battle Girl, Rocker, Kantonian Artist, Kantonian Pokémon Breeder, Kantonian Scientist, Kantonian Dragon Tamer, Kantonian Gambler, Kantonian Poké Maniac, Kantonian Schoolkid - kensuyjin33, Flamejow, AutumnSpire and duncapham
+Team Aqua Grunts M & F, Team Magma Grunts M & F - IceJkai
+Team Flare Grunts M & F - Muzyun 
+Team Skull Grunts M & F - Mid117
+Team Yell Grunts M & F - Brumirage
+
+~ Other Sprites ~ 
 
 Player Sprite - WolfHeretic (via Advanced Character Customization)
 Gym Badges - VictorV111
 Z Crystals - Pixel3r
 
-Pokemon Emerald UI Pack
+~ Pokémon Emerald UI Pack ~
 	
-	Voltseon (For Bag, Relearn, Party, Summary)
-	Shashu-Greninja, Gazza teh Fox, ENLS (For Trainer Card UI)
-	Pokémon Splice Team (For Battle UI)
+Voltseon (For Bag, Relearn, Party, Summary)
+Shashu-Greninja, Gazza teh Fox, ENLS (For Trainer Card UI)
+Pokémon Splice Team (For Battle UI)
 
-~~ Pokemon Generation 8 Project for v20.1 ~~
+~~ Pokémon Generation 8 and 9 Project for v20.1 ~~
 
-Battler Sprites:
+~Battler Sprites~
 
-Gen 1-5 Pokemon Sprites - veekun
-Gen 6 Pokemon Sprites - All Contributors To Smogon X/Y Sprite Project
-Gen 7 Pokemon Sprites - All Contributors To Smogon Sun/Moon Sprite Project
-Gen 8 Pokemon Sprites - All Contributors To Smogon Sword/Shield Sprite Project
+Gen 1-5 Pokémon Sprites - veekun
+Gen 6 Pokémon Sprites - All Contributors To Smogon X/Y Sprite Project
+Gen 7 Pokémon Sprites - All Contributors To Smogon Sun/Moon Sprite Project
+Gen 8 Pokémon Sprites - All Contributors To Smogon Sword/Shield Sprite Project 
+Gen 9 Pokémon Sprites - The-King-Of-Roads-X, Mak, Fae, leParagon, Caruban, Azria, Mashirosakura, aR0y2810, Katten
 
-Overworld Sprites
+~Overworld Sprites~
 
 Gen 6+ Berry Tree Overworlds - Anarlaurendil
-Gen 6 Pokemon Overworlds - princess-pheonix, LunarDusk, Wolfang62, TintjeMadelintje101, piphybuilder88
-Gen 7 Pokemon Overworlds - Larry Turbo, princess-pheonix
-Gen 8 Pokemon Overworlds - SageDeoxys, Wolfang62, LarryTurbo, tammyclaydon
-Gen 1-5 Pokemon Overworlds - MissingLukey, help-14, Kymoyonian, cSc-A7X, 2and2makes5, Pokegirl4ever, Fernandojl, Silver-Skies, TyranitarDark, Getsuei-H, Kid1513, Milomilotic11, Kyt666, kdiamo11, Chocosrawlooid, Syledude, Gallanty, Gizamimi-Pichu, 2and2makes5, Zyon17,LarryTurbo, spritesstealer, LarryTurbo
+Gen 6 Pokémon Overworlds - princess-pheonix, LunarDusk, Wolfang62, TintjeMadelintje101, piphybuilder88
+Gen 7 Pokémon Overworlds - Larry Turbo, princess-pheonix
+Gen 8 Pokémon Overworlds - SageDeoxys, Wolfang62, LarryTurbo, tammyclaydon
+PLA Pokémon Overworlds - Boonzeet, DarkusShadow, princess-phoenix, Ezeart, Wolfang62
+Gen 9 Pokémon Overworlds - Azria (Greavard), DarkusShadow
+Gen 1-5 Pokémon Overworlds - MissingLukey, help-14, Kymoyonian, cSc-A7X, 2and2makes5, Pokegirl4ever, Fernandojl, Silver-Skies, TyranitarDark, Getsuei-H, Kid1513, Milomilotic11, Kyt666, kdiamo11, Chocosrawlooid, Syledude, Gallanty, Gizamimi-Pichu, 2and2makes5, Zyon17,LarryTurbo, spritesstealer, LarryTurbo
 
-Icon Sprites
+~Icon Sprites~
 
-Gen 1-6 Pokemon Icon Sprites - Alaguesia
-Gen 7 Pokemon Icon Sprites - Marin, MapleBranchWing, Contributors to the DS Styled Gen 7+ Repository
+Gen 1-6 Pokémon Icon Sprites - Alaguesia
+Gen 7 Pokémon Icon Sprites - Marin, MapleBranchWing, Contributors to the DS Styled Gen 7+ Repository
 Gen 8 Icon Sprites - Larry Turbo, Leparagon
+Gen 9 Icon Sprites - Caruban, CarmaNekko, AxelLoquendo, Cesare_Cbass, MBCMechachu, Vent, Iichenprincess
+PLA icons -
+-AztecCroc (Legend Plate, Linking Cord, Blank Plate)
+-3DJackArt (Hisuian apricorn, poke balls, Peat Block)
+-Caruban (Adamant Crystal, Griseous Core, Lustrous Globe)
+-Iichenprincess (Black Augurite, Hopo Berry)
+-LuigiTKO (Pokémon) 
 
-Cry Credits:
+~Cry Credits~
 
-Gen 1-6 Pokemon Cries - Rhyden
-Gen 7 Pokemon Cries - Marin, Rhyden
-Gen 8 Pokemon Cries - Zeak6464
+Gen 1-6 Pokémon Cries - Rhyden
+Gen 7 Pokémon Cries - Marin, Rhyden
+Gen 8 Pokémon Cries - Zeak6464
+Gen 9 Pokémon Cries - EnderSoulMC, Caruban, Morningdew
 
-Script Credits:
+~PBS Credits~
+
+Gen 9 - Caruban, PorousMist, DJChaos
+
+~Script Credits~
 
 Golisopod User, Luka S.J.
 
-Compilation of Resources:
+~Compilation of Resources~
 
 Golisopod User, UberDunsparce
 
 ~~Music~~
 
-Pokemon Masters EX
+Pokémon Masters EX
+
+~~Tiles~~
+
+Silph City (Used for Online Room) - Ekat, Heartless Dragoon, Morlockhater, Nemu, Ross Hawkins, Pokémon Dawn, Slimshady, Thedeadheroalistar, The-Red-Ex, Vurtax, Zein
 
 ~~Animations~~ 
 
-Pokemon Reborn
+Pokémon Reborn
 Gen 8 move animation project by StCooler, DarryBD99, WolfPP, ardicoozer, riddlemeree.
 Sound Effects - BellBlitzKing 
 
@@ -125,6 +162,11 @@ Rename from Party - TechSkylander1518
 Better Speed Up - Marin for the original script, Phantombass for updating to 19.1
 v20.1 Hotfixes - Maruno
 Cable Club - mGriffin,Khaikaa,Vendily
+Essentials Deluxe - Lucidious89
+Terastal Phenomenon - Lucidious89,wrigty12
+Visually Different Super Shiny - AutumnMood
+
+~~Pokémon Essentials~~ 
 
 "Pokémon Essentials" was created by:
 Flameguru

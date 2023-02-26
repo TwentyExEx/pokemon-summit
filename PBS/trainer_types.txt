@@ -1473,56 +1473,56 @@ Name = Paldea Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea_ex_leader
+BattleBGM = paldea_sv_leader
 #-------------------------------
 [LEADER_Brassius]
 Name = Paldea Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea_ex_leader
+BattleBGM = paldea_sv_leader
 #-------------------------------
 [LEADER_Iono]
 Name = Paldea Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea_ex_leader
+BattleBGM = paldea_sv_leader
 #-------------------------------
 [LEADER_Kofu]
 Name = Paldea Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea_ex_leader
+BattleBGM = paldea_sv_leader
 #-------------------------------
 [LEADER_Larry]
 Name = Paldea Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea_ex_leader
+BattleBGM = paldea_sv_leader
 #-------------------------------
 [LEADER_Ryme]
 Name = Paldea Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea_ex_leader
+BattleBGM = paldea_sv_leader
 #-------------------------------
 [LEADER_Tulip]
 Name = Paldea Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea_ex_leader
+BattleBGM = paldea_sv_leader
 #-------------------------------
 [LEADER_Grusha]
 Name = Paldea Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea_ex_leader
+BattleBGM = paldea_sv_leader
 #-------------------------------
 [ELITE_Rika]
 Name = Paldea Elite Four
