@@ -201,8 +201,7 @@ def pbOnlineMusicChanger
 				"unova_ex_shauntal.ogg",
 				"unova_ex_subway.ogg",
 				"unova_ex_trainer.ogg",
-				"unova_ex_wild.ogg",
-				"world_ex_trainer.ogg"]
+				"unova_ex_wild.ogg"]
 				tracknames = ["Alder","Bianca","Caitlin","Colress","Ghetsis","Grimsley","Hugh","Iris","Gym Leader","Marshal","N","Team Plasma","Shauntal","Subway Boss","Trainer","Wild","Cancel"]
 			when "BWBW2"
 				tracklist =
@@ -312,43 +311,35 @@ def pbOnlineMusicChanger
 			case soundtype
 			when "Masters EX"
 				tracklist =
-				["alola_ex_championhau.ogg",
-				"alola_ex_gladion.ogg",
-				"alola_ex_guzma.ogg",
-				"alola_ex_hala.ogg",
-				"alola_ex_hau.ogg",
-				"alola_ex_kahili.ogg",
-				"alola_ex_kahuna.ogg",
-				"alola_ex_kukui.ogg",
-				"alola_ex_lillie.ogg",
-				"alola_ex_lusamine.ogg",
-				"alola_ex_molayne.ogg",
-				"alola_ex_olivia.ogg",
-				"alola_ex_plumeria.ogg",
-				"alola_ex_trainer.ogg"]
+				["galar_ex_bede.ogg",
+				"galar_ex_hop.ogg",
+				"galar_ex_leader.ogg",
+				"galar_ex_leon.ogg",
+				"galar_ex_marnie.ogg",
+				"galar_ex_piers.ogg",
+				"galar_ex_sonia.ogg",
+				"galar_ex_trainer.ogg"]
 				tracknames = ["Bede","Hop","Gym Leader","Marnie","Piers","Sonia","Trainer","Cancel"]
 			when "SWSH"
 				tracklist =
-				["alola_sm_aether.ogg",
-				"alola_sm_battletree.ogg",
-				"alola_sm_champhau.ogg",
-				"alola_sm_elitefour.ogg",
-				"alola_sm_gladion.ogg",
-				"alola_sm_guzma.ogg",
-				"alola_sm_hau.ogg",
-				"alola_sm_kahuna.ogg",
-				"alola_sm_kukui.ogg",
-				"alola_sm_necrozma.ogg",
-				"alola_sm_skull.ogg",
-				"alola_sm_skulladmin.ogg",
-				"alola_sm_solaluna.ogg",
-				"alola_sm_tapu.ogg",
-				"alola_sm_trainer.ogg",
-				"alola_sm_ub.ogg",
-				"alola_sm_unecrozma.ogg",
-				"alola_sm_ursquad.ogg",
-				"alola_sm_utrainer.ogg",
-				"alola_sm_wild.ogg"]
+				["galar_swsh_avery.ogg",
+				"galar_swsh_bede.ogg",
+				"galar_swsh_birds.ogg",
+				"galar_swsh_championmustard.ogg",
+				"galar_swsh_eternatus.ogg",
+				"galar_swsh_hop.ogg",
+				"galar_swsh_klara.ogg",
+				"galar_swsh_leader.ogg",
+				"galar_swsh_leon.ogg",
+				"galar_swsh_marnie.ogg",
+				"galar_swsh_mounts.ogg",
+				"galar_swsh_mustard.ogg",
+				"galar_swsh_peony.ogg",
+				"galar_swsh_rose.ogg",
+				"galar_swsh_trainer.ogg",
+				"galar_swsh_wild.ogg",
+				"galar_swsh_yell.ogg",
+				"galar_swsh_zaza.ogg"]
 				tracknames = ["Avery","Bede","Galarian Kanto Birds","Mustard (Final)","Eternatus","Hop","Klara","Gym Leader","Leon","Marnie","Glastrier/Spectrier","Mustard","Peony","President Rose","Trainer","Wild","Team Yell","Zacian/Zamazenta","Cancel"]
 		    end					
 		when "Hisui"
