@@ -221,7 +221,7 @@ Accuracy = 95
 TotalPP = 20
 Target = NearOther
 FunctionCode = HitTwoToFiveTimes
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,Flatline
 Description = Sharp spikes are shot at the target in rapid succession. They hit two to five times in a row.
 #-------------------------------
 [TWINEEDLE]
@@ -640,7 +640,7 @@ Accuracy = 100
 TotalPP = 10
 Target = NearOther
 FunctionCode = HitOncePerUserTeamMember
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,Flatline
 Description = The user gets all the party Pokémon to attack the foe. The more party Pokémon, the more damage.
 #-------------------------------
 [FLING]
@@ -1084,7 +1084,7 @@ Accuracy = 90
 TotalPP = 20
 Target = NearOther
 FunctionCode = HitTwoToFiveTimesRaiseUserSpd1LowerUserDef1
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,Flatline
 Description = Attacks by shooting scales two to five times in a row. Boosts the user's Speed but lowers its Defense.
 #-------------------------------
 [DRAGONRAGE]
@@ -2240,7 +2240,7 @@ Accuracy = 100
 TotalPP = 20
 Target = NearOther
 FunctionCode = HitTwoToFiveTimes
-Flags = Contact,CanProtect,CanMirrorMove
+Flags = Contact,CanProtect,CanMirrorMove,Flatline
 Description = The user looses a flurry of open-palmed arm thrusts that hit two to five times in a row.
 #-------------------------------
 [TRIPLEKICK]
@@ -2252,7 +2252,7 @@ Accuracy = 90
 TotalPP = 10
 Target = NearOther
 FunctionCode = HitThreeTimesPowersUpWithEachHit
-Flags = Contact,CanProtect,CanMirrorMove
+Flags = Contact,CanProtect,CanMirrorMove,Flatline
 Description = A consecutive three-kick attack that becomes more powerful with each successful hit.
 #-------------------------------
 [COUNTER]
@@ -3803,7 +3803,7 @@ Accuracy = 100
 TotalPP = 30
 Target = NearOther
 FunctionCode = HitTwoToFiveTimes
-Flags = CanProtect,CanMirrorMove,Bomb
+Flags = CanProtect,CanMirrorMove,Bomb,Flatline
 Description = The user forcefully shoots seeds at the target. Two to five seeds are shot in rapid succession.
 #-------------------------------
 [ABSORB]
@@ -4220,7 +4220,7 @@ Accuracy = 90
 TotalPP = 10
 Target = NearOther
 FunctionCode = HitTwoToFiveTimes
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,Flatline
 Description = The user strikes the target with a hard bone two to five times in a row.
 #-------------------------------
 [MUDSLAP]
@@ -4550,7 +4550,7 @@ Accuracy = 100
 TotalPP = 30
 Target = NearOther
 FunctionCode = HitTwoToFiveTimes
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,Flatline
 Description = The user launches sharp icicles at the target. It strikes two to five times in a row.
 #-------------------------------
 [TRIPLEAXEL]
@@ -4562,7 +4562,7 @@ Accuracy = 90
 TotalPP = 10
 Target = NearOther
 FunctionCode = HitThreeTimesPowersUpWithEachHit
-Flags = Contact,CanProtect,CanMirrorMove
+Flags = Contact,CanProtect,CanMirrorMove,Flatline
 Description = A consecutive three-kick attack that becomes more powerful with each successful hit.
 #-------------------------------
 [SHEERCOLD]
@@ -5387,7 +5387,7 @@ Accuracy = 85
 TotalPP = 10
 Target = NearOther
 FunctionCode = HitTwoToFiveTimes
-Flags = Contact,CanProtect,CanMirrorMove
+Flags = Contact,CanProtect,CanMirrorMove,Flatline
 Description = The user attacks by striking the target with its hard tail. It hits the Pokémon two to five times in a row.
 #-------------------------------
 [RAGE]
@@ -5411,7 +5411,7 @@ Accuracy = 90
 TotalPP = 15
 Target = NearOther
 FunctionCode = AddSpikesToFoeSide
-Flags = CanProtect,CanMirrorMove,Bomb
+Flags = CanProtect,CanMirrorMove,Bomb,Flatline
 Description = Sharp spikes are shot at the target in rapid succession. Spikes remain scattered under the target.
 #-------------------------------
 [COMETPUNCH]
@@ -5423,7 +5423,7 @@ Accuracy = 85
 TotalPP = 15
 Target = NearOther
 FunctionCode = HitTwoToFiveTimes
-Flags = Contact,CanProtect,CanMirrorMove,Punching
+Flags = Contact,CanProtect,CanMirrorMove,Punching,Flatline
 Description = The target is hit with a flurry of punches that strike two to five times in a row.
 #-------------------------------
 [FURYSWIPES]
@@ -5435,7 +5435,7 @@ Accuracy = 80
 TotalPP = 15
 Target = NearOther
 FunctionCode = HitTwoToFiveTimes
-Flags = Contact,CanProtect,CanMirrorMove
+Flags = Contact,CanProtect,CanMirrorMove,Flatline
 Description = The target is raked with sharp claws or scythes for two to five times in quick succession.
 #-------------------------------
 [BARRAGE]
@@ -5447,7 +5447,7 @@ Accuracy = 85
 TotalPP = 20
 Target = NearOther
 FunctionCode = HitTwoToFiveTimes
-Flags = CanProtect,CanMirrorMove,Bomb
+Flags = CanProtect,CanMirrorMove,Bomb,Flatline
 Description = Round objects are hurled at the target to strike two to five times in a row.
 #-------------------------------
 [BIND]
@@ -5471,7 +5471,7 @@ Accuracy = 85
 TotalPP = 10
 Target = NearOther
 FunctionCode = HitTwoToFiveTimes
-Flags = Contact,CanProtect,CanMirrorMove
+Flags = Contact,CanProtect,CanMirrorMove,Flatline
 Description = The target is slapped repeatedly, back and forth, two to five times in a row.
 #-------------------------------
 [FURYATTACK]
@@ -5483,7 +5483,7 @@ Accuracy = 85
 TotalPP = 20
 Target = NearOther
 FunctionCode = HitTwoToFiveTimes
-Flags = Contact,CanProtect,CanMirrorMove
+Flags = Contact,CanProtect,CanMirrorMove,Flatline
 Description = The target is jabbed repeatedly with a horn or beak two to five times in a row.
 #-------------------------------
 [WRAP]
@@ -7906,7 +7906,7 @@ Accuracy = 90
 TotalPP = 10
 Target = NearOther
 FunctionCode = HitTwoToFiveTimes
-Flags = CanProtect,CanMirrorMove,Bomb
+Flags = CanProtect,CanMirrorMove,Bomb,Flatline
 Description = The user hurls hard rocks at the target. Two to five rocks are launched in quick succession.
 #-------------------------------
 [ROCKPOLISH]
@@ -8655,7 +8655,7 @@ Accuracy = 100
 TotalPP = 5
 Target = NearOther
 FunctionCode = HitThreeTimesAlwaysCriticalHit
-Flags = Contact,CanProtect,CanMirrorMove,CannotMetronome,Punching
+Flags = Contact,CanProtect,CanMirrorMove,CannotMetronome,Punching,Flatline
 Description = Hits three times in a row with mastery of the Water style. This attack always deals critical hits.
 #-------------------------------
 [WATERSHURIKEN]
@@ -8668,7 +8668,7 @@ TotalPP = 20
 Target = NearOther
 Priority = 1
 FunctionCode = HitTwoToFiveTimesOrThreeForAshGreninja
-Flags = CanProtect,CanMirrorMove
+Flags = CanProtect,CanMirrorMove,Flatline
 Description = The user hits the target with throwing stars 2-5 times in a row. This move always goes first.
 #-------------------------------
 [AQUARING]
@@ -9391,7 +9391,7 @@ Accuracy = 90
 TotalPP = 10
 Target = NearOther
 FunctionCode = HitTenTimesPopulationBomb
-Flags = Contact,CanProtect,CanMirrorMove,Slicing
+Flags = Contact,CanProtect,CanMirrorMove,Slicing,Flatline
 Description = The user's fellows gather in droves to perform a combo attack that hits the target one to ten times in a row.
 #-------------------------------
 [POUNCE]
@@ -9577,7 +9577,7 @@ Accuracy = 90
 TotalPP = 10
 Target = NearOther
 FunctionCode = HitThreeTimesPowersUpWithEachHit
-Flags = Contact,CanProtect,CanMirrorMove
+Flags = Contact,CanProtect,CanMirrorMove,Flatline
 Description = The user performs a perfectly timed triple dive, hitting the target with splashes of water three times in a row.
 #-------------------------------
 [TWINBEAM]
