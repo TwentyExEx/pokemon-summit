@@ -1,3 +1,21 @@
+def pbOnlineValidityCheck
+  if $player.party_count == 0
+    pbMessage(_INTL("\\bI'm sorry, you must have a Pokémon to enter the Cable Club."))
+    return false
+  end
+  teamspecies = []
+  for pkmn in $player.party
+    specform = pkmn.species.to_s << "_" << pkmn.form.to_s
+    if !teamspecies.include?(specform)
+    	teamspecies.push(specform)
+    else
+    	pbMessage(_INTL("\\bI'm sorry, you must not have more than one Pokémon of the same species and form to enter the Cable Club."))
+    	return false
+    end
+  end
+  return true
+end
+
 def pbOnlineMusicChanger
 	cmd = pbConfirmMessage(_INTL("\\bWould you like to change the online music?"))
     if cmd == true

@@ -1,9 +1,5 @@
 # Returns false if an error occurred.
 def pbCableClub
-  if $player.party_count == 0
-    pbMessage(_INTL("I'm sorry, you must have a Pokémon to enter the Cable Club."))
-    return
-  end
   msgwindow = pbCreateMessageWindow()
   begin
     pbMessageDisplay(msgwindow, _ISPRINTF("What's the ID of the trainer you're searching for? (Your ID: {1:05d})\\^",$player.public_ID($player.id)))

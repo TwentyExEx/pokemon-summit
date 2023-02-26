@@ -70,15 +70,24 @@ class MoveRelearner_Scene
         type_number = GameData::Type.get(moveData.display_type(@pokemon)).icon_position
         imagepos.push(["Graphics/Pictures/types", 12, yPos - 2, 0, type_number * 28, 64, 28])
         textpos.push([moveData.name, 80, yPos, 0, Color.new(72, 72, 72), Color.new(184, 184, 184)])
-        textpos.push([_INTL("Cost:"), 112, yPos + 32, 0, Color.new(72, 72, 72), Color.new(184, 184, 184)])
-        if $game_variables[37].include?(GameData::Move.get(moveobject).name) # edit here
-          textpos.push([_INTL("Free"), 230, yPos + 32, 1,
-                        Color.new(72, 72, 72), Color.new(184, 184, 184)])
-          $game_variables[5] = 0
+        if moveData.total_pp>0
+          textpos.push([_INTL("PP"),30,yPos+32,0,Color.new(64,64,64),Color.new(176,176,176)])
+          textpos.push([_INTL("{1}/{1}",moveData.total_pp),130,yPos+32,1,
+             Color.new(64,64,64),Color.new(176,176,176)])
         else
-          textpos.push([_INTL("$500"), 230, yPos + 32, 1, Color.new(72, 72, 72), Color.new(184, 184, 184)])
-          $game_variables[5] = 500
+          textpos.push(["-",80,yPos,0,Color.new(64,64,64),Color.new(176,176,176)])
+          textpos.push(["--",228,yPos+32,1,Color.new(64,64,64),Color.new(176,176,176)])
         end
+        # =================== UNCOMMENT THIS SECTION IN MAIN GAME =================================
+        # if $game_variables[37].include?(GameData::Move.get(moveobject).name)
+        #   textpos.push([_INTL("Free"), 228, yPos + 32, 1,
+        #                 Color.new(72, 72, 72), Color.new(184, 184, 184)])
+        #   $game_variables[5] = 0
+        # else
+        #   textpos.push([_INTL("$500"), 228, yPos + 32, 1, Color.new(72, 72, 72), Color.new(184, 184, 184)])
+        #   $game_variables[5] = 500
+        # end
+        # =================== UNCOMMENT THIS SECTION IN MAIN GAME =================================
       end
       yPos += 64
     end

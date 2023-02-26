@@ -428,63 +428,6 @@ end
 # in the party screen.
 #===============================================================================
 class PokemonParty_Scene
-  def pbChangeSelection(key, currentsel)
-    numsprites = Settings::MAX_PARTY_SIZE + ((@multiselect) ? 2 : 1)
-    case key
-    when Input::LEFT
-      loop do
-        currentsel -= 1
-        break unless currentsel > 0 && currentsel < @party.length && !@party[currentsel]
-      end
-      if currentsel >= @party.length && currentsel < Settings::MAX_PARTY_SIZE
-        currentsel = @party.length - 1
-      end
-      currentsel = numsprites - 1 if currentsel < 0
-    when Input::RIGHT
-      loop do
-        currentsel += 1
-        break unless currentsel < @party.length && !@party[currentsel]
-      end
-      if currentsel == @party.length
-        currentsel = Settings::MAX_PARTY_SIZE
-      elsif currentsel == numsprites
-        currentsel = 0
-        currentsel = numsprites - 1 if currentsel >= @party.length
-      end
-    when Input::UP
-      if currentsel >= Settings::MAX_PARTY_SIZE
-        currentsel -= 1
-        while currentsel > 0 && currentsel < Settings::MAX_PARTY_SIZE && !@party[currentsel]
-          currentsel -= 1
-        end
-        currentsel = numsprites - 1 if currentsel >= @party.length
-      else
-        loop do
-          currentsel -= 2
-          break unless currentsel > 0 && !@party[currentsel]
-        end
-      end
-      if currentsel >= @party.length && currentsel < Settings::MAX_PARTY_SIZE
-        currentsel = @party.length - 1
-      end
-      currentsel = numsprites - 1 if currentsel < 0
-    when Input::DOWN
-      if currentsel >= Settings::MAX_PARTY_SIZE - 1
-        currentsel += 1
-      else
-        currentsel += 2
-        currentsel = Settings::MAX_PARTY_SIZE if currentsel < Settings::MAX_PARTY_SIZE && !@party[currentsel]
-      end
-      if currentsel >= @party.length && currentsel < Settings::MAX_PARTY_SIZE
-        currentsel = Settings::MAX_PARTY_SIZE
-      elsif currentsel >= numsprites
-        currentsel = 0
-        currentsel = numsprites - 1 if currentsel >= @party.length
-      end
-    end
-    return currentsel
-  end
-
   def pbHardRefresh
     oldtext = []
     lastselected = -1

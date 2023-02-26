@@ -1,5 +1,6 @@
 def pbSummitTeamBuilder
   loop do 
+    pbMessage(_INTL("Your party is currently full.\\1 Please deposit a Pokémon in your PC before attempting to create another.")) if !($player.party.length < 6)
     # Start, select species
     msgwindow = pbCreateMessageWindow()
     pbMessageDisplay(msgwindow, _ISPRINTF("Enter a Pokémon species."))
@@ -8,7 +9,7 @@ def pbSummitTeamBuilder
     @species = species.upcase.to_sym
     if GameData::Species.try_get(@species)
       dispname = GameData::Species.get(@species).real_name
-      pbMessage(_INTL("Creating {1}...",dispname))
+      pbMessage(_INTL("Creating {1}.",dispname))
       pbSummitGivePokemon(@species)
       @pkmn = $player.party[$player.party.length-1]
 
@@ -108,7 +109,7 @@ def pbSummitTeamBuilder
             end
           elsif cmd2 == -1
             if totalev != Pokemon::EV_LIMIT
-              cmd = pbConfirmMessage(_INTL("You have not allocated all possible EVs.\\n Allocate remaining EVs?"))
+              cmd = pbConfirmMessage(_INTL("You have not allocated all possible EVs.\\1 Allocate remaining EVs?"))
               if cmd == false
                 cmd = pbConfirmMessage(_INTL("Create Pokémon with unallocated EVs?"))
                 break if cmd == true
@@ -156,7 +157,7 @@ def pbSummitTeamBuilder
         loop do
           msgwindow = pbCreateMessageWindow()
           pbMessageDisplay(msgwindow, _ISPRINTF("Enter an item to hold."))
-          item = pbFreeText(msgwindow,"",false,12)
+          item = pbFreeText(msgwindow,"",false,25)
           item = item.gsub(/\s+/, "")
           pbDisposeMessageWindow(msgwindow)
           @item = item.upcase.to_sym
@@ -171,10 +172,13 @@ def pbSummitTeamBuilder
 
       # End, ask if adding
       if $player.party.length < 6
-        cmd = pbMessage(_INTL("You have {1} Pokémon in your party.\\1 Create another Pokémon?",$player.party.length),["Yes","No"],1)
-        break if cmd == 1
+        cmd = pbMessage(_INTL("You have {1} Pokémon in your party.\\1 Create another Pokémon?",$player.party.length),["Yes","No"],2)
+        if cmd == 1
+          pbMessage(_INTL("Team creation ended."))
+          break
+        end
       else
-        cmd = pbMessage(_INTL("Team creation complete."))
+        pbMessage(_INTL("Team creation complete."))
         break
       end
     else
