@@ -1,7 +1,7 @@
 def pbOnlineMusicChanger
 	cmd = pbConfirmMessage(_INTL("\\bWould you like to change the online music?"))
     if cmd == true
-    	regionlist = ["Kanto","Johto","Hoenn","Sinnoh","Unova","Kalos","Alola","Galar","Hisui","Paldea","Cancel"]
+    	regionlist = ["Kanto","Johto","Hoenn","Sinnoh","Unova","Kalos","Alola","Galar","Hisui","Paldea","Other","Cancel"]
     	chooseregion = pbMessage(_INTL("\\bPlease choose a region."),regionlist,regionlist.length-1)
     	region = regionlist[chooseregion]
     	case region
@@ -58,6 +58,7 @@ def pbOnlineMusicChanger
 		        "johto_ex_trainer.ogg",
 		        "johto_ex_wild.ogg",
 		        "johto_ex_will.ogg"]
+				tracknames = ["Bruno","Karen","Koga","Lance","Gym Leader","Rocket Executive","Silver","Trainer","Wild","Will","Cancel"]
 			when "GSC"
 				tracklist =
 				["johto_gsc_lance.ogg",
@@ -65,6 +66,7 @@ def pbOnlineMusicChanger
 		        "johto_gsc_silver.ogg",
 		        "johto_gsc_trainer.ogg",
 		        "johto_gsc_wild.ogg"]
+				tracknames = ["Lance/Red","Team Rocket","Silver","Trainer","Wild","Cancel"]
 			when "HGSS"
 				tracklist =
 				["johto_hgss_entei.ogg",
@@ -78,8 +80,346 @@ def pbOnlineMusicChanger
 		        "johto_hgss_suicune.ogg",
 		        "johto_hgss_trainer.ogg",
 		        "johto_hgss_wild.ogg"]
+				tracklist = ["Entei","Ho-Oh","Lance/Red","Gym Leader","Lugia","Raikou","Team Rocket","Silver","Suicune","Trainer","Wild","Cancel"]
 		    end
 		end
+		when "Hoenn"
+	    	soundtypelist = ["Masters EX","RSE","ORAS","Cancel"]
+	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length-1)
+			soundtype = soundtypelist[choosetype]
+			case soundtype
+			when "Masters EX"
+				tracklist =
+				["hoenn_ex_archie.ogg",
+				"hoenn_ex_drake.ogg",
+				"hoenn_ex_frontier.ogg",
+				"hoenn_ex_glacia.ogg",
+				"hoenn_ex_leader.ogg",
+				"hoenn_ex_lisia.ogg",
+				"hoenn_ex_magmaaquaadmin.ogg",
+				"hoenn_ex_maxie.ogg",
+				"hoenn_ex_phoebe.ogg",
+				"hoenn_ex_protag.ogg",
+				"hoenn_ex_sidney.ogg",
+				"hoenn_ex_steven.ogg",
+				"hoenn_ex_wallace.ogg",
+				"hoenn_ex_wally.ogg",
+				"hoenn_ex_wild.ogg",
+				"hoenn_ex_zinnia.ogg"]
+				tracknames = ["Archie","Drake","Frontier Brain","Glacia","Gym Leader","Lisia","Team Magma/Aqua Admin","Maxie","Phoebe","Brendan/May","Sidney","Steven","Wallace","Wally","Wild","Zinnia","Cancel"]
+			when "RSE"
+				tracklist =
+				["hoenn_rse_archiemaxie.ogg",
+				"hoenn_rse_champion.ogg",
+				"hoenn_rse_elitefour.ogg",
+				"hoenn_rse_frontier.ogg",
+				"hoenn_rse_leader.ogg",
+				"hoenn_rse_legendary.ogg",
+				"hoenn_rse_magmaaqua.ogg",
+				"hoenn_rse_rival.ogg",
+				"hoenn_rse_titan.ogg",
+				"hoenn_rse_trainer.ogg",
+				"hoenn_rse_wild.ogg"]
+				tracknames = ["Archie/Maxie","Champion","Elite Four","Frontier Brain","Gym Leader","Super-Ancient","Team Magma/Aqua","Brendan/May","Titans","Trainer","Wild","Cancel"]
+			when "ORAS"
+				tracklist =
+				["hoenn_oras_archiemaxie.ogg",
+				"hoenn_oras_branmay.ogg",
+				"hoenn_oras_champion.ogg",
+				"hoenn_oras_deoxys.ogg",
+				"hoenn_oras_elitefour.ogg",
+				"hoenn_oras_frontier.ogg",
+				"hoenn_oras_leader.ogg",
+				"hoenn_oras_magmaaqua.ogg",
+				"hoenn_oras_rayquaza.ogg",
+				"hoenn_oras_superancient.ogg",
+				"hoenn_oras_titan.ogg",
+				"hoenn_oras_trainer.ogg",
+				"hoenn_oras_wally.ogg",
+				"hoenn_oras_wild.ogg",
+				"hoenn_oras_worldchamp.ogg",
+				"hoenn_oras_zinnia.ogg"]
+				tracknames = ["Archie/Maxie","Brendan/May","Champion","Deoxys","Elite Four","Frontier Brain","Gym Leader","Team Magma/Aqua","Rayquaza","Groudon/Kyogre","Titans","Trainer","Wally","Wild","World Champion","Zinnia","Cancel"]
+		    end
+		when "Sinnoh"
+	    	soundtypelist = ["Masters EX","DPPT","Cancel"]
+	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length-1)
+			soundtype = soundtypelist[choosetype]
+			case soundtype
+			when "Masters EX"
+				tracklist =
+				["sinnoh_ex_aaron.ogg",
+				"sinnoh_ex_barry.ogg",
+				"sinnoh_ex_bertha.ogg",
+				"sinnoh_ex_cynthia.ogg",
+				"sinnoh_ex_cyrus.ogg",
+				"sinnoh_ex_flint.ogg",
+				"sinnoh_ex_frontier.ogg",
+				"sinnoh_ex_galacticcommander.ogg",
+				"sinnoh_ex_leader.ogg",
+				"sinnoh_ex_lucian.ogg",
+				"sinnoh_ex_trainer.ogg",
+				"sinnoh_ex_wild.ogg"]
+				tracknames = ["Aaron","Barry","Bertha","Cynthia","Cyrus","Flint","Frontier Brain","Team Galactic Commander","Gym Leader","Lucian","Trainer","Wild","Cancel"]
+			when "DPPT"
+				tracklist =
+				["sinnoh_dppt_arceus.ogg",
+				"sinnoh_dppt_champion.ogg",
+				"sinnoh_dppt_cyrus.ogg",
+				"sinnoh_dppt_diaglapalkia.ogg",
+				"sinnoh_dppt_elitefour.ogg",
+				"sinnoh_dppt_frontier.ogg",
+				"sinnoh_dppt_galacticcommander.ogg",
+				"sinnoh_dppt_galacticgrunt.ogg",
+				"sinnoh_dppt_giratina.ogg",
+				"sinnoh_dppt_lake.ogg",
+				"sinnoh_dppt_leader.ogg",
+				"sinnoh_dppt_legendary.ogg",
+				"sinnoh_dppt_rival.ogg",
+				"sinnoh_dppt_trainer.ogg",
+				"sinnoh_dppt_wild.ogg"]
+				tracknames = ["Arceus","Cynthia","Cyrus","Dialga/Palkia","Elite Four","Frontier Brain","Team Galactic Commander","Team Galactic Grunt","Giratina","Lake Trio","Gym Leader","Legendary","Barry","Trainer","Wild","Cancel"]
+		    end			
+		end
+		when "Unova"
+	    	soundtypelist = ["Masters EX","BWBW2","Cancel"]
+	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length-1)
+			soundtype = soundtypelist[choosetype]
+			case soundtype
+			when "Masters EX"
+				tracklist =
+				["unova_ex_alder.ogg",
+				"unova_ex_bianca.ogg",
+				"unova_ex_caitlin.ogg",
+				"unova_ex_colress.ogg",
+				"unova_ex_ghetsis.ogg",
+				"unova_ex_grimsley.ogg",
+				"unova_ex_hugh.ogg",
+				"unova_ex_iris.ogg",
+				"unova_ex_leader.ogg",
+				"unova_ex_marshal.ogg",
+				"unova_ex_n.ogg",
+				"unova_ex_plasma.ogg",
+				"unova_ex_shauntal.ogg",
+				"unova_ex_subway.ogg",
+				"unova_ex_trainer.ogg",
+				"unova_ex_wild.ogg",
+				"world_ex_trainer.ogg"]
+				tracknames = ["Alder","Bianca","Caitlin","Colress","Ghetsis","Grimsley","Hugh","Iris","Gym Leader","Marshal","N","Team Plasma","Shauntal","Subway Boss","Trainer","Wild","Cancel"]
+			when "BWBW2"
+				tracklist =
+				["unova_bw_alder.ogg",
+				"unova_bw_bianca.ogg",
+				"unova_bw_bwkyurem.ogg",
+				"unova_bw_colress.ogg",
+				"unova_bw_elitefour.ogg",
+				"unova_bw_ghetsis.ogg",
+				"unova_bw_ghetsis2.ogg",
+				"unova_bw_hugh.ogg",
+				"unova_bw_iris.ogg",
+				"unova_bw_kyurem.ogg",
+				"unova_bw_leader.ogg",
+				"unova_bw_legendary.ogg",
+				"unova_bw_n.ogg",
+				"unova_bw_plasma.ogg",
+				"unova_bw_reshiram.ogg",
+				"unova_bw_trainer.ogg",
+				"unova_bw_wild.ogg",
+				"unova_bw_wild2.ogg",
+				"unova_bw_worldchampion.ogg",
+				"unova_bw_zekrom.ogg"]
+				tracknames = ["Alder","Bianca","Black/White Kyurem","Colress","Elite Four","Ghetsis","Ghetsis 2","Hugh","Iris","Kyurem","Gym Leader","Legendary","N","Team Plasma","Reshiram","Trainer","Wild","Wild 2","World Champion","Zekrom","Cancel"]
+		    end			
+		end
+		when "Kalos"
+	    	soundtypelist = ["Masters EX","XY","Cancel"]
+	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length-1)
+			soundtype = soundtypelist[choosetype]
+			case soundtype
+			when "Masters EX"
+				tracklist =
+				["kalos_ex_diantha.ogg",
+				"kalos_ex_elitefour.ogg",
+				"kalos_ex_emma.ogg",
+				"kalos_ex_friends.ogg",
+				"kalos_ex_leader.ogg",
+				"kalos_ex_looker.ogg",
+				"kalos_ex_lysandre.ogg",
+				"kalos_ex_protag.ogg",
+				"kalos_ex_sycamore.ogg",
+				"kalos_ex_trainer.ogg"]
+				tracknames = ["Diantha","Elite Four","Emma","Friends","Gym Leader","Looker","Lysandre","Calem/Serena","Sycamore","Trainer","Cancel"]
+			when "XY"
+				tracklist =
+				["kalos_xy_champion.ogg",
+				"kalos_xy_elitefour.ogg",
+				"kalos_xy_flare.ogg",
+				"kalos_xy_friend.ogg",
+				"kalos_xy_leader.ogg",
+				"kalos_xy_lysandre.ogg",
+				"kalos_xy_trainer.ogg",
+				"kalos_xy_wild.ogg",
+				"kalos_xy_xernyvel.ogg"]
+				tracknames = ["Diantha","Elite Four","Team Flare","Friends","Gym Leader","Lysandre","Trainer","Wild","Xerneas/Yveltal","Cancel"]
+		    end			
+		end	
+		when "Alola"
+	    	soundtypelist = ["Masters EX","SMUSUM","Cancel"]
+	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length-1)
+			soundtype = soundtypelist[choosetype]
+			case soundtype
+			when "Masters EX"
+				tracklist =
+				["alola_ex_championhau.ogg",
+				"alola_ex_gladion.ogg",
+				"alola_ex_guzma.ogg",
+				"alola_ex_hala.ogg",
+				"alola_ex_hau.ogg",
+				"alola_ex_kahili.ogg",
+				"alola_ex_kahuna.ogg",
+				"alola_ex_kukui.ogg",
+				"alola_ex_lillie.ogg",
+				"alola_ex_lusamine.ogg",
+				"alola_ex_molayne.ogg",
+				"alola_ex_olivia.ogg",
+				"alola_ex_plumeria.ogg",
+				"alola_ex_trainer.ogg"]
+				tracknames = ["Champion Hau","Gladion","Guzma","Hala","Hau","Kahili","Kahuna","Kukui","Lillie","Lusamine","Molayne","Olivia","Plumeria","Trainer","Cancel"]
+			when "SMUSUM"
+				tracklist =
+				["alola_sm_aether.ogg",
+				"alola_sm_battletree.ogg",
+				"alola_sm_champhau.ogg",
+				"alola_sm_elitefour.ogg",
+				"alola_sm_gladion.ogg",
+				"alola_sm_guzma.ogg",
+				"alola_sm_hau.ogg",
+				"alola_sm_kahuna.ogg",
+				"alola_sm_kukui.ogg",
+				"alola_sm_necrozma.ogg",
+				"alola_sm_skull.ogg",
+				"alola_sm_skulladmin.ogg",
+				"alola_sm_solaluna.ogg",
+				"alola_sm_tapu.ogg",
+				"alola_sm_trainer.ogg",
+				"alola_sm_ub.ogg",
+				"alola_sm_unecrozma.ogg",
+				"alola_sm_ursquad.ogg",
+				"alola_sm_utrainer.ogg",
+				"alola_sm_wild.ogg"]
+				tracknames = ["Aether Foundation","Battle Tree","Champion Hau","Elite Four","Gladion","Guzma","Hau","Kahuna","Kukui","Necrozma","Team Skull","Team Skull Admin","Solgaleo/Lunala","Tapu","Trainer","Ultra Beast","Ultra Necrozma","Ultra Recon Squad","Trainer Ultra","Wild","Cancel"]
+		    end			
+		end		
+		when "Galar"
+	    	soundtypelist = ["Masters EX","SMUSUM","Cancel"]
+	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length-1)
+			soundtype = soundtypelist[choosetype]
+			case soundtype
+			when "Masters EX"
+				tracklist =
+				["alola_ex_championhau.ogg",
+				"alola_ex_gladion.ogg",
+				"alola_ex_guzma.ogg",
+				"alola_ex_hala.ogg",
+				"alola_ex_hau.ogg",
+				"alola_ex_kahili.ogg",
+				"alola_ex_kahuna.ogg",
+				"alola_ex_kukui.ogg",
+				"alola_ex_lillie.ogg",
+				"alola_ex_lusamine.ogg",
+				"alola_ex_molayne.ogg",
+				"alola_ex_olivia.ogg",
+				"alola_ex_plumeria.ogg",
+				"alola_ex_trainer.ogg"]
+				tracknames = ["Bede","Hop","Gym Leader","Marnie","Piers","Sonia","Trainer","Cancel"]
+			when "SWSH"
+				tracklist =
+				["alola_sm_aether.ogg",
+				"alola_sm_battletree.ogg",
+				"alola_sm_champhau.ogg",
+				"alola_sm_elitefour.ogg",
+				"alola_sm_gladion.ogg",
+				"alola_sm_guzma.ogg",
+				"alola_sm_hau.ogg",
+				"alola_sm_kahuna.ogg",
+				"alola_sm_kukui.ogg",
+				"alola_sm_necrozma.ogg",
+				"alola_sm_skull.ogg",
+				"alola_sm_skulladmin.ogg",
+				"alola_sm_solaluna.ogg",
+				"alola_sm_tapu.ogg",
+				"alola_sm_trainer.ogg",
+				"alola_sm_ub.ogg",
+				"alola_sm_unecrozma.ogg",
+				"alola_sm_ursquad.ogg",
+				"alola_sm_utrainer.ogg",
+				"alola_sm_wild.ogg"]
+				tracknames = ["Avery","Bede","Galarian Kanto Birds","Mustard (Final)","Eternatus","Hop","Klara","Gym Leader","Leon","Marnie","Glastrier/Spectrier","Mustard","Peony","President Rose","Trainer","Wild","Team Yell","Zacian/Zamazenta","Cancel"]
+		    end			
+		end		
+		when "Hisui"
+			tracklist =
+			["hisui_pla_alpha.ogg",
+			"hisui_pla_volo.ogg",
+			"hisui_pla_warden.ogg",
+			"hisui_pla_wild.ogg"]
+			tracknames = ["Alpha Encounter","Volo","Warden","Wild","Cancel"]		
+		end
+		when "Paldea"
+			tracklist =
+			["paldea_sv_arven.ogg",
+			"paldea_sv_cassiopeia.ogg",
+			"paldea_sv_clavell.ogg",
+			"paldea_sv_elitefour.ogg",
+			"paldea_sv_geeta.ogg",
+			"paldea_sv_jacq.ogg",
+			"paldea_sv_koraimirai.ogg",
+			"paldea_sv_leader.ogg",
+			"paldea_sv_leadertera.ogg",
+			"paldea_sv_legendary.ogg",
+			"paldea_sv_nemona.ogg",
+			"paldea_sv_nemonachamp.ogg",
+			"paldea_sv_paradox.ogg",
+			"paldea_sv_penny.ogg",
+			"paldea_sv_sadaturo.ogg",
+			"paldea_sv_staradmin.ogg",
+			"paldea_sv_teraraid.ogg",
+			"paldea_sv_titan.ogg",
+			"paldea_sv_trainer.ogg",
+			"paldea_sv_wildaz.ogg",
+			"paldea_sv_wildeast.ogg",
+			"paldea_sv_wildnorth.ogg",
+			"paldea_sv_wildpocopath.ogg",
+			"paldea_sv_wildsouth.ogg",
+			"paldea_sv_wildwest.ogg"]
+			tracknames = ["Arven","Cassiopeia","Clavell","Elite Four","Geeta","Jacq","Koraidon/Miraidon","Gym Leader","Gym Leader (Tera)","Legendary","Nemona","Nemona (Final)","Paradox","Penny","Sada/Turo","Team Star Admin","Tera Raid","Titans","Trainer","Wild (Area Zero)","Wild (East)","Wild (North)","Wild (Poco Path)","Wild (South)","Wild (West)","Cancel"]		
+		end	
+		when "Other"
+	    	soundtypelist = ["Battle Revolution","Mystery Dungeon","Cancel"]
+	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length-1)
+			soundtype = soundtypelist[choosetype]
+			case soundtype
+			when "Battle Revolution"
+				tracklist =
+				["bonus_pbr_courtyard.ogg",
+				"bonus_pbr_crystal.ogg",
+				"bonus_pbr_gateway.ogg",
+				"bonus_pbr_magma.ogg",
+				"bonus_pbr_mainstreet.ogg",
+				"bonus_pbr_minorboss.ogg",
+				"bonus_pbr_neon.ogg",
+				"bonus_pbr_stargazer.ogg",
+				"bonus_pbr_sunnypark.ogg",
+				"bonus_pbr_sunset.ogg",
+				"bonus_pbr_waterfall.ogg"]
+				tracknames = ["Courtyard","Crystal","Gateway","Magma","Main Street","Minor Boss","Neon","Stargazer","Sunny Park","Sunset","Waterfall","Cancel"]
+			when "Mystery Dungeon"
+				tracklist =
+				["bonus_pmd_boss.ogg",
+				"bonus_pmd_dialga.ogg"]
+				tracknames = ["Boss","Dialga's FttF","Cancel"]
+		    end			
+		end				
 		tracknum = pbMessage(_INTL("\\bPlease choose a track."),tracknames,tracknames.length-1)
 		if tracknum != tracknames.length-1
 			$PokemonGlobal.nextBattleBGM = tracklist[tracknum]
@@ -181,7 +521,7 @@ def pbOnlineAppearanceChanger
 			when "Male"
 				ttype = "TRAINER_AQUA_M"
 			when "Female"
-				ttype = "TRAINER_AQUA_F"
+				ttype = "TRAINER_AQUA_F"				when "Cancel"
 			end
 		when "Aroma Lady"
 			varlist = ["Hoenn","Kanto","Sinnoh","Cancel"]
@@ -193,7 +533,7 @@ def pbOnlineAppearanceChanger
 			when "Kanto"
 				ttype = "TRAINER_AROMALADY_KANTO"
 			when "Sinnoh"
-				ttype = "TRAINER_AROMALADY_SINNOH"
+				ttype = "TRAINER_AROMALADY_SINNOH"					pbMessage(_INTL("\\bTrainer type selection cancelled."))
 			end
 		when "Artist"
 			varlist = ["Male","Female","Cancel"]
@@ -224,6 +564,8 @@ def pbOnlineAppearanceChanger
 				when "Kanto"
 					ttype = "TRAINER_ARTIST_KANTO"
 				end
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
 			end
 		when "Backpacker"
 			varlist = ["Male","Female","Cancel"]
@@ -241,9 +583,13 @@ def pbOnlineAppearanceChanger
 					ttype = "TRAINER_BACKPACKER_KALOS"
 				when "Unova"
 					ttype = "TRAINER_BACKPACKER_UNOVA_M"
+				when "Cancel"
+					pbMessage(_INTL("\\bTrainer type selection cancelled."))
 				end
 			when "Female"
 				ttype = "TRAINER_BACKPACKER_UNOVA_F"
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
 			end
 		when "Baker"
 			ttype = "TRAINER_BAKER"
@@ -262,6 +608,8 @@ def pbOnlineAppearanceChanger
 				ttype = "TRAINER_BATTLEGIRL_SINNOH"
 			when "Unova"
 				ttype = "TRAINER_BATTLEGIRL_UNOVA"
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
 			end
 		when "Beauty"
 			varlist = ["Alola","Galar","Hoenn","Johto","Kalos","Kanto","Paldea","Sinnoh","Unova","Cancel"]
@@ -286,6 +634,8 @@ def pbOnlineAppearanceChanger
 				ttype = "TRAINER_BEAUTY_SINNOH"
 			when "Unova"
 				ttype = "TRAINER_BEAUTY_UNOVA"
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
 			end
 		when "Bellhop"
 			ttype = "TRAINER_BELLHOP"
@@ -300,6 +650,8 @@ def pbOnlineAppearanceChanger
 				ttype = "TRAINER_BIKER_KANTO"
 			when "Unova"
 				ttype = "TRAINER_BIKER_UNOVA"
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
 			end
 		when "Bird Keeper"
 			varlist = ["Hoenn","Johto","Kanto","Sinnoh","Cancel"]
@@ -314,6 +666,8 @@ def pbOnlineAppearanceChanger
 				ttype = "TRAINER_BIRDKEEPER_KANTO"
 			when "Sinnoh"
 				ttype = "TRAINER_BIRDKEEPER_SINNOH"
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
 			end
 		when "Black Belt"
 			varlist = ["Alola","Galar","Johto","Kalos","Kanto","Sinnoh","Unova","Cancel"]
@@ -334,6 +688,8 @@ def pbOnlineAppearanceChanger
 				ttype = "TRAINER_BLACKBELT_SINNOH"
 			when "Unova"
 				ttype = "TRAINER_BLACKBELT_UNOVA"
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
 			end
 		when "Boarder"
 			ttype = "TRAINER_BOARDER"
@@ -350,6 +706,8 @@ def pbOnlineAppearanceChanger
 				ttype = "TRAINER_BUGCATCHER_KANTO"
 			when "Sinnoh"
 				ttype = "TRAINER_BUGCATCHER_SINNOH"
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
 			end
 		when "Burglar"
 			varlist = ["Johto","Kanto","Cancel"]
@@ -360,6 +718,8 @@ def pbOnlineAppearanceChanger
 				ttype = "TRAINER_BURGLAR_JOHTO"
 			when "Kanto"
 				ttype = "TRAINER_BURGLAR_KANTO"
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
 			end
 		when "Butler"
 			ttype = "TRAINER_BUTLER"
@@ -378,6 +738,8 @@ def pbOnlineAppearanceChanger
 				ttype = "TRAINER_CAMERAMAN_HOENN"
 			when "Sinnoh"
 				ttype = "TRAINER_CAMERAMAN_SINNOH"
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
 			end
 		when "Camper"
 			varlist = ["Male","Female","Cancel"]
@@ -395,6 +757,8 @@ def pbOnlineAppearanceChanger
 					ttype = "TRAINER_CAMPER_KANTO_M"
 				when "Sinnoh"
 					ttype = "TRAINER_CAMPER_SINNOH_M"
+				when "Cancel"
+					pbMessage(_INTL("\\bTrainer type selection cancelled."))
 				end
 			when "Female"
 				case var
@@ -404,7 +768,11 @@ def pbOnlineAppearanceChanger
 					ttype = "TRAINER_CAMPER_KANTO_F"
 				when "Sinnoh"
 					ttype = "TRAINER_CAMPER_SINNOH_F"
+				when "Cancel"
+					pbMessage(_INTL("\\bTrainer type selection cancelled."))
 				end
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
 			end
 		when "Channeler"
 			ttype = "TRAINER_CHANNELER"
@@ -424,15 +792,25 @@ def pbOnlineAppearanceChanger
 					ttype = "TRAINER_CLERK_GALAR_M"
 				when "Unova"
 					ttype = "TRAINER_CLERK_UNOVA_M"
+				when "Cancel"
+					pbMessage(_INTL("\\bTrainer type selection cancelled."))
 				end
 			when "Female"
+				varlist = ["Alola","Galar","Unova","Cancel"]
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+				var = varlist[choosevar]
+				case var
 				when "Alola"
 					ttype = "TRAINER_CLERK_ALOLA_M"
 				when "Galar"
 					ttype = "TRAINER_CLERK_GALAR_M"
 				when "Unova"
 					ttype = "TRAINER_CLERK_UNOVA_M"
+				when "Cancel"
+					pbMessage(_INTL("\\bTrainer type selection cancelled."))
 				end
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
 			end
 		when "Clown"
 			ttype = "TRAINER_CLOWN"
@@ -447,6 +825,8 @@ def pbOnlineAppearanceChanger
 				ttype = "TRAINER_COLLECTOR_HOENN"
 			when "Sinnoh"
 				ttype = "TRAINER_COLLECTOR_SINNOH"
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
 			end
 		when "Cook"
 			varlist = ["Alola","Galar","Kalos","Cancel"]
@@ -459,6 +839,8 @@ def pbOnlineAppearanceChanger
 				ttype = "TRAINER_COOK_GALAR"
 			when "Kalos"
 				ttype = "TRAINER_COOK_KALOS"
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
 			end		
 		when "Cyclist"
 	    	varlist = ["Male","Female","Cancel"]
@@ -508,7 +890,9 @@ def pbOnlineAppearanceChanger
 					ttype = "TRAINER_DANCER_GALAR"
 				when "Cancel"
 					pbMessage(_INTL("\\bTrainer type selection cancelled."))
-				end			
+				end
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))			
 			end
 		when "Diver"
 			varlist = ["Male","Female","Cancel"]
@@ -540,7 +924,9 @@ def pbOnlineAppearanceChanger
 					pbMessage(_INTL("\\bTrainer type selection cancelled."))
 				end	
 			when "Female"
-				ttype = "TRAINER_DANCER_UNOVA"					
+				ttype = "TRAINER_DANCER_UNOVA"
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))					
 			end
 		when "Dragon Tamer"
 			varlist = ["Hoenn","Kanto","Sinnoh","Cancel"]
@@ -600,7 +986,9 @@ def pbOnlineAppearanceChanger
 					pbMessage(_INTL("\\bTrainer type selection cancelled."))
 				end	
 			when "Female"
-				ttype = "TRAINER_FISHER_GALAR"					
+				ttype = "TRAINER_FISHER_GALAR"		
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))			
 			end
 		when "Team Flare Grunt"
 			varlist = ["Male","Female","Cancel"]
@@ -827,7 +1215,7 @@ def pbOnlineAppearanceChanger
 				ttype = "TRAINER_MAGMA_F"
 			when "Cancel"
 				pbMessage(_INTL("\\bTrainer type selection cancelled."))
-			end			
+			end
 		when "Maid"
 			varlist = ["Kalos","Sinnoh","Unova","Cancel"]
 	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
@@ -843,9 +1231,9 @@ def pbOnlineAppearanceChanger
 				pbMessage(_INTL("\\bTrainer type selection cancelled."))
 			end			
 		when "Medium"
-			ttype = "TRAINER_MEDIUM"	
+			ttype = "TRAINER_MEDIUM"
 		when "Model"
-			ttype = "TRAINER_MODEL"		
+			ttype = "TRAINER_MODEL"
 		when "Musician"
 			varlist = ["Male","Female","Cancel"]
 	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
@@ -868,8 +1256,410 @@ def pbOnlineAppearanceChanger
 					pbMessage(_INTL("\\bTrainer type selection cancelled."))
 				end	
 			when "Female"
-				ttype = "TRAINER_MUSICIAN_UNOVA_F"					
-			end			
+				ttype = "TRAINER_MUSICIAN_UNOVA_F"
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))					
+			end
+		when "Ninja Boy"
+			varlist = ["Hoenn","Sinnoh","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+			var = varlist[choosevar]
+			case var
+			when "Hoenn"
+				ttype = "TRAINER_NINJABOY_HOENN"
+			when "Sinnoh"
+				ttype = "TRAINER_NINJABOY_SINNOH"		
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
+			end	
+		when "Nurse"
+			varlist = ["Alola","Sinnoh","Unova","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+			var = varlist[choosevar]
+			case var
+			when "Hoenn"
+				ttype = "TRAINER_NURSE_ALOLA"
+			when "Sinnoh"
+				ttype = "TRAINER_NURSE_SINNOH"	
+			when "Unova"
+				ttype = "TRAINER_NURSE_UNOVA"	
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
+			end	
+		when "Nursery Aide"
+			ttype = "TRAINER_NURSERYAIDE"
+		when "Officer"
+			varlist = ["Alola","Galar","Sinnoh","Unova","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+			var = varlist[choosevar]
+			case var
+			when "Hoenn"
+				ttype = "TRAINER_OFFICER_ALOLA"
+			when "Galar"
+				ttype = "TRAINER_OFFICER_GALAR"	
+			when "Sinnoh"
+				ttype = "TRAINER_OFFICER_SINNOH"	
+			when "Unova"
+				ttype = "TRAINER_OFFICER_UNOVA"	
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
+			end	
+		when "Parasol Lady"
+			varlist = ["Hoenn","Sinnoh","Unova","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+			var = varlist[choosevar]
+			case var
+			when "Hoenn"
+				ttype = "TRAINER_PARASOLLADY_HOENN"
+			when "Sinnoh"
+				ttype = "TRAINER_PARASOLLADY_SINNOH"	
+			when "Unova"
+				ttype = "TRAINER_PARASOLLADY_UNOVA"	
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
+			end	
+		when "Pilot"
+			ttype = "TRAINER_PILOT"
+		when "Musician"
+			varlist = ["Male","Female","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+			var = varlist[choosevar]
+			case var
+			when "Male"
+				varlist = ["Plasma Standard","Plasma Neo","Cancel"]
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+				var = varlist[choosevar]
+				case var
+				when "Plasma Standard"
+					ttype = "TRAINER_PLASMA_M"
+				when "Plasma Neo"
+					ttype = "TRAINER_PLASMANEO_M"			
+				when "Cancel"
+					pbMessage(_INTL("\\bTrainer type selection cancelled."))
+				end	
+			when "Female"
+				varlist = ["Plasma Standard","Plasma Neo","Cancel"]
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+				var = varlist[choosevar]
+				case var
+				when "Plasma Standard"
+					ttype = "TRAINER_PLASMA_F"
+				when "Plasma Neo"
+					ttype = "TRAINER_PLASMANEO_F"			
+				when "Cancel"
+					pbMessage(_INTL("\\bTrainer type selection cancelled."))
+				end	
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))					
+			end
+		when "Poké Fan"
+			varlist = ["Male","Female","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+			var = varlist[choosevar]
+			case var
+			when "Male"
+				varlist = ["Hoenn","Kalos","Sinnoh","Unova","Galar","Cancel"]
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+				var = varlist[choosevar]
+				case var
+				when "Hoenn"
+					ttype = "TRAINER_POKEFAN_HOENN_M"
+				when "Kalos"
+					ttype = "TRAINER_POKEFAN_KALOS_M"
+				when "Sinnoh"
+					ttype = "TRAINER_POKEFAN_SINNOH_M"
+				when "Unova"
+					ttype = "TRAINER_POKEFAN_UNOVA_M"			
+				when "Cancel"
+					pbMessage(_INTL("\\bTrainer type selection cancelled."))
+				end	
+			when "Female"
+				varlist = ["Hoenn","Kalos","Sinnoh","Unova","Cancel"]
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+				var = varlist[choosevar]
+				case var
+				when "Hoenn"
+					ttype = "TRAINER_POKEFAN_HOENN_F"
+				when "Kalos"
+					ttype = "TRAINER_POKEFAN_KALOS_F"
+				when "Sinnoh"
+					ttype = "TRAINER_POKEFAN_SINNOH_F"
+				when "Unova"
+					ttype = "TRAINER_POKEFAN_UNOVA_F"			
+				when "Cancel"
+					pbMessage(_INTL("\\bTrainer type selection cancelled."))
+				end	
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))					
+			end
+		when "Poké Kid"
+			varlist = ["Male","Female","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+			var = varlist[choosevar]
+			case var
+			when "Male"
+				varlist = ["Galar","Sinnoh","Cancel"]
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+				var = varlist[choosevar]
+				case var
+				when "Galar"
+					ttype = "TRAINER_POKEKID_GALAR_M"
+				when "Sinnoh"
+					ttype = "TRAINER_POKEKID_SINNOH"			
+				when "Cancel"
+					pbMessage(_INTL("\\bTrainer type selection cancelled."))
+				end	
+			when "Female"
+				ttype = "TRAINER_POKEKID_GALAR_F"
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))					
+			end
+		when "Poké Maniac"
+			varlist = ["Hoenn","Johto","Kanto","Paldea","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+			var = varlist[choosevar]
+			case var
+			when "Hoenn"
+				ttype = "TRAINER_POKEMANIAC_HOENN"
+			when "Johto"
+				ttype = "TRAINER_POKEMANIAC_JOHTO"	
+			when "Kanto"
+				ttype = "TRAINER_POKEMANIAC_KANTO"	
+			when "Paldea"
+				ttype = "TRAINER_POKEMANIAC_PALDEA"	
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
+			end	
+		when "Pokémon Breeder"
+			varlist = ["Male","Female","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+			var = varlist[choosevar]
+			case var
+			when "Male"
+				varlist = ["Galar","Hoenn","Kalos","Kanto","Sinnoh","Unova","Cancel"]
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+				var = varlist[choosevar]
+				case var
+				when "Galar"
+					ttype = "TRAINER_POKEMONBREEDER_GALAR_M"
+				when "Hoenn"
+					ttype = "TRAINER_POKEMONBREEDER_HOENN_M"	
+				when "Kalos"
+					ttype = "TRAINER_POKEMONBREEDER_KALOS_M"
+				when "Kanto"
+					ttype = "TRAINER_POKEMONBREEDER_KANTO"	
+				when "Sinnoh"
+					ttype = "TRAINER_POKEMONBREEDER_SINNOH_M"	
+				when "Unova"
+					ttype = "TRAINER_POKEMONBREEDER_UNOVA_M"	
+				when "Cancel"
+					pbMessage(_INTL("\\bTrainer type selection cancelled."))
+				end	
+			when "Female"
+				varlist = ["Galar","Hoenn","Kalos","Sinnoh","Unova","Cancel"]
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+				var = varlist[choosevar]
+				case var
+				when "Galar"
+					ttype = "TRAINER_POKEMONBREEDER_GALAR_F"
+				when "Hoenn"
+					ttype = "TRAINER_POKEMONBREEDER_HOENN_F"	
+				when "Kalos"
+					ttype = "TRAINER_POKEMONBREEDER_KALOS_F"
+				when "Sinnoh"
+					ttype = "TRAINER_POKEMONBREEDER_SINNOH_F"	
+				when "Unova"
+					ttype = "TRAINER_POKEMONBREEDER_UNOVA_F"	
+				when "Cancel"
+					pbMessage(_INTL("\\bTrainer type selection cancelled."))
+				end	
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))					
+			end
+		when "Pokémon Ranger"
+			varlist = ["Male","Female","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+			var = varlist[choosevar]
+			case var
+			when "Male"
+				varlist = ["Hoenn","Kalos","Sinnoh","Unova","Cancel"]
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+				var = varlist[choosevar]
+				case var
+				when "Hoenn"
+					ttype = "TRAINER_POKEMONRANGER_HOENN_M"
+				when "Kalos"
+					ttype = "TRAINER_POKEMONRANGER_KALOS_M"	
+				when "Sinnoh"
+					ttype = "TRAINER_POKEMONRANGER_SINNOH_M"
+				when "Unova"
+					ttype = "TRAINER_POKEMONRANGER_UNOVA_M"
+				when "Cancel"
+					pbMessage(_INTL("\\bTrainer type selection cancelled."))
+				end	
+			when "Female"
+				varlist = ["Hoenn","Kalos","Sinnoh","Unova","Cancel"]
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+				var = varlist[choosevar]
+				case var
+				when "Hoenn"
+					ttype = "TRAINER_POKEMONRANGER_HOENN_F"
+				when "Kalos"
+					ttype = "TRAINER_POKEMONRANGER_KALOS_F"	
+				when "Sinnoh"
+					ttype = "TRAINER_POKEMONRANGER_SINNOH_F"
+				when "Unova"
+					ttype = "TRAINER_POKEMONRANGER_UNOVA_F"
+				when "Cancel"
+					pbMessage(_INTL("\\bTrainer type selection cancelled."))
+				end	
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))					
+			end
+		when "Postman"
+			ttype = "TRAINER_POSTMAN"
+		when "Preschooler"
+			varlist = ["Male","Female","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+			var = varlist[choosevar]
+			case var
+			when "Male"
+				varlist = ["Alola","Kalos","Unova","Cancel"]
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+				var = varlist[choosevar]
+				case var
+				when "Alola"
+					ttype = "TRAINER_PRESCHOOLER_ALOLA_M"
+				when "Kalos"
+					ttype = "TRAINER_PRESCHOOLER_KALOS_M"
+				when "Unova"
+					ttype = "TRAINER_PRESCHOOLER_UNOVA_M"
+				when "Cancel"
+					pbMessage(_INTL("\\bTrainer type selection cancelled."))
+				end	
+			when "Female"
+				varlist = ["Alola","Kalos","Unova","Cancel"]
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+				var = varlist[choosevar]
+				case var
+				when "Alola"
+					ttype = "TRAINER_PRESCHOOLER_ALOLA_F"
+				when "Kalos"
+					ttype = "TRAINER_PRESCHOOLER_KALOS_F"
+				when "Unova"
+					ttype = "TRAINER_PRESCHOOLER_UNOVA_F"
+				when "Cancel"
+					pbMessage(_INTL("\\bTrainer type selection cancelled."))
+				end	
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))					
+			end
+		when "Psychic"
+			varlist = ["Male","Female","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+			var = varlist[choosevar]
+			case var
+			when "Male"
+				varlist = ["Kalos","Kanto","Sinnoh","Unova","Cancel"]
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+				var = varlist[choosevar]
+				case var
+				when "Kalos"
+					ttype = "TRAINER_PSYCHIC_KALOS"
+				when "Kanto"
+					ttype = "TRAINER_PSYCHIC_KANTO"
+				when "Sinnoh"
+					ttype = "TRAINER_PSYCHIC_SINNOH_M"
+				when "Unova"
+					ttype = "TRAINER_PSYCHIC_UNOVA_M"
+				when "Cancel"
+					pbMessage(_INTL("\\bTrainer type selection cancelled."))
+				end	
+			when "Female"
+				varlist = ["Sinnoh","Unova","Cancel"]
+	    		choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+				var = varlist[choosevar]
+				case var
+				when "Sinnoh"
+					ttype = "TRAINER_PSYCHIC_SINNOH_F"
+				when "Unova"
+					ttype = "TRAINER_PSYCHIC_UNOVA_F"
+				when "Cancel"
+					pbMessage(_INTL("\\bTrainer type selection cancelled."))
+				end	
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))					
+			end
+		when "Punk Girl"
+			varlist = ["Alola","Kalos","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+			var = varlist[choosevar]
+			case var
+			when "Alola"
+				ttype = "TRAINER_PUNKGIRL_ALOLA"
+			when "Kalos"
+				ttype = "TRAINER_PUNKGIRL_KALOS"
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
+			end	
+		when "Punk Guy"
+			varlist = ["Alola","Kalos","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+			var = varlist[choosevar]
+			case var
+			when "Alola"
+				ttype = "TRAINER_PUNKGUY_ALOLA"
+			when "Kalos"
+				ttype = "TRAINER_PUNKGUY_KALOS"
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
+			end	
+		when "Rail Staff"
+			ttype = "TRAINER_RAILSTAFF"
+		when "Rancher"
+			varlist = ["Male","Female","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+			var = varlist[choosevar]
+			case var
+			when "Male"
+				ttype = "TRAINER_RANCHER_M"
+			when "Female"
+				ttype = "TRAINER_RANCHER_F"
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
+			end	
+		when "Reporter"
+			varlist = ["Galar","Hoenn","Sinnoh","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+			var = varlist[choosevar]
+			case var
+			when "Galar"
+				ttype = "TRAINER_REPORTER_GALAR"
+			when "Hoenn"
+				ttype = "TRAINER_REPORTER_HOENN"
+			when "Sinnoh"
+				ttype = "TRAINER_REPORTER_SINNOH"
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
+			end	
+		when "Rich Boy"
+			varlist = ["Hoenn","Kalos","Sinnoh","Unova","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+			var = varlist[choosevar]
+			case var
+			when "Hoenn"
+				ttype = "TRAINER_RICHBOY_HOENN"
+			when "Kalos"
+				ttype = "TRAINER_RICHBOY_KALOS"
+			when "Sinnoh"
+				ttype = "TRAINER_RICHBOY_SINNOH"
+			when "Unova"
+				ttype = "TRAINER_RICHBOY_UNOVA"
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
+			end	
+
+
 		end # end of all trainers
 		if var != "Cancel"
 			$player.online_trainer_type = ttype
