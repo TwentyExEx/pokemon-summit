@@ -2040,7 +2040,193 @@ def pbOnlineAppearanceChanger
 			when "Cancel"
 				pbMessage(_INTL("\\bTrainer type selection cancelled."))					
 			end
-
+		when "Trial Guide"
+			varlist = ["Male","Female","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+			var = varlist[choosevar]
+			case var
+			when "Male"
+				ttype = "TRAINER_TRIALGUIDE_M"
+			when "Female"
+				ttype = "TRAINER_TRIALGUIDE_F"
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
+			end
+		when "Triathlete"
+			varlist = ["Cyclist","Runner","Swim","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a outfit variation."),varlist,varlist.length-1)
+			var = varlist[choosevar]
+			case var
+			when "Cyclist"
+				ttype = "TRAINER_TRIATHLETE_CYCLIST"
+			when "Runner"
+				ttype = "TRAINER_TRIATHLETE_RUNNER"
+			when "Swim"
+				ttype = "TRAINER_TRIATHLETE_SWIM"
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
+			end	
+		when "Tuber"
+	    	varlist = ["Male","Female","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+			var = varlist[choosevar]
+			case var
+			when "Male"
+			varlist = ["Hoenn","Sinnoh","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+			var = varlist[chooseregion]
+				case var
+				when "Hoenn"
+					ttype = "TRAINER_TUBER_HOENN_M"
+				when "Sinnoh"
+					ttype = "TRAINER_TUBER_SINNOH_M"
+				when "Cancel"
+					pbMessage(_INTL("\\bTrainer type selection cancelled."))
+				end
+			when "Female"
+			varlist = ["Hoenn","Sinnoh","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+			var = varlist[chooseregion]
+				case var
+				when "Hoenn"
+					ttype = "TRAINER_TUBER_HOENN_F"
+				when "Sinnoh"
+					ttype = "TRAINER_TUBER_SINNOH_F"
+				when "Cancel"
+					pbMessage(_INTL("\\bTrainer type selection cancelled."))
+				end
+			end	
+		when "Veteran"
+	    	varlist = ["Male","Female","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+			var = varlist[choosevar]
+			case var
+			when "Male"
+			varlist = ["Alola","Kalos","Unova","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+			var = varlist[chooseregion]
+				case var
+				when "Alola"
+					ttype = "TRAINER_VETERAN_ALOLA_M"
+				when "Kalos"
+					ttype = "TRAINER_VETERAN_KALOS_M"
+				when "Unova"
+					ttype = "TRAINER_VETERAN_UNOVA_M"
+				when "Cancel"
+					pbMessage(_INTL("\\bTrainer type selection cancelled."))
+				end
+			when "Female"
+			varlist = ["Alola","Kalos","Unova","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+			var = varlist[chooseregion]
+				case var
+				when "Alola"
+					ttype = "TRAINER_VETERAN_ALOLA_F"
+				when "Kalos"
+					ttype = "TRAINER_VETERAN_KALOS_F"
+				when "Unova"
+					ttype = "TRAINER_VETERAN_UNOVA_F"
+				when "Cancel"
+					pbMessage(_INTL("\\bTrainer type selection cancelled."))
+				end
+			end
+		when "Waiter"
+			varlist = ["Kalos","Sinnoh","Unova","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+			var = varlist[choosevar]
+			case var
+			when "Kalos"
+				ttype = "TRAINER_WAITER_KALOS"
+			when "Sinnoh"
+				ttype = "TRAINER_WAITER_SINNOH"
+			when "Unova"
+				ttype = "TRAINER_WAITER_UNOVA"
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
+			end	
+		when "Waitress"
+			varlist = ["Kalos","Sinnoh","Unova","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+			var = varlist[choosevar]
+			case var
+			when "Kalos"
+				ttype = "TRAINER_WAITRESS_KALOS"
+			when "Sinnoh"
+				ttype = "TRAINER_WAITRESS_SINNOH"
+			when "Unova"
+				ttype = "TRAINER_WAITRESS_UNOVA"
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
+			end	
+		when "Worker"
+	    	varlist = ["Male","Female","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+			var = varlist[choosevar]
+			case var
+			when "Male"
+			varlist = ["Alola","Galar","Kalos","Kanto","Sinnoh","Unova","Unova (Winter)","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+			var = varlist[chooseregion]
+				case var
+				when "Alola"
+					ttype = "TRAINER_ACETRAINER_ALOLA_M"
+				when "Galar"
+					ttype = "TRAINER_ACETRAINER_HOENN_M"
+				when "Kalos"
+					ttype = "TRAINER_ACETRAINER_JOHTO_M"
+				when "Kanto"
+					ttype = "TRAINER_ACETRAINER_KALOS_M"
+				when "Sinnoh"
+					ttype = "TRAINER_ACETRAINER_KANTO_M"
+				when "Unova"
+					ttype = "TRAINER_ACETRAINER_SINNOH_M"
+				when "Unova (Winter)"
+					ttype = "TRAINER_ACETRAINER_SINNOH_WINTER_M"
+				when "Cancel"
+					pbMessage(_INTL("\\bTrainer type selection cancelled."))
+				end
+			when "Female"
+				ttype = "TRAINER_WORKER_GALAR_F"
+				end
+			end
+		when "Team Yell Grunt"
+			varlist = ["Male","Female","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a gender variation."),varlist,varlist.length-1)
+			var = varlist[choosevar]
+			case var
+			when "Male"
+				ttype = "TRAINER_YELL_M"
+			when "Female"
+				ttype = "TRAINER_YELL_F"
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
+			end
+		when "Youngster"
+			varlist = ["Alola","Galar","Hoenn","Johto","Kalos","Kanto","Paldea","Sinnoh","Unova","Cancel"]
+	    	choosevar = pbMessage(_INTL("\\bChoose a region variation."),varlist,varlist.length-1)
+			var = varlist[choosevar]
+			case var
+			when "Alola"
+				ttype = "TRAINER_YOUNGSTER_ALOLA"
+			when "Galar"
+				ttype = "TRAINER_YOUNGSTER_GALAR"
+			when "Hoenn"
+				ttype = "TRAINER_YOUNGSTER_HOENN"
+			when "Johto"
+				ttype = "TRAINER_YOUNGSTER_JOHTO"
+			when "Kalos"
+				ttype = "TRAINER_YOUNGSTER_KALOS"
+			when "Kanto"
+				ttype = "TRAINER_YOUNGSTER_KANTO"
+			when "Paldea"
+				ttype = "TRAINER_YOUNGSTER_PALDEA"
+			when "Sinnoh"
+				ttype = "TRAINER_YOUNGSTER_SINNOH"
+			when "Unova"
+				ttype = "TRAINER_YOUNGSTER_UNOVA"
+			when "Cancel"
+				pbMessage(_INTL("\\bTrainer type selection cancelled."))
+			end	
 		end # end of all trainers
 		if var != "Cancel"
 			$player.online_trainer_type = ttype
