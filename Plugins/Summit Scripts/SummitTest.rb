@@ -69,11 +69,32 @@ def pbSummitTeamBuilder
         $game_screen.start_tone_change(Tone.new(-255,-255,-255,0), 10 * Graphics.frame_rate / 20)
         pbWait(10)
         loop do
-          if @pkmn.moves.length <= 3
-            pbSetMoveScreen(@pkmn)
-          else
-            break
+          retval = pbSetMoveScreen(@pkmn)
+          if retval == false
+            if @pkmn.moves.length < 1
+              $game_screen.start_tone_change(Tone.new(0,0,0,0), 10 * Graphics.frame_rate / 20)
+              pbWait(10)
+              cmd = pbConfirmMessageSerious(_INTL("Your Pokémon has no moves.\\1 Cancel Pokémon creation?"))
+              if cmd == true
+                pbMessage(_INTL("Pokémon creation cancelled.")) 
+                return
+              end
+            else
+              $game_screen.start_tone_change(Tone.new(0,0,0,0), 10 * Graphics.frame_rate / 20)
+              pbWait(10)
+              cmd = pbConfirmMessage(_INTL("Your Pokémon doesn't have a full moveset.\\1 Complete Pokémon creation?"))
+              if cmd == false
+                cmd = pbConfirmMessageSerious(_INTL("Cancel Pokémon creation?"))
+                if cmd == true
+                  pbMessage(_INTL("Pokémon creation cancelled.")) 
+                  return
+                end
+              else
+                break
+              end
+            end
           end
+          break if !(@pkmn.moves.length <= 3)
         end
         $game_screen.start_tone_change(Tone.new(0,0,0,0), 10 * Graphics.frame_rate / 20)
         pbWait(10)
@@ -186,7 +207,7 @@ def pbSummitTeamBuilder
       cmd = pbConfirmMessageSerious(_INTL("Cancel Pokémon creation?"))
       if cmd == true
         pbMessage(_INTL("Pokémon creation cancelled.")) 
-        break
+        return
       end
     end
   end
