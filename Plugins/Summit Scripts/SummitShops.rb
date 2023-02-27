@@ -67,6 +67,58 @@ def pbSummitShopUnlock
   $game_switches[num] = true
 end
 
+def pbSummitEVTrain(pkmn)
+  loop do
+    totalev = 0
+    evcommands = []
+    ev_id = []
+    GameData::Stat.each_main do |s|
+      evcommands.push(s.name + " (#{pkmn.ev[s.id]})")
+      ev_id.push(s.id)
+      totalev += @pkmn.ev[s.id]
+    end
+    cmd2 = pbMessage(_INTL("Change which EV?\nTotal: {1}/{2} ({3}%)",
+                                       totalev, Pokemon::EV_LIMIT,
+                                       100 * totalev / Pokemon::EV_LIMIT), evcommands, -1)
+    if cmd2 != -1
+      params = ChooseNumberParams.new
+      upperLimit = 0
+      GameData::Stat.each_main { |s| upperLimit += pkmn.ev[s.id] if s.id != ev_id[cmd2] }
+      upperLimit = Pokemon::EV_LIMIT - upperLimit
+      upperLimit = [upperLimit, Pokemon::EV_STAT_LIMIT].min
+      thisValue = [pkmn.ev[ev_id[cmd2]], upperLimit].min
+      params.setRange(0, upperLimit)
+      params.setDefaultValue(thisValue)
+      params.setCancelValue(thisValue)
+      f = pbMessageChooseNumber(_INTL("Set the EV for {1} (max. {2}).",
+                                      GameData::Stat.get(ev_id[cmd2]).name, upperLimit), params)
+      if f != pkmn.ev[ev_id[cmd2]]
+        pkmn.ev[ev_id[cmd2]] = f
+        pkmn.calc_stats
+      end
+    elsif cmd2 == -1
+      if totalev != Pokemon::EV_LIMIT
+        cmd = pbConfirmMessage(_INTL("You have not allocated all possible EVs.\\1 Allocate remaining EVs?"))
+        if cmd == false
+          cmd = pbConfirmMessage(_INTL("Confirm Pokémon with unallocated EVs?"))
+          if cmd == true
+            return true
+            break 
+          end
+        else
+          return false
+        end
+      else
+        cmd = pbConfirmMessage(_INTL("Confirm EV allocation?"))
+        if cmd == true
+          return true
+          break
+        end
+      end
+    end
+  end
+end
+
 def pbSummitSuperTrain
   @evstats = ["HP","Attack","Defense","Special Attack","Special Defense","Speed"]
   @selection = @evstats.clone
@@ -135,6 +187,49 @@ def pbSummitSuperTrain
             break
           end
         end
+      end
+    end
+  end
+end
+
+def pbSummitBetaChangeNature
+  loop do
+    pbMessage("\\rWhich Pokémon would you like to change the nature of?")
+    pbChoosePokemon(1, 3)
+    if $game_variables[1] < 0
+      cmd = pbMessage("Cancel nature change?",["Yes", "No"],1)
+      if cmd <= 0
+        return false
+        break
+      end
+    else
+      pkmn = pbGetPokemon(1)
+      commands = []
+      ids = []
+      GameData::Nature.each do |nature|
+        if nature.stat_changes.length == 0
+          commands.push(_INTL("{1} (---)", nature.real_name))
+        else
+          plus_text = ""
+          minus_text = ""
+          nature.stat_changes.each do |change|
+            if change[1] > 0
+              plus_text += "/" if !plus_text.empty?
+              plus_text += GameData::Stat.get(change[0]).name_brief
+            elsif change[1] < 0
+              minus_text += "/" if !minus_text.empty?
+              minus_text += GameData::Stat.get(change[0]).name_brief
+            end
+          end
+          commands.push(_INTL("{1} (+{2}, -{3})", nature.real_name, plus_text, minus_text))
+        end
+        ids.push(nature.id)
+      end
+      cmd = pbMessage("Set Pokémon's nature.", commands)
+      if cmd >= 0
+        pkmn.nature = ids[cmd]
+        return true
+        break
       end
     end
   end
@@ -230,6 +325,36 @@ def pbSummitChangeNature
             break
           end
         end
+      end
+    end
+  end
+end
+
+def pbSummitBetaChangeAbility
+  loop do
+    pbMessage("\\rWhich Pokémon would you like to change the ability of?")
+    pkmn = pbChoosePokemon(1, 3)
+    if $game_variables[1] < 0
+      cmd = pbMessage("\\rCancel ability change?",["Yes", "No"],1)
+      if cmd <= 0
+        return false
+        break
+      end
+    else
+      loop do
+        pkmn = pbGetPokemon(1)
+        abils = pkmn.getAbilityList
+        ability_commands = []
+        abil_cmd = 0
+        abils.each do |i|
+          ability_commands.push(((i[1] < 2) ? "" : "(H) ") + GameData::Ability.get(i[0]).name)
+          abil_cmd = ability_commands.length - 1 if pkmn.ability_id == i[0]
+        end
+        abil_cmd = pbMessage(_INTL("\\rChoose an ability."), ability_commands, abil_cmd)
+        next if abil_cmd < 0
+        pkmn.ability_index = abils[abil_cmd][1]
+        pkmn.ability = nil
+        return true
       end
     end
   end
