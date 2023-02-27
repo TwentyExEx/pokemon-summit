@@ -1,6 +1,9 @@
 def pbSummitTeamBuilder
   loop do 
-    pbMessage(_INTL("Your party is currently full.\\1 Please deposit a Pokémon in your PC before attempting to create another.")) if !($player.party.length < 6)
+    if !($player.party.length < 6)
+      pbMessage(_INTL("Your party is currently full.\\1 Please deposit a Pokémon in your PC before attempting to create another.")) 
+      return
+    end
     # Start, select species
     msgwindow = pbCreateMessageWindow()
     pbMessageDisplay(msgwindow, _ISPRINTF("Enter a Pokémon species."))
