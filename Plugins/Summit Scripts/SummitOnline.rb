@@ -63,8 +63,8 @@ def pbOnlineMusicChanger
 		    return
 			end
 		when "Johto"
-	    	soundtypelist = ["Masters EX","GSC","HGSS","Cancel"]
-	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length)
+    	soundtypelist = ["Masters EX","GSC","HGSS","Cancel"]
+    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length)
 			soundtype = soundtypelist[choosetype]
 			case soundtype
 			when "Masters EX"
@@ -101,7 +101,7 @@ def pbOnlineMusicChanger
 		        "johto_hgss_suicune.ogg",
 		        "johto_hgss_trainer.ogg",
 		        "johto_hgss_wild.ogg"]
-				tracklist = ["Entei","Ho-Oh","Lance/Red","Gym Leader","Lugia","Raikou","Team Rocket","Silver","Suicune","Trainer","Wild","Cancel"]
+				tracknames = ["Entei","Ho-Oh","Lance/Red","Gym Leader","Lugia","Raikou","Team Rocket","Silver","Suicune","Trainer","Wild","Cancel"]
 			when "Cancel"
 				pbMessage(_INTL("\\bBattle music selection cancelled."))
 		    return
