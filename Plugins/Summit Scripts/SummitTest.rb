@@ -80,7 +80,7 @@ def pbSummitTeamBuilder
               cmd = pbConfirmMessageSerious(_INTL("Your Pokémon has no moves.\\1 Cancel Pokémon creation?"))
               if cmd == true
                 pbMessage(_INTL("Pokémon creation cancelled.")) 
-                $player.party.delete_at($player.party.length)
+                $player.party.delete_at($player.party.length-1)
                 return
               end
             else
@@ -91,7 +91,7 @@ def pbSummitTeamBuilder
                 cmd = pbConfirmMessageSerious(_INTL("Cancel Pokémon creation?"))
                 if cmd == true
                   pbMessage(_INTL("Pokémon creation cancelled.")) 
-                $player.party.delete_at($player.party.length)
+                  $player.party.delete_at($player.party.length-1)
                   return
                 end
               else
