@@ -160,9 +160,10 @@ class Battle::Scene::FightMenu < Battle::Scene::MenuBase
       @battleButton.src_rect.height = @battleButtonBitmap[@chosen_button].height / 6
       @battleButton.src_rect.y = @battleStyle * @battleButtonBitmap[@chosen_button].height / 6
     when :tera
-      @battleButton.y = self.y - @battleButtonBitmap[@chosen_button].height / 20
-      @battleButton.src_rect.height = @battleButtonBitmap[@chosen_button].height / 20
-      @battleButton.src_rect.y = @teraType * @battleButtonBitmap[@chosen_button].height / 20
+      count = GameData::Type.count + 1
+      @battleButton.y = self.y - @battleButtonBitmap[@chosen_button].height / count
+      @battleButton.src_rect.height = @battleButtonBitmap[@chosen_button].height / count
+      @battleButton.src_rect.y = @teraType * @battleButtonBitmap[@chosen_button].height / count
     else
       @battleButton.y = self.y - @battleButtonBitmap[@chosen_button].height / 2
       @battleButton.src_rect.height = @battleButtonBitmap[@chosen_button].height / 2
@@ -539,7 +540,7 @@ class Battle::Scene
   # Toggles the use of Mega Evolution.
   #-----------------------------------------------------------------------------
   def pbFightMenu_MegaEvolution(battler, cw)
-	battler.power_trigger = !battler.power_trigger
+    battler.power_trigger = !battler.power_trigger
     if battler.power_trigger
       pbPlayBattleButton
     else

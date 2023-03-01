@@ -570,7 +570,7 @@ if PluginManager.installed?("Bag Screen w/int. Party")
           #---------------------------------------------------------------------
           # Tera Shard compatibility
           #---------------------------------------------------------------------
-          if itm.is_tera_shard? && qty > 1
+          if PluginManager.installed?("Terastal Phenomenon") && itm.is_tera_shard? && qty > 1
             screen.pbDisplay(_INTL("Not enough {1} remaining...", itm.portion_name_plural)) { screen.pbUpdate }
           else
             screen.pbDisplay(_INTL("You used your last {1}.", itm.portion_name_plural)) { screen.pbUpdate }

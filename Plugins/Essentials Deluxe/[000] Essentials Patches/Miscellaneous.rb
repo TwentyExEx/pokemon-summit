@@ -403,8 +403,8 @@ class PokemonStorageScene
         pbDisplayShinyLeaf(pokemon, plugin_overlay, 158, 50)      if Settings::STORAGE_SHINY_LEAF
         pbDisplayIVRatings(pokemon, plugin_overlay, 8, 198, true) if Settings::STORAGE_IV_RATINGS
       end
-        typebitmap = AnimatedBitmap.new(_INTL("Graphics/Pictures/types"))
-        pokemon.types.each_with_index do |type, i|
+      typebitmap = AnimatedBitmap.new(_INTL("Graphics/Pictures/types"))
+      pokemon.types.each_with_index do |type, i|
         type_number = GameData::Type.get(type).icon_position
         type_rect = Rect.new(0, type_number * 28, 64, 28)
         type_x = (pokemon.types.length == 1) ? 52 : 18 + (70 * i)
@@ -566,18 +566,9 @@ MultipleForms.register(:CALYREX, {
 # Edited for compatibility with battle effects that alter battler sprites.
 #-------------------------------------------------------------------------------
 class Battle::Move::TransformUserIntoTarget < Battle::Move
-  alias dx_pbFailsAgainstTarget? pbFailsAgainstTarget?
-  def pbFailsAgainstTarget?(user, target, show_message)
-    if user.dynamax? && !target.dynamax_able?
-      @battle.pbDisplay(_INTL("But it failed!"))
-      return true
-    end
-    return dx_pbFailsAgainstTarget?(user, target, show_message)
-  end
-  
   def pbShowAnimation(id, user, targets, hitNum = 0, showAnimation = true)
     super
-	user.effects[PBEffects::TransformPokemon] = targets[0].pokemon
+    user.effects[PBEffects::TransformPokemon] = targets[0].pokemon
     @battle.scene.pbChangePokemon(user, targets[0].pokemon)
   end
 end
@@ -601,7 +592,7 @@ Battle::AbilityEffects::OnSwitchIn.add(:IMPOSTER,
             choice.semiInvulnerable?
     battle.pbShowAbilitySplash(battler, true)
     battle.pbHideAbilitySplash(battler)
-	battler.effects[PBEffects::TransformPokemon] = choice.pokemon
+    battler.effects[PBEffects::TransformPokemon] = choice.pokemon
     battle.pbAnimation(:TRANSFORM, battler, choice)
     battle.scene.pbChangePokemon(battler, choice.pokemon)
     battler.pbTransform(choice)

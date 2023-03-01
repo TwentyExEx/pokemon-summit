@@ -21,7 +21,7 @@ class Sprite
       if pokemon.dynamax?
         self.applyDynamax(pokemon)
       elsif pokemon.tera?
-        self.applyTera(pokemon.tera_type)
+        self.applyTera
       end
     end
   end
@@ -31,7 +31,7 @@ class Sprite
     if @pokemon&.dynamax?
       self.applyDynamaxIcon
     elsif @pokemon&.tera?
-      self.applyTeraIcon(pokemon.tera_type)
+      self.applyTeraIcon
     end
   end
   
@@ -113,6 +113,7 @@ class Battle::Scene
   alias dx_pbInitSprites pbInitSprites
   def pbInitSprites
     dx_pbInitSprites
+    pbMidbattleInit
     if !pbInSafari?
       @battle.allBattlers.each do |b|
         @sprites["battler_icon#{b.index}"] = PokemonIconSprite.new(b.pokemon, @viewport)

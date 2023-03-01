@@ -266,3 +266,51 @@ class Battle::Battler
     end
   end
 end
+
+
+#-------------------------------------------------------------------------------
+# Used for getting the name of various effects that count down each turn.
+#-------------------------------------------------------------------------------
+def dxConvertToPBEffect(effect, type)
+  case type
+  when :battler
+  case effect
+	when 19  then return :Disable
+	when 22  then return :Embargo
+	when 37  then return :HealBlock
+	when 53  then return :MagnetRise
+	when 99  then return :Taunt
+	when 100 then return :Telekinesis
+	when 116 then return :Yawn
+	when 313 then return :FocusLock
+	end
+  when :side
+  case effect
+	when 0   then return :AuroraVeil
+	when 5   then return :LightScreen
+	when 6   then return :LuckyChant
+	when 8   then return :Mist
+	when 10  then return :Rainbow
+	when 11  then return :Reflect
+	when 13  then return :Safeguard
+	when 14  then return :SeaOfFire
+	when 18  then return :Swamp
+	when 19  then return :Tailwind
+	when 201 then return :VineLash
+	when 202 then return :Wildfire
+	when 203 then return :Cannonade
+	when 204 then return :Volcalith
+	when 206 then return :FocusedGuard
+	end
+  when :field
+  case effect
+	when 4  then return :Gravity
+	when 7  then return :MagicRoom
+	when 8  then return :MudSportField
+	when 10 then return :TrickRoom
+	when 11 then return :WaterSportField
+	when 12 then return :WonderRoom
+	end
+  end
+  return nil
+end

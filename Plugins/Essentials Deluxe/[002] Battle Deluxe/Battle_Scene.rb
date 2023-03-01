@@ -1,5 +1,5 @@
 #===============================================================================
-# Adds battle animations used for deluxe battle trainer dialogue.
+# Adds battle animations used for deluxe battle speech.
 #===============================================================================
 
 
@@ -69,31 +69,181 @@ end
 
 
 #-------------------------------------------------------------------------------
-# Animation used to slide a trainer off screen.
+# Animation used to slide a speaker on screen.
 #-------------------------------------------------------------------------------
-class Battle::Scene::Animation::TrainerDisappear < Battle::Scene::Animation
-  def initialize(sprites, viewport, idxTrainer)
-    @idxTrainer = idxTrainer + 1
+class Battle::Scene::Animation::SlideSpriteAppear < Battle::Scene::Animation
+  def initialize(sprites, viewport, id, battle)
+    @battle = battle
+    case id
+    when Integer
+      @idxTrainer = id + 1
+      trainer = @battle.opponent[id]
+      @battle.scene.pbUpdateNameWindow(trainer, false)
+    when Symbol, Array
+      @battle.scene.pbUpdateGuestSprite(id) if !@battle.scene.guestSpeaker
+      @guestSpeaker = true
+    end
     super(sprites, viewport)
   end
 
   def createProcesses
-    delay = 0
-    if @sprites["trainer_#{@idxTrainer}"].visible
-      trainer = addSprite(@sprites["trainer_#{@idxTrainer}"], PictureOrigin::BOTTOM)
-      trainer.moveDelta(delay, 8, Graphics.width / 4, 0)
-      trainer.setVisible(delay + 8, false)
+    delay = 0	
+    if @idxTrainer && !@sprites["trainer_#{@idxTrainer}"].visible
+      slideSprite = addSprite(@sprites["trainer_#{@idxTrainer}"], PictureOrigin::BOTTOM)
+      slideSprite.setVisible(delay, true)
+      spriteX, spriteY = Battle::Scene.pbTrainerPosition(1)
+      spriteX += 64 + (Graphics.width / 4)
+    elsif @guestSpeaker && !@battle.scene.guestSpeaker
+      slideSprite = addSprite(@sprites["midbattle_guest"], PictureOrigin::BOTTOM)
+      slideSprite.setVisible(delay, true)
+      spriteX, spriteY = @sprites["midbattle_guest"].x, @sprites["midbattle_guest"].y
+      spriteX += @sprites["midbattle_guest"].width / 2 + (Graphics.width / 4)
+      @battle.scene.guestSpeaker = true
+    end
+    if slideSprite
+      if @battle.battlers[1] && @battle.battlers[1].dynamax?
+        spriteY += 12
+        slideSprite.setZ(delay, @sprites["pokemon_1"].z + 1)
+      end
+      slideSprite.setXY(delay, spriteX, spriteY)
+      slideSprite.moveDelta(delay, 8, -Graphics.width / 4, 0)
     end
   end
 end
 
 
 #-------------------------------------------------------------------------------
-# Plays animations.
+# Animation used to slide a speaker off screen.
+#-------------------------------------------------------------------------------
+class Battle::Scene::Animation::SlideSpriteDisappear < Battle::Scene::Animation
+  def initialize(sprites, viewport, battle)
+    @battle = battle
+    super(sprites, viewport)
+  end
+
+  def createProcesses
+    delay = 0
+    sprites_to_hide = 1
+    sprites_to_hide += @battle.opponent.length if @battle.opponent
+    sprites_to_hide.times do |i|
+      if @sprites["trainer_#{i}"] && @sprites["trainer_#{i}"].visible
+        slideSprite = addSprite(@sprites["trainer_#{i}"], PictureOrigin::BOTTOM)
+      elsif @battle.scene.guestSpeaker
+        slideSprite = addSprite(@sprites["midbattle_guest"], PictureOrigin::BOTTOM)
+        @battle.scene.guestSpeaker = false
+      end
+      if slideSprite
+        slideSprite.moveDelta(delay, 8, Graphics.width / 4, 0)
+        slideSprite.setVisible(delay + 8, false)
+        if @battle.battlers[1] && @battle.battlers[1].dynamax?
+          slideSprite.setZ(delay + 8, @sprites["pokemon_1"].z - 1)
+        end
+      end
+    end
+  end
+end
+
+
+#-------------------------------------------------------------------------------
+# Battle scene additions for midbattle speech.
 #-------------------------------------------------------------------------------
 class Battle::Scene
-  def pbHideOpponent(idxTrainer)
-    hideAnim = Animation::TrainerDisappear.new(@sprites, @viewport, idxTrainer)
+  attr_accessor :guestSpeaker
+  
+  def pbMidbattleInit
+    nameWindow = Window_AdvancedTextPokemon.new
+    nameWindow.baseColor      = MESSAGE_BASE_COLOR
+    nameWindow.shadowColor    = MESSAGE_SHADOW_COLOR
+    nameWindow.viewport       = @viewport
+    nameWindow.letterbyletter = false
+    nameWindow.visible        = false
+    nameWindow.x              = 16
+    nameWindow.y              = Graphics.height - 158
+    nameWindow.z              = 200
+    @sprites["nameWindow"]    = nameWindow
+    defaultFile = GameData::TrainerType.front_sprite_filename($player.trainer_type)
+    spriteX, spriteY = Battle::Scene.pbTrainerPosition(1)
+    sprite = pbAddSprite("midbattle_guest", spriteX, spriteY, defaultFile, @viewport)
+    return if !sprite.bitmap
+    sprite.z = 7
+    sprite.ox = sprite.src_rect.width / 2
+    sprite.oy = sprite.bitmap.height
+    sprite.visible = false
+  end
+  
+  def pbUpdateGuestSprite(id)
+    sym  = (id.is_a?(Array)) ? id[0] : id
+    spriteX, spriteY = Battle::Scene.pbTrainerPosition(1)
+    if GameData::Species.exists?(sym)
+      speaker = Pokemon.new(sym, 1)
+      if id.is_a?(Array)
+        speaker.gender      = id[1] || 0
+        speaker.form        = id[2] || 0
+        speaker.shiny       = id[3] || false
+        speaker.makeShadow if id[4]
+      elsif !speaker.singleGendered?
+        speaker.gender = 0
+      end
+      @sprites["midbattle_guest"] = PokemonSprite.new(viewport)
+      sprite = @sprites["midbattle_guest"]
+      sprite.setPokemonBitmap(speaker)
+      sprite.setOffset(PictureOrigin::BOTTOM)
+      sprite.x = spriteX
+      sprite.y = spriteY
+      sprite.ox = sprite.src_rect.width / 2
+      sprite.oy = sprite.bitmap.height
+      speaker.species_data.apply_metrics_to_sprite(sprite, 1)
+    elsif GameData::TrainerType.exists?(sym)
+      speaker = GameData::TrainerType.get(sym)
+      @sprites["midbattle_guest"] = IconSprite.new(spriteX, spriteY, viewport)
+      sprite = @sprites["midbattle_guest"]
+      sprite.setBitmap("Graphics/Trainers/" + sym.to_s)
+      sprite.ox = sprite.src_rect.width / 2
+      sprite.oy = sprite.bitmap.height
+    end
+    sprite.z = 7
+    sprite.visible = false
+    @namePanelName = speaker.name if !@namePanelName
+    @namePanelSkin = speaker.gender if !@namePanelSkin
+    pbUpdateNameWindow(speaker, false)
+  end
+  
+  def pbUpdateNameWindow(speaker = "", visible = true, reset = false)
+    if reset
+      @namePanelName = nil
+      @namePanelSkin = nil
+    end
+    case speaker
+    when String, nil
+      newName = @namePanelName || ""
+      newSkin = @namePanelSkin
+    else
+      newName = @namePanelName || speaker.name
+      newSkin = @namePanelSkin || speaker.gender
+    end
+    if !newSkin.is_a?(String) || nil_or_empty?(newSkin)
+      case newSkin
+      when 0 then newSkin = Settings::MENU_WINDOWSKINS[4]
+      when 1 then newSkin = Settings::MENU_WINDOWSKINS[2]
+      else        newSkin = Settings::MENU_WINDOWSKINS[0]
+      end
+    end
+    @sprites["nameWindow"].text = newName
+    @sprites["nameWindow"].resizeToFit(newName)
+    @sprites["nameWindow"].setSkin("Graphics/Windowskins/" + newSkin)
+    @sprites["nameWindow"].visible = (nil_or_empty?(newName) || !visible) ? false : true
+  end
+
+  def pbShowSlideSprite(id)
+    appearAnim = Animation::SlideSpriteAppear.new(@sprites, @viewport, id, @battle)
+    @animations.push(appearAnim)
+    while inPartyAnimation?
+      pbUpdate
+    end
+  end
+
+  def pbHideSlideSprite
+    hideAnim = Animation::SlideSpriteDisappear.new(@sprites, @viewport, @battle)
     @animations.push(hideAnim)
     while inPartyAnimation?
       pbUpdate

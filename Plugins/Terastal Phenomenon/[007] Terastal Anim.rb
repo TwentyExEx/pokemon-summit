@@ -81,7 +81,7 @@ class Battle::Scene::Animation::BattlerTerastallize < Battle::Scene::Animation
     #---------------------------------------------------------------------------
     # Sets up Tera Pokemon.
     arrPOKE = dxSetPokemonWithOutline(@pkmn, delay, !@opposes, !@battler.wild?, Color.new(*@type_outline))
-    @pictureSprites[arrPOKE.last[1]].applyTera(@battler.tera_type)
+    @pictureSprites[arrPOKE.last[1]].applyTera
     #---------------------------------------------------------------------------
     # Sets up Tera crystals.
     arrCRYSTALS = []

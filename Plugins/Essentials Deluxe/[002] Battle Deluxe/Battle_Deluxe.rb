@@ -7,27 +7,27 @@
 #-------------------------------------------------------------------------------
 class Game_Temp
   attr_accessor :dx_rules
-  attr_accessor :dx_midbattle
   attr_accessor :dx_pokemon
+  attr_accessor :dx_midbattle
   
   def dx_rules;      return @dx_rules;     end
-  def dx_midbattle;  return @dx_midbattle; end
   def dx_pokemon;    return @dx_pokemon;   end
+  def dx_midbattle;  return @dx_midbattle; end
   
   def dx_rules?;     return @dx_rules     && !@dx_rules.empty?;     end
-  def dx_midbattle?; return @dx_midbattle && !@dx_midbattle.empty?; end
   def dx_pokemon?;   return @dx_pokemon   && !@dx_pokemon.empty?;   end
+  def dx_midbattle?; return @dx_midbattle && !@dx_midbattle.empty?; end
   
   def dx_rules=(value)
     @dx_rules = value || {}
   end
   
-  def dx_midbattle=(value)
-    @dx_midbattle = value || {}
-  end
-  
   def dx_pokemon=(value)
     @dx_pokemon = value || {}
+  end
+  
+  def dx_midbattle=(value)
+    @dx_midbattle = value || {}
   end
   
   def dx_clear
@@ -56,8 +56,8 @@ class Game_Temp
       end
       @dx_rules.clear
     end
-    @dx_midbattle.clear if dx_midbattle?
     @dx_pokemon.clear if dx_pokemon?
+    @dx_midbattle.clear if dx_midbattle?
     $PokemonGlobal.nextBattleBGM = nil
     pbDeregisterPartner
     clear_battle_rules
@@ -503,6 +503,7 @@ def pbApplyWildAttributes(pkmn)
       when :celestial  then pokemon.celestial     = pkmn_hash[attribute] if PluginManager.installed?("Pokémon Birthsigns")
       when :dynamaxlvl then pokemon.raid_dmax_lvl = pkmn_hash[attribute] if PluginManager.installed?("ZUD Mechanics")
       when :gmaxfactor then pokemon.gmax_factor   = pkmn_hash[attribute] if PluginManager.installed?("ZUD Mechanics")
+      when :nodynamax  then pokemon.dynamax_able  = false                if PluginManager.installed?("ZUD Mechanics")
       when :teratype   then pokemon.tera_type     = pkmn_hash[attribute] if PluginManager.installed?("Terastal Phenomenon")
       when :mastery    then pokemon.master_moveset                       if PluginManager.installed?("PLA Battle Styles")
       end

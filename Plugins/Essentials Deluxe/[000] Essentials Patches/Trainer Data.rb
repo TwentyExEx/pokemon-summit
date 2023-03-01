@@ -14,6 +14,7 @@ module GameData
     SCHEMA["Birthsign"]  = [:birthsign,   "u"] # Placeholder
     SCHEMA["DynamaxLvl"] = [:dynamax_lvl, "u"]
     SCHEMA["Gigantamax"] = [:gmaxfactor,  "b"]
+    SCHEMA["NoDynamax"]  = [:nodynamax,   "b"]
     SCHEMA["Mastery"]    = [:mastery,     "b"]
     SCHEMA["TeraType"]   = [:teratype,    "u"] # Placeholder
     
@@ -80,8 +81,12 @@ module GameData
           pkmn.birthsign = pkmn_data[:birthsign] || :VOID
         end
         if PluginManager.installed?("ZUD Mechanics")
-          pkmn.dynamax_lvl = pkmn_data[:dynamax_lvl]
-          pkmn.gmax_factor = (pkmn_data[:gmaxfactor]) ? true : false
+          if pkmn_data[:nodynamax]
+            pkmn.dynamax_able = false
+          else
+            pkmn.dynamax_lvl = pkmn_data[:dynamax_lvl]
+            pkmn.gmax_factor = (pkmn_data[:gmaxfactor]) ? true : false
+          end
         end
         if PluginManager.installed?("Terastal Phenomenon")
           pkmn.tera_type = pkmn_data[:teratype]
@@ -157,6 +162,7 @@ module TrainerPokemonProperty
       initsetting[:birthsign],
       initsetting[:dynamax_lvl], 
       initsetting[:gmaxfactor],
+      initsetting[:nodynamax],
       initsetting[:mastery],
       initsetting[:teratype]
     ])
@@ -195,14 +201,16 @@ module TrainerPokemonProperty
       property_Birthsign = [nil_prop[0], nil_prop[1], nil_prop[2] + plugin_name]
     end
     #---------------------------------------------------------------------------
-    # Dynamax Level/G-Max Factor
+    # Dynamax Level/G-Max Factor/Eligibility
     if PluginManager.installed?("ZUD Mechanics")
       property_DynamaxLvl = [_INTL("Dynamax Lvl"), LimitProperty2.new(10), _INTL("Dynamax level of the Pokémon (0-10).")]
       property_GmaxFactor = [_INTL("G-Max Factor"), BooleanProperty2, _INTL("If set to true, the Pokémon will have G-Max Factor.")]
+      property_NoDynamax  = [_INTL("No Dynamax"), BooleanProperty2, _INTL("If set to true, the Pokémon will be unable to Dynamax. This allows for other mechanics such as Battle Styles or Terastallization.")]
     else
       plugin_name = "\n[ZUD Plugin]"
       property_DynamaxLvl = [nil_prop[0], nil_prop[1], nil_prop[2] + plugin_name]
       property_GmaxFactor = [nil_prop[0], nil_prop[1], nil_prop[2] + plugin_name]
+      property_NoDynamax  = [nil_prop[0], nil_prop[1], nil_prop[2] + plugin_name]
     end
     #---------------------------------------------------------------------------
     # Move Mastery
@@ -231,7 +239,13 @@ module TrainerPokemonProperty
        [_INTL("Happiness"),     LimitProperty2.new(255),                 _INTL("Happiness of the Pokémon (0-255).")],
        [_INTL("Poké Ball"),     BallProperty.new(oldsetting),            _INTL("The kind of Poké Ball the Pokémon is kept in.")],
        [_INTL("Ace"),           BooleanProperty2,                        _INTL("Flags this Pokémon as this trainer's ace. Used by certain plugins below.")],
-       property_Focus, property_Birthsign, property_DynamaxLvl, property_GmaxFactor, property_Mastery, property_Tera
+       property_Focus, 
+       property_Birthsign, 
+       property_DynamaxLvl, 
+       property_GmaxFactor, 
+       property_NoDynamax, 
+       property_Mastery, 
+       property_Tera
     ])
     pbPropertyList(settingname, oldsetting, pkmn_properties, false)
     return nil if !oldsetting[0]
@@ -257,8 +271,9 @@ module TrainerPokemonProperty
       :birthsign       => oldsetting[18 + Pokemon::MAX_MOVES],
       :dynamax_lvl     => oldsetting[19 + Pokemon::MAX_MOVES],
       :gmaxfactor      => oldsetting[20 + Pokemon::MAX_MOVES],
-      :mastery         => oldsetting[21 + Pokemon::MAX_MOVES],
-      :teratype        => oldsetting[22 + Pokemon::MAX_MOVES]
+      :nodynamax       => oldsetting[21 + Pokemon::MAX_MOVES],
+      :mastery         => oldsetting[22 + Pokemon::MAX_MOVES],
+      :teratype        => oldsetting[23 + Pokemon::MAX_MOVES]
     }
     moves = []
     Pokemon::MAX_MOVES.times do |i|

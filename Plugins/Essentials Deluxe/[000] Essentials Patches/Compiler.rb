@@ -164,8 +164,11 @@ module Compiler
           f.write("    Ace = yes\r\n") if pkmn[:trainer_ace]
           f.write(sprintf("    Focus = %s\r\n", pkmn[:focus])) if PluginManager.installed?("Focus Meter System") && pkmn[:focus]
           f.write(sprintf("    Birthsign = %s\r\n", pkmn[:birthsign])) if PluginManager.installed?("Pokémon Birthsigns") && pkmn[:birthsign]
-          f.write(sprintf("    DynamaxLvl = %d\r\n", pkmn[:dynamax_lvl])) if PluginManager.installed?("ZUD Mechanics") && pkmn[:dynamax_lvl]
-          f.write("    Gigantamax = yes\r\n") if PluginManager.installed?("ZUD Mechanics") && pkmn[:gmaxfactor]
+          if PluginManager.installed?("ZUD Mechanics")
+            f.write(sprintf("    DynamaxLvl = %d\r\n", pkmn[:dynamax_lvl])) if pkmn[:dynamax_lvl]
+            f.write("    Gigantamax = yes\r\n") if pkmn[:gmaxfactor]
+            f.write("    NoDynamax = yes\r\n") if pkmn[:nodynamax]
+          end
           f.write("    Mastery = yes\r\n") if PluginManager.installed?("PLA Battle Styles") && pkmn[:mastery]
           f.write(sprintf("    TeraType = %s\r\n", pkmn[:teratype])) if PluginManager.installed?("Terastal Phenomenon") && pkmn[:teratype]
         end
@@ -953,16 +956,16 @@ module PluginManager
   end
   
   # Used to ensure all plugins that rely on Essentials Deluxe are up to date.
-  def self.dx_plugin_check(version = "1.2.1")
+  def self.dx_plugin_check(version = "1.2.3")
     if self.installed?("Essentials Deluxe", version, true)
-      {"ZUD Mechanics"         => "1.1.6",
-       "Enhanced UI"           => "1.0.9",
-       "Focus Meter System"    => "1.0.9",
+      {"ZUD Mechanics"         => "1.1.8",
+       "Enhanced UI"           => "1.1",
+       "Focus Meter System"    => "1.1",
        "PLA Battle Styles"     => "1.0.7",
        "Improved Field Skills" => "1.0.4",
        "Legendary Breeding"    => "1.0.1",
        "Improved Item Text"    => "1.0.1",
-       "Terastal Phenomenon"   => "1.0",
+       "Terastal Phenomenon"   => "1.0.1",
        "Pokémon Birthsigns"    => "1.0"
       }.each do |p_name, v_num|
         next if !self.installed?(p_name)

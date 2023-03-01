@@ -56,6 +56,45 @@ MenuHandlers.add(:pokemon_debug_menu, :set_tera_type, {
 
 
 #-------------------------------------------------------------------------------
+# Battle Debug options.
+#-------------------------------------------------------------------------------
+MenuHandlers.add(:battle_debug_menu, :terastallize, {
+  "name"        => _INTL("Terastallization"),
+  "parent"      => :trainers,
+  "description" => _INTL("Whether each trainer is allowed to Terastallize."),
+  "effect"      => proc { |battle|
+    cmd = 0
+    loop do
+      commands = []
+      cmds = []
+      battle.terastallize.each_with_index do |side_values, side|
+        trainers = (side == 0) ? battle.player : battle.opponent
+        next if !trainers
+        side_values.each_with_index do |value, i|
+          next if !trainers[i]
+          text = (side == 0) ? "Your side:" : "Foe side:"
+          text += sprintf(" %d: %s", i, trainers[i].name)
+          text += sprintf(" [ABLE]") if value == -1
+          text += sprintf(" [UNABLE]") if value == -2
+          commands.push(text)
+          cmds.push([side, i])
+        end
+      end
+      cmd = pbMessage("\\ts[]" + _INTL("Choose trainer to toggle whether they can Terastallize."),
+                      commands, -1, nil, cmd)
+      break if cmd < 0
+      real_cmd = cmds[cmd]
+      if battle.terastallize[real_cmd[0]][real_cmd[1]] == -1
+        battle.terastallize[real_cmd[0]][real_cmd[1]] = -2   # Make unable
+      else
+        battle.terastallize[real_cmd[0]][real_cmd[1]] = -1   # Make able
+      end
+    end
+  }
+})
+
+
+#-------------------------------------------------------------------------------
 # Adds Tera Types to trainers.
 #-------------------------------------------------------------------------------
 module GameData

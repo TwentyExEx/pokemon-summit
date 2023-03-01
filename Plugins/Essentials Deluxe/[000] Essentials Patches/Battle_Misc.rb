@@ -13,6 +13,9 @@ module PBEffects
   TransformPokemon = 302  # Used to get the correct sprite data while transformed in certain situations.
 end
 
+module Battle::DebugVariables
+  BATTLER_EFFECTS[PBEffects::FocusEnergy] = { name: "Critical Boost critical hit stages (0-4)", default: 0, max: 4 }
+end
 
 #-------------------------------------------------------------------------------
 # Pokemon data.
@@ -20,7 +23,6 @@ end
 class Pokemon
   def ace?; return @trainer_ace || false; end
   def ace=(value); @trainer_ace = value;  end
-  
   
   alias dx_baseStats baseStats
   def baseStats

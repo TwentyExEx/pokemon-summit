@@ -51,7 +51,6 @@ class Battle::Battler
     return false if shadowPokemon?
     return false if mega? || primal? || ultra? || dynamax? || inStyle? || tera? || celestial?
     return false if hasMega? || hasPrimal? || hasZMove? || hasUltra? || hasDynamaxAvail? || hasStyles? || hasZodiacPower?
-	return false if @pokemon.hasAbility?(:WONDERGUARD)
     return !@pokemon&.tera_type.nil?
   end
   
