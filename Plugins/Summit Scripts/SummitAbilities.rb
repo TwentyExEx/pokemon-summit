@@ -706,14 +706,13 @@ Battle::AbilityEffects::MoveImmunity.add(:AMPLIFIER,
 #===============================================================================
 
 #===============================================================================
-# Castle Walls
+# Castle Walls - In Battler
 #===============================================================================
 
 Battle::AbilityEffects::OnSwitchIn.add(:CASTLEWALLS,
   proc { |ability, battler, battle|
     battle.pbShowAbilitySplash(battler)
-    battle.pbDisplay(_INTL("{1}'s {2} set up Wide Guard!",battler.pbThis,battler.abilityName))
-    battler.pbOwnSide.effects[PBEffects::WideGuard] = true
+    battle.pbDisplay(_INTL("{1}'s {2} put up a fortified wall!",battler.pbThis,battler.abilityName))
     battle.pbHideAbilitySplash(battler)
   }
 )

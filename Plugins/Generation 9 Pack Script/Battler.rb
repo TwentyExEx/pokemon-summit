@@ -179,6 +179,20 @@ class Battle::Battler
           @battle.successStates[user.index].protected = true
           return false
         end
+        # Castle Walls
+        if target.hasActiveAbility?(:CASTLEWALLS) && user.index != target.index &&
+           move.pbTarget(user).num_targets > 1 &&
+           (Settings::MECHANICS_GENERATION >= 7 || move.damagingMove?)
+          if show_message
+            @battle.pbCommonAnimation("WideGuard", target)
+            @battle.pbShowAbilitySplash(target)
+            @battle.pbDisplay(_INTL("Wide Guard protected {1}!", target.pbThis(true)))
+            @battle.pbHideAbilitySplash(target)
+          end
+          target.damageState.protected = true
+          @battle.successStates[user.index].protected = true
+          return false
+        end
         if move.canProtectAgainst?
           # Quick Guard
           if target.pbOwnSide.effects[PBEffects::QuickGuard] &&
