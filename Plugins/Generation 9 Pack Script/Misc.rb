@@ -236,7 +236,7 @@ class Battle::Move
       case type
       when :FIRE
         multipliers[:final_damage_multiplier] *= 1.5
-      when :WATER && move.function != "PowersUpInSun"
+      when :WATER && @function != "PowersUpInSun"
         multipliers[:final_damage_multiplier] /= 2
       end
     when :Rain, :HeavyRain
