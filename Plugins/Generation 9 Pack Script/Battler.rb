@@ -183,7 +183,6 @@ class Battle::Battler
         if target.hasActiveAbility?(:CASTLEWALLS) && user.index != target.index &&
            move.pbTarget(user).num_targets > 1 &&
            (Settings::MECHANICS_GENERATION >= 7 || move.damagingMove?)
-		  target.pbOwnSide.effects[PBEffects::WideGuard] = true
           if show_message
             @battle.pbCommonAnimation("WideGuard", target)
             @battle.pbShowAbilitySplash(target)
