@@ -553,6 +553,26 @@ class Battle::Move::DoublePowerInElectricTerrain < Battle::Move
 end
 
 #===============================================================================
+# Power is multiplied by 1.5 if Electric Terrain applies. (Psyblade)
+#===============================================================================
+class Battle::Move::PowersUpInElectricTerrain < Battle::Move
+  def pbBaseDamage(baseDmg, user, target)
+    baseDmg *= 1.5 if @battle.field.terrain == :Electric && target.affectedByTerrain?
+    return baseDmg
+  end
+end
+
+#===============================================================================
+# Power is multiplied by 1.5 if Sun applies. (Hydro Steam)
+#===============================================================================
+class Battle::Move::DoublePowerInSun < Battle::Move
+  def pbBaseDamage(baseDmg, user, target)
+    baseDmg *= 1.5 if user.effectiveWeather == :Sun
+    return baseDmg
+  end
+end
+
+#===============================================================================
 # Paralyzes the target if there is a terrain active and ends the terrain. (Stomping Tantrum)
 #===============================================================================
 class Battle::Move::ParalyzeIfTerrainRemoveTerrain < Battle::Move::ParalyzeTarget

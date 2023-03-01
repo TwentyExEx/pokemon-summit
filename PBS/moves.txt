@@ -9605,6 +9605,30 @@ Flags = CanProtect
 EffectChance = 10
 Description = This move is only used by a Starmobile.
 #-------------------------------
+[HYDROSTEAM]
+Name = Hydro Steam
+Type = WATER
+Category = Special
+Power = 80
+Accuracy = 100
+TotalPP = 15
+Target = Other
+FunctionCode = PowersUpInSun
+Flags = CanProtect,CanMirrorMove
+Description = The user blasts the target with boiling-hot water. This move's power is not lowered in harsh sunlight but rather boosted by 50 percent.
+#-------------------------------
+[PSYBLADE]
+Name = Psyblade
+Type = PSYCHIC
+Category = Physical
+Power = 80
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = PowersUpInElectricTerrain
+Flags = Contact,CanProtect,CanMirrorMove
+Description = The user rends the target with an ethereal blade. This move's power is boosted by 50 percent if the user is on Electric Terrain.
+#-------------------------------
 [SPARKSURFER]
 Name = Sparksurfer
 Type = ELECTRIC

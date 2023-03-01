@@ -233,7 +233,7 @@ class Battle::AI
         case type
         when :FIRE
           multipliers[:final_damage_multiplier] *= 1.5
-        when :WATER
+        when :WATER && move.function != "PowersUpInSun"
           multipliers[:final_damage_multiplier] /= 2
         end
       when :Rain, :HeavyRain
