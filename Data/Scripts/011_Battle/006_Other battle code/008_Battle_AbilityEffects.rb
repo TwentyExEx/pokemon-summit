@@ -1274,6 +1274,10 @@ Battle::AbilityEffects::DamageCalcFromUser.add(:ANALYTIC,
 
 Battle::AbilityEffects::DamageCalcFromUser.add(:BLAZE,
   proc { |ability, user, target, move, mults, baseDmg, type|
+    @battle.pbShowAbilitySplash(user)
+    user.effects[PBEffects::FocusEnergy] = 2
+    @battle.pbDisplay(_INTL("{1} is getting pumped!", user.pbThis))
+    @battle.pbHidebilitySplash(user)
     if user.hp <= user.totalhp / 3 && type == :FIRE
       mults[:attack_multiplier] *= 1.5
     end
@@ -1344,7 +1348,7 @@ Battle::AbilityEffects::DamageCalcFromUser.add(:GUTS,
 
 Battle::AbilityEffects::DamageCalcFromUser.add(:HUGEPOWER,
   proc { |ability, user, target, move, mults, baseDmg, type|
-    mults[:attack_multiplier] *= 2 if move.physicalMove?
+    mults[:attack_multiplier] *= 1.5 if move.physicalMove?
   }
 )
 
