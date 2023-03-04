@@ -748,3 +748,18 @@ Battle::AbilityEffects::DamageCalcFromUser.add(:BOXBARRIER,
     mults[:attack_multiplier] *= 1.5 if user.effects[PBEffects::LightScreen] > 0 && move.specialMove?
   }
 )
+
+#===============================================================================
+# Overgrow, Blaze, Torrent, Swarm, Battery
+#===============================================================================
+
+Battle::AbilityEffects::OnBeingHit.add(:OVERGROW,
+  proc { |ability, user, target, move, battle|
+    next if user.hp <= user.totalhp / 3
+    user.effects[PBEffects::FocusEnergy] = 2
+    battle.pbDisplay(_INTL("{1} is getting pumped!", user.pbThis))
+    battle.pbHideAbilitySplash(target)
+  }
+)
+
+Battle::AbilityEffects::OnBeingHit.copy(:OVERGROW, :BLAZE, :TORRENT, :SWARM)
