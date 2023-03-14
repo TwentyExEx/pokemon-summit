@@ -1,58 +1,58 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
-# Courtyard B2 (25) - Courtyard B3 (28)
-25,East,0,28,West,0
-# Courtyard M3 (31) - Courtyard B3 (28)
-31,South,0,28,North,0
+# Courtyard B2 (25) - Courtyard M3 (31)
+25,North,0,31,South,0
+# Courtyard B3 (28) - Courtyard M3 (31)
+28,West,0,31,East,40
+# Courtyard B1 (27) - Courtyard M3 (31)
+27,North,40,31,South,0
+# Courtyard M2 (30) - Courtyard M3 (31)
+30,West,0,31,East,0
+# Courtyard M1 (29) - Courtyard M3 (31)
+29,East,0,31,West,0
+# Courtyard T1 (32) - Courtyard M3 (31)
+32,East,15,31,West,0
+# Courtyard T2 (34) - Courtyard M3 (31)
+34,South,0,31,North,0
+# Courtyard T3 (33) - Courtyard M3 (31)
+33,West,40,31,East,0
+# Courtyard B3 (28) - Courtyard B2 (25)
+28,West,0,25,East,0
+# Courtyard B1 (27) - Courtyard B2 (25)
+27,East,0,25,West,0
+# Courtyard M2 (30) - Courtyard B2 (25)
+30,West,40,25,East,0
+# Courtyard M1 (29) - Courtyard B2 (25)
+29,East,40,25,West,0
+# Courtyard T1 (32) - Courtyard B2 (25)
+32,East,55,25,West,0
+# Courtyard T3 (33) - Courtyard B2 (25)
+33,West,80,25,East,0
 # Courtyard M2 (30) - Courtyard B3 (28)
-30,East,40,28,West,0
+30,South,0,28,North,0
 # Courtyard M1 (29) - Courtyard B3 (28)
 29,South,80,28,North,0
 # Courtyard T2 (34) - Courtyard B3 (28)
 34,East,80,28,West,0
-# Courtyard M3 (31) - Courtyard B2 (25)
-31,West,40,25,East,0
-# Courtyard B1 (27) - Courtyard B2 (25)
-27,East,0,25,West,0
-# Courtyard M2 (30) - Courtyard B2 (25)
-30,South,0,25,North,0
-# Courtyard M1 (29) - Courtyard B2 (25)
-29,East,40,25,West,0
-# Courtyard T1 (32) - Courtyard B2 (25)
-32,East,80,25,West,0
-# Courtyard T3 (33) - Courtyard B2 (25)
-33,West,80,25,East,0
-# Courtyard B1 (27) - Courtyard M3 (31)
-27,North,80,31,South,0
-# Courtyard M2 (30) - Courtyard M3 (31)
-30,East,0,31,West,0
-# Courtyard T1 (32) - Courtyard M3 (31)
-32,South,80,31,North,0
-# Courtyard T3 (33) - Courtyard M3 (31)
-33,South,0,31,North,0
-# Courtyard T2 (34) - Courtyard M3 (31)
-34,East,40,31,West,0
 # Courtyard M2 (30) - Courtyard B1 (27)
-30,West,40,27,East,0
+30,South,0,27,North,80
 # Courtyard M1 (29) - Courtyard B1 (27)
 29,South,0,27,North,0
 # Courtyard T2 (34) - Courtyard B1 (27)
 34,West,80,27,East,0
-# Courtyard M1 (29) - Courtyard M2 (30)
-29,East,0,30,West,0
 # Courtyard T1 (32) - Courtyard M2 (30)
-32,East,40,30,West,0
-# Courtyard T3 (33) - Courtyard M2 (30)
-33,West,40,30,East,0
+32,South,80,30,North,0
 # Courtyard T2 (34) - Courtyard M2 (30)
-34,South,0,30,North,0
+34,East,40,30,West,0
+# Courtyard T3 (33) - Courtyard M2 (30)
+33,South,0,30,North,0
 # Courtyard T1 (32) - Courtyard M1 (29)
 32,South,0,29,North,0
-# Courtyard T3 (33) - Courtyard M1 (29)
-33,South,0,29,North,80
 # Courtyard T2 (34) - Courtyard M1 (29)
 34,West,40,29,East,0
+# Courtyard T3 (33) - Courtyard M1 (29)
+33,South,0,29,North,80
 # Courtyard T2 (34) - Courtyard T1 (32)
-34,West,0,32,East,0
-# Courtyard T2 (34) - Courtyard T3 (33)
-34,East,0,33,West,0
+34,West,25,32,East,0
+# Courtyard T3 (33) - Courtyard T2 (34)
+33,West,0,34,East,0
