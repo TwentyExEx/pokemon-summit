@@ -1374,3 +1374,23 @@ Description = Rock-type moves become Steel-type and boosted.
 [AUTOMATON]
 Name = Automaton
 Description = Moves that require a charge turn will skip the charge turn.
+#-------------------------------
+[AURABOOST]
+Name = Aura Boost
+Description = NEEDS CODE
+#-------------------------------
+[ELECTRICDISPERSION]
+Name = Electric Dispersion
+Description = NEEDS CODE
+#-------------------------------
+[ROOMCLEANER]
+Name = ROOMCLEANER
+Description = NEEDS CODE
+#-------------------------------
+[TITANIC]
+Name = Titanic
+Description = NEEDS CODE
+#-------------------------------
+[DOMINION]
+Name = Dominion
+Description = NEEDS CODE

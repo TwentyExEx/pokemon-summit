@@ -9924,3 +9924,88 @@ FunctionCode = ConfuseTargetAlwaysHitsInPsychicTerrain
 Flags = CanProtect,CanMirrorMove
 EffectChance = 30
 Description = The user engulfs its foe in a mysterious beam of light. It may also confuse the foe.
+#-------------------------------
+[FANCYFIREWORKS]
+Name = Tackle
+Type = NORMAL
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 35
+Target = NearOther
+FunctionCode = None
+Flags = Contact,CanProtect,CanMirrorMove
+Description = A physical attack in which the user charges and slams into the target with its whole body.
+#-------------------------------
+[ILLUSIONDIVE]
+Name = Tackle
+Type = NORMAL
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 35
+Target = NearOther
+FunctionCode = None
+Flags = Contact,CanProtect,CanMirrorMove
+Description = A physical attack in which the user charges and slams into the target with its whole body.
+#-------------------------------
+[OILSHIELD]
+Name = Tackle
+Type = NORMAL
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 35
+Target = NearOther
+FunctionCode = None
+Flags = Contact,CanProtect,CanMirrorMove
+Description = A physical attack in which the user charges and slams into the target with its whole body.
+#-------------------------------
+[PACKINGFROST]
+Name = Tackle
+Type = NORMAL
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 35
+Target = NearOther
+FunctionCode = None
+Flags = Contact,CanProtect,CanMirrorMove
+Description = A physical attack in which the user charges and slams into the target with its whole body.
+#-------------------------------
+[QUEENASCENDANT]
+Name = Tackle
+Type = NORMAL
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 35
+Target = NearOther
+FunctionCode = None
+Flags = Contact,CanProtect,CanMirrorMove
+Description = A physical attack in which the user charges and slams into the target with its whole body.
+#-------------------------------
+[THAWOUT]
+Name = Tackle
+Type = NORMAL
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 35
+Target = NearOther
+FunctionCode = None
+Flags = Contact,CanProtect,CanMirrorMove
+Description = A physical attack in which the user charges and slams into the target with its whole body.
+#-------------------------------
+[LEEKSWING]
+Name = Tackle
+Type = NORMAL
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 35
+Target = NearOther
+FunctionCode = None
+Flags = Contact,CanProtect,CanMirrorMove
+Description = A physical attack in which the user charges and slams into the target with its whole body.
+#-------------------------------
