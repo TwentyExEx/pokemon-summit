@@ -181,7 +181,7 @@ def pbSummitMonkey
 end
 
 def pbSummitChooseRegion # Unused
-  regionlist = ["Kanto","Johto","Hoenn","Sinnoh","Unova","Kalos","Alola","Galar"]
+  regionlist = ["Kanto","Johto","Hoenn","Sinnoh","Unova","Kalos","Alola","Galar","Paldea"]
   cmd = pbMessage("\\rWhat Pokémon starter set would you like to claim?",regionlist)
   pbSummitGetStarterSet(regionlist[cmd])
 end
@@ -194,56 +194,63 @@ def pbSummitGetStarterSet(region) # Unused
       pbSummitGivePokemon(:BLASTOISE)
       pbSummitGivePokemon(:RAICHU)
       pbSummitGivePokemon(:PIDGEOT)
-      pbSummitGivePokemon(:HITMONLEE)
+      pbSummitGivePokemon(:RATICATE)
     when "johto"
       pbSummitGivePokemon(:MEGANIUM)
       pbSummitGivePokemon(:TYPHLOSION)
       pbSummitGivePokemon(:FERALIGATR)
       pbSummitGivePokemon(:AMPHAROS)
       pbSummitGivePokemon(:NOCTOWL)
-      pbSummitGivePokemon(:HITMONTOP)
+      pbSummitGivePokemon(:FURRET)
     when "hoenn"
       pbSummitGivePokemon(:SCEPTILE)
       pbSummitGivePokemon(:BLAZIKEN)
       pbSummitGivePokemon(:SWAMPERT)
       pbSummitGivePokemon(:MANECTRIC)
       pbSummitGivePokemon(:SWELLOW)
-      pbSummitGivePokemon(:HARIYAMA)
+      pbSummitGivePokemon(:LINOONE)
     when "sinnoh"
       pbSummitGivePokemon(:TORTERRA)
       pbSummitGivePokemon(:INFERNAPE)
       pbSummitGivePokemon(:EMPOLEON)
       pbSummitGivePokemon(:LUXRAY)
       pbSummitGivePokemon(:STARAPTOR)
-      pbSummitGivePokemon(:LUCARIO)
+      pbSummitGivePokemon(:BIBAREL)
     when "unova"
       pbSummitGivePokemon(:SERPERIOR)
       pbSummitGivePokemon(:EMBOAR)
       pbSummitGivePokemon(:SAMUROTT)
       pbSummitGivePokemon(:ZEBSTRIKA)
       pbSummitGivePokemon(:UNFEZANT)
-      pbSummitGivePokemon(:CONKELDURR)
+      pbSummitGivePokemon(:STOUTLAND)
     when "kalos"
       pbSummitGivePokemon(:CHESNAUGHT)
       pbSummitGivePokemon(:DELPHOX)
       pbSummitGivePokemon(:GRENINJA)
       pbSummitGivePokemon(:HELIOLISK)
       pbSummitGivePokemon(:TALONFLAME)
-      pbSummitGivePokemon(:PANGORO)
+      pbSummitGivePokemon(:DIGGERSBY)
     when "alola"
       pbSummitGivePokemon(:DECIDUEYE)
       pbSummitGivePokemon(:INCINEROAR)
       pbSummitGivePokemon(:PRIMARINA)
       pbSummitGivePokemon(:VIKAVOLT)
       pbSummitGivePokemon(:TOUCANNON)
-      pbSummitGivePokemon(:CRABOMINABLE)
+      pbSummitGivePokemon(:GUMSHOOS)
     when "galar"
       pbSummitGivePokemon(:RILLABOOM)
       pbSummitGivePokemon(:CINDERACE)
       pbSummitGivePokemon(:INTELEON)
       pbSummitGivePokemon(:TOXTRICITY)
       pbSummitGivePokemon(:CORVIKNIGHT)
-      pbSummitGivePokemon(:GRAPPLOCT)
+      pbSummitGivePokemon(:GREEDENT)
+    when "paldea"
+      pbSummitGivePokemon(:MEOWSCARADA)
+      pbSummitGivePokemon(:SKELEDIRGE)
+      pbSummitGivePokemon(:QUAQUAVAL)
+      pbSummitGivePokemon(:PAWMOT)
+      pbSummitGivePokemon(:KILOWATTREL)
+      pbSummitGivePokemon(:OINKOLOGNE)
   end
 end
 
