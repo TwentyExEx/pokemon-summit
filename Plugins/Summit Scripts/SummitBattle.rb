@@ -358,6 +358,7 @@ def pbSummitPrepMainTrainer(bracket)
     fightnum = rand(0...trainers.length)
     opponent = trainers[fightnum][0]
   end
+  return false if fightnum >= trainers.length
   $game_variables[30] = opponent  
   for i in 0...$trbytype.size
     if $trbytype[i].include?(opponent[0].to_sym)
@@ -366,14 +367,60 @@ def pbSummitPrepMainTrainer(bracket)
     end
   end
   type = $bg
+  $game_screen.start_tone_change(Tone.new(-255,-255,-255,0), 6 * Graphics.frame_rate / 20)
+  pbWait(20)
   $game_temp.player_transferring = true
   case type
+  when "normal"
+    $game_temp.player_new_map_id    = 16
+  when "fighting"
+    $game_temp.player_new_map_id    = 17
+  when "flying"
+    $game_temp.player_new_map_id    = 18
+  when "poison"
+    $game_temp.player_new_map_id    = 19
+  when "ground"
+    $game_temp.player_new_map_id    = 20
   when "rock"
-    $game_temp.player_new_map_id    = 15
+    $game_temp.player_new_map_id    = 21
+  when "bug"
+    $game_temp.player_new_map_id    = 22
+  when "ghost"
+    $game_temp.player_new_map_id    = 23
+  when "steel"
+    $game_temp.player_new_map_id    = 24
+  when "fire"
+    $game_temp.player_new_map_id    = 25
+  when "water"
+    $game_temp.player_new_map_id    = 26
+  when "grass"
+    $game_temp.player_new_map_id    = 27
+  when "electric"
+    $game_temp.player_new_map_id    = 28
+  when "psychic"
+    $game_temp.player_new_map_id    = 29
+  when "ice"
+    $game_temp.player_new_map_id    = 30
+  when "dragon"
+    $game_temp.player_new_map_id    = 31
+  when "dark"
+    $game_temp.player_new_map_id    = 32
+  when "fairy"
+    $game_temp.player_new_map_id    = 33
   end
-    $game_temp.player_new_x         = 7
-    $game_temp.player_new_y         = 8
-    $game_temp.player_new_direction = 6
+  $game_temp.player_new_x = 6
+  $game_temp.player_new_y = 8
+  $game_temp.player_new_direction = 6
+  $game_screen.start_tone_change(Tone.new(0,0,0,0), 6 * Graphics.frame_rate / 20)
+  $scene.transfer_player
+  for event in $game_map.events.values
+    if event.name.include?("Leader")
+      event.character_name = opponent[0]
+      event.direction = 4
+    end
+  end
+  pbWait(20)
+  return true
 end
 
 def pbSummitTestIntro # Debug
