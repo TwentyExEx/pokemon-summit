@@ -1,35 +1,61 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
-[001]   # Intro
-Name = Intro
-#-------------------------------
-[002]   # Summit Lobby
-Name = Summit Lobby
-Outdoor = false
-#-------------------------------
-[003]   # Challenge Arena
-Name = Main Arena
-Outdoor = false
-TrainerVictoryBGM = win.ogg
-#-------------------------------
-[006]   # Arcade Arena
-Name = Arcade Arena
-Outdoor = false
-TrainerVictoryBGM = win.ogg
-#-------------------------------
-[008]   # Hometown
-Name = Hometown
-ShowArea = true
-#-------------------------------
-[011]   # Outside Port
-Name = Outside Port
+[016]
 SnapEdges = true
 #-------------------------------
-[018]   # Verdanturf
-Name = Verdanturf
+[017]
 SnapEdges = true
 #-------------------------------
-[024]   # Online Room
+[018]
+SnapEdges = true
+#-------------------------------
+[019]
+SnapEdges = true
+#-------------------------------
+[020]
+SnapEdges = true
+#-------------------------------
+[021]
+SnapEdges = true
+#-------------------------------
+[022]
+SnapEdges = true
+#-------------------------------
+[023]
+SnapEdges = true
+#-------------------------------
+[024]
+SnapEdges = true
+#-------------------------------
+[025]
+SnapEdges = true
+#-------------------------------
+[026]
+SnapEdges = true
+#-------------------------------
+[027]
+SnapEdges = true
+#-------------------------------
+[028]
+SnapEdges = true
+#-------------------------------
+[029]
+SnapEdges = true
+#-------------------------------
+[030]
+SnapEdges = true
+#-------------------------------
+[031]
+SnapEdges = true
+#-------------------------------
+[032]
+SnapEdges = true
+#-------------------------------
+[033]
+SnapEdges = true
+#-------------------------------
+[035]   # Online Room
 Name = Online Room
 BattleBack = online
 TrainerBattleBGM = sinnohtrainer.ogg
+
