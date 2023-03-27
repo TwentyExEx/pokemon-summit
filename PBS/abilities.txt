@@ -1394,3 +1394,7 @@ Description = NEEDS CODE
 [DOMINION]
 Name = Dominion
 Description = NEEDS CODE
+#-------------------------------
+[PIXIETRAP]
+Name = Pixie Trap
+Description = NEEDS CODE
