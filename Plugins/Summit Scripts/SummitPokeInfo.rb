@@ -5,7 +5,7 @@ module SummitPokeInfo
 		return @allspecies
 	end
 
-	VENUSAUR = {:species => :VENUSAUR, :region => "Kanto", :moves => [:PETALDANCE, :ENERGYBALL, :SLUDGEBOMB, :TOXIC], :form => 0, :ability_index => 0}
+	VENUSAUR = {:species => :VENUSAUR, :tera_type => :NORMAL, :moves => [:AMNESIA,:AMNESIA,:AMNESIA,:AMNESIA], :form => 0, :ability_index => 0, :item => :ABILITYSHIELD, :nature => :HARDY, :evs => [252,252,6,0,0,0]}
 	CHARIZARD = {:species => :CHARIZARD, :region => "Kanto", :moves => [:DRAGONPULSE, :FLAMETHROWER, :AIRSLASH, :OVERHEAT], :form => 0, :ability_index => 0}
 	BLASTOISE = {:species => :BLASTOISE, :region => "Kanto", :moves => [:AQUATAIL, :SURF, :FLASHCANNON, :SHELLSMASH], :form => 0, :ability_index => 0}
 	BUTTERFREE = {:species => :BUTTERFREE, :region => "Kanto", :moves => [:BUGBUZZ, :PSYCHIC, :POISONPOWDER, :AIRSLASH], :form => 0, :ability_index => 0}
