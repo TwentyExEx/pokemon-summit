@@ -22,6 +22,7 @@ module PBEffects
   SilkTrap            = 412
   SaltCure            = 413
   AllySwitch          = 414
+  Commander_index     = 416
 end
 #===============================================================================
 # Ability Effects
@@ -58,7 +59,6 @@ class Battle::Move
   def pbContactMove?(user)
     return false if user.hasActiveAbility?(:LONGREACH)
     return false if user.hasActiveItem?(:PUNCHINGGLOVE) && punchingMove?
-    return false if user.hasActiveItem?(:IRONDENTURE) && bitingMove?
     return contactMove?
   end
   # Used by Counter/Mirror Coat/Metal Burst/Revenge/Focus Punch/Bide/Assurance.
@@ -161,14 +161,6 @@ class Battle::Move
     if user.effects[PBEffects::ParentalBond] == 1
       multipliers[:base_damage_multiplier] /= (Settings::MECHANICS_GENERATION >= 7) ? 4 : 2
     end
-    # Hidden Blow's second attack
-    if user.effects[PBEffects::HiddenBlow] == 1
-      multipliers[:base_damage_multiplier] /= (Settings::MECHANICS_GENERATION >= 7) ? 4 : 2
-    end
-    # Hidden Blow's second attack
-    if user.effects[PBEffects::Echoburst] == 1
-      multipliers[:base_damage_multiplier] /= 2
-    end
     # Other
     if user.effects[PBEffects::MeFirst]
       multipliers[:base_damage_multiplier] *= 1.5
@@ -236,8 +228,8 @@ class Battle::Move
       case type
       when :FIRE
         multipliers[:final_damage_multiplier] *= 1.5
-      when :WATER && @function != "PowersUpInSun"
-        multipliers[:final_damage_multiplier] /= 2
+      when :WATER
+        multipliers[:final_damage_multiplier] /= 2 if @function != "BPRaiseWhileSunny"
       end
     when :Rain, :HeavyRain
       case type

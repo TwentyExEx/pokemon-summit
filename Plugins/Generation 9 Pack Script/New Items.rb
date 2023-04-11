@@ -29,6 +29,7 @@ Battle::ItemEffects::CertainStatGain.add(:MIRRORHERB,
 # Punching Glove
 Battle::ItemEffects::DamageCalcFromUser.add(:PUNCHINGGLOVE,
   proc { |item, user, target, move, mults, baseDmg, type|
+    next if user.hasActiveAbility?(:IRONFIST)
     mults[:base_damage_multiplier] *= 1.1 if move.punchingMove?
   }
 )

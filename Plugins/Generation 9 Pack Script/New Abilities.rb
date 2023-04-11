@@ -38,28 +38,16 @@ Battle::AbilityEffects::OnSwitchIn.add(:COMMANDER,
       next if b.effects[PBEffects::CommanderDondozo] >= 0
       battle.pbShowAbilitySplash(battler)
       battle.pbDisplay(_INTL("{1} goes inside the mouth of {2}!", battler.pbThis, b.pbThis(true)))
+      battle.pbHideAbilitySplash(battler)
       b.effects[PBEffects::CommanderDondozo] = battler.form
+      b.effects[PBEffects::Commander_index] = battler.index
       battler.effects[PBEffects::CommanderTatsugiri] = true
-      GameData::Stat.each_main_battle { |stat| 
-      #   2.times do
-      #     battler.stages[stat.id] += 1 if !user.statStageAtMax?(stat)
-      #   end
+      battler.effects[PBEffects::Commander_index] = b.index
+      GameData::Stat.each_main_battle { |stat|
         b.pbRaiseStatStageByAbility(stat.id, 2, b, false) if b.pbCanRaiseStatStage?(stat.id, b)
       }
-      # dondozo = b
-      battle.pbHideAbilitySplash(battler)
       break
     }
-  }
-)
-# OnBattlerFainting
-Battle::AbilityEffects::OnBattlerFainting.add(:COMMANDER,
-  proc { |ability, battler, fainted, battle|
-    next if fainted.species != :DONDOZO
-    next if fainted.effects[PBEffects::CommanderDondozo] == -1
-    next if battler.opposes?(fainted)
-    fainted.effects[PBEffects::CommanderDondozo] = -1
-    battler.effects[PBEffects::CommanderTatsugiri] = false
   }
 )
 
@@ -70,12 +58,14 @@ Battle::AbilityEffects::CertainSwitching.add(:COMMANDER,
       next if b.effects[PBEffects::CommanderTatsugiri]
       battle.pbShowAbilitySplash(b)
       battle.pbDisplay(_INTL("{1} goes inside the mouth of {2}!", b.pbThis, switcher.pbThis(true)))
+      battle.pbHideAbilitySplash(b)
       switcher.effects[PBEffects::CommanderDondozo] = b.form
+      switcher.effects[PBEffects::Commander_index] = b.index
       b.effects[PBEffects::CommanderTatsugiri] = true
+      b.effects[PBEffects::Commander_index] = switcher.index
       GameData::Stat.each_main_battle { |stat|
         switcher.pbRaiseStatStageByAbility(stat.id, 2, switcher,false) if switcher.pbCanRaiseStatStage?(stat.id, switcher)
       }
-      battle.pbHideAbilitySplash(b)
       break
     }
   }
@@ -214,11 +204,6 @@ Battle::AbilityEffects::OnBeingHit.add(:LINGERINGAROMA,
       end
       battle.pbHideAbilitySplash(user) if user.opposes?(target)
     end
-	if user.effects[PBEffects::HealBlock] == 0
-	  user.effects[PBEffects::HealBlock] = 5
-	  battle.pbDisplay(_INTL("{1} was prevented from healing!", user.pbThis))
-	  user.pbItemStatusCureCheck
-	end
     battle.pbHideAbilitySplash(target) if user.opposes?(target)
     user.pbOnLosingAbility(oldAbil)
     user.pbTriggerAbilityOnGainingIt
@@ -437,19 +422,9 @@ Battle::AbilityEffects::DamageCalcFromUser.add(:SHARPNESS,
 class Game_Temp
   attr_accessor :fainted_member
 end
-# EventHandlers.add(:on_start_battle, :fainted_member_count,
-#   proc {
-#     fainted = 0
-#     $player.party.each{|p|
-#       next if !p || !p.fainted?
-#       fainted += 1
-#     }
-#     $game_temp.fainted_member = [fainted,0] # used for last respect and maybe supreme overlord
-#   }
-# )
+
 Battle::AbilityEffects::DamageCalcFromUser.add(:SUPREMEOVERLORD,
-  proc { |ability, user, target, move, mults, baseDmg, type, |
-    user.effects[PBEffects::SupremeOverlord] = 0 if user.effects[PBEffects::SupremeOverlord].nil?
+  proc { |ability, user, target, move, mults, baseDmg, type|
     next if user.effects[PBEffects::SupremeOverlord] <= 0
     mult = 1
     mult += 0.1 * user.effects[PBEffects::SupremeOverlord]
@@ -462,8 +437,6 @@ Battle::AbilityEffects::OnSwitchIn.add(:SUPREMEOVERLORD,
   numFainted = 5 if numFainted > 5
   next if numFainted <= 0
   battle.pbShowAbilitySplash(battler)
-  # numFainted = 0
-  # battler.battle.pbParty(battler.idxOwnSide).each { |b| numFainted += 1 if b.fainted? }
   battle.pbDisplay(_INTL("{1} gained strength from the fallen!", battler.pbThis))
   battler.effects[PBEffects::SupremeOverlord] = numFainted
   battle.pbHideAbilitySplash(battler)
@@ -556,9 +529,6 @@ Battle::AbilityEffects::OnBeingHit.add(:WINDPOWER,
     battle.pbShowAbilitySplash(target)
     target.effects[PBEffects::Charge] = 2
     battle.pbDisplay(_INTL("Being hit by {1} charged {2} with power!", move.name, target.pbThis(true)))
-      if target.pbCanRaiseStatStage?(:SPECIAL_DEFENSE, target)
-        target.pbRaiseStatStageByAbility(:SPECIAL_DEFENSE, 1, target, false)
-	  end
     battle.pbHideAbilitySplash(target)
   }
 )

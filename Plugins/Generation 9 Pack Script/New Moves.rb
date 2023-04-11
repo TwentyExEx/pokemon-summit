@@ -14,15 +14,13 @@ end
 # And can take crash damage if target protected or immune
 # (Axe Kick)
 #===============================================================================
-class Battle::Move::InflictConfuseCrashDamageIfFailsUnusableInGravity < Battle::Move::ConfuseTarget
+class Battle::Move::InflictConfuseCrashDamageIfFails < Battle::Move::ConfuseTarget
   def recoilMove?;        return true; end
-  def pbRecoilDamage(user, target); return (user.totalhp / 2);    end
   def pbCrashDamage(user)
     return if !user.takesIndirectDamage?
     @battle.pbDisplay(_INTL("{1} kept going and crashed!", user.pbThis))
     @battle.scene.pbDamageAnimation(user)
-    dmg = pbRecoilDamage(user)
-    user.pbReduceHP(dmg, false)
+    user.pbReduceHP((user.totalhp / 2), false)
     user.pbItemHPHealCheck
     user.pbFaint if user.fainted?
   end
@@ -81,13 +79,13 @@ end
 #===============================================================================
 # User and allies ability becomes target ability. (Doodle)
 #===============================================================================
-# role play
 class Battle::Move::SetUserAlliesAbilityToTargetAbility < Battle::Move
-  # def ignoresSubstitute?(user); return true; end
-
   def pbMoveFailed?(user, targets)
     if user.unstoppableAbility?
       @battle.pbDisplay(_INTL("But it failed!"))
+      return true
+    elsif user.hasActiveItem?(:ABILITYSHIELD)
+      @battle.pbDisplay(_INTL("{1}'s Ability is protected by the effects of its Ability Shield!",user.pbThis))
       return true
     end
     return false
@@ -108,14 +106,18 @@ class Battle::Move::SetUserAlliesAbilityToTargetAbility < Battle::Move
   
   def pbEffectAgainstTarget(user, target)
     @battle.allSameSideBattlers(user).each do |b|
-      @battle.pbShowAbilitySplash(b, true, false)
-      oldAbil = b.ability
-      b.ability = target.ability
-      @battle.pbReplaceAbilitySplash(b)
-      Graphics.frame_rate.times { @battle.scene.pbUpdate }
-      @battle.pbHideAbilitySplash(b)
-      b.pbOnLosingAbility(oldAbil)
-      b.pbTriggerAbilityOnGainingIt
+      if b.hasActiveItem?(:ABILITYSHIELD)
+        @battle.pbDisplay(_INTL("{1}'s Ability is protected by the effects of its Ability Shield!",b.pbThis))
+      else
+        @battle.pbShowAbilitySplash(b, true, false)
+        oldAbil = b.ability
+        b.ability = target.ability
+        @battle.pbReplaceAbilitySplash(b)
+        Graphics.frame_rate.times { @battle.scene.pbUpdate }
+        @battle.pbHideAbilitySplash(b)
+        b.pbOnLosingAbility(oldAbil)
+        b.pbTriggerAbilityOnGainingIt
+      end
     end
     @battle.pbDisplay(_INTL("{1} copied {2}'s {3} Ability!",
     user.pbThis, target.pbThis(true), target.abilityName))
@@ -198,9 +200,9 @@ class Battle::Move::DoubleNextReceiveDamageAndNeverMiss < Battle::Move
 end
 #===============================================================================
 # Inflict damage and removes the current terrain.
-# (Ice Spinner, Steel Roller)
+# (Ice Spinner)
 #===============================================================================
-class Battle::Move::RemoveTerrain < Battle::Move
+class Battle::Move::RemoveTerrainIceSpinner < Battle::Move
   def pbEffectGeneral(user)
     case @battle.field.terrain
     when :Electric
@@ -317,7 +319,7 @@ end
 class Battle::Move::IncreaseDamage50EachGotHit < Battle::Move
   def pbBaseDamage(baseDmg, user, target)
     rage_hit = @battle.getBattlerHit(user)
-    dmg = [baseDmg + 30  * rage_hit,350].min
+    dmg = [baseDmg + 50  * rage_hit,350].min
     return dmg
   end
 end
@@ -489,39 +491,42 @@ class Battle::Move::CategoryDependsOnHigherDamageTera < Battle::Move
   def specialMove?(thisType = nil);  return (@calcCategory == 1); end
 
   def pbOnStartUse(user, targets)
-    target = targets[0]
-    stageMul = [2, 2, 2, 2, 2, 2, 2, 3, 4, 5, 6, 7, 8]
-    stageDiv = [8, 7, 6, 5, 4, 3, 2, 2, 2, 2, 2, 2, 2]
-    # Calculate user's effective attacking values
-    attack_stage         = user.stages[:ATTACK] + 6
-    real_attack          = (user.attack.to_f * stageMul[attack_stage] / stageDiv[attack_stage]).floor
-    special_attack_stage = user.stages[:SPECIAL_ATTACK] + 6
-    real_special_attack  = (user.spatk.to_f * stageMul[special_attack_stage] / stageDiv[special_attack_stage]).floor
-    # Calculate target's effective defending values
-    defense_stage         = target.stages[:DEFENSE] + 6
-    real_defense          = (target.defense.to_f * stageMul[defense_stage] / stageDiv[defense_stage]).floor
-    special_defense_stage = target.stages[:SPECIAL_DEFENSE] + 6
-    real_special_defense  = (target.spdef.to_f * stageMul[special_defense_stage] / stageDiv[special_defense_stage]).floor
-    # Perform simple damage calculation
-    physical_damage = real_attack.to_f / real_defense
-    special_damage = real_special_attack.to_f / real_special_defense
-    # Determine move's category
-    if physical_damage == special_damage
-      @calcCategry = @battle.pbRandom(2)
-    else
-      @calcCategory = (physical_damage > special_damage) ? 0 : 1
+    if PluginManager.installed?("Terastal Phenomenon") && user&.tera?
+      target = targets[0]
+      stageMul = [2, 2, 2, 2, 2, 2, 2, 3, 4, 5, 6, 7, 8]
+      stageDiv = [8, 7, 6, 5, 4, 3, 2, 2, 2, 2, 2, 2, 2]
+      # Calculate user's effective attacking values
+      attack_stage         = user.stages[:ATTACK] + 6
+      real_attack          = (user.attack.to_f * stageMul[attack_stage] / stageDiv[attack_stage]).floor
+      special_attack_stage = user.stages[:SPECIAL_ATTACK] + 6
+      real_special_attack  = (user.spatk.to_f * stageMul[special_attack_stage] / stageDiv[special_attack_stage]).floor
+      # Calculate target's effective defending values
+      defense_stage         = target.stages[:DEFENSE] + 6
+      real_defense          = (target.defense.to_f * stageMul[defense_stage] / stageDiv[defense_stage]).floor
+      special_defense_stage = target.stages[:SPECIAL_DEFENSE] + 6
+      real_special_defense  = (target.spdef.to_f * stageMul[special_defense_stage] / stageDiv[special_defense_stage]).floor
+      # Perform simple damage calculation
+      physical_damage = real_attack.to_f / real_defense
+      special_damage = real_special_attack.to_f / real_special_defense
+      # Determine move's category
+      if physical_damage == special_damage
+        @calcCategry = @battle.pbRandom(2)
+      else
+        @calcCategory = (physical_damage > special_damage) ? 0 : 1
+      end
+      echoln "This is a #{["Physical","Special"][@calcCategory]} move"
     end
   end
-
-  def pbShowAnimation(id, user, targets, hitNum = 0, showAnimation = true)
-    hitNum = 1 if physicalMove?
-    super
-  end
+  # def pbShowAnimation(id, user, targets, hitNum = 0, showAnimation = true)
+  #   hitNum = 1 if physicalMove?
+  #   super
+  # end
   def pbBaseType(user)
     ret = :NORMAL
-    if PluginManager.installed?("ScarletVioletGimmick_TDW")
-      ret = user.pokemon.tera_type[0] if user&.tera_active
+    if PluginManager.installed?("Terastal Phenomenon")
+      ret = user.tera_type if user&.tera?
     end
+    echoln "Move Type #{ret}"
     return ret
   end
 end
@@ -604,4 +609,23 @@ end
 class Battle::Move::HitThreeTimes < Battle::Move
   def multiHitMove?;            return true; end
   def pbNumHits(user, targets); return 3;    end
+end
+#===============================================================================
+# Increase Base Power while Sunny (Hydro Steam)
+#===============================================================================
+class Battle::Move::BPRaiseWhileSunny < Battle::Move
+  def pbBaseDamage(baseDmg, user, target)
+    baseDmg *= 1.5 if [:Sun, :HarshSun].include?(user.effectiveWeather)
+    return baseDmg
+  end
+end
+
+#===============================================================================
+# Increase Base Power while Electric Terrain (Psyblade)
+#===============================================================================
+class Battle::Move::BPRaiseWhileElectricTerrain < Battle::Move
+  def pbBaseDamage(baseDmg, user, target)
+    baseDmg *= 1.5 if @battle.field.terrain == :Electric
+    return baseDmg
+  end
 end

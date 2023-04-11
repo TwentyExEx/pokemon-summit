@@ -214,6 +214,36 @@ end
 
 # updated for ability shield
 #-------------------------------------------------------------------------------
+# Target copies user's ability. (Entrainment)
+#-------------------------------------------------------------------------------
+class Battle::Move::SetTargetAbilityToUserAbility < Battle::Move
+  def pbFailsAgainstTarget?(user, target, show_message)
+    if target.unstoppableAbility? || target.ability == :TRUANT
+      @battle.pbDisplay(_INTL("But it failed!")) if show_message
+      return true
+    elsif target.hasActiveItem?(:ABILITYSHIELD)
+      @battle.pbDisplay(_INTL("{1}'s Ability is protected by the effects of its Ability Shield!",target.pbThis)) if show_message
+      return true
+    end
+    return false
+  end
+end
+#-------------------------------------------------------------------------------
+# User copies target's ability. (Role Play)
+#-------------------------------------------------------------------------------
+class Battle::Move::SetUserAbilityToTargetAbility < Battle::Move
+  def pbMoveFailed?(user, targets)
+    if user.unstoppableAbility?
+      @battle.pbDisplay(_INTL("But it failed!"))
+      return true
+    elsif user.hasActiveItem?(:ABILITYSHIELD)
+      @battle.pbDisplay(_INTL("{1}'s Ability is protected by the effects of its Ability Shield!",user.pbThis))
+      return true
+    end
+    return false
+  end
+end
+#-------------------------------------------------------------------------------
 # Worry Seed
 #-------------------------------------------------------------------------------
 class Battle::Move::SetTargetAbilityToInsomnia < Battle::Move
@@ -330,11 +360,6 @@ Battle::AbilityEffects::OnBeingHit.add(:MUMMY,
       end
       battle.pbHideAbilitySplash(user) if user.opposes?(target)
     end
-	if user.effects[PBEffects::Taunt] == 0
-	  user.effects[PBEffects::Taunt] = 4
-	  battle.pbDisplay(_INTL("{1} fell for the taunt!", user.pbThis))
-	  user.pbItemStatusCureCheck
-	end
     battle.pbHideAbilitySplash(target) if user.opposes?(target)
     user.pbOnLosingAbility(oldAbil)
     user.pbTriggerAbilityOnGainingIt
@@ -431,6 +456,22 @@ Battle::AbilityEffects::OnSwitchIn.add(:INTREPIDSWORD,
     battle.setBattlerActivedAbility(battler)
   }
 )
+Battle::AbilityEffects::ChangeOnBattlerFainting.add(:POWEROFALCHEMY,
+  proc { |ability, battler, fainted, battle|
+    next if battler.opposes?(fainted)
+    next if fainted.ungainableAbility? ||
+       [:POWEROFALCHEMY, :RECEIVER, :TRACE, :WONDERGUARD].include?(fainted.ability_id)
+    next if battler.hasActiveItem?(:ABILITYSHIELD)
+    battle.pbShowAbilitySplash(battler, true)
+    battler.ability = fainted.ability
+    battle.pbReplaceAbilitySplash(battler)
+    battle.pbDisplay(_INTL("{1}'s {2} was taken over!", fainted.pbThis, fainted.abilityName))
+    battle.pbHideAbilitySplash(battler)
+  }
+)
+
+Battle::AbilityEffects::ChangeOnBattlerFainting.copy(:POWEROFALCHEMY, :RECEIVER)
+
 
 #===============================================================================
 # In Gen 9, Synchronize appears to have no effect on the Nature of wild Pokémon.
