@@ -197,6 +197,20 @@ class Battle::Battler
         @battle.successStates[user.index].protected = true
         return false
       end
+        # Castle Walls
+        if target.hasActiveAbility?(:CASTLEWALLS) && user.index != target.index &&
+           move.pbTarget(user).num_targets > 1 &&
+           (Settings::MECHANICS_GENERATION >= 7 || move.damagingMove?)
+          if show_message
+            @battle.pbCommonAnimation("WideGuard", target)
+            @battle.pbShowAbilitySplash(target)
+            @battle.pbDisplay(_INTL("Wide Guard protected {1}!", target.pbThis(true)))
+            @battle.pbHideAbilitySplash(target)
+          end
+          target.damageState.protected = true
+          @battle.successStates[user.index].protected = true
+          return false
+        end
       if move.canProtectAgainst?
         # Quick Guard
         if target.pbOwnSide.effects[PBEffects::QuickGuard] &&
@@ -233,6 +247,20 @@ class Battle::Battler
           end
           return false
         end
+          # Shelter
+          if target.effects[PBEffects::Shelter] && move.damagingMove?
+            if show_message
+              @battle.pbCommonAnimation("Shelter", target)
+              @battle.pbDisplay(_INTL("{1} protected itself!", target.pbThis))
+            end
+            target.damageState.protected = true
+            @battle.successStates[user.index].protected = true
+            if move.pbContactMove?(user) && user.affectedByContactEffect? &&
+               target.pbCanRaiseStatStage?(:DEFENSE, user)
+              target.pbRaiseStatStage(:DEFENSE, 2, user)
+            end
+            return false
+          end		
         # Spiky Shield
         if target.effects[PBEffects::SpikyShield]
           if show_message
@@ -407,6 +435,8 @@ class Battle::Battler
     numTargets = 0   # Number of targets that are affected by this hit
     # Count a hit for Parental Bond (if it applies)
     user.effects[PBEffects::ParentalBond] -= 1 if user.effects[PBEffects::ParentalBond] > 0
+    user.effects[PBEffects::Echoburst] -= 1 if user.effects[PBEffects::Echoburst] > 0
+    user.effects[PBEffects::HiddenBlow] -= 1 if user.effects[PBEffects::HiddenBlow] > 0	
     # Accuracy check (accuracy/evasion calc)
     if hitNum == 0 || move.successCheckPerHit?
       targets.each do |b|
