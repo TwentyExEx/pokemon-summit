@@ -140,3 +140,15 @@ Battle::ItemEffects::DamageCalcFromUser.add(:IRONDENTURE,
     mults[:base_damage_multiplier] *= 1.1 if move.bitingMove?
   }
 )
+
+#===============================================================================
+# Rotom Phone 
+#===============================================================================
+ItemHandlers::UseFromBag.add(:ROTOMPHONE, proc { |item|
+  next 2
+})
+
+ItemHandlers::UseInField.add(:ROTOMPHONE, proc { |item|
+pbMessage(_INTL("Vera isn't available right now..."))
+})
+

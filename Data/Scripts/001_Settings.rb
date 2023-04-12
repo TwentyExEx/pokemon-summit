@@ -171,7 +171,8 @@ module Settings
   def self.bag_pocket_names
     return [
       _INTL("Items"),
-      _INTL("Berries")
+      _INTL("Berries"),
+      _INTL("Key Items")
     ]
   end
   # The maximum number of slots per pocket (-1 means infinite number).

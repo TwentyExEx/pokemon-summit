@@ -7093,8 +7093,9 @@ Description = A large and rare bamboo shoot. It's extremely popular with a certa
 [ROTOMPHONE]
 Name = Rotom Phone
 NamePlural = Rotom Phones
-Pocket = 1
+Pocket = 3
 Price = 1000
+FieldUse = Direct
 Flags = KeyItem
 Description = The latest model of smartphone. A Rotom lives within it, and it can be used to run all sorts of handy apps.
 #-------------------------------
@@ -7117,7 +7118,7 @@ Description = A record of the Heath's expedition on the Great Crater of Paldea. 
 [TERAORB]
 Name = Tera Orb
 NamePlural = Tera Orbs
-Pocket = 1
+Pocket = 3
 Price = 1000
 Flags = KeyItem,TeraOrb
 Description = An orb that holds the power to crystallize. When charged, it allows Pokémon to Terastallize.

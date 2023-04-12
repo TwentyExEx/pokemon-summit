@@ -138,7 +138,7 @@ module GameData
       # return false
     end
 
-    def can_hold?;           return is_important?; end #edit here, original !is_important
+	def can_hold?;           return false if is_key_item?; end #edit here, original !is_important
 
     def consumed_after_use?
       return !is_important? && @consumable
