@@ -971,9 +971,9 @@ $difficulties = ["Easy","Standard","Hard","Extreme","Cancel"]
 
 def pbSummitDifficultySet
   cmd = pbMessage("\\rWhich difficulty would you like to select?",$difficulties,5)
-  $game_variables[15] = cmd
   choice = $difficulties[cmd]
   if cmd != 4
+    $game_variables[15] = cmd
     pbMessage("\\rYour difficulty has been set to #{choice}.")
     return true
   else
