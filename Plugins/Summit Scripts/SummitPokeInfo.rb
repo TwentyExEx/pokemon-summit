@@ -16,8 +16,24 @@ module SummitPokeInfo
 		case region.downcase
 		when "kanto"
 			return @kantospecies
+		when "johto"
+			return @johtospecies
+		when "hoenn"
+			return @hoennspecies
+		when "sinnoh"
+			return @sinnohspecies
+		when "unova"
+			return @unovaspecies
+		when "kalos"
+			return @kalospecies
 		when "alola"
 			return @alolaspecies
+		when "galar"
+			return @galarspecies
+		when "paldea"
+			return @paldeaspecies
+		when "hisui"
+			return @hisuispecies
 		end
 	end
 
