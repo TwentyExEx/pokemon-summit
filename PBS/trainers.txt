@@ -1,30 +1,2340 @@
 ﻿#-------------------------------
 [LEADER_Brock,Brock]
-Pokemon = KABUTOPS,50
+Pokemon = SUDOWOODO,50
 Form = 0
-Moves = RAZORSHELL,STONEAXE,AQUAJET,XSCISSOR
-AbilityIndex = 1
-Item = LIFEORB
-Nature = JOLLY
+Moves = STEALTHROCK,STONEEDGE,BULLDOZE,BODYSLAM
+AbilityIndex = 0
+Item = LEFTOVERS
+Nature = ADAMANT
 IV = 15,15,15,15,15,15
-EV = 0,252,0,252,0,4
+EV = 252,6,0,0,0,252
+TeraType = ROCK
+Pokemon = RHYPERIOR,50
+Form = 0
+Moves = STONEEDGE,ICEPUNCH,THUNDERPUNCH,EARTHQUAKE
+AbilityIndex = 1
+Item = ASSAULTVEST
+Nature = CAREFUL
+IV = 15,15,15,15,15,15
+EV = 6,252,0,0,0,252
+TeraType = ROCK
+Pokemon = ARCANINE,50
+Form = 1
+Moves = HEADSMASH,FLAREBLITZ,WILDCHARGE,IRONHEAD
+AbilityIndex = 2
+Item = EXPERTBELT
+Nature = CAREFUL
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
 TeraType = ROCK
 Pokemon = AERODACTYL,50
 Form = 0
-Moves = DRAGONDANCE,DUALWINGBEAT,THUNDERFANG,ROCKSLIDE
+Moves = STONEEDGE,EARTHQUAKE,DUALWINGBEAT,DRAGONDANCE
 AbilityIndex = 1
-Item = FOCUSSASH
+Item = MUSCLEBAND
 Nature = ADAMANT
 IV = 15,15,15,15,15,15
-EV = 0,252,0,252,0,4
+EV = 0,252,0,252,0,6
+TeraType = ROCK
+Pokemon = OMASTAR,50
+Form = 0
+Moves = EARTHPOWER,ICEBEAM,SURF,ANCIENTPOWER
+AbilityIndex = 1
+Item = HOMINGBLASTER
+Nature = QUIET
+IV = 15,15,15,15,15,15
+EV = 6,0,0,0,252,252
 TeraType = ROCK
 Pokemon = GOLEM,50
 Form = 0
-Moves = STONEEDGE,BODYPRESS,EARTHQUAKE,FIREPUNCH
+Moves = EARTHQUAKE,STONEEDGE,TERABLAST,THUNDERPUNCH
+AbilityIndex = 1
+Item = ASSAULTVEST
+Nature = BRAVE
+IV = 15,15,15,15,15,15
+EV = 6,252,0,0,0,252
+TeraType = GRASS
+#-------------------------------
+[LEADER_Misty,Misty]
+Pokemon = GOLDUCK,50
+Form = 0
+Moves = ICEBEAM,SURF,LIGHTSCREEN,PSYCHIC
+AbilityIndex = 0
+Item = LIGHTCLAY
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 252,0,0,6,252,0
+TeraType = WATER
+Pokemon = VAPOREON,50
+Form = 0
+Moves = SCALD,AQUARING,PROTECT,WISH
+AbilityIndex = 1
+Item = LEFTOVERS
+Nature = BOLD
+IV = 15,15,15,15,15,15
+EV = 0,0,252,0,6,252
+TeraType = WATER
+Pokemon = BLASTOISE,50
+Form = 0
+Moves = AURASPHERE,WATERPULSE,ICEBEAM,DARKPULSE
+AbilityIndex = 1
+Item = MYSTICWATER
+Nature = CALM
+IV = 15,15,15,15,15,15
+EV = 252,0,0,0,252,6
+TeraType = WATER
+Pokemon = POLITOED,50
+Form = 0
+Moves = SURF,EARTHPOWER,FOCUSBLAST,ICYWIND
+AbilityIndex = 2
+Item = DAMPROCK
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,252,0
+TeraType = WATER
+Pokemon = SEAKING,50
+Form = 0
+Moves = SCALESHOT,DRILLRUN,POISONJAB,WAVECRASH
+AbilityIndex = 0
+Item = EXPERTBELT
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 0,252,0,6,0,252
+TeraType = WATER
+Pokemon = STARMIE,50
+Form = 0
+Moves = THUNDERBOLT,SURF,PSYSHOCK,TERABLAST
+AbilityIndex = 2
+Item = WISEGLASSES
+Nature = QUIET
+IV = 15,15,15,15,15,15
+EV = 252,0,6,0,252,0
+TeraType = FIRE
+#-------------------------------
+[LEADER_Surge,Surge]
+Pokemon = ELECTRODE,50
+Form = 0
+Moves = ELECTRICTERRAIN,LIGHTSCREEN,THUNDER,EXPLOSION
+AbilityIndex = 2
+Item = TERRAINEXTENDER
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 252,0,0,0,6,252
+TeraType = ELECTRIC
+Pokemon = JOLTEON,50
+Form = 0
+Moves = HYPERVOICE,PARABOLICCHARGE,SHADOWBALL,RISINGVOLTAGE
+AbilityIndex = 1
+Item = WISEGLASSES
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = ELECTRIC
+Pokemon = GOLEM,50
+Form = 1
+Moves = EARTHQUAKE,BRICKBREAK,THUNDERPUNCH,STONEEDGE
 AbilityIndex = 1
 Item = ASSAULTVEST
 Nature = ADAMANT
 IV = 15,15,15,15,15,15
-EV = 252,252,0,0,0,4
-TeraType = ROCK
+EV = 6,252,0,0,0,252
+TeraType = ELECTRIC
+Pokemon = MAGNEZONE,50
+Form = 0
+Moves = THUNDERBOLT,FLASHCANNON,HIDDENPOWER,SIGNALBEAM
+AbilityIndex = 1
+Item = HOMINGBLASTER
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 0,0,0,252,252,6
+TeraType = ELECTRIC
+Pokemon = ELECTIVIRE,50
+Form = 0
+Moves = BODYSLAM,EARTHQUAKE,BRICKBREAK,DUALCHOP
+AbilityIndex = 1
+Item = LIFEORB
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 0,252,0,252,0,6
+TeraType = ELECTRIC
+Pokemon = RAICHU,50
+Form = 0
+Moves = TERABLAST,THUNDERBOLT,SURF,FOCUSBLAST
+AbilityIndex = 0
+Item = ASSAULTVEST
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = FLYING
 #-------------------------------
+[LEADER_Erika,Erika]
+Pokemon = ELECTRODE,50
+Form = 1
+Moves = GRASSYTERRAIN,ENERGYBALL,THUNDER,EXPLOSION
+AbilityIndex = 2
+Item = TERRAINEXTENDER
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 252,0,0,0,6,252
+TeraType = GRASS
+Pokemon = VENUSAUR,50
+Form = 0
+Moves = GIGADRAIN,SLUDGEBOMB,EARTHPOWER,SLEEPPOWDER
+AbilityIndex = 1
+Item = BLACKSLUDGE
+Nature = BOLD
+IV = 15,15,15,15,15,15
+EV = 0,0,252,0,252,6
+TeraType = GRASS
+Pokemon = LEAFEON,50
+Form = 0
+Moves = LEAFBLADE,DIG,IRONHEAD,KNOCKOFF
+AbilityIndex = 1
+Item = ASSAULTVEST
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 6,252,0,0,0,252
+TeraType = GRASS
+Pokemon = TANGROWTH,50
+Form = 0
+Moves = ANCIENTPOWER,GIGADRAIN,HIDDENPOWER,SLUDGEBOMB
+AbilityIndex = 1
+Item = ASSAULTVEST
+Nature = CALM
+IV = 15,15,15,15,15,15
+EV = 0,0,252,0,6,252
+TeraType = GRASS
+Pokemon = EXEGGUTOR,50
+Form = 1
+Moves = GIGADRAIN,DRAGONPULSE,GRASSYTERRAIN,PROTECT
+AbilityIndex = 2
+Item = SITRUSBERRY
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = GRASS
+Pokemon = VILEPLUME,50
+Form = 0
+Moves = GIGADRAIN,SLUDGEWAVE,MOONBLAST,SLEEPPOWDER
+AbilityIndex = 1
+Item = BLACKSLUDGE
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = STEEL
+#-------------------------------
+[LEADER_Sabrina,Sabrina]
+Pokemon = MRMIME,50
+Form = 0
+Moves = LIGHTSCREEN,REFLECT,PSYCHICTERRAIN,PSYCHIC
+AbilityIndex = 1
+Item = LIGHTCLAY
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 252,0,0,0,6,252
+TeraType = PSYCHIC
+Pokemon = SLOWBRO,50
+Form = 0
+Moves = SLACKOFF,FLAMETHROWER,SURF,PSYCHIC
+AbilityIndex = 0
+Item = LEFTOVERS
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = PSYCHIC
+Pokemon = HYPNO,50
+Form = 0
+Moves = HYPNOSIS,PSYCHIC,SHADOWBALL,TRIATTACK
+AbilityIndex = 2
+Item = WIDELENS
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = PSYCHIC
+Pokemon = RAPIDASH,50
+Form = 1
+Moves = PSYCHOCUT,PLAYROUGH,WILDCHARGE,HIGHHORSEPOWER
+AbilityIndex = 2
+Item = ASSAULTVEST
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = PSYCHIC
+Pokemon = JYNX,50
+Form = 0
+Moves = ENERGYBALL,PSYCHIC,HYPERVOICE,WATERPULSE
+AbilityIndex = 1
+Item = FOCUSSASH
+Nature = BOLD
+IV = 15,15,15,15,15,15
+EV = 6,0,252,0,252,0
+TeraType = PSYCHIC
+Pokemon = ALAKAZAM,50
+Form = 0
+Moves = PSYCHIC,TERABLAST,SHADOWBALL,ENERGYBALL
+AbilityIndex = 2
+Item = LIFEORB
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = STEEL
+#-------------------------------
+[LEADER_Janine,Janine]
+Pokemon = QWILFISH,50
+Form = 0
+Moves = TOXICSPIKES,HYDROPUMP,SLUDGEWAVE,HEX
+AbilityIndex = 2
+Item = BLACKSLUDGE
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 252,0,0,0,6,252
+TeraType = POISON
+Pokemon = NIDOQUEEN,50
+Form = 0
+Moves = ICEBEAM,SLUDGEBOMB,EARTHPOWER,DRAGONPULSE
+AbilityIndex = 0
+Item = ASSAULTVEST
+Nature = BOLD
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = POISON
+Pokemon = NIDOKING,50
+Form = 0
+Moves = HARSHJAB,POISONJAB,EARTHQUAKE,SHADOWCLAW
+AbilityIndex = 0
+Item = LIFEORB
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 6,252,0,0,0,252
+TeraType = POISON
+Pokemon = BEEDRILL,50
+Form = 0
+Moves = XSCISSOR,POISONJAB,DRILLRUN,UTURN
+AbilityIndex = 1
+Item = EXPERTBELT
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = POISON
+Pokemon = VICTREEBEL,50
+Form = 0
+Moves = TOXIC,LEAFBLADE,POISONJAB,PROTECT
+AbilityIndex = 1
+Item = LEFTOVERS
+Nature = IMPISH
+IV = 15,15,15,15,15,15
+EV = 6,252,0,0,0,252
+TeraType = POISON
+Pokemon = ARIADOS,50
+Form = 0
+Moves = POISONJAB,XSCISSOR,DIG,SHADOWSNEAK
+AbilityIndex = 1
+Item = SCOPELENS
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = GROUND
+#-------------------------------
+[LEADER_Blaine,Blaine]
+Pokemon = NINETALES,50
+Form = 0
+Moves = SOLARBEAM,FLAMETHROWER,PSYSHOCK,DARKPULSE
+AbilityIndex = 2
+Item = HEATROCK
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = FIRE
+Pokemon = FLAREON,50
+Form = 0
+Moves = FLAREBLITZ,SUPERPOWER,PROTECT,FACADE
+AbilityIndex = 2
+Item = TOXICORB
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = FIRE
+Pokemon = ARCANINE,50
+Form = 0
+Moves = FLAREBLITZ,CLOSECOMBAT,BULLDOZE,THUNDERFANG
+AbilityIndex = 0
+Item = MUSCLEBAND
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = PSYCHIC
+Pokemon = CHARIZARD,50
+Form = 0
+Moves = FLAMETHROWER,DRAGONPULSE,AIRSLASH,SOLARBEAM
+AbilityIndex = 2
+Item = LEFTOVERS
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = FIRE
+Pokemon = TAUROS,50
+Form = 2
+Moves = PROTECT,RAGINGBULL,CLOSECOMBAT,EARTHQUAKE
+AbilityIndex = 2
+Item = SITRUSBERRY
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 6,252,252,0,0,0
+TeraType = FIRE
+Pokemon = RAPIDASH,50
+Form = 0
+Moves = FLAREBLITZ,TERABLAST,MEGAHORN,HIGHHORSEPOWER
+AbilityIndex = 2
+Item = ROCKYHELMET
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = WATER
+#-------------------------------
+[LEADER_Giovanni,Giovanni]
+Pokemon = DUGTRIO,50
+Form = 0
+Moves = SANDSTORM,STEALTHROCK,EARTHQUAKE,NIGHTSLASH
+AbilityIndex = 0
+Item = SMOOTHROCK
+Nature = IMPISH
+IV = 15,15,15,15,15,15
+EV = 0,6,252,0,0,252
+TeraType = GROUND
+Pokemon = STEELIX,50
+Form = 0
+Moves = STONEEDGE,EARTHQUAKE,ICEFANG,PROTECT
+AbilityIndex = 0
+Item = LEFTOVERS
+Nature = BRAVE
+IV = 15,15,15,15,15,15
+EV = 6,252,0,0,0,252
+TeraType = GROUND
+Pokemon = RHYPERIOR,50
+Form = 0
+Moves = ROCKSLIDE,EARTHQUAKE,BODYPRESS,ICEPUNCH
+AbilityIndex = 1
+Item = ASSAULTVEST
+Nature = CAREFUL
+IV = 15,15,15,15,15,15
+EV = 6,252,0,0,0,252
+TeraType = GROUND
+Pokemon = NIDOKING,50
+Form = 0
+Moves = EARTHPOWER,SLUDGEWAVE,ICEBEAM,THUNDERBOLT
+AbilityIndex = 2
+Item = LIFEORB
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = GROUND
+Pokemon = SANDSLASH,50
+Form = 0
+Moves = EARTHQUAKE,BRICKBREAK,SWORDSDANCE,POISONJAB
+AbilityIndex = 2
+Item = LEFTOVERS
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = GROUND
+Pokemon = NIDOQUEEN,50
+Form = 0
+Moves = SLUDGEWAVE,ICEBEAM,EARTHPOWER,TERABLAST
+AbilityIndex = 2
+Item = BLACKSLUDGE
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = GRASS
+#-------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
