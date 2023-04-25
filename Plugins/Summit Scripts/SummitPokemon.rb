@@ -1,34 +1,36 @@
 $allstats = [:HP, :ATTACK, :DEFENSE, :SPECIAL_ATTACK, :SPECIAL_DEFENSE, :SPEED]
 
-def pbSummitSelectPokemon
-  allpkmn = SummitPokeInfo.allspecies
-  num = rand(0...(allpkmn.length))
-  pkmn = allpkmn[num]
-  pbSummitMakePokemon(pkmn)
-  return pkmn
+def pbSummitSelectPokemon(region)
+  pkmnlist = SummitPokeInfo.allspecies(region)
+  num = rand(0...(pkmnlist.length))
+  pkmn = pkmnlist[num]
+  set = rand(1..3)
+  pkmnset = pkmn.to_s << set.to_s
+  pbSummitMakePokemon(pkmnset)
+  return pkmnset
 end
 
 # ===== ALPHA FUNCTION =====
-# def pbSummitMakePokemon(specform)
-#   pkmn = SummitPokeInfo.const_get(specform)
-#   specformformatted = pkmn[:species].clone.to_s
-#   if pkmn[:form] != 0
-#     specformformatted << "_" << pkmn[:form].to_s
-#   end
-#   @givepkmn = Pokemon.new(specformformatted, 50)
-#   for stat in $allstats
-#     @givepkmn.iv[stat] = 31
-#   end
-#   @givepkmn.happiness = 255
-#   @givepkmn.cannot_release = true
+def pbSummitMakePokemon(specform)
+  pkmn = SummitPokeInfo.const_get(specform)
+  specformformatted = pkmn[:species].clone.to_s
+  if pkmn[:form] != 0
+    specformformatted << "_" << pkmn[:form].to_s
+  end
+  @givepkmn = Pokemon.new(specformformatted, 50)
+  for stat in $allstats
+    @givepkmn.iv[stat] = 31
+  end
+  @givepkmn.happiness = 255
+  @givepkmn.cannot_release = true
 
-#   for move in pkmn[:moves]
-#     @givepkmn.learn_move(move)
-#   end
+  for move in pkmn[:moves]
+    @givepkmn.learn_move(move)
+  end
   
-#   @givepkmn.ability_index = pkmn[:ability_index]
-#   return @givepkmn
-# end
+  @givepkmn.ability_index = pkmn[:ability_index]
+  return @givepkmn
+end
 
 def pbSummitPrepPokemon(specform)
   @givepkmn = Pokemon.new(specform, 50)
@@ -41,15 +43,16 @@ def pbSummitPrepPokemon(specform)
 end
 
 def pbSummitGivePokemon(specform)
-  # pbSummitMakePokemon(specform) # alpha
-  pbSummitPrepPokemon(specform)
+  pbSummitMakePokemon(specform) # beta
+  # specform = specform.chop testing
+  # pbSummitPrepPokemon(specform) # testing
   naturelist = []
   for i in GameData::Nature::DATA.keys
     if GameData::Nature.try_get(i).stat_changes.empty?
       naturelist.push(i.name)
     end
   end
-  $game_variables[42].push(specform)
+  $game_variables[42].push(specform.chop)
   @givepkmn.nature = naturelist[rand(0...naturelist.length)]
   @givepkmn.obtain_map = 8
   @givepkmn.obtain_text = "Summit Lobby"
@@ -101,16 +104,23 @@ def pbSummitStorePokemon(pkmn)
   # Messages saying the Pokémon was stored in a PC box
 end
 
-def pbSummitVendingPokemon
-  if (SummitPokeInfo.allspecies.clone.uniq-$game_variables[42].clone.uniq).empty?
+def pbSummitVendingPokemon(region)
+  regionspecies = []
+  for sp in SummitPokeInfo.allspecies(region).clone.uniq
+    regionspecies << region.to_s
+  end
+  obtained = $game_variables[42].clone.uniq
+  if (regionspecies-obtained).empty?
     return false
   end
   loop do
-    pkmn = pbSummitSelectPokemon
-    if !$game_variables[42].include?(pkmn) # not obtained
+    pkmn = pbSummitSelectPokemon(region)
+    if !$game_variables[42].include?(pkmn.chop) # not obtained
       pbShowPokemonSprite(pkmn)
       pbSummitGivePokemon(pkmn)
       return true
+    else
+      return false
     end
   end
 end

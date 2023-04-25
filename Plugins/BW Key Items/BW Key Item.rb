@@ -44,9 +44,9 @@
 class ShowPokemonSpriteScene
 
 def initialize(pokemon)
- @pokemon=SummitPokeInfo.const_get(pokemon.to_s)[:species].to_s
- @form=SummitPokeInfo.const_get(pokemon.to_s)[:form].to_s
- case @form
+  @pokemon=SummitPokeInfo.const_get(pokemon.to_s)[:species].to_s
+  @form=SummitPokeInfo.const_get(pokemon.to_s)[:form].to_s
+  case @form
   when "0"
     if GameData::Species.get(@pokemon).form_name
       @dispform = GameData::Species.get(@pokemon).form_name
