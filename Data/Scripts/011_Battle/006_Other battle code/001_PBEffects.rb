@@ -130,6 +130,7 @@ module PBEffects
   SuppressorVest      = 125
   Shelter             = 126
   Echoburst           = 127
+  ThawOut             = 128
 
   #=============================================================================
   # These effects apply to a battler position

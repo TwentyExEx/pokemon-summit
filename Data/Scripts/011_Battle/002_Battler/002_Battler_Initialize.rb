@@ -161,6 +161,7 @@ class Battle::Battler
     @effects[PBEffects::BideDamage]          = 0
     @effects[PBEffects::BideTarget]          = -1
     @effects[PBEffects::BurnUp]              = false
+    @effects[PBEffects::ThawOut]              = false
     @effects[PBEffects::Charge]              = 0
     @effects[PBEffects::ChoiceBand]          = nil
     @effects[PBEffects::Counter]             = -1

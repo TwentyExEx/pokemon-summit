@@ -108,6 +108,7 @@ module Battle::DebugVariables
     PBEffects::TarShot        => { name: "Tar Shot weakening self to Fire",                 default: false },
     PBEffects::Taunt          => { name: "Taunt number of rounds remaining",                default: 0 },
     PBEffects::Telekinesis    => { name: "Telekinesis number of rounds remaining",          default: 0 },
+    PBEffects::ThawOut        => { name: "Thaw Out has removed self's Ice type",            default: false },
     PBEffects::ThroatChop     => { name: "Throat Chop number of rounds remaining",          default: 0 },
     PBEffects::Torment        => { name: "Torment preventing repeating moves",              default: false },
 #    PBEffects::Toxic - set elsewhere

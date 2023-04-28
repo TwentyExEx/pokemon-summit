@@ -622,3 +622,53 @@ class Battle::Move::TwoTurnAttackInvulnerableInSkySkipChargeIfTailwind < Battle:
     return ret
   end
 end
+
+#===============================================================================
+# Effectiveness against Steel-type is 2x. (Magnetic Crash)
+#===============================================================================
+class Battle::Move::SuperEffectiveAgainstSteel < Battle::Move
+  def pbCalcTypeModSingle(moveType, defType, user, target)
+    return Effectiveness::SUPER_EFFECTIVE_ONE if defType == :STEEL
+    return super
+  end
+end
+
+#===============================================================================
+# User loses their Ice type. Fails if user is not Ice-type. (Thaw Out)
+#===============================================================================
+class Battle::Move::UserLosesIceType < Battle::Move
+  def pbMoveFailed?(user, targets)
+    if !user.pbHasType?(:ICE)
+      @battle.pbDisplay(_INTL("But it failed!"))
+      return true
+    end
+    return false
+  end
+
+  def pbEffectAfterAllHits(user, target)
+    if !user.effects[PBEffects::ThawOut]
+      user.effects[PBEffects::ThawOut] = true
+      @battle.pbDisplay(_INTL("{1} thawed itself out!", user.pbThis))
+    end
+  end
+end
+
+#===============================================================================
+# Heals user by an amount depending on the weather. (Packing Frost)
+#===============================================================================
+class Battle::Move::HealUserDependingOnSnowstorm < Battle::Move::HealingMove
+  def pbOnStartUse(user, targets)
+    case user.effectiveWeather
+    when :Hail
+      @healAmount = (user.totalhp * 2 / 3.0).round
+    when :None, :StrongWinds
+      @healAmount = (user.totalhp / 2.0).round
+    else
+      @healAmount = (user.totalhp / 4.0).round
+    end
+  end
+
+  def pbHealAmount(user)
+    return @healAmount
+  end
+end
