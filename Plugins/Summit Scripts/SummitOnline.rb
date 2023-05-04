@@ -190,7 +190,7 @@ def pbOnlineMusicChanger
 			when "DPPT"
 				tracklist =
 				["sinnoh_dppt_arceus.ogg",
-				"sinnoh_dppt_champion.ogg",
+				"sinnoh_dppt_cynthia.ogg",
 				"sinnoh_dppt_cyrus.ogg",
 				"sinnoh_dppt_diaglapalkia.ogg",
 				"sinnoh_dppt_elitefour.ogg",
@@ -201,7 +201,7 @@ def pbOnlineMusicChanger
 				"sinnoh_dppt_lake.ogg",
 				"sinnoh_dppt_leader.ogg",
 				"sinnoh_dppt_legendary.ogg",
-				"sinnoh_dppt_rival.ogg",
+				"sinnoh_dppt_barry.ogg",
 				"sinnoh_dppt_trainer.ogg",
 				"sinnoh_dppt_wild.ogg"]
 				tracknames = ["Arceus","Cynthia","Cyrus","Dialga/Palkia","Elite Four","Frontier Brain","Team Galactic Commander","Team Galactic Grunt","Giratina","Lake Trio","Gym Leader","Legendary","Barry","Trainer","Wild","Cancel"]
@@ -280,7 +280,7 @@ def pbOnlineMusicChanger
 				tracknames = ["Diantha","Elite Four","Emma","Friends","Gym Leader","Looker","Lysandre","Calem/Serena","Sycamore","Trainer","Cancel"]
 			when "XY"
 				tracklist =
-				["kalos_xy_champion.ogg",
+				["kalos_xy_diantha.ogg",
 				"kalos_xy_elitefour.ogg",
 				"kalos_xy_flare.ogg",
 				"kalos_xy_friend.ogg",
