@@ -10009,3 +10009,63 @@ FunctionCode = None
 Flags = Contact,CanProtect,CanMirrorMove
 Description = A physical attack in which the user charges and slams into the target with its whole body.
 #-------------------------------
+[AURACANNON]
+Name = Tackle
+Type = NORMAL
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 35
+Target = NearOther
+FunctionCode = None
+Flags = Contact,CanProtect,CanMirrorMove
+Description = A physical attack in which the user charges and slams into the target with its whole body.
+#-------------------------------
+[VOLTAICSTEP]
+Name = Tackle
+Type = NORMAL
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 35
+Target = NearOther
+FunctionCode = None
+Flags = Contact,CanProtect,CanMirrorMove
+Description = A physical attack in which the user charges and slams into the target with its whole body.
+#-------------------------------
+[PHANTOMDANCE]
+Name = Tackle
+Type = NORMAL
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 35
+Target = NearOther
+FunctionCode = None
+Flags = Contact,CanProtect,CanMirrorMove
+Description = A physical attack in which the user charges and slams into the target with its whole body.
+#-------------------------------
+[MAGNETICCRASH]
+Name = Tackle
+Type = NORMAL
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 35
+Target = NearOther
+FunctionCode = None
+Flags = Contact,CanProtect,CanMirrorMove
+Description = A physical attack in which the user charges and slams into the target with its whole body.
+#-------------------------------
+[SPLINTEREDSTORMSHARDS]
+Name = Tackle
+Type = NORMAL
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 35
+Target = NearOther
+FunctionCode = None
+Flags = Contact,CanProtect,CanMirrorMove
+Description = A physical attack in which the user charges and slams into the target with its whole body.
+#-------------------------------

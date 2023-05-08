@@ -1398,3 +1398,15 @@ Description = NEEDS CODE
 [PIXIETRAP]
 Name = Pixie Trap
 Description = NEEDS CODE
+#-------------------------------
+[SLICEPROOF]
+Name = Sliceproof
+Description = NEEDS CODE
+#-------------------------------
+[MINDANDBODY]
+Name = Mind And Body
+Description = NEEDS CODE
+#-------------------------------
+[VOIDWARRANTY]
+Name = Void Warranty
+Description = NEEDS CODE
