@@ -1,6 +1,0 @@
-Name       = Visually Different Super Shiny
-Version    = 1.0.1
-Essentials = 20.1
-Requires   = v20.1 Hotfixes,1.0.4
-Requires   = Essentials Deluxe,1.1.1
-Credits    = AutumnMood
