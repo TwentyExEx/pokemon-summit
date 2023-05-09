@@ -1,0 +1,4 @@
+Name         = NPB's Battle UI and Even MORE More
+Version      = 6.0
+Essentials   = 20.1
+Credits      = No pro bro,BiggusWeeabus,Taiga
