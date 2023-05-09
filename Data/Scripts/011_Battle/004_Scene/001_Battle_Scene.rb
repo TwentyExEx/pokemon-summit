@@ -7,8 +7,8 @@ class Battle::Scene
   USE_ABILITY_SPLASH   = (Settings::MECHANICS_GENERATION >= 5)
   MESSAGE_PAUSE_TIME   = 1.0   # In seconds
   # Text colors
-  MESSAGE_BASE_COLOR   = Color.new(248, 248, 240)
-  MESSAGE_SHADOW_COLOR = Color.new(107, 90, 115)
+  MESSAGE_BASE_COLOR   = Color.new(80, 80, 88)
+  MESSAGE_SHADOW_COLOR = Color.new(160, 160, 168)
   # The number of party balls to show in each side's lineup.
   NUM_BALLS            = Settings::MAX_PARTY_SIZE
   # Centre bottom of the player's side base graphic

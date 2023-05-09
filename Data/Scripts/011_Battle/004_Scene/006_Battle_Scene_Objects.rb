@@ -12,11 +12,11 @@ class Battle::Scene::PokemonDataBox < Sprite
   # Maximum time in seconds to make a change to the HP bar.
   HP_BAR_CHANGE_TIME = 1.0
   STATUS_ICON_HEIGHT = 16
-  NAME_BASE_COLOR         = Color.new(66, 66, 66)
-  NAME_SHADOW_COLOR       = Color.new(222, 214, 181)
-  MALE_BASE_COLOR         = Color.new(66, 206, 255)
+  NAME_BASE_COLOR         = Color.new(72, 72, 72)
+  NAME_SHADOW_COLOR       = Color.new(184, 184, 184)
+  MALE_BASE_COLOR         = Color.new(48, 96, 216)
   MALE_SHADOW_COLOR       = NAME_SHADOW_COLOR
-  FEMALE_BASE_COLOR       = Color.new(255, 156, 148)
+  FEMALE_BASE_COLOR       = Color.new(248, 88, 40)
   FEMALE_SHADOW_COLOR     = NAME_SHADOW_COLOR
 
   def initialize(battler, sideSize, viewport = nil)
@@ -113,14 +113,14 @@ class Battle::Scene::PokemonDataBox < Sprite
   def x=(value)
     super
     @hpBar.x     = value + @spriteBaseX + 102
-    @expBar.x    = value + @spriteBaseX + 28
+    @expBar.x    = value + @spriteBaseX + 6
     @hpNumbers.x = value + @spriteBaseX + 80
   end
 
   def y=(value)
     super
     @hpBar.y     = value + 40
-    @expBar.y    = value + 78
+    @expBar.y    = value + 74
     @hpNumbers.y = value + 52
   end
 
