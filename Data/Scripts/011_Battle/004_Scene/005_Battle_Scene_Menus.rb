@@ -411,7 +411,7 @@ class Battle::Scene::FightMenu < Battle::Scene::MenuBase
       ppFraction = [(4.0 * move.pp / move.total_pp).ceil, 3].min
       textPos = []
       textPos.push([_INTL("PP: {1}/{2}", move.pp, move.total_pp),
-                    448, 56, 2, PP_COLORS[ppFraction * 2], PP_COLORS[(ppFraction * 2) + 1]])
+                    458, 56, 2, PP_COLORS[ppFraction * 2], PP_COLORS[(ppFraction * 2) + 1]])
       pbDrawTextPositions(@infoOverlay.bitmap, textPos)
     end
   end
