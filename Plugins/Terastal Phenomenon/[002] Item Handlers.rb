@@ -3,14 +3,10 @@
 #===============================================================================
 
 #-------------------------------------------------------------------------------
-# Defines Tera Shards.
+# Gets Tera Shards types.
 #-------------------------------------------------------------------------------
 module GameData
   class Item
-    def is_tera_shard?
-      return !@flags.none? { |f| f[/^TeraShard_/i] }
-    end
-	
     def tera_shard_type
       return if !is_tera_shard?
       @flags.each do |f|
@@ -154,6 +150,7 @@ ItemHandlers::UseOnPokemon.addIf(proc { |item| GameData::Item.get(item).is_tera_
       scene.pbDisplay(_INTL("It won't have any effect."))
       next false
     end
+    $stats.total_tera_types_changed += 1
     scene.pbHardRefresh
     next true
   }
@@ -161,7 +158,7 @@ ItemHandlers::UseOnPokemon.addIf(proc { |item| GameData::Item.get(item).is_tera_
 
 
 #-------------------------------------------------------------------------------
-# Tera Crystal
+# Radiant Tera Jewel
 #-------------------------------------------------------------------------------
 # Restores your ability to use Terastallization if it was already used in battle.
 # Using this item will take up your entire turn, and cannot be used if orders have

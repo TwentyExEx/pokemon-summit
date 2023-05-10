@@ -1,7 +1,51 @@
 #===============================================================================
-# Revamps base Essentials code related to NPC Trainers to allow for plugin 
+# Revamps base Essentials code related to trainers to allow for plugin 
 # compatibility.
 #===============================================================================
+
+
+#-------------------------------------------------------------------------------
+# Player's birthday data.
+#-------------------------------------------------------------------------------
+class Player < Trainer
+  def birthdate
+    return @birthdate
+  end
+  
+  def setBirthdate(day, month, year = nil)
+    year = Time.now.year - 1 if !year
+    @birthdate = Time.new(year, month, day)
+  end
+  
+  def is_anniversary?(date = nil)
+    time = pbGetTimeNow
+    date = $player.birthdate || $PokemonGlobal.startTime if !date
+    return time.day == date.day && time.mon == date.mon && time.year > date.year
+  end
+end
+
+def pbSetPlayerBirthday
+  months = []
+  mon = day = 1
+  12.times { |i| months.push(_INTL("{1}", pbGetMonthName(i + 1))) }
+  loop do
+    mon = pbMessage(_INTL("Which month is your birthday in?"), months) + 1
+    maxval = ([4, 6, 9, 11].include?(mon)) ? 30 : (mon == 2) ? 28 : 31
+    params = ChooseNumberParams.new
+    params.setRange(1, maxval)
+    params.setInitialValue(1)
+    params.setCancelValue(1)
+    day = pbMessageChooseNumber(_INTL("Which day in {1} is your birthday?", pbGetMonthName(mon)), params)
+    case day.to_s.last
+    when "1" then suffix = (day != 11) ? "st" : "th"
+    when "2" then suffix = (day != 12) ? "nd" : "th"
+    when "3" then suffix = (day != 13) ? "rd" : "th"
+    else          suffix = "th"
+    end
+    break if pbConfirmMessage(_INTL("So, your birthday is {1} {2}{3}, correct?", pbGetMonthName(mon), day, suffix))
+  end
+  $player.setBirthdate(day, mon)
+end
 
 
 #-------------------------------------------------------------------------------
@@ -9,7 +53,9 @@
 #-------------------------------------------------------------------------------
 module GameData
   class Trainer
+    SCHEMA["Size"]       = [:size,        "u"]
     SCHEMA["Ace"]        = [:trainer_ace, "b"]
+    SCHEMA["Memento"]    = [:memento,     "u"] # Placeholder
     SCHEMA["Focus"]      = [:focus,       "u"] # Placeholder
     SCHEMA["Birthsign"]  = [:birthsign,   "u"] # Placeholder
     SCHEMA["DynamaxLvl"] = [:dynamax_lvl, "u"]
@@ -17,110 +63,51 @@ module GameData
     SCHEMA["NoDynamax"]  = [:nodynamax,   "b"]
     SCHEMA["Mastery"]    = [:mastery,     "b"]
     SCHEMA["TeraType"]   = [:teratype,    "u"] # Placeholder
-    
+	
+    alias dx_to_trainer to_trainer
     def to_trainer
-      tr_name = self.name
-      Settings::RIVAL_NAMES.each do |rival|
-        next if rival[0] != @trainer_type || !$game_variables[rival[1]].is_a?(String)
-        tr_name = $game_variables[rival[1]]
-        break
-      end
-      trainer = NPCTrainer.new(tr_name, @trainer_type)
-      trainer.id        = $player.make_foreign_ID
-      trainer.items     = @items.clone
-      trainer.lose_text = self.lose_text
-      @pokemon.each do |pkmn_data|
-        species = GameData::Species.get(pkmn_data[:species]).species
-        pkmn = Pokemon.new(species, pkmn_data[:level], trainer, false)
-        trainer.party.push(pkmn)
-        if pkmn_data[:form]
-          pkmn.forced_form = pkmn_data[:form] if MultipleForms.hasFunction?(species, "getForm")
-          pkmn.form_simple = pkmn_data[:form]
-        end
-        pkmn.item = pkmn_data[:item]
-        if pkmn_data[:moves] && pkmn_data[:moves].length > 0
-          pkmn_data[:moves].each { |move| pkmn.learn_move(move) }
-        else
-          pkmn.reset_moves
-        end
-        pkmn.ability_index = pkmn_data[:ability_index] || 0
-        pkmn.ability = pkmn_data[:ability]
-        pkmn.gender = pkmn_data[:gender] || ((trainer.male?) ? 0 : 1)
-        pkmn.shiny = (pkmn_data[:shininess]) ? true : false
-        pkmn.super_shiny = (pkmn_data[:super_shininess]) ? true : false
-        if pkmn_data[:nature]
-          pkmn.nature = pkmn_data[:nature]
-        else
-          species_num = GameData::Species.keys.index(species) || 1
-          tr_type_num = GameData::TrainerType.keys.index(@trainer_type) || 1
-          idx = (species_num + tr_type_num) % GameData::Nature.count
-          pkmn.nature = GameData::Nature.get(GameData::Nature.keys[idx]).id
-        end
-        GameData::Stat.each_main do |s|
-          if pkmn_data[:iv]
-            pkmn.iv[s.id] = pkmn_data[:iv][s.id]
-          else
-            pkmn.iv[s.id] = [pkmn_data[:level] / 2, Pokemon::IV_STAT_LIMIT].min
-          end
-          if pkmn_data[:ev]
-            pkmn.ev[s.id] = pkmn_data[:ev][s.id]
-          else
-            pkmn.ev[s.id] = [pkmn_data[:level] * 3 / 2, Pokemon::EV_LIMIT / 6].min
-          end
-        end
-        pkmn.happiness = pkmn_data[:happiness] if pkmn_data[:happiness]
-        pkmn.name = pkmn_data[:name] if pkmn_data[:name] && !pkmn_data[:name].empty?
-        #-----------------------------------------------------------------------
-        # Sets the default values for plugin properties on trainer's Pokemon.
-        #-----------------------------------------------------------------------
+      plugins = [
+        "ZUD Mechanics", 
+        "PLA Battle Styles", 
+        "Terastal Phenomenon", 
+        "Focus Meter System", 
+        "Pokémon Birthsigns",
+        "Improved Mementos"
+      ]
+      trainer = dx_to_trainer
+      trainer.party.each_with_index do |pkmn, i|
+        pkmn_data = @pokemon[i]
+        pkmn.scale = pkmn_data[:size] if pkmn_data[:size]
         pkmn.ace = (pkmn_data[:trainer_ace]) ? true : false
-        if PluginManager.installed?("Focus Meter System")
-          pkmn.focus_style = pkmn_data[:focus] || Settings::FOCUS_STYLE_DEFAULT
-        end
-        if PluginManager.installed?("Pokémon Birthsigns")
-          pkmn.birthsign = pkmn_data[:birthsign] || :VOID
-        end
-        if PluginManager.installed?("ZUD Mechanics")
-          if pkmn_data[:nodynamax]
-            pkmn.dynamax_able = false
-          else
-            pkmn.dynamax_lvl = pkmn_data[:dynamax_lvl]
-            pkmn.gmax_factor = (pkmn_data[:gmaxfactor]) ? true : false
+        plugins.each do |plugin|
+          if PluginManager.installed?(plugin)
+            case plugin
+            when "ZUD Mechanics"
+              if pkmn.shadowPokemon? || pkmn_data[:nodynamax]
+                pkmn.dynamax_able = false
+                pkmn.dynamax_lvl = 0
+                pkmn.gmax_factor = false
+              else
+                pkmn.dynamax_lvl = pkmn_data[:dynamax_lvl]
+                pkmn.gmax_factor = (pkmn_data[:gmaxfactor]) ? true : false
+              end
+            when "PLA Battle Styles"
+              if pkmn.shadowPokemon?
+                pkmn.moves.each { |m| m.mastered = false }
+              else
+                pkmn.master_moveset if pkmn_data[:mastery]
+              end
+            when "Terastal Phenomenon"
+              pkmn.tera_type = (pkmn.shadowPokemon?) ? nil : pkmn_data[:teratype]
+            when "Focus Meter System"
+              pkmn.focus_style = (pkmn.shadowPokemon?) ? :None : (pkmn_data[:focus] || Settings::FOCUS_STYLE_DEFAULT)
+            when "Pokémon Birthsigns"
+              pkmn.birthsign = (pkmn.shadowPokemon?) ? :VOID : (pkmn_data[:birthsign] || :VOID)
+            when "Improved Mementos"
+              pkmn.memento = (pkmn.shadowPokemon?) ? nil : pkmn_data[:memento]
+            end
           end
         end
-        if PluginManager.installed?("Terastal Phenomenon")
-          pkmn.tera_type = pkmn_data[:teratype]
-        end
-        if PluginManager.installed?("PLA Battle Styles")
-          pkmn.master_moveset if pkmn_data[:mastery]
-        end
-        #-----------------------------------------------------------------------
-        if pkmn_data[:shadowness]
-          pkmn.makeShadow
-          pkmn.update_shadow_moves(true)
-          pkmn.shiny = false
-          #---------------------------------------------------------------------
-          # Sets base values for plugin properties on shadow Pokemon.
-          #---------------------------------------------------------------------
-          if PluginManager.installed?("Focus Meter System")
-            pkmn.focus_style = :None
-          end
-          if PluginManager.installed?("Pokémon Birthsigns")
-            pkmn.birthsign = :VOID
-          end
-          if PluginManager.installed?("ZUD Mechanics")
-            pkmn.dynamax_lvl = 0
-            pkmn.gmax_factor = false
-          end
-          if PluginManager.installed?("Terastal Phenomenon")
-            pkmn.tera_type = nil
-          end
-          if PluginManager.installed?("PLA Battle Styles")
-            pkmn.moves.each { |m| m.mastered = false }
-          end
-          #---------------------------------------------------------------------
-        end
-        pkmn.poke_ball = pkmn_data[:poke_ball] if pkmn_data[:poke_ball]
         pkmn.calc_stats
       end
       return trainer
@@ -157,7 +144,9 @@ module TrainerPokemonProperty
       initsetting[:ev],
       initsetting[:happiness],
       initsetting[:poke_ball],
+      initsetting[:size],
       initsetting[:trainer_ace],
+      initsetting[:memento],
       initsetting[:focus],
       initsetting[:birthsign],
       initsetting[:dynamax_lvl], 
@@ -181,54 +170,6 @@ module TrainerPokemonProperty
       pkmn_properties.push([_INTL("Move {1}", i + 1),
                             MovePropertyForSpecies.new(oldsetting), _INTL("A move known by the Pokémon. Leave all moves blank (use Z key to delete) for a wild moveset.")])
     end
-    #---------------------------------------------------------------------------
-    # Plugin-specific properties.
-    nil_prop = [_INTL("Plugin Property"), ReadOnlyProperty, _INTL("This property requires a certain plugin to be installed to set.")]
-    #---------------------------------------------------------------------------
-    # Focus Style
-    if PluginManager.installed?("Focus Meter System")
-      property_Focus = [_INTL("Focus"), GameDataProperty.new(:Focus), _INTL("Focus style of the Pokémon.")]
-    else
-      plugin_name = "\n[Focus Meter System]"
-      property_Focus = [nil_prop[0], nil_prop[1], nil_prop[2] + plugin_name]
-    end
-    #---------------------------------------------------------------------------
-    # Birthsign
-    if PluginManager.installed?("Pokémon Birthsigns")
-      property_Birthsign = [_INTL("Birthsign"), GameDataProperty.new(:Birthsign), _INTL("Birthsign of the Pokémon.")]
-    else
-      plugin_name = "\n[Pokémon Birthsigns]"
-      property_Birthsign = [nil_prop[0], nil_prop[1], nil_prop[2] + plugin_name]
-    end
-    #---------------------------------------------------------------------------
-    # Dynamax Level/G-Max Factor/Eligibility
-    if PluginManager.installed?("ZUD Mechanics")
-      property_DynamaxLvl = [_INTL("Dynamax Lvl"), LimitProperty2.new(10), _INTL("Dynamax level of the Pokémon (0-10).")]
-      property_GmaxFactor = [_INTL("G-Max Factor"), BooleanProperty2, _INTL("If set to true, the Pokémon will have G-Max Factor.")]
-      property_NoDynamax  = [_INTL("No Dynamax"), BooleanProperty2, _INTL("If set to true, the Pokémon will be unable to Dynamax. This allows for other mechanics such as Battle Styles or Terastallization.")]
-    else
-      plugin_name = "\n[ZUD Plugin]"
-      property_DynamaxLvl = [nil_prop[0], nil_prop[1], nil_prop[2] + plugin_name]
-      property_GmaxFactor = [nil_prop[0], nil_prop[1], nil_prop[2] + plugin_name]
-      property_NoDynamax  = [nil_prop[0], nil_prop[1], nil_prop[2] + plugin_name]
-    end
-    #---------------------------------------------------------------------------
-    # Move Mastery
-    if PluginManager.installed?("PLA Battle Styles")
-      property_Mastery = [_INTL("Mastery"), BooleanProperty2, _INTL("If set to true, the Pokémon's eligible moves will be mastered.")]
-    else
-      plugin_name = "\n[PLA Battle Styles]"
-      property_Mastery = [nil_prop[0], nil_prop[1], nil_prop[2] + plugin_name]
-    end
-    #---------------------------------------------------------------------------
-    # Tera Type
-    if PluginManager.installed?("Terastal Phenomenon")
-      property_Tera = [_INTL("Tera Type"), GameDataProperty.new(:Type), _INTL("Tera Type of the Pokémon.")]
-    else
-      plugin_name = "\n[Terastal Phenomenon]"
-      property_Tera = [nil_prop[0], nil_prop[1], nil_prop[2] + plugin_name]
-    end
-    #---------------------------------------------------------------------------
     pkmn_properties.concat(
       [[_INTL("Ability"),       AbilityProperty,                         _INTL("Ability of the Pokémon. Overrides the ability index.")],
        [_INTL("Ability index"), LimitProperty2.new(99),                  _INTL("Ability index. 0=first ability, 1=second ability, 2+=hidden ability.")],
@@ -238,15 +179,39 @@ module TrainerPokemonProperty
        [_INTL("EVs"),           EVsProperty.new(Pokemon::EV_STAT_LIMIT), _INTL("Effort values for each of the Pokémon's stats.")],
        [_INTL("Happiness"),     LimitProperty2.new(255),                 _INTL("Happiness of the Pokémon (0-255).")],
        [_INTL("Poké Ball"),     BallProperty.new(oldsetting),            _INTL("The kind of Poké Ball the Pokémon is kept in.")],
-       [_INTL("Ace"),           BooleanProperty2,                        _INTL("Flags this Pokémon as this trainer's ace. Used by certain plugins below.")],
-       property_Focus, 
-       property_Birthsign, 
-       property_DynamaxLvl, 
-       property_GmaxFactor, 
-       property_NoDynamax, 
-       property_Mastery, 
-       property_Tera
+       [_INTL("Size"),          LimitProperty2.new(255),                 _INTL("Size variance of the Pokémon (0-255).")],
+       [_INTL("Ace"),           BooleanProperty2,                        _INTL("Flags this Pokémon as this trainer's ace. Used by certain plugins below.")]
     ])
+    ["Improved Mementos",
+     "Focus Meter System",
+     "Pokémon Birthsigns",
+     "ZUD Mechanics", 
+     "PLA Battle Styles", 
+     "Terastal Phenomenon"
+    ].each do |plugin|
+      if PluginManager.installed?(plugin)
+        case plugin
+        when "Improved Mementos"   then pkmn_properties.push(
+          [_INTL("Memento"), GameDataProperty.new(:Ribbon), _INTL("The memento adorned on the Pokémon. This determines its title.")])
+        when "Focus Meter System"  then pkmn_properties.push(
+          [_INTL("Focus"), GameDataProperty.new(:Focus), _INTL("Focus style of the Pokémon.")])
+        when "Pokémon Birthsigns"  then pkmn_properties.push(
+          [_INTL("Birthsign"), GameDataProperty.new(:Birthsign), _INTL("Birthsign of the Pokémon.")])
+        when "ZUD Mechanics"       then pkmn_properties.push(
+          [_INTL("Dynamax Lvl"), LimitProperty2.new(10), _INTL("Dynamax level of the Pokémon (0-10).")],
+          [_INTL("G-Max Factor"), BooleanProperty2, _INTL("If set to true, the Pokémon will have G-Max Factor.")],
+          [_INTL("No Dynamax"), BooleanProperty2, _INTL("If set to true, the Pokémon will be unable to Dynamax. This allows for other mechanics such as Battle Styles or Terastallization.")])
+        when "PLA Battle Styles"   then pkmn_properties.push(
+          [_INTL("Mastery"), BooleanProperty2, _INTL("If set to true, the Pokémon's eligible moves will be mastered.")])
+        when "Terastal Phenomenon" then pkmn_properties.push(
+          [_INTL("Tera Type"), GameDataProperty.new(:Type), _INTL("Tera Type of the Pokémon.")])
+        end
+      else
+        repeat = (plugin == "ZUD Mechanics") ? 3 : 1
+        placeholder = [_INTL("Plugin Property"), ReadOnlyProperty, _INTL("This property requires a certain plugin to be installed./n[#{plugin}]")]
+        repeat.times { |i| pkmn_properties.push(placeholder) }
+      end
+    end
     pbPropertyList(settingname, oldsetting, pkmn_properties, false)
     return nil if !oldsetting[0]
     ret = {
@@ -266,14 +231,16 @@ module TrainerPokemonProperty
       :ev              => oldsetting[13 + Pokemon::MAX_MOVES],
       :happiness       => oldsetting[14 + Pokemon::MAX_MOVES],
       :poke_ball       => oldsetting[15 + Pokemon::MAX_MOVES],
-      :trainer_ace     => oldsetting[16 + Pokemon::MAX_MOVES],
-      :focus           => oldsetting[17 + Pokemon::MAX_MOVES],
-      :birthsign       => oldsetting[18 + Pokemon::MAX_MOVES],
-      :dynamax_lvl     => oldsetting[19 + Pokemon::MAX_MOVES],
-      :gmaxfactor      => oldsetting[20 + Pokemon::MAX_MOVES],
-      :nodynamax       => oldsetting[21 + Pokemon::MAX_MOVES],
-      :mastery         => oldsetting[22 + Pokemon::MAX_MOVES],
-      :teratype        => oldsetting[23 + Pokemon::MAX_MOVES]
+      :size            => oldsetting[16 + Pokemon::MAX_MOVES],
+      :trainer_ace     => oldsetting[17 + Pokemon::MAX_MOVES],
+      :memento         => oldsetting[18 + Pokemon::MAX_MOVES],
+      :focus           => oldsetting[19 + Pokemon::MAX_MOVES],
+      :birthsign       => oldsetting[20 + Pokemon::MAX_MOVES],
+      :dynamax_lvl     => oldsetting[21 + Pokemon::MAX_MOVES],
+      :gmaxfactor      => oldsetting[22 + Pokemon::MAX_MOVES],
+      :nodynamax       => oldsetting[23 + Pokemon::MAX_MOVES],
+      :mastery         => oldsetting[24 + Pokemon::MAX_MOVES],
+      :teratype        => oldsetting[25 + Pokemon::MAX_MOVES]
     }
     moves = []
     Pokemon::MAX_MOVES.times do |i|

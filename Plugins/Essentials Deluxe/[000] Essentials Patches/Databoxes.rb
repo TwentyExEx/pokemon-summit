@@ -57,48 +57,28 @@ class Battle::Scene::PokemonDataBox < SpriteWrapper
     end
   end
   
+  alias :dx_x= :x=
   def x=(value)
-    super
+    self.dx_x=(value)
+    @hpBar.x = value + 20 if @raid_boss
     pbSetFocusBarX(value) if @can_focus
-    if @raid_boss
-      @hpBar.x = value + 20
-    else
-      @hpBar.x = value + @spriteBaseX + 102
-    end
-    @expBar.x    = value + @spriteBaseX + 6
-    @hpNumbers.x = value + @spriteBaseX + 80
   end
 
+  alias :dx_y= :y=
   def y=(value)
-    super
+    self.dx_y=(value)
+    @hpBar.y = value + 34 if @raid_boss
     pbSetFocusBarY(value) if @can_focus
-    if @raid_boss
-      @hpBar.y = value + 34
-    else
-      @hpBar.y = value + 40
-    end
-    @expBar.y    = value + 74
-    @hpNumbers.y = value + 52
   end
   
+  alias dx_refresh refresh
   def refresh
-    self.bitmap.clear
+    dx_refresh
     return if !@battler.pokemon
-    draw_background
-    draw_name
     if @raid_boss
       draw_raid_shield
       draw_raid_counters
-    else
-      draw_level
-      draw_gender
     end
-    draw_status
-    draw_shiny_icon
-    draw_special_form_icon
-    draw_owned_icon
-    refreshHP
-    refreshExp
     refreshMeter if @can_focus
   end
 end

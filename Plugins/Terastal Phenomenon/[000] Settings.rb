@@ -25,7 +25,7 @@ module Settings
   #-----------------------------------------------------------------------------
   # When true, the player's Tera Orb will require recharging between uses.
   #-----------------------------------------------------------------------------
-  TERA_ORB_RECHARGE = false
+  TERA_ORB_RECHARGE = true
   
   #-----------------------------------------------------------------------------
   # Sets the number of Tera Shards required to change a Pokemon's Tera Type.

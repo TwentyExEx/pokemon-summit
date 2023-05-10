@@ -49,25 +49,25 @@ class Battle::Scene
       if midbattle[mid].has_key?(:delay)
         if midbattle[mid][:delay].is_a?(Array)
           midbattle[mid][:delay].each do |delay_trigger|
-		    if all_triggers.include?(delay_trigger)
-			  @midbattle_delay.push(mid) 
-			  break
-			end
+            if all_triggers.include?(delay_trigger)
+              @midbattle_delay.push(mid) 
+              break
+            end
           end
         else
-		  @midbattle_delay.push(mid) if all_triggers.include?(midbattle[mid][:delay])
+          @midbattle_delay.push(mid) if all_triggers.include?(midbattle[mid][:delay])
         end
       end
       if midbattle[mid].has_key?(:ignore)
         if midbattle[mid][:ignore].is_a?(Array)
           midbattle[mid][:ignore].each do |ignore_trigger|
             if all_triggers.include?(ignore_trigger)
-			  @midbattle_ignore.push(mid) 
-			  break
-			end
+              @midbattle_ignore.push(mid) 
+              break
+            end
           end
         else
-		  @midbattle_ignore.push(mid) if all_triggers.include?(midbattle[mid][:ignore])
+          @midbattle_ignore.push(mid) if all_triggers.include?(midbattle[mid][:ignore])
         end
       end
     end
@@ -110,6 +110,7 @@ class Battle::Scene
           string = k.to_s.split("_")
           keys.push([string[0].to_sym, k])
         end
+        repeat = false
         keys.each do |key|
           trainer = (alt_trainer.nil?) ? base_trainer : alt_trainer
           battler = (alt_battler.nil?) ? base_battler : alt_battler
@@ -127,7 +128,11 @@ class Battle::Scene
             alt_trainer = @battle.pbGetOwnerIndexFromBattlerIndex(temp_battler.index)
           #---------------------------------------------------------------------
           # Delays further actions until the inputted trigger has been met.	
-          when :delay                 then break if !@midbattle_delay.include?(trigger)
+          when :delay
+            if !@midbattle_delay.include?(trigger)
+              repeat = true
+              break
+            end
           #---------------------------------------------------------------------
           # Ignores further actions once the inputted trigger has been met.	
           when :ignore                then break if @midbattle_ignore.include?(trigger)
@@ -170,6 +175,9 @@ class Battle::Scene
           # Toggles the charge state of the player's Tera Orb.
           when :teracharge            then $player.tera_charged = value
           #---------------------------------------------------------------------
+          # Toggles whether Poke Balls are disabled or not.
+          when :disableballs          then @battle.disablePokeBalls = value
+          #---------------------------------------------------------------------
           # Renames a battler.	
           when :rename, :nickname
             battler.pokemon.name = value
@@ -200,7 +208,7 @@ class Battle::Scene
             @battle.decision = value
           end
         end
-        next if trigger.include?("_repeat") || trigger.include?("_every_") || @midbattle_delay.include?(trigger)
+        next if trigger.include?("_repeat") || trigger.include?("_every_") || repeat
         $game_temp.dx_midbattle.delete(trigger)
       end
     end
@@ -436,7 +444,6 @@ class Battle::Scene
   # Changes the value of the midbattle variable.
   #-----------------------------------------------------------------------------
   def midbattle_SetVariable(value)
-    return if @battle.decision > 0
     if value.is_a?(Array)
       case value[0]
       when :add  then @midbattle_var += value[1]
@@ -457,13 +464,13 @@ class Battle::Scene
   def midbattle_ChangeBGM(value)
     return if @battle.decision > 0
     if value.is_a?(Array)
-      bgm, fade = value[0], value[1] * 1.0
+      bgm, fade, volume, pitch = value[0], value[1] * 1.0, value[2], value[3]
     else
-      bgm, fade = value, 0.0
+      bgm, fade, volume, pitch = value, 0.0, nil, nil
     end
     pbBGMFade(fade)
     pbWait((fade * 60).round)
-    pbBGMPlay(bgm)
+    pbBGMPlay(bgm, volume, pitch)
   end
   
   
@@ -573,8 +580,7 @@ class Battle::Scene
     if GameData::Item.get(item).is_poke_ball?
       battler = battler.pbDirectOpposing(true) if !battler.opposes?
     else
-      return if battler.wild?
-      trainerName = @battle.pbGetOwnerName(battler.index) 
+      trainerName = (battler.wild?) ? battler.name : @battle.pbGetOwnerName(battler.index) 
       @battle.pbUseItemMessage(item, trainerName)
     end
     #---------------------------------------------------------------------------

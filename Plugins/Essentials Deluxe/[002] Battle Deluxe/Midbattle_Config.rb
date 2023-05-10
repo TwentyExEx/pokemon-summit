@@ -258,13 +258,13 @@ module EssentialsDeluxe
                               "Let's try dealing some damage.\nGet 'em, {1}!"],
     "statusInflicted_foe" => [:Opposing, "It's always a good idea to inflict status conditions like Sleep or Paralysis!",
                               "This will really help improve your odds at capturing the Pokémon!"],
-	#---------------------------------------------------------------------------
+    #---------------------------------------------------------------------------
     # Turn 1 - The Pokemon on the player's side will use a status move on the
-	#          opponent, if one is available.
+    #          opponent, if one is available.
     #---------------------------------------------------------------------------
     "turnAttack" => {
-	  :usemove => [:StatusFoe, 1]
-	},
+      :usemove => [:StatusFoe, 1]
+    },
     #---------------------------------------------------------------------------
     # Continuous - Applies Endure effect to wild Pokemon whenever targeted by
     #              a damage-dealing move. Ensures it is not KO'd early.
@@ -376,7 +376,7 @@ module EssentialsDeluxe
   # Phase 1 - Speech events.
   #-----------------------------------------------------------------------------
   DEMO_VS_SADA_PHASE_1 = {
-    "turnCommand"         => "I don't know who you think you are, but I'm not about to let anyone get in the way of my goals.",
+    "turnCommand"         => [:Opposing, "I don't know who you think you are, but I'm not about to let anyone get in the way of my goals."],
     "attackerDamaged_foe" => "This is the power the ancient past holds.\nSplendid, isn't it?",
     "defenderSEdmg_foe"   => "Now, this is interesting... Child, do you actually understand ancient Pokémon's weaknesses?",
     "attackerSEdmg_foe"   => "Do you imagine you can best the wealth of data at my disposal with your human brain?",
