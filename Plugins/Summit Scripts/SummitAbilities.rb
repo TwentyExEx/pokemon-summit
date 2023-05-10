@@ -763,3 +763,52 @@ Battle::AbilityEffects::OnBeingHit.add(:OVERGROW,
 )
 
 Battle::AbilityEffects::OnBeingHit.copy(:OVERGROW, :BLAZE, :TORRENT, :SWARM)
+
+
+#===============================================================================
+# Dominion
+#===============================================================================
+Battle::AbilityEffects::OnEndOfUsingMove.add(:DOMINION,
+  proc { |ability, user, targets, move, battle|
+    next if battle.pbAllFainted?(user.idxOpposingSide)
+    numFainted = 0
+    targets.each { |b| numFainted += 1 if b.damageState.fainted }
+    next if numFainted == 0 || !user.pbCanRaiseStatStage?(:SPECIAL_ATTACK, user)
+    user.pbRaiseStatStageByAbility(:SPECIAL_ATTACK, numFainted, user)
+  }
+)
+
+
+#===============================================================================
+# Pixie Trap
+#===============================================================================
+Battle::AbilityEffects::TrappingByTarget.add(:PIXIETRAP,
+  proc { |ability, switcher, bearer, battle|
+    next true if switcher.pbHasType?(:FAIRY)
+  }
+)
+
+#===============================================================================
+# Mind and Body - in Move_UsageCalculations
+#===============================================================================
+
+#===============================================================================
+# Sliceproof
+#===============================================================================
+
+Battle::AbilityEffects::MoveImmunity.add(:SLICEPROOF,
+  proc { |ability, user, target, move, type, battle, show_message|
+    next false if !move.slicingMove?
+    next false if Settings::MECHANICS_GENERATION >= 8 && user.index == target.index
+    if show_message
+      battle.pbShowAbilitySplash(target)
+      if Battle::Scene::USE_ABILITY_SPLASH
+        battle.pbDisplay(_INTL("It doesn't affect {1}...", target.pbThis(true)))
+      else
+        battle.pbDisplay(_INTL("{1}'s {2} blocks {3}!", target.pbThis, target.abilityName, move.name))
+      end
+      battle.pbHideAbilitySplash(target)
+    end
+    next true
+  }
+)

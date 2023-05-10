@@ -241,6 +241,9 @@ class Battle::Move
     if specialMove?
       return user.spatk, user.stages[:SPECIAL_ATTACK] + 6
     end
+    if physicalMove? && user.ability == :MINDANDBODY
+      return user.spatk, user.stages[:SPECIAL_ATTACK] + 6
+    end
     return user.attack, user.stages[:ATTACK] + 6
   end
 
