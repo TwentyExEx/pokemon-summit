@@ -750,7 +750,7 @@ Battle::AbilityEffects::DamageCalcFromUser.add(:BOXBARRIER,
 )
 
 #===============================================================================
-# Overgrow, Blaze, Torrent, Swarm, Battery
+# Overgrow, Blaze, Torrent, Swarm, Battery, Aura Boost
 #===============================================================================
 
 Battle::AbilityEffects::OnBeingHit.add(:OVERGROW,
@@ -762,8 +762,15 @@ Battle::AbilityEffects::OnBeingHit.add(:OVERGROW,
   }
 )
 
-Battle::AbilityEffects::OnBeingHit.copy(:OVERGROW, :BLAZE, :TORRENT, :SWARM)
+Battle::AbilityEffects::OnBeingHit.copy(:OVERGROW, :BLAZE, :TORRENT, :SWARM, :AURABOOST)
 
+Battle::AbilityEffects::DamageCalcFromUser.add(:AURABOOST,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    if user.hp <= user.totalhp / 3 && type == :FIGHTING
+      mults[:attack_multiplier] *= 1.5
+    end
+  }
+)
 
 #===============================================================================
 # Dominion
@@ -810,5 +817,57 @@ Battle::AbilityEffects::MoveImmunity.add(:SLICEPROOF,
       battle.pbHideAbilitySplash(target)
     end
     next true
+  }
+)
+
+#===============================================================================
+# Void Warranty
+#===============================================================================
+
+Battle::AbilityEffects::DamageCalcFromUser.add(:VOIDWARRANTY,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    mults[:attack_multiplier] *= 1.5 if type == :GHOST
+  }
+)
+
+Battle::AbilityEffects::DamageCalcFromTarget.add(:VOIDWARRANTY,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    mults[:final_damage_multiplier] /= 2 if move.calcType == :NORMAL
+  }
+)
+
+#===============================================================================
+# Room Cleaner
+#===============================================================================
+
+Battle::AbilityEffects::OnSwitchIn.add(:ROOMCLEANER,
+  proc { |ability, battler, battle, switch_in|
+    next if battle.field.effects[PBEffects::TrickRoom] == 0 &&
+    next if battle.field.effects[PBEffects::WonderRoom] == 0 &&
+    next if battle.field.effects[PBEffects::MagicRoom] == 0
+    battle.pbShowAbilitySplash(battler)
+    if battle.field.effects[PBEffects::TrickRoom] > 0
+      battle.field.effects[PBEffects::TrickRoom] = 0
+      battle.pbDisplay(_INTL("The twisted dimensions returned to normal!", battler.pbOpposingTeam))
+    end
+    if battle.field.effects[PBEffects::WonderRoom] > 0
+      battle.field.effects[PBEffects::WonderRoom] = 0
+      battle.pbDisplay(_INTL("Wonder Room wore off, and Defense and Sp. Def stats returned to normal!", battler.pbOpposingTeam))
+    end
+    if battle.field.effects[PBEffects::MagicRoom] > 0
+      battle.field.effects[PBEffects::MagicRoom] = 0
+      battle.pbDisplay(_INTL("Magic Room wore off, and held items' effects returned to normal!", battler.pbOpposingTeam))
+    end
+    battle.pbHideAbilitySplash(battler)
+  }
+)
+
+#===============================================================================
+# Electric Dispersion - in Move_UsageCalculations
+#===============================================================================
+
+Battle::AbilityEffects::DamageCalcFromTarget.add(:ELECTRICDISPERSION,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    mults[:final_damage_multiplier] *= 2 if move.calcType == :WATER
   }
 )

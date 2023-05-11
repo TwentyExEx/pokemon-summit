@@ -41,9 +41,12 @@ class Battle::Move
          defType == :GHOST
         ret = Effectiveness::NORMAL_EFFECTIVE_ONE
       end
-	   # Foresight
-      if (user.hasActiveAbility?(:CORROSION) || target.effects[PBEffects::Foresight]) &&
-         defType == :STEEL
+	   # Corrosion
+      if (user.hasActiveAbility?(:CORROSION) && defType == :STEEL
+        ret = Effectiveness::NORMAL_EFFECTIVE_ONE
+      end
+	   # Electric Dispersion
+      if (user.hasActiveAbility?(:ELECTRICDISPERSION) && defType == :GROUND
         ret = Effectiveness::NORMAL_EFFECTIVE_ONE
       end
       # Miracle Eye
