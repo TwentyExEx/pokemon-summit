@@ -1439,8 +1439,9 @@ class Battle::Move::RaiseUserAndAlliesAtkDef1 < Battle::Move
 end
 
 #===============================================================================
-# Increases the user's and its ally's Attack and Special Attack by 1 stage each,
-# if they have Plus or Minus. (Gear Up)
+# Raises Atk/Sp. Atk of Steel-types. Raises Speed of Electric-types. 
+# If used on Electric Terrain, both Steel-types and Electric-types gain an 
+# additional boost in Speed. Does not affect airborne Pokemon. (Gear Up)
 #===============================================================================
 # NOTE: In Gen 5, this move should have a target of UserSide, while in Gen 6+ it
 #       should have a target of UserAndAllies. This is because, in Gen 5, this
@@ -1449,14 +1450,16 @@ end
 #       aren't protected by their substitute/ability/etc., but they are in Gen
 #       6+). We achieve this by not targeting any battlers in Gen 5, since
 #       pbSuccessCheckAgainstTarget is only called for targeted battlers.
-class Battle::Move::RaisePlusMinusUserAndAlliesAtkSpAtk1 < Battle::Move
+
+class Battle::Move::RaiseTargetStatsBasedOnTypeAndElectricTerrain < Battle::Move
   def ignoresSubstitute?(user); return true; end
   def canSnatch?;               return true; end
 
   def pbMoveFailed?(user, targets)
     @validTargets = []
-    @battle.allSameSideBattlers(user).each do |b|
-      next if !b.hasActiveAbility?([:MINUS, :PLUS])
+    @battle.allBattlers.each do |b|
+      next if !(b.pbHasType?(:STEEL) || b.pbHasType?(:ELECTRIC))
+      next if b.airborne?
       next if !b.pbCanRaiseStatStage?(:ATTACK, user, self) &&
               !b.pbCanRaiseStatStage?(:SPECIAL_ATTACK, user, self)
       @validTargets.push(b)
@@ -1470,18 +1473,35 @@ class Battle::Move::RaisePlusMinusUserAndAlliesAtkSpAtk1 < Battle::Move
 
   def pbFailsAgainstTarget?(user, target, show_message)
     return false if @validTargets.any? { |b| b.index == target.index }
-    return true if !target.hasActiveAbility?([:MINUS, :PLUS])
+    return true if !(target.pbHasType?(:STEEL) || target.pbHasType?(:ELECTRIC))
     @battle.pbDisplay(_INTL("{1}'s stats can't be raised further!", target.pbThis)) if show_message
     return true
   end
 
   def pbEffectAgainstTarget(user, target)
     showAnim = true
-    if target.pbCanRaiseStatStage?(:ATTACK, user, self)
-      showAnim = false if target.pbRaiseStatStage(:ATTACK, 1, user, showAnim)
-    end
-    if target.pbCanRaiseStatStage?(:SPECIAL_ATTACK, user, self)
-      target.pbRaiseStatStage(:SPECIAL_ATTACK, 1, user, showAnim)
+    if target.pbHasType?(:STEEL)
+      if target.pbCanRaiseStatStage?(:ATTACK, user, self)
+        showAnim = false if target.pbRaiseStatStage(:ATTACK, 1, user, showAnim)
+      end
+      if target.pbCanRaiseStatStage?(:SPECIAL_ATTACK, user, self)
+        target.pbRaiseStatStage(:SPECIAL_ATTACK, 1, user, showAnim)
+      end
+      if @battle.field.terrain == :Electric
+        if target.pbCanRaiseStatStage?(:SPEED, user, self)
+          target.pbRaiseStatStage(:SPEED, 1, user, showAnim)
+        end
+      end
+    elsif target.pbHasType?(:ELECTRIC)
+      if @battle.field.terrain == :Electric
+        if target.pbCanRaiseStatStage?(:SPEED, user, self)
+          target.pbRaiseStatStage(:SPEED, 2, user, showAnim)
+        end
+      else
+        if target.pbCanRaiseStatStage?(:SPEED, user, self)
+          target.pbRaiseStatStage(:SPEED, 1, user, showAnim)
+        end
+      end
     end
   end
 

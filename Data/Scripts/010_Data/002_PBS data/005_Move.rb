@@ -784,7 +784,7 @@ module GameData
       when "159" then new_code = "PoisonTargetLowerTargetSpeed1"
       when "15A" then new_code = "CureTargetBurn"
       when "15B" then new_code = "CureTargetStatusHealUserHalfOfTotalHP"
-      when "15C" then new_code = "RaisePlusMinusUserAndAlliesAtkSpAtk1"
+      when "15C" then new_code = "RaiseTargetStatsBasedOnTypeAndElectricTerrain"
       when "15D" then new_code = "UserStealTargetPositiveStatStages"
       when "15E" then new_code = "EnsureNextCriticalHit"
       when "15F" then new_code = "LowerUserDefense1"

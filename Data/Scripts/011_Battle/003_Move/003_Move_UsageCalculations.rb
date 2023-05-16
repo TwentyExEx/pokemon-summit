@@ -42,11 +42,11 @@ class Battle::Move
         ret = Effectiveness::NORMAL_EFFECTIVE_ONE
       end
 	   # Corrosion
-      if (user.hasActiveAbility?(:CORROSION) && defType == :STEEL
+      if user.hasActiveAbility?(:CORROSION) && defType == :STEEL
         ret = Effectiveness::NORMAL_EFFECTIVE_ONE
       end
 	   # Electric Dispersion
-      if (user.hasActiveAbility?(:ELECTRICDISPERSION) && defType == :GROUND
+      if user.hasActiveAbility?(:ELECTRICDISPERSION) && defType == :GROUND
         ret = Effectiveness::NORMAL_EFFECTIVE_ONE
       end
       # Miracle Eye

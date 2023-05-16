@@ -8254,8 +8254,8 @@ Type = STEEL
 Category = Status
 Accuracy = 0
 TotalPP = 20
-Target = UserAndAllies
-FunctionCode = RaisePlusMinusUserAndAlliesAtkSpAtk1
+Target = AllBattlers
+FunctionCode = RaiseTargetStatsBasedOnTypeAndElectricTerrain
 Description = The user engages its gears to raise the Attack and Sp. Atk of allies with the Plus or Minus Ability.
 #-------------------------------
 [IRONDEFENSE]

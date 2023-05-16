@@ -1298,18 +1298,21 @@ class Battle::AI
       end
       score = 0 if !has_ally
     #---------------------------------------------------------------------------
-    when "RaisePlusMinusUserAndAlliesAtkSpAtk1"
+    when "RaiseTargetStatsBasedOnTypeAndElectricTerrain"
       hasEffect = user.statStageAtMax?(:ATTACK) &&
-                  user.statStageAtMax?(:SPECIAL_ATTACK)
+                  user.statStageAtMax?(:SPECIAL_ATTACK) &&
+                  user.statStageAtMax?(:SPEED)
       user.allAllies.each do |b|
-        next if b.statStageAtMax?(:ATTACK) && b.statStageAtMax?(:SPECIAL_ATTACK)
+        next if (b.pbHasType?(:STEEL) && b.statStageAtMax?(:ATTACK) && b.statStageAtMax?(:SPECIAL_ATTACK)) || (b.pbHasType?(:ELECTRIC) && b.statStageAtMax?(:SPEED))
         hasEffect = true
         score -= b.stages[:ATTACK] * 10
         score -= b.stages[:SPECIAL_ATTACK] * 10
+        score -= b.stages[:SPEED] * 10
       end
       if hasEffect
         score -= user.stages[:ATTACK] * 10
         score -= user.stages[:SPECIAL_ATTACK] * 10
+        score -= b.stages[:SPEED] * 10
       else
         score -= 90
       end
