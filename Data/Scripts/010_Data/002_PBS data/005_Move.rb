@@ -719,7 +719,7 @@ module GameData
       when "118" then new_code = "StartGravity"
       when "119" then new_code = "StartUserAirborne"
       when "11A" then new_code = "StartTargetAirborneAndAlwaysHitByMoves"
-      when "11B" then new_code = "HitsTargetInSky"
+      when "11B" then new_code = "HitsTargetInSkyLowerAttack"
       when "11C" then new_code = "HitsTargetInSkyGroundsTarget"
       when "11D" then new_code = "TargetActsNext"
       when "11E" then new_code = "TargetActsLast"

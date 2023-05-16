@@ -530,7 +530,7 @@ class Battle::AI
         score -= 90
       end
     #---------------------------------------------------------------------------
-    when "HitsTargetInSky"
+    when "HitsTargetInSkyLowerAttack"
     #---------------------------------------------------------------------------
     when "HitsTargetInSkyGroundsTarget"
       if skill >= PBTrainerAI.mediumSkill

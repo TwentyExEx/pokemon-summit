@@ -1267,8 +1267,18 @@ end
 #===============================================================================
 # Hits airborne semi-invulnerable targets. (Sky Uppercut)
 #===============================================================================
-class Battle::Move::HitsTargetInSky < Battle::Move
+class Battle::Move::HitsTargetInSkyLowerAttack < Battle::Move
   def hitsFlyingTargets?; return true; end
+  def pbAdditionalEffect(user, target)
+	chance = pbAdditionalEffectChance(user, target, 30)
+    return if chance == 0 || chance2 == 0
+    if target.pbCanFreeze?(user, false, self) && @battle.pbRandom(100) < chance
+      target.pbFreeze
+    end
+	if target.pbCanLowerStatStage?(:ATTACK, user, self) && @battle.pbRandom(100) < chance2
+      target.pbLowerStatStage(:ATTACK, 1, user)
+    end
+  end  
 end
 
 #===============================================================================

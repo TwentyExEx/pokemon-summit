@@ -1990,7 +1990,7 @@ Power = 85
 Accuracy = 90
 TotalPP = 15
 Target = NearOther
-FunctionCode = HitsTargetInSky
+FunctionCode = HitsTargetInSkyLowerAttack
 Flags = Contact,CanProtect,CanMirrorMove,Punching
 Description = The user attacks the target with an uppercut thrown skyward with force.
 #-------------------------------
