@@ -871,3 +871,23 @@ Battle::AbilityEffects::DamageCalcFromTarget.add(:ELECTRICDISPERSION,
     mults[:final_damage_multiplier] *= 2 if move.calcType == :WATER
   }
 )
+
+#===============================================================================
+# Submerge
+#===============================================================================
+Battle::AbilityEffects::MoveImmunity.add(:SUBMERGE,
+  proc { |ability, user, target, move, type, battle, show_message|
+    next target.pbMoveImmunityStatRaisingAbility(user, move, type,
+       :WATER, :DEFENSE, 1, show_message)
+  }
+)
+
+#===============================================================================
+# Cobble Cruncher
+#===============================================================================
+
+Battle::AbilityEffects::MoveImmunity.add(:COBBLECRUNCHER,
+  proc { |ability, user, target, move, type, battle, show_message|
+    next target.pbMoveImmunityHealingAbility(user, move, type, :ROCK, show_message)
+  }
+)

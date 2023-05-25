@@ -1377,36 +1377,40 @@ Description = Moves that require a charge turn will skip the charge turn.
 #-------------------------------
 [AURABOOST]
 Name = Aura Boost
-Description = NEEDS CODE
+Description = At 1/3 or less of its max HP, this Pokemon gets pumped up and it's offensive stat is 1.5x with Figthing attacks.
 #-------------------------------
 [ELECTRICDISPERSION]
 Name = Electric Dispersion
-Description = NEEDS CODE
+Description = Electric-type moves can hit Ground-type by neutral damage, but the user gets double damage when hitting with a Water-type move.
 #-------------------------------
 [ROOMCLEANER]
 Name = ROOMCLEANER
-Description = NEEDS CODE
-#-------------------------------
-[TITANIC]
-Name = Titanic
-Description = NEEDS CODE
+Description = On switch-in, clears any Room move on field.
 #-------------------------------
 [DOMINION]
 Name = Dominion
-Description = NEEDS CODE
+Description = This Pokemon's Sp Atk is raised by 1 stage if it attacks and KOes another Pokemon.
 #-------------------------------
 [PIXIETRAP]
 Name = Pixie Trap
-Description = NEEDS CODE
+Description = Prevents Fairy-type Pokémon from fleeing by pulling them in with a pixie-only trap.
 #-------------------------------
 [SLICEPROOF]
 Name = Sliceproof
-Description = NEEDS CODE
+Description = This Pokemon is immune to slicing moves.
 #-------------------------------
 [MINDANDBODY]
 Name = Mind And Body
-Description = NEEDS CODE
+Description = This Pokemon's physical attacks use its Sp. Atk stat in damage calculation.
 #-------------------------------
 [VOIDWARRANTY]
 Name = Void Warranty
-Description = NEEDS CODE
+Description = This Pokemon's offensive stat is multiplied by 1.5 while using a Ghost-type attack, and takes half damage from Normal-type moves.
+#-------------------------------
+[SUBMERGE]
+Name = Submerge
+Description = When hit by a Fire-type move, the damage is negated and Special Defense is raised.
+#-------------------------------
+[COBBLECRUNCHER]
+Name = Cobble Cruncher
+Description = When hit by a Rock-type move, the damage is negated and HP is restored.
