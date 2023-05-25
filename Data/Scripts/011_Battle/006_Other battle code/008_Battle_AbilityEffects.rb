@@ -427,6 +427,12 @@ Battle::AbilityEffects::StatusCheckNonIgnorable.add(:COMATOSE,
 # StatusImmunity handlers
 #===============================================================================
 
+Battle::AbilityEffects::StatusImmunity.add(:CLEARBODY,
+  proc { |ability, battler, status|
+    next true if status == :POISON || :
+  }
+)
+
 Battle::AbilityEffects::StatusImmunity.add(:FLOWERVEIL,
   proc { |ability, battler, status|
     next true if battler.pbHasType?(:GRASS)
@@ -598,6 +604,8 @@ Battle::AbilityEffects::StatusCure.add(:INSOMNIA,
     battler.pbCureStatus(Battle::Scene::USE_ABILITY_SPLASH)
     if !Battle::Scene::USE_ABILITY_SPLASH
       battler.battle.pbDisplay(_INTL("{1}'s {2} woke it up!", battler.pbThis, battler.abilityName))
+      user.pbRecoverHP(user.totalhp / 3)
+      battler.battle.pbDisplay(_INTL("{1} was healed by its {2}!", user.pbThis, battler.abilityName))
     end
     battler.battle.pbHideAbilitySplash(battler)
   }
@@ -698,6 +706,8 @@ Battle::AbilityEffects::StatLossImmunity.add(:CLEARBODY,
       else
         battle.pbDisplay(_INTL("{1}'s {2} prevents stat loss!", battler.pbThis, battler.abilityName))
       end
+      user.pbRecoverHP(user.totalhp / 3)
+      battler.battle.pbDisplay(_INTL("{1} was healed by its {2}!", user.pbThis, battler.abilityName))
       battle.pbHideAbilitySplash(battler)
     end
     next true
@@ -754,6 +764,26 @@ Battle::AbilityEffects::StatLossImmunity.add(:HYPERCUTTER,
     next true
   }
 )
+
+Battle::AbilityEffects::StatLossImmunity.add(:LIMBER,
+  proc { |ability, battler, stat, battle, showMessages|
+    target = battler.pbDirectOpposing
+    next false if stat != :SPEED
+    if showMessages
+      battle.pbShowAbilitySplash(battler)
+      if Battle::Scene::USE_ABILITY_SPLASH
+        battle.pbDisplay(_INTL("{1}'s {2} cannot be lowered!", battler.pbThis, GameData::Stat.get(stat).name))
+      else
+        battle.pbDisplay(_INTL("{1}'s {2} prevents {3} loss!", battler.pbThis,
+           battler.abilityName, GameData::Stat.get(stat).name))
+      end
+      battle.pbHideAbilitySplash(battler)
+    end
+    next true
+  }
+)
+
+
 
 Battle::AbilityEffects::StatLossImmunity.add(:KEENEYE,
   proc { |ability, battler, stat, battle, showMessages|
@@ -1620,7 +1650,7 @@ Battle::AbilityEffects::DamageCalcFromTarget.add(:FLUFFY,
 
 Battle::AbilityEffects::DamageCalcFromTarget.add(:FURCOAT,
   proc { |ability, user, target, move, mults, baseDmg, type|
-    mults[:defense_multiplier] *= 2 if move.physicalMove? ||
+    mults[:defense_multiplier] *= 1.5 if move.physicalMove? ||
                                        move.function == "UseTargetDefenseInsteadOfTargetSpDef"   # Psyshock
   }
 )
@@ -1641,7 +1671,7 @@ Battle::AbilityEffects::DamageCalcFromTarget.add(:HEATPROOF,
 
 Battle::AbilityEffects::DamageCalcFromTarget.add(:ICESCALES,
   proc { |ability, user, target, move, mults, baseDmg, type|
-    mults[:final_damage_multiplier] /= 2 if move.specialMove? ||
+    mults[:final_damage_multiplier] /= 1.5 if move.specialMove? ||
 											move.function == "UseTargetSpDefInsteadOfTargetDef" 
   }
 )
