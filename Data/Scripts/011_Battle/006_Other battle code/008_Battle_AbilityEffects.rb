@@ -427,12 +427,6 @@ Battle::AbilityEffects::StatusCheckNonIgnorable.add(:COMATOSE,
 # StatusImmunity handlers
 #===============================================================================
 
-Battle::AbilityEffects::StatusImmunity.add(:CLEARBODY,
-  proc { |ability, battler, status|
-    next true if status == :POISON || :
-  }
-)
-
 Battle::AbilityEffects::StatusImmunity.add(:FLOWERVEIL,
   proc { |ability, battler, status|
     next true if battler.pbHasType?(:GRASS)
