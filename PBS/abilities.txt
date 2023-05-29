@@ -1384,7 +1384,7 @@ Name = Electric Dispersion
 Description = Electric-type moves can hit Ground-type by neutral damage, but the user gets double damage when hitting with a Water-type move.
 #-------------------------------
 [ROOMCLEANER]
-Name = ROOMCLEANER
+Name = Room Cleaner
 Description = On switch-in, clears any Room move on field.
 #-------------------------------
 [DOMINION]
