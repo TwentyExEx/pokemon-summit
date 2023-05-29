@@ -1486,3 +1486,17 @@ ItemHandlers::UseOnPokemon.add(:REINSOFUNITYUSED, proc { |item, qty, pkmn, scene
   $bag.replace_item(:REINSOFUNITYUSED, :REINSOFUNITY)
   next true
 })
+
+ItemHandlers::UseOnPokemon.add(:KALEIDOSCOPE, proc { |item, qty, pkmn, scene, screen|
+    params = ChooseNumberParams.new
+    params.setRange(0, 360)
+    params.setDefaultValue(pkmn.hue ? pkmn.hue : 0)
+    hue = pbMessageChooseNumber("\\ts[]" + _INTL("Set the Pokémon's hue color [0 - 360]"), params)
+    hue = hue % 360
+    if hue != pkmn.hue
+      pkmn.hue = hue
+    end
+    scene.pbHardRefresh
+    scene.pbDisplay(_INTL("{1} changed hue!", pkmn.name))
+    next false
+})
