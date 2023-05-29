@@ -9878,18 +9878,6 @@ FunctionCode = None
 Flags = CanProtect,CanMirrorMove,Sound
 Description = The user creates an echo which first hits the target at full power, then hits the target again at half the power.
 #-------------------------------
-[STEELSURGE]
-Name = Tackle
-Type = NORMAL
-Category = Physical
-Power = 40
-Accuracy = 100
-TotalPP = 35
-Target = NearOther
-FunctionCode = None
-Flags = Contact,CanProtect,CanMirrorMove
-Description = A physical attack in which the user charges and slams into the target with its whole body.
-#-------------------------------
 [LOCUSTRUSH]
 Name = Locust Rush
 Type = BUG
@@ -9928,30 +9916,6 @@ Flags = CanProtect,CanMirrorMove
 EffectChance = 30
 Description = The user engulfs its foe in a mysterious beam of light. It may also confuse the foe.
 #-------------------------------
-[FANCYFIREWORKS]
-Name = Tackle
-Type = NORMAL
-Category = Physical
-Power = 40
-Accuracy = 100
-TotalPP = 35
-Target = NearOther
-FunctionCode = None
-Flags = Contact,CanProtect,CanMirrorMove
-Description = A physical attack in which the user charges and slams into the target with its whole body.
-#-------------------------------
-[ILLUSIONDIVE]
-Name = Tackle
-Type = NORMAL
-Category = Physical
-Power = 40
-Accuracy = 100
-TotalPP = 35
-Target = NearOther
-FunctionCode = None
-Flags = Contact,CanProtect,CanMirrorMove
-Description = A physical attack in which the user charges and slams into the target with its whole body.
-#-------------------------------
 [OILSHIELD]
 Name = Tackle
 Type = NORMAL
@@ -9965,109 +9929,84 @@ Flags = Contact,CanProtect,CanMirrorMove
 Description = A physical attack in which the user charges and slams into the target with its whole body.
 #-------------------------------
 [PACKINGFROST]
-Name = Tackle
-Type = NORMAL
-Category = Physical
-Power = 40
-Accuracy = 100
-TotalPP = 35
-Target = NearOther
-FunctionCode = None
-Flags = Contact,CanProtect,CanMirrorMove
-Description = A physical attack in which the user charges and slams into the target with its whole body.
-#-------------------------------
-[QUEENASCENDANT]
-Name = Tackle
-Type = NORMAL
-Category = Physical
-Power = 40
-Accuracy = 100
-TotalPP = 35
-Target = NearOther
-FunctionCode = None
-Flags = Contact,CanProtect,CanMirrorMove
-Description = A physical attack in which the user charges and slams into the target with its whole body.
+Name = Packing Frost
+Type = ICE
+Category = Status
+Accuracy = 0
+TotalPP = 5
+Target = UserSide
+FunctionCode = HealUserDependingOnSnowstorm
+Description = The user restores health dependant on the current weather.
 #-------------------------------
 [THAWOUT]
-Name = Tackle
-Type = NORMAL
-Category = Physical
-Power = 40
+Name = Thaw Out
+Type = ICE
+Category = Special
+Power = 130
 Accuracy = 100
-TotalPP = 35
+TotalPP = 15
 Target = NearOther
-FunctionCode = None
-Flags = Contact,CanProtect,CanMirrorMove
-Description = A physical attack in which the user charges and slams into the target with its whole body.
+FunctionCode = UserLosesIceType
+Flags = CanProtect,CanMirrorMove
+Description = A powerful ice blast that removes the user's Ice typing.
 #-------------------------------
 [LEEKSWING]
-Name = Tackle
-Type = NORMAL
+Name = Leek Swing
+Type = FIGHTING
 Category = Physical
-Power = 40
+Power = 70
 Accuracy = 100
-TotalPP = 35
+TotalPP = 15
 Target = NearOther
 FunctionCode = None
 Flags = Contact,CanProtect,CanMirrorMove
 Description = A physical attack in which the user charges and slams into the target with its whole body.
 #-------------------------------
 [AURACANNON]
-Name = Tackle
-Type = NORMAL
-Category = Physical
-Power = 40
-Accuracy = 100
-TotalPP = 35
+Name = Aura Cannon
+Type = FIGHTING
+Category = Special
+Power = 120
+Accuracy = 0
+TotalPP = 5
 Target = NearOther
-FunctionCode = None
-Flags = Contact,CanProtect,CanMirrorMove
-Description = A physical attack in which the user charges and slams into the target with its whole body.
+FunctionCode = LowerUserSpAtk2
+Flags = CanProtect,CanMirrorMove
+Description = The user looses a powerful blast of aura power from deep within its body. This move never misses. The recoil from this move harshly lowers the user's Sp. Atk.
 #-------------------------------
 [VOLTAICSTEP]
-Name = Tackle
-Type = NORMAL
+Name = Voltaic Step
+Type = ELECTRIC
 Category = Physical
-Power = 40
+Power = 70
 Accuracy = 100
-TotalPP = 35
+TotalPP = 10
 Target = NearOther
-FunctionCode = None
-Flags = Contact,CanProtect,CanMirrorMove
-Description = A physical attack in which the user charges and slams into the target with its whole body.
+FunctionCode = RaiseUserSpeed1
+Flags = Contact,CanProtect,CanMirrorMove,Dance
+Description = The user toys with the target and attacks it using light and electric dance steps. This also boosts the user's Speed stat.
 #-------------------------------
 [PHANTOMDANCE]
-Name = Tackle
-Type = NORMAL
-Category = Physical
-Power = 40
+Name = Phantom Dance
+Type = GHOST
+Category = Special
+Power = 70
 Accuracy = 100
-TotalPP = 35
+TotalPP = 10
 Target = NearOther
-FunctionCode = None
-Flags = Contact,CanProtect,CanMirrorMove
-Description = A physical attack in which the user charges and slams into the target with its whole body.
+FunctionCode = LowerTargetSpDef1
+Flags = CanProtect,CanMirrorMove,Dance
+Description = The user attacks the target with a gloomy blast after dancing with mysterious steps. It also lowers the target's Sp Def stat.
 #-------------------------------
 [MAGNETICCRASH]
-Name = Tackle
-Type = NORMAL
-Category = Physical
-Power = 40
+Name = Magnetic Crash
+Type = STEEL
+Category = Special
+Power = 70
 Accuracy = 100
-TotalPP = 35
+TotalPP = 20
 Target = NearOther
-FunctionCode = None
-Flags = Contact,CanProtect,CanMirrorMove
-Description = A physical attack in which the user charges and slams into the target with its whole body.
-#-------------------------------
-[SPLINTEREDSTORMSHARDS]
-Name = Tackle
-Type = NORMAL
-Category = Physical
-Power = 40
-Accuracy = 100
-TotalPP = 35
-Target = NearOther
-FunctionCode = None
-Flags = Contact,CanProtect,CanMirrorMove
-Description = A physical attack in which the user charges and slams into the target with its whole body.
+FunctionCode = SuperEffectiveAgainstSteel
+Flags = CanProtect,CanMirrorMove
+Description = The user lets out an outburst of magnetic energy. This move is super effective on Steel types.
+
