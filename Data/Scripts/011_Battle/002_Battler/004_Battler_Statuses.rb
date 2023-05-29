@@ -455,7 +455,7 @@ class Battle::Battler
       @battle.pbDisplay(_INTL("{1} surrounds itself with misty terrain!", pbThis(true))) if showMessages
       return false
     end
-    if (selfInflicted || !@battle.moldBreaker) && hasActiveAbility?(:OWNTEMPO)
+    if (selfInflicted || !@battle.moldBreaker) && hasActiveAbility?([:OWNTEMPO,:OBLIVIOUS])
       if showMessages
         @battle.pbShowAbilitySplash(self)
         if Battle::Scene::USE_ABILITY_SPLASH
@@ -569,7 +569,16 @@ class Battle::Battler
   # Flinching
   #=============================================================================
   def pbFlinch(_user = nil)
-    return if hasActiveAbility?(:INNERFOCUS) && !@battle.moldBreaker
+    return if !@battle.moldBreaker
+    if hasActiveAbility?(:INNERFOCUS)
+      user.effects[PBEffects::FocusEnergy] = 2
+      if Battle::Scene::USE_ABILITY_SPLASH
+        @battle.pbDisplay(_INTL("{1} is getting pumped!", user.pbThis))
+      else
+        @battle.pbDisplay(_INTL("{1} is getting pumped from its {2}!", user.pbThis, abilityName))
+      end
+      return
+    end
     @effects[PBEffects::Flinch] = true
   end
 end

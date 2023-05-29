@@ -605,7 +605,19 @@ Battle::AbilityEffects::StatusCure.add(:INSOMNIA,
   }
 )
 
-Battle::AbilityEffects::StatusCure.copy(:INSOMNIA, :VITALSPIRIT)
+Battle::AbilityEffects::StatusCure.add(:VITALSPIRIT,
+  proc { |ability, battler|
+    next if battler.status != :SLEEP
+    battler.battle.pbShowAbilitySplash(battler)
+    battler.pbCureStatus(Battle::Scene::USE_ABILITY_SPLASH)
+    if !Battle::Scene::USE_ABILITY_SPLASH
+      battler.battle.pbDisplay(_INTL("{1}'s {2} woke it up!", battler.pbThis, battler.abilityName))
+      battler.pbRaiseStatStageByAbility(:ATTACK, 2, battler)
+      battler.battle.pbDisplay(_INTL("{1}'s {2} boosts its strength!", user.pbThis, battler.abilityName))
+    end
+    battler.battle.pbHideAbilitySplash(battler)
+  }
+)
 
 Battle::AbilityEffects::StatusCure.add(:LIMBER,
   proc { |ability, battler|
@@ -667,6 +679,21 @@ Battle::AbilityEffects::StatusCure.add(:OWNTEMPO,
       battler.battle.pbDisplay(_INTL("{1} snapped out of its confusion.", battler.pbThis))
     else
       battler.battle.pbDisplay(_INTL("{1}'s {2} snapped it out of its confusion!",
+         battler.pbThis, battler.abilityName))
+    end
+    battler.battle.pbHideAbilitySplash(battler)
+  }
+)
+
+Battle::AbilityEffects::StatusCure.add(:OBLIVIOUS,
+  proc { |ability, battler|
+    next if battler.effects[PBEffects::Confusion] == 0
+    battler.battle.pbShowAbilitySplash(battler)
+    battler.pbCureConfusion
+    if Battle::Scene::USE_ABILITY_SPLASH
+      battler.battle.pbDisplay(_INTL("{1} snapped out of its confusion.", battler.pbThis))
+    else
+      battler.battle.pbDisplay(_INTL("{1} is too {2} to get confused!",
          battler.pbThis, battler.abilityName))
     end
     battler.battle.pbHideAbilitySplash(battler)
@@ -1576,6 +1603,12 @@ Battle::AbilityEffects::DamageCalcFromUser.add(:TOXICBOOST,
   }
 )
 
+Battle::AbilityEffects::DamageCalcFromUser.add(:WATERCOMPACTION,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    mults[:base_damage_multiplier] *= 0 if type == :WATER
+  }
+)
+
 #===============================================================================
 # DamageCalcFromAlly handlers
 #===============================================================================
@@ -1713,6 +1746,12 @@ Battle::AbilityEffects::DamageCalcFromTarget.copy(:WATERBUBBLE, :FLOWERGIFT)
 Battle::AbilityEffects::DamageCalcFromTarget.add(:MAGMAARMOR,
   proc { |ability, user, target, move, mults, baseDmg, type|
     mults[:final_damage_multiplier] /= 2 if type == :WATER
+  }
+)
+
+Battle::AbilityEffects::DamageCalcFromTarget.add(:OWNTEMPO,
+  proc { |ability, user, target, move, mults, baseDmg, type|
+    mults[:base_damage_multiplier] /= 2 if move.soundMove? || move.danceMove?
   }
 )
 
@@ -1960,7 +1999,7 @@ Battle::AbilityEffects::OnBeingHit.add(:FLAMEBODY,
 
 Battle::AbilityEffects::OnBeingHit.add(:GOOEY,
   proc { |ability, user, target, move, battle|
-    next if !move.pbContactMove?(user)
+    next if !move.specialMove?
     user.pbLowerStatStageByAbility(:SPEED, 1, target, true, true)
   }
 )
@@ -2181,6 +2220,20 @@ Battle::AbilityEffects::OnBeingHit.add(:WEAKARMOR,
     battle.pbHideAbilitySplash(target)
   }
 )
+
+Battle::AbilityEffects::OnBeingHit.add(:WATERVEIL,
+  proc { |ability, user, target, move, battle|
+    next if !move.contactMove?
+    user.effects[PBEffects::AquaRing] = true
+    if Battle::Scene::USE_ABILITY_SPLASH
+        battle.pbDisplay(_INTL("{1}'s surrounds itself with an Aqua Ring!", target.pbThis))
+      else
+        battle.pbDisplay(_INTL("{1}'s {2} surrounds it with an Aqua Ring!",
+           target.pbThis, target.abilityName))
+      end
+  }
+)
+
 
 #===============================================================================
 # OnDealingHit handlers
@@ -2582,17 +2635,10 @@ Battle::AbilityEffects::EndOfRoundEffect.add(:MOODY,
   proc { |ability, battler, battle|
     randomUp = []
     randomDown = []
-    if Settings::MECHANICS_GENERATION >= 8
-      GameData::Stat.each_main_battle do |s|
-        randomUp.push(s.id) if battler.pbCanRaiseStatStage?(s.id, battler)
-        randomDown.push(s.id) if battler.pbCanLowerStatStage?(s.id, battler)
-      end
-    else
       GameData::Stat.each_battle do |s|
-        randomUp.push(s.id) if battler.pbCanRaiseStatStage?(s.id, battler)
-        randomDown.push(s.id) if battler.pbCanLowerStatStage?(s.id, battler)
+        randomUp.push(s.id) if battler.pbCanRaiseStatStage?(s.id, battler) && s.id != :EVASION
+        randomDown.push(s.id) if battler.pbCanLowerStatStage?(s.id, battler) && s.id != :EVASION
       end
-    end
     next if randomUp.length == 0 && randomDown.length == 0
     battle.pbShowAbilitySplash(battler)
     if randomUp.length > 0

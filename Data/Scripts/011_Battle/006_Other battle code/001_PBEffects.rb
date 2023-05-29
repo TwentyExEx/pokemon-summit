@@ -123,7 +123,7 @@ module PBEffects
   HailToTheKing       = 118
   HailToTheQueen      = 119
   Cacaphony           = 120
-  HoneyHoncho	      = 121
+  HoneyHoncho	        = 121
   SnaringEntrance     = 122
   MindReader          = 123
   MindReaderPos       = 124

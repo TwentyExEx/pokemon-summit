@@ -316,9 +316,17 @@ class Battle::Battler
       @battle.pbShowAbilitySplash(self)
       if Battle::Scene::USE_ABILITY_SPLASH
         @battle.pbDisplay(_INTL("{1}'s {2} cannot be lowered!", pbThis, GameData::Stat.get(:ATTACK).name))
+        if hasActiveAbility?(:INNERFOCUS)
+          user.effects[PBEffects::FocusEnergy] = 2
+          @battle.pbDisplay(_INTL("{1} is getting pumped!", user.pbThis))
+        end
       else
         @battle.pbDisplay(_INTL("{1}'s {2} prevents {3} loss!", pbThis, abilityName,
                                 GameData::Stat.get(:ATTACK).name))
+        if hasActiveAbility?(:INNERFOCUS)
+          user.effects[PBEffects::FocusEnergy] = 2
+          @battle.pbDisplay(_INTL("{1} is getting pumped from its {2}!", user.pbThis, abilityName))
+        end
       end
       @battle.pbHideAbilitySplash(self)
       return false
