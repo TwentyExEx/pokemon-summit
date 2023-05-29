@@ -4,13 +4,17 @@ end
 
 class Battle_CableClub < Battle
   attr_reader :connection
-  def initialize(connection, client_id, scene, opponent_party, opponent)
+  attr_reader :battleRNG
+  def initialize(connection, client_id, scene, opponent_party, opponent, seed)
     @connection = connection
     @client_id = client_id
     player = NPCTrainer.new($player.name, $player.trainer_type)
     super(scene, $player.party, opponent_party, [player], [opponent])
     @battleAI  = AI_CableClub.new(self)
+    @battleRNG = Random.new(seed)
   end
+  
+  def pbRandom(x); return @battleRNG.rand(x); end
   
   # Added optional args to not make v18 break.
   def pbSwitchInBetween(index, checkLaxOnly = false, canCancel = false)
@@ -72,8 +76,8 @@ class Battle_CableClub < Battle
 
   # Rearrange the battlers into a consistent order, do the function, then restore the order.
   def pbCalculatePriority(*args)
+    battlers = @battlers.dup
     begin
-      battlers = @battlers.dup
       order = CableClub::pokemon_order(@client_id)
       for i in 0..3
         @battlers[i] = battlers[order[i]]
@@ -129,7 +133,7 @@ end
 
 class Battle
   class AI_CableClub < AI
-    def pbDefaultChooseEnemyCommand(index)
+        def pbDefaultChooseEnemyCommand(index)
       # Hurray for default methods. have to reverse it to show the expected order.
       our_indices = @battle.pbGetOpposingIndicesInOrder(1).reverse
       their_indices = @battle.pbGetOpposingIndicesInOrder(0).reverse
@@ -138,8 +142,24 @@ class Battle
         # TODO: patch this up to be index agnostic.
         # Would work fine if restricted to single/double battles
         target_order = CableClub::pokemon_target_order(@battle.client_id)
-        for our_index in our_indices
-          @battle.connection.send do |writer|
+        @battle.connection.send do |writer|
+          writer.sym(:battle_data)
+          # Send Seed
+          cur_seed=@battle.battleRNG.srand
+          @battle.battleRNG.srand(cur_seed)
+          writer.sym(:seed)
+          writer.int(cur_seed)
+          # Send Extra Battle Mechanics
+          writer.sym(:mechanic)
+          # Mega Evolution
+          mega=@battle.megaEvolution[0][0]
+          mega^=1 if mega>=0
+          writer.int(mega)
+          tera=@battle.terastallize[0][0]
+          tera^=1 if tera>=0
+          writer.int(tera) # tera fix?
+          # Send Choices for Player's Mons
+          for our_index in our_indices
             pkmn = @battle.battlers[our_index]
             writer.sym(:choice)
             # choice picked was changed to be a symbol now.
@@ -156,12 +176,6 @@ class Battle
             our_target = @battle.choices[our_index][3]
             their_target = target_order[our_target] rescue our_target
             writer.int(their_target)
-            mega=@battle.megaEvolution[0][0]
-            mega^=1 if mega>=0
-            writer.int(mega) # mega fix?
-            tera=@battle.terastallize[0][0]
-            tera^=1 if tera>=0
-            writer.int(tera) # tera fix?
           end
         end
         frame = 0
@@ -184,17 +198,28 @@ class Battle
                 @battle.decision = 1
                 @battle.pbAbort
   
-              when :choice
-                their_index = their_indices.shift
-                partner_pkmn = @battle.battlers[their_index]
-                @battle.choices[their_index][0] = record.sym
-                @battle.choices[their_index][1] = record.int
-                move = record.nil_or(:int)
-                @battle.choices[their_index][2] = move && partner_pkmn.moves[move]
-                @battle.choices[their_index][3] = record.int
-                @battle.megaEvolution[1][0] = record.int # mega fix?
-                @battle.terastallize[1][0] = record.int # mega fix?
-                return if their_indices.empty?
+              when :battle_data
+                loop do
+                  case (t = record.sym)
+                  when :seed
+                    seed=record.int()
+                    @battle.battleRNG.srand(seed) if @battle.client_id==1
+                  when :mechanic
+                    @battle.megaEvolution[1][0] = record.int
+                  when :choice
+                    their_index = their_indices.shift
+                    partner_pkmn = @battle.battlers[their_index]
+                    @battle.choices[their_index][0] = record.sym
+                    @battle.choices[their_index][1] = record.int
+                    move = record.nil_or(:int)
+                    @battle.choices[their_index][2] = move && partner_pkmn.moves[move]
+                    @battle.choices[their_index][3] = record.int
+                    break if their_indices.empty?
+                  else
+                    raise "Unknown message: #{t}"
+                  end
+                end
+                return
   
               else
                 raise "Unknown message: #{type}"

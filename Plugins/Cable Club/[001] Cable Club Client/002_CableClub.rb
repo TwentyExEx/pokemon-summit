@@ -1,4 +1,18 @@
+class GameStats
+  def online_link_count;   return @online_link_count   || 0; end
+  def online_battles_wins; return @online_battles_wins || 0; end
+  def online_battles_lost; return @online_battles_lost || 0; end
+  def online_trade_count;  return @online_trade_count  || 0; end
+  
+  attr_writer :online_link_count
+  attr_writer :online_battles_wins, :online_battles_lost
+  attr_writer :online_trade_count
+end
+
 module CableClub
+  ACTIVITY_OPTIONS = {:battle => _INTL("battle"),
+                      :trade => _INTL("trade"),
+                      :record_mix => _INTL("mix records")}
   def self.pokemon_order(client_id)
     case client_id
     when 0; [0, 1, 2, 3]
@@ -81,11 +95,8 @@ module CableClub
               partner_name = record.str
               partner_trainer_type = record.sym
               partner_party = parse_party(record)
-              # Sprite change
-              $game_map.events[1].direction = 4
-              $game_map.events[1].animation_id = 7
-              $game_map.events[1].character_name = partner_trainer_type.to_s
               pbMessageDisplay(msgwindow, _INTL("{1} {2} connected!",GameData::TrainerType.get(partner_trainer_type).name, partner_name))
+              $stats.online_link_count+=1
               if client_id == 0
                 state = :choose_activity
               else
@@ -120,7 +131,7 @@ module CableClub
                   else; raise "Unknown battle type"
                   end
                 writer.sym(battle_type)
-              end			  
+              end
               activity = :battle
               state = :await_accept_activity
             end
@@ -152,7 +163,6 @@ module CableClub
             when :ok
               case activity
               when :battle
-				$PokemonGlobal.nextBattleBGM = $game_variables[48]
                 partner = NPCTrainer.new(partner_name, partner_trainer_type)
                 (partner.partyID=0) rescue nil # EBDX compat
                 do_battle(connection, client_id, seed, battle_type, partner, partner_party)
@@ -183,7 +193,8 @@ module CableClub
               end
 
             when :cancel
-              pbMessageDisplay(msgwindow, _INTL("I'm sorry, {1} doesn't want to #{activity.to_s}.", partner_name))
+              activity_name = _INTL(ACTIVITY_OPTIONS[activity])
+              pbMessageDisplay(msgwindow, _INTL("I'm sorry, {1} doesn't want to {2}.", partner_name, activity_name))
               state = :choose_activity
 
             else
@@ -213,7 +224,6 @@ module CableClub
                   connection.send do |writer|
                     writer.sym(:ok)
                   end
-				  $PokemonGlobal.nextBattleBGM = $game_variables[48]
                   do_battle(connection, client_id, seed, battle_type, partner, partner_party)
                 else
                   connection.send do |writer|
@@ -397,6 +407,9 @@ module CableClub
           raise "Unknown state: #{state}"
         end
       end
+    connection.send do |writer|
+      writer.sym(:disconnect)
+    end
     connection.dispose
     end
   end
@@ -406,11 +419,12 @@ module CableClub
   end
 
   def self.do_battle(connection, client_id, seed, battle_type, partner, partner_party)
-    # Battle start
     $player.heal_party # Avoids having to transmit damaged state.
     partner_party.each{|pkmn| pkmn.heal} # back to back battles desync without it.
+    olditems  = $player.party.transform { |p| p.item_id }
+    olditems2 = partner_party.transform { |p| p.item_id }
     scene = BattleCreationHelperMethods.create_battle_scene
-    battle = Battle_CableClub.new(connection, client_id, scene, partner_party, partner)
+    battle = Battle_CableClub.new(connection, client_id, scene, partner_party, partner, seed)
     battle.items = []
     battle.internalBattle = false
     case battle_type
@@ -423,23 +437,46 @@ module CableClub
     end
     trainerbgm = pbGetTrainerBattleBGM(partner)
     EventHandlers.trigger(:on_start_battle)
-    # XXX: Hope both battles take place in the same area for things like Nature Power.
+    # XXX: Configuring Online Battle Rules
+    setBattleRule("environment", :None)
+    setBattleRule("weather", :None)
+    setBattleRule("terrain", :None)
+    setBattleRule("backdrop", "indoor1")
     BattleCreationHelperMethods.prepare_battle(battle)
     $game_temp.clear_battle_rules
+    battle.time = 0
     exc = nil
+    outcome = 0
     pbBattleAnimation(trainerbgm, (battle.singleBattle?) ? 1 : 3, [partner]) {
       pbSceneStandby {
-        # XXX: Hope we call rand in the same order in both clients...
-        srand(seed)
         begin
-          battle.pbStartBattle
+          outcome = battle.pbStartBattle
         rescue Connection::Disconnected
           scene.pbEndBattle(0)
           exc = $!
+        ensure
+          $player.party.each_with_index do |pkmn, i|
+            pkmn.heal
+            pkmn.makeUnmega
+            pkmn.makeUnprimal
+            pkmn.item = olditems[i]
+          end
+          partner_party.each_with_index do |pkmn, i|
+            pkmn.heal
+            pkmn.makeUnmega
+            pkmn.makeUnprimal
+            pkmn.item = olditems2[i]
+          end
         end
       }
     }
     raise exc if exc
+    case outcome
+    when 1
+      $stats.online_battles_wins+=1
+    when 2
+      $stats.online_battles_lost+=1
+    end
   end
 
   def self.do_trade(index, you, your_pkmn)
@@ -453,6 +490,7 @@ module CableClub
       scene.pbEndScreen
     }
     $player.party[index] = your_pkmn
+    $stats.online_trade_count+=1
   end
 
   def self.choose_pokemon
@@ -528,7 +566,7 @@ module CableClub
     writer.int(pkmn.smart)
     writer.int(pkmn.tough)
     writer.int(pkmn.sheen)
-	  writer.sym(pkmn.tera_type)
+	writer.sym(pkmn.tera_type)
     writer.int(pkmn.numRibbons)
     pkmn.ribbons.each do |ribbon|
       writer.sym(ribbon)
@@ -636,7 +674,7 @@ module CableClub
     pkmn.smart = record.int
     pkmn.tough = record.int
     pkmn.sheen = record.int
-	  pkmn.tera_type = record.sym
+	pkmn.tera_type = record.sym
     for i in 0...record.int
       pkmn.giveRibbon(record.sym)
     end
