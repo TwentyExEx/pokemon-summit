@@ -388,18 +388,6 @@ MultipleForms.register(:AEGISLASH, {
   }
 })
 
-MultipleForms.register(:PUMPKABOO, {
-  "getFormOnCreation" => proc { |pkmn|
-    r = rand(100)
-    next 3 if r < 5    # Super Size (5%)
-    next 2 if r < 20   # Large (15%)
-    next 1 if r < 65   # Average (45%)
-    next 0             # Small (35%)
-  }
-})
-
-MultipleForms.copy(:PUMPKABOO, :GOURGEIST)
-
 MultipleForms.register(:XERNEAS, {
   "getFormOnStartingBattle" => proc { |pkmn, wild|
     next 1

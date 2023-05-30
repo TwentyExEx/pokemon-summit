@@ -450,7 +450,7 @@ def make_party_validator(pbs_dir):
                         logging.debug('invalid happiness: %d', happiness)
                         errors.append("invalid happiness")
                     name = record.str()
-                    if not (len(name) <= 10):
+                    if not (len(name) <= 12):
                         logging.debug('invalid name: %s', name)
                         errors.append("invalid name")
                     poke_ball = record.str()
@@ -531,7 +531,7 @@ if __name__ == "__main__":
     parser.add_argument("--host", default=HOST)
     parser.add_argument("--port", default=PORT)
     parser.add_argument("--pbs_dir", default=PBS_DIR)
-    parser.add_argument("--log", default="INFO")
+    parser.add_argument("--log", default="DEBUG")
     args = parser.parse_args()
     loglevel = getattr(logging, args.log.upper())
     if not isinstance(loglevel, int):
