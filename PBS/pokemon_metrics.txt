@@ -392,19 +392,19 @@ ShadowSize = 2
 #-------------------------------
 [TAUROS,1]
 BackSprite = -4,54
-FrontSprite = -1,16
+FrontSprite = -1,23
 ShadowX = 0
 ShadowSize = 2
 #-------------------------------
 [TAUROS,2]
 BackSprite = -4,54
-FrontSprite = -1,16
+FrontSprite = -1,22
 ShadowX = 0
 ShadowSize = 2
 #-------------------------------
 [TAUROS,3]
 BackSprite = -4,54
-FrontSprite = -1,16
+FrontSprite = -1,25
 ShadowX = 0
 ShadowSize = 2
 #-------------------------------
@@ -1933,7 +1933,7 @@ ShadowX = 0
 ShadowSize = 2
 #-------------------------------
 [TALONFLAME]
-BackSprite = 0,51
+BackSprite = 0,30
 FrontSprite = 0,5
 ShadowX = 0
 ShadowSize = 2
@@ -2689,7 +2689,7 @@ ShadowX = 0
 ShadowSize = 2
 #-------------------------------
 [BASCULEGION,1]
-BackSprite = 0,0
+BackSprite = 0,47
 FrontSprite = 0,17
 ShadowX = 0
 ShadowSize = 2
@@ -2713,8 +2713,8 @@ ShadowX = 0
 ShadowSize = 1
 #-------------------------------
 [SKELEDIRGE]
-BackSprite = 0,44
-FrontSprite = -10,14
+BackSprite = 0,52
+FrontSprite = -10,26
 ShadowX = 0
 ShadowSize = 3
 #-------------------------------
@@ -2737,8 +2737,8 @@ ShadowX = 0
 ShadowSize = 2
 #-------------------------------
 [SPIDOPS]
-BackSprite = 0,0
-FrontSprite = 0,11
+BackSprite = 0,39
+FrontSprite = 0,24
 ShadowX = 0
 ShadowSize = 2
 #-------------------------------
@@ -2750,7 +2750,7 @@ ShadowSize = 2
 #-------------------------------
 [PAWMOT]
 BackSprite = 0,38
-FrontSprite = 0,12
+FrontSprite = 0,18
 ShadowX = 0
 ShadowSize = 1
 #-------------------------------
@@ -2774,7 +2774,25 @@ ShadowSize = 2
 #-------------------------------
 [SQUAWKABILLY]
 BackSprite = 0,50
-FrontSprite = -4,13
+FrontSprite = 2,26
+ShadowX = 0
+ShadowSize = 1
+#-------------------------------
+[SQUAWKABILLY,1]
+BackSprite = 0,50
+FrontSprite = 2,25
+ShadowX = 0
+ShadowSize = 1
+#-------------------------------
+[SQUAWKABILLY,2]
+BackSprite = 0,50
+FrontSprite = 2,25
+ShadowX = 0
+ShadowSize = 1
+#-------------------------------
+[SQUAWKABILLY,3]
+BackSprite = 0,50
+FrontSprite = 3,25
 ShadowX = 0
 ShadowSize = 1
 #-------------------------------
@@ -2840,7 +2858,7 @@ ShadowSize = 3
 #-------------------------------
 [SCOVILLAIN]
 BackSprite = 0,51
-FrontSprite = -7,10
+FrontSprite = -7,20
 ShadowX = 0
 ShadowSize = 2
 #-------------------------------
@@ -2858,13 +2876,13 @@ ShadowSize = 2
 #-------------------------------
 [TINKATON]
 BackSprite = 0,0
-FrontSprite = 12,4
+FrontSprite = 12,17
 ShadowX = 0
 ShadowSize = 2
 #-------------------------------
 [WUGTRIO]
-BackSprite = 0,0
-FrontSprite = 0,13
+BackSprite = 0,41
+FrontSprite = 0,25
 ShadowX = 0
 ShadowSize = 2
 #-------------------------------
@@ -2887,8 +2905,8 @@ ShadowX = 0
 ShadowSize = 1
 #-------------------------------
 [REVAVROOM]
-BackSprite = 0,0
-FrontSprite = -3,12
+BackSprite = 0,48
+FrontSprite = -3,32
 ShadowX = 0
 ShadowSize = 3
 #-------------------------------
@@ -2929,8 +2947,8 @@ ShadowX = 0
 ShadowSize = 2
 #-------------------------------
 [VELUZA]
-BackSprite = 0,0
-FrontSprite = 0,0
+BackSprite = 0,60
+FrontSprite = 0,21
 ShadowX = 0
 ShadowSize = 1
 #-------------------------------
@@ -2941,8 +2959,20 @@ ShadowX = 0
 ShadowSize = 3
 #-------------------------------
 [TATSUGIRI]
-BackSprite = 0,0
-FrontSprite = 4,19
+BackSprite = 0,48
+FrontSprite = 4,31
+ShadowX = 0
+ShadowSize = 1
+#-------------------------------
+[TATSUGIRI,1]
+BackSprite = 0,54
+FrontSprite = 4,37
+ShadowX = 0
+ShadowSize = 1
+#-------------------------------
+[TATSUGIRI,2]
+BackSprite = 0,56
+FrontSprite = 4,37
 ShadowX = 0
 ShadowSize = 1
 #-------------------------------

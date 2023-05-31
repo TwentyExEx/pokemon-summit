@@ -14,7 +14,7 @@ import logging
 
 HOST = r"0.0.0.0"
 PORT = 9999
-PBS_DIR = r"./PBS"
+PBS_DIR = r"./home/goffotv/PBS"
 LOG_DIR = r"."
 
 GAME_VERSION = StrictVersion("1.0.0")
