@@ -155,6 +155,9 @@ class Battle
           mega=@battle.megaEvolution[0][0]
           mega^=1 if mega>=0
           writer.int(mega)
+          tera=@battle.terastallize[0][0]
+          tera^=1 if tera>=0
+          writer.int(tera) # tera fix?
           # Send Choices for Player's Mons
           for our_index in our_indices
             pkmn = @battle.battlers[our_index]
@@ -203,6 +206,7 @@ class Battle
                     @battle.battleRNG.srand(seed) if @battle.client_id==1
                   when :mechanic
                     @battle.megaEvolution[1][0] = record.int
+					@battle.terastallize[1][0] = record.int # mega fix?					
                   when :choice
                     their_index = their_indices.shift
                     partner_pkmn = @battle.battlers[their_index]
