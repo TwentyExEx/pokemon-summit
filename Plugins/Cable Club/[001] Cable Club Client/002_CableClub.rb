@@ -163,6 +163,7 @@ module CableClub
             when :ok
               case activity
               when :battle
+                $PokemonGlobal.nextBattleBGM = $game_variables[48]
                 partner = NPCTrainer.new(partner_name, partner_trainer_type)
                 (partner.partyID=0) rescue nil # EBDX compat
                 do_battle(connection, client_id, seed, battle_type, partner, partner_party)
@@ -224,6 +225,7 @@ module CableClub
                   connection.send do |writer|
                     writer.sym(:ok)
                   end
+                  $PokemonGlobal.nextBattleBGM = $game_variables[48]
                   do_battle(connection, client_id, seed, battle_type, partner, partner_party)
                 else
                   connection.send do |writer|
