@@ -10,7 +10,35 @@ def pbSummitSelectPokemon(region)
   return pkmnset
 end
 
-# ===== ALPHA FUNCTION =====
+# ===== BETA FUNCTION =====
+def pbSummitBetaMakePokemon(specform)
+  @givepkmn = Pokemon.new(specform, 50)
+  for stat in $allstats
+    @givepkmn.iv[stat] = 31
+  end
+  @givepkmn.happiness = 255
+  @givepkmn.cannot_release = true
+  return @givepkmn
+end
+
+# ===== BETA FUNCTION =====
+def pbSummitBetaGivePokemon(specform)
+  pbSummitBetaMakePokemon(specform)
+  # specform = specform.chop testing
+  # pbSummitPrepPokemon(specform) # testing
+  naturelist = []
+  for i in GameData::Nature::DATA.keys
+    if GameData::Nature.try_get(i).stat_changes.empty?
+      naturelist.push(i.name)
+    end
+  end
+  $game_variables[42].push(specform.to_s.chop)
+  @givepkmn.nature = naturelist[rand(0...naturelist.length)]
+  @givepkmn.obtain_map = 8
+  @givepkmn.obtain_text = "Summit Lobby"
+  pbAddPokemonSilent(@givepkmn)
+end
+
 def pbSummitMakePokemon(specform)
   pkmn = SummitPokeInfo.const_get(specform)
   specformformatted = pkmn[:species].clone.to_s
@@ -43,7 +71,7 @@ def pbSummitPrepPokemon(specform)
 end
 
 def pbSummitGivePokemon(specform)
-  pbSummitMakePokemon(specform) # beta
+  pbSummitMakePokemon(specform)
   # specform = specform.chop testing
   # pbSummitPrepPokemon(specform) # testing
   naturelist = []

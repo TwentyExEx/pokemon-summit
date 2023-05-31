@@ -13,7 +13,7 @@ def pbSummitTeamBuilder
     if GameData::Species.try_get(@species)
       dispname = GameData::Species.get(@species).real_name
       pbMessage(_INTL("Creating {1}.",dispname))
-      pbSummitGivePokemon(@species)
+      pbSummitBetaGivePokemon(@species)
       @pkmn = $player.party[$player.party.length-1]
 
         # Set form, if any
