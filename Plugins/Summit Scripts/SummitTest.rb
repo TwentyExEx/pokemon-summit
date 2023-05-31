@@ -45,6 +45,9 @@ def pbSummitTeamBuilder
           end
         end
 
+        # Set hue to default
+        @pkmn.hue = 000
+
         # Set possible ability
         abils = @pkmn.getAbilityList
         ability_commands = []

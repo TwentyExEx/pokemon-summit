@@ -18,6 +18,7 @@ def pbSummitBetaMakePokemon(specform)
   end
   @givepkmn.happiness = 255
   @givepkmn.cannot_release = true
+  @givepkmn.hue = 000
   return @givepkmn
 end
 
@@ -57,6 +58,7 @@ def pbSummitMakePokemon(specform)
   end
   
   @givepkmn.ability_index = pkmn[:ability_index]
+  @givepkmn.hue = 000
   return @givepkmn
 end
 
