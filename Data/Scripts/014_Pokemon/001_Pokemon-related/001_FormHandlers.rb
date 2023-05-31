@@ -354,14 +354,6 @@ MultipleForms.register(:GRENINJA, {
   }
 })
 
-MultipleForms.register(:SCATTERBUG, {
-  "getFormOnCreation" => proc { |pkmn|
-    next $player.secret_ID % 18
-  }
-})
-
-MultipleForms.copy(:SCATTERBUG, :SPEWPA, :VIVILLON)
-
 MultipleForms.register(:FURFROU, {
   "getForm" => proc { |pkmn|
     if !pkmn.time_form_set ||
@@ -412,22 +404,6 @@ MultipleForms.register(:HOOPA, {
   },
   "onSetForm" => proc { |pkmn, form, oldForm|
     pkmn.time_form_set = (form > 0) ? pbGetTimeNow.to_i : nil
-  }
-})
-
-MultipleForms.register(:ROCKRUFF, {
-  "getForm" => proc { |pkmn|
-    next if pkmn.form_simple >= 2   # Own Tempo Rockruff cannot become another form
-    next 1 if PBDayNight.isNight?
-    next 0
-  }
-})
-
-MultipleForms.register(:LYCANROC, {
-  "getFormOnCreation" => proc { |pkmn|
-    next 2 if PBDayNight.isEvening?   # Dusk
-    next 1 if PBDayNight.isNight?     # Midnight
-    next 0                            # Midday
   }
 })
 
@@ -533,35 +509,6 @@ MultipleForms.register(:TOXEL, {
 
 MultipleForms.copy(:TOXEL, :TOXTRICITY)
 
-MultipleForms.register(:SINISTEA, {
-  "getFormOnCreation" => proc { |pkmn|
-    next 1 if rand(100) < 10   # Antique
-    next 0                     # Phony
-  }
-})
-
-MultipleForms.copy(:SINISTEA, :POLTEAGEIST)
-
-# A Milcery will always have the same flavor, but it is randomly chosen.
-MultipleForms.register(:MILCERY, {
-  "getForm" => proc { |pkmn|
-    num_flavors = 9
-    sweets = [:STRAWBERRYSWEET, :BERRYSWEET, :LOVESWEET, :STARSWEET,
-              :CLOVERSWEET, :FLOWERSWEET, :RIBBONSWEET]
-    if sweets.include?(pkmn.item_id)
-      next sweets.index(pkmn.item_id) + ((pkmn.personalID % num_flavors) * sweets.length)
-    end
-    next 0
-  }
-})
-
-MultipleForms.register(:ALCREMIE, {
-  "getFormOnCreation" => proc { |pkmn|
-    num_flavors = 9
-    num_sweets = 7
-    next rand(num_flavors * num_sweets)
-  }
-})
 
 MultipleForms.register(:EISCUE, {
   "getFormOnLeavingBattle" => proc { |pkmn, battle, usedInBattle, endBattle|
@@ -618,12 +565,6 @@ MultipleForms.register(:ZAMAZENTA, {
     if endBattle
       pkmn.moves.each { |move| move.id = :IRONHEAD if move.id == :BEHEMOTHBASH }
     end
-  }
-})
-
-MultipleForms.register(:URSHIFU, {
-  "getFormOnCreation" => proc { |pkmn|
-    next rand(2)
   }
 })
 
