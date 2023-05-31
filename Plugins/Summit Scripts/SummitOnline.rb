@@ -344,7 +344,7 @@ def pbOnlineMusicChanger
 		    	return
 		    end			
 		when "Galar"
-	    	soundtypelist = ["Masters EX","SMUSUM","Cancel"]
+	    	soundtypelist = ["Masters EX","SWSH","Cancel"]
 	    	choosetype = pbMessage(_INTL("\\bPlease choose a sound type."),soundtypelist,soundtypelist.length)
 			soundtype = soundtypelist[choosetype]
 			case soundtype
