@@ -447,1894 +447,4147 @@ IV = 15,15,15,15,15,15
 EV = 6,0,0,252,252,0
 TeraType = GRASS
 #-------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[ELITE_Lorelei,Lorelei]
+Pokemon = NINETALES,50
+Form = 1
+Moves = AURORAVEIL,BLIZZARD,MOONBLAST,PSYSHOCK
+AbilityIndex = 2
+Item = ICYROCK
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 252,0,0,0,252,6
+TeraType = ICE
+Pokemon = JYNX,50
+Form = 0
+Moves = HYPERVOICE,PSYCHIC,ENERGYBALL,WATERPULSE
+AbilityIndex = 1
+Item = WISEGLASSES
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 0,0,252,6,252,0
+TeraType = ICE
+Pokemon = GLACEON,50
+Form = 0
+Moves = BLIZZARD,HAIL,SHADOWBALL,CHILLINGWATER
+AbilityIndex = 1
+Item = ASSAULTVEST
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 252,0,0,6,252,0
+TeraType = ICE
+Pokemon = DEWGONG,50
+Form = 0
+Moves = SURF,ICEBEAM,PSYCHIC,FLASHCANNON
+AbilityIndex = 2
+Item = LIFEORB
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,252,0
+TeraType = ICE
+Pokemon = MRRIME,50
+Form = 0
+Moves = BLIZZARD,PSYCHIC,HAIL,DAZZLINGGLEAM
+AbilityIndex = 1
+Item = LEFTOVERS
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 0,0,252,0,252,6
+TeraType = ICE
+Pokemon = LAPRAS,50
+Form = 0
+Moves = TERABLAST,ICEBEAM,SURF,DRAGONPULSE
+AbilityIndex = 0
+Item = WISEGLASSES
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = STEEL
+#-------------------------------
+[ELITE_Bruno,Bruno]
+Pokemon = POLIWRATH,50
+Form = 0
+Moves = POISONJAB,DRAINPUNCH,EARTHQUAKE,JETPUNCH
+AbilityIndex = 1
+Item = LIFEORB
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 0,252,0,252,0,6
+TeraType = FIGHTING
+Pokemon = HITMONLEE,50
+Form = 0
+Moves = BLAZEKICK,JUMPKICK,FAKEOUT,TRIPLEAXEL
+AbilityIndex = 1
+Item = BLACKBELT
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = FIGHTING
+Pokemon = HITMONCHAN,50
+Form = 0
+Moves = DRAINPUNCH,THUNDERPUNCH,ICEPUNCH,BULLETPUNCH
+AbilityIndex = 1
+Item = EXPERTBELT
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 252,252,0,6,0,0
+TeraType = FIGHTING
+Pokemon = ANNIHILAPE,50
+Form = 0
+Moves = RAGEFIST,DRAINPUNCH,BULKUP,IRONTAIL
+AbilityIndex = 2
+Item = LEFTOVERS
+Nature = IMPISH
+IV = 15,15,15,15,15,15
+EV = 0,252,6,252,0,0
+TeraType = FIGHTING
+Pokemon = SIRFETCHD,50
+Form = 0
+Moves = BRICKBREAK,LEAFBLADE,BRAVEBIRD,POISONJAB
+AbilityIndex = 1
+Item = LEEK
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 0,252,0,252,0,6
+TeraType = FIGHTING
+Pokemon = MACHAMP,50
+Form = 0
+Moves = DRAINPUNCH,BULLETPUNCH,ICEPUNCH,POWERUPPUNCH
+AbilityIndex = 2
+Item = ASSAULTVEST
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = STEEL
+#-------------------------------
+[ELITE_Agatha,Agatha]
+Pokemon = MISMAGIUS,50
+Form = 0
+Moves = SHADOWBALL,DAZZLINGGLEAM,THUNDERBOLT,MYSTICALFIRE
+AbilityIndex = 2
+Item = LIFEORB
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 0,0,0,252,252,6
+TeraType = GHOST
+Pokemon = MAROWAK,50
+Form = 1
+Moves = SHADOWBONE,FLAREBLITZ,STOMPINGTANTRUM,IRONHEAD
+AbilityIndex = 0
+Item = THICKCLUB
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = GHOST
+Pokemon = SPIRITOMB,50
+Form = 0
+Moves = WILLOWISP,ICYWIND,SHADOWBALL,DARKPULSE
+AbilityIndex = 1
+Item = LEFTOVERS
+Nature = QUIET
+IV = 15,15,15,15,15,15
+EV = 252,0,6,0,252,0
+TeraType = GHOST
+Pokemon = ZOROARK,50
+Form = 1
+Moves = HYPERVOICE,BITTERMALICE,SLUDGEBOMB,FLAMETHROWER
+AbilityIndex = 0
+Item = THROATSPRAY
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,252,0
+TeraType = GHOST
+Pokemon = FROSLASS,50
+Form = 0
+Moves = ICYWIND,SHADOWBALL,ICEBEAM,PSYCHIC
+AbilityIndex = 1
+Item = WISEGLASSES
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 252,0,0,0,252,6
+TeraType = GHOST
+Pokemon = GENGAR,50
+Form = 0
+Moves = SHADOWBALL,PSYCHIC,SLUDGEWAVE,GIGADRAIN
+AbilityIndex = 2
+Item = BLACKSLUDGE
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = NORMAL
+#-------------------------------
+[ELITE_Lance,Lance]
+Pokemon = AERODACTYL,50
+Form = 0
+Moves = STEALTHROCK,TAILWIND,STONEEDGE,DUALWINGBEAT
+AbilityIndex = 2
+Item = FOCUSSASH
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,0,252
+TeraType = FLYING
+Pokemon = CHARIZARD,50
+Form = 0
+Moves = FIREPUNCH,THUNDERPUNCH,DUALWINGBEAT,OUTRAGE
+AbilityIndex = 1
+Item = CHOICESCARF
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = FLYING
+Pokemon = PIDGEOT,50
+Form = 0
+Moves = AIRSLASH,HEATWAVE,UTURN,OMINOUSWIND
+AbilityIndex = 2
+Item = WINDTURBINE
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,252,0
+TeraType = FLYING
+Pokemon = GYARADOS,50
+Form = 0
+Moves = DRAGONDANCE,WATERFALL,EARTHQUAKE,BOUNCE
+AbilityIndex = 2
+Item = LUMBERRY
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 0,252,0,252,0,6
+TeraType = FLYING
+Pokemon = FEAROW,50
+Form = 0
+Moves = BRAVEBIRD,STEELWING,THROATCHOP,UTURN
+AbilityIndex = 1
+Item = ASSAULTVEST
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 0,252,0,252,0,6
+TeraType = FLYING
+Pokemon = DRAGONITE,50
+Form = 0
+Moves = DRAGONDANCE,EARTHQUAKE,DUALWINGBEAT,OUTRAGE
+AbilityIndex = 2
+Item = WEAKNESSPOLICY
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = STEEL
+#-------------------------------
+[SPECIAL_Archer,Archer]
+Pokemon = RATICATE,50
+Form = 1
+Moves = CRUNCH,IRONTAIL,EARTHQUAKE,PLAYROUGH
+AbilityIndex = 1
+Item = WIDELENS
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 0,252,6,252,0,0
+TeraType = NORMAL
+Pokemon = MAGMORTAR,50
+Form = 0
+Moves = FIREBLAST,PSYCHIC,THUNDERBOLT,SCORCHINGSANDS
+AbilityIndex = 2
+Item = WISEGLASSES
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,252,0
+TeraType = FIRE
+Pokemon = CROBAT,50
+Form = 0
+Moves = CROSSPOISON,DUALWINGBEAT,CRUNCH,STEELWING
+AbilityIndex = 2
+Item = SCOPELENS
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = POISON
+Pokemon = WEEZING,50
+Form = 0
+Moves = DARKPULSE,SLUDGEWAVE,FLAMETHROWER,THUNDERBOLT
+AbilityIndex = 0
+Item = ASSAULTVEST
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 0,0,252,0,252,6
+TeraType = POISON
+Pokemon = HOUNDOOM,50
+Form = 0
+Moves = SHADOWBALL,FIREBLAST,SLUDGEBOMB,DARKPULSE
+AbilityIndex = 0
+Item = CHOICESPECS
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = FIRE
+Pokemon = ELECTRODE,50
+Form = 0
+Moves = TERABLAST,THUNDER,TAUNT,MAGICCOAT
+AbilityIndex = 2
+Item = LEFTOVERS
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = FLYING
+#-------------------------------
+[SPECIAL_Ariana,Ariana]
+Pokemon = PERSIAN,50
+Form = 1
+Moves = HYPNOSIS,NASTYPLOT,DARKPULSE,THUNDERBOLT
+AbilityIndex = 2
+Item = WIDELENS
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,252,0
+TeraType = DARK
+Pokemon = MISMAGIUS,50
+Form = 0
+Moves = MYSTICALFIRE,SHADOWBALL,ENERGYBALL,DAZZLINGGLEAM
+AbilityIndex = 2
+Item = LIFEORB
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,252,0
+TeraType = GHOST
+Pokemon = MUK,50
+Form = 0
+Moves = DRAINPUNCH,POISONJAB,ICEPUNCH,SHADOWSNEAK
+AbilityIndex = 2
+Item = ASSAULTVEST
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 6,252,0,0,0,252
+TeraType = POISON
+Pokemon = HONCHKROW,50
+Form = 0
+Moves = SUCKERPUNCH,BRAVEBIRD,FOULPLAY,STEELWING
+AbilityIndex = 2
+Item = SCOPELENS
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 0,252,0,252,0,6
+TeraType = DARK
+Pokemon = VILEPLUME,50
+Form = 0
+Moves = GIGADRAIN,SLUDGEBOMB,SLEEPPOWDER,MOONBLAST
+AbilityIndex = 1
+Item = BLACKSLUDGE
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = GRASS
+Pokemon = ARBOK,50
+Form = 0
+Moves = CRUNCH,SUCKERPUNCH,POISONJAB,DIG
+AbilityIndex = 0
+Item = MUSCLEBAND
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = DARK
+#-------------------------------
+[SPECIAL_Bill,Bill]
+Pokemon = VAPOREON,50
+Form = 0
+Moves = SCALD,CALMMIND,PROTECT,WISH
+AbilityIndex = 1
+Item = LEFTOVERS
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 0,0,252,0,6,252
+TeraType = WATER
+Pokemon = JOLTEON,50
+Form = 0
+Moves = CHARGEBEAM,THUNDERBOLT,SHADOWBALL,HYPERVOICE
+AbilityIndex = 1
+Item = WISEGLASSES
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,252,0
+TeraType = ELECTRIC
+Pokemon = FLAREON,50
+Form = 0
+Moves = FLAREBLITZ,SUPERPOWER,DIG,TRAILBLAZE
+AbilityIndex = 2
+Item = TOXICORB
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 252,252,0,6,0,0
+TeraType = FIRE
+Pokemon = NIDOKING,50
+Form = 0
+Moves = POISONJAB,EARTHQUAKE,THUNDERPUNCH,SHADOWCLAW
+AbilityIndex = 2
+Item = LIFEORB
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 0,252,0,252,0,6
+TeraType = POISON
+Pokemon = CLEFABLE,50
+Form = 0
+Moves = MOONBLAST,PSYCHIC,FLAMETHROWER,SHADOWBALL
+AbilityIndex = 1
+Item = LIFEORB
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = FAIRY
+Pokemon = TAUROS,50
+Form = 0
+Moves = DOUBLEEDGE,CLOSECOMBAT,EARTHQUAKE,ZENHEADBUTT
+AbilityIndex = 2
+Item = ASSAULTVEST
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = GHOST
+#-------------------------------
+[CHAMPION_Blue,Blue]
+Pokemon = MACHAMP,50
+Form = 0
+Moves = BULLETPUNCH,DRAINPUNCH,ICEPUNCH,PROTECT
+AbilityIndex = 0
+Item = FLAMEORB
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = FIGHTING
+Pokemon = TYRANITAR,50
+Form = 0
+Moves = STONEEDGE,CRUNCH,EARTHQUAKE,DRAGONCLAW
+AbilityIndex = 1
+Item = ASSAULTVEST
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 0,252,0,252,0,6
+TeraType = ROCK
+Pokemon = ALAKAZAM,50
+Form = 0
+Moves = PSYSHOCK,SHADOWBALL,DAZZLINGGLEAM,ENERGYBALL
+AbilityIndex = 2
+Item = LIFEORB
+Nature = BOLD
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,252,0
+TeraType = PSYCHIC
+Pokemon = SCIZOR,50
+Form = 0
+Moves = BULLETPUNCH,BUGBITE,CLOSECOMBAT,DUALWINGBEAT
+AbilityIndex = 1
+Item = FOCUSSASH
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 0,252,0,252,0,6
+TeraType = BUG
+Pokemon = PIDGEOT,50
+Form = 0
+Moves = AIRSLASH,HEATWAVE,OMINOUSWIND,UTURN
+AbilityIndex = 2
+Item = WINDTURBINE
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = NORMAL
+Pokemon = EXEGGUTOR,50
+Form = 0
+Moves = LEECHSEED,GIGADRAIN,SHADOWBALL,PSYCHIC
+AbilityIndex = 2
+Item = SITRUSBERRY
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = STEEL
+#-------------------------------
+[SPECIAL_Green,Green]
+Pokemon = GENGAR,50
+Form = 0
+Moves = WILLOWISP,SLUDGEWAVE,SHADOWBALL,NASTYPLOT
+AbilityIndex = 0
+Item = FOCUSSASH
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,252,0
+TeraType = GHOST
+Pokemon = NINETALES,50
+Form = 0
+Moves = FIREBLAST,SOLARBEAM,PSYSHOCK,CALMMIND
+AbilityIndex = 2
+Item = WISEGLASSES
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = FIRE
+Pokemon = VICTREEBEL,50
+Form = 0
+Moves = TOXIC,LEAFBLADE,POISONJAB,KNOCKOFF
+AbilityIndex = 1
+Item = BLACKSLUDGE
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 0,252,6,252,0,0
+TeraType = GRASS
+Pokemon = NIDOQUEEN,50
+Form = 0
+Moves = EARTHPOWER,SLUDGEWAVE,ICEBEAM,THUNDERBOLT
+AbilityIndex = 2
+Item = LIFEORB
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 0,0,0,252,252,6
+TeraType = GROUND
+Pokemon = BLASTOISE,50
+Form = 0
+Moves = WATERPULSE,ICEBEAM,AURASPHERE,DRAGONPULSE
+AbilityIndex = 1
+Item = ASSAULTVEST
+Nature = CALM
+IV = 15,15,15,15,15,15
+EV = 6,0,0,0,252,252
+TeraType = WATER
+Pokemon = CLEFABLE,50
+Form = 0
+Moves = CALMMIND,COSMICPOWER,MOONBLAST,TERABLAST
+AbilityIndex = 1
+Item = LEFTOVERS
+Nature = BOLD
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = STEEL
+#-------------------------------
+[SPECIAL_James,James]
+Pokemon = WEEZING,50
+Form = 0
+Moves = THUNDERBOLT,SLUDGEBOMB,FIREBLAST,DARKPULSE
+AbilityIndex = 0
+Item = LIFEORB
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 0,0,0,6,252,252
+TeraType = POISON
+Pokemon = AMOONGUSS,50
+Form = 0
+Moves = GIGADRAIN,SLUDGEBOMB,HEX,INGRAIN
+AbilityIndex = 0
+Item = BLACKSLUDGE
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 0,0,6,0,252,252
+TeraType = GRASS
+Pokemon = MORPEKO,50
+Form = 0
+Moves = AURAWHEEL,SEEDBOMB,ICEFANG,PSYCHICFANGS
+AbilityIndex = 0
+Item = ASSAULTVEST
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 0,252,6,252,0,0
+TeraType = BUG
+Pokemon = CARNIVINE,50
+Form = 0
+Moves = SEEDBOMB,THUNDERFANG,FIREFANG,THROATCHOP
+AbilityIndex = 2
+Item = ROCKYHELMET
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 0,252,0,252,0,6
+TeraType = GRASS
+Pokemon = VICTREEBEL,50
+Form = 0
+Moves = PROTECT,TOXIC,INGRAIN,POWERWHIP
+AbilityIndex = 1
+Item = LEFTOVERS
+Nature = CAREFUL
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = GRASS
+Pokemon = CHIMECHO,50
+Form = 0
+Moves = HYPERVOICE,PSYCHIC,SHADOWBALL,ENERGYBALL
+AbilityIndex = 1
+Item = ASSAULTVEST
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = GHOST
+#-------------------------------
+[SPECIAL_Jessie,Jessie]
+Pokemon = ARBOK,50
+Form = 0
+Moves = CRUNCH,SUCKERPUNCH,POISONJAB,AQUATAIL
+AbilityIndex = 0
+Item = MUSCLEBAND
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 0,252,0,6,0,252
+TeraType = POISON
+Pokemon = SEVIPER,50
+Form = 0
+Moves = GUNKSHOT,CRUNCH,EARTHQUAKE,PSYCHICFANGS
+AbilityIndex = 1
+Item = CHOICEBAND
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 0,252,6,252,0,0
+TeraType = POISON
+Pokemon = DUSTOX,50
+Form = 0
+Moves = BUGBUZZ,SLUDGEBOMB,ENERGYBALL,SHADOWBALL
+AbilityIndex = 2
+Item = BLACKSLUDGE
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 252,252,0,6,0,0
+TeraType = BUG
+Pokemon = MIMIKYU,50
+Form = 0
+Moves = SHADOWCLAW,PLAYROUGH,WOODHAMMER,XSCISSOR
+AbilityIndex = 0
+Item = LIFEORB
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 0,252,0,252,0,6
+TeraType = GHOST
+Pokemon = YANMEGA,50
+Form = 0
+Moves = PROTECT,BUGBUZZ,AIRSLASH,SHADOWBALL
+AbilityIndex = 0
+Item = LEFTOVERS
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = BUG
+Pokemon = WOBBUFFET,50
+Form = 0
+Moves = COUNTER,MIRRORCOAT,TERABLAST,DESTINYBOND
+AbilityIndex = 0
+Item = FOCUSSASH
+Nature = QUIRKY
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = GHOST
+#-------------------------------
+[SPECIAL_Oak,Oak]
+Pokemon = TAUROS,50
+Form = 0
+Moves = CLOSECOMBAT,DOUBLEEDGE,EARTHQUAKE,IRONHEAD
+AbilityIndex = 0
+Item = ASSAULTVEST
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 0,252,6,252,0,0
+TeraType = NORMAL
+Pokemon = ARCANINE,50
+Form = 0
+Moves = FLAREBLITZ,WILDCHARGE,IRONHEAD,EXTREMESPEED
+AbilityIndex = 0
+Item = ROCKYHELMET
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = FIRE
+Pokemon = EXEGGUTOR,50
+Form = 0
+Moves = PROTECT,GIGADRAIN,PSYSHOCK,LEECHSEED
+AbilityIndex = 2
+Item = SITRUSBERRY
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 0,0,252,0,6,252
+TeraType = GRASS
+Pokemon = GYARADOS,50
+Form = 0
+Moves = WATERFALL,OUTRAGE,EARTHQUAKE,ICEFANG
+AbilityIndex = 0
+Item = LUMBERRY
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 0,252,0,252,0,6
+TeraType = WATER
+Pokemon = VENUSAUR,50
+Form = 0
+Moves = SLEEPPOWDER,GIGADRAIN,SLUDGEBOMB,EARTHPOWER
+AbilityIndex = 1
+Item = BLACKSLUDGE
+Nature = BOLD
+IV = 15,15,15,15,15,15
+EV = 6,0,252,0,252,0
+TeraType = GRASS
+Pokemon = NIDOKING,50
+Form = 0
+Moves = SLUDGEWAVE,EARTHPOWER,ICEBEAM,TERABLAST
+AbilityIndex = 2
+Item = LIFEORB
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = GRASS
+#-------------------------------
+[SPECIAL_Proton,Proton]
+Pokemon = TENTACRUEL,50
+Form = 0
+Moves = TOXICSPIKES,SURF,SLUDGEBOMB,ICEBEAM
+AbilityIndex = 0
+Item = WIDELENS
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,252,0
+TeraType = WATER
+Pokemon = VENOMOTH,50
+Form = 0
+Moves = SLEEPPOWDER,QUIVERDANCE,SLUDGEBOMB,BUGBUZZ
+AbilityIndex = 1
+Item = WIDELENS
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,252,0
+TeraType = BUG
+Pokemon = MUK,50
+Form = 1
+Moves = DRAINPUNCH,POISONJAB,ICEPUNCH,CRUNCH
+AbilityIndex = 0
+Item = ASSAULTVEST
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 6,252,0,0,0,252
+TeraType = POISON
+Pokemon = WEAVILE,50
+Form = 0
+Moves = TRIPLEAXEL,NIGHTSLASH,BRICKBREAK,FAKEOUT
+AbilityIndex = 0
+Item = SCOPELENS
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 0,252,0,252,0,6
+TeraType = ICE
+Pokemon = CROBAT,50
+Form = 0
+Moves = GIGADRAIN,SLUDGEBOMB,HEATWAVE,AIRSLASH
+AbilityIndex = 0
+Item = BLACKSLUDGE
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = POISON
+Pokemon = WEEZING,50
+Form = 0
+Moves = FLAMETHROWER,SLUDGEWAVE,PROTECT,THUNDERBOLT
+AbilityIndex = 1
+Item = FLAMEORB
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = FLYING
+#-------------------------------
+[LEADER_Bugsy,Bugsy]
+Pokemon = SHUCKLE,50
+Form = 0
+Moves = STEALTHROCK,STICKYWEB,INFESTATION,BULLDOZE
+AbilityIndex = 0
+Item = MENTALHERB
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 0,6,252,0,0,252
+TeraType = BUG
+Pokemon = HERACROSS,50
+Form = 0
+Moves = MEGAHORN,THROATCHOP,CLOSECOMBAT,SHADOWCLAW
+AbilityIndex = 1
+Item = FLAMEORB
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 0,252,0,252,0,6
+TeraType = BUG
+Pokemon = BEEDRILL,50
+Form = 0
+Moves = DRILLRUN,XSCISSOR,POISONJAB,OUTRAGE
+AbilityIndex = 1
+Item = SCOPELENS
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 0,252,6,252,0,0
+TeraType = BUG
+Pokemon = ARIADOS,50
+Form = 0
+Moves = SHADOWSNEAK,XSCISSOR,SMARTSTRIKE,POISONJAB
+AbilityIndex = 1
+Item = MUSCLEBAND
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 0,252,0,252,0,6
+TeraType = BUG
+Pokemon = BUTTERFREE,50
+Form = 0
+Moves = SLEEPPOWDER,QUIVERDANCE,AIRSLASH,BUGBUZZ
+AbilityIndex = 0
+Item = LEFTOVERS
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = BUG
+Pokemon = SCIZOR,50
+Form = 0
+Moves = BULLETPUNCH,TERABLAST,BUGBITE,CLOSECOMBAT
+AbilityIndex = 1
+Item = ASSAULTVEST
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = FIRE
+#-------------------------------
+[LEADER_Whitney,Whitney]
+Pokemon = CLEFABLE,50
+Form = 0
+Moves = STEALTHROCK,MOONBLAST,HYPERVOICE,CALMMIND
+AbilityIndex = 1
+Item = LEFTOVERS
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 0,0,252,0,6,252
+TeraType = NORMAL
+Pokemon = DODRIO,50
+Form = 0
+Moves = DOUBLEEDGE,BRAVEBIRD,STOMPINGTANTRUM,STEELWING
+AbilityIndex = 1
+Item = CRASHGEAR
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 0,252,0,252,0,6
+TeraType = NORMAL
+Pokemon = LICKILICKY,50
+Form = 0
+Moves = BODYSLAM,KNOCKOFF,POWERWHIP,ROCKSLIDE
+AbilityIndex = 0
+Item = LIFEORB
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 0,252,6,252,0,0
+TeraType = NORMAL
+Pokemon = FARIGIRAF,50
+Form = 0
+Moves = TWINBEAM,HYPERVOICE,SHADOWBALL,DAZZLINGGLEAM
+AbilityIndex = 1
+Item = WISEGLASSES
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 0,0,0,252,252,6
+TeraType = NORMAL
+Pokemon = BLISSEY,50
+Form = 0
+Moves = HYPERVOICE,SOFTBOILED,PROTECT,DAZZLINGGLEAM
+AbilityIndex = 0
+Item = LEFTOVERS
+Nature = BOLD
+IV = 15,15,15,15,15,15
+EV = 6,0,252,0,252,0
+TeraType = NORMAL
+Pokemon = MILTANK,50
+Form = 0
+Moves = TERABLAST,BODYSLAM,MILKDRINK,EARTHQUAKE
+AbilityIndex = 1
+Item = ASSAULTVEST
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = GHOST
+#-------------------------------
+[LEADER_Pryce,Pryce]
+Pokemon = DEWGONG,50
+Form = 0
+Moves = HAIL,SURF,BLIZZARD,FLASHCANNON
+AbilityIndex = 2
+Item = ICYROCK
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 6,0,0,0,252,252
+TeraType = ICE
+Pokemon = DELIBIRD,50
+Form = 0
+Moves = FREEZEDRY,AIRSLASH,CHILLINGWATER,SIGNALBEAM
+AbilityIndex = 0
+Item = WISEGLASSES
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 0,0,0,252,252,6
+TeraType = ICE
+Pokemon = LAPRAS,50
+Form = 0
+Moves = HAIL,REFLECT,SURF,ICEBEAM
+AbilityIndex = 0
+Item = LIGHTCLAY
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,252,0
+TeraType = ICE
+Pokemon = WEAVILE,50
+Form = 0
+Moves = TRIPLEAXEL,NIGHTSLASH,POISONJAB,XSCISSOR
+AbilityIndex = 0
+Item = CHOICEBAND
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 0,252,6,252,0,0
+TeraType = ICE
+Pokemon = GLALIE,50
+Form = 0
+Moves = PROTECT,ICESPINNER,CRUNCH,EARTHQUAKE
+AbilityIndex = 2
+Item = LEFTOVERS
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 0,252,6,0,0,252
+TeraType = ICE
+Pokemon = MAMOSWINE,50
+Form = 0
+Moves = EARTHQUAKE,ICICLECRASH,IRONHEAD,TERABLAST
+AbilityIndex = 2
+Item = LIFEORB
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 6,252,0,0,0,252
+TeraType = GRASS
+#-------------------------------
+[LEADER_Morty,Morty]
+Pokemon = SHEDINJA,50
+Form = 0
+Moves = WILLOWISP,SHADOWSNEAK,XSCISSOR,PROTECT
+AbilityIndex = 0
+Item = FOCUSSASH
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = GHOST
+Pokemon = SPIRITOMB,50
+Form = 0
+Moves = ICYWIND,SHADOWBALL,DARKPULSE,SUCKERPUNCH
+AbilityIndex = 1
+Item = LEFTOVERS
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 0,0,0,252,252,6
+TeraType = GHOST
+Pokemon = TYPHLOSION,50
+Form = 1
+Moves = INFERNALPARADE,ERUPTION,FLAMETHROWER,FOCUSBLAST
+AbilityIndex = 2
+Item = CHOICESCARF
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,252,0
+TeraType = GHOST
+Pokemon = MAROWAK,50
+Form = 1
+Moves = IRONHEAD,FLAREBLITZ,SHADOWBONE,KNOCKOFF
+AbilityIndex = 2
+Item = MUSCLEBAND
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = GHOST
+Pokemon = GENGAR,50
+Form = 0
+Moves = SHADOWBALL,SLUDGEWAVE,GIGADRAIN,DAZZLINGGLEAM
+AbilityIndex = 0
+Item = BLACKSLUDGE
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,252,0,252,0
+TeraType = GHOST
+Pokemon = MISMAGIUS,50
+Form = 0
+Moves = DAZZLINGGLEAM,SHADOWBALL,MYSTICALFIRE,PSYCHIC
+AbilityIndex = 2
+Item = WISEGLASSES
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = FAIRY
+#-------------------------------
+[LEADER_Jasmine,Jasmine]
+Pokemon = FORRETRESS,50
+Form = 0
+Moves = SPIKES,STEALTHROCK,GYROBALL,THUNDERWAVE
+AbilityIndex = 0
+Item = LEFTOVERS
+Nature = SASSY
+IV = 15,15,15,15,15,15
+EV = 6,252,0,0,0,252
+TeraType = STEEL
+Pokemon = METAGROSS,50
+Form = 0
+Moves = BULLETPUNCH,METEORMASH,ZENHEADBUTT,ICEPUNCH
+AbilityIndex = 1
+Item = LIFEORB
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 0,252,0,252,0,6
+TeraType = STEEL
+Pokemon = EMPOLEON,50
+Form = 0
+Moves = HYDROPUMP,FLASHCANNON,ICEBEAM,GRASSKNOT
+AbilityIndex = 2
+Item = WISEGLASSES
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,252,0
+TeraType = STEEL
+Pokemon = SKARMORY,50
+Form = 0
+Moves = BRAVEBIRD,IRONHEAD,BODYPRESS,ROCKSLIDE
+AbilityIndex = 1
+Item = ASSAULTVEST
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 0,252,6,252,0,0
+TeraType = STEEL
+Pokemon = MAGNEZONE,50
+Form = 0
+Moves = TRIATTACK,THUNDERBOLT,FLASHCANNON,SIGNALBEAM
+AbilityIndex = 1
+Item = AIRBALLOON
+Nature = QUIET
+IV = 15,15,15,15,15,15
+EV = 0,0,6,0,252,252
+TeraType = STEEL
+Pokemon = STEELIX,50
+Form = 0
+Moves = EARTHQUAKE,IRONTAIL,FIREFANG,ICEFANG
+AbilityIndex = 2
+Item = LIFEORB
+Nature = BRAVE
+IV = 15,15,15,15,15,15
+EV = 6,252,0,0,0,252
+TeraType = FIRE
+#-------------------------------
+[LEADER_Clair,Clair]
+Pokemon = GOODRA,50
+Form = 0
+Moves = RAINDANCE,SURF,DRACOMETEOR,ICEBEAM
+AbilityIndex = 2
+Item = DAMPROCK
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,0,0,252,252
+TeraType = DRAGON
+Pokemon = SALAMENCE,50
+Form = 0
+Moves = DRAGONDANCE,DRAGONCLAW,DUALWINGBEAT,EARTHQUAKE
+AbilityIndex = 2
+Item = LIFEORB
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 0,252,0,252,0,6
+TeraType = DRAGON
+Pokemon = ALTARIA,50
+Form = 0
+Moves = MOONBLAST,AIRSLASH,FLAMETHROWER,ICEBEAM
+AbilityIndex = 0
+Item = PIXIEDUST
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,252,0
+TeraType = DRAGON
+Pokemon = EXEGGUTOR,50
+Form = 1
+Moves = GIGADRAIN,DRACOMETEOR,FLAMETHROWER,PSYCHIC
+AbilityIndex = 1
+Item = CHOICESPECS
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,252,0
+TeraType = DRAGON
+Pokemon = DRAGONITE,50
+Form = 0
+Moves = DRAGONDANCE,DRAGONCLAW,DUALWINGBEAT,EARTHQUAKE
+AbilityIndex = 2
+Item = WEAKNESSPOLICY
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 0,252,6,252,0,0
+TeraType = DRAGON
+Pokemon = KINGDRA,50
+Form = 0
+Moves = DRAGONPULSE,TERABLAST,HYDROPUMP,ICEBEAM
+AbilityIndex = 1
+Item = SCOPELENS
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = STEEL
+#-------------------------------
+[LEADER_Chuck,Chuck]
+Pokemon = HITMONCHAN,50
+Form = 0
+Moves = DRAINPUNCH,ICEPUNCH,JETPUNCH,BULLETPUNCH
+AbilityIndex = 1
+Item = BIGROOT
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = FIGHTING
+Pokemon = HERACROSS,50
+Form = 0
+Moves = SWORDSDANCE,MEGAHORN,CLOSECOMBAT,THROATCHOP
+AbilityIndex = 2
+Item = LIFEORB
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 0,252,0,252,0,6
+TeraType = FIGHTING
+Pokemon = MACHAMP,50
+Form = 0
+Moves = DRAINPUNCH,ICEPUNCH,BULLETPUNCH,PROTECT
+AbilityIndex = 0
+Item = FLAMEORB
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 0,252,6,252,0,0
+TeraType = FIGHTING
+Pokemon = ANNIHILAPE,50
+Form = 0
+Moves = RAGEFIST,DRAINPUNCH,FIREPUNCH,SHADOWCLAW
+AbilityIndex = 2
+Item = ASSAULTVEST
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = FIGHTING
+Pokemon = POLIWRATH,50
+Form = 0
+Moves = JETPUNCH,DRAINPUNCH,DARKESTLARIAT,ICEPUNCH
+AbilityIndex = 1
+Item = LIFEORB
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 252,252,0,6,0,0
+TeraType = FIGHTING
+Pokemon = HITMONTOP,50
+Form = 0
+Moves = BULLETPUNCH,MACHPUNCH,FAKEOUT,SUCKERPUNCH
+AbilityIndex = 1
+Item = MUSCLEBAND
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = STEEL
+#-------------------------------
+[RIVAL_Silver,Silver]
+Pokemon = GENGAR,50
+Form = 0
+Moves = SHADOWBALL,SLUDGEWAVE,PSYCHIC,DARKPULSE
+AbilityIndex = 0
+Item = WISEGLASSES
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = GHOST
+Pokemon = CROBAT,50
+Form = 0
+Moves = UTURN,STEELWING,DUALWINGBEAT,CROSSPOISON
+#N/A
+Item = BLACKSLUDGE
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 0,252,6,252,0,0
+TeraType = POISON
+Pokemon = KINGDRA,50
+Form = 0
+Moves = SNIPESHOT,DRAGONPULSE,ICEBEAM,FLASHCANNON
+AbilityIndex = 1
+Item = SCOPELENS
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,252,0
+TeraType = WATER
+Pokemon = HONCHKROW,50
+Form = 0
+Moves = NASTYPLOT,AIRSLASH,DARKPULSE,HEATWAVE
+AbilityIndex = 0
+Item = WISEGLASSES
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,252,0
+TeraType = FLYING
+Pokemon = WEAVILE,50
+Form = 0
+Moves = TRIPLEAXEL,NIGHTSLASH,BRICKBREAK,SHADOWCLAW
+AbilityIndex = 0
+Item = ASSAULTVEST
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 0,252,6,252,0,0
+TeraType = ICE
+Pokemon = MAGNEZONE,50
+Form = 0
+Moves = THUNDERBOLT,FLASHCANNON,SIGNALBEAM,TERABLAST
+AbilityIndex = 1
+Item = AIRBALLOON
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = FIRE
+#-------------------------------
+[SPECIAL_Kurt,Kurt]
+Pokemon = GOLDUCK,50
+Form = 0
+Moves = PSYSHOCK,SURF,ICEBEAM,GRASSKNOT
+AbilityIndex = 0
+Item = WISEGLASSES
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = WATER
+Pokemon = BEEDRILL,50
+Form = 0
+Moves = UTURN,OUTRAGE,DRILLRUN,POISONJAB
+AbilityIndex = 1
+Item = CHOICEBAND
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 0,252,6,252,0,0
+TeraType = BUG
+Pokemon = BUTTERFREE,50
+Form = 0
+Moves = BUGBUZZ,SHADOWBALL,PSYCHIC,AIRSLASH
+AbilityIndex = 2
+Item = LIFEORB
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,252,0
+TeraType = BUG
+Pokemon = NOCTOWL,50
+Form = 0
+Moves = AIRSLASH,PSYCHIC,SHADOWBALL,HEATWAVE
+AbilityIndex = 2
+Item = WISEGLASSES
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,252,0
+TeraType = FLYING
+Pokemon = URSALUNA,50
+Form = 0
+Moves = BODYSLAM,HEADLONGRUSH,PROTECT,ICEPUNCH
+AbilityIndex = 0
+Item = FLAMEORB
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 0,252,6,252,0,0
+TeraType = NORMAL
+Pokemon = SLOWBRO,50
+Form = 0
+Moves = TRICK,HYDROPUMP,PSYSHOCK,TERABLAST
+AbilityIndex = 0
+Item = IRONBALL
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = FIRE
+#-------------------------------
+[SPECIAL_Kris,Kris]
+Pokemon = LEDIAN,50
+Form = 0
+Moves = DRAINPUNCH,CONSTELLATIONPUNCH,ICEPUNCH,THUNDERPUNCH
+AbilityIndex = 2
+Item = MUSCLEBAND
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = BUG
+Pokemon = WIGGLYTUFF,50
+Form = 0
+Moves = REFLECT,LIGHTSCREEN,DAZZLINGGLEAM,ICEBEAM
+AbilityIndex = 2
+Item = LIGHTCLAY
+Nature = BOLD
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,252,0
+TeraType = FAIRY
+Pokemon = MISMAGIUS,50
+Form = 0
+Moves = MYSTICALFIRE,SHADOWBALL,DAZZLINGGLEAM,PSYCHIC
+AbilityIndex = 2
+Item = LIFEORB
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = GHOST
+Pokemon = NINETALES,50
+Form = 0
+Moves = FIREBLAST,PSYSHOCK,SHADOWBALL,DARKPULSE
+AbilityIndex = 1
+Item = WISEGLASSES
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,252,0
+TeraType = FIRE
+Pokemon = FERALIGATR,50
+Form = 0
+Moves = ICEFANG,PSYCHICFANGS,CRUNCH,WATERFALL
+AbilityIndex = 1
+Item = LIFEORB
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 0,252,6,252,0,0
+TeraType = WATER
+Pokemon = JOLTEON,50
+Form = 0
+Moves = TERABLAST,THUNDER,SHADOWBALL,HYPERVOICE
+AbilityIndex = 1
+Item = WISEGLASSES
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = ICE
+#-------------------------------
+[SPECIAL_Eusine,Eusine]
+Pokemon = HYPNO,50
+Form = 0
+Moves = HYPNOSIS,PSYSHOCK,SHADOWBALL,DAZZLINGGLEAM
+AbilityIndex = 2
+Item = WIDELENS
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = PSYCHIC
+Pokemon = ELECTRODE,50
+Form = 0
+Moves = THUNDERWAVE,THUNDER,LIGHTSCREEN,REFLECT
+AbilityIndex = 2
+Item = LIGHTCLAY
+Nature = BOLD
+IV = 15,15,15,15,15,15
+EV = 0,0,252,252,6,0
+TeraType = ELECTRIC
+Pokemon = GENGAR,50
+Form = 0
+Moves = GIGADRAIN,SHADOWBALL,FOCUSBLAST,SLUDGEWAVE
+AbilityIndex = 0
+Item = BLACKSLUDGE
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = FIRE
+Pokemon = JUMPLUFF,50
+Form = 0
+Moves = SEEDBOMB,SWORDSDANCE,ACROBATICS,TRAILBLAZE
+AbilityIndex = 2
+Item = SITRUSBERRY
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 0,252,6,252,0,0
+TeraType = GRASS
+Pokemon = ALAKAZAM,50
+Form = 0
+Moves = PSYSHOCK,SHADOWBALL,DAZZLINGGLEAM,ENERGYBALL
+AbilityIndex = 2
+Item = LIFEORB
+Nature = BOLD
+IV = 15,15,15,15,15,15
+EV = 0,6,0,252,252,0
+TeraType = PSYCHIC
+Pokemon = VAPOREON,50
+Form = 0
+Moves = PROTECT,WISH,CALMMIND,SCALD
+AbilityIndex = 1
+Item = LEFTOVERS
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 0,0,252,0,6,252
+TeraType = GRASS
+#-------------------------------
+[SPECIAL_Elm,Elm]
+Pokemon = CORSOLA,50
+Form = 0
+Moves = STEALTHROCK,POWERGEM,SCALD,ICEBEAM
+AbilityIndex = 1
+Item = FOCUSSASH
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = WATER
+Pokemon = TOGEKISS,50
+Form = 0
+Moves = THUNDERWAVE,AIRSLASH,DAZZLINGGLEAM,HEATWAVE
+AbilityIndex = 1
+Item = LEFTOVERS
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,252,0
+TeraType = FAIRY
+Pokemon = TYPHLOSION,50
+Form = 0
+Moves = ERUPTION,SHADOWBALL,FOCUSBLAST,FLAMETHROWER
+AbilityIndex = 1
+Item = CHOICESCARF
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = FIRE
+Pokemon = MEGANIUM,50
+Form = 0
+Moves = GIGADRAIN,LEECHSEED,PROTECT,ATTRACT
+AbilityIndex = 1
+Item = LEFTOVERS
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 0,0,252,0,6,252
+TeraType = GRASS
+Pokemon = FERALIGATR,50
+Form = 0
+Moves = WATERFALL,ICEPUNCH,DRAGONCLAW,EARTHQUAKE
+AbilityIndex = 2
+Item = LIFEORB
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 0,252,0,252,0,6
+TeraType = WATER
+Pokemon = SUDOWOODO,50
+Form = 0
+Moves = EARTHQUAKE,HEADSMASH,DRAINPUNCH,WOODHAMMER
+AbilityIndex = 1
+Item = MUSCLEBAND
+Nature = IMPISH
+IV = 15,15,15,15,15,15
+EV = 0,252,6,0,0,252
+TeraType = GRASS
+#-------------------------------
+[ELITE_Koga,Koga]
+Pokemon = ALAKAZAM,50
+Form = 0
+Moves = PROTECT,DAZZLINGGLEAM,PSYSHOCK,SHADOWBALL
+AbilityIndex = 0
+Item = TOXICORB
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,252,0,252,0
+TeraType = PSYCHIC
+Pokemon = SLOWKING,50
+Form = 0
+Moves = PSYSHOCK,SURF,FLAMETHROWER,ICEBEAM
+AbilityIndex = 1
+Item = LIFEORB
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 0,0,0,252,252,6
+TeraType = PSYCHIC
+Pokemon = UNOWN,50
+Form = 0
+Moves = HIDDENPOWER,HIDDENPOWER,HIDDENPOWER,HIDDENPOWER
+AbilityIndex = 0
+Item = CHOICESPECS
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,252,0
+TeraType = PSYCHIC
+Pokemon = RAICHU,50
+Form = 1
+Moves = THUNDERBOLT,FOCUSBLAST,SURF,PSYCHIC
+AbilityIndex = 2
+Item = WISEGLASSES
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,252,0
+TeraType = PSYCHIC
+Pokemon = ESPEON,50
+Form = 0
+Moves = SHADOWBALL,PSYSHOCK,DAZZLINGGLEAM,POWERGEM
+AbilityIndex = 2
+Item = LEFTOVERS
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,252,0
+TeraType = PSYCHIC
+Pokemon = XATU,50
+Form = 0
+Moves = PSYSHOCK,AIRSLASH,TERABLAST,SHADOWBALL
+AbilityIndex = 1
+Item = ROCKYHELMET
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = DARK
+#-------------------------------
+[ELITE_Koga,Koga]
+Pokemon = ARIADOS,50
+Form = 0
+Moves = TOXICSPIKES,STICKYWEB,XSCISSOR,POISONJAB
+AbilityIndex = 0
+Item = FOCUSSASH
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = POISON
+Pokemon = GENGAR,50
+Form = 0
+Moves = SHADOWBALL,SLUDGEBOMB,GIGADRAIN,PSYCHIC
+AbilityIndex = 2
+Item = LIFEORB
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 0,0,0,252,252,6
+TeraType = POISON
+Pokemon = BEEDRILL,50
+Form = 0
+Moves = OUTRAGE,DRILLRUN,POISONJAB,XSCISSOR
+AbilityIndex = 1
+Item = MUSCLEBAND
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 0,252,6,252,0,0
+TeraType = POISON
+Pokemon = ARBOK,50
+Form = 0
+Moves = POISONJAB,IRONTAIL,CRUNCH,ICEFANG
+AbilityIndex = 0
+Item = ASSAULTVEST
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 252,252,0,6,0,0
+TeraType = POISON
+Pokemon = WEEZING,50
+Form = 1
+Moves = SHADOWBALL,STRANGESTEAM,SLUDGEWAVE,PROTECT
+AbilityIndex = 0
+Item = BLACKSLUDGE
+Nature = MODEST
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,252,0
+TeraType = POISON
+Pokemon = CROBAT,50
+Form = 0
+Moves = SLUDGEBOMB,HEATWAVE,GIGADRAIN,AIRSLASH
+AbilityIndex = 2
+Item = WISEGLASSES
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = FIRE
+#-------------------------------
+[ELITE_Karen,Karen]
+Pokemon = PERSIAN,50
+Form = 1
+Moves = HYPNOSIS,DARKPULSE,NASTYPLOT,THUNDER
+AbilityIndex = 2
+Item = WIDELENS
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = DARK
+Pokemon = WEAVILE,50
+Form = 0
+Moves = NIGHTSLASH,TRIPLEAXEL,BRICKBREAK,XSCISSOR
+AbilityIndex = 0
+Item = LIFEORB
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 0,252,0,252,0,6
+TeraType = DARK
+Pokemon = TYRANITAR,50
+Form = 0
+Moves = OUTRAGE,EARTHQUAKE,CRUNCH,STONEEDGE
+AbilityIndex = 1
+Item = ASSAULTVEST
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 0,252,6,252,0,0
+TeraType = DARK
+Pokemon = HONCHKROW,50
+Form = 0
+Moves = SUCKERPUNCH,DRILLPECK,NIGHTSLASH,STEELWING
+AbilityIndex = 2
+Item = KINGSROCK
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = DARK
+Pokemon = UMBREON,50
+Form = 0
+Moves = WISH,PROTECT,CALMMIND,DARKPULSE
+AbilityIndex = 0
+Item = LEFTOVERS
+Nature = BOLD
+IV = 15,15,15,15,15,15
+EV = 0,0,252,252,6,0
+TeraType = DARK
+Pokemon = HOUNDOOM,50
+Form = 0
+Moves = FIREBLAST,DARKPULSE,SLUDGEBOMB,INFERNALPARADE
+AbilityIndex = 1
+Item = WISEGLASSES
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 6,0,0,252,252,0
+TeraType = GRASS
+#-------------------------------
+[LEADER_Roxanne,Roxanne]
+Pokemon = RHYPERIOR,50
+Form = 0
+Moves = STONEEDGE,EARTHQUAKE,AVALANCHE,AQUATAIL
+AbilityIndex = 0
+Item = SMOOTHROCK
+Nature = BRAVE
+IV = 15,15,15,15,15,15
+EV = 6,252,0,0,0,252
+TeraType = ROCK
+Pokemon = RELICANTH,50
+Form = 0
+Moves = HEADSMASH,WAVECRASH,EARTHQUAKE,ZENHEADBUTT
+AbilityIndex = 1
+Item = MUSCLEBAND
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 0,252,6,252,0,0
+TeraType = ROCK
+Pokemon = ARMALDO,50
+Form = 0
+Moves = FOSSILFURY,AQUATAIL,BRICKBREAK,XSCISSOR
+AbilityIndex = 0
+Item = ASSAULTVEST
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 0,252,6,252,0,0
+TeraType = ROCK
+Pokemon = CRADILY,50
+Form = 0
+Moves = GIGADRAIN,EARTHPOWER,METEORBEAM,SLUDGEBOMB
+AbilityIndex = 2
+Item = POWERHERB
+Nature = BOLD
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,252,0
+TeraType = ROCK
+Pokemon = AGGRON,50
+Form = 0
+Moves = STONEEDGE,IRONHEAD,HIGHHORSEPOWER,SHADOWCLAW
+AbilityIndex = 0
+Item = AIRBALLOON
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 0,252,6,252,0,0
+TeraType = ROCK
+Pokemon = PROBOPASS,50
+Form = 0
+Moves = POWERGEM,FLASHCANNON,EARTHPOWER,TERABLAST
+AbilityIndex = 0
+Item = LEFTOVERS
+Nature = TIMID
+IV = 15,15,15,15,15,15
+EV = 0,0,6,252,252,0
+TeraType = FLYING
+#-------------------------------
+[LEADER_Brawly,Brawly]
+Pokemon = MACHAMP,50
+Form = 0
+Moves = DRAINPUNCH,ICEPUNCH,BULLETPUNCH,PROTECT
+AbilityIndex = 0
+Item = FLAMEORB
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 6,252,0,252,0,0
+TeraType = FIGHTING
+Pokemon = HITMONCHAN,50
+Form = 0
+Moves = DRAINPUNCH,ICEPUNCH,THUNDERPUNCH,BULLETPUNCH
+AbilityIndex = 1
+Item = ASSAULTVEST
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 0,252,6,252,0,0
+TeraType = FIGHTING
+Pokemon = MEDICHAM,50
+Form = 0
+Moves = DRAINPUNCH,PSYCHOCUT,ICEPUNCH,FIREPUNCH
+AbilityIndex = 0
+Item = LIFEORB
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 0,252,6,252,0,0
+TeraType = FIGHTING
+Pokemon = BRELOOM,50
+Form = 0
+Moves = PROTECT,DRAINPUNCH,SEEDBOMB,THUNDERPUNCH
+AbilityIndex = 1
+Item = TOXICORB
+Nature = JOLLY
+IV = 15,15,15,15,15,15
+EV = 0,252,6,252,0,0
+TeraType = FIGHTING
+Pokemon = BLAZIKEN,50
+Form = 0
+Moves = STONEEDGE,BLAZEKICK,BRICKBREAK,PROTECT
+AbilityIndex = 2
+Item = LEFTOVERS
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 0,252,6,252,0,0
+TeraType = FIGHTING
+Pokemon = HARIYAMA,50
+Form = 0
+Moves = DRAINPUNCH,ICEPUNCH,ZENHEADBUTT,BULLETPUNCH
+AbilityIndex = 2
+Item = BIGROOT
+Nature = ADAMANT
+IV = 15,15,15,15,15,15
+EV = 0,252,6,252,0,0
+TeraType = STEEL
+#-------------------------------
+[LEADER_Wattson,Wattson]
+Pokemon = RAICHU,50
+Form = 0
+Moves = SURF,THUNDER,SIGNALBEAM,FOCUSBLAST
+AbilityIndex = 0
+Item = CHOICESCARF
+Nature = MODEST
+IV = 31,31,31,31,31,31
+EV = 6,0,0,252,252,0
+TeraType = ELECTRIC
+Pokemon = PLUSLE,50
+Form = 0
+Moves = THUNDER,GRASSKNOT,VOLTSWITCH,SIGNALBEAM
+AbilityIndex = 1
+Item = WISEGLASSES
+Nature = BOLD
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = ELECTRIC
+Pokemon = MINUN,50
+Form = 0
+Moves = THUNDERBOLT,PROTECT,DOUBLETEAM,TEARFULLOOK
+AbilityIndex = 1
+Item = LEFTOVERS
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,252,252,6,0
+TeraType = ELECTRIC
+Pokemon = MAGNEZONE,50
+Form = 0
+Moves = THUNDERBOLT,SIGNALBEAM,TRIATTACK,FLASHCANNON
+AbilityIndex = 1
+Item = AIRBALLOON
+Nature = MODEST
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = ELECTRIC
+Pokemon = AMPHAROS,50
+Form = 0
+Moves = DRAGONPULSE,THUNDERBOLT,DAZZLINGGLEAM,POWERGEM
+AbilityIndex = 1
+Item = CHOICESPECS
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 6,0,0,252,252,0
+TeraType = ELECTRIC
+Pokemon = MANECTRIC,50
+Form = 0
+Moves = THUNDERBOLT,FLAMETHROWER,TERABLAST,SNARL
+AbilityIndex = 0
+Item = ASSAULTVEST
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = FLYING
+#-------------------------------
+[LEADER_Flannery,Flannery]
+Pokemon = CAMERUPT,50
+Form = 0
+Moves = STEALTHROCK,EARTHPOWER,FIREBLAST,FLASHCANNON
+AbilityIndex = 1
+Item = LIFEORB
+Nature = MODEST
+IV = 31,31,31,31,31,31
+EV = 6,0,0,252,252,0
+TeraType = FIRE
+Pokemon = ARCANINE,50
+Form = 0
+Moves = FLAREBLITZ,OUTRAGE,PLAYROUGH,CLOSECOMBAT
+AbilityIndex = 0
+Item = CHOICEBAND
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 0,252,6,252,0,0
+TeraType = FIRE
+Pokemon = RAPIDASH,50
+Form = 0
+Moves = FLAREBLITZ,DRILLRUN,POISONJAB,SMARTSTRIKE
+AbilityIndex = 2
+Item = BRIGHTPOWDER
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,6,252,0,0
+TeraType = FIRE
+Pokemon = BLAZIKEN,50
+Form = 0
+Moves = BLAZEKICK,BRICKBREAK,PROTECT,THUNDERPUNCH
+AbilityIndex = 2
+Item = AIRBALLOON
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 0,252,6,252,0,0
+TeraType = FIRE
+Pokemon = MAGCARGO,50
+Form = 0
+Moves = FIREBLAST,POWERGEM,CLEARSMOG,EARTHPOWER
+AbilityIndex = 2
+Item = ASSAULTVEST
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 6,0,0,252,252,0
+TeraType = FIRE
+Pokemon = TORKOAL,50
+Form = 0
+Moves = FIREBLAST,EARTHPOWER,TERABLAST,SLUDGEBOMB
+AbilityIndex = 1
+Item = LEFTOVERS
+Nature = MODEST
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = GRASS
+#-------------------------------
+[LEADER_Norman,Norman]
+Pokemon = BLISSEY,50
+Form = 0
+Moves = STEALTHROCK,SEISMICTOSS,PROTECT,BLOCK
+AbilityIndex = 0
+Item = LEFTOVERS
+Nature = IMPISH
+IV = 31,31,31,31,31,31
+EV = 0,0,252,6,0,252
+TeraType = NORMAL
+Pokemon = SPINDA,50
+Form = 0
+Moves = SUCKERPUNCH,BODYSLAM,BRICKBREAK,ICEPUNCH
+AbilityIndex = 0
+Item = ASSAULTVEST
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 0,252,6,252,0,0
+TeraType = NORMAL
+Pokemon = LINOONE,50
+Form = 0
+Moves = BELLYDRUM,EXTREMESPEED,SHADOWCLAW,HIGHHORSEPOWER
+AbilityIndex = 0
+Item = SITRUSBERRY
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,6,252,0,0
+TeraType = NORMAL
+Pokemon = KECLEON,50
+Form = 0
+Moves = SHADOWCLAW,DRAINPUNCH,FIREPUNCH,FAKEOUT
+AbilityIndex = 2
+Item = MUSCLEBAND
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,6,252,0,0
+TeraType = NORMAL
+Pokemon = EXPLOUD,50
+Form = 0
+Moves = BOOMBURST,SURF,FLAMETHROWER,SHADOWBALL
+AbilityIndex = 0
+Item = ASSAULTVEST
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 6,0,0,252,252,0
+TeraType = NORMAL
+Pokemon = SLAKING,50
+Form = 0
+Moves = SHADOWCLAW,ZENHEADBUTT,DRAINPUNCH,POISONJAB
+AbilityIndex = 0
+Item = LEFTOVERS
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 0,252,6,0,0,252
+TeraType = GHOST
+#-------------------------------
+[LEADER_Liza,Liza]
+Pokemon = XATU,50
+Form = 0
+Moves = REFLECT,LIGHTSCREEN,PSYSHOCK,HEATWAVE
+AbilityIndex = 2
+Item = LIGHTCLAY
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,252,0,6,252
+TeraType = PSYCHIC
+Pokemon = CLAYDOL,50
+Form = 0
+Moves = PSYCHIC,EARTHPOWER,SHADOWBALL,GIGADRAIN
+AbilityIndex = 1
+Item = LEFTOVERS
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = PSYCHIC
+Pokemon = CHIMECHO,50
+Form = 0
+Moves = DAZZLINGGLEAM,SHADOWBALL,COSMICCHIME,SPECTRALBEAM
+AbilityIndex = 1
+Item = LIFEORB
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = PSYCHIC
+Pokemon = GRUMPIG,50
+Form = 0
+Moves = SHADOWBALL,ENERGYBALL,DAZZLINGGLEAM,LUSTROUSDANCE
+AbilityIndex = 0
+Item = CHOICESCARF
+Nature = MODEST
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = PSYCHIC
+Pokemon = GARDEVOIR,50
+Form = 0
+Moves = PSYCHIC,MOONBLAST,SHADOWBALL,AURASPHERE
+AbilityIndex = 0
+Item = CHOICESPECS
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 6,0,0,252,252,0
+TeraType = PSYCHIC
+Pokemon = LUNATONE,50
+Form = 0
+Moves = PSYCHIC,POWERGEM,EARTHPOWER,ICEBEAM
+AbilityIndex = 2
+Item = ASSAULTVEST
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = ICE
+#-------------------------------
+[LEADER_Tate,Tate]
+Pokemon = XATU,50
+Form = 0
+Moves = REFLECT,LIGHTSCREEN,PSYSHOCK,HEATWAVE
+AbilityIndex = 2
+Item = LIGHTCLAY
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,252,0,6,252
+TeraType = PSYCHIC
+Pokemon = CLAYDOL,50
+Form = 0
+Moves = PSYCHIC,EARTHPOWER,SHADOWBALL,TRICKROOM
+AbilityIndex = 1
+Item = LEFTOVERS
+Nature = QUIET
+IV = 31,31,31,31,31,31
+EV = 0,252,6,252,0,0
+TeraType = PSYCHIC
+Pokemon = REUNICLUS,50
+Form = 0
+Moves = EXPANDINGFORCE,SHADOWBALL,FLASHCANNON,CALMMIND
+AbilityIndex = 0
+Item = LIFEORB
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = PSYCHIC
+Pokemon = BRONZONG,50
+Form = 0
+Moves = TRICKROOM,BODYPRESS,ZENHEADBUTT,IRONHEAD
+AbilityIndex = 1
+Item = EXTENDEDBOOKING
+Nature = RELAXED
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = PSYCHIC
+Pokemon = GALLADE,50
+Form = 0
+Moves = SACREDSWORD,PSYCHOCUT,NIGHTSLASH,LEAFBLADE
+AbilityIndex = 1
+Item = CHOICESCARF
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 6,252,0,252,0,0
+TeraType = PSYCHIC
+Pokemon = SOLROCK,50
+Form = 0
+Moves = ZENHEADBUTT,STONEEDGE,EARTHQUAKE,FLAREBLITZ
+AbilityIndex = 2
+Item = ASSAULTVEST
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = FIRE
+#-------------------------------
+[LEADER_Juan,Juan]
+Pokemon = RELICANTH,50
+Form = 0
+Moves = STEALTHROCK,WAVECRASH,HEADSMASH,RAINDANCE
+AbilityIndex = 1
+Item = DAMPROCK
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,6,252,0,0,252
+TeraType = WATER
+Pokemon = GOREBYSS,50
+Form = 0
+Moves = HYDROPUMP,SIGNALBEAM,SHADOWBALL,ICEBEAM
+AbilityIndex = 0
+Item = LEFTOVERS
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = WATER
+Pokemon = CRAWDAUNT,50
+Form = 0
+Moves = AQUAJET,CRABHAMMER,CRUNCH,CLOSECOMBAT
+AbilityIndex = 2
+Item = LIFEORB
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,6,252,0,0
+TeraType = WATER
+Pokemon = WALREIN,50
+Form = 0
+Moves = ICEBEAM,SURF,AQUARING,EARTHPOWER
+AbilityIndex = 0
+Item = LEFTOVERS
+Nature = BOLD
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = WATER
+Pokemon = MILOTIC,50
+Form = 0
+Moves = RECOVER,ICEBEAM,SURF,DRAGONPULSE
+AbilityIndex = 0
+Item = FLAMEORB
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 6,0,0,252,252,0
+TeraType = WATER
+Pokemon = WHISCASH,50
+Form = 0
+Moves = DRAGONDANCE,EARTHQUAKE,WAVECRASH,TERABLAST
+AbilityIndex = 1
+Item = LEFTOVERS
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,6,252,0,0
+TeraType = FIRE
+#-------------------------------
+[SPECIAL_Tucker,Tucker]
+Pokemon = STARAPTOR,50
+Form = 0
+Moves = ENDEAVOR,QUICKATTACK,ENDEAVOR,QUICKATTACK
+AbilityIndex = 0
+Item = FOCUSSASH
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 252,0,0,252,0,6
+TeraType = NORMAL
+Pokemon = QWILFISH,50
+Form = 0
+Moves = WATERFALL,THUNDERWAVE,GUNKSHOT,SPIKES
+AbilityIndex = 2
+Item = BLACKSLUDGE
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 126,126,126,6,0,126
+TeraType = WATER
+Pokemon = AMPHAROS,50
+Form = 0
+Moves = THUNDERBOLT,FOCUSBLAST,DRAGONPULSE,LIGHTSCREEN
+AbilityIndex = 1
+Item = LEFTOVERS
+Nature = MODEST
+IV = 31,31,31,31,31,31
+EV = 6,0,0,0,252,252
+TeraType = ELECTRIC
+Pokemon = GARDEVOIR,50
+Form = 0
+Moves = PSYSHOCK,MOONBLAST,AURASPHERE,HYPNOSIS
+AbilityIndex = 1
+Item = LIFEORB
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,0,252,252,6
+TeraType = PSYCHIC
+Pokemon = GARCHOMP,50
+Form = 0
+Moves = DRAGONCLAW,EARTHQUAKE,IRONHEAD,SCALESHOT
+AbilityIndex = 2
+Item = WEAKNESSPOLICY
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 14,252,0,14,0,230
+TeraType = DRAGON
+Pokemon = GOREBYSS,50
+Form = 0
+Moves = SURF,ICEBEAM,PSYCHIC,EARTHPOWER
+AbilityIndex = 1
+Item = CHOICESPECS
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,0,252,252,6
+TeraType = GROUND
+#-------------------------------
+[SPECIAL_Spenser,Spenser]
+Pokemon = HIPPOWDON,50
+Form = 0
+Moves = EARTHQUAKE,FIREFANG,SLACKOFF,STEALTHROCK
+AbilityIndex = 0
+Item = SMOOTHROCK
+Nature = IMPISH
+IV = 31,31,31,31,31,31
+EV = 252,6,252,0,0,0
+TeraType = GROUND
+Pokemon = EXCADRILL,50
+Form = 0
+Moves = EARTHQUAKE,XSCISSOR,IRONHEAD,SUBSTITUTE
+AbilityIndex = 0
+Item = WEAKNESSPOLICY
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 6,252,0,252,0,0
+TeraType = GROUND
+Pokemon = CRADILY,50
+Form = 0
+Moves = GIGADRAIN,EARTHPOWER,LEECHSEED,INGRAIN
+AbilityIndex = 2
+Item = BIGROOT
+Nature = CALM
+IV = 31,31,31,31,31,31
+EV = 6,0,126,0,126,252
+TeraType = GRASS
+Pokemon = STOUTLAND,50
+Form = 0
+Moves = RETALIATE,SWORDSDANCE,EARTHQUAKE,PSYCHICFANGS
+AbilityIndex = 1
+Item = LIFEORB
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 126,252,0,126,0,6
+TeraType = NORMAL
+Pokemon = DUSKNOIR,50
+Form = 0
+Moves = SHADOWSNEAK,DISABLE,DRAINPUNCH,WILLOWISP
+AbilityIndex = 1
+Item = LEFTOVERS
+Nature = IMPISH
+IV = 31,31,31,31,31,31
+EV = 158,100,126,0,0,126
+TeraType = GHOST
+Pokemon = SWOOBAT,50
+Form = 0
+Moves = STOREDPOWER,CALMMIND,GIGADRAIN,ROOST
+AbilityIndex = 2
+Item = SALACBERRY
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 6,0,0,252,252,0
+TeraType = STEEL
+#-------------------------------
+[SPECIAL_Noland,Noland]
+Pokemon = METAGROSS,50
+Form = 0
+Moves = AGILITY,EARTHQUAKE,STEALTHROCK,ICEPUNCH
+AbilityIndex = 1
+Item = REDCARD
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,0,6,0,252
+TeraType = STEEL
+Pokemon = SLAKING,50
+Form = 0
+Moves = FACADE,ZENHEADBUTT,BULKUP,EARTHQUAKE
+AbilityIndex = 0
+Item = SUPPRESSORVEST
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 6,252,0,252,0,0
+TeraType = NORMAL
+Pokemon = RAICHU,50
+Form = 1
+Moves = THUNDERBOLT,SURF,SIGNALBEAM,FOCUSBLAST
+AbilityIndex = 2
+Item = CHOICESPECS
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,0,252,252,6
+TeraType = ELECTRIC
+Pokemon = VENUSAUR,50
+Form = 0
+Moves = GIGADRAIN,EARTHPOWER,GROWTH,SLUDGEBOMB
+AbilityIndex = 1
+Item = BLACKSLUDGE
+Nature = CALM
+IV = 31,31,31,31,31,31
+EV = 252,0,0,0,6,252
+TeraType = GRASS
+Pokemon = GOODRA,50
+Form = 0
+Moves = DRAGONPULSE,FLAMETHROWER,ICEBEAM,THUNDERBOLT
+#N/A
+Item = LEFTOVERS
+Nature = CALM
+IV = 31,31,31,31,31,31
+EV = 252,0,0,0,6,252
+TeraType = DRAGON
+Pokemon = PINSIR,50
+Form = 0
+Moves = EARTHQUAKE,OUTRAGE,XSCISSOR,BULKUP
+AbilityIndex = 1
+Item = LIFEORB
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 0,252,252,6,0,0
+TeraType = DRAGON
+#-------------------------------
+[SPECIAL_Lucy,Lucy]
+Pokemon = SEVIPER,50
+Form = 0
+Moves = SLUDGEWAVE,DARKPULSE,EARTHPOWER,ICEBEAM
+AbilityIndex = 1
+Item = CHOICESCARF
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 6,0,0,252,252,0
+TeraType = POISON
+Pokemon = SERPERIOR,50
+Form = 0
+Moves = LEAFSTORM,DRAGONPULSE,GLARE,SUBSTITUTE
+AbilityIndex = 2
+Item = SHELLBELL
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 6,0,126,0,252,126
+TeraType = GRASS
+Pokemon = HUNTAIL,50
+Form = 0
+Moves = WATERFALL,ICEFANG,SHELLSMASH,SUCKERPUNCH
+AbilityIndex = 1
+Item = FOCUSSASH
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 6,252,0,252,0,0
+TeraType = WATER
+Pokemon = GOTHITELLE,50
+Form = 0
+Moves = FAKEOUT,PSYCHIC,FOCUSBLAST,THUNDERWAVE
+AbilityIndex = 2
+Item = LEFTOVERS
+Nature = CALM
+IV = 31,31,31,31,31,31
+EV = 6,0,0,0,252,252
+TeraType = PSYCHIC
+Pokemon = CINCCINO,50
+Form = 0
+Moves = TAILSLAP,BULLETSEED,ROCKBLAST,THUNDERWAVE
+AbilityIndex = 2
+Item = KINGSROCK
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,6,252,0,0
+TeraType = NORMAL
+Pokemon = SYLVEON,50
+Form = 0
+Moves = HYPERVOICE,MYSTICALFIRE,SHADOWBALL,CALMMIND
+AbilityIndex = 2
+Item = LIFEORB
+Nature = MODEST
+IV = 31,31,31,31,31,31
+EV = 6,0,0,252,252,0
+TeraType = POISON
+#-------------------------------
+[SPECIAL_Greta,Greta]
+Pokemon = EXEGGUTOR,50
+Form = 0
+Moves = GIGADRAIN,SUBSTITUTE,PSYSHOCK,SHADOWBALL
+AbilityIndex = 2
+Item = PETAYABERRY
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 6,0,0,252,252,0
+TeraType = GRASS
+Pokemon = MUK,50
+Form = 1
+Moves = POISONJAB,DRAINPUNCH,KNOCKOFF,ICEPUNCH
+AbilityIndex = 0
+Item = BLACKSLUDGE
+Nature = IMPISH
+IV = 31,31,31,31,31,31
+EV = 252,252,6,0,0,0
+TeraType = POISON
+Pokemon = CORSOLA,50
+Form = 0
+Moves = SCALD,ANCIENTPOWER,RECOVER,ICEBEAM
+AbilityIndex = 2
+Item = LEFTOVERS
+Nature = BOLD
+IV = 31,31,31,31,31,31
+EV = 126,0,126,0,132,126
+TeraType = WATER
+Pokemon = ILLUMISE,50
+Form = 0
+Moves = TAILGLOW,BUGBUZZ,ROOST,WATERPULSE
+AbilityIndex = 2
+Item = FOCUSSASH
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,0,252,252,6
+TeraType = BUG
+Pokemon = MEDICHAM,50
+Form = 0
+Moves = FAKEOUT,PSYCHOCUT,AURASPHERE,POISONJAB
+AbilityIndex = 0
+Item = WEAKNESSPOLICY
+Nature = NAUGHTY
+IV = 31,31,31,31,31,31
+EV = 0,252,0,252,0,6
+TeraType = FIGHTING
+Pokemon = MAWILE,50
+Form = 0
+Moves = PLAYROUGH,ICEPUNCH,SWORDSDANCE,SUCKERPUNCH
+AbilityIndex = 0
+Item = LIFEORB
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,0,252,0,6
+TeraType = POISON
+#-------------------------------
+[SPECIAL_Brandon,Brandon]
+Pokemon = AERODACTYL,50
+Form = 0
+Moves = DUALWINGBEAT,STEALTHROCK,TAILWIND,TAUNT
+AbilityIndex = 1
+Item = FOCUSSASH
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,6,252,0,0
+TeraType = ROCK
+Pokemon = MAGNEZONE,50
+Form = 0
+Moves = THUNDERBOLT,FLASHCANNON,SIGNALBEAM,HYPERBEAM
+AbilityIndex = 1
+Item = WEAKNESSPOLICY
+Nature = MODEST
+IV = 31,31,31,31,31,31
+EV = 6,0,0,0,252,252
+TeraType = ELECTRIC
+Pokemon = PORYGONZ,50
+Form = 0
+Moves = TRIATTACK,ICEBEAM,THUNDERBOLT,SHADOWBALL
+AbilityIndex = 0
+Item = CHOICESPECS
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 6,0,0,252,252,0
+TeraType = NORMAL
+Pokemon = LILLIGANT,50
+Form = 1
+Moves = LEAFBLADE,VICTORYDANCE,POISONJAB,SLEEPPOWDER
+AbilityIndex = 0
+Item = LIFEORB
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,0,252,0,6
+TeraType = GRASS
+Pokemon = ARCANINE,50
+Form = 1
+Moves = RAGINGFURY,HEADSMASH,EXTREMESPEED,MORNINGSUN
+AbilityIndex = 2
+Item = SALACBERRY
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 6,252,252,0,0,0
+TeraType = FIRE
+Pokemon = SAMUROTT,50
+Form = 1
+Moves = AQUACUTTER,CEASELESSEDGE,SWORDSDANCE,SUBSTITUTE
+AbilityIndex = 2
+Item = LEFTOVERS
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 6,252,0,252,0,0
+TeraType = GHOST
+#-------------------------------
+[SPECIAL_Anabel,Anabel]
+Pokemon = SHUCKLE,50
+Form = 0
+Moves = STICKYWEB,STEALTHROCK,INFESTATION,SUNNYDAY
+AbilityIndex = 0
+Item = HEATROCK
+Nature = BOLD
+IV = 31,31,31,31,31,31
+EV = 252,0,128,0,0,130
+TeraType = BUG
+Pokemon = ESPEON,50
+Form = 0
+Moves = PSYSHOCK,SHADOWBALL,SIGNALBEAM,CALMMIND
+AbilityIndex = 1
+Item = EXPERTBELT
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,0,252,252,6
+TeraType = PSYCHIC
+Pokemon = VICTREEBEL,50
+Form = 0
+Moves = POWERWHIP,GUNKSHOT,KNOCKOFF,SWORDSDANCE
+AbilityIndex = 0
+Item = SALACBERRY
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,0,252,0,6
+TeraType = GRASS
+Pokemon = KROOKODILE,50
+Form = 0
+Moves = EARTHQUAKE,KNOCKOFF,PROTECT,DRAGONTAIL
+AbilityIndex = 0
+Item = LEFTOVERS
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 126,126,126,22,0,110
+TeraType = GROUND
+Pokemon = KANGASKHAN,50
+Form = 0
+Moves = FAKEOUT,DRAINPUNCH,FACADE,SHADOWCLAW
+AbilityIndex = 0
+Item = LIFEORB
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 6,252,0,252,0,0
+TeraType = NORMAL
+Pokemon = VOLCARONA,50
+Form = 0
+Moves = FIREBLAST,GIGADRAIN,QUIVERDANCE,BUGBUZZ
+AbilityIndex = 0
+Item = WEAKNESSPOLICY
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,0,252,252,6
+TeraType = DRAGON
+#-------------------------------
+[ELITE_Sidney,Sidney]
+Pokemon = MIGHTYENA,50
+Form = 0
+Moves = SUPERFANG,SUCKERPUNCH,PSYCHICFANGS,TAUNT
+AbilityIndex = 0
+Item = BRIGHTPOWDER
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,6,252,0,0
+TeraType = DARK
+Pokemon = SHIFTRY,50
+Form = 0
+Moves = GRASSYGLIDE,ROCKSLIDE,KNOCKOFF,SUCKERPUNCH
+AbilityIndex = 0
+Item = CHOICEBAND
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 6,252,0,252,0,0
+TeraType = GRASS
+Pokemon = MANDIBUZZ,50
+Form = 0
+Moves = BRAVEBIRD,THUNDERWAVE,ROOST,TAILWIND
+AbilityIndex = 1
+Item = LEFTOVERS
+Nature = IMPISH
+IV = 31,31,31,31,31,31
+EV = 252,6,0,0,0,252
+TeraType = DARK
+Pokemon = SHARPEDO,50
+Form = 0
+Moves = PROTECT,EARTHQUAKE,LIQUIDATION,POISONJAB
+AbilityIndex = 2
+Item = FOCUSSASH
+#N/A
+IV = 31,31,31,31,31,31
+EV = 6,252,0,252,0,0
+#N/A
+Pokemon = SABLEYE,50
+Form = 0
+Moves = POLTERGEIST,WILLOWISP,RECOVER,PARTINGSHOT
+AbilityIndex = 2
+Item = SITRUSBERRY
+Nature = BRAVE
+IV = 31,31,31,31,31,31
+EV = 126,132,126,0,0,126
+TeraType = GHOST
+Pokemon = ABSOL,50
+Form = 0
+Moves = STONEEDGE,SUPERPOWER,KNOCKOFF,THUNDERWAVE
+AbilityIndex = 1
+Item = WEAKNESSPOLICY
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 6,252,0,252,0,0
+TeraType = PSYCHIC
+#-------------------------------
+[ELITE_Phoebe,Phoebe]
+Pokemon = BANETTE,50
+Form = 0
+Moves = SHADOWSNEAK,SWORDSDANCE,FACADE,TRAILBLAZE
+AbilityIndex = 2
+Item = FOCUSSASH
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 0,252,0,252,0,6
+TeraType = GHOST
+Pokemon = SABLEYE,50
+Form = 0
+Moves = RECOVER,CONFUSERAY,SHADOWCLAW,DOUBLETEAM
+AbilityIndex = 2
+Item = RAZORCLAW
+Nature = IMPISH
+IV = 31,31,31,31,31,31
+EV = 252,0,252,0,0,6
+TeraType = GHOST
+Pokemon = CHANDELURE,50
+Form = 0
+Moves = BURNINGJEALOUSY,SPECTRALBEAM,SUBSTITUTE,CALMMIND
+AbilityIndex = 1
+Item = WEAKNESSPOLICY
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 6,0,0,252,252,0
+TeraType = GHOST
+Pokemon = MISMAGIUS,50
+Form = 0
+Moves = THUNDERWAVE,SPECTRALBEAM,DAZZLINGGLEAM,NASTYPLOT
+AbilityIndex = 0
+Item = SALACBERRY
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,0,252,252,6
+TeraType = GHOST
+Pokemon = ZOROARK,50
+Form = 1
+Moves = BITTERMALICE,BURNINGJEALOUSY,UTURN,KNOCKOFF
+AbilityIndex = 0
+Item = LIFEORB
+Nature = NAUGHTY
+IV = 31,31,31,31,31,31
+EV = 6,126,0,252,126,0
+TeraType = GHOST
+Pokemon = DUSKNOIR,50
+Form = 0
+Moves = SHADOWSNEAK,BULKUP,EARTHQUAKE,SUCKERPUNCH
+AbilityIndex = 1
+Item = LEFTOVERS
+Nature = BRAVE
+IV = 31,31,31,31,31,31
+EV = 6,252,252,0,0,0
+TeraType = FAIRY
+#-------------------------------
+[ELITE_Glacia,Glacia]
+Pokemon = NINETALES,50
+Form = 1
+Moves = BLIZZARD,AURORAVEIL,MOONBLAST,TOXIC
+AbilityIndex = 2
+Item = LIGHTCLAY
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,0,252,252,6
+TeraType = ICE
+Pokemon = FROSLASS,50
+Form = 0
+Moves = BLIZZARD,CHILLINGWATER,THUNDERBOLT,DESTINYBOND
+AbilityIndex = 1
+Item = FOCUSSASH
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,0,252,252,6
+TeraType = ICE
+Pokemon = GLALIE,50
+Form = 0
+Moves = DOUBLEEDGE,EARTHQUAKE,IRONHEAD,EXPLOSION
+AbilityIndex = 0
+Item = CHOICEBAND
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 6,252,0,252,0,0
+TeraType = ICE
+Pokemon = ROTOM,50
+Form = 3
+Moves = THUNDERBOLT,WILLOWISP,HEX,BLIZZARD
+AbilityIndex = 2
+Item = BRIGHTPOWDER
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 6,0,252,0,252,0
+TeraType = ICE
+Pokemon = WALREIN,50
+Form = 0
+Moves = BLIZZARD,EARTHQUAKE,PROTECT,SUPERFANG
+AbilityIndex = 2
+Item = LEFTOVERS
+Nature = IMPISH
+IV = 31,31,31,31,31,31
+EV = 252,0,252,0,0,6
+TeraType = WATER
+Pokemon = GLACEON,50
+Form = 0
+Moves = BLIZZARD,CHILLINGWATER,EARTHPOWER,STOREDPOWER
+AbilityIndex = 1
+Item = WEAKNESSPOLICY
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,0,252,252,6
+TeraType = WATER
+#-------------------------------
+[ELITE_Drake,Drake]
+Pokemon = FLYGON,50
+Form = 0
+Moves = EARTHQUAKE,UTURN,DRAGONCLAW,STONEEDGE
+AbilityIndex = 0
+Item = CHOICESCARF
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,6,252,0,0
+TeraType = DRAGON
+Pokemon = DRAGALGE,50
+Form = 0
+Moves = DRACOMETEOR,ICEBEAM,SLUDGEWAVE,THUNDERBOLT
+AbilityIndex = 2
+Item = BLACKSLUDGE
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,0,252,252,6
+TeraType = POISON
+Pokemon = ALTARIA,50
+Form = 0
+Moves = DRACOMELODY,MOONBLAST,HEATWAVE,CALMMIND
+AbilityIndex = 0
+Item = LEFTOVERS
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 6,0,0,0,252,252
+TeraType = DRAGON
+Pokemon = DRUDDIGON,50
+Form = 0
+Moves = OUTRAGE,FIREPUNCH,GUNKSHOT,SUCKERPUNCH
+AbilityIndex = 1
+Item = LIFEORB
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 0,252,6,252,0,0
+TeraType = DRAGON
+Pokemon = DRAGONITE,50
+Form = 0
+Moves = OUTRAGE,DRAGONDANCE,AQUAJET,IRONHEAD
+AbilityIndex = 2
+Item = WEAKNESSPOLICY
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 6,252,0,252,0,0
+TeraType = DRAGON
+Pokemon = SALAMENCE,50
+Form = 0
+Moves = DRAGONCLAW,EARTHQUAKE,STONEEDGE,DRAGONDANCE
+AbilityIndex = 2
+Item = CLEARAMULET
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 0,252,0,252,0,6
+#N/A
+#-------------------------------
+[SPECIAL_Thorton,Thorton]
+Pokemon = LEDIAN,50
+Form = 0
+Moves = MACHPUNCH,CONSTELLATIONPUNCH,THUNDERPUNCH,TAILWIND
+AbilityIndex = 2
+Item = PUNCHINGGLOVE
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,0,252,0,6
+TeraType = BUG
+Pokemon = DELCATTY,50
+Form = 0
+Moves = BOOMBURST,THUNDERBOLT,SHADOWBALL,MOONBLAST
+AbilityIndex = 0
+Item = CHOICESPECS
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 6,0,0,252,252,0
+TeraType = NORMAL
+Pokemon = MAMOSWINE,50
+Form = 0
+Moves = EARTHQUAKE,ICESHARD,KNOCKOFF,STONEEDGE
+AbilityIndex = 2
+Item = LEFTOVERS
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 252,252,6,0,0,0
+TeraType = ICE
+Pokemon = KLINKLANG,50
+Form = 0
+Moves = DOUBLEIRONBASH,SHIFTGEAR,ICESPINNER,SUBSTITUTE
+AbilityIndex = 1
+Item = KINGSROCK
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,0,252,0,6
+TeraType = STEEL
+Pokemon = MANECTRIC,50
+Form = 0
+Moves = THUNDERBOLT,FLAMETHROWER,HYPERVOICE,SNARL
+AbilityIndex = 0
+Item = AIRBALLOON
+Nature = MODEST
+IV = 31,31,31,31,31,31
+EV = 6,0,0,252,252,0
+TeraType = ELECTRIC
+Pokemon = LUMINEON,50
+Form = 0
+Moves = SURF,ICEBEAM,TERABLAST,DAZZLINGGLEAM
+AbilityIndex = 2
+Item = WEAKNESSPOLICY
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 6,0,0,252,252,0
+TeraType = ELECTRIC
+#-------------------------------
+[SPECIAL_Saturn,Saturn]
+Pokemon = BRONZONG,50
+Form = 0
+Moves = PSYCHICTERRAIN,STEALTHROCK,STOREDPOWER,COSMICPOWER
+AbilityIndex = 0
+Item = TERRAINEXTENDER
+Nature = BOLD
+IV = 31,31,31,31,31,31
+EV = 252,0,252,0,0,6
+TeraType = STEEL
+Pokemon = ALAKAZAM,50
+Form = 0
+Moves = EXPANDINGFORCE,SHADOWBALL,NASTYPLOT,FOCUSBLAST
+AbilityIndex = 2
+Item = FOCUSSASH
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,0,252,252,6
+TeraType = PSYCHIC
+Pokemon = TYRANITAR,50
+Form = 0
+Moves = STONEEDGE,EARTHQUAKE,PURSUIT,DRAGONTAIL
+AbilityIndex = 1
+Item = ASSAULTVEST
+Nature = CAREFUL
+IV = 31,31,31,31,31,31
+EV = 252,6,0,0,0,252
+TeraType = ROCK
+Pokemon = SABLEYE,50
+Form = 0
+Moves = NIGHTSHADE,WILLOWISP,RECOVER,FOULPLAY
+AbilityIndex = 2
+Item = SITRUSBERRY
+Nature = CAREFUL
+IV = 31,31,31,31,31,31
+EV = 252,0,6,0,0,252
+TeraType = GHOST
+Pokemon = ABSOL,50
+Form = 0
+Moves = ENDURE,KNOCKOFF,PLAYROUGH,CLOSECOMBAT
+AbilityIndex = 2
+Item = WEAKNESSPOLICY
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,0,252,0,6
+TeraType = DARK
+Pokemon = TOXICROAK,50
+Form = 0
+Moves = AQUAJET,CLOSECOMBAT,ICEPUNCH,POISONJAB
+AbilityIndex = 2
+Item = CHOICESCARF
+#N/A
+IV = 31,31,31,31,31,31
+EV = 0,0,0,0,0,0
+#N/A
+#-------------------------------
+[SPECIAL_Palmer,Palmer]
+Pokemon = RHYPERIOR,50
+Form = 0
+Moves = EARTHQUAKE,STEALTHROCK,THUNDERPUNCH,MEGAHORN
+AbilityIndex = 1
+Item = ROCKYHELMET
+Nature = BRAVE
+IV = 31,31,31,31,31,31
+EV = 0,252,252,0,0,6
+TeraType = ROCK
+Pokemon = ELECTIVIRE,50
+Form = 0
+Moves = RETURN,ICEPUNCH,EARTHQUAKE,CROSSCHOP
+AbilityIndex = 1
+Item = CHOICEBAND
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 6,252,0,252,0,0
+TeraType = ELECTRIC
+Pokemon = LICKILICKY,50
+Form = 0
+Moves = FACADE,EARTHQUAKE,ZENHEADBUTT,ICEPUNCH
+AbilityIndex = 0
+Item = LIFEORB
+Nature = IMPISH
+IV = 31,31,31,31,31,31
+EV = 6,252,126,0,0,126
+TeraType = NORMAL
+Pokemon = YANMEGA,50
+Form = 0
+Moves = BUGBUZZ,PROTECT,AIRSLASH,TAILWIND
+AbilityIndex = 0
+Item = FOCUSSASH
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 6,0,0,252,252,0
+TeraType = BUG
+Pokemon = MAGMORTAR,50
+Form = 0
+Moves = BURNINGJEALOUSY,THUNDERBOLT,SCORCHINGSANDS,WILLOWISP
+AbilityIndex = 2
+Item = AIRBALLOON
+Nature = MODEST
+IV = 31,31,31,31,31,31
+EV = 126,0,0,252,132,0
+TeraType = FIRE
+Pokemon = GALLADE,50
+Form = 0
+Moves = PSYCHOCUT,XSCISSOR,SACREDSWORD,SWORDSDANCE
+AbilityIndex = 1
+#N/A
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,0,252,0,6
+TeraType = FAIRY
+#-------------------------------
+[SPECIAL_Mars,Mars]
+Pokemon = BRONZONG,50
+Form = 0
+Moves = REFLECT,LIGHTSCREEN,HEAVYSLAM,STEALTHROCK
+AbilityIndex = 0
+Item = LIGHTCLAY
+Nature = IMPISH
+IV = 31,31,31,31,31,31
+EV = 252,6,0,0,0,252
+TeraType = STEEL
+Pokemon = TOGEKISS,50
+Form = 0
+Moves = AIRSLASH,AURASPHERE,THUNDERWAVE,SOFTBOILED
+AbilityIndex = 1
+Item = KINGSROCK
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 126,0,0,252,126,6
+TeraType = FAIRY
+Pokemon = ESPEON,50
+Form = 0
+Moves = EXPANDINGFORCE,SHADOWBALL,GRASSKNOT,DRAININGKISS
+AbilityIndex = 2
+Item = CHOICESCARF
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,0,252,252,6
+TeraType = PSYCHIC
+Pokemon = ROTOM,50
+Form = 1
+Moves = THUNDERBOLT,OVERHEAT,VOLTSWITCH,NASTYPLOT
+AbilityIndex = 0
+Item = LEFTOVERS
+Nature = MODEST
+IV = 31,31,31,31,31,31
+EV = 126,0,126,6,0,252
+TeraType = ELECTRIC
+Pokemon = CROBAT,50
+Form = 0
+Moves = BRAVEBIRD,LEECHLIFE,ROOST,ZENHEADBUTT
+AbilityIndex = 2
+Item = BLACKSLUDGE
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 0,252,0,252,0,6
+TeraType = POISON
+Pokemon = PURUGLY,50
+Form = 0
+Moves = FAKEOUT,FACADE,EARTHQUAKE,PLAYROUGH
+AbilityIndex = 2
+Item = EXPERTBELT
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 6,252,0,252,0,0
+TeraType = FAIRY
+#-------------------------------
+[SPECIAL_Jupiter,Jupiter]
+Pokemon = BRONZONG,50
+Form = 0
+Moves = BODYPRESS,IRONDEFENSE,STEALTHROCK,HYPNOSIS
+AbilityIndex = 2
+Item = LEFTOVERS
+Nature = IMPISH
+IV = 31,31,31,31,31,31
+EV = 252,0,252,0,0,6
+TeraType = STEEL
+Pokemon = GENGAR,50
+Form = 0
+Moves = SPECTRALBEAM,NASTYPLOT,DAZZLINGGLEAM,SLUDGEWAVE
+AbilityIndex = 1
+Item = FOCUSSASH
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,0,252,252,6
+TeraType = GHOST
+Pokemon = NIDOKING,50
+Form = 0
+Moves = EARTHPOWER,ICEBEAM,THUNDERBOLT,SLUDGEWAVE
+AbilityIndex = 2
+Item = LIFEORB
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 6,0,0,252,252,0
+TeraType = POISON
+Pokemon = CROBAT,50
+Form = 0
+Moves = HEATWAVE,HURRICANE,NASTYPLOT,GIGADRAIN
+AbilityIndex = 2
+Item = HEAVYDUTYBOOTS
+Nature = MODEST
+IV = 31,31,31,31,31,31
+EV = 6,0,0,252,252,0
+TeraType = POISON
+Pokemon = TANGROWTH,50
+Form = 0
+Moves = GIGADRAIN,KNOCKOFF,SLUDGEBOMB,EARTHQUAKE
+AbilityIndex = 2
+Item = ASSAULTVEST
+Nature = SASSY
+IV = 31,31,31,31,31,31
+EV = 252,0,14,0,0,244
+TeraType = GRASS
+Pokemon = SKUNTANK,50
+Form = 0
+Moves = POISONJAB,PLAYROUGH,SUCKERPUNCH,TRAILBLAZE
+AbilityIndex = 2
+Item = BLACKSLUDGE
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,0,6,0,252
+TeraType = FLYING
+#-------------------------------
+[SPECIAL_Darach,Darach]
+Pokemon = ARAQUANID,50
+Form = 0
+Moves = LIQUIDATION,STICKYWEB,POISONJAB,MIRRORCOAT
+AbilityIndex = 0
+Item = BRIGHTPOWDER
+Nature = CAREFUL
+IV = 31,31,31,31,31,31
+EV = 126,252,0,0,0,132
+TeraType = BUG
+Pokemon = STARAPTOR,50
+Form = 0
+Moves = BRAVEBIRD,DOUBLEEDGE,ROOST,UTURN
+AbilityIndex = 2
+Item = CRASHGEAR
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 6,252,0,252,0,0
+TeraType = FLYING
+Pokemon = SPIRITOMB,50
+Form = 0
+Moves = SPECTRALBEAM,LASHOUT,WILLOWISP,TRICK
+AbilityIndex = 1
+Item = LAGGINGTAIL
+Nature = QUIET
+IV = 31,31,31,31,31,31
+EV = 6,126,126,0,126,126
+TeraType = GHOST
+Pokemon = MUSHARNA,50
+Form = 0
+Moves = DREAMEATER,HYPNOSIS,MOONBLAST,MOONLIGHT
+AbilityIndex = 0
+Item = LEFTOVERS
+Nature = BOLD
+IV = 31,31,31,31,31,31
+EV = 252,0,0,0,126,132
+TeraType = PSYCHIC
+Pokemon = HOUNDOOM,50
+Form = 0
+Moves = FLAMETHROWER,NASTYPLOT,DARKPULSE,SLUDGEBOMB
+AbilityIndex = 0
+Item = FOCUSSASH
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 6,0,0,252,252,0
+TeraType = FIRE
+Pokemon = AEGISLASH,50
+Form = 0
+Moves = SHADOWCLAW,AUTOTOMIZE,FLASHCANNON,SACREDSWORD
+AbilityIndex = 0
+Item = WEAKNESSPOLICY
+Nature = NAIVE
+IV = 31,31,31,31,31,31
+EV = 6,126,0,252,126,0
+TeraType = FIGHTING
+#-------------------------------
+[SPECIAL_Dahlia,Dahlia]
+Pokemon = EMPOLEON,50
+Form = 0
+Moves = SURF,STEALTHROCK,FLASHCANNON,EARTHPOWER
+AbilityIndex = 2
+Item = LEFTOVERS
+Nature = BOLD
+IV = 31,31,31,31,31,31
+EV = 132,0,126,0,126,126
+TeraType = WATER
+Pokemon = BLAZIKEN,50
+Form = 0
+Moves = BLAZEKICK,CLOSECOMBAT,ENDURE,EARTHQUAKE
+AbilityIndex = 2
+Item = WEAKNESSPOLICY
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,0,252,0,6
+TeraType = FIRE
+Pokemon = TOGEKISS,50
+Form = 0
+Moves = AIRSLASH,AURASPHERE,SOFTBOILED,THUNDERWAVE
+AbilityIndex = 1
+Item = WINDTURBINE
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 134,0,0,126,6,244
+TeraType = FAIRY
+Pokemon = ARMALDO,50
+Form = 0
+Moves = FOSSILFURY,SWORDSDANCE,FIRSTIMPRESSION,AQUAJET
+AbilityIndex = 0
+Item = HEAVYDUTYBOOTS
+Nature = IMPISH
+IV = 31,31,31,31,31,31
+EV = 6,252,252,0,0,0
+TeraType = ROCK
+Pokemon = PACHIRISU,50
+Form = 0
+Moves = NUZZLE,SUPERFANG,PROTECT,RAINDANCE
+AbilityIndex = 2
+Item = DAMPROCK
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 6,0,126,252,0,126
+TeraType = ELECTRIC
+Pokemon = LUDICOLO,50
+Form = 0
+Moves = SURF,ICEBEAM,TERABLAST,LEECHSEED
+AbilityIndex = 1
+Item = LIFEORB
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,0,6,252,252
+TeraType = GROUND
+#-------------------------------
+[SPECIAL_Argenta,Argenta]
+Pokemon = TYRANITAR,50
+Form = 0
+Moves = STONEEDGE,STEALTHROCK,THUNDERWAVE,DRAGONTAIL
+AbilityIndex = 1
+Item = LEFTOVERS
+Nature = IMPISH
+IV = 31,31,31,31,31,31
+EV = 252,0,252,0,0,6
+TeraType = ROCK
+Pokemon = SLAKING,50
+Form = 0
+Moves = FACADE,SLACKOFF,EARTHQUAKE,PLAYROUGH
+AbilityIndex = 0
+Item = SUPPRESSORVEST
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 6,252,0,252,0,0
+TeraType = NORMAL
+Pokemon = WAILORD,50
+Form = 0
+Moves = WATERSPOUT,ICEBEAM,HYPERVOICE,CLEARSMOG
+AbilityIndex = 2
+Item = CHOICESPECS
+Nature = MODEST
+IV = 31,31,31,31,31,31
+EV = 252,0,0,0,252,6
+TeraType = WATER
+Pokemon = SALAMENCE,50
+Form = 0
+Moves = DRAGONCLAW,DRAGONDANCE,EARTHQUAKE,FIREBLAST
+AbilityIndex = 0
+Item = WEAKNESSPOLICY
+Nature = LONELY
+IV = 31,31,31,31,31,31
+EV = 0,252,0,252,6,0
+TeraType = DRAGON
+Pokemon = METAGROSS,50
+Form = 0
+Moves = METEORMASH,ICEPUNCH,AGILITY,ZENHEADBUTT
+AbilityIndex = 1
+Item = CLEARAMULET
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 0,252,0,6,0,252
+TeraType = STEEL
+Pokemon = GENGAR,50
+Form = 0
+Moves = SPECTRALBEAM,NASTYPLOT,SLUDGEWAVE,DAZZLINGGLEAM
+AbilityIndex = 2
+Item = FOCUSSASH
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,0,252,252,6
+TeraType = STEEL
+#-------------------------------
+[SPECIAL_N,N]
+Pokemon = GALVANTULA,50
+Form = 0
+Moves = THUNDER,STICKYWEB,BUGBUZZ,GIGADRAIN
+AbilityIndex = 0
+Item = FOCUSSASH
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,252,252,6,0
+TeraType = ELECTRIC
+Pokemon = FERROTHORN,50
+Form = 0
+Moves = POWERWHIP,SPIKES,STEALTHROCK,LEECHSEED
+AbilityIndex = 0
+Item = ROCKYHELMET
+Nature = IMPISH
+IV = 31,31,31,31,31,31
+EV = 252,0,252,0,0,6
+TeraType = GRASS
+Pokemon = ARCHEOPS,50
+Form = 0
+Moves = EARTHQUAKE,KNOCKOFF,DUALWINGBEAT,ROOST
+AbilityIndex = 0
+Item = SUPPRESSORVEST
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,0,252,0,6
+TeraType = GROUND
+Pokemon = STARMIE,50
+Form = 0
+Moves = LUSTERPURGE,HYDROPUMP,ICEBEAM,THUNDERBOLT
+AbilityIndex = 1
+Item = CHOICESPECS
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,0,252,252,6
+TeraType = WATER
+Pokemon = ARCANINE,50
+Form = 0
+Moves = EXTREMESPEED,MORNINGSUN,RAGINGFURY,SCORCHINGSANDS
+AbilityIndex = 0
+Item = LEFTOVERS
+Nature = HASTY
+IV = 31,31,31,31,31,31
+EV = 0,252,0,6,126,126
+TeraType = WATER
+Pokemon = ZOROARK,50
+Form = 0
+Moves = DARKPULSE,NASTYPLOT,FOCUSBLAST,FLAMETHROWER
+AbilityIndex = 0
+Item = LIFEORB
+Nature = MODEST
+IV = 31,31,31,31,31,31
+EV = 6,0,0,252,252,0
+TeraType = GHOST
+#-------------------------------
+[LEADER_Viola,Viola]
+Pokemon = MASQUERAIN,50
+Form = 0
+Moves = STICKYWEB,BUGBUZZ,AIRSLASH,CHILLINGWATER
+AbilityIndex = 0
+Item = SITRUSBERRY
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,252,0,6,252
+TeraType = BUG
+Pokemon = GALVANTULA,50
+Form = 0
+Moves = THUNDER,BUGBUZZ,GIGADRAIN,HYPERBEAM
+AbilityIndex = 0
+Item = CHOICESPECS
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = BUG
+Pokemon = BEEDRILL,50
+Form = 0
+Moves = POISONJAB,XSCISSOR,DRILLRUN,OUTRAGE
+AbilityIndex = 1
+Item = SCOPELENS
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 0,252,6,252,0,0
+TeraType = BUG
+Pokemon = SHEDINJA,50
+Form = 0
+Moves = SHADOWCLAW,SHADOWSNEAK,XSCISSOR,DIG
+AbilityIndex = 0
+Item = FOCUSSASH
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,6,252,0,0
+TeraType = BUG
+Pokemon = HERACROSS,50
+Form = 0
+Moves = FACADE,BRICKBREAK,THROATCHOP,TRAILBLAZE
+AbilityIndex = 1
+Item = FLAMEORB
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 0,252,0,252,0,6
+TeraType = BUG
+Pokemon = VIVILLON,50
+Form = 0
+Moves = DRAININGKISS,GIGADRAIN,SLEEPPOWDER,OBLIVIONWING
+AbilityIndex = 2
+Item = LEFTOVERS
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = FAIRY
+#-------------------------------
+[LEADER_Grant,Grant]
+Pokemon = CARBINK,50
+Form = 0
+Moves = STEALTHROCK,REFLECT,LIGHTSCREEN,DIAMONDSTORM
+AbilityIndex = 2
+Item = LIGHTCLAY
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,252,0,6,252
+TeraType = ROCK
+Pokemon = BARBARACLE,50
+Form = 0
+Moves = STONEEDGE,RAZORSHELL,ICEPUNCH,DRAGONCLAW
+AbilityIndex = 1
+Item = SCOPELENS
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 0,252,6,252,0,0
+TeraType = ROCK
+Pokemon = TYRANITAR,50
+Form = 0
+Moves = STONEEDGE,CRUNCH,EARTHQUAKE,OUTRAGE
+AbilityIndex = 0
+Item = SMOOTHROCK
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,6,252,0,0
+TeraType = ROCK
+Pokemon = AGGRON,50
+Form = 0
+Moves = HEADSMASH,IRONHEAD,EARTHQUAKE,THUNDERPUNCH
+AbilityIndex = 1
+Item = AIRBALLOON
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,6,252,0,0
+TeraType = ROCK
+Pokemon = TYRANTRUM,50
+Form = 0
+Moves = IRONHEAD,STONEEDGE,STOMPINGTANTRUM,DRAGONRUSH
+AbilityIndex = 1
+Item = LIFEORB
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 0,252,0,252,0,6
+TeraType = ROCK
+Pokemon = AURORUS,50
+Form = 0
+Moves = BLIZZARD,POWERGEM,EARTHPOWER,DAZZLINGGLEAM
+AbilityIndex = 2
+Item = LEFTOVERS
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = STEEL
+#-------------------------------
+[LEADER_Korrina,Korrina]
+Pokemon = CHESNAUGHT,50
+Form = 0
+Moves = SEEDBOMB,REFLECT,LIGHTSCREEN,DRAINPUNCH
+AbilityIndex = 2
+Item = LEFTOVERS
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 252,6,0,0,0,252
+TeraType = FIGHTING
+Pokemon = PANGORO,50
+Form = 0
+Moves = DRAINPUNCH,NIGHTSLASH,ICEPUNCH,BULLETPUNCH
+AbilityIndex = 0
+Item = PUNCHINGGLOVE
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 0,252,6,252,0,0
+TeraType = FIGHTING
+Pokemon = MACHAMP,50
+Form = 0
+Moves = FACADE,DRAINPUNCH,ICEPUNCH,BULLETPUNCH
+AbilityIndex = 0
+Item = FLAMEORB
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 0,252,6,252,0,0
+TeraType = FIGHTING
+Pokemon = MIENSHAO,50
+Form = 0
+Moves = BLAZEKICK,HIGHJUMPKICK,POISONJAB,TRIPLEAXEL
+AbilityIndex = 0
+Item = ASSAULTVEST
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,6,252,0,0
+TeraType = FIGHTING
+Pokemon = LUCARIO,50
+Form = 0
+Moves = FLASHCANNON,AURASPHERE,DRAGONPULSE,PROTECT
+AbilityIndex = 0
+Item = LIFEORB
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,0,252,252,6
+TeraType = FIGHTING
+Pokemon = HAWLUCHA,50
+Form = 0
+Moves = ACROBATICS,DRAINPUNCH,THUNDERPUNCH,XSCISSOR
+AbilityIndex = 1
+Item = SITRUSBERRY
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = FLYING
+#-------------------------------
+[LEADER_Ramos,Ramos]
+Pokemon = SUNFLORA,50
+Form = 0
+Moves = SLUDGEBOMB,EARTHPOWER,DAZZLINGGLEAM,GIGADRAIN
+AbilityIndex = 2
+Item = HEATROCK
+Nature = MODEST
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = GRASS
+Pokemon = BELLOSSOM,50
+Form = 0
+Moves = DAZZLINGGLEAM,SLUDGEBOMB,GIGADRAIN,QUIVERDANCE
+AbilityIndex = 0
+Item = LEFTOVERS
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 6,0,0,0,252,252
+TeraType = GRASS
+Pokemon = JUMPLUFF,50
+Form = 0
+Moves = SUBSTITUTE,LEECHSEED,PROTECT,ACROBATICS
+AbilityIndex = 2
+Item = REDCARD
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,6,252,0,0
+TeraType = GRASS
+Pokemon = VICTREEBEL,50
+Form = 0
+Moves = TOXIC,LEAFBLADE,POISONJAB,KNOCKOFF
+AbilityIndex = 1
+Item = BLACKSLUDGE
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,6,252,0,0
+TeraType = GRASS
+Pokemon = TREVENANT,50
+Form = 0
+Moves = HORNLEECH,PROTECT,PHANTOMFORCE,XSCISSOR
+AbilityIndex = 2
+Item = SITRUSBERRY
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 0,252,0,252,0,6
+TeraType = GRASS
+Pokemon = GOGOAT,50
+Form = 0
+Moves = GRASSYTERRAIN,GRASSYGLIDE,EARTHQUAKE,ZENHEADBUTT
+AbilityIndex = 2
+Item = GRASSYSEED
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = GROUND
+#-------------------------------
+[LEADER_Clemont,Clemont]
+Pokemon = MAGNEZONE,50
+Form = 0
+Moves = REFLECT,LIGHTSCREEN,THUNDERBOLT,FLASHCANNON
+AbilityIndex = 1
+Item = LIGHTCLAY
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,252,0,6,252
+TeraType = ELECTRIC
+Pokemon = ROTOM,50
+Form = 2
+Moves = SHADOWBALL,HYDROPUMP,THUNDERBOLT,WILLOWISP
+AbilityIndex = 0
+Item = LEFTOVERS
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 6,0,0,252,252,0
+TeraType = ELECTRIC
+Pokemon = DEDENNE,50
+Form = 0
+Moves = DAZZLINGGLEAM,THUNDERBOLT,PROTECT,ENERGYBALL
+AbilityIndex = 0
+Item = SITRUSBERRY
+Nature = BOLD
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = ELECTRIC
+Pokemon = EMOLGA,50
+Form = 0
+Moves = ENERGYBALL,THUNDERBOLT,SWIFT,PROTECT
+AbilityIndex = 0
+Item = LEFTOVERS
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = ELECTRIC
+Pokemon = LUXRAY,50
+Form = 0
+Moves = CRUNCH,ICEFANG,THUNDERFANG,PSYCHICFANGS
+AbilityIndex = 0
+Item = ASSAULTVEST
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 0,252,0,252,0,6
+TeraType = ELECTRIC
+Pokemon = HELIOLISK,50
+Form = 0
+Moves = RAINDANCE,THUNDER,TERABLAST,HYPERVOICE
+AbilityIndex = 0
+Item = LEFTOVERS
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = FLYING
+#-------------------------------
+[LEADER_Olympia,Olympia]
+Pokemon = SIGILYPH,50
+Form = 0
+Moves = REFLECT,LIGHTSCREEN,THUNDERWAVE,PSYSHOCK
+AbilityIndex = 1
+Item = LIGHTCLAY
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,252,0,6,252
+TeraType = PSYCHIC
+Pokemon = SLOWKING,50
+Form = 0
+Moves = HYDROPUMP,PSYCHIC,ICEBEAM,SHADOWBALL
+AbilityIndex = 1
+Item = LEFTOVERS
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 6,0,0,252,252,0
+TeraType = PSYCHIC
+Pokemon = METAGROSS,50
+Form = 0
+Moves = METEORMASH,BULLETPUNCH,ZENHEADBUTT,ICEPUNCH
+AbilityIndex = 1
+Item = ASSAULTVEST
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,6,252,0,0
+TeraType = PSYCHIC
+Pokemon = MALAMAR,50
+Form = 0
+Moves = SUPERPOWER,NIGHTSLASH,PSYCHOCUT,LIQUIDATION
+AbilityIndex = 0
+Item = SITRUSBERRY
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 0,252,6,252,0,0
+TeraType = PSYCHIC
+Pokemon = DELPHOX,50
+Form = 0
+Moves = FIREBLAST,PSYCHIC,SHADOWBALL,GRASSKNOT
+AbilityIndex = 1
+Item = COVERTCLOAK
+Nature = MODEST
+IV = 31,31,31,31,31,31
+EV = 0,0,0,252,252,6
+TeraType = PSYCHIC
+Pokemon = MEOWSTIC,50
+Form = 1
+Moves = SHADOWBALL,PSYCHIC,THUNDERBOLT,TERABLAST
+AbilityIndex = 1
+Item = WISEGLASSES
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = STEEL
+#-------------------------------
+[LEADER_Valerie,Valerie]
+Pokemon = KLEFKI,50
+Form = 0
+Moves = REFLECT,LIGHTSCREEN,THUNDERWAVE,PLAYROUGH
+AbilityIndex = 0
+Item = LIGHTCLAY
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,6,252,0,0,252
+TeraType = FAIRY
+Pokemon = FLORGES,50
+Form = 0
+Moves = MOONBLAST,PSYCHIC,GIGADRAIN,CHILLINGWATER
+AbilityIndex = 1
+Item = LEFTOVERS
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 6,0,0,252,252,0
+TeraType = FAIRY
+Pokemon = MAWILE,50
+Form = 0
+Moves = IRONHEAD,BRICKBREAK,PLAYROUGH,THUNDERPUNCH
+AbilityIndex = 0
+Item = ASSAULTVEST
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,6,252,0,0
+TeraType = FAIRY
+Pokemon = SLURPUFF,50
+Form = 0
+Moves = BELLYDRUM,PLAYROUGH,DRAINPUNCH,FIREPUNCH
+AbilityIndex = 2
+Item = SITRUSBERRY
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 0,252,6,252,0,0
+TeraType = FAIRY
+Pokemon = AROMATISSE,50
+Form = 0
+Moves = DAZZLINGGLEAM,PSYCHIC,THUNDERBOLT,FLASHCANNON
+AbilityIndex = 1
+Item = COVERTCLOAK
+Nature = MODEST
+IV = 31,31,31,31,31,31
+EV = 0,0,0,252,252,6
+TeraType = FAIRY
+Pokemon = SYLVEON,50
+Form = 0
+Moves = HYPERVOICE,PSYCHIC,MYSTICALFIRE,SHADOWBALL
+AbilityIndex = 2
+Item = WISEGLASSES
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = FIRE
+#-------------------------------
+[LEADER_Wulfric,Wulfric]
+Pokemon = BEARTIC,50
+Form = 0
+Moves = ICICLECRASH,LIQUIDATION,BRICKBREAK,EARTHQUAKE
+AbilityIndex = 0
+Item = CHOICEBAND
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,0,252,0,6
+TeraType = ICE
+Pokemon = MAMOSWINE,50
+Form = 0
+Moves = EARTHQUAKE,STEALTHROCK,ICICLECRASH,IRONHEAD
+AbilityIndex = 2
+Item = LEFTOVERS
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 6,252,0,0,0,252
+TeraType = ICE
+Pokemon = VANILLUXE,50
+Form = 0
+Moves = BLIZZARD,FREEZEDRY,FLASHCANNON,THUNDERBOLT
+AbilityIndex = 1
+Item = ASSAULTVEST
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = ICE
+Pokemon = CRYOGONAL,50
+Form = 0
+Moves = SURF,FREEZEDRY,FLASHCANNON,SIGNALBEAM
+AbilityIndex = 1
+Item = WISEGLASSES
+Nature = MODEST
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = ICE
+Pokemon = ABOMASNOW,50
+Form = 0
+Moves = AURORAVEIL,BLIZZARD,SHADOWBALL,ENERGYBALL
+AbilityIndex = 0
+Item = ICYROCK
+Nature = MODEST
+IV = 31,31,31,31,31,31
+EV = 0,0,0,252,252,6
+TeraType = ICE
+Pokemon = AVALUGG,50
+Form = 0
+Moves = ICICLECRASH,EARTHQUAKE,STONEEDGE,TERABLAST
+AbilityIndex = 1
+Item = WISEGLASSES
+Nature = BRAVE
+IV = 31,31,31,31,31,31
+EV = 0,252,6,0,0,252
+TeraType = STEEL
+#-------------------------------
+[SPECIAL_Lusamine,Lusamine]
+Pokemon = CLEFABLE,50
+Form = 0
+Moves = MOONBLAST,STEALTHROCK,MOONLIGHT,PSYCHIC
+AbilityIndex = 2
+Item = LEFTOVERS
+Nature = CALM
+IV = 31,31,31,31,31,31
+EV = 252,0,0,0,6,252
+TeraType = FAIRY
+Pokemon = LOPUNNY,50
+Form = 0
+Moves = RETALIATE,CLOSECOMBAT,THUNDERPUNCH,THROATCHOP
+AbilityIndex = 2
+Item = CHOICEBAND
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,0,252,0,6
+TeraType = NORMAL
+Pokemon = MILOTIC,50
+Form = 0
+Moves = SURF,ICEBEAM,HYPNOSIS,RECOVER
+AbilityIndex = 0
+Item = FLAMEORB
+Nature = BOLD
+IV = 31,31,31,31,31,31
+EV = 252,0,252,0,0,6
+TeraType = WATER
+Pokemon = INCINEROAR,50
+Form = 0
+Moves = FAKEOUT,PARTINGSHOT,BURNINGJEALOUSY,DARKESTLARIAT
+AbilityIndex = 2
+Item = HEAVYDUTYBOOTS
+Nature = CAREFUL
+IV = 31,31,31,31,31,31
+EV = 252,6,0,0,0,252
+TeraType = FIRE
+Pokemon = DRIFBLIM,50
+Form = 0
+Moves = SPECTRALBEAM,WILLOWISP,HURRICANE,STRENGTHSAP
+AbilityIndex = 1
+Item = WINDTURBINE
+Nature = MODEST
+IV = 31,31,31,31,31,31
+EV = 252,0,0,6,0,252
+TeraType = GHOST
+Pokemon = BEWEAR,50
+Form = 0
+Moves = DRAINPUNCH,SWORDSDANCE,EARTHQUAKE,DARKESTLARIAT
+AbilityIndex = 2
+Item = WEAKNESSPOLICY
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 6,252,0,252,0,0
+TeraType = DARK
+#-------------------------------
+[SPECIAL_Lillie,Lillie]
+Pokemon = MINIOR,50
+Form = 7
+Moves = STEALTHROCK,STONEEDGE,EARTHQUAKE,ACROBATICS
+AbilityIndex = 0
+Item = SITRUSBERRY
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,6,252,0,0,252
+TeraType = FLYING
+Pokemon = ALTARIA,50
+Form = 0
+Moves = FLAMETHROWER,HURRICANE,DRAGONPULSE,ICEBEAM
+AbilityIndex = 0
+Item = CHOICESPECS
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = DRAGON
+Pokemon = NINETALES,50
+Form = 1
+Moves = ICEBEAM,MOONBLAST,AURORAVEIL,EXTRASENSORY
+AbilityIndex = 2
+Item = LIGHTCLAY
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = WATER
+Pokemon = RIBOMBEE,50
+Form = 0
+Moves = QUIVERDANCE,BUGBUZZ,ENERGYBALL,MOONBLAST
+AbilityIndex = 0
+Item = LEFTOVERS
+Nature = BOLD
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = BUG
+Pokemon = CLEFABLE,50
+Form = 0
+Moves = COSMICPOWER,BATONPASS,MINIMIZE,DAZZLINGGLEAM
+AbilityIndex = 2
+Item = LEFTOVERS
+Nature = BOLD
+IV = 31,31,31,31,31,31
+EV = 0,0,252,0,6,252
+TeraType = FAIRY
+Pokemon = COMFEY,50
+Form = 0
+Moves = DRAININGKISS,GIGADRAIN,FLORALHEALING,TERABLAST
+AbilityIndex = 1
+Item = LEFTOVERS
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = STEEL
+#-------------------------------
+[SPECIAL_Guzma,Guzma]
+Pokemon = VIKAVOLT,50
+Form = 0
+Moves = THUNDERBOLT,STICKYWEB,ENERGYBALL,BUGBUZZ
+AbilityIndex = 0
+Item = LEFTOVERS
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 6,0,0,252,252,0
+TeraType = BUG
+Pokemon = TOXAPEX,50
+Form = 0
+Moves = CHILLINGWATER,BANEFULBUNKER,HAZE,RECOVER
+AbilityIndex = 2
+Item = BLACKSLUDGE
+Nature = BOLD
+IV = 31,31,31,31,31,31
+EV = 252,0,252,0,0,6
+TeraType = WATER
+Pokemon = SCIZOR,50
+Form = 0
+Moves = BULLETPUNCH,BUGBITE,SWORDSDANCE,HARSHJAB
+AbilityIndex = 1
+Item = LIFEORB
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 6,252,0,252,0,0
+TeraType = BUG
+Pokemon = MASQUERAIN,50
+Form = 0
+Moves = HYDROPUMP,BUGBUZZ,HURRICANE,ENERGYBALL
+AbilityIndex = 0
+Item = CHOICESPECS
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 6,0,0,252,252,0
+TeraType = BUG
+Pokemon = KINGAMBIT,50
+Form = 0
+Moves = IRONHEAD,PSYCHOCUT,XSCISSOR,SUCKERPUNCH
+AbilityIndex = 1
+Item = CHOICEBAND
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 0,252,252,0,0,6
+TeraType = DARK
+Pokemon = GOLISOPOD,50
+Form = 0
+Moves = WATERFALL,LEECHLIFE,DRILLRUN,SUCKERPUNCH
+AbilityIndex = 0
+Item = WEAKNESSPOLICY
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 6,252,0,252,0,0
+TeraType = ELECTRIC
+#-------------------------------
+[BOSS_Maxie,Maxie]
+Pokemon = TORKOAL,50
+Form = 0
+Moves = LAVAPLUME,STEALTHROCK,RAPIDSPIN,SOLARBEAM
+AbilityIndex = 1
+Item = HEATROCK
+Nature = BOLD
+IV = 31,31,31,31,31,31
+EV = 252,0,6,0,252,0
+TeraType = FIRE
+Pokemon = CROBAT,50
+Form = 0
+Moves = DUALWINGBEAT,HEATWAVE,HYPNOSIS,TAILWIND
+AbilityIndex = 2
+Item = BLACKSLUDGE
+Nature = NAIVE
+IV = 31,31,31,31,31,31
+EV = 0,252,0,126,126,6
+TeraType = POISON
+Pokemon = HOUNDOOM,50
+Form = 0
+Moves = FLAMETHROWER,NASTYPLOT,INFERNALPARADE,SOLARBEAM
+AbilityIndex = 0
+Item = FOCUSSASH
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,0,252,252,6
+TeraType = FIRE
+Pokemon = WEEZING,50
+Form = 0
+Moves = SLUDGEWAVE,FIREBLAST,WILLOWISP,THUNDERBOLT
+AbilityIndex = 0
+Item = LEFTOVERS
+Nature = BOLD
+IV = 31,31,31,31,31,31
+EV = 252,0,0,0,6,252
+TeraType = POISON
+Pokemon = TYPHLOSION,50
+Form = 1
+Moves = FIREBLAST,INFERNALPARADE,EARTHPOWER,SOLARBEAM
+AbilityIndex = 1
+Item = CHOICESCARF
+Nature = MODEST
+IV = 31,31,31,31,31,31
+EV = 0,0,0,252,252,6
+TeraType = FIRE
+Pokemon = CAMERUPT,50
+Form = 0
+Moves = FLAMETHROWER,TERABLAST,EARTHPOWER,ROCKPOLISH
+AbilityIndex = 1
+Item = WEAKNESSPOLICY
+Nature = MODEST
+IV = 31,31,31,31,31,31
+EV = 6,0,0,0,252,252
+TeraType = ELECTRIC
+#-------------------------------
+[BOSS_Lysandre,Lysandre]
+Pokemon = MIENSHAO,50
+Form = 0
+Moves = FAKEOUT,SWORDSDANCE,ENZUIGIRIKICK,POISONJAB
+AbilityIndex = 0
+Item = LEFTOVERS
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 6,252,0,126,126,0
+TeraType = FIGHTING
+Pokemon = HONCHKROW,50
+Form = 0
+Moves = BRAVEBIRD,ROOST,TAILWIND,THUNDERWAVE
+AbilityIndex = 0
+Item = BRIGHTPOWDER
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,0,252,0,6
+TeraType = DARK
+Pokemon = PYROAR,50
+Form = 0
+Moves = FIREBLAST,HYPERVOICE,DARKPULSE,WILDCHARGE
+AbilityIndex = 2
+Item = CHOICESPECS
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 6,0,0,252,252,0
+TeraType = NORMAL
+Pokemon = AEGISLASH,50
+Form = 0
+Moves = KINGSSHIELD,SHADOWSNEAK,FLASHCANNON,CLOSECOMBAT
+AbilityIndex = 0
+Item = WEAKNESSPOLICY
+Nature = NAUGHTY
+IV = 31,31,31,31,31,31
+EV = 0,252,6,126,126,0
+TeraType = WATER
+Pokemon = LILLIGANT,50
+Form = 0
+Moves = GIGADRAIN,MOONBLAST,QUIVERDANCE,SLEEPPOWDER
+AbilityIndex = 1
+Item = BIGROOT
+Nature = MODEST
+IV = 31,31,31,31,31,31
+EV = 0,0,0,252,252,6
+TeraType = GRASS
+Pokemon = GYARADOS,50
+Form = 0
+Moves = WATERFALL,DRAGONDANCE,EARTHQUAKE,IRONHEAD
+AbilityIndex = 2
+Item = LIFEORB
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 6,252,0,252,0,0
+TeraType = DRAGON
+#-------------------------------
+[BOSS_Ghetsis,Ghetsis]
+Pokemon = COFAGRIGUS,50
+Form = 0
+Moves = HEX,WILLOWISP,FLASHCANNON,ENERGYBALL
+AbilityIndex = 2
+Item = LEFTOVERS
+Nature = BOLD
+IV = 31,31,31,31,31,31
+EV = 6,0,0,252,252,0
+TeraType = GHOST
+Pokemon = DRAPION,50
+Form = 0
+Moves = WICKEDBLOW,CROSSPOISON,LEECHLIFE,EARTHQUAKE
+AbilityIndex = 0
+Item = SCOPELENS
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,0,252,0,6
+TeraType = POISON
+Pokemon = BOUFFALANT,50
+Form = 0
+Moves = HEADCHARGE,WILDCHARGE,CLOSECOMBAT,ZENHEADBUTT
+AbilityIndex = 0
+Item = CRASHGEAR
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 6,252,0,252,0,0
+TeraType = NORMAL
+Pokemon = SEISMITOAD,50
+Form = 0
+Moves = KNOCKOFF,LIQUIDATION,DRAINPUNCH,ICEPUNCH
+AbilityIndex = 1
+Item = BIGROOT
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 252,252,0,6,0,0
+TeraType = WATER
+Pokemon = EELEKTROSS,50
+Form = 0
+Moves = THUNDERBOLT,DRAGONPULSE,FLAMETHROWER,VOLTSWITCH
+AbilityIndex = 0
+Item = CHOICESPECS
+Nature = MODEST
+IV = 31,31,31,31,31,31
+EV = 0,0,0,252,252,6
+TeraType = ELECTRIC
+Pokemon = HYDREIGON,50
+Form = 0
+Moves = DRACOMETEOR,FLASHCANNON,NASTYPLOT,DARKPULSE
+AbilityIndex = 2
+Item = LIFEORB
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 6,0,0,252,252,0
+TeraType = STEEL
+#-------------------------------
+[BOSS_Cyrus,Cyrus]
+Pokemon = HIPPOWDON,50
+Form = 0
+Moves = EARTHQUAKE,YAWN,STEALTHROCK,SLACKOFF
+AbilityIndex = 0
+Item = SMOOTHROCK
+Nature = IMPISH
+IV = 31,31,31,31,31,31
+EV = 252,0,252,0,0,6
+TeraType = GROUND
+Pokemon = MAGNEZONE,50
+Form = 0
+Moves = DISCHARGE,MAGNETICCRASH,THUNDERWAVE,BODYPRESS
+AbilityIndex = 0
+Item = AIRBALLOON
+Nature = BOLD
+IV = 31,31,31,31,31,31
+EV = 0,0,252,0,252,6
+TeraType = ELECTRIC
+Pokemon = PROBOPASS,50
+Form = 0
+Moves = MAGNETICCRASH,METEORBEAM,STEALTHROCK,VOLTSWITCH
+AbilityIndex = 2
+Item = ROCKYHELMET
+Nature = QUIET
+IV = 31,31,31,31,31,31
+EV = 6,0,252,0,252,0
+TeraType = STEEL
+Pokemon = HONCHKROW,50
+Form = 0
+Moves = SUCKERPUNCH,ACROBATICS,ROOST,TAILWIND
+AbilityIndex = 1
+Item = SITRUSBERRY
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 6,252,0,252,0,0
+TeraType = FLYING
+Pokemon = CROBAT,50
+Form = 0
+Moves = UTURN,BRAVEBIRD,CROSSPOISON,TAUNT
+AbilityIndex = 1
+Item = LIFEORB
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 6,252,0,252,0,0
+TeraType = FLYING
+Pokemon = WEAVILE,50
+Form = 0
+Moves = NIGHTSLASH,ICICLECRASH,BRICKBREAK,SWORDSDANCE
+AbilityIndex = 0
+Item = FOCUSSASH
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 6,252,0,252,0,0
+TeraType = FIGHTING
+#-------------------------------
+[BOSS_Archie,Archie]
+Pokemon = PELIPPER,50
+Form = 0
+Moves = SURF,HURRICANE,TAILWIND,KNOCKOFF
+AbilityIndex = 1
+Item = DAMPROCK
+Nature = MODEST
+IV = 31,31,31,31,31,31
+EV = 6,0,0,252,252,0
+TeraType = WATER
+Pokemon = CROBAT,50
+Form = 0
+Moves = BRAVEBIRD,CROSSPOISON,LEECHLIFE,ROOST
+AbilityIndex = 2
+Item = SCOPELENS
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,0,252,0,6
+TeraType = POISON
+Pokemon = WALREIN,50
+Form = 0
+Moves = SURF,ICEBEAM,SUPERFANG,REST
+AbilityIndex = 0
+Item = LEFTOVERS
+Nature = BOLD
+IV = 31,31,31,31,31,31
+EV = 252,0,6,0,0,252
+TeraType = ICE
+Pokemon = TENTACRUEL,50
+Form = 0
+Moves = SLUDGEWAVE,SURF,ICEBEAM,HEX
+AbilityIndex = 2
+Item = BLACKSLUDGE
+Nature = BOLD
+IV = 31,31,31,31,31,31
+EV = 252,0,0,0,6,252
+TeraType = WATER
+Pokemon = LUDICOLO,50
+Form = 0
+Moves = LEAFSTORM,HYDROPUMP,HYPERVOICE,ICEBEAM
+AbilityIndex = 0
+Item = CHOICESPECS
+Nature = MODEST
+IV = 31,31,31,31,31,31
+EV = 0,0,0,252,252,6
+TeraType = WATER
+Pokemon = SHARPEDO,50
+Form = 0
+Moves = AQUAJET,EARTHQUAKE,LIQUIDATION,PSYCHICFANGS
+AbilityIndex = 2
+Item = LIFEORB
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 6,252,0,252,0,0
+TeraType = POISON
+#-------------------------------
+[TRAINER_ACETRAINER_ALOLA_M,Ghyst]
+Pokemon = GLIMMORA,50
+Form = 0
+Moves = STEALTHROCK,SLUDGEWAVE,POWERGEM,EARTHPOWER
+AbilityIndex = 0
+Item = FOCUSSASH
+Nature = MODEST
+IV = 31,31,31,31,31,31
+EV = 252,0,0,252,6,0
+TeraType = POISON
+Pokemon = LUCARIO,50
+Form = 0
+Moves = AURASPHERE,FLASHCANNON,PSYCHIC,DRAGONPULSE
+AbilityIndex = 0
+Item = WISEGLASSES
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,6,252,252,0
+TeraType = FIGHTING
+Pokemon = BLASTOISE,50
+Form = 0
+Moves = WATERPULSE,ICEBEAM,DARKPULSE,DRAGONPULSE
+AbilityIndex = 1
+Item = LEFTOVERS
+Nature = MODEST
+IV = 31,31,31,31,31,31
+EV = 252,0,6,0,252,0
+TeraType = WATER
+Pokemon = TALONFLAME,50
+Form = 0
+Moves = BRAVEBIRD,UTURN,STEELWING,FLAREBLITZ
+AbilityIndex = 2
+Item = ASSAULTVEST
+Nature = ADAMANT
+IV = 31,31,31,31,31,31
+EV = 0,252,6,252,0,0
+TeraType = FIRE
+Pokemon = FLYGON,50
+Form = 0
+Moves = OUTRAGE,EARTHQUAKE,THUNDERPUNCH,STEELWING
+AbilityIndex = 2
+Item = MUSCLEBAND
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,0,252,0,6
+TeraType = DRAGON
+Pokemon = DECIDUEYE,50
+Form = 1
+Moves = TRIPLEARROWS,TERABLAST,LEAFBLADE,SHADOWCLAW
+AbilityIndex = 2
+Item = LIFEORB
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 6,252,0,252,0,0
+TeraType = ICE
+#-------------------------------
+[TRAINER_ACETRAINER_ALOLA_M,Winter]
+Pokemon = FERROTHORN,50
+Form = 0
+Moves = POWERWHIP,LEECHSEED,STEALTHROCK,SPIKES
+AbilityIndex = 0
+Item = ROCKYHELMET
+Nature = IMPISH
+IV = 31,31,31,31,31,31
+EV = 0,6,252,0,0,252
+TeraType = GRASS
+Pokemon = MILOTIC,50
+Form = 0
+Moves = SURF,ICEBEAM,RECOVER,HYPNOSIS
+AbilityIndex = 0
+Item = FLAMEORB
+Nature = BOLD
+IV = 31,31,31,31,31,31
+EV = 252,0,252,0,0,6
+TeraType = WATER
+Pokemon = GENGAR,50
+Form = 0
+Moves = SPECTRALBEAM,NASTYPLOT,SLUDGEWAVE,DAZZLINGGLEAM
+AbilityIndex = 2
+Item = FOCUSSASH
+Nature = TIMID
+IV = 31,31,31,31,31,31
+EV = 0,0,0,252,252,6
+TeraType = GHOST
+Pokemon = DARMANITAN,50
+Form = 2
+Moves = FLAREBLITZ,ICICLECRASH,UTURN,EARTHQUAKE
+AbilityIndex = 0
+Item = CHOICESCARF
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,6,252,0,0
+TeraType = ICE
+Pokemon = SCRAFTY,50
+Form = 0
+Moves = DRAINPUNCH,DRAGONDANCE,ICEPUNCH,POISONJAB
+AbilityIndex = 2
+Item = LEFTOVERS
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 6,252,126,0,0,126
+TeraType = FIGHTING
+Pokemon = MAWILE,50
+Form = 0
+Moves = PLAYROUGH,SWORDSDANCE,ICEPUNCH,SUCKERPUNCH
+AbilityIndex = 0
+Item = LIFEORB
+Nature = JOLLY
+IV = 31,31,31,31,31,31
+EV = 0,252,0,252,0,6
+TeraType = WATER
+#-------------------------------

@@ -1,1661 +1,1849 @@
-﻿# See the documentation on the wiki to learn how to edit this file.
-#-------------------------------
+﻿#-------------------------------
 [POKEMONTRAINER_Zenith]
 Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 #-------------------------------
 [LEADER_Brock]
-Name = Kanto Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kanto_ex_leader
 #-------------------------------
 [LEADER_Misty]
-Name = Kanto Leader
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kanto_ex_leader
 #-------------------------------
 [LEADER_Surge]
-Name = Kanto Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kanto_ex_leader
 #-------------------------------
 [LEADER_Erika]
-Name = Kanto Leader
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kanto_ex_leader
 #-------------------------------
 [LEADER_Janine]
-Name = Kanto Leader
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kanto_ex_leader
 #-------------------------------
 [LEADER_Sabrina]
-Name = Kanto Leader
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kanto_ex_leader
 #-------------------------------
 [LEADER_Blaine]
-Name = Kanto Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kanto_ex_leader
 #-------------------------------
 [LEADER_Giovanni]
-Name = Kanto Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kanto_ex_leader
 #-------------------------------
 [LEADER_Falkner]
-Name = Johto Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = johto_ex_leader
 #-------------------------------
 [LEADER_Bugsy]
-Name = Johto Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = johto_ex_leader
 #-------------------------------
 [LEADER_Whitney]
-Name = Johto Leader
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = johto_ex_leader
 #-------------------------------
 [LEADER_Morty]
-Name = Johto Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = johto_ex_leader
 #-------------------------------
 [LEADER_Chuck]
-Name = Johto Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = johto_ex_leader
 #-------------------------------
 [LEADER_Jasmine]
-Name = Johto Leader
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = johto_ex_leader
 #-------------------------------
 [LEADER_Pryce]
-Name = Johto Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = johto_ex_leader
 #-------------------------------
 [LEADER_Clair]
-Name = Johto Leader
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = johto_ex_leader
 #-------------------------------
 [LEADER_Roxanne]
-Name = Hoenn Leader
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = hoenn_ex_leader
 #-------------------------------
 [LEADER_Brawly]
-Name = Hoenn Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = hoenn_ex_leader
 #-------------------------------
 [LEADER_Wattson]
-Name = Hoenn Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = hoenn_ex_leader
 #-------------------------------
 [LEADER_Flannery]
-Name = Hoenn Leader
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = hoenn_ex_leader
 #-------------------------------
 [LEADER_Norman]
-Name = Hoenn Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = hoenn_ex_leader
 #-------------------------------
 [LEADER_Winona]
-Name = Hoenn Leader
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = hoenn_ex_leader
 #-------------------------------
 [LEADER_Tate]
-Name = Hoenn Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = hoenn_ex_leader
 #-------------------------------
 [LEADER_Liza]
-Name = Hoenn Leader
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = hoenn_ex_leader
 #-------------------------------
 [LEADER_Juan]
-Name = Hoenn Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = hoenn_ex_leader
 #-------------------------------
 [LEADER_Roark]
-Name = Sinnoh Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnoh_ex_leader
 #-------------------------------
 [LEADER_Gardenia]
-Name = Sinnoh Leader
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnoh_ex_leader
 #-------------------------------
 [LEADER_Maylene]
-Name = Sinnoh Leader
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnoh_ex_leader
 #-------------------------------
 [LEADER_Wake]
-Name = Sinnoh Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnoh_ex_leader
 #-------------------------------
 [LEADER_Fantina]
-Name = Sinnoh Leader
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnoh_ex_leader
 #-------------------------------
 [LEADER_Byron]
-Name = Sinnoh Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnoh_ex_leader
 #-------------------------------
 [LEADER_Candice]
-Name = Sinnoh Leader
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnoh_ex_leader
 #-------------------------------
 [LEADER_Volkner]
-Name = Sinnoh Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = sinnoh_ex_leader
 #-------------------------------
 [LEADER_Cilan]
-Name = Unova Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = unova_ex_leader
 #-------------------------------
 [LEADER_Chili]
-Name = Unova Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = unova_ex_leader
 #-------------------------------
 [LEADER_Cress]
-Name = Unova Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = unova_ex_leader
 #-------------------------------
 [LEADER_Lenora]
-Name = Unova Leader
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = unova_ex_leader
 #-------------------------------
 [LEADER_Burgh]
-Name = Unova Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = unova_ex_leader
 #-------------------------------
 [LEADER_Elesa]
-Name = Unova Leader
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = unova_ex_leader
 #-------------------------------
 [LEADER_Clay]
-Name = Unova Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = unova_ex_leader
 #-------------------------------
 [LEADER_Skyla]
-Name = Unova Leader
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = unova_ex_leader
 #-------------------------------
 [LEADER_Brycen]
-Name = Unova Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = unova_ex_leader
 #-------------------------------
 [LEADER_Drayden]
-Name = Unova Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = unova_ex_leader
 #-------------------------------
 [LEADER_Cheren]
-Name = Unova Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = unova_ex_leader
 #-------------------------------
 [LEADER_Roxie]
-Name = Unova Leader
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = unova_ex_leader
 #-------------------------------
 [LEADER_Marlon]
-Name = Unova Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = unova_ex_leader
 #-------------------------------
 [LEADER_Viola]
-Name = Kalos Leader
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kalos_ex_leader
 #-------------------------------
 [LEADER_Grant]
-Name = Kalos Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kalos_ex_leader
 #-------------------------------
 [LEADER_Korrina]
-Name = Kalos Leader
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kalos_ex_leader
 #-------------------------------
 [LEADER_Ramos]
-Name = Kalos Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kalos_ex_leader
 #-------------------------------
 [LEADER_Clemont]
-Name = Kalos Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kalos_ex_leader
 #-------------------------------
-[LEADER_Olympia]
-Name = Kalos Leader
+[LEADER_Valerie]
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kalos_ex_leader
 #-------------------------------
-[LEADER_Valerie]
-Name = Kalos Leader
+[LEADER_Olympia]
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kalos_ex_leader
 #-------------------------------
 [LEADER_Wulfric]
-Name = Kalos Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = kalos_ex_leader
 #-------------------------------
 [CAPTAIN_Ilima]
-Name = Alola Captain
+Name = Trial Captain
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = alola_ex_trainer
 #-------------------------------
 [CAPTAIN_Lana]
-Name = Alola Captain
+Name = Trial Captain
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = alola_ex_trainer
 #-------------------------------
 [CAPTAIN_Kiawe]
-Name = Alola Captain
+Name = Trial Captain
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = alola_ex_trainer
 #-------------------------------
 [CAPTAIN_Mallow]
-Name = Alola Captain
+Name = Trial Captain
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = alola_ex_trainer
 #-------------------------------
 [CAPTAIN_Sophocles]
-Name = Alola Captain
+Name = Trial Captain
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = alola_ex_trainer
 #-------------------------------
 [CAPTAIN_Acerola]
-Name = Alola Captain
+Name = Trial Captain
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = alola_ex_trainer
 #-------------------------------
 [CAPTAIN_Mina]
-Name = Alola Captain
+Name = Trial Captain
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = alola_ex_trainer
-#-------------------------------
-[LEADER_Milo]
-Name = Galar Leader
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = galar_ex_leader
-#-------------------------------
-[LEADER_Nessa]
-Name = Galar Leader
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = galar_ex_leader
-#-------------------------------
-[LEADER_Kabu]
-Name = Galar Leader
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = galar_ex_leader
-#-------------------------------
-[LEADER_Bea]
-Name = Galar Leader
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = galar_ex_leader
-#-------------------------------
-[LEADER_Allister]
-Name = Galar Leader
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = galar_ex_leader
-#-------------------------------
-[LEADER_Opal]
-Name = Galar Leader
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = galar_ex_leader
-#-------------------------------
-[LEADER_Gordie]
-Name = Galar Leader
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = galar_ex_leader
-#-------------------------------
-[LEADER_Melony]
-Name = Galar Leader
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = galar_ex_leader
-#-------------------------------
-[LEADER_Piers]
-Name = Galar Leader
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = galar_ex_piers
-#-------------------------------
-[LEADER_Raihan]
-Name = Galar Leader
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = galar_ex_leader
-#-------------------------------
-[RIVAL_Blue]
-Name = Rival
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = blue
-#-------------------------------
-[RIVAL_Silver]
-Name = Rival
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = silver
-#-------------------------------
-[RIVAL_Wally]
-Name = Rival
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = wally
-#-------------------------------
-[RIVAL_Barry]
-Name = Rival
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = barry
-#-------------------------------
-[RIVAL_Bianca]
-Name = Rival
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = bianca
-#-------------------------------
-[RIVAL_Hugh]
-Name = Rival
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = hugh
-#-------------------------------
-[RIVAL_Hau]
-Name = Rival
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = hau
-#-------------------------------
-[RIVAL_Hop]
-Name = Rival
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = hop
-#-------------------------------
-[RIVAL_Shauna]
-Name = Rival
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = kalostrainer.ogg
-#-------------------------------
-[BOSS_Giovanni]
-Name = Team Rocket Boss
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = giovanni
-#-------------------------------
-[BOSS_Archie]
-Name = Team Aqua Boss
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = archie
-#-------------------------------
-[BOSS_Maxie]
-Name = Team Magma Boss
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = maxie
-#-------------------------------
-[BOSS_Cyrus]
-Name = Team Galactic Boss
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = cyrus
-#-------------------------------
-[BOSS_Ghetsis]
-Name = Team Plasma Boss
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = ghetsis
-#-------------------------------
-[BOSS_Lysandre]
-Name = Team Flare Boss
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = lysandre
-#-------------------------------
-[BOSS_Guzma]
-Name = Team Skull Boss
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = guzma
-#-------------------------------
-[BOSS_Rose]
-Name = Macro Cosmos President
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = galartrainer
-#-------------------------------
-[ELITE_Lorelei]
-Name = Elite Four
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = lorelei
-#-------------------------------
-[ELITE_Bruno]
-Name = Elite Four
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = bruno1
-#-------------------------------
-[ELITE_Bruno2]
-Name = Elite Four
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = bruno2
-#-------------------------------
-[ELITE_Agatha]
-Name = Elite Four
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = agatha
-#-------------------------------
-[ELITE_Koga]
-Name = Elite Four
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = koga
-#-------------------------------
-[ELITE_Lance]
-Name = Elite Four
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = lance
-#-------------------------------
-[SPECIAL_Green]
-Name = Pokémon Trainer
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = green
-#-------------------------------
-[SPECIAL_Oak]
-Name = Professor
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = oak
-#-------------------------------
-[ELITE_Will]
-Name = Elite Four
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = will
-#-------------------------------
-[ELITE_Karen]
-Name = Elite Four
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = karen
-#-------------------------------
-[SPECIAL_Elm]
-Name = Professor
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = johtotrainer
-#-------------------------------
-[SPECIAL_Eusine]
-Name = Mystery Man
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = johtotrainer
-#-------------------------------
-[SPECIAL_Kris]
-Name = Pokémon Trainer
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = johtotrainer
-#-------------------------------
-[ELITE_Sidney]
-Name = Elite Four
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = glacia
-#-------------------------------
-[ELITE_Phoebe]
-Name = Elite Four
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = glacia
-#-------------------------------
-[ELITE_Glacia]
-Name = Elite Four
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = glacia
-#-------------------------------
-[ELITE_Drake]
-Name = Elite Four
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = drake
-#-------------------------------
-[SPECIAL_Birch]
-Name = Professor
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = birch
-#-------------------------------
-[SPECIAL_Zinnia]
-Name = Lorekeeper
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = zinnia
-#-------------------------------
-[SPECIAL_Lisia]
-Name = Pokémon Coordinator
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = lisia
-#-------------------------------
-[ELITE_Aaron]
-Name = Elite Four
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = aaron
-#-------------------------------
-[ELITE_Bertha]
-Name = Elite Four
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = bertha
-#-------------------------------
-[ELITE_Flint]
-Name = Elite Four
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = flint
-#-------------------------------
-[ELITE_Lucian]
-Name = Elite Four
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = lucian
-#-------------------------------
-[SPECIAL_Riley]
-Name = Pokémon Trainer
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = sinnohtrainer
-#-------------------------------
-[SPECIAL_Cheryl]
-Name = Pokémon Trainer
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = sinnohtrainer
-#-------------------------------
-[SPECIAL_Buck]
-Name = Pokémon Trainer
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = sinnohtrainer
-#-------------------------------
-[SPECIAL_Mira]
-Name = Pokémon Trainer
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = sinnohtrainer
-#-------------------------------
-[SPECIAL_Marley]
-Name = Pokémon Trainer
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = sinnohtrainer
-#-------------------------------
-[SPECIAL_Rowan]
-Name = Professor
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = sinnohtrainer
-#-------------------------------
-[ELITE_Shauntal]
-Name = Elite Four
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = shauntal
-#-------------------------------
-[ELITE_Marshal]
-Name = Elite Four
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = marshal
-#-------------------------------
-[ELITE_Grimsley]
-Name = Elite Four
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = grimsley
-#-------------------------------
-[ELITE_Caitlin]
-Name = Elite Four
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = caitlin
-#-------------------------------
-[SPECIAL_N]
-Name = Pokémon Trainer
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = n
-#-------------------------------
-[SPECIAL_Benga]
-Name = Pokémon Trainer
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = unovatrainer
-#-------------------------------
-[SPECIAL_Colress]
-Name = Pokémon Trainer
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = colress
-#-------------------------------
-[SPECIAL_Juniper]
-Name = Professor
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = unovatrainer
-#-------------------------------
-[ELITE_Malva]
-Name = Elite Four
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = kaloselitefour
-#-------------------------------
-[ELITE_Siebold]
-Name = Elite Four
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = kaloselitefour
-#-------------------------------
-[ELITE_Wikstrom]
-Name = Elite Four
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = kaloselitefour
-#-------------------------------
-[ELITE_Drasna]
-Name = Elite Four
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = kaloselitefour
-#-------------------------------
-[SPECIAL_Sycamore]
-Name = Professor
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = sycamore
-#-------------------------------
-[SPECIAL_Looker]
-Name = Police Officer
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = looker
-#-------------------------------
-[SPECIAL_Trevor]
-Name = Pokémon Trainer
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = kalostrainer
-#-------------------------------
-[ELITE_Hala]
-Name = Elite Four
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = hala
-#-------------------------------
-[ELITE_Olivia]
-Name = Elite Four
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = olivia
-#-------------------------------
-[SPECIAL_Nanu]
-Name = Kahuna
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = kahuna
 #-------------------------------
 [SPECIAL_Hapu]
 Name = Kahuna
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = kahuna
+BattleBGM = alola_ex_kahuna
 #-------------------------------
-[ELITE_Molayne]
-Name = Elite Four
+[SPECIAL_Nanu]
+Name = Kahuna
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = molayne
+BattleBGM = alola_ex_kahuna
 #-------------------------------
-[ELITE_Kahili]
-Name = Elite Four
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = kahili
-#-------------------------------
-[SPECIAL_Gladion]
-Name = Pokémon Trainer
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = gladion
-#-------------------------------
-[SPECIAL_Lusamine]
-Name = Aether President
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = lusamine
-#-------------------------------
-[ELITE_Klara]
-Name = Pokémon Trainer
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = galar_ex_leader
-#-------------------------------
-[ELITE_Avery]
-Name = Pokémon Trainer
+[LEADER_Milo]
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = galar_ex_leader
 #-------------------------------
-[ELITE_Mustard]
-Name = Dojo Master
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = mustard
-#-------------------------------
-[SPECIAL_Marnie]
-Name = Pokémon Trainer
+[LEADER_Nessa]
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = marnie
+BattleBGM = galar_ex_leader
 #-------------------------------
-[SPECIAL_Bede]
-Name = Pokémon Trainer
+[LEADER_Kabu]
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = bede
+BattleBGM = galar_ex_leader
 #-------------------------------
-[SPECIAL_Sonia]
-Name = Professor
+[LEADER_Bea]
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = sonia
+BattleBGM = galar_ex_leader
 #-------------------------------
-[ELITE_Peony]
-Name = Pokémon Trainer
+[LEADER_Allister]
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = peony
+BattleBGM = galar_ex_leader
 #-------------------------------
-[PROTAG_Red]
-Name = Pokémon Trainer
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = red
-#-------------------------------
-[PROTAG_Ethan]
-Name = Pokémon Trainer
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = johtotrainer
-#-------------------------------
-[PROTAG_Brandan]
-Name = Pokémon Trainer
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = protaghoenn
-#-------------------------------
-[PROTAG_Lucas]
-Name = Pokémon Trainer
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = sinnohtrainer
-#-------------------------------
-[PROTAG_Hilbert]
-Name = Pokémon Trainer
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = unovatrainer
-#-------------------------------
-[PROTAG_Nate]
-Name = Pokémon Trainer
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = unovatrainer
-#-------------------------------
-[PROTAG_Calem]
-Name = Pokémon Trainer
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = protagkalos
-#-------------------------------
-[PROTAG_Elio]
-Name = Pokémon Trainer
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = alola_ex_trainer
-#-------------------------------
-[PROTAG_Victor]
-Name = Pokémon Trainer
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = galartrainer
-#-------------------------------
-[PROTAG_Leaf]
-Name = Pokémon Trainer
+[LEADER_Opal]
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = leaf
+BattleBGM = galar_ex_leader
 #-------------------------------
-[PROTAG_Lyra]
-Name = Pokémon Trainer
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = johtotrainer
-#-------------------------------
-[PROTAG_May]
-Name = Pokémon Trainer
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = protaghoenn
-#-------------------------------
-[PROTAG_Dawn]
-Name = Pokémon Trainer
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = sinnohtrainer
-#-------------------------------
-[PROTAG_Hilda]
-Name = Pokémon Trainer
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = unovatrainer
-#-------------------------------
-[PROTAG_Rosa]
-Name = Pokémon Trainer
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = unovatrainer
-#-------------------------------
-[PROTAG_Serena]
-Name = Pokémon Trainer
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = protagkalos
-#-------------------------------
-[PROTAG_Selene]
-Name = Pokémon Trainer
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = alola_ex_trainer
-#-------------------------------
-[PROTAG_Gloria]
-Name = Pokémon Trainer
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = galar\galartrainer
-#-------------------------------
-[CHAMPION_Leon]
-Name = Champion
+[LEADER_Gordie]
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galar\leon
+BattleBGM = galar_ex_leader
 #-------------------------------
-[CHAMPION_Peony]
-Name = Champion
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = galar\peony
-#-------------------------------
-[CHAMPION_Mustard]
-Name = Champion
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = galar\championmustard
-#-------------------------------
-[CHAMPION_Hau]
-Name = Champion
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = alola\championhau
-#-------------------------------
-[CHAMPION_Kukui]
-Name = Champion
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = alola\kukui
-#-------------------------------
-[CHAMPION_Diantha]
-Name = Champion
+[LEADER_Melony]
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = kalos\diantha
+BattleBGM = galar_ex_leader
 #-------------------------------
-[CHAMPION_Iris]
-Name = Champion
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = unova\iris
-#-------------------------------
-[CHAMPION_Alder]
-Name = Champion
+[LEADER_Piers]
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = unova\alder
+BattleBGM = galar_ex_piers
 #-------------------------------
-[CHAMPION_Cynthia]
-Name = Champion
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = sinnoh\cynthia
-#-------------------------------
-[CHAMPION_Wallace]
-Name = Champion
+[LEADER_Raihan]
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = hoenn\wallace
-#-------------------------------
-[CHAMPION_Steven]
-Name = Champion
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = hoenn\steven
-#-------------------------------
-[CHAMPION_Lance]
-Name = Champion
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = johto\championlance
-#-------------------------------
-[CHAMPION_Blue]
-Name = Champion
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = kanto\championblue
-#-------------------------------
-[CHAMPION_Red]
-Name = Champion
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = kanto\red2
-#-------------------------------
-[SPECIAL_Ash]
-Name = Pokémon Trainer
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = kanto\ash
-#-------------------------------
-[SPECIAL_Archer]
-Name = Team Rocket Executive
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = johto\rocketexecutive
-#-------------------------------
-[SPECIAL_Petrel]
-Name = Team Rocket Executive
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = johto\rocketexecutive
-#-------------------------------
-[SPECIAL_Ariana]
-Name = Team Rocket Executive
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = johto\rocketexecutive
-#-------------------------------
-[SPECIAL_Proton]
-Name = Team Rocket Executive
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = johto\rocketexecutive
-#-------------------------------
-[SPECIAL_Tabitha]
-Name = Team Magma Admin
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = hoenn\magmaaquaadmin
-#-------------------------------
-[SPECIAL_Courtney]
-Name = Team Magma Admin
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = hoenn\magmaaquaadmin
-#-------------------------------
-[SPECIAL_Matt]
-Name = Team Aqua Admin
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = hoenn\magmaaquaadmin
-#-------------------------------
-[SPECIAL_Shelly]
-Name = Team Aqua Admin
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = hoenn\magmaaquaadmin
-#-------------------------------
-[SPECIAL_Saturn]
-Name = Team Galactic Commander
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = sinnoh\galacticcommander
-#-------------------------------
-[SPECIAL_Mars]
-Name = Team Galactic Commander
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = sinnoh\galacticcommander
-#-------------------------------
-[SPECIAL_Jupiter]
-Name = Team Galactic Commander
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = sinnoh\galacticcommander
-#-------------------------------
-[SPECIAL_Faba]
-Name = Aether Branch Chief
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM =  alola\faba
-#-------------------------------
-[SPECIAL_Plumeria]
-Name = Team Skull Admin
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM =  alola\plumeria
-#-------------------------------
-[SPECIAL_Lillie]
-Name = Pokémon Trainer
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = alola\lillie
-#-------------------------------
-[HISUI_Mai]
-Name = Warden
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = hisui\warden
-#-------------------------------
-[HISUI_Lian]
-Name = Warden
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = hisui\warden
-#-------------------------------
-[HISUI_Calaba]
-Name = Warden
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = hisui\warden
-#-------------------------------
-[HISUI_Arezu]
-Name = Warden
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = hisui\warden
-#-------------------------------
-[HISUI_Iscan]
-Name = Warden
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = hisui\warden
-#-------------------------------
-[HISUI_Palina]
-Name = Warden
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = hisui\warden
-#-------------------------------
-[HISUI_Ingo]
-Name = Warden
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = hisui\warden
-#-------------------------------
-[HISUI_Melli]
-Name = Warden
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = hisui\warden
-#-------------------------------
-[HISUI_Gaeric]
-Name = Warden
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = hisui\warden
-#-------------------------------
-[HISUI_Sabi]
-Name = Warden
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = hisui\warden
-#-------------------------------
-[HISUI_Adaman]
-Name = Clan Leader
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = hisui\warden
-#-------------------------------
-[HISUI_Irida]
-Name = Clan Leader
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = hisui\warden
-#-------------------------------
-[HISUI_Kamado]
-Name = The Galaxy Team's
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = hisui\warden
-#-------------------------------
-[HISUI_Volo]
-Name = Pokémon Wielder
-Gender = Male
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = hisui\volo
+BattleBGM = galar_ex_leader
 #-------------------------------
 [LEADER_Katy]
-Name = Paldea Leader
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = paldea_sv_leader
 #-------------------------------
 [LEADER_Brassius]
-Name = Paldea Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = paldea_sv_leader
 #-------------------------------
 [LEADER_Iono]
-Name = Paldea Leader
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = paldea_sv_leader
 #-------------------------------
 [LEADER_Kofu]
-Name = Paldea Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = paldea_sv_leader
 #-------------------------------
 [LEADER_Larry]
-Name = Paldea Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = paldea_sv_leader
 #-------------------------------
 [LEADER_Ryme]
-Name = Paldea Leader
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = paldea_sv_leader
 #-------------------------------
 [LEADER_Tulip]
-Name = Paldea Leader
+Name = Gym Leader
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = paldea_sv_leader
 #-------------------------------
 [LEADER_Grusha]
-Name = Paldea Leader
+Name = Gym Leader
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
 BattleBGM = paldea_sv_leader
 #-------------------------------
-[ELITE_Rika]
-Name = Paldea Elite Four
+[ELITE_Lorelei]
+Name = Elite Four
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea\paldeaelitefour
+BattleBGM = kanto_ex_lorelei
+#-------------------------------
+[ELITE_Bruno]
+Name = Elite Four
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = kanto_ex_bruno
+#-------------------------------
+[ELITE_Agatha]
+Name = Elite Four
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = kanto_ex_agatha
+#-------------------------------
+[ELITE_Lance]
+Name = Elite Four
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = kanto_ex_lance
+#-------------------------------
+[ELITE_Will]
+Name = Elite Four
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = johto_ex_will
+#-------------------------------
+[ELITE_Koga]
+Name = Elite Four
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = johto_ex_koga
+#-------------------------------
+[ELITE_Bruno2]
+Name = Elite Four
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = johto_ex_bruno
+#-------------------------------
+[ELITE_Karen]
+Name = Elite Four
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = johto_ex_karen
+#-------------------------------
+[ELITE_Sidney]
+Name = Elite Four
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hoenn_ex_sidney
+#-------------------------------
+[ELITE_Phoebe]
+Name = Elite Four
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hoenn_ex_phoebe
+#-------------------------------
+[ELITE_Glacia]
+Name = Elite Four
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hoenn_ex_glacia
+#-------------------------------
+[ELITE_Drake]
+Name = Elite Four
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hoenn_ex_drake
+#-------------------------------
+[ELITE_Aaron]
+Name = Elite Four
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = sinnoh_ex_aaron
+#-------------------------------
+[ELITE_Bertha]
+Name = Elite Four
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = sinnoh_ex_bertha
+#-------------------------------
+[ELITE_Flint]
+Name = Elite Four
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = sinnoh_ex_flint
+#-------------------------------
+[ELITE_Lucian]
+Name = Elite Four
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = sinnoh_ex_lucian
+#-------------------------------
+[ELITE_Shauntal]
+Name = Elite Four
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = unova_ex_shauntal
+#-------------------------------
+[ELITE_Marshal]
+Name = Elite Four
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = unova_ex_marshal
+#-------------------------------
+[ELITE_Grimsley]
+Name = Elite Four
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = unova_ex_grimsley
+#-------------------------------
+[ELITE_Caitlin]
+Name = Elite Four
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = unova_ex_caitlin
+#-------------------------------
+[ELITE_Malva]
+Name = Elite Four
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = kalos_ex_malva
+#-------------------------------
+[ELITE_Siebold]
+Name = Elite Four
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = kalos_ex_siebold
+#-------------------------------
+[ELITE_Wikstrom]
+Name = Elite Four
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = kalos_ex_wikstrom
+#-------------------------------
+[ELITE_Drasna]
+Name = Elite Four
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = kalos_ex_drasna
+#-------------------------------
+[ELITE_Hala]
+Name = Elite Four
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = alola_ex_hala
+#-------------------------------
+[ELITE_Olivia]
+Name = Elite Four
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = alola_ex_olivia
+#-------------------------------
+[ELITE_Molayne]
+Name = Elite Four
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = alola_ex_molayne
+#-------------------------------
+[ELITE_Kahili]
+Name = Elite Four
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = alola_ex_kahili
+#-------------------------------
+[ELITE_Klara]
+Name = Elite Four
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = galar_rx_klara
+#-------------------------------
+[ELITE_Avery]
+Name = Elite Four
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = galar_rx_avery
+#-------------------------------
+[ELITE_Mustard]
+Name = Elite Four
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = galar_rx_mustard
+#-------------------------------
+[ELITE_Peony]
+Name = Elite Four
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = galar_rx_peony
+#-------------------------------
+[ELITE_Rika]
+Name = Elite Four
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = paldea_rx_elitefour
 #-------------------------------
 [ELITE_Poppy]
-Name = Paldea Elite Four
+Name = Elite Four
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea\paldeaelitefour
+BattleBGM = paldea_rx_elitefour
 #-------------------------------
 [ELITE_Larry]
-Name = Paldea Elite Four
+Name = Elite Four
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea\paldeaelitefour
+BattleBGM = paldea_rx_elitefour
 #-------------------------------
 [ELITE_Hassel]
-Name = Paldea Elite Four
+Name = Elite Four
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea\paldeaelitefour
+BattleBGM = paldea_rx_elitefour
 #-------------------------------
 [CHAMPION_Geeta]
 Name = Champion
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea\geeta
+BattleBGM = paldea_sv_geeta
+#-------------------------------
+[CHAMPION_Mustard]
+Name = Champion
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = galar_rx_mustard
+#-------------------------------
+[CHAMPION_Peony]
+Name = Champion
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = galar_rx_peony
+#-------------------------------
+[CHAMPION_Leon]
+Name = Champion
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = galar_ex_leon
+#-------------------------------
+[CHAMPION_Hau]
+Name = Champion
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = alola_ex_hau
+#-------------------------------
+[CHAMPION_Kukui]
+Name = Champion
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = alola_ex_kukui
+#-------------------------------
+[CHAMPION_Diantha]
+Name = Champion
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = kalos_ex_diantha
+#-------------------------------
+[CHAMPION_Iris]
+Name = Champion
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = unova_ex_iris
+#-------------------------------
+[CHAMPION_Alder]
+Name = Champion
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = unova_ex_alder
+#-------------------------------
+[CHAMPION_Cynthia]
+Name = Champion
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = sinnoh_ex_cynthia
+#-------------------------------
+[CHAMPION_Wallace]
+Name = Champion
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hoenn_ex_wallace
+#-------------------------------
+[CHAMPION_Steven]
+Name = Champion
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hoenn_ex_steven
+#-------------------------------
+[CHAMPION_Lance]
+Name = Champion
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = kanto_ex_lance
+#-------------------------------
+[CHAMPION_Blue]
+Name = Champion
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = kanto_ex_blue
+#-------------------------------
+[CHAMPION_Red]
+Name = Champion
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = kanto_ex_red
+#-------------------------------
+[HISUI_Mai]
+Name = Warden
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hisui_rx_warden
+#-------------------------------
+[HISUI_Lian]
+Name = Warden
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hisui_rx_warden
+#-------------------------------
+[HISUI_Calaba]
+Name = Warden
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hisui_rx_warden
+#-------------------------------
+[HISUI_Arezu]
+Name = Warden
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hisui_rx_warden
+#-------------------------------
+[HISUI_Iscan]
+Name = Warden
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hisui_rx_warden
+#-------------------------------
+[HISUI_Palina]
+Name = Warden
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hisui_rx_warden
+#-------------------------------
+[HISUI_Ingo]
+Name = Warden
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hisui_rx_warden
+#-------------------------------
+[HISUI_Melli]
+Name = Warden
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hisui_rx_warden
+#-------------------------------
+[HISUI_Gaeric]
+Name = Warden
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hisui_rx_warden
+#-------------------------------
+[HISUI_Sabi]
+Name = Warden
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hisui_rx_warden
+#-------------------------------
+[HISUI_Adaman]
+Name = Warden
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hisui_rx_warden
+#-------------------------------
+[HISUI_Irida]
+Name = Warden
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hisui_rx_warden
+#-------------------------------
+[HISUI_Kamado]
+Name = Warden
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hisui_rx_warden
+#-------------------------------
+[HISUI_Volo]
+Name = Warden
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hisui_rx_volo
+#-------------------------------
+[SPECIAL_Green]
+Name = Pokémon Trainer
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = kanto_ex_wild
+#-------------------------------
+[SPECIAL_Oak]
+Name = Pokémon Professor
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = kanto_ex_wild
+#-------------------------------
+[SPECIAL_Ash]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = kanto_ex_ash
+#-------------------------------
+[SPECIAL_Archer]
+Name = Team Rocket Executive
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = johto_ex_rocketexecutive
+#-------------------------------
+[SPECIAL_Petrel]
+Name = Team Rocket Executive
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = johto_ex_rocketexecutive
+#-------------------------------
+[SPECIAL_Jessie]
+Name = Team Rocket Executive
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = johto_ex_rocketexecutive
+#-------------------------------
+[SPECIAL_James]
+Name = Team Rocket Executive
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = johto_ex_rocketexecutive
+#-------------------------------
+[SPECIAL_Bill]
+Name = Pokémon Fanatic
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = kanto_ex_wild
+#-------------------------------
+[SPECIAL_Elm]
+Name = Pokémon Professor
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = johto_ex_wild
+#-------------------------------
+[SPECIAL_Eusine]
+Name = Mystery Man
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = johto_ex_trainer
+#-------------------------------
+[SPECIAL_Kris]
+Name = Pokémon Trainer
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = johto_ex_trainer
+#-------------------------------
+[SPECIAL_Ariana]
+Name = Team Rocket Executive
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = johto_ex_rocketexecutive
+#-------------------------------
+[SPECIAL_Proton]
+Name = Team Rocket Executive
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = johto_ex_rocketexecutive
+#-------------------------------
+[SPECIAL_Kurt]
+Name = Poké Ball Smith
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = johto_ex_trainer
+#-------------------------------
+[SPECIAL_Birch]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hoenn_ex_wild
+#-------------------------------
+[SPECIAL_Zinnia]
+Name = Lorekeeper
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hoenn_ex_zinnia
+#-------------------------------
+[SPECIAL_Lisia]
+Name = Coordinator
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hoenn_ex_lisia
+#-------------------------------
+[SPECIAL_Tabitha]
+Name = Magma Admin
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hoenn_ex_magmaaquaadmin
+#-------------------------------
+[SPECIAL_Courtney]
+Name = Magma Admin
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hoenn_ex_magmaaquaadmin
+#-------------------------------
+[SPECIAL_Matt]
+Name = Aqua Admin
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hoenn_ex_magmaaquaadmin
+#-------------------------------
+[SPECIAL_Shelly]
+Name = Aqua Admin
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hoenn_ex_magmaaquaadmin
+#-------------------------------
+[SPECIAL_Noland]
+Name = Frontier Brain
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hoenn_ex_frontier
+#-------------------------------
+[SPECIAL_Greta]
+Name = Frontier Brain
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hoenn_ex_frontier
+#-------------------------------
+[SPECIAL_Tucker]
+Name = Frontier Brain
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hoenn_ex_frontier
+#-------------------------------
+[SPECIAL_Lucy]
+Name = Frontier Brain
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hoenn_ex_frontier
+#-------------------------------
+[SPECIAL_Spenser]
+Name = Frontier Brain
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hoenn_ex_frontier
+#-------------------------------
+[SPECIAL_Brandon]
+Name = Frontier Brain
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hoenn_ex_frontier
+#-------------------------------
+[SPECIAL_Anabel]
+Name = Frontier Brain
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hoenn_ex_frontier
+#-------------------------------
+[SPECIAL_Riley]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = sinnoh_ex_trainer
+#-------------------------------
+[SPECIAL_Cheryl]
+Name = Pokémon Trainer
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = sinnoh_ex_trainer
+#-------------------------------
+[SPECIAL_Buck]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = sinnoh_ex_trainer
+#-------------------------------
+[SPECIAL_Mira]
+Name = Pokémon Trainer
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = sinnoh_ex_trainer
+#-------------------------------
+[SPECIAL_Marley]
+Name = Pokémon Trainer
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = sinnoh_ex_trainer
+#-------------------------------
+[SPECIAL_Rowan]
+Name = Pokémon Professor
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = sinnoh_ex_wild
+#-------------------------------
+[SPECIAL_Saturn]
+Name = Galactic Commander
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = sinnoh_ex_galacticcommander
+#-------------------------------
+[SPECIAL_Mars]
+Name = Galactic Commander
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = sinnoh_ex_galacticcommander
+#-------------------------------
+[SPECIAL_Jupiter]
+Name = Galactic Commander
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = sinnoh_ex_galacticcommander
+#-------------------------------
+[SPECIAL_Palmer]
+Name = Frontier Brain
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = sinnoh_ex_frontier
+#-------------------------------
+[SPECIAL_Thorton]
+Name = Frontier Brain
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = sinnoh_ex_frontier
+#-------------------------------
+[SPECIAL_Dahlia]
+Name = Frontier Brain
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = sinnoh_ex_frontier
+#-------------------------------
+[SPECIAL_Darach]
+Name = Frontier Brain
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = sinnoh_ex_frontier
+#-------------------------------
+[SPECIAL_Argenta]
+Name = Frontier Brain
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = sinnoh_ex_frontier
+#-------------------------------
+[SPECIAL_N]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = unova_ex_n
+#-------------------------------
+[SPECIAL_Benga]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = unova_ex_trainer
+#-------------------------------
+[SPECIAL_Colress]
+Name = Team Plasma
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = unova_ex_colress
+#-------------------------------
+[SPECIAL_Juniper]
+Name = Pokémon Professor
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = unova_ex_wild
+#-------------------------------
+[SPECIAL_Zinzolin]
+Name = Team Plasma
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = unova_ex_plasma
+#-------------------------------
+[SPECIAL_Ingo]
+Name = Subway Boss
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = unova_ex_subway
+#-------------------------------
+[SPECIAL_Emmet]
+Name = Subway Boss
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = unova_ex_subway
+#-------------------------------
+[SPECIAL_Sycamore]
+Name = Pokémon Professor
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = kalos_ex_sycamore
+#-------------------------------
+[SPECIAL_Looker]
+Name = Police Officer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = kalos_ex_looker
+#-------------------------------
+[SPECIAL_Trevor]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = kalos_ex_friends
+#-------------------------------
+[SPECIAL_Alain]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = kalos_ex_trainer
+#-------------------------------
+[SPECIAL_Dexio]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = kalos_ex_trainer
+#-------------------------------
+[SPECIAL_Sina]
+Name = Pokémon Trainer
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = kalos_ex_trainer
+#-------------------------------
+[SPECIAL_Tierno]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = kalos_ex_friends
+#-------------------------------
+[SPECIAL_Emma]
+Name = Pokémon Trainer
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = kalos_ex_emma
+#-------------------------------
+[SPECIAL_Lillie]
+Name = Pokémon Trainer
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = alola_ex_lillie
+#-------------------------------
+[SPECIAL_Faba]
+Name = Aether Foundation
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = alola_ex_aether
+#-------------------------------
+[SPECIAL_Plumeria]
+Name = Team Skull Admin
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = alola_ex_plumeria
+#-------------------------------
+[SPECIAL_Gladion]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = alola_ex_gladion
+#-------------------------------
+[SPECIAL_Lusamine]
+Name = Aether Foundation
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = alola_ex_lusamine
+#-------------------------------
+[SPECIAL_Guzma]
+Name = Team Skull Boss
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = alola_ex_guzma
+#-------------------------------
+[SPECIAL_Ryuki]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = alola_ex_trainer
+#-------------------------------
+[SPECIAL_Marnie]
+Name = Pokémon Trainer
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = galar_ex_marnie
+#-------------------------------
+[SPECIAL_Bede]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = galar_ex_bede
+#-------------------------------
+[SPECIAL_Sonia]
+Name = Pokémon Professor
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = galar_ex_sonia
+#-------------------------------
+[SPECIAL_Sordward]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = galar_ex_trainer
+#-------------------------------
+[SPECIAL_Shielbert]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = galar_ex_trainer
 #-------------------------------
 [SPECIAL_Giacomo]
-Name = Team Star
+Name = Team Star Admin
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea\staradmin
+BattleBGM = paldea_rx_staradmin
 #-------------------------------
 [SPECIAL_Mela]
-Name = Team Star
+Name = Team Star Admin
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea\staradmin
+BattleBGM = paldea_rx_staradmin
 #-------------------------------
 [SPECIAL_Atticus]
-Name = Team Star
+Name = Team Star Admin
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea\staradmin
+BattleBGM = paldea_rx_staradmin
 #-------------------------------
 [SPECIAL_Ortega]
-Name = Team Star
+Name = Team Star Admin
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea\staradmin
+BattleBGM = paldea_rx_staradmin
 #-------------------------------
 [SPECIAL_Eri]
-Name = Team Star
+Name = Team Star Admin
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea\staradmin
+BattleBGM = paldea_rx_staradmin
 #-------------------------------
 [SPECIAL_Cassiopeia]
-Name = Team Star Leader
+Name = Team Star Boss
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea\cassiopeia
+BattleBGM = paldea_rx_cassiopeia
 #-------------------------------
 [SPECIAL_Arven]
 Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea\arven
+BattleBGM = paldea_sv_arven
 #-------------------------------
 [SPECIAL_Clavell]
-Name = Director
+Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea\clavell
+BattleBGM = paldea_sv_clavell
 #-------------------------------
 [SPECIAL_Jacq]
-Name = Instructor
+Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea\jacq
+BattleBGM = paldea_sv_jacq
 #-------------------------------
-[RIVAL_Nemona]
-Name = Rival
-Gender = Female
+[PROTAG_Red]
+Name = Pokémon Trainer
+Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea\nemona
+BattleBGM = kanto_ex_red
+#-------------------------------
+[PROTAG_Ethan]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = 
+#-------------------------------
+[PROTAG_Brendan]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = 
+#-------------------------------
+[PROTAG_Lucas]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = 
+#-------------------------------
+[PROTAG_Hilbert]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = 
+#-------------------------------
+[PROTAG_Nate]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = 
+#-------------------------------
+[PROTAG_Calem]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = 
+#-------------------------------
+[PROTAG_Elio]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = 
+#-------------------------------
+[PROTAG_Victor]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = 
 #-------------------------------
 [PROTAG_Florian]
 Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea\paldeatrainer
+BattleBGM = 
+#-------------------------------
+[PROTAG_Leaf]
+Name = Pokémon Trainer
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = 
+#-------------------------------
+[PROTAG_Lyra]
+Name = Pokémon Trainer
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = 
+#-------------------------------
+[PROTAG_May]
+Name = Pokémon Trainer
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = 
+#-------------------------------
+[PROTAG_Dawn]
+Name = Pokémon Trainer
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = 
+#-------------------------------
+[PROTAG_Hilda]
+Name = Pokémon Trainer
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = 
+#-------------------------------
+[PROTAG_Rosa]
+Name = Pokémon Trainer
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = 
+#-------------------------------
+[PROTAG_Serena]
+Name = Pokémon Trainer
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = 
+#-------------------------------
+[PROTAG_Selene]
+Name = Pokémon Trainer
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = 
+#-------------------------------
+[PROTAG_Gloria]
+Name = Pokémon Trainer
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = 
 #-------------------------------
 [PROTAG_Juliana]
 Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea\paldeatrainer
+BattleBGM = 
 #-------------------------------
-[IMPOSTER_Sada]
-Name = Rouge AI
-Gender = Female
-BaseMoney = 60
-SkillLevel = 100
-BattleBGM = paldea\sadaturo
-#-------------------------------
-[IMPOSTER_Turo]
-Name = Rouge AI
+[RIVAL_Blue]
+Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea\sadaturo
+BattleBGM = kanto_ex_blue
+#-------------------------------
+[RIVAL_Silver]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = johto_ex_silver
+#-------------------------------
+[RIVAL_Wally]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hoenn_ex_wally
+#-------------------------------
+[RIVAL_Barry]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = sinnoh_ex_barry
+#-------------------------------
+[RIVAL_Bianca]
+Name = Pokémon Trainer
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = unova_ex_bianca
+#-------------------------------
+[RIVAL_Hugh]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = unova_ex_hugh
+#-------------------------------
+[RIVAL_Shauna]
+Name = Pokémon Trainer
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = kalos_ex_friends
+#-------------------------------
+[RIVAL_Hau]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = alola_ex_hau
+#-------------------------------
+[RIVAL_Hop]
+Name = Pokémon Trainer
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = galar_ex_hop
+#-------------------------------
+[RIVAL_Nemona]
+Name = Pokémon Trainer
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = paldea_sv_nemona
+#-------------------------------
+[BOSS_Giovanni]
+Name = Team Rocket Boss
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = kanto_ex_leader
+#-------------------------------
+[BOSS_Archie]
+Name = Team Aqua Boss
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hoenn_ex_archie
+#-------------------------------
+[BOSS_Maxie]
+Name = Team Magma Boss
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hoenn_ex_maxie
+#-------------------------------
+[BOSS_Cyrus]
+Name = Team Galactic Boss
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = sinnoh_ex_cyrus
+#-------------------------------
+[BOSS_Ghetsis]
+Name = Team Plasma Boss
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = unova_ex_ghetsis
+#-------------------------------
+[BOSS_Lysandre]
+Name = Team Flare Boss
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = kalos_ex_lysandre
+#-------------------------------
+[BOSS_Rose]
+Name = Macro Cosmos
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = galar_rx_rose
+#-------------------------------
+[IMPOSTER_Sada]
+Name = A.I
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = paldea_rx_sadaturo
+#-------------------------------
+[IMPOSTER_Turo]
+Name = A.I
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = paldea_rx_sadaturo
 #-------------------------------
 [TRAINER_ACETRAINER_ALOLA_M]
 Name = Ace Trainer
@@ -3602,3 +3790,160 @@ Name = Youngster
 Gender = Male
 BaseMoney = 50
 #-------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

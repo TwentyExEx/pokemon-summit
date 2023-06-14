@@ -15,6 +15,7 @@ Shape = Quadruped
 Category = Seed
 Pokedex = Venusaur's flower is said to take on vivid colors if it gets plenty of nutrition and sunlight. The flower's aroma soothes the emotions of people.
 Generation = 1
+FormName = 
 #-------------------------------
 [CHARIZARD]
 Name = Charizard
@@ -32,6 +33,7 @@ Shape = BipedalTail
 Category = Flame
 Pokedex = A Charizard flies about in search of strong opponents. It breathes intense flames that can melt any material. However, it will never torch a weaker foe.
 Generation = 1
+FormName = 
 #-------------------------------
 [BLASTOISE]
 Name = Blastoise
@@ -49,6 +51,7 @@ Shape = BipedalTail
 Category = Shellfish
 Pokedex = The waterspouts that protrude from its shell are highly accurate. Their bullets of water can precisely nail tin cans from a distance of over 160 feet.
 Generation = 1
+FormName = 
 #-------------------------------
 [BUTTERFREE]
 Name = Butterfree
@@ -66,6 +69,7 @@ Shape = MultiWinged
 Category = Butterfly
 Pokedex = It has a superior ability to search for delicious honey from flowers. It can seek, extract, and carry honey from flowers blooming over six miles away.
 Generation = 1
+FormName = 
 #-------------------------------
 [BEEDRILL]
 Name = Beedrill
@@ -83,6 +87,7 @@ Shape = MultiWinged
 Category = Poison Bee
 Pokedex = A Beedrill is extremely territorial. For safety reasons, no one should ever approach its nest. If angered, they will attack in a swarm.
 Generation = 1
+FormName = 
 #-------------------------------
 [PIDGEOT]
 Name = Pidgeot
@@ -100,6 +105,7 @@ Shape = Winged
 Category = Bird
 Pokedex = Pidgeot has gorgeous, glossy feathers. Many trainers are so captivated by the beautiful feathers on its head that they choose Pidgeot as their Pokémon.
 Generation = 1
+FormName = 
 #-------------------------------
 [RATICATE]
 Name = Raticate
@@ -117,6 +123,7 @@ Shape = Quadruped
 Category = Mouse
 Pokedex = A Raticate's sturdy fangs grow steadily. To keep them ground down, it gnaws on rocks and logs. It may even chew on the walls of houses.
 Generation = 1
+FormName = 
 #-------------------------------
 [FEAROW]
 Name = Fearow
@@ -134,6 +141,7 @@ Shape = Winged
 Category = Beak
 Pokedex = Its long neck and elongated beak are ideal for catching prey in soil or water. It deftly moves this extended and skinny beak to pluck prey.
 Generation = 1
+FormName = 
 #-------------------------------
 [ARBOK]
 Name = Arbok
@@ -151,6 +159,7 @@ Shape = Serpentine
 Category = Cobra
 Pokedex = This Pokémon has a terrifically strong constricting power. It can even flatten steel oil drums. Once it wraps its body around its foe, escaping is impossible.
 Generation = 1
+FormName = 
 #-------------------------------
 [RAICHU]
 Name = Raichu
@@ -168,6 +177,7 @@ Shape = BipedalTail
 Category = Mouse
 Pokedex = If it stores too much electricity, its behavior turns aggressive. To avoid this, it occasionally discharges excess energy and calms itself down.
 Generation = 1
+FormName = 
 #-------------------------------
 [SANDSLASH]
 Name = Sandslash
@@ -185,6 +195,7 @@ Shape = BipedalTail
 Category = Mouse
 Pokedex = It curls up in a ball to protect itself from enemy attacks. It also curls up to prevent heatstroke during the daytime when temperatures rise sharply.
 Generation = 1
+FormName = 
 #-------------------------------
 [NIDOQUEEN]
 Name = Nidoqueen
@@ -202,6 +213,7 @@ Shape = BipedalTail
 Category = Drill
 Pokedex = It is adept at sending foes flying with harsh tackles using its tough, scaly body. This Pokémon is at its strongest when it is defending its young.
 Generation = 1
+FormName = 
 #-------------------------------
 [NIDOKING]
 Name = Nidoking
@@ -219,6 +231,7 @@ Shape = BipedalTail
 Category = Drill
 Pokedex = A Nidoking's thick tail packs enormously destructive power capable of toppling a metal transmission tower. Once it goes on a rampage, there is no stopping it.
 Generation = 1
+FormName = 
 #-------------------------------
 [CLEFABLE]
 Name = Clefable
@@ -236,6 +249,7 @@ Shape = BipedalTail
 Category = Fairy
 Pokedex = A Clefable uses its wings to skip lightly as if it were flying. Its bouncy step lets it even walk on water. On quiet, moonlit nights, it strolls on lakes.
 Generation = 1
+FormName = 
 #-------------------------------
 [NINETALES]
 Name = Ninetales
@@ -253,6 +267,7 @@ Shape = Quadruped
 Category = Fox
 Pokedex = It has long been said that each of the nine tails embody an enchanted power. A long-lived Ninetales will have fur that shines like gold.
 Generation = 1
+FormName = 
 #-------------------------------
 [WIGGLYTUFF]
 Name = Wigglytuff
@@ -270,6 +285,7 @@ Shape = Bipedal
 Category = Balloon
 Pokedex = Its fur is the ultimate in luxuriousness. Sleeping alongside a Wigglytuff is simply divine. Its body expands seemingly without end when it inhales.
 Generation = 1
+FormName = 
 #-------------------------------
 [VILEPLUME]
 Name = Vileplume
@@ -287,6 +303,7 @@ Shape = Bipedal
 Category = Flower
 Pokedex = In seasons when it produces more pollen, the air around a Vileplume turns yellow with the powder as it walks. The pollen is highly toxic and causes paralysis.
 Generation = 1
+FormName = 
 #-------------------------------
 [PARASECT]
 Name = Parasect
@@ -304,6 +321,7 @@ Shape = Insectoid
 Category = Mushroom
 Pokedex = Parasect are known to infest the roots of large trees en masse and drain nutrients. When an infested tree dies, they move onto another tree all at once.
 Generation = 1
+FormName = 
 #-------------------------------
 [VENOMOTH]
 Name = Venomoth
@@ -321,6 +339,7 @@ Shape = MultiWinged
 Category = Poison Moth
 Pokedex = Venomoth are nocturnal--they only are active at night. Their favorite prey are insects that gather around streetlights, attracted by the light in the darkness.
 Generation = 1
+FormName = 
 #-------------------------------
 [DUGTRIO]
 Name = Dugtrio
@@ -338,6 +357,7 @@ Shape = MultiBody
 Category = Mole
 Pokedex = Because the triplets originally split from one body, they think exactly alike. They work cooperatively to burrow endlessly through the ground.
 Generation = 1
+FormName = 
 #-------------------------------
 [PERSIAN]
 Name = Persian
@@ -355,6 +375,7 @@ Shape = Quadruped
 Category = Classy Cat
 Pokedex = A Persian's six bold whiskers sense air movements to determine what is in its vicinity. It becomes docile if grabbed by the whiskers.
 Generation = 1
+FormName = 
 #-------------------------------
 [GOLDUCK]
 Name = Golduck
@@ -372,6 +393,7 @@ Shape = BipedalTail
 Category = Duck
 Pokedex = A Golduck is an adept swimmer. It sometimes joins competitive swimmers in training. It uses psychic powers when its forehead shimmers with light.
 Generation = 1
+FormName = 
 #-------------------------------
 [ARCANINE]
 Name = Arcanine
@@ -389,6 +411,7 @@ Shape = Quadruped
 Category = Legendary
 Pokedex = This fleet-footed Pokémon is said to run over 6,200 miles in a single day and night. The fire that blazes wildly within its body is its source of power.
 Generation = 1
+FormName = 
 #-------------------------------
 [POLIWRATH]
 Name = Poliwrath
@@ -406,6 +429,7 @@ Shape = Bipedal
 Category = Tadpole
 Pokedex = Its highly developed muscles never grow fatigued, however much it exercises. This Pokémon can swim back and forth across the Pacific Ocean without effort.
 Generation = 1
+FormName = 
 #-------------------------------
 [ALAKAZAM]
 Name = Alakazam
@@ -423,6 +447,7 @@ Shape = Bipedal
 Category = Psi
 Pokedex = While it has strong psychic abilities and high intelligence, an Alakazam's muscles are very weak. It uses psychic power to move its body.
 Generation = 1
+FormName = 
 #-------------------------------
 [MACHAMP]
 Name = Machamp
@@ -440,6 +465,7 @@ Shape = Bipedal
 Category = Superpower
 Pokedex = It is impossible to defend against punches and chops doled out by its four arms. Its fighting spirit flares up when it faces a tough opponent.
 Generation = 1
+FormName = 
 #-------------------------------
 [VICTREEBEL]
 Name = Victreebel
@@ -457,6 +483,7 @@ Shape = HeadBase
 Category = Flycatcher
 Pokedex = The long vine extending from its head is waved about as if it were a living thing to attract prey. When an unsuspecting victim approaches, it is swallowed whole.
 Generation = 1
+FormName = 
 #-------------------------------
 [TENTACRUEL]
 Name = Tentacruel
@@ -474,6 +501,7 @@ Shape = Multiped
 Category = Jellyfish
 Pokedex = It lives in complex rock formations on the ocean floor and traps prey using its 80 tentacles. Its red orbs glow when it grows excited or agitated.
 Generation = 1
+FormName = 
 #-------------------------------
 [GOLEM]
 Name = Golem
@@ -491,6 +519,7 @@ Shape = Bipedal
 Category = Megaton
 Pokedex = It is said to live in volcanic craters on mountain peaks. Once a year, it sheds its hide and grows larger. The shed hide crumbles and returns to the soil.
 Generation = 1
+FormName = 
 #-------------------------------
 [RAPIDASH]
 Name = Rapidash
@@ -508,6 +537,7 @@ Shape = Quadruped
 Category = Fire Horse
 Pokedex = It usually canters casually in the fields and plains. But once a Rapidash turns serious, its fiery manes flare and blaze as it gallops its way up to 150 mph.
 Generation = 1
+FormName = 
 #-------------------------------
 [SLOWBRO]
 Name = Slowbro
@@ -525,6 +555,7 @@ Shape = BipedalTail
 Category = Hermit Crab
 Pokedex = Its tail has a Shellder firmly attached with a bite. As a result, the tail can't be used for fishing anymore. This forces it to reluctantly swim and catch prey.
 Generation = 1
+FormName = 
 #-------------------------------
 [FARFETCHD]
 Name = Farfetch'd
@@ -542,6 +573,7 @@ Shape = Winged
 Category = Wild Duck
 Pokedex = It is always seen with a stick from a plant. Apparently, there are good sticks and bad sticks. This Pokémon occasionally fights with others over choice sticks.
 Generation = 1
+FormName = 
 #-------------------------------
 [DODRIO]
 Name = Dodrio
@@ -559,6 +591,7 @@ Shape = HeadLegs
 Category = Triple Bird
 Pokedex = A peculiar Pokémon species with three heads. It vigorously races across grassy plains even in arid seasons with little rainfall.
 Generation = 1
+FormName = 
 #-------------------------------
 [DEWGONG]
 Name = Dewgong
@@ -576,6 +609,7 @@ Shape = Finned
 Category = Sea Lion
 Pokedex = It loves to snooze on bitterly cold ice. The sight of this Pokémon sleeping on a glacier was mistakenly thought to be a mermaid by a mariner long ago.
 Generation = 1
+FormName = 
 #-------------------------------
 [MUK]
 Name = Muk
@@ -593,6 +627,7 @@ Shape = HeadArms
 Category = Sludge
 Pokedex = It prefers warm and humid habitats. In the summertime, the toxic substances in its body intensify, making Muk reek like putrid kitchen garbage.
 Generation = 1
+FormName = 
 #-------------------------------
 [CLOYSTER]
 Name = Cloyster
@@ -610,6 +645,7 @@ Shape = Head
 Category = Bivalve
 Pokedex = It swims in the sea by swallowing water, then jetting it out toward the rear. The Cloyster shoots spikes from its shell using the same system.
 Generation = 1
+FormName = 
 #-------------------------------
 [GENGAR]
 Name = Gengar
@@ -627,6 +663,7 @@ Shape = BipedalTail
 Category = Shadow
 Pokedex = Deep in the night, your shadow cast by a streetlight may suddenly overtake you. It is actually a Gengar running past you, pretending to be your shadow.
 Generation = 1
+FormName = 
 #-------------------------------
 [HYPNO]
 Name = Hypno
@@ -644,6 +681,7 @@ Shape = Bipedal
 Category = Hypnosis
 Pokedex = The arcing movement and glitter of the pendulum in a Hypno's hand lull the foe into deep hypnosis. While searching for prey, it polishes the pendulum.
 Generation = 1
+FormName = 
 #-------------------------------
 [KINGLER]
 Name = Kingler
@@ -661,6 +699,7 @@ Shape = Insectoid
 Category = Pincer
 Pokedex = It waves its huge, oversized claw in the air to communicate with others. But since the claw is so heavy, this Pokémon quickly tires.
 Generation = 1
+FormName = 
 #-------------------------------
 [ELECTRODE]
 Name = Electrode
@@ -678,6 +717,7 @@ Shape = Head
 Category = Ball
 Pokedex = They appear in great numbers at electric power plants. Because they feed on electricity, they cause massive and chaotic blackouts in nearby cities.
 Generation = 1
+FormName = 
 #-------------------------------
 [EXEGGUTOR]
 Name = Exeggutor
@@ -695,6 +735,7 @@ Shape = HeadLegs
 Category = Coconut
 Pokedex = Originally from the tropics, Exeggutor's heads grow larger with exposure to bright sunlight. It is said that when the heads fall, they group to form an Exeggcute.
 Generation = 1
+FormName = 
 #-------------------------------
 [MAROWAK]
 Name = Marowak
@@ -712,6 +753,7 @@ Shape = BipedalTail
 Category = Bone Keeper
 Pokedex = A Marowak is the evolved form of a Cubone that has grown tough by overcoming the grief of losing its mother. Its tempered and hardened spirit is not easily broken.
 Generation = 1
+FormName = 
 #-------------------------------
 [HITMONLEE]
 Name = Hitmonlee
@@ -729,6 +771,7 @@ Shape = Bipedal
 Category = Kicking
 Pokedex = Its legs freely stretch and contract. Using these springlike limbs, it bowls over foes with devastating kicks. After battle, it rubs down its tired legs.
 Generation = 1
+FormName = 
 #-------------------------------
 [HITMONCHAN]
 Name = Hitmonchan
@@ -746,6 +789,7 @@ Shape = Bipedal
 Category = Punching
 Pokedex = A Hitmonchan is said to possess the spirit of a boxer who aimed to become the world champion. Having an indomitable spirit means that it will never give up.
 Generation = 1
+FormName = 
 #-------------------------------
 [WEEZING]
 Name = Weezing
@@ -763,6 +807,7 @@ Shape = MultiBody
 Category = Poison Gas
 Pokedex = By diluting its toxic gases with a special process, the highest grade of perfume can be made. To Weezing, gases emanating from garbage are the ultimate feast.
 Generation = 1
+FormName = 
 #-------------------------------
 [KANGASKHAN]
 Name = Kangaskhan
@@ -780,6 +825,7 @@ Shape = BipedalTail
 Category = Parent
 Pokedex = If you come across a young Kangaskhan playing by itself, never try to catch it. The baby's parent is sure to be in the area, and it will become violently enraged.
 Generation = 1
+FormName = 
 #-------------------------------
 [SEAKING]
 Name = Seaking
@@ -797,6 +843,7 @@ Shape = Finned
 Category = Goldfish
 Pokedex = It punches holes in boulders on stream- beds. This is a clever innovation that prevents its eggs from being attacked or washed away by the current.
 Generation = 1
+FormName = 
 #-------------------------------
 [STARMIE]
 Name = Starmie
@@ -814,6 +861,7 @@ Shape = HeadBase
 Category = Mysterious
 Pokedex = People in ancient times imagined that Starmie were transformed from the reflections of stars that twinkled on gentle waves at night.
 Generation = 1
+FormName = 
 #-------------------------------
 [MRMIME]
 Name = Mr. Mime
@@ -831,6 +879,7 @@ Shape = Bipedal
 Category = Barrier
 Pokedex = A Mr. Mime is a master of pantomime. It can convince others that something unseeable actually exists. Once believed, the imaginary object does become real.
 Generation = 1
+FormName = 
 #-------------------------------
 [JYNX]
 Name = Jynx
@@ -848,6 +897,7 @@ Shape = Bipedal
 Category = Human Shape
 Pokedex = A Jynx sashays rhythmically as if it were dancing. Its motions are so bouncingly alluring, people seeing it are compelled to shake their hips without noticing.
 Generation = 1
+FormName = 
 #-------------------------------
 [PINSIR]
 Name = Pinsir
@@ -865,6 +915,7 @@ Shape = Bipedal
 Category = Stag Beetle
 Pokedex = Their pincers are strong enough to shatter thick logs. Because they dislike cold, Pinsir burrow and sleep under the ground on chilly nights.
 Generation = 1
+FormName = 
 #-------------------------------
 [TAUROS]
 Name = Tauros
@@ -882,6 +933,7 @@ Shape = Quadruped
 Category = Wild Bull
 Pokedex = It is not satisfied unless it is rampaging at all times. If there is no opponent for Tauros to battle, it will charge at thick trees and knock them down to calm itself.
 Generation = 1
+FormName = 
 #-------------------------------
 [GYARADOS]
 Name = Gyarados
@@ -899,6 +951,7 @@ Shape = Serpentine
 Category = Atrocious
 Pokedex = It is an extremely vicious and violent Pokémon. When humans begin to fight, it will appear and burn everything to the ground with intensely hot flames.
 Generation = 1
+FormName = 
 #-------------------------------
 [LAPRAS]
 Name = Lapras
@@ -916,6 +969,7 @@ Shape = Finned
 Category = Transport
 Pokedex = People have driven Lapras almost to the point of extinction. In the evenings, it is said to sing plaintively as it seeks what few others of its kind still remain.
 Generation = 1
+FormName = 
 #-------------------------------
 [VAPOREON]
 Name = Vaporeon
@@ -933,6 +987,7 @@ Shape = Quadruped
 Category = Bubble Jet
 Pokedex = Vaporeon underwent a spontaneous mutation and grew fins and gills that allow them to live underwater. They have the ability to freely control water.
 Generation = 1
+FormName = 
 #-------------------------------
 [JOLTEON]
 Name = Jolteon
@@ -950,6 +1005,7 @@ Shape = Quadruped
 Category = Lightning
 Pokedex = Its cells generate weak power that is amplified by its fur's static electricity to drop thunderbolts. The bristling fur is made of electrically charged needles.
 Generation = 1
+FormName = 
 #-------------------------------
 [FLAREON]
 Name = Flareon
@@ -967,6 +1023,7 @@ Shape = Quadruped
 Category = Flame
 Pokedex = Flareon's fluffy fur releases heat into the air so that its body does not get excessively hot. Its body temperature can rise to a maximum of 1,650 degrees F.
 Generation = 1
+FormName = 
 #-------------------------------
 [OMASTAR]
 Name = Omastar
@@ -984,6 +1041,7 @@ Shape = Multiped
 Category = Spiral
 Pokedex = An Omastar uses its tentacles to capture its prey. It is believed to have become extinct because its shell grew too large, making its movements slow and ponderous.
 Generation = 1
+FormName = 
 #-------------------------------
 [KABUTOPS]
 Name = Kabutops
@@ -1001,6 +1059,7 @@ Shape = BipedalTail
 Category = Shellfish
 Pokedex = Kabutops once swam underwater to hunt for prey. It was apparently evolving from being a water dweller to living on land as evident from changes in its gills and legs.
 Generation = 1
+FormName = 
 #-------------------------------
 [AERODACTYL]
 Name = Aerodactyl
@@ -1018,6 +1077,7 @@ Shape = Winged
 Category = Fossil
 Pokedex = Aerodactyl is a Pokémon from the age of dinosaurs. It was regenerated from DNA extracted from amber. It is imagined to have been the king of the skies.
 Generation = 1
+FormName = 
 #-------------------------------
 [SNORLAX]
 Name = Snorlax
@@ -1035,6 +1095,7 @@ Shape = Bipedal
 Category = Sleeping
 Pokedex = Snorlax's typical day consists of nothing more than eating and sleeping. It is such a docile Pokémon that there are children who use its big belly as a place to play.
 Generation = 1
+FormName = 
 #-------------------------------
 [DRAGONITE]
 Name = Dragonite
@@ -1052,6 +1113,7 @@ Shape = BipedalTail
 Category = Dragon
 Pokedex = It can circle the globe in just 16 hours. It is a kindhearted Pokémon that leads lost and foundering ships in a storm to the safety of land.
 Generation = 1
+FormName = 
 #-------------------------------
 [MEGANIUM]
 Name = Meganium
@@ -1069,6 +1131,7 @@ Shape = Quadruped
 Category = Herb
 Pokedex = The fragrance of a Meganium's flower soothes and calms emotions. In battle, it gives off more of its becalming scent to blunt the foe's fighting spirit.
 Generation = 2
+FormName = 
 #-------------------------------
 [TYPHLOSION]
 Name = Typhlosion
@@ -1086,6 +1149,7 @@ Shape = Quadruped
 Category = Volcano
 Pokedex = It can hide behind a shimmering heat haze that it creates using its intense flames. Typhlosion create blazing explosive blasts that burn everything to cinders.
 Generation = 2
+FormName = 
 #-------------------------------
 [FERALIGATR]
 Name = Feraligatr
@@ -1103,6 +1167,7 @@ Shape = BipedalTail
 Category = Big Jaw
 Pokedex = It opens its huge mouth to intimidate enemies. In battle, it runs using its thick and powerful hind legs to charge the foe with incredible speed.
 Generation = 2
+FormName = 
 #-------------------------------
 [FURRET]
 Name = Furret
@@ -1120,6 +1185,7 @@ Shape = Quadruped
 Category = Long Body
 Pokedex = A Furret has a very slim build. When under attack, it can squirm through narrow spaces and get away. In spite of its short limbs, it is very nimble and fleet.
 Generation = 2
+FormName = 
 #-------------------------------
 [NOCTOWL]
 Name = Noctowl
@@ -1137,6 +1203,7 @@ Shape = Winged
 Category = Owl
 Pokedex = It unfailingly catches prey in darkness. Noctowl owe their success to superior vision that allows them to see in minimal light, and to their supple and silent wings.
 Generation = 2
+FormName = 
 #-------------------------------
 [LEDIAN]
 Name = Ledian
@@ -1154,6 +1221,7 @@ Shape = Winged
 Category = Five Star
 Pokedex = It is said that in lands with clean air, where the stars fill the sky, there live many Ledian. For good reason, they use the light of the stars as energy.
 Generation = 2
+FormName = 
 #-------------------------------
 [ARIADOS]
 Name = Ariados
@@ -1171,6 +1239,7 @@ Shape = Insectoid
 Category = Long Leg
 Pokedex = Its feet are tipped with tiny hooked claws that enable it to scuttle on ceilings and vertical walls. It constricts its foe with thin and strong silk webbing.
 Generation = 2
+FormName = 
 #-------------------------------
 [CROBAT]
 Name = Crobat
@@ -1188,6 +1257,7 @@ Shape = MultiWinged
 Category = Bat
 Pokedex = Over the course of evolution, its hind legs turned into wings. By alternately resting its front and rear wings, it can fly all day without having to stop.
 Generation = 2
+FormName = 
 #-------------------------------
 [LANTURN]
 Name = Lanturn
@@ -1205,6 +1275,7 @@ Shape = Finned
 Category = Light
 Pokedex = The light-emitting orbs on its back are very bright. They are formed from a part of its dorsal fin. This Pokémon illuminates the inky darkness of deep seas.
 Generation = 2
+FormName = 
 #-------------------------------
 [XATU]
 Name = Xatu
@@ -1222,6 +1293,7 @@ Shape = Winged
 Category = Mystic
 Pokedex = It has the enigmatic power of foreseeing the future. Some people in different lands have long believed that Xatu are emissaries from another world.
 Generation = 2
+FormName = 
 #-------------------------------
 [AMPHAROS]
 Name = Ampharos
@@ -1239,6 +1311,7 @@ Shape = BipedalTail
 Category = Light
 Pokedex = It gives off so much light that it can be seen even from space. People in the old days used its light to send signals back and forth with others far away.
 Generation = 2
+FormName = 
 #-------------------------------
 [BELLOSSOM]
 Name = Bellossom
@@ -1256,6 +1329,7 @@ Shape = Bipedal
 Category = Flower
 Pokedex = Its flower petals deepen in color through exposure to sunlight. When cloudy weather persists, it does a dance that is thought to be a sun-summoning ritual.
 Generation = 2
+FormName = 
 #-------------------------------
 [AZUMARILL]
 Name = Azumarill
@@ -1273,6 +1347,7 @@ Shape = BipedalTail
 Category = Aqua Rabbit
 Pokedex = It lives in water virtually all day long. Its body color and pattern act as camouflage that makes it tough for enemies to spot in water.
 Generation = 2
+FormName = 
 #-------------------------------
 [SUDOWOODO]
 Name = Sudowoodo
@@ -1290,6 +1365,7 @@ Shape = Bipedal
 Category = Imitation
 Pokedex = It mimics a tree to avoid being attacked by enemies. But since its forelegs remain green throughout the year, it is easily identified as a fake in the winter.
 Generation = 2
+FormName = 
 #-------------------------------
 [POLITOED]
 Name = Politoed
@@ -1307,6 +1383,7 @@ Shape = Bipedal
 Category = Frog
 Pokedex = The curled hair on its head proves its status as a king. It is said that the longer and curlier the hair, the more respect it earns from its peers.
 Generation = 2
+FormName = 
 #-------------------------------
 [JUMPLUFF]
 Name = Jumpluff
@@ -1324,6 +1401,7 @@ Shape = BipedalTail
 Category = Cottonweed
 Pokedex = Jumpluff ride warm southern winds to cross the sea and fly to foreign lands. This Pokémon lands when it encounters cold air while it is floating.
 Generation = 2
+FormName = 
 #-------------------------------
 [SUNFLORA]
 Name = Sunflora
@@ -1341,6 +1419,7 @@ Shape = Bipedal
 Category = Sun
 Pokedex = Sunflora convert solar energy into nutrition. They are highly active in the warm daytime but suddenly stop moving as soon as the sun sets.
 Generation = 2
+FormName = 
 #-------------------------------
 [QUAGSIRE]
 Name = Quagsire
@@ -1358,6 +1437,7 @@ Shape = BipedalTail
 Category = Water Fish
 Pokedex = A Quagsire hunts by leaving its mouth wide open in water and waiting for its prey to blunder in. Because it doesn't move, it does not get very hungry.
 Generation = 2
+FormName = 
 #-------------------------------
 [ESPEON]
 Name = Espeon
@@ -1375,6 +1455,7 @@ Shape = Quadruped
 Category = Sun
 Pokedex = An Espeon is extremely loyal to any trainer it considers to be worthy. It is said to have developed precognitive powers to protect its trainer from harm.
 Generation = 2
+FormName = 
 #-------------------------------
 [UMBREON]
 Name = Umbreon
@@ -1392,6 +1473,7 @@ Shape = Quadruped
 Category = Moonlight
 Pokedex = Umbreon evolved from exposure to the moon's energy pulses. It lurks in darkness and waits for its foes to move. The rings on its body glow when it leaps to attack.
 Generation = 2
+FormName = 
 #-------------------------------
 [SLOWKING]
 Name = Slowking
@@ -1409,6 +1491,25 @@ Shape = BipedalTail
 Category = Royal
 Pokedex = It undertakes research every day to solve the mysteries of the world. However, it apparently forgets everything if the Shellder on its head comes off.
 Generation = 2
+FormName = 
+#-------------------------------
+[UNOWN]
+Name = Unown
+Types = PSYCHIC
+BaseStats = 63,94,63,103,94,63
+GenderRatio = Genderless
+Abilities = LEVITATE
+HiddenAbilities =
+Moves = 0,TERABLAST,1,TERABLAST,1,HIDDENPOWER
+EggGroups = Undiscovered
+Height = 0.5
+Weight = 5
+Color = Black
+Shape = Head
+Category = Symbol
+Pokedex = They seem to communicate among each other telepathically. They are always found stuck on walls.
+Generation = 2
+FormName = 
 #-------------------------------
 [WOBBUFFET]
 Name = Wobbuffet
@@ -1426,6 +1527,7 @@ Shape = HeadBase
 Category = Patient
 Pokedex = Usually docile, a Wobbuffet strikes back ferociously if its black tail is attacked. It makes its lair in caves where it waits for nightfall.
 Generation = 2
+FormName = 
 #-------------------------------
 [FORRETRESS]
 Name = Forretress
@@ -1443,6 +1545,7 @@ Shape = Head
 Category = Bagworm
 Pokedex = It keeps itself inside its steel shell. The shell is opened when it is catching prey, but it is so quick that the shell's inside cannot be seen.
 Generation = 2
+FormName = 
 #-------------------------------
 [STEELIX]
 Name = Steelix
@@ -1460,6 +1563,7 @@ Shape = Serpentine
 Category = Iron Snake
 Pokedex = Steelix live even further underground than Onix. This Pokémon is known to dig toward the earth's core, reaching a depth of over six-tenths of a mile underground.
 Generation = 2
+FormName = 
 #-------------------------------
 [GRANBULL]
 Name = Granbull
@@ -1477,6 +1581,7 @@ Shape = BipedalTail
 Category = Fairy
 Pokedex = It has a particularly well-developed lower jaw. The huge fangs are heavy, causing it to tilt its head. Unless it is startled, it will not try to bite.
 Generation = 2
+FormName = 
 #-------------------------------
 [QWILFISH]
 Name = Qwilfish
@@ -1494,6 +1599,7 @@ Shape = Finned
 Category = Balloon
 Pokedex = A Qwilfish uses the pressure of water it swallows to shoot toxic quills all at once from all over its body. It finds swimming to be somewhat challenging.
 Generation = 2
+FormName = 
 #-------------------------------
 [SCIZOR]
 Name = Scizor
@@ -1511,6 +1617,7 @@ Shape = MultiWinged
 Category = Pincer
 Pokedex = A Scizor has a body with the hardness of steel. It is not easily fazed by ordinary sorts of attacks. It flaps its wings to regulate its body temperature.
 Generation = 2
+FormName = 
 #-------------------------------
 [SHUCKLE]
 Name = Shuckle
@@ -1528,6 +1635,7 @@ Shape = Insectoid
 Category = Mold
 Pokedex = A Shuckle hides under rocks, keeping its body concealed inside its shell while eating stored berries. The berries mix with its body fluids to become a juice.
 Generation = 2
+FormName = 
 #-------------------------------
 [HERACROSS]
 Name = Heracross
@@ -1545,6 +1653,7 @@ Shape = Bipedal
 Category = Single Horn
 Pokedex = They gather in forests seeking the sweet sap of trees. It is completely clad in a steel-hard shell. It is proud of its horn, which it uses to fling foes.
 Generation = 2
+FormName = 
 #-------------------------------
 [MAGCARGO]
 Name = Magcargo
@@ -1562,6 +1671,7 @@ Shape = Serpentine
 Category = Lava
 Pokedex = The shell on its back is made of hardened magma. Tens of thousands of years spent living in volcanic craters have turned Magcargo's bodies into magma.
 Generation = 2
+FormName = 
 #-------------------------------
 [CORSOLA]
 Name = Corsola
@@ -1579,6 +1689,7 @@ Shape = Insectoid
 Category = Coral
 Pokedex = Corsola live in warm southern seas. If the sea becomes polluted, the beautiful coral stalks become discolored and crumble away in tatters.
 Generation = 2
+FormName = 
 #-------------------------------
 [OCTILLERY]
 Name = Octillery
@@ -1596,6 +1707,7 @@ Shape = Multiped
 Category = Jet
 Pokedex = It ensnares its foe with its suction- cupped tentacles before delivering the finishing blow. If the foe turns out to be too strong, it spews ink to escape.
 Generation = 2
+FormName = 
 #-------------------------------
 [DELIBIRD]
 Name = Delibird
@@ -1613,6 +1725,7 @@ Shape = Winged
 Category = Delivery
 Pokedex = It carries food bundled up in its tail. There was a famous explorer who managed to scale Mt. Everest thanks to a Delibird sharing its food.
 Generation = 2
+FormName = 
 #-------------------------------
 [MANTINE]
 Name = Mantine
@@ -1630,6 +1743,7 @@ Shape = Winged
 Category = Kite
 Pokedex = On sunny days, schools of Mantine can be seen elegantly leaping over the waves. It is not bothered by the Remoraid that hitches rides.
 Generation = 2
+FormName = 
 #-------------------------------
 [SKARMORY]
 Name = Skarmory
@@ -1647,6 +1761,7 @@ Shape = Winged
 Category = Armor Bird
 Pokedex = A Pokémon that has a body and wings of steel. People in the past used feathers fallen from Skarmory to make swords and knives.
 Generation = 2
+FormName = 
 #-------------------------------
 [HOUNDOOM]
 Name = Houndoom
@@ -1664,6 +1779,7 @@ Shape = Quadruped
 Category = Dark
 Pokedex = In a Houndoom pack, the one with its horns raked sharply back serves a leadership role. They choose their leader by fighting among themselves.
 Generation = 2
+FormName = 
 #-------------------------------
 [KINGDRA]
 Name = Kingdra
@@ -1681,6 +1797,7 @@ Shape = HeadBase
 Category = Dragon
 Pokedex = It sleeps quietly, deep on the seafloor. When it comes up to the surface, it creates a huge whirlpool that can swallow even ships.
 Generation = 2
+FormName = 
 #-------------------------------
 [DONPHAN]
 Name = Donphan
@@ -1698,6 +1815,7 @@ Shape = Quadruped
 Category = Armor
 Pokedex = A Donphan is so strong it can easily haul a dump truck. Its hide has toughened to a rock-hard state. An ordinary sort of attack won't even leave a scratch.
 Generation = 2
+FormName = 
 #-------------------------------
 [HITMONTOP]
 Name = Hitmontop
@@ -1715,6 +1833,7 @@ Shape = BipedalTail
 Category = Handstand
 Pokedex = Its technique of kicking while spinning is a remarkable mix of both offense and defense. Hitmontop travel faster spinning than they do walking.
 Generation = 2
+FormName = 
 #-------------------------------
 [MILTANK]
 Name = Miltank
@@ -1732,6 +1851,7 @@ Shape = BipedalTail
 Category = Milk Cow
 Pokedex = It gives over five gallons of milk daily. Its sweet milk is enjoyed by children and adults alike. People who can't drink milk turn it into yogurt and eat it instead.
 Generation = 2
+FormName = 
 #-------------------------------
 [BLISSEY]
 Name = Blissey
@@ -1749,6 +1869,7 @@ Shape = Bipedal
 Category = Happiness
 Pokedex = If it senses sadness with its fluffy fur, a Blissey will rush over to the sad person, however far away, to share an egg of happiness that brings a smile to any face.
 Generation = 2
+FormName = 
 #-------------------------------
 [TYRANITAR]
 Name = Tyranitar
@@ -1766,6 +1887,7 @@ Shape = BipedalTail
 Category = Armor
 Pokedex = A Tyranitar is so overwhelmingly powerful, it can bring down a whole mountain to make its nest. It roams in mountains seeking new opponents to fight.
 Generation = 2
+FormName = 
 #-------------------------------
 [SCEPTILE]
 Name = Sceptile
@@ -1783,6 +1905,7 @@ Shape = BipedalTail
 Category = Forest
 Pokedex = In the jungle, its power is without equal. This Pokémon carefully grows trees and plants. It regulates its body temperature by basking in sunlight.
 Generation = 3
+FormName = 
 #-------------------------------
 [BLAZIKEN]
 Name = Blaziken
@@ -1800,6 +1923,7 @@ Shape = BipedalTail
 Category = Blaze
 Pokedex = It learns martial arts that use punches and kicks. Every several years, its old feathers burn off, and new, supple feathers grow back in their place.
 Generation = 3
+FormName = 
 #-------------------------------
 [SWAMPERT]
 Name = Swampert
@@ -1817,6 +1941,7 @@ Shape = BipedalTail
 Category = Mud Fish
 Pokedex = If it senses the approach of a storm and a tidal wave, it protects its seaside nest by piling up boulders. It swims as fast as a jet ski.
 Generation = 3
+FormName = 
 #-------------------------------
 [MIGHTYENA]
 Name = Mightyena
@@ -1834,6 +1959,7 @@ Shape = Quadruped
 Category = Bite
 Pokedex = In the wild, Mightyena live in a pack. They never defy their leader's orders. They defeat foes with perfectly coordinated teamwork.
 Generation = 3
+FormName = 
 #-------------------------------
 [LINOONE]
 Name = Linoone
@@ -1851,6 +1977,7 @@ Shape = Quadruped
 Category = Rushing
 Pokedex = It is exceedingly fast if it only has to run in a straight line. When it spots pond- dwelling prey underwater, it quickly leaps in and catches it with its sharp claws.
 Generation = 3
+FormName = 
 #-------------------------------
 [BEAUTIFLY]
 Name = Beautifly
@@ -1868,6 +1995,7 @@ Shape = MultiWinged
 Category = Butterfly
 Pokedex = Its colorfully patterned wings are its most prominent feature. It flies through flower-covered fields collecting pollen. It attacks ferociously when angered.
 Generation = 3
+FormName = 
 #-------------------------------
 [DUSTOX]
 Name = Dustox
@@ -1885,6 +2013,7 @@ Shape = MultiWinged
 Category = Poison Moth
 Pokedex = It is a nocturnal Pokémon that flies from fields and mountains to the attraction of streetlights at night. It looses highly toxic powder from its wings.
 Generation = 3
+FormName = 
 #-------------------------------
 [LUDICOLO]
 Name = Ludicolo
@@ -1902,6 +2031,7 @@ Shape = Bipedal
 Category = Carefree
 Pokedex = When it hears festive music, all the cells in its body become stimulated, and it begins moving in rhythm. It does not quail even when it faces a tough opponent.
 Generation = 3
+FormName = 
 #-------------------------------
 [SHIFTRY]
 Name = Shiftry
@@ -1919,6 +2049,7 @@ Shape = Bipedal
 Category = Wicked
 Pokedex = It is said to arrive on chilly, wintry winds. Feared from long ago as the guardian of forests, this Pokémon lives in a deep forest where people do not venture.
 Generation = 3
+FormName = 
 #-------------------------------
 [SWELLOW]
 Name = Swellow
@@ -1936,6 +2067,7 @@ Shape = Winged
 Category = Swallow
 Pokedex = A Swellow dives upon prey from far above. It never misses its targets. It takes to the skies in search of lands with a warm climate.
 Generation = 3
+FormName = 
 #-------------------------------
 [PELIPPER]
 Name = Pelipper
@@ -1953,6 +2085,7 @@ Shape = Winged
 Category = Water Bird
 Pokedex = It skims the tops of waves as it flies. When it spots prey, it uses its large beak to scoop up the victim with water. It protects its eggs in its beak.
 Generation = 3
+FormName = 
 #-------------------------------
 [GARDEVOIR]
 Name = Gardevoir
@@ -1970,6 +2103,7 @@ Shape = Bipedal
 Category = Embrace
 Pokedex = It apparently does not feel the pull of gravity because it supports itself with psychic power. It will give its life to protect its trainer.
 Generation = 3
+FormName = 
 #-------------------------------
 [MASQUERAIN]
 Name = Masquerain
@@ -1987,6 +2121,7 @@ Shape = MultiWinged
 Category = Eyeball
 Pokedex = It intimidates foes with the large eyelike patterns on its antennae. Because it can't fly if its wings get wet, it shelters from rain under large trees and eaves.
 Generation = 3
+FormName = 
 #-------------------------------
 [BRELOOM]
 Name = Breloom
@@ -2004,6 +2139,7 @@ Shape = BipedalTail
 Category = Mushroom
 Pokedex = It scatters spores from holes in the cap on its head. It loves warm and humid climates. It feeds on trees and plants in fields and forests.
 Generation = 3
+FormName = 
 #-------------------------------
 [SLAKING]
 Name = Slaking
@@ -2011,6 +2147,7 @@ Types = NORMAL
 BaseStats = 150,140,70,100,75,65
 GenderRatio = Female50Percent
 Abilities = TRUANT
+HiddenAbilities =
 Moves = 0,TERABLAST,1,TERABLAST,1,AERIALACE,1,AFTERYOU,1,AMNESIA,1,ATTRACT,1,BLIZZARD,1,BLOCK,1,BODYPRESS,1,BODYSLAM,1,BRICKBREAK,1,BULKUP,1,BULLDOZE,1,CAPTIVATE,1,CHILLINGWATER,1,CHIPAWAY,1,CONFIDE,1,COUNTER,1,COVET,1,CRUSHCLAW,1,CURSE,1,CUT,1,DIG,1,DOUBLEEDGE,1,DOUBLETEAM,1,DRAINPUNCH,1,DYNAMICPUNCH,1,EARTHQUAKE,1,ENCORE,1,ENDURE,1,FACADE,1,FALSESWIPE,1,FEINTATTACK,1,FIREBLAST,1,FIREPUNCH,1,FLAIL,1,FLAMETHROWER,1,FLING,1,FOCUSBLAST,1,FOCUSENERGY,1,FOCUSPUNCH,1,FRUSTRATION,1,FURYCUTTER,1,FURYSWIPES,1,GIGAIMPACT,1,GUNKSHOT,1,HAMMERARM,1,HEADBUTT,1,HEAVYSLAM,1,HELPINGHAND,1,HONECLAWS,1,HYPERBEAM,1,HYPERVOICE,1,ICEBEAM,1,ICEPUNCH,1,ICYWIND,1,INCINERATE,1,LOWKICK,1,LOWSWEEP,1,MEGAKICK,1,MEGAPUNCH,1,METALCLAW,1,METRONOME,1,MIMIC,1,MUDSHOT,1,MUDSLAP,1,NATURALGIFT,1,NIGHTSLASH,1,OUTRAGE,1,PLAYROUGH,1,POISONJAB,1,POUNCE,1,POWERUPPUNCH,1,PROTECT,1,PUNISHMENT,1,PURSUIT,1,QUASH,1,RAINDANCE,1,REST,1,RETALIATE,1,RETURN,1,REVERSAL,1,ROAR,1,ROCKCLIMB,1,ROCKSLIDE,1,ROCKSMASH,1,ROCKTOMB,1,ROUND,1,SCARYFACE,1,SCRATCH,1,SECRETPOWER,1,SEEDBOMB,1,SEISMICTOSS,1,SHADOWBALL,1,SHADOWCLAW,1,SHOCKWAVE,1,SLACKOFF,1,SLASH,1,SLEEPTALK,1,SMACKDOWN,1,SNORE,1,SOLARBEAM,1,STOMPINGTANTRUM,1,STRENGTH,1,SUBSTITUTE,1,SUCKERPUNCH,1,SUNNYDAY,1,SWAGGER,1,TAKEDOWN,1,TAUNT,1,THIEF,1,THROATCHOP,1,THUNDER,1,THUNDERBOLT,1,THUNDERPUNCH,1,THUNDERWAVE,1,TICKLE,1,TRAILBLAZE,1,UPROAR,1,WATERPULSE,1,WILDCHARGE,1,WORKUP,1,XSCISSOR,1,YAWN,1,ZENHEADBUTT
 EggGroups = Field
 Height = 2
@@ -2020,6 +2157,7 @@ Shape = Bipedal
 Category = Lazy
 Pokedex = Hordes of Slaking gather around trees when fruits come into season. They wait around patiently for ripened fruits to fall out of the trees.
 Generation = 3
+FormName = 
 #-------------------------------
 [NINJASK]
 Name = Ninjask
@@ -2037,6 +2175,7 @@ Shape = MultiWinged
 Category = Ninja
 Pokedex = Because it darts about vigorously at high speed, it is very difficult to see. Hearing its distinctive cries for too long induces a headache.
 Generation = 3
+FormName = 
 #-------------------------------
 [SHEDINJA]
 Name = Shedinja
@@ -2044,6 +2183,7 @@ Types = BUG,GHOST
 BaseStats = 1,119,45,75,30,30
 GenderRatio = Genderless
 Abilities = WONDERGUARD
+HiddenAbilities =
 Moves = 0,TERABLAST,1,TERABLAST,1,ABSORB,1,AERIALACE,1,AGILITY,1,ALLYSWITCH,1,BATONPASS,1,BIDE,1,BUGBITE,1,BUGBUZZ,1,CONFIDE,1,CONFUSERAY,1,CUT,1,DIG,1,DOUBLEEDGE,1,DOUBLETEAM,1,DREAMEATER,1,ENDURE,1,FACADE,1,FALSESWIPE,1,FEINTATTACK,1,FINALGAMBIT,1,FLAIL,1,FLASH,1,FRUSTRATION,1,FURYCUTTER,1,FURYSWIPES,1,GIGADRAIN,1,GIGAIMPACT,1,GRUDGE,1,GUST,1,HARDEN,1,HEALBLOCK,1,HEX,1,HONECLAWS,1,HYPERBEAM,1,LEECHLIFE,1,METALCLAW,1,MIMIC,1,MINDREADER,1,MUDSLAP,1,NATURALGIFT,1,NIGHTMARE,1,NIGHTSLASH,1,PHANTOMFORCE,1,POLTERGEIST,1,PROTECT,1,PSYCHOCUT,1,REST,1,RETURN,1,ROUND,1,SANDATTACK,1,SANDSTORM,1,SCRATCH,1,SCREECH,1,SECRETPOWER,1,SHADOWBALL,1,SHADOWCLAW,1,SHADOWSNEAK,1,SILVERWIND,1,SKITTERSMACK,1,SLASH,1,SLEEPTALK,1,SNORE,1,SOLARBEAM,1,SPITE,1,STRINGSHOT,1,STRUGGLEBUG,1,SUBSTITUTE,1,SUCKERPUNCH,1,SUNNYDAY,1,SWAGGER,1,SWORDSDANCE,1,TELEKINESIS,1,THIEF,1,TRICK,1,WILLOWISP,1,XSCISSOR
 EggGroups = Mineral
 Height = 0.8
@@ -2053,6 +2193,7 @@ Shape = HeadBase
 Category = Shed
 Pokedex = A peculiar Pokémon that floats in air even though its wings remain completely still. The inside of its body is hollow and utterly dark.
 Generation = 3
+FormName = 
 #-------------------------------
 [EXPLOUD]
 Name = Exploud
@@ -2070,6 +2211,7 @@ Shape = BipedalTail
 Category = Loud Noise
 Pokedex = It has sound-generating organs all over its body. It communicates with others by adjusting the tone and volume of the cries it emits.
 Generation = 3
+FormName = 
 #-------------------------------
 [HARIYAMA]
 Name = Hariyama
@@ -2087,6 +2229,7 @@ Shape = Bipedal
 Category = Arm Thrust
 Pokedex = It has the habit of challenging others without hesitation to tests of strength. It's been known to stand on train tracks and stop trains using forearm thrusts.
 Generation = 3
+FormName = 
 #-------------------------------
 [DELCATTY]
 Name = Delcatty
@@ -2104,6 +2247,7 @@ Shape = Quadruped
 Category = Prim
 Pokedex = Rather than keeping a permanent lair, it habitually seeks comfortable spots and sleeps there. It is nocturnal and becomes active at dusk.
 Generation = 3
+FormName = 
 #-------------------------------
 [SABLEYE]
 Name = Sableye
@@ -2121,6 +2265,7 @@ Shape = Bipedal
 Category = Darkness
 Pokedex = It digs branching holes in caves using its sharp claws in search of food--raw gems. A Sableye lurks in darkness and is seen only rarely.
 Generation = 3
+FormName = 
 #-------------------------------
 [MAWILE]
 Name = Mawile
@@ -2138,6 +2283,7 @@ Shape = Bipedal
 Category = Deceiver
 Pokedex = Its giant jaws are actually steel horns that transformed. It fools foes into complacency with its adorable gestures, then chomps them with its huge jaws.
 Generation = 3
+FormName = 
 #-------------------------------
 [AGGRON]
 Name = Aggron
@@ -2155,6 +2301,7 @@ Shape = BipedalTail
 Category = Iron Armor
 Pokedex = Its iron horns grow longer a little at a time. They are used to determine the Aggron's age. The gouges in its armor are worn with pride as mementos from battles.
 Generation = 3
+FormName = 
 #-------------------------------
 [MEDICHAM]
 Name = Medicham
@@ -2172,6 +2319,7 @@ Shape = Bipedal
 Category = Meditate
 Pokedex = Through crushingly harsh yoga training, it gained the power to foretell its foe's actions. It battles with elegant, dance- like movement.
 Generation = 3
+FormName = 
 #-------------------------------
 [MANECTRIC]
 Name = Manectric
@@ -2189,6 +2337,7 @@ Shape = Quadruped
 Category = Discharge
 Pokedex = Because lightning falls in their vicinities, Manectric were thought to have been born from lightning. In battle, they create thunderclouds.
 Generation = 3
+FormName = 
 #-------------------------------
 [PLUSLE]
 Name = Plusle
@@ -2206,6 +2355,7 @@ Shape = BipedalTail
 Category = Cheering
 Pokedex = It has the trait of cheering on its fellow Pokémon. By shorting out the electricity it releases from its paws, it creates pom-poms for cheering.
 Generation = 3
+FormName = 
 #-------------------------------
 [MINUN]
 Name = Minun
@@ -2223,6 +2373,7 @@ Shape = BipedalTail
 Category = Cheering
 Pokedex = At a meeting of Pokémon academics, it was announced that simultaneous exposure to electricity from a Plusle and Minun will promote circulation and boost vitality.
 Generation = 3
+FormName = 
 #-------------------------------
 [VOLBEAT]
 Name = Volbeat
@@ -2240,6 +2391,7 @@ Shape = BipedalTail
 Category = Firefly
 Pokedex = With their taillights lit, Volbeat fly in a swarm, drawing geometric designs in the night sky. They move their nests if their pond water becomes dirty.
 Generation = 3
+FormName = 
 #-------------------------------
 [ILLUMISE]
 Name = Illumise
@@ -2257,6 +2409,7 @@ Shape = Bipedal
 Category = Firefly
 Pokedex = A nocturnal Pokémon that becomes active upon nightfall. It leads a Volbeat swarm to draw patterns in the night sky. Over 200 different patterns have been seen.
 Generation = 3
+FormName = 
 #-------------------------------
 [SWALOT]
 Name = Swalot
@@ -2274,6 +2427,7 @@ Shape = HeadArms
 Category = Poison Bag
 Pokedex = Its powerful stomach acid is capable of digesting almost anything. The one thing in the whole world a Swalot can't digest is its own stomach.
 Generation = 3
+FormName = 
 #-------------------------------
 [SHARPEDO]
 Name = Sharpedo
@@ -2291,6 +2445,7 @@ Shape = Finned
 Category = Brutal
 Pokedex = The vicious and sly gangster of the sea. Its skin is specially textured to minimize drag in water. Its speed tops out at over 75 miles per hour.
 Generation = 3
+FormName = 
 #-------------------------------
 [WAILORD]
 Name = Wailord
@@ -2308,6 +2463,7 @@ Shape = Finned
 Category = Float Whale
 Pokedex = It breathes through nostrils that it raises above the sea. By inhaling to its maximum capacity, a Wailord can dive close to 10,000 feet beneath the waves.
 Generation = 3
+FormName = 
 #-------------------------------
 [CAMERUPT]
 Name = Camerupt
@@ -2325,6 +2481,7 @@ Shape = Quadruped
 Category = Eruption
 Pokedex = A Pokémon that lives in the crater of a volcano. Every 10 years, the volcanoes on its back erupt violently. Research is under way on the cause of eruption.
 Generation = 3
+FormName = 
 #-------------------------------
 [TORKOAL]
 Name = Torkoal
@@ -2342,6 +2499,7 @@ Shape = Quadruped
 Category = Coal
 Pokedex = It battles using energy it gets from burning coal. When loosing smoke from its nostrils, it lets off a sound that is similar to a locomotive's horn.
 Generation = 3
+FormName = 
 #-------------------------------
 [GRUMPIG]
 Name = Grumpig
@@ -2359,6 +2517,7 @@ Shape = BipedalTail
 Category = Manipulate
 Pokedex = It stores power in the black pearls on its forehead. When it uses psychic power, it performs an odd dance step. Its style of dancing became hugely popular overseas.
 Generation = 3
+FormName = 
 #-------------------------------
 [SPINDA]
 Name = Spinda
@@ -2376,6 +2535,7 @@ Shape = BipedalTail
 Category = Spot Panda
 Pokedex = It is distinguished by a pattern of spots that is always different. Its unsteady, tottering walk has the effect of fouling its foe's aim.
 Generation = 3
+FormName = 
 #-------------------------------
 [FLYGON]
 Name = Flygon
@@ -2393,6 +2553,7 @@ Shape = Winged
 Category = Mystic
 Pokedex = The flapping of its wings sounds like singing. To prevent detection by enemies, it hides itself by flapping up a cloud of desert sand.
 Generation = 3
+FormName = 
 #-------------------------------
 [CACTURNE]
 Name = Cacturne
@@ -2410,6 +2571,7 @@ Shape = Bipedal
 Category = Scarecrow
 Pokedex = After spending thousands of years in harsh deserts, its blood transformed into the same substances as sand. It is nocturnal, so it hunts at night.
 Generation = 3
+FormName = 
 #-------------------------------
 [ALTARIA]
 Name = Altaria
@@ -2427,6 +2589,7 @@ Shape = Winged
 Category = Humming
 Pokedex = It hums in a beautiful soprano voice. It flies among white clouds in the blue sky. It launches intensely hot fireballs from its mouth.
 Generation = 3
+FormName = 
 #-------------------------------
 [ZANGOOSE]
 Name = Zangoose
@@ -2444,6 +2607,7 @@ Shape = BipedalTail
 Category = Cat Ferret
 Pokedex = When it battles, it stands on its hind legs and attacks with its sharply clawed forelegs. Its fur bristles if it encounters any Seviper.
 Generation = 3
+FormName = 
 #-------------------------------
 [SEVIPER]
 Name = Seviper
@@ -2461,6 +2625,7 @@ Shape = Serpentine
 Category = Fang Snake
 Pokedex = Seviper and Zangoose are eternal rivals. It counters a Zangoose's dazzling agility with its swordlike tail, which also oozes a horrible poison.
 Generation = 3
+FormName = 
 #-------------------------------
 [LUNATONE]
 Name = Lunatone
@@ -2478,6 +2643,7 @@ Shape = Head
 Category = Meteorite
 Pokedex = It becomes very active on the night of a full moon. This Pokémon was first discovered 40 years ago at the site of a meteor strike.
 Generation = 3
+FormName = 
 #-------------------------------
 [SOLROCK]
 Name = Solrock
@@ -2495,6 +2661,7 @@ Shape = Head
 Category = Meteorite
 Pokedex = Solar energy is the source of this Pokémon's power. On sunny days, groups of Solrock line up facing the sun and absorb its light.
 Generation = 3
+FormName = 
 #-------------------------------
 [WHISCASH]
 Name = Whiscash
@@ -2512,6 +2679,7 @@ Shape = Finned
 Category = Whiskers
 Pokedex = Mysteriously, it can foretell earthquakes. In the daytime, it sleeps in mud at the bottom of a pond. When it awakens, it continually feeds throughout the night.
 Generation = 3
+FormName = 
 #-------------------------------
 [CRAWDAUNT]
 Name = Crawdaunt
@@ -2529,6 +2697,7 @@ Shape = Insectoid
 Category = Rogue
 Pokedex = A brutish Pokémon that loves to battle. A veteran Crawdaunt that has prevailed in hundreds of battles has giant pincers marked with countless scars.
 Generation = 3
+FormName = 
 #-------------------------------
 [CLAYDOL]
 Name = Claydol
@@ -2546,6 +2715,7 @@ Shape = HeadArms
 Category = Clay Doll
 Pokedex = A Claydol sleeps while hovering in midair. Its arms are separate from its body. They are kept floating by the Pokémon's manipulation of psychic power.
 Generation = 3
+FormName = 
 #-------------------------------
 [CRADILY]
 Name = Cradily
@@ -2563,6 +2733,7 @@ Shape = HeadBase
 Category = Barnacle
 Pokedex = It drags its heavy body along the seafloor. It makes its nest in the shallows of warm seas. Cradily can be seen on beaches when the tide goes out.
 Generation = 3
+FormName = 
 #-------------------------------
 [ARMALDO]
 Name = Armaldo
@@ -2580,6 +2751,7 @@ Shape = BipedalTail
 Category = Plate
 Pokedex = Armaldo usually lives on land. However, when it hunts for prey, it dives beneath the ocean. It swims around using its two large wings.
 Generation = 3
+FormName = 
 #-------------------------------
 [MILOTIC]
 Name = Milotic
@@ -2597,6 +2769,7 @@ Shape = Serpentine
 Category = Tender
 Pokedex = It is said to live at the bottom of large lakes. Considered to be the most beautiful of all Pokémon, it has been depicted in paintings and statues.
 Generation = 3
+FormName = 
 #-------------------------------
 [CASTFORM]
 Name = Castform
@@ -2604,6 +2777,7 @@ Types = NORMAL
 BaseStats = 90,70,70,80,100,70
 GenderRatio = Female50Percent
 Abilities = FORECAST
+HiddenAbilities = 
 Moves = 0,TERABLAST,1,TERABLAST,1,AIRSLASH,1,AMNESIA,1,AQUARING,1,ATTRACT,1,AURORAVEIL,1,AVALANCHE,1,BLIZZARD,1,BODYSLAM,1,CAPTIVATE,1,CLEARSMOG,1,CONFIDE,1,COSMICPOWER,1,DEFENSECURL,1,DEFOG,1,DISABLE,1,DOUBLEEDGE,1,DOUBLETEAM,1,EMBER,1,ENDURE,1,ENERGYBALL,1,FACADE,1,FIREBLAST,1,FLAMETHROWER,1,FLAREBLITZ,1,FLASH,1,FLIPTURN,1,FRUSTRATION,1,FUTURESIGHT,1,GUARDSWAP,1,HAIL,1,HEADBUTT,1,HEX,1,HURRICANE,1,HYDROPUMP,1,ICEBEAM,1,ICICLESPEAR,1,ICYWIND,1,INCINERATE,1,LASTRESORT,1,LUCKYCHANT,1,MIMIC,1,NATURALGIFT,1,OMINOUSWIND,1,POWDERSNOW,1,PROTECT,1,PSYCHUP,1,RAINDANCE,1,RECOVER,1,REFLECTTYPE,1,REST,1,RETALIATE,1,RETURN,1,ROUND,1,SANDSTORM,1,SCALD,1,SECRETPOWER,1,SHADOWBALL,1,SHOCKWAVE,1,SLEEPTALK,1,SNORE,1,SOLARBEAM,1,SOLARBLADE,1,SUBSTITUTE,1,SUNNYDAY,1,SWAGGER,1,SWIFT,1,TACKLE,1,TAILWIND,1,THIEF,1,THUNDER,1,THUNDERBOLT,1,THUNDERWAVE,1,WATERGUN,1,WATERPULSE,1,WAVECRASH,1,WEATHERBALL,1,WORKUP
 EggGroups = Fairy,Amorphous
 Height = 0.3
@@ -2631,6 +2805,7 @@ Shape = BipedalTail
 Category = Color Swap
 Pokedex = A Pokémon that has the ability to alter its body colors to match its surroundings. A Kecleon reverts to its original colors if it is startled.
 Generation = 3
+FormName = 
 #-------------------------------
 [BANETTE]
 Name = Banette
@@ -2648,6 +2823,7 @@ Shape = BipedalTail
 Category = Marionette
 Pokedex = An abandoned plush doll became this Pokémon. They are said to live in garbage dumps and wander about in search of the children that threw them away.
 Generation = 3
+FormName = 
 #-------------------------------
 [TROPIUS]
 Name = Tropius
@@ -2665,6 +2841,7 @@ Shape = Quadruped
 Category = Fruit
 Pokedex = It flies by flapping its broad leaves. The bunch of fruit that grows around its neck is deliciously sweet. In the spring, it scatters pollen from its neck.
 Generation = 3
+FormName = 
 #-------------------------------
 [CHIMECHO]
 Name = Chimecho
@@ -2682,6 +2859,7 @@ Shape = HeadArms
 Category = Wind Chime
 Pokedex = They fly about very actively when the hot season arrives. They communicate among themselves using seven different and distinguishing cries.
 Generation = 3
+FormName = 
 #-------------------------------
 [ABSOL]
 Name = Absol
@@ -2699,6 +2877,7 @@ Shape = Quadruped
 Category = Disaster
 Pokedex = It sharply senses even subtle changes in the sky and the land to predict natural disasters. It is a long-lived Pokémon that has a life-span of 100 years.
 Generation = 3
+FormName = 
 #-------------------------------
 [GLALIE]
 Name = Glalie
@@ -2716,6 +2895,7 @@ Shape = Head
 Category = Face
 Pokedex = A Glalie has the power to instantaneously freeze moisture in the atmosphere. A dazzling cloud of diamondlike ice crystals forms around its body.
 Generation = 3
+FormName = 
 #-------------------------------
 [WALREIN]
 Name = Walrein
@@ -2733,6 +2913,7 @@ Shape = Quadruped
 Category = Ice Break
 Pokedex = To protect its herd, the leader battles anything that invades its territory, even at the cost of its life. Its tusks may snap off in battle.
 Generation = 3
+FormName = 
 #-------------------------------
 [HUNTAIL]
 Name = Huntail
@@ -2750,6 +2931,7 @@ Shape = Serpentine
 Category = Deep Sea
 Pokedex = To withstand the crushing water pressure deep under the sea, its spine is very thick and sturdy. Its tail, which is shaped like a small fish, has eyes that light up.
 Generation = 3
+FormName = 
 #-------------------------------
 [GOREBYSS]
 Name = Gorebyss
@@ -2767,6 +2949,7 @@ Shape = Serpentine
 Category = South Sea
 Pokedex = A Gorebyss siphons the body fluids of prey through its thin, tubular mouth. Its light pink body color turns vivid when it finishes feeding.
 Generation = 3
+FormName = 
 #-------------------------------
 [RELICANTH]
 Name = Relicanth
@@ -2784,6 +2967,7 @@ Shape = Finned
 Category = Longevity
 Pokedex = A Pokémon that was once believed to be extinct. The species has not changed its form for 100 million years. It walks on the seafloor using its pectoral fins.
 Generation = 3
+FormName = 
 #-------------------------------
 [LUVDISC]
 Name = Luvdisc
@@ -2801,6 +2985,7 @@ Shape = Finned
 Category = Rendezvous
 Pokedex = Luvdisc make the branches of Corsola their nests. There is a custom from long ago of giving a Luvdisc as a gift to express one's feelings of love.
 Generation = 3
+FormName = 
 #-------------------------------
 [SALAMENCE]
 Name = Salamence
@@ -2818,6 +3003,7 @@ Shape = Quadruped
 Category = Dragon
 Pokedex = After many long years, its cellular structure underwent a sudden mutation to grow wings. When angered, it loses all thought and rampages out of control.
 Generation = 3
+FormName = 
 #-------------------------------
 [METAGROSS]
 Name = Metagross
@@ -2835,6 +3021,7 @@ Shape = MultiBody
 Category = Iron Leg
 Pokedex = Metagross has four brains that are joined by a complex neural network. As a result of integration, this Pokémon is smarter than a supercomputer.
 Generation = 3
+FormName = 
 #-------------------------------
 [TORTERRA]
 Name = Torterra
@@ -2852,6 +3039,7 @@ Shape = Quadruped
 Category = Continent
 Pokedex = Small Pokémon occasionally gather on its unmoving back to begin building their nests.
 Generation = 4
+FormName = 
 #-------------------------------
 [INFERNAPE]
 Name = Infernape
@@ -2869,6 +3057,7 @@ Shape = BipedalTail
 Category = Flame
 Pokedex = It uses a special kind of martial arts involving all its limbs. Its fire never goes out.
 Generation = 4
+FormName = 
 #-------------------------------
 [EMPOLEON]
 Name = Empoleon
@@ -2886,6 +3075,7 @@ Shape = BipedalTail
 Category = Emperor
 Pokedex = The three horns that extend from its beak attest to its power. The leader has the biggest horns.
 Generation = 4
+FormName = 
 #-------------------------------
 [STARAPTOR]
 Name = Staraptor
@@ -2903,6 +3093,7 @@ Shape = Winged
 Category = Predator
 Pokedex = It has a savage nature. It will courageously challenge foes that are much larger.
 Generation = 4
+FormName = 
 #-------------------------------
 [BIBAREL]
 Name = Bibarel
@@ -2920,6 +3111,7 @@ Shape = BipedalTail
 Category = Beaver
 Pokedex = It makes its nest by damming streams with bark and mud. It is known as an industrious worker.
 Generation = 4
+FormName = 
 #-------------------------------
 [KRICKETUNE]
 Name = Kricketune
@@ -2937,6 +3129,7 @@ Shape = MultiWinged
 Category = Cricket
 Pokedex = It crosses its knifelike arms in front of its chest when it cries. It can compose melodies ad lib.
 Generation = 4
+FormName = 
 #-------------------------------
 [LUXRAY]
 Name = Luxray
@@ -2954,6 +3147,7 @@ Shape = Quadruped
 Category = Gleam Eyes
 Pokedex = It has eyes that can see through anything. It spots and captures prey hiding behind objects.
 Generation = 4
+FormName = 
 #-------------------------------
 [ROSERADE]
 Name = Roserade
@@ -2971,6 +3165,7 @@ Shape = Bipedal
 Category = Bouquet
 Pokedex = It attracts prey with a sweet aroma, then downs it with thorny whips hidden in its arms.
 Generation = 4
+FormName = 
 #-------------------------------
 [RAMPARDOS]
 Name = Rampardos
@@ -2988,6 +3183,7 @@ Shape = BipedalTail
 Category = Head Butt
 Pokedex = Its powerful head butt has enough power to shatter even the most durable things upon impact.
 Generation = 4
+FormName = 
 #-------------------------------
 [BASTIODON]
 Name = Bastiodon
@@ -3005,6 +3201,7 @@ Shape = Quadruped
 Category = Shield
 Pokedex = Any frontal attack is repulsed. It is a docile Pokémon that feeds on grass and berries.
 Generation = 4
+FormName = 
 #-------------------------------
 [WORMADAM]
 Name = Wormadam
@@ -3040,6 +3237,7 @@ Shape = MultiWinged
 Category = Moth
 Pokedex = It loves the honey of flowers and steals honey collected by Combee.
 Generation = 4
+FormName = 
 #-------------------------------
 [VESPIQUEN]
 Name = Vespiquen
@@ -3057,6 +3255,7 @@ Shape = MultiWinged
 Category = Beehive
 Pokedex = Its abdomen is a honeycomb for grubs. It raises its grubs on honey collected by Combee.
 Generation = 4
+FormName = 
 #-------------------------------
 [PACHIRISU]
 Name = Pachirisu
@@ -3074,6 +3273,7 @@ Shape = Quadruped
 Category = EleSquirrel
 Pokedex = It makes fur balls that crackle with static electricity. It stores them with berries in tree holes.
 Generation = 4
+FormName = 
 #-------------------------------
 [FLOATZEL]
 Name = Floatzel
@@ -3091,6 +3291,7 @@ Shape = Quadruped
 Category = Sea Weasel
 Pokedex = It floats using its well-developed flotation sac. It assists in the rescues of drowning people.
 Generation = 4
+FormName = 
 #-------------------------------
 [CHERRIM]
 Name = Cherrim
@@ -3098,6 +3299,7 @@ Types = GRASS
 BaseStats = 80,60,80,85,87,98
 GenderRatio = Female50Percent
 Abilities = FLOWERGIFT
+HiddenAbilities =
 Moves = 0,TERABLAST,1,TERABLAST,1,AROMATHERAPY,1,ATTRACT,1,BULLETSEED,1,CAPTIVATE,1,CONFIDE,1,DAZZLINGGLEAM,1,DEFENSECURL,1,DOUBLETEAM,1,DRAININGKISS,1,ENDURE,1,ENERGYBALL,1,FACADE,1,FLAREBLITZ,1,FLASH,1,FLOWERSHIELD,1,FRUSTRATION,1,GIGADRAIN,1,GIGAIMPACT,1,GRASSKNOT,1,GRASSWHISTLE,1,GRASSYGLIDE,1,GRASSYTERRAIN,1,GROWTH,1,HEALINGWISH,1,HEALPULSE,1,HELPINGHAND,1,HYPERBEAM,1,LASERFOCUS,1,LEAFAGE,1,LEECHSEED,1,LUCKYCHANT,1,MAGICALLEAF,1,MORNINGSUN,1,NATURALGIFT,1,NATUREPOWER,1,PETALBLIZZARD,1,PETALDANCE,1,PLAYROUGH,1,POLLENPUFF,1,PROTECT,1,RAZORLEAF,1,REST,1,RETURN,1,ROCKBLAST,1,ROLLOUT,1,ROUND,1,SAFEGUARD,1,SECRETPOWER,1,SEEDBOMB,1,SLEEPTALK,1,SNORE,1,SOLARBEAM,1,SOLARBLADE,1,SPIKYSHIELD,1,STRENGTHSAP,1,SUBSTITUTE,1,SUNNYDAY,1,SWAGGER,1,SWEETSCENT,1,SWORDSDANCE,1,SYNTHESIS,1,TACKLE,1,TAKEDOWN,1,TICKLE,1,WEATHERBALL,1,WORRYSEED
 EggGroups = Fairy,Grass
 Height = 0.5
@@ -3125,6 +3327,7 @@ Shape = Serpentine
 Category = Sea Slug
 Pokedex = Its search for food sometimes leads it onto land, where it leaves behind a sticky trail of slime as it passes through.
 Generation = 4
+FormName = 
 #-------------------------------
 [AMBIPOM]
 Name = Ambipom
@@ -3142,6 +3345,7 @@ Shape = BipedalTail
 Category = Long Tail
 Pokedex = To eat, it deftly shucks nuts with its two tails. It rarely uses its arms now.
 Generation = 4
+FormName = 
 #-------------------------------
 [DRIFBLIM]
 Name = Drifblim
@@ -3159,6 +3363,7 @@ Shape = HeadArms
 Category = Blimp
 Pokedex = It's drowzy in daytime, but flies off in the evening in big groups. No one knows where they go.
 Generation = 4
+FormName = 
 #-------------------------------
 [LOPUNNY]
 Name = Lopunny
@@ -3176,6 +3381,7 @@ Shape = BipedalTail
 Category = Rabbit
 Pokedex = An extremely cautious Pokémon. It cloaks its body with its fluffy ear fur when it senses danger.
 Generation = 4
+FormName = 
 #-------------------------------
 [MISMAGIUS]
 Name = Mismagius
@@ -3193,6 +3399,7 @@ Shape = Head
 Category = Magical
 Pokedex = Its cries sound like incantations. Those hearing it are tormented by headaches and hallucinations.
 Generation = 4
+FormName = 
 #-------------------------------
 [HONCHKROW]
 Name = Honchkrow
@@ -3210,6 +3417,7 @@ Shape = Winged
 Category = Big Boss
 Pokedex = Becoming active at night, it is known to swarm with numerous Murkrow in tow.
 Generation = 4
+FormName = 
 #-------------------------------
 [PURUGLY]
 Name = Purugly
@@ -3227,6 +3435,7 @@ Shape = Quadruped
 Category = Tiger Cat
 Pokedex = It is a brazen brute that barges its way into another Pokémon's nest and claims it as its own.
 Generation = 4
+FormName = 
 #-------------------------------
 [SKUNTANK]
 Name = Skuntank
@@ -3244,6 +3453,7 @@ Shape = Quadruped
 Category = Skunk
 Pokedex = It sprays a vile-smelling fluid from the tip of its tail to attack. Its range is over 160 feet.
 Generation = 4
+FormName = 
 #-------------------------------
 [BRONZONG]
 Name = Bronzong
@@ -3261,6 +3471,7 @@ Shape = HeadArms
 Category = Bronze Bell
 Pokedex = One caused a news sensation when it was dug up at a construction site after a 2,000-year sleep.
 Generation = 4
+FormName = 
 #-------------------------------
 [CHATOT]
 Name = Chatot
@@ -3278,6 +3489,7 @@ Shape = Winged
 Category = Music Note
 Pokedex = It can learn and speak human words. If they gather, they all learn the same saying.
 Generation = 4
+FormName = 
 #-------------------------------
 [SPIRITOMB]
 Name = Spiritomb
@@ -3295,6 +3507,7 @@ Shape = HeadBase
 Category = Forbidden
 Pokedex = A Pokémon that was formed by 108 spirits. It is bound to a fissure in an odd keystone.
 Generation = 4
+FormName = 
 #-------------------------------
 [GARCHOMP]
 Name = Garchomp
@@ -3312,6 +3525,7 @@ Shape = BipedalTail
 Category = Mach
 Pokedex = When it folds up its body and extends its wings, it looks like a jet plane. It flies at sonic speed.
 Generation = 4
+FormName = 
 #-------------------------------
 [LUCARIO]
 Name = Lucario
@@ -3329,6 +3543,7 @@ Shape = BipedalTail
 Category = Aura
 Pokedex = It has the ability to sense the auras of all things. It understands human speech.
 Generation = 4
+FormName = 
 #-------------------------------
 [HIPPOWDON]
 Name = Hippowdon
@@ -3346,6 +3561,7 @@ Shape = Quadruped
 Category = Heavyweight
 Pokedex = It blasts internally stored sand from ports on its body to create a towering twister for attack.
 Generation = 4
+FormName = 
 #-------------------------------
 [DRAPION]
 Name = Drapion
@@ -3363,6 +3579,7 @@ Shape = Insectoid
 Category = Ogre Scorpion
 Pokedex = It has the power in its clawed arms to make scrap of a car. The tips of its claws release poison.
 Generation = 4
+FormName = 
 #-------------------------------
 [TOXICROAK]
 Name = Toxicroak
@@ -3380,6 +3597,7 @@ Shape = Bipedal
 Category = Toxic Mouth
 Pokedex = Its knuckle claws secrete a toxin so vile that even a scratch could prove fatal.
 Generation = 4
+FormName = 
 #-------------------------------
 [CARNIVINE]
 Name = Carnivine
@@ -3397,6 +3615,7 @@ Shape = Multiped
 Category = Bug Catcher
 Pokedex = It attracts prey with its sweet-smelling saliva, then chomps down. It takes a whole day to eat prey.
 Generation = 4
+FormName = 
 #-------------------------------
 [LUMINEON]
 Name = Lumineon
@@ -3414,6 +3633,7 @@ Shape = Finned
 Category = Neon
 Pokedex = It lives on the deep-sea floor. It attracts prey by flashing the patterns on its four tail fins.
 Generation = 4
+FormName = 
 #-------------------------------
 [ABOMASNOW]
 Name = Abomasnow
@@ -3431,6 +3651,7 @@ Shape = BipedalTail
 Category = Frost Tree
 Pokedex = It whips up blizzards in mountains that are always buried in snow. It is the abominable snowman.
 Generation = 4
+FormName = 
 #-------------------------------
 [WEAVILE]
 Name = Weavile
@@ -3448,6 +3669,7 @@ Shape = BipedalTail
 Category = Sharp Claw
 Pokedex = They live in cold regions, forming groups of four or five that hunt prey with impressive coordination.
 Generation = 4
+FormName = 
 #-------------------------------
 [MAGNEZONE]
 Name = Magnezone
@@ -3465,6 +3687,7 @@ Shape = HeadArms
 Category = Magnet Area
 Pokedex = It evolved from exposure to a special magnetic field. Three units generate magnetism.
 Generation = 4
+FormName = 
 #-------------------------------
 [LICKILICKY]
 Name = Lickilicky
@@ -3482,6 +3705,7 @@ Shape = Bipedal
 Category = Licking
 Pokedex = It wraps things with its extensible tongue. Getting too close to it will leave you soaked with drool.
 Generation = 4
+FormName = 
 #-------------------------------
 [RHYPERIOR]
 Name = Rhyperior
@@ -3499,6 +3723,7 @@ Shape = BipedalTail
 Category = Drill
 Pokedex = It puts rocks in holes in its palms and uses its muscles to shoot them. Geodude are shot at rare times.
 Generation = 4
+FormName = 
 #-------------------------------
 [TANGROWTH]
 Name = Tangrowth
@@ -3516,6 +3741,7 @@ Shape = Bipedal
 Category = Vine
 Pokedex = It ensnares prey by extending arms made of vines. Losing arms to predators does not trouble it.
 Generation = 4
+FormName = 
 #-------------------------------
 [ELECTIVIRE]
 Name = Electivire
@@ -3533,6 +3759,7 @@ Shape = BipedalTail
 Category = Thunderbolt
 Pokedex = It pushes the tips of its two tails against the foe, then lets loose with over 20,000 volts of power.
 Generation = 4
+FormName = 
 #-------------------------------
 [MAGMORTAR]
 Name = Magmortar
@@ -3550,6 +3777,7 @@ Shape = BipedalTail
 Category = Blast
 Pokedex = It blasts fireballs of over 3,600 degrees F from the ends of its arms. It lives in volcanic craters.
 Generation = 4
+FormName = 
 #-------------------------------
 [TOGEKISS]
 Name = Togekiss
@@ -3567,6 +3795,7 @@ Shape = Winged
 Category = Jubilee
 Pokedex = It will never appear where there is strife. Its sightings have become rare recently.
 Generation = 4
+FormName = 
 #-------------------------------
 [YANMEGA]
 Name = Yanmega
@@ -3584,6 +3813,7 @@ Shape = MultiWinged
 Category = Ogre Darner
 Pokedex = By churning its wings, it creates shock waves that inflict critical internal injuries to foes.
 Generation = 4
+FormName = 
 #-------------------------------
 [LEAFEON]
 Name = Leafeon
@@ -3601,6 +3831,7 @@ Shape = Quadruped
 Category = Verdant
 Pokedex = Just like a plant, it uses photosynthesis. As a result, it is always enveloped in clear air.
 Generation = 4
+FormName = 
 #-------------------------------
 [GLACEON]
 Name = Glaceon
@@ -3618,6 +3849,7 @@ Shape = Quadruped
 Category = Fresh Snow
 Pokedex = As a protective technique, it can completely freeze its fur to make its hairs stand like needles.
 Generation = 4
+FormName = 
 #-------------------------------
 [GLISCOR]
 Name = Gliscor
@@ -3635,6 +3867,7 @@ Shape = Winged
 Category = Fang Scorpion
 Pokedex = It observes prey while hanging inverted from branches. When the chance presents itself, it swoops!
 Generation = 4
+FormName = 
 #-------------------------------
 [MAMOSWINE]
 Name = Mamoswine
@@ -3652,6 +3885,7 @@ Shape = Quadruped
 Category = Twin Tusk
 Pokedex = Its impressive tusks are made of ice. The population thinned when it turned warm after the ice age.
 Generation = 4
+FormName = 
 #-------------------------------
 [PORYGONZ]
 Name = Porygon-Z
@@ -3669,6 +3903,7 @@ Shape = HeadArms
 Category = Virtual
 Pokedex = Additional software was installed to make it a better Pokémon. It began acting oddly, however.
 Generation = 4
+FormName = 
 #-------------------------------
 [GALLADE]
 Name = Gallade
@@ -3686,6 +3921,7 @@ Shape = Bipedal
 Category = Blade
 Pokedex = A master of courtesy and swordsmanship, it fights using extending swords on its elbows.
 Generation = 4
+FormName = 
 #-------------------------------
 [PROBOPASS]
 Name = Probopass
@@ -3703,6 +3939,7 @@ Shape = MultiBody
 Category = Compass
 Pokedex = It exudes strong magnetism from all over. It controls three small units called Mini-Noses.
 Generation = 4
+FormName = 
 #-------------------------------
 [DUSKNOIR]
 Name = Dusknoir
@@ -3720,6 +3957,7 @@ Shape = HeadArms
 Category = Gripper
 Pokedex = The antenna on its head captures radio waves from the world of spirits that command it to take people there.
 Generation = 4
+FormName = 
 #-------------------------------
 [FROSLASS]
 Name = Froslass
@@ -3737,6 +3975,7 @@ Shape = HeadArms
 Category = Snow Land
 Pokedex = It freezes foes with an icy breath nearly -60 degrees F. What seems to be its body is actually hollow.
 Generation = 4
+FormName = 
 #-------------------------------
 [ROTOM]
 Name = Rotom
@@ -3754,6 +3993,7 @@ Shape = Head
 Category = Plasma
 Pokedex = Its body is composed of plasma. It is known to infiltrate electronic devices and wreak havoc.
 Generation = 4
+FormName = 
 #-------------------------------
 [SERPERIOR]
 Name = Serperior
@@ -3771,6 +4011,7 @@ Shape = Serpentine
 Category = Regal
 Pokedex = They raise their heads to intimidate opponents, but only give it their all when fighting a powerful opponent.
 Generation = 5
+FormName = 
 #-------------------------------
 [EMBOAR]
 Name = Emboar
@@ -3788,6 +4029,7 @@ Shape = BipedalTail
 Category = Mega Fire Pig
 Pokedex = It can throw a fire punch by setting its fists on fire with its fiery chin. It cares deeply about its friends.
 Generation = 5
+FormName = 
 #-------------------------------
 [SAMUROTT]
 Name = Samurott
@@ -3805,6 +4047,7 @@ Shape = Quadruped
 Category = Formidable
 Pokedex = Part of the armor on its anterior legs becomes a giant sword. Its cry alone is enough to intimidate most enemies.
 Generation = 5
+FormName = 
 #-------------------------------
 [WATCHOG]
 Name = Watchog
@@ -3822,6 +4065,7 @@ Shape = BipedalTail
 Category = Lookout
 Pokedex = They make the patterns on their bodies shine in order to threaten predators. Keen eyesight lets them see in the dark.
 Generation = 5
+FormName = 
 #-------------------------------
 [STOUTLAND]
 Name = Stoutland
@@ -3839,6 +4083,7 @@ Shape = Quadruped
 Category = Big-Hearted
 Pokedex = This extremely wise Pokémon excels at rescuing people stranded at sea or in the mountains.
 Generation = 5
+FormName = 
 #-------------------------------
 [LIEPARD]
 Name = Liepard
@@ -3856,6 +4101,7 @@ Shape = Quadruped
 Category = Cruel
 Pokedex = Stealthily, it sneaks up on its target, striking from behind before its victim has a chance to react.
 Generation = 5
+FormName = 
 #-------------------------------
 [SIMISAGE]
 Name = Simisage
@@ -3873,6 +4119,7 @@ Shape = BipedalTail
 Category = Thorn Monkey
 Pokedex = Ill tempered, it fights by swinging its barbed tail around wildly. The leaf growing on its head is very bitter.
 Generation = 5
+FormName = 
 #-------------------------------
 [SIMISEAR]
 Name = Simisear
@@ -3890,6 +4137,7 @@ Shape = BipedalTail
 Category = Ember
 Pokedex = A flame burns inside its body. It scatters embers from its head and tail to sear its opponents.
 Generation = 5
+FormName = 
 #-------------------------------
 [SIMIPOUR]
 Name = Simipour
@@ -3907,6 +4155,7 @@ Shape = BipedalTail
 Category = Geyser
 Pokedex = The high-pressure water expelled from its tail is so powerful, it can destroy a concrete wall.
 Generation = 5
+FormName = 
 #-------------------------------
 [MUSHARNA]
 Name = Musharna
@@ -3924,6 +4173,7 @@ Shape = Bipedal
 Category = Drowsing
 Pokedex = With the mist from its forehead, it can create shapes of things from dreams it has eaten.
 Generation = 5
+FormName = 
 #-------------------------------
 [UNFEZANT]
 Name = Unfezant
@@ -3941,6 +4191,7 @@ Shape = Winged
 Category = Proud
 Pokedex = Males have plumage on their heads. They will never let themselves feel close to anyone other than their Trainers.
 Generation = 5
+FormName = 
 #-------------------------------
 [ZEBSTRIKA]
 Name = Zebstrika
@@ -3958,6 +4209,7 @@ Shape = Quadruped
 Category = Thunderbolt
 Pokedex = This ill-tempered Pokémon is dangerous because when it's angry, it shoots lightning from its mane in all directions.
 Generation = 5
+FormName = 
 #-------------------------------
 [GIGALITH]
 Name = Gigalith
@@ -3975,6 +4227,7 @@ Shape = Multiped
 Category = Compressed
 Pokedex = The solar energy absorbed by its body's orange crystals is magnified internally and fired from its mouth.
 Generation = 5
+FormName = 
 #-------------------------------
 [SWOOBAT]
 Name = Swoobat
@@ -3992,6 +4245,7 @@ Shape = Winged
 Category = Courting
 Pokedex = Anyone who comes into contact with the ultrasonic waves emitted by a courting male experiences a positive mood shift.
 Generation = 5
+FormName = 
 #-------------------------------
 [EXCADRILL]
 Name = Excadrill
@@ -4009,6 +4263,7 @@ Shape = Bipedal
 Category = Subterrene
 Pokedex = More than 300 feet below the surface, they build mazelike nests. Their activity can be destructive to subway tunnels.
 Generation = 5
+FormName = 
 #-------------------------------
 [AUDINO]
 Name = Audino
@@ -4026,6 +4281,7 @@ Shape = BipedalTail
 Category = Hearing
 Pokedex = Its auditory sense is astounding. It has a radar-like ability to understand its surrounding through slight sounds.
 Generation = 5
+FormName = 
 #-------------------------------
 [CONKELDURR]
 Name = Conkeldurr
@@ -4043,6 +4299,7 @@ Shape = Bipedal
 Category = Muscular
 Pokedex = They use concrete pillars as walking canes. They know moves that enable them to swing the pillars freely in battle.
 Generation = 5
+FormName = 
 #-------------------------------
 [SEISMITOAD]
 Name = Seismitoad
@@ -4060,6 +4317,7 @@ Shape = Bipedal
 Category = Vibration
 Pokedex = It increases the power of its punches by vibrating the bumps on its fists. It can turn a boulder to rubble with one punch.
 Generation = 5
+FormName = 
 #-------------------------------
 [THROH]
 Name = Throh
@@ -4077,6 +4335,7 @@ Shape = Bipedal
 Category = Judo
 Pokedex = When they encounter foes bigger than themselves, they try to throw them. They always travel in packs of five.
 Generation = 5
+FormName = 
 #-------------------------------
 [SAWK]
 Name = Sawk
@@ -4094,6 +4353,7 @@ Shape = Bipedal
 Category = Karate
 Pokedex = Tying their belts gets them pumped and makes their punches more destructive. Disturbing their training angers them.
 Generation = 5
+FormName = 
 #-------------------------------
 [LEAVANNY]
 Name = Leavanny
@@ -4111,6 +4371,7 @@ Shape = Bipedal
 Category = Nurturing
 Pokedex = It keeps its eggs warm with heat from fermenting leaves. It also uses leaves to make warm wrappings for Sewaddle.
 Generation = 5
+FormName = 
 #-------------------------------
 [SCOLIPEDE]
 Name = Scolipede
@@ -4128,6 +4389,7 @@ Shape = Insectoid
 Category = Megapede
 Pokedex = Highly aggressive, it uses the claws near its neck to dig into its opponents and poison them.
 Generation = 5
+FormName = 
 #-------------------------------
 [WHIMSICOTT]
 Name = Whimsicott
@@ -4145,6 +4407,7 @@ Shape = Bipedal
 Category = Windveiled
 Pokedex = Riding whirlwinds, they appear. These Pokémon sneak through gaps into houses and cause all sorts of mischief.
 Generation = 5
+FormName = 
 #-------------------------------
 [LILLIGANT]
 Name = Lilligant
@@ -4162,6 +4425,7 @@ Shape = HeadBase
 Category = Flowering
 Pokedex = The fragrance of the garland on its head has a relaxing effect. It withers if a Trainer does not take good care of it.
 Generation = 5
+FormName = 
 #-------------------------------
 [KROOKODILE]
 Name = Krookodile
@@ -4179,6 +4443,7 @@ Shape = BipedalTail
 Category = Intimidation
 Pokedex = It can expand the focus of its eyes, enabling it to see objects in the far distance as if it were using binoculars.
 Generation = 5
+FormName = 
 #-------------------------------
 [DARMANITAN]
 Name = Darmanitan
@@ -4214,6 +4479,7 @@ Shape = HeadBase
 Category = Cactus
 Pokedex = Arid regions are their habitat. They move rhythmically, making a sound similar to maracas.
 Generation = 5
+FormName = 
 #-------------------------------
 [CRUSTLE]
 Name = Crustle
@@ -4231,6 +4497,7 @@ Shape = Insectoid
 Category = Stone Home
 Pokedex = It possesses legs of enormous strength, enabling it to carry heavy slabs for many days, even when crossing arid land.
 Generation = 5
+FormName = 
 #-------------------------------
 [SCRAFTY]
 Name = Scrafty
@@ -4248,6 +4515,7 @@ Shape = BipedalTail
 Category = Hoodlum
 Pokedex = It can smash concrete blocks with its kicking attacks. The one with the biggest crest is the group leader.
 Generation = 5
+FormName = 
 #-------------------------------
 [SIGILYPH]
 Name = Sigilyph
@@ -4265,6 +4533,7 @@ Shape = Winged
 Category = Avianoid
 Pokedex = The guardians of an ancient city, they use their psychic power to attack enemies that invade their territory.
 Generation = 5
+FormName = 
 #-------------------------------
 [COFAGRIGUS]
 Name = Cofagrigus
@@ -4282,6 +4551,7 @@ Shape = HeadBase
 Category = Coffin
 Pokedex = They pretend to be elaborate coffins to teach lessons to grave robbers. Their bodies are covered in pure gold.
 Generation = 5
+FormName = 
 #-------------------------------
 [CARRACOSTA]
 Name = Carracosta
@@ -4299,6 +4569,7 @@ Shape = BipedalTail
 Category = Prototurtle
 Pokedex = Incredible jaw strength enables them to chew up steel beams and rocks along with their prey.
 Generation = 5
+FormName = 
 #-------------------------------
 [ARCHEOPS]
 Name = Archeops
@@ -4306,6 +4577,7 @@ Types = ROCK,FLYING
 BaseStats = 75,140,65,110,115,65
 GenderRatio = FemaleOneEighth
 Abilities = DEFEATIST
+HiddenAbilities =
 Moves = 0,TERABLAST,1,TERABLAST,1,ACROBATICS,1,AERIALACE,1,AGILITY,1,AIRSLASH,1,ALLYSWITCH,1,ANCIENTPOWER,1,AQUATAIL,1,ASSURANCE,1,ATTRACT,1,BITE,1,BOUNCE,1,BULLDOZE,1,CONFIDE,1,CRUNCH,1,CUT,1,DEFOG,1,DIG,1,DOUBLETEAM,1,DRAGONBREATH,1,DRAGONCLAW,1,DRAGONPULSE,1,DRAGONTAIL,1,DUALWINGBEAT,1,EARTHPOWER,1,EARTHQUAKE,1,ENDEAVOR,1,ENDURE,1,FACADE,1,FLY,1,FOCUSBLAST,1,FOSSILFURY,1,FRUSTRATION,1,GIGAIMPACT,1,HEADSMASH,1,HEATWAVE,1,HONECLAWS,1,HYPERBEAM,1,IRONDEFENSE,1,IRONTAIL,1,KNOCKOFF,1,LASHOUT,1,LEER,1,METEORBEAM,1,OUTRAGE,1,PLUCK,1,PROTECT,1,QUICKATTACK,1,QUICKGUARD,1,REST,1,RETURN,1,ROAR,1,ROCKBLAST,1,ROCKPOLISH,1,ROCKSLIDE,1,ROCKSMASH,1,ROCKTHROW,1,ROCKTOMB,1,ROOST,1,ROUND,1,SANDSTORM,1,SCARYFACE,1,SECRETPOWER,1,SHADOWCLAW,1,SKYATTACK,1,SLEEPTALK,1,SMACKDOWN,1,SNORE,1,STEALTHROCK,1,STEELWING,1,STONEEDGE,1,SUBSTITUTE,1,SWAGGER,1,SWIFT,1,SWITCHEROO,1,TAILWIND,1,TAUNT,1,THRASH,1,TORMENT,1,UPROAR,1,UTURN,1,WINGATTACK,1,ZENHEADBUTT
 EggGroups = Flying,Water3
 Height = 1.4
@@ -4315,6 +4587,7 @@ Shape = Winged
 Category = First Bird
 Pokedex = It runs better than it flies. It catches prey by running at speeds comparable to those of an automobile.
 Generation = 5
+FormName = 
 #-------------------------------
 [GARBODOR]
 Name = Garbodor
@@ -4332,6 +4605,7 @@ Shape = Bipedal
 Category = Trash Heap
 Pokedex = They absorb garbage and make it part of their bodies. They shoot a poisonous liquid from their right-hand fingertips.
 Generation = 5
+FormName = 
 #-------------------------------
 [ZOROARK]
 Name = Zoroark
@@ -4339,6 +4613,7 @@ Types = DARK
 BaseStats = 55,100,60,110,125,60
 GenderRatio = FemaleOneEighth
 Abilities = ILLUSION
+HiddenAbilities =
 Moves = 0,TERABLAST,1,TERABLAST,1,AERIALACE,1,AGILITY,1,ASSURANCE,1,ATTRACT,1,BODYSLAM,1,BOUNCE,1,BRICKBREAK,1,BURNINGJEALOUSY,1,CALMMIND,1,CAPTIVATE,1,CONFIDE,1,CONFUSERAY,1,COPYCAT,1,COUNTER,1,COVET,1,CRUNCH,1,CUT,1,DARKPULSE,1,DETECT,1,DIG,1,DOUBLETEAM,1,EMBARGO,1,ENCORE,1,ENDURE,1,EXTRASENSORY,1,FACADE,1,FAKETEARS,1,FEINTATTACK,1,FLAMETHROWER,1,FLING,1,FOCUSBLAST,1,FOULPLAY,1,FRUSTRATION,1,FURYSWIPES,1,GIGAIMPACT,1,GRASSKNOT,1,HELPINGHAND,1,HEX,1,HONECLAWS,1,HYPERBEAM,1,HYPERVOICE,1,IMPRISON,1,INCINERATE,1,KNOCKOFF,1,LASERFOCUS,1,LASHOUT,1,LEER,1,LOWKICK,1,LOWSWEEP,1,MEGAKICK,1,MEGAPUNCH,1,MEMENTO,1,NASTYPLOT,1,NIGHTDAZE,1,NIGHTSHADE,1,NIGHTSLASH,1,PAYBACK,1,PROTECT,1,PSYCHIC,1,PSYCHUP,1,PUNISHMENT,1,PURSUIT,1,RAINDANCE,1,REST,1,RETALIATE,1,RETURN,1,REVENGE,1,ROAR,1,ROCKSMASH,1,ROUND,1,SCARYFACE,1,SCRATCH,1,SECRETPOWER,1,SHADOWBALL,1,SHADOWCLAW,1,SHADOWSNEAK,1,SKITTERSMACK,1,SLEEPTALK,1,SLUDGEBOMB,1,SNARL,1,SNATCH,1,SNORE,1,SPITE,1,SUBSTITUTE,1,SUCKERPUNCH,1,SUNNYDAY,1,SWAGGER,1,SWIFT,1,SWORDSDANCE,1,TAKEDOWN,1,TAUNT,1,THIEF,1,THROATCHOP,1,TORMENT,1,TRICK,1,UPROAR,1,UTURN
 EggGroups = Field
 Height = 1.6
@@ -4348,6 +4623,7 @@ Shape = BipedalTail
 Category = Illusion Fox
 Pokedex = Each has the ability to fool a large group of people simultaneously. They protect their lair with illusory scenery.
 Generation = 5
+FormName = 
 #-------------------------------
 [CINCCINO]
 Name = Cinccino
@@ -4365,6 +4641,7 @@ Shape = Quadruped
 Category = Scarf
 Pokedex = Their white fur feels amazing to touch. Their fur repels dust and prevents static electricity from building up.
 Generation = 5
+FormName = 
 #-------------------------------
 [GOTHITELLE]
 Name = Gothitelle
@@ -4382,6 +4659,7 @@ Shape = Bipedal
 Category = Astral Body
 Pokedex = They can predict the future from the placement and movement of the stars. They can see Trainers' life spans.
 Generation = 5
+FormName = 
 #-------------------------------
 [REUNICLUS]
 Name = Reuniclus
@@ -4399,6 +4677,7 @@ Shape = HeadArms
 Category = Multiplying
 Pokedex = These remarkably intelligent Pokémon fight by controlling arms that can grip with rock-crushing power.
 Generation = 5
+FormName = 
 #-------------------------------
 [SWANNA]
 Name = Swanna
@@ -4416,6 +4695,7 @@ Shape = Winged
 Category = White Bird
 Pokedex = It administers sharp, powerful pecks with its bill. It whips its long neck to deliver forceful repeated strikes.
 Generation = 5
+FormName = 
 #-------------------------------
 [VANILLUXE]
 Name = Vanilluxe
@@ -4433,6 +4713,7 @@ Shape = MultiBody
 Category = Snowstorm
 Pokedex = If both heads get angry simultaneously, this Pokémon expels a blizzard, burying everything in snow.
 Generation = 5
+FormName = 
 #-------------------------------
 [SAWSBUCK]
 Name = Sawsbuck
@@ -4450,6 +4731,7 @@ Shape = Quadruped
 Category = Season
 Pokedex = The plants growing on its horns change according to the season. The leaders of the herd possess magnificent horns.
 Generation = 5
+FormName = 
 #-------------------------------
 [EMOLGA]
 Name = Emolga
@@ -4467,6 +4749,7 @@ Shape = Quadruped
 Category = Sky Squirrel
 Pokedex = They live on treetops and glide using the inside of a cape-like membrane while discharging electricity.
 Generation = 5
+FormName = 
 #-------------------------------
 [ESCAVALIER]
 Name = Escavalier
@@ -4484,6 +4767,7 @@ Shape = HeadArms
 Category = Cavalry
 Pokedex = These Pokémon evolve by wearing the shell covering of a Shelmet. The steel armor protects their whole body.
 Generation = 5
+FormName = 
 #-------------------------------
 [AMOONGUSS]
 Name = Amoonguss
@@ -4501,6 +4785,7 @@ Shape = HeadArms
 Category = Mushroom
 Pokedex = They show off their Poké Ball caps to lure prey, but very few Pokémon are fooled by this.
 Generation = 5
+FormName = 
 #-------------------------------
 [JELLICENT]
 Name = Jellicent
@@ -4518,6 +4803,7 @@ Shape = Multiped
 Category = Floating
 Pokedex = They propel themselves by expelling absorbed seawater from their bodies. Their favorite food is life energy.
 Generation = 5
+FormName = 
 #-------------------------------
 [ALOMOMOLA]
 Name = Alomomola
@@ -4535,6 +4821,7 @@ Shape = Finned
 Category = Caring
 Pokedex = Floating in the open sea is how they live. When they find a wounded Pokémon, they embrace it and bring it to shore.
 Generation = 5
+FormName = 
 #-------------------------------
 [GALVANTULA]
 Name = Galvantula
@@ -4552,6 +4839,7 @@ Shape = Insectoid
 Category = EleSpider
 Pokedex = They employ an electrically charged web to trap their prey. While it is immobilized by shock, they leisurely consume it.
 Generation = 5
+FormName = 
 #-------------------------------
 [FERROTHORN]
 Name = Ferrothorn
@@ -4569,6 +4857,7 @@ Shape = Multiped
 Category = Thorn Pod
 Pokedex = They attach themselves to cave ceilings, firing steel spikes at targets passing beneath them.
 Generation = 5
+FormName = 
 #-------------------------------
 [KLINKLANG]
 Name = Klinklang
@@ -4586,6 +4875,7 @@ Shape = MultiBody
 Category = Gear
 Pokedex = The gear with the red core is rotated at high speed for a rapid energy charge.
 Generation = 5
+FormName = 
 #-------------------------------
 [EELEKTROSS]
 Name = Eelektross
@@ -4603,6 +4893,7 @@ Shape = Finned
 Category = EleFish
 Pokedex = With their sucker mouths, they suck in prey. Then they use their fangs to shock the prey with electricity.
 Generation = 5
+FormName = 
 #-------------------------------
 [BEHEEYEM]
 Name = Beheeyem
@@ -4620,6 +4911,7 @@ Shape = Bipedal
 Category = Cerebral
 Pokedex = It uses psychic power to control an opponent's brain and tamper with its memories.
 Generation = 5
+FormName = 
 #-------------------------------
 [CHANDELURE]
 Name = Chandelure
@@ -4637,6 +4929,7 @@ Shape = HeadArms
 Category = Luring
 Pokedex = Being consumed in Chandelure's flame burns up the spirit, leaving the body behind.
 Generation = 5
+FormName = 
 #-------------------------------
 [HAXORUS]
 Name = Haxorus
@@ -4654,6 +4947,7 @@ Shape = BipedalTail
 Category = Axe Jaw
 Pokedex = Their sturdy tusks will stay sharp even if used to cut steel beams. These Pokémon are covered in hard armor.
 Generation = 5
+FormName = 
 #-------------------------------
 [BEARTIC]
 Name = Beartic
@@ -4671,6 +4965,7 @@ Shape = Quadruped
 Category = Freezing
 Pokedex = It freezes its breath to create fangs and claws of ice to fight with. Cold northern areas are its habitat.
 Generation = 5
+FormName = 
 #-------------------------------
 [CRYOGONAL]
 Name = Cryogonal
@@ -4688,6 +4983,7 @@ Shape = Head
 Category = Crystallizing
 Pokedex = They are born in snow clouds. They use chains made of ice crystals to capture prey.
 Generation = 5
+FormName = 
 #-------------------------------
 [ACCELGOR]
 Name = Accelgor
@@ -4705,6 +5001,7 @@ Shape = HeadArms
 Category = Shell Out
 Pokedex = Having removed its heavy shell, it becomes very light and can fight with ninja-like movements.
 Generation = 5
+FormName = 
 #-------------------------------
 [STUNFISK]
 Name = Stunfisk
@@ -4722,6 +5019,7 @@ Shape = Finned
 Category = Trap
 Pokedex = It conceals itself in the mud of the seashore. Then it waits. When prey touch it, it delivers a jolt of energy.
 Generation = 5
+FormName = 
 #-------------------------------
 [MIENSHAO]
 Name = Mienshao
@@ -4739,6 +5037,7 @@ Shape = BipedalTail
 Category = Martial Arts
 Pokedex = They use the long fur on their arms as a whip to strike their opponents.
 Generation = 5
+FormName = 
 #-------------------------------
 [DRUDDIGON]
 Name = Druddigon
@@ -4756,6 +5055,7 @@ Shape = BipedalTail
 Category = Cave
 Pokedex = It races through narrow caves, using its sharp claws to catch prey. Then skin on its face is harder than a rock.
 Generation = 5
+FormName = 
 #-------------------------------
 [GOLURK]
 Name = Golurk
@@ -4773,6 +5073,7 @@ Shape = Bipedal
 Category = Automaton
 Pokedex = It is said that Golurk were ordered to protect people and Pokémon by the ancient people who made them.
 Generation = 5
+FormName = 
 #-------------------------------
 [BOUFFALANT]
 Name = Bouffalant
@@ -4790,6 +5091,7 @@ Shape = Quadruped
 Category = Bash Buffalo
 Pokedex = They charge wildly and headbutt everything. They headbutts have enough destructive force to derail a train.
 Generation = 5
+FormName = 
 #-------------------------------
 [BRAVIARY]
 Name = Braviary
@@ -4807,6 +5109,7 @@ Shape = Winged
 Category = Valiant
 Pokedex = The more scars they have, the more respect these brave soldiers of the sky get from their peers.
 Generation = 5
+FormName = 
 #-------------------------------
 [MANDIBUZZ]
 Name = Mandibuzz
@@ -4824,6 +5127,7 @@ Shape = Winged
 Category = Bone Vulture
 Pokedex = Watching from the sky, they swoop to strike weakened Pokémon on the ground. They decorate themselves with bones.
 Generation = 5
+FormName = 
 #-------------------------------
 [HEATMOR]
 Name = Heatmor
@@ -4841,6 +5145,7 @@ Shape = BipedalTail
 Category = Anteater
 Pokedex = Using their very hot, flame-covered tongues, they burn through Durant's steel bodies and consume their insides.
 Generation = 5
+FormName = 
 #-------------------------------
 [DURANT]
 Name = Durant
@@ -4858,6 +5163,7 @@ Shape = Insectoid
 Category = Iron Ant
 Pokedex = Durant dig nests in mountains. They build their complicated, interconnected tunnels in mazes.
 Generation = 5
+FormName = 
 #-------------------------------
 [HYDREIGON]
 Name = Hydreigon
@@ -4875,6 +5181,7 @@ Shape = BipedalTail
 Category = Brutal
 Pokedex = The heads on their arms do not have brains. They use all three heads to consume and destroy everything.
 Generation = 5
+FormName = 
 #-------------------------------
 [VOLCARONA]
 Name = Volcarona
@@ -4892,6 +5199,7 @@ Shape = MultiWinged
 Category = Sun
 Pokedex = A sea of fire engulfs the surroundings of their battles, since they use their six wings to scatter their ember scales.
 Generation = 5
+FormName = 
 #-------------------------------
 [CHESNAUGHT]
 Name = Chesnaught
@@ -4909,6 +5217,7 @@ Shape = BipedalTail
 Category = Spiny Armor
 Pokedex = Its Tackle is forceful enough to flip a 50-ton tank. It shields its allies from danger with its own body.
 Generation = 6
+FormName = 
 #-------------------------------
 [DELPHOX]
 Name = Delphox
@@ -4926,6 +5235,7 @@ Shape = BipedalTail
 Category = Fox
 Pokedex = It gazes into the flame at the tip of its branch to achieve a focused state, which allows it to see into the future.
 Generation = 6
+FormName = 
 #-------------------------------
 [GRENINJA]
 Name = Greninja
@@ -4943,6 +5253,7 @@ Shape = Bipedal
 Category = Ninja
 Pokedex = It appears and vanishes with a ninja's grace. It toys with its enemies using swift movements, while slicing them with throwing stars of sharpest water.
 Generation = 6
+FormName = 
 #-------------------------------
 [DIGGERSBY]
 Name = Diggersby
@@ -4960,6 +5271,7 @@ Shape = BipedalTail
 Category = Digging
 Pokedex = As powerful as an excavator, its ears can reduce dense bedrock to rubble. When it's finished digging, it lounges lazily.
 Generation = 6
+FormName = 
 #-------------------------------
 [TALONFLAME]
 Name = Talonflame
@@ -4977,6 +5289,7 @@ Shape = Winged
 Category = Scorching
 Pokedex = In the fever of an exciting battle, it showers embers from the gaps between its feathers and takes to the air.
 Generation = 6
+FormName = 
 #-------------------------------
 [VIVILLON]
 Name = Vivillon
@@ -4994,6 +5307,7 @@ Shape = MultiWinged
 Category = Scale
 Pokedex = Vivillon with many different patterns are found all over the world. These patterns are affected by the climate of their habitat.
 Generation = 6
+FormName = 
 #-------------------------------
 [PYROAR]
 Name = Pyroar
@@ -5011,6 +5325,7 @@ Shape = Quadruped
 Category = Royal
 Pokedex = With fiery breath of more than 6,000 degrees Celsius, they viciously threaten any challenger. The females protect the pride's cubs.
 Generation = 6
+FormName = 
 #-------------------------------
 [FLORGES]
 Name = Florges
@@ -5028,6 +5343,7 @@ Shape = HeadArms
 Category = Garden
 Pokedex = It claims exquisite flower gardens as its territory, and it obtains power from basking in the energy emitted by flowering plants.
 Generation = 6
+FormName = 
 #-------------------------------
 [GOGOAT]
 Name = Gogoat
@@ -5045,6 +5361,7 @@ Shape = Quadruped
 Category = Mount
 Pokedex = It can tell how its trainer is feeling by subtle shifts in the grip on its horns. This empathetic sense lets them run as if one being.
 Generation = 6
+FormName = 
 #-------------------------------
 [PANGORO]
 Name = Pangoro
@@ -5062,6 +5379,7 @@ Shape = Bipedal
 Category = Daunting
 Pokedex = It charges ahead and bashes its opponents like a berserker, uncaring about any hits it might take. Its arms are mighty enough to snap a telephone pole.
 Generation = 6
+FormName = 
 #-------------------------------
 [FURFROU]
 Name = Furfrou
@@ -5079,6 +5397,7 @@ Shape = Quadruped
 Category = Poodle
 Pokedex = Trimming its fluffy fur not only makes it more elegant but also increases the swiftness of its movements.
 Generation = 6
+FormName = 
 #-------------------------------
 [MEOWSTIC]
 Name = Meowstic
@@ -5104,6 +5423,7 @@ Types = STEEL,GHOST
 BaseStats = 60,55,135,60,55,135
 GenderRatio = Female50Percent
 Abilities = STANCECHANGE
+HiddenAbilities =
 Moves = 0,TERABLAST,1,TERABLAST,1,AERIALACE,1,AFTERYOU,1,AIRSLASH,1,ATTRACT,1,AUTOTOMIZE,1,BLOCK,1,BRICKBREAK,1,BRUTALSWING,1,CLOSECOMBAT,1,CONFIDE,1,CUT,1,DESTINYBOND,1,DOUBLETEAM,1,ENDURE,1,FACADE,1,FALSESWIPE,1,FLASHCANNON,1,FRUSTRATION,1,FURYCUTTER,1,GIGAIMPACT,1,GYROBALL,1,HEADSMASH,1,HYPERBEAM,1,IRONDEFENSE,1,IRONHEAD,1,KINGSSHIELD,1,LASERFOCUS,1,MAGNETRISE,1,METALSOUND,1,NIGHTSLASH,1,POWERTRICK,1,PROTECT,1,PSYCHOCUT,1,PURSUIT,1,RAINDANCE,1,REFLECT,1,REST,1,RETALIATE,1,RETURN,1,REVERSAL,1,ROCKSLIDE,1,ROCKSMASH,1,ROUND,1,SACREDSWORD,1,SCREECH,1,SECRETPOWER,1,SHADOWBALL,1,SHADOWCLAW,1,SHADOWSNEAK,1,SHOCKWAVE,1,SLASH,1,SLEEPTALK,1,SNORE,1,SOLARBLADE,1,SPITE,1,STEELBEAM,1,SUBSTITUTE,1,SUNNYDAY,1,SWAGGER,1,SWORDSDANCE,1,TACKLE,1,WIDEGUARD
 EggGroups = Mineral
 Height = 1.7
@@ -5131,6 +5451,7 @@ Shape = Bipedal
 Category = Fragrance
 Pokedex = It devises various scents, pleasant and unpleasant, and emits scents that its enemies dislike in order to gain an edge in battle.
 Generation = 6
+FormName = 
 #-------------------------------
 [SLURPUFF]
 Name = Slurpuff
@@ -5148,6 +5469,7 @@ Shape = Bipedal
 Category = Meringue
 Pokedex = It can distinguish the faintest of scents. It puts its sensitive sense of smell to use by helping pastry chefs in their work.
 Generation = 6
+FormName = 
 #-------------------------------
 [MALAMAR]
 Name = Malamar
@@ -5165,6 +5487,7 @@ Shape = HeadBase
 Category = Overturning
 Pokedex = It lures prey close with hypnotic motions, then wraps its tentacles around it before finishing it off with digestive fluids.
 Generation = 6
+FormName = 
 #-------------------------------
 [BARBARACLE]
 Name = Barbaracle
@@ -5182,6 +5505,7 @@ Shape = MultiBody
 Category = Collective
 Pokedex = Barbaracle's legs and hands have minds of their own, and they will move independently. But they usually follow the head's orders.
 Generation = 6
+FormName = 
 #-------------------------------
 [DRAGALGE]
 Name = Dragalge
@@ -5199,6 +5523,7 @@ Shape = HeadBase
 Category = Mock Kelp
 Pokedex = Their poison is strong enough to eat through the hull of a tanker, and they spit it indiscriminately at anything that enters their territory.
 Generation = 6
+FormName = 
 #-------------------------------
 [CLAWITZER]
 Name = Clawitzer
@@ -5216,6 +5541,7 @@ Shape = Serpentine
 Category = Howitzer
 Pokedex = By expelling water from the nozzle in the back of its claw, it can move at a speed of 60 knots.
 Generation = 6
+FormName = 
 #-------------------------------
 [HELIOLISK]
 Name = Heliolisk
@@ -5233,6 +5559,7 @@ Shape = BipedalTail
 Category = Generator
 Pokedex = They flare their frills and generate energy. A single Heliolisk can generate sufficient electricity to power a skyscraper.
 Generation = 6
+FormName = 
 #-------------------------------
 [TYRANTRUM]
 Name = Tyrantrum
@@ -5250,6 +5577,7 @@ Shape = BipedalTail
 Category = Despot
 Pokedex = Thanks to its gargantuan jaws, which could shred thick metal plates as if they were paper, it was invincible in the ancient world it once inhabited.
 Generation = 6
+FormName = 
 #-------------------------------
 [AURORUS]
 Name = Aurorus
@@ -5267,6 +5595,7 @@ Shape = Quadruped
 Category = Tundra
 Pokedex = Using its diamond-shaped crystals, it can instantly create a wall of ice to block an opponent's attack.
 Generation = 6
+FormName = 
 #-------------------------------
 [SYLVEON]
 Name = Sylveon
@@ -5284,6 +5613,7 @@ Shape = Quadruped
 Category = Intertwining
 Pokedex = Its ribbonlike feelers give off an aura that weakens hostility in its prey, causing them to let down their guard. Then it attacks.
 Generation = 6
+FormName = 
 #-------------------------------
 [HAWLUCHA]
 Name = Hawlucha
@@ -5301,6 +5631,7 @@ Shape = Bipedal
 Category = Wrestling
 Pokedex = With its wings, it controls its position in the air. It likes to attack from above, a maneuver that is difficult to defend against.
 Generation = 6
+FormName = 
 #-------------------------------
 [DEDENNE]
 Name = Dedenne
@@ -5318,6 +5649,7 @@ Shape = BipedalTail
 Category = Antenna
 Pokedex = Its whiskers serve as antennas. By sending and receiving electrical waves, it can communicate with others over vast distances.
 Generation = 6
+FormName = 
 #-------------------------------
 [CARBINK]
 Name = Carbink
@@ -5335,6 +5667,7 @@ Shape = Head
 Category = Jewel
 Pokedex = Born from the high temperatures and pressures deep underground, it defends itself by firing beams from the jewel part of its body.
 Generation = 6
+FormName = 
 #-------------------------------
 [GOODRA]
 Name = Goodra
@@ -5352,6 +5685,7 @@ Shape = BipedalTail
 Category = Dragon
 Pokedex = It gets picked on because it's meek. But then, whoever teased it gets to feel the full force of its horns and a good swatting from its thick tail.
 Generation = 6
+FormName = 
 #-------------------------------
 [KLEFKI]
 Name = Klefki
@@ -5369,6 +5703,7 @@ Shape = Head
 Category = Key Ring
 Pokedex = It never lets go of a key that it likes, so people give it the keys to vaults and safes as a way to prevent crime.
 Generation = 6
+FormName = 
 #-------------------------------
 [TREVENANT]
 Name = Trevenant
@@ -5386,6 +5721,7 @@ Shape = Multiped
 Category = Elder Tree
 Pokedex = Through its roots, it exerts control over other trees. A deadly curse falls upon anyone cutting down trees in forests where Trevenant dwell.
 Generation = 6
+FormName = 
 #-------------------------------
 [GOURGEIST]
 Name = Gourgeist
@@ -5401,8 +5737,9 @@ Weight = 9.5
 Color = Brown
 Shape = HeadBase
 Category = Pumpkin
-Pokedex = Eerie cries emanate from its body in the dead of night. The sounds are said to be the wails of spirits who are suffering in the afterlife.
+Pokedex = Small Gourgeist pretend to be children to fool adults. Anyone who falls for the act gets carried away to the hereafter.
 Generation = 6
+FormName = 
 #-------------------------------
 [AVALUGG]
 Name = Avalugg
@@ -5420,6 +5757,7 @@ Shape = Quadruped
 Category = Iceberg
 Pokedex = Its ice-covered body is as hard as steel. Its cumbersome frame crushes anything that stands in its way.
 Generation = 6
+FormName = 
 #-------------------------------
 [NOIVERN]
 Name = Noivern
@@ -5437,6 +5775,7 @@ Shape = Winged
 Category = Sound Wave
 Pokedex = They fly around on moonless nights and attack careless prey. Nothing can beat them in a battle in the dark.
 Generation = 6
+FormName = 
 #-------------------------------
 [DECIDUEYE]
 Name = Decidueye
@@ -5454,6 +5793,7 @@ Shape = Winged
 Category = Arrow Quill
 Pokedex = It fires arrow quills from its wings with such precision, they can pierce a pebble at distances over a hundred yards.
 Generation = 7
+FormName = 
 #-------------------------------
 [INCINEROAR]
 Name = Incineroar
@@ -5471,6 +5811,7 @@ Shape = BipedalTail
 Category = Heel
 Pokedex = Although it's rough mannered and egotistical, it finds beating down unworthy opponents boring. It gets motivated for stronger opponents.
 Generation = 7
+FormName = 
 #-------------------------------
 [PRIMARINA]
 Name = Primarina
@@ -5488,6 +5829,7 @@ Shape = Finned
 Category = Soloist
 Pokedex = It controls its water balloons with song. The melody is learned from others of its kind and is passed down from one generation to the next.
 Generation = 7
+FormName = 
 #-------------------------------
 [TOUCANNON]
 Name = Toucannon
@@ -5505,6 +5847,7 @@ Shape = Winged
 Category = Cannon
 Pokedex = They smack beaks with others of their kind to communicate. The strength and number of hits tell each other how they feel.
 Generation = 7
+FormName = 
 #-------------------------------
 [GUMSHOOS]
 Name = Gumshoos
@@ -5522,6 +5865,7 @@ Shape = Quadruped
 Category = Stakeout
 Pokedex = When it finds a trace of its prey, it patiently stakes out the location... but it's always snoozing by nightfall.
 Generation = 7
+FormName = 
 #-------------------------------
 [VIKAVOLT]
 Name = Vikavolt
@@ -5539,6 +5883,7 @@ Shape = Insectoid
 Category = Stag Beetle
 Pokedex = It zips around, on sharp lookout for an opening. It concentrates electrical energy within its large jaws and uses it to zap its enemies.
 Generation = 7
+FormName = 
 #-------------------------------
 [CRABOMINABLE]
 Name = Crabominable
@@ -5556,6 +5901,7 @@ Shape = Insectoid
 Category = Woolly Crab
 Pokedex = It aimed for the top but got lost and ended up on a snowy mountain. Being forced to endure the cold, this Pokémon evolved and grew fur.
 Generation = 7
+FormName = 
 #-------------------------------
 [ORICORIO]
 Name = Oricorio
@@ -5591,6 +5937,7 @@ Shape = MultiWinged
 Category = Bee Fly
 Pokedex = Rain makes pollen damp, so Ribombee hates rain. When it sees ominous clouds, it finds a hollow in a tree, where it waits stock-still.
 Generation = 7
+FormName = 
 #-------------------------------
 [LYCANROC]
 Name = Lycanroc
@@ -5616,6 +5963,7 @@ Types = WATER
 BaseStats = 75,70,45,85,75,50
 GenderRatio = Female50Percent
 Abilities = SCHOOLING
+HiddenAbilities =
 Moves = 0,TERABLAST,1,TERABLAST,1,AQUARING,1,AQUATAIL,1,ATTRACT,1,BEATUP,1,BRINE,1,BULLDOZE,1,CONFIDE,1,COVET,1,CURSE,1,DIVE,1,DOUBLEEDGE,1,DOUBLETEAM,1,EARTHQUAKE,1,ENDEAVOR,1,ENDURE,1,FACADE,1,FEINTATTACK,1,FLIPTURN,1,FRUSTRATION,1,GROWL,1,HAIL,1,HELPINGHAND,1,HYDROPUMP,1,ICEBEAM,1,ICYWIND,1,IRONTAIL,1,LIQUIDATION,1,MIST,1,MUDDYWATER,1,MUDSHOT,1,PROTECT,1,RAINDANCE,1,REST,1,RETURN,1,ROUND,1,SCALESHOT,1,SLEEPTALK,1,SNORE,1,SOAK,1,SUBSTITUTE,1,SURF,1,SWAGGER,1,TAKEDOWN,1,TAUNT,1,TEARFULLOOK,1,UPROAR,1,UTURN,1,WATERFALL,1,WATERGUN,1,WATERPULSE,1,WATERSPORT,1,WAVECRASH,1,WHIRLPOOL
 EggGroups = Water2
 Height = 0.2
@@ -5643,6 +5991,7 @@ Shape = Multiped
 Category = Brutal Star
 Pokedex = Those attacked by Toxapex's poison will suffer intense pain for three days and three nights. Post-recovery, there will be some aftereffects.
 Generation = 7
+FormName = 
 #-------------------------------
 [MUDSDALE]
 Name = Mudsdale
@@ -5660,6 +6009,7 @@ Shape = Quadruped
 Category = Draft Horse
 Pokedex = It remains calm and unmoving no matter the situation. It mixes dirt with the saliva in its mouth to make a special kind of mud.
 Generation = 7
+FormName = 
 #-------------------------------
 [ARAQUANID]
 Name = Araquanid
@@ -5677,6 +6027,7 @@ Shape = Insectoid
 Category = Water Bubble
 Pokedex = It delivers headbutts with the water bubble on its head. Small Pokémon get sucked into the bubble, where they drown.
 Generation = 7
+FormName = 
 #-------------------------------
 [LURANTIS]
 Name = Lurantis
@@ -5694,6 +6045,7 @@ Shape = Bipedal
 Category = Bloom Sickle
 Pokedex = It requires a lot of effort to maintain Lurantis's vivid coloring, but some collectors enjoy this work and treat it as their hobby.
 Generation = 7
+FormName = 
 #-------------------------------
 [SHIINOTIC]
 Name = Shiinotic
@@ -5711,6 +6063,7 @@ Shape = Bipedal
 Category = Illuminating
 Pokedex = It puts its prey to sleep and siphons off their vitality through the tip of its arms. If one of its kind is weakened, it helps by sending it vitality.
 Generation = 7
+FormName = 
 #-------------------------------
 [SALAZZLE]
 Name = Salazzle
@@ -5728,6 +6081,7 @@ Shape = Quadruped
 Category = Toxic Lizard
 Pokedex = Filled with pheromones, its poisonous gas can be diluted to use in the production of luscious perfumes.
 Generation = 7
+FormName = 
 #-------------------------------
 [BEWEAR]
 Name = Bewear
@@ -5745,6 +6099,7 @@ Shape = BipedalTail
 Category = Strong Arm
 Pokedex = It waves its hands wildly in intimidation and warning. Life is over for anyone who doesn't run away as fast as possible.
 Generation = 7
+FormName = 
 #-------------------------------
 [TSAREENA]
 Name = Tsareena
@@ -5762,6 +6117,7 @@ Shape = Bipedal
 Category = Fruit
 Pokedex = A Pokémon with an aggressive personality and a mastery of kicking, it cackles every time it kicks an opponent.
 Generation = 7
+FormName = 
 #-------------------------------
 [COMFEY]
 Name = Comfey
@@ -5779,6 +6135,7 @@ Shape = Head
 Category = Posy Picker
 Pokedex = Baths prepared with the flowers from its vine have a relaxing effect, so this Pokémon is a hit with many people.
 Generation = 7
+FormName = 
 #-------------------------------
 [ORANGURU]
 Name = Oranguru
@@ -5796,6 +6153,7 @@ Shape = Bipedal
 Category = Sage
 Pokedex = It normally spends its time meditating in the treetops. It throws Poké Balls and gives other Pokémon orders as it pleases.
 Generation = 7
+FormName = 
 #-------------------------------
 [PASSIMIAN]
 Name = Passimian
@@ -5813,6 +6171,7 @@ Shape = BipedalTail
 Category = Teamwork
 Pokedex = Berries are its weapons as well as the staple of its diet. The one that can throw a berry the farthest is the boss of the troop.
 Generation = 7
+FormName = 
 #-------------------------------
 [GOLISOPOD]
 Name = Golisopod
@@ -5820,6 +6179,7 @@ Types = BUG,WATER
 BaseStats = 75,125,140,40,60,90
 GenderRatio = Female50Percent
 Abilities = EMERGENCYEXIT
+HiddenAbilities =
 Moves = 0,TERABLAST,1,TERABLAST,1,AERIALACE,1,AQUAJET,1,ASSURANCE,1,ATTRACT,1,BLIZZARD,1,BRICKBREAK,1,BUGBITE,1,BUGBUZZ,1,BULKUP,1,CLOSECOMBAT,1,CONFIDE,1,DARKPULSE,1,DEFENSECURL,1,DIVE,1,DOUBLETEAM,1,DRILLRUN,1,DUALCHOP,1,ENDEAVOR,1,ENDURE,1,FACADE,1,FALSESWIPE,1,FIRSTIMPRESSION,1,FLING,1,FOCUSBLAST,1,FROSTBREATH,1,FRUSTRATION,1,FURYCUTTER,1,GIGAIMPACT,1,HAIL,1,HARDEN,1,HYPERBEAM,1,ICEBEAM,1,ICYWIND,1,IRONDEFENSE,1,IRONHEAD,1,JETPUNCH,1,KNOCKOFF,1,LASERFOCUS,1,LEECHLIFE,1,LIQUIDATION,1,METALCLAW,1,MUDDYWATER,1,MUDSHOT,1,PAINSPLIT,1,PAYBACK,1,PINMISSILE,1,POISONJAB,1,PROTECT,1,PSYCHUP,1,RAINDANCE,1,RAZORSHELL,1,REST,1,RETURN,1,ROCKSLIDE,1,ROCKSMASH,1,ROCKTOMB,1,ROLLOUT,1,ROUND,1,SANDATTACK,1,SCREECH,1,SHADOWCLAW,1,SKITTERSMACK,1,SLASH,1,SLEEPTALK,1,SLUDGEBOMB,1,SLUDGEWAVE,1,SNARL,1,SNORE,1,SPIKES,1,SPITE,1,STRUGGLEBUG,1,SUBSTITUTE,1,SUCKERPUNCH,1,SURF,1,SWAGGER,1,SWIFT,1,SWORDSDANCE,1,TAUNT,1,THROATCHOP,1,VENOSHOCK,1,WATERFALL,1,WATERPULSE,1,WIDEGUARD,1,XSCISSOR
 EggGroups = Bug,Water3
 Height = 2
@@ -5829,6 +6189,7 @@ Shape = Bipedal
 Category = Hard Scale
 Pokedex = It battles skillfully with its six arms, but spends most of its time peacefully meditating in caves deep beneath the sea.
 Generation = 7
+FormName = 
 #-------------------------------
 [PALOSSAND]
 Name = Palossand
@@ -5846,6 +6207,7 @@ Shape = Serpentine
 Category = Sand Castle
 Pokedex = Buried beneath the castle are masses of dried-up bones from those whose vitality it has drained.
 Generation = 7
+FormName = 
 #-------------------------------
 [PYUKUMUKU]
 Name = Pyukumuku
@@ -5863,6 +6225,7 @@ Shape = Serpentine
 Category = Sea Cucumber
 Pokedex = It lives in shallow seas, such as areas near a beach. It can eject its internal organs, which it uses to engulf its prey or battle enemies.
 Generation = 7
+FormName = 
 #-------------------------------
 [MINIOR]
 Name = Minior
@@ -5870,6 +6233,7 @@ Types = ROCK,FLYING
 BaseStats = 60,60,120,60,60,120
 GenderRatio = Genderless
 Abilities = SHIELDSDOWN
+HiddenAbilities =
 Moves = 0,TERABLAST,1,TERABLAST,1,ACROBATICS,1,ANCIENTPOWER,1,ATTRACT,1,AUTOTOMIZE,1,BULLDOZE,1,CALMMIND,1,CHARGEBEAM,1,CONFIDE,1,CONFUSERAY,1,COSMICPOWER,1,DAZZLINGGLEAM,1,DEFENSECURL,1,DOUBLEEDGE,1,DOUBLETEAM,1,EARTHPOWER,1,EARTHQUAKE,1,ENDEAVOR,1,EXPLOSION,1,FACADE,1,FRUSTRATION,1,GIGAIMPACT,1,GRAVITY,1,GYROBALL,1,HYPERBEAM,1,IRONHEAD,1,LASTRESORT,1,LIGHTSCREEN,1,MAGNETRISE,1,METEORBEAM,1,POWERGEM,1,PROTECT,1,PSYCHIC,1,PSYCHUP,1,REFLECT,1,REST,1,RETURN,1,ROCKPOLISH,1,ROCKSLIDE,1,ROCKTOMB,1,ROLLOUT,1,ROUND,1,SAFEGUARD,1,SANDSTORM,1,SELFDESTRUCT,1,SHELLSMASH,1,SLEEPTALK,1,SNORE,1,SOLARBEAM,1,STEALTHROCK,1,STONEEDGE,1,SUBSTITUTE,1,SWAGGER,1,SWIFT,1,TACKLE,1,TAKEDOWN,1,TELEKINESIS,1,UTURN,1,ZENHEADBUTT
 EggGroups = Mineral
 Height = 0.3
@@ -5897,6 +6261,7 @@ Shape = Bipedal
 Category = Drowsing
 Pokedex = It remains asleep from birth to death as a result of the sedative properties of the leaves that form its diet.
 Generation = 7
+FormName = 
 #-------------------------------
 [TURTONATOR]
 Name = Turtonator
@@ -5914,6 +6279,7 @@ Shape = BipedalTail
 Category = Blast Turtle
 Pokedex = It lives in volcanoes and eats sulfur and other minerals. Materials from the food it eats form the basis of its explosive shell.
 Generation = 7
+FormName = 
 #-------------------------------
 [TOGEDEMARU]
 Name = Togedemaru
@@ -5931,6 +6297,7 @@ Shape = BipedalTail
 Category = Roly-Poly
 Pokedex = The long hairs on its back act as lightning rods. The bolts of lightning it attracts are stored as energy in its electric sac.
 Generation = 7
+FormName = 
 #-------------------------------
 [MIMIKYU]
 Name = Mimikyu
@@ -5938,6 +6305,7 @@ Types = GHOST,FAIRY
 BaseStats = 55,100,80,101,39,105
 GenderRatio = Female50Percent
 Abilities = DISGUISE
+HiddenAbilities =
 Moves = 0,TERABLAST,1,TERABLAST,1,AFTERYOU,1,ASTONISH,1,ATTRACT,1,BABYDOLLEYES,1,BEATUP,1,BULKUP,1,BURNINGJEALOUSY,1,CHARGEBEAM,1,CHARM,1,CONFIDE,1,CONFUSERAY,1,COPYCAT,1,COVET,1,CURSE,1,DARKPULSE,1,DAZZLINGGLEAM,1,DESTINYBOND,1,DOUBLETEAM,1,DRAININGKISS,1,DRAINPUNCH,1,DREAMEATER,1,EMBARGO,1,ENDURE,1,FACADE,1,FEINTATTACK,1,FLING,1,FRUSTRATION,1,GIGADRAIN,1,GIGAIMPACT,1,GRUDGE,1,HEX,1,HONECLAWS,1,HYPERBEAM,1,INFESTATION,1,LASTRESORT,1,LEECHLIFE,1,LIGHTSCREEN,1,MAGICROOM,1,MIMIC,1,MISTYTERRAIN,1,NIGHTMARE,1,NIGHTSHADE,1,PAINSPLIT,1,PAYBACK,1,PHANTOMFORCE,1,PLAYROUGH,1,POUNCE,1,PROTECT,1,PSYCHIC,1,PSYCHUP,1,RAINDANCE,1,REST,1,RETURN,1,ROUND,1,SAFEGUARD,1,SCRATCH,1,SCREECH,1,SHADOWBALL,1,SHADOWCLAW,1,SHADOWSNEAK,1,SLASH,1,SLEEPTALK,1,SNATCH,1,SNORE,1,SPITE,1,SPLASH,1,SUBSTITUTE,1,SUNNYDAY,1,SWAGGER,1,SWORDSDANCE,1,TAKEDOWN,1,TAUNT,1,TELEKINESIS,1,THIEF,1,THUNDER,1,THUNDERBOLT,1,THUNDERWAVE,1,TRAILBLAZE,1,TRICK,1,TRICKROOM,1,WILLOWISP,1,WOODHAMMER,1,WORKUP,1,XSCISSOR
 EggGroups = Amorphous
 Height = 0.2
@@ -5947,6 +6315,7 @@ Shape = Serpentine
 Category = Disguise
 Pokedex = A lonely Pokémon, it conceals its terrifying appearance beneath an old rag so it can get closer to people and other Pokémon.
 Generation = 7
+FormName = 
 #-------------------------------
 [BRUXISH]
 Name = Bruxish
@@ -5964,6 +6333,7 @@ Shape = Finned
 Category = Gnash Teeth
 Pokedex = When it unleashes its psychic power from the protuberance on its head, the grating sound of grinding teeth echoes through the area.
 Generation = 7
+FormName = 
 #-------------------------------
 [DRAMPA]
 Name = Drampa
@@ -5981,6 +6351,7 @@ Shape = Serpentine
 Category = Placid
 Pokedex = This Pokémon is friendly to people and loves children most of all. It comes from deep in the mountains to play with children it likes in town.
 Generation = 7
+FormName = 
 #-------------------------------
 [DHELMISE]
 Name = Dhelmise
@@ -5998,6 +6369,7 @@ Shape = HeadBase
 Category = Sea Creeper
 Pokedex = The soul of seaweed adrift in the waves became reborn as this Pokémon. It maintains itself with new infusions of seabed detritus and seaweed.
 Generation = 7
+FormName = 
 #-------------------------------
 [KOMMOO]
 Name = Kommo-o
@@ -6015,6 +6387,7 @@ Shape = BipedalTail
 Category = Scaly
 Pokedex = Its rigid scales function as offense and defense. In the past, its scales were processed and used to make weapons and other commodities.
 Generation = 7
+FormName = 
 #-------------------------------
 [RILLABOOM]
 Name = Rillaboom
@@ -6032,6 +6405,7 @@ Shape = Bipedal
 Category = Drummer
 Pokedex = By drumming, it taps into the power of its special tree stump. The roots of the stump follow its direction in battle.
 Generation = 8
+FormName = 
 #-------------------------------
 [CINDERACE]
 Name = Cinderace
@@ -6049,6 +6423,7 @@ Shape = BipedalTail
 Category = Striker
 Pokedex = It juggles a pebble with its feet, turning it into a burning soccer ball. Its shots strike opponents hard and leave them scorched.
 Generation = 8
+FormName = 
 #-------------------------------
 [INTELEON]
 Name = Inteleon
@@ -6066,6 +6441,7 @@ Shape = BipedalTail
 Category = Secret Agent
 Pokedex = It has many hidden capabilities, such as fingertips that can shoot water and a membrane on its back that it can use to glide through the air.
 Generation = 8
+FormName = 
 #-------------------------------
 [GREEDENT]
 Name = Greedent
@@ -6083,6 +6459,7 @@ Shape = BipedalTail
 Category = Greedy
 Pokedex = It stashes berries in its tail - so many berries that they fall out constantly. But this Pokémon is a bit slow-witted, so it doesn't notice the loss.
 Generation = 8
+FormName = 
 #-------------------------------
 [CORVIKNIGHT]
 Name = Corviknight
@@ -6100,6 +6477,7 @@ Shape = Winged
 Category = Raven
 Pokedex = This Pokémon reigns supreme in the skies. The black luster of its steel body could drive terror into the heart of any foe.
 Generation = 8
+FormName = 
 #-------------------------------
 [ORBEETLE]
 Name = Orbeetle
@@ -6117,6 +6495,7 @@ Shape = Winged
 Category = Seven Spot
 Pokedex = It's famous for its high level of intelligence, and the large size of its brain is proof that it also possesses immense psychic power.
 Generation = 8
+FormName = 
 #-------------------------------
 [THIEVUL]
 Name = Thievul
@@ -6134,6 +6513,7 @@ Shape = Quadruped
 Category = Fox
 Pokedex = It secretly marks potential targets with a scent. By following the scent, it stalks its targets and steals from them when they least expect it.
 Generation = 8
+FormName = 
 #-------------------------------
 [ELDEGOSS]
 Name = Eldegoss
@@ -6151,6 +6531,7 @@ Shape = HeadBase
 Category = Cotton Bloom
 Pokedex = The seeds attached to its cotton fluff are full of nutrients. It spreads them on the wind so that plants and other Pokémon can benefit from them.
 Generation = 8
+FormName = 
 #-------------------------------
 [DUBWOOL]
 Name = Dubwool
@@ -6168,6 +6549,7 @@ Shape = Quadruped
 Category = Sheep
 Pokedex = Its majestic horns are meant only to impress the opposite gender. They never see use in battle.
 Generation = 8
+FormName = 
 #-------------------------------
 [DREDNAW]
 Name = Drednaw
@@ -6185,6 +6567,7 @@ Shape = Quadruped
 Category = Bite
 Pokedex = With jaws that can shear through steel rods, this highly aggressive Pokémon chomps down on its unfortunate prey.
 Generation = 8
+FormName = 
 #-------------------------------
 [BOLTUND]
 Name = Boltund
@@ -6202,6 +6585,7 @@ Shape = Quadruped
 Category = Dog
 Pokedex = This Pokémon generates electricity and channels it into its legs to keep them going strong. Boltund can run nonstop for three full days.
 Generation = 8
+FormName = 
 #-------------------------------
 [COALOSSAL]
 Name = Coalossal
@@ -6219,6 +6603,7 @@ Shape = Bipedal
 Category = Coal
 Pokedex = While it's engaged in battle, its mountain of coal will burn bright red, sending off sparks that scorch the surrounding area.
 Generation = 8
+FormName = 
 #-------------------------------
 [FLAPPLE]
 Name = Flapple
@@ -6236,6 +6621,7 @@ Shape = Winged
 Category = Apple Wing
 Pokedex = It ate a sour apple, and that induced its evolution. In its cheeks, it stores an acid capable of causing chemical burns.
 Generation = 8
+FormName = 
 #-------------------------------
 [APPLETUN]
 Name = Appletun
@@ -6253,6 +6639,7 @@ Shape = Quadruped
 Category = Apple Nectar
 Pokedex = Its body is covered in sweet nectar, and the skin on its back is especially yummy. Children used to have it as a snack.
 Generation = 8
+FormName = 
 #-------------------------------
 [SANDACONDA]
 Name = Sandaconda
@@ -6270,6 +6657,7 @@ Shape = Serpentine
 Category = Sand Snake
 Pokedex = Its unique style of coiling allows it to blast sand out of its sand sac more efficiently.
 Generation = 8
+FormName = 
 #-------------------------------
 [CRAMORANT]
 Name = Cramorant
@@ -6277,6 +6665,7 @@ Types = FLYING,WATER
 BaseStats = 70,95,55,95,100,95
 GenderRatio = Female50Percent
 Abilities = GULPMISSILE
+HiddenAbilities =
 Moves = 0,TERABLAST,1,TERABLAST,1,AERIALACE,1,AGILITY,1,AIRSLASH,1,AMNESIA,1,AQUARING,1,ASSURANCE,1,ATTRACT,1,BELCH,1,BLIZZARD,1,BRAVEBIRD,1,CHARGEBEAM,1,DEFOG,1,DIVE,1,DRILLPECK,1,DUALWINGBEAT,1,ENDURE,1,FACADE,1,FEATHERDANCE,1,FLY,1,FOCUSBLAST,1,FURYATTACK,1,GIGAIMPACT,1,HURRICANE,1,HYDROPUMP,1,HYPERBEAM,1,ICEBEAM,1,ICYWIND,1,LIQUIDATION,1,PECK,1,PLUCK,1,PROTECT,1,RAINDANCE,1,REST,1,REVERSAL,1,ROOST,1,ROUND,1,SHOCKWAVE,1,SLEEPTALK,1,SNORE,1,SPITUP,1,STEELWING,1,STOCKPILE,1,SUBSTITUTE,1,SUPERPOWER,1,SURF,1,SWALLOW,1,THIEF,1,THRASH,1,THROATCHOP,1,UPROAR,1,WATERGUN,1,WEATHERBALL,1,WHIRLPOOL
 EggGroups = Water1,Flying
 Height = 0.8
@@ -6286,6 +6675,7 @@ Shape = Winged
 Category = Gulp
 Pokedex = It's so strong that it can knock out some opponents in a single hit, but it also may forget what it's battling midfight.
 Generation = 8
+FormName = 
 #-------------------------------
 [BARRASKEWDA]
 Name = Barraskewda
@@ -6303,6 +6693,7 @@ Shape = Finned
 Category = Skewer
 Pokedex = This Pokémon has a jaw that's as sharp as a spear and as strong as steel. Apparently Barraskewda's flesh is surprisingly tasty, too.
 Generation = 8
+FormName = 
 #-------------------------------
 [TOXTRICITY]
 Name = Toxtricity
@@ -6338,6 +6729,7 @@ Shape = Multiped
 Category = Radiator
 Pokedex = While its burning body is already dangerous on its own, this excessively hostile Pokémon also has large and very sharp fangs.
 Generation = 8
+FormName = 
 #-------------------------------
 [GRAPPLOCT]
 Name = Grapploct
@@ -6355,6 +6747,7 @@ Shape = Multiped
 Category = Jujitsu
 Pokedex = A body made up of nothing but muscle makes the grappling moves this Pokémon performs with its tentacles tremendously powerful.
 Generation = 8
+FormName = 
 #-------------------------------
 [POLTEAGEIST]
 Name = Polteageist
@@ -6372,6 +6765,7 @@ Shape = Head
 Category = Black Tea
 Pokedex = This species lives in antique teapots. Most pots are forgeries, but on rare occasions, an authentic work is found.
 Generation = 8
+FormName = 
 #-------------------------------
 [HATTERENE]
 Name = Hatterene
@@ -6389,6 +6783,7 @@ Shape = HeadBase
 Category = Silent
 Pokedex = It emits psychic power strong enough to cause headaches as a deterrent to the approach of others.
 Generation = 8
+FormName = 
 #-------------------------------
 [GRIMMSNARL]
 Name = Grimmsnarl
@@ -6406,6 +6801,7 @@ Shape = Bipedal
 Category = Bulk Up
 Pokedex = Its hairs work like muscle fibers. When its hairs unfurl, they latch on to opponents, ensnaring them as tentacles would.
 Generation = 8
+FormName = 
 #-------------------------------
 [OBSTAGOON]
 Name = Obstagoon
@@ -6423,6 +6819,7 @@ Shape = BipedalTail
 Category = Blocking
 Pokedex = It evolved after experiencing numerous fights. While crossing its arms, it lets out a shout that would make any opponent flinch.
 Generation = 8
+FormName = 
 #-------------------------------
 [PERRSERKER]
 Name = Perrserker
@@ -6440,6 +6837,7 @@ Shape = BipedalTail
 Category = Viking
 Pokedex = What appears to be an iron helmet is actually hardened hair. This Pokémon lives for the thrill of battle.
 Generation = 8
+FormName = 
 #-------------------------------
 [CURSOLA]
 Name = Cursola
@@ -6457,6 +6855,7 @@ Shape = HeadArms
 Category = Coral
 Pokedex = Its shell is overflowing with its heightened otherworldly energy. The ectoplasm serves as protection for this Pokémon's core spirit.
 Generation = 8
+FormName = 
 #-------------------------------
 [SIRFETCHD]
 Name = Sirfetch'd
@@ -6474,6 +6873,7 @@ Shape = Winged
 Category = Wild Duck
 Pokedex = After deflecting attacks with its hard leaf shield, it strikes back with its sharp leek stalk. The leek stalk is both weapon and food.
 Generation = 8
+FormName = 
 #-------------------------------
 [MRRIME]
 Name = Mr. Rime
@@ -6491,6 +6891,7 @@ Shape = Bipedal
 Category = Comedian
 Pokedex = Its amusing movements make it very popular. It releases its psychic power from the pattern on its belly.
 Generation = 8
+FormName = 
 #-------------------------------
 [RUNERIGUS]
 Name = Runerigus
@@ -6508,6 +6909,7 @@ Shape = HeadBase
 Category = Grudge
 Pokedex = A powerful curse was woven into an ancient painting. After absorbing the spirit of a Yamask, the painting began to move.
 Generation = 8
+FormName = 
 #-------------------------------
 [ALCREMIE]
 Name = Alcremie
@@ -6525,6 +6927,7 @@ Shape = HeadBase
 Category = Cream
 Pokedex = When Alcremie is content, the cream it secretes from its hands becomes sweeter and richer.
 Generation = 8
+FormName = 
 #-------------------------------
 [FALINKS]
 Name = Falinks
@@ -6542,6 +6945,7 @@ Shape = MultiBody
 Category = Formation
 Pokedex = The six of them work together as one Pokémon. Teamwork is also their battle strategy, and they constantly change their formation as they fight.
 Generation = 8
+FormName = 
 #-------------------------------
 [PINCURCHIN]
 Name = Pincurchin
@@ -6559,6 +6963,7 @@ Shape = Multiped
 Category = Sea Urchin
 Pokedex = It stores electricity in each spine. Even if one gets broken off, it still continues to emit electricity for at least three hours.
 Generation = 8
+FormName = 
 #-------------------------------
 [FROSMOTH]
 Name = Frosmoth
@@ -6576,6 +6981,7 @@ Shape = MultiWinged
 Category = Frost Moth
 Pokedex = It shows no mercy to any who desecrate fields and mountains. It will fly around on its icy wings, causing a blizzard to chase offenders away.
 Generation = 8
+FormName = 
 #-------------------------------
 [STONJOURNER]
 Name = Stonjourner
@@ -6583,6 +6989,7 @@ Types = ROCK
 BaseStats = 100,125,135,70,20,45
 GenderRatio = Female50Percent
 Abilities = POWERSPOT
+HiddenAbilities =
 Moves = 0,TERABLAST,1,TERABLAST,1,ANCIENTPOWER,1,ASSURANCE,1,ATTRACT,1,BLOCK,1,BODYPRESS,1,BODYSLAM,1,BRUTALSWING,1,BULLDOZE,1,CURSE,1,EARTHPOWER,1,EARTHQUAKE,1,ENDURE,1,FACADE,1,GIGAIMPACT,1,GRAVITY,1,HEATCRASH,1,HEAVYSLAM,1,HYPERBEAM,1,IMPRISON,1,IRONDEFENSE,1,LOWKICK,1,LOWSWEEP,1,MEGAKICK,1,METEORBEAM,1,POWERGEM,1,PROTECT,1,REST,1,ROCKBLAST,1,ROCKPOLISH,1,ROCKSLIDE,1,ROCKTHROW,1,ROCKTOMB,1,ROUND,1,SAFEGUARD,1,SANDSTORM,1,SANDTOMB,1,SELFDESTRUCT,1,SLEEPTALK,1,SNORE,1,STEALTHROCK,1,STOMP,1,STOMPINGTANTRUM,1,STONEEDGE,1,SUBSTITUTE,1,SUNNYDAY,1,SUPERPOWER,1,TAKEDOWN,1,WIDEGUARD,1,WONDERROOM
 EggGroups = Mineral
 Height = 2.5
@@ -6592,6 +6999,7 @@ Shape = HeadLegs
 Category = Big Rock
 Pokedex = Once a year, on a specific date and at a specific time, they gather out of nowhere and form up in a circle.
 Generation = 8
+FormName = 
 #-------------------------------
 [EISCUE]
 Name = Eiscue
@@ -6599,6 +7007,7 @@ Types = ICE
 BaseStats = 75,85,110,65,65,95
 GenderRatio = Female50Percent
 Abilities = ICEFACE
+HiddenAbilities =
 Moves = 0,TERABLAST,1,TERABLAST,1,AGILITY,1,AMNESIA,1,AQUARING,1,ATTRACT,1,AURORAVEIL,1,AVALANCHE,1,BELLYDRUM,1,BLIZZARD,1,BODYSLAM,1,BRINE,1,CHILLINGWATER,1,DIVE,1,DOUBLEEDGE,1,ENDURE,1,FACADE,1,FREEZEDRY,1,GIGAIMPACT,1,HAIL,1,HEADBUTT,1,HEADSMASH,1,HYDROPUMP,1,HYPERBEAM,1,ICEBEAM,1,ICEPUNCH,1,ICESPINNER,1,ICICLECRASH,1,ICICLESPEAR,1,ICYWIND,1,IRONDEFENSE,1,IRONHEAD,1,LIQUIDATION,1,MIST,1,POWDERSNOW,1,PROTECT,1,RAINDANCE,1,REFLECT,1,REST,1,REVERSAL,1,ROUND,1,SLEEPTALK,1,SNORE,1,SOAK,1,SUBSTITUTE,1,SURF,1,TACKLE,1,TAKEDOWN,1,WATERFALL,1,WATERPULSE,1,WEATHERBALL,1,WHIRLPOOL,1,ZENHEADBUTT
 EggGroups = Water1,Field
 Height = 1.4
@@ -6634,6 +7043,7 @@ Types = ELECTRIC,DARK
 BaseStats = 82,105,68,117,50,68
 GenderRatio = Female50Percent
 Abilities = HUNGERSWITCH
+HiddenAbilities =
 Moves = 0,TERABLAST,1,TERABLAST,1,AGILITY,1,ASSURANCE,1,ATTRACT,1,AURAWHEEL,1,BITE,1,BRICKBREAK,1,BULLETSEED,1,CHARGE,1,CRUNCH,1,DARKPULSE,1,ELECTRICTERRAIN,1,ELECTROBALL,1,ELECTROWEB,1,ENDURE,1,FACADE,1,FAKEOUT,1,FAKETEARS,1,FIREFANG,1,FLATTER,1,FLING,1,FOULPLAY,1,GUNKSHOT,1,ICEFANG,1,LASHOUT,1,LEER,1,NASTYPLOT,1,OUTRAGE,1,PARTINGSHOT,1,PAYBACK,1,POWERTRIP,1,PROTECT,1,PSYCHICFANGS,1,QUASH,1,QUICKATTACK,1,RAPIDSPIN,1,REST,1,REVENGE,1,RISINGVOLTAGE,1,ROUND,1,SCARYFACE,1,SEEDBOMB,1,SLEEPTALK,1,SNARL,1,SNORE,1,SPARK,1,STEELROLLER,1,STOMPINGTANTRUM,1,SUBSTITUTE,1,SUCKERPUNCH,1,SUPERFANG,1,SWAGGER,1,SWIFT,1,TAILWHIP,1,TAUNT,1,THIEF,1,THRASH,1,THUNDER,1,THUNDERBOLT,1,THUNDERFANG,1,THUNDERPUNCH,1,THUNDERSHOCK,1,THUNDERWAVE,1,TICKLE,1,TORMENT,1,UPROAR,1,VOLTSWITCH,1,WILDCHARGE
 EggGroups = Field,Fairy
 Height = 0.3
@@ -6643,6 +7053,7 @@ Shape = Bipedal
 Category = Two-Sided
 Pokedex = As it eats the seeds stored up in its pocket-like pouches, this Pokémon is not just satisfying its constant hunger. It's also generating electricity.
 Generation = 8
+FormName = 
 #-------------------------------
 [COPPERAJAH]
 Name = Copperajah
@@ -6660,6 +7071,7 @@ Shape = Quadruped
 Category = Copperderm
 Pokedex = These Pokémon live in herds. Their trunks have incredible grip strength, strong enough to crush giant rocks into powder.
 Generation = 8
+FormName = 
 #-------------------------------
 [DRACOZOLT]
 Name = Dracozolt
@@ -6677,6 +7089,7 @@ Shape = BipedalTail
 Category = Fossil
 Pokedex = In ancient times, it was unbeatable thanks to its powerful lower body, but it went extinct anyway after it depleted all its plant-based food sources.
 Generation = 8
+FormName = 
 #-------------------------------
 [ARCTOZOLT]
 Name = Arctozolt
@@ -6694,6 +7107,7 @@ Shape = BipedalTail
 Category = Fossil
 Pokedex = The shaking of its freezing upper half is what generates its electricity. It has a hard time walking around.
 Generation = 8
+FormName = 
 #-------------------------------
 [DRACOVISH]
 Name = Dracovish
@@ -6711,6 +7125,7 @@ Shape = HeadLegs
 Category = Fossil
 Pokedex = Powerful legs and jaws made it the apex predator of its time. Its own overhunting of its prey was what drove it to extinction.
 Generation = 8
+FormName = 
 #-------------------------------
 [ARCTOVISH]
 Name = Arctovish
@@ -6728,6 +7143,7 @@ Shape = Finned
 Category = Fossil
 Pokedex = Though it's able to capture prey by freezing its surroundings, it has trouble eating the prey afterward because its mouth is on top of its head.
 Generation = 8
+FormName = 
 #-------------------------------
 [DURALUDON]
 Name = Duraludon
@@ -6745,6 +7161,7 @@ Shape = BipedalTail
 Category = Alloy
 Pokedex = Its body resembles polished metal, and it's both lightweight and strong. The only drawback is that it rusts easily.
 Generation = 8
+FormName = 
 #-------------------------------
 [DRAGAPULT]
 Name = Dragapult
@@ -6762,6 +7179,7 @@ Shape = BipedalTail
 Category = Stealth
 Pokedex = When it isn't battling, it keeps Dreepy in the holes on its horns. Once a fight starts, it launches the Dreepy like supersonic missiles.
 Generation = 8
+FormName = 
 #-------------------------------
 [WYRDEER]
 Name = Wyrdeer
@@ -6779,6 +7197,7 @@ Shape = Quadruped
 Category = Big Horn
 Pokedex = The black orbs shine with an uncanny light when the Pokémon is erecting invisible barriers. The fur shed from its beard retains heat well and is a highly useful material for winter clothing
 Generation = 8
+FormName = 
 #-------------------------------
 [KLEAVOR]
 Name = Kleavor
@@ -6796,6 +7215,7 @@ Shape = MultiWinged
 Category = Axe
 Pokedex = A violent creature that fells towering trees with its crude axes and shields itself with hard stone. If one should chance upon this Pokémon in the wilds, one's only recourse is to flee.
 Generation = 8
+FormName = 
 #-------------------------------
 [URSALUNA]
 Name = Ursaluna
@@ -6813,6 +7233,7 @@ Shape = Quadruped
 Category = Peat
 Pokedex = It is believed that the swampy terrain of its ancient home region that gave Ursaluna its burly physique and newfound capacity to manipulate peat at will.
 Generation = 8
+FormName = 
 #-------------------------------
 [BASCULEGION]
 Name = Basculegion
@@ -6848,6 +7269,7 @@ Shape = BipedalTail
 Category = Free Climb
 Pokedex = Because of Sneasler’s virulent poison and daunting physical prowess, no other species could hope to best it on frozen highlands. Preferring solitude, this species does not form packs.
 Generation = 8
+FormName = 
 #-------------------------------
 [OVERQWIL]
 Name = Overqwil
@@ -6865,6 +7287,7 @@ Shape = Finned
 Category = Pin Cluster
 Pokedex = Its lancelike spikes and savage temperament have earned it the nickname "sea fiend." It slurps up poison to nourish itself.
 Generation = 8
+FormName = 
 #-------------------------------
 [MEOWSCARADA]
 Name = Meowscarada
@@ -6882,6 +7305,7 @@ Shape = Bipedal
 Category = Magician
 Pokedex = This Pokémon uses the reflective fur lining its cape to camouflage the stem of its flower, creating the illusion that the flower is floating.
 Generation = 9
+FormName = 
 #-------------------------------
 [SKELEDIRGE]
 Name = Skeledirge
@@ -6899,6 +7323,7 @@ Shape = Quadruped
 Category = Singer
 Pokedex = The fiery bird changes shape when Skeledirge sings. Rumor has it that the bird was born when the fireball on Skeledirge’s head gained a soul.
 Generation = 9
+FormName = 
 #-------------------------------
 [QUAQUAVAL]
 Name = Quaquaval
@@ -6916,6 +7341,7 @@ Shape = Bipedal
 Category = Dancer
 Pokedex = A single kick from a Quaquaval can send a truck rolling. This Pokémon uses its powerful legs to perform striking dances from far-off lands.
 Generation = 9
+FormName = 
 #-------------------------------
 [OINKOLOGNE]
 Name = Oinkologne
@@ -6951,6 +7377,7 @@ Shape = Insectoid
 Category = Trap
 Pokedex = It clings to branches and ceilings using its threads and moves without a sound. It takes out its prey before the prey even notices it.
 Generation = 9
+FormName = 
 #-------------------------------
 [LOKIX]
 Name = Lokix
@@ -6968,6 +7395,7 @@ Shape = Bipedal
 Category = Grasshopper
 Pokedex = When it decides to fight all out, it stands on its previously folded legs to enter Showdown Mode. It neutralizes its enemies in short order.
 Generation = 9
+FormName = 
 #-------------------------------
 [PAWMOT]
 Name = Pawmot
@@ -6985,6 +7413,7 @@ Shape = Bipedal
 Category = Hands-On
 Pokedex = This Pokémon normally is slow to react, but once it enters battle, it will strike down its enemies with lightning-fast movements.
 Generation = 9
+FormName = 
 #-------------------------------
 [MAUSHOLD]
 Name = Maushold
@@ -7002,6 +7431,7 @@ Shape = Bipedal
 Category = Family
 Pokedex = They build huge nests with many rooms that are used for different purposes, such as eating and sleeping.
 Generation = 9
+FormName = 
 #-------------------------------
 [DACHSBUN]
 Name = Dachsbun
@@ -7019,6 +7449,7 @@ Shape = Quadruped
 Category = Dog
 Pokedex = The pleasant aroma that emanates from this Pokémon’s body helps wheat grow, so Dachsbun has been treasured by farming villages.
 Generation = 9
+FormName = 
 #-------------------------------
 [ARBOLIVA]
 Name = Arboliva
@@ -7027,7 +7458,7 @@ BaseStats = 78,69,90,39,125,109
 GenderRatio = Female50Percent
 Abilities = SEEDSOWER,EARLYBIRD
 HiddenAbilities = HARVEST
-Moves = 0,TERABLAST,1,TERABLAST,1,ABSORB,1,BULLETSEED,1,CHARM,1,DAZZLINGGLEAM,1,EARTHPOWER,1,ENCORE,1,ENDURE,1,ENERGYBALL,1,FACADE,1,FLAIL,1,FLING,1,GIGADRAIN,1,GIGAIMPACT,1,GRASSKNOT,1,GRASSYTERRAIN,1,GROWTH,1,HELPINGHAND,1,HYPERBEAM,1,HYPERVOICE,1,LEAFSTORM,1,LEECHSEED,1,LIGHTSCREEN,1,MAGICALLEAF,1,MEGADRAIN,1,MEMENTO,1,METRONOME,1,MIRRORCOAT,1,PETALBLIZZARD,1,PETALDANCE,1,POLLENPUFF,1,PROTECT,1,RAZORLEAF,1,REFLECT,1,REST,1,SAFEGUARD,1,SEEDBOMB,1,SLEEPTALK,1,SOLARBEAM,1,STRENGTHSAP,1,SUBSTITUTE,1,SUNNYDAY,1,SWEETSCENT,1,SWIFT,1,SYNTHESIS,1,TACKLE,1,TERRAINPULSE,1,TRAILBLAZE,1,WEATHERBALL
+Moves = 0,TERABLAST,1,TERABLAST,1,ABSORB,1,BULLETSEED,1,CALMMIND,1,CHARM,1,DAZZLINGGLEAM,1,EARTHPOWER,1,ENCORE,1,ENDURE,1,ENERGYBALL,1,FACADE,1,FLAIL,1,FLING,1,GIGADRAIN,1,GIGAIMPACT,1,GRASSKNOT,1,GRASSYTERRAIN,1,GROWTH,1,HELPINGHAND,1,HYPERBEAM,1,HYPERVOICE,1,LEAFSTORM,1,LEECHSEED,1,LIGHTSCREEN,1,MAGICALLEAF,1,MEGADRAIN,1,MEMENTO,1,METRONOME,1,MIRRORCOAT,1,PETALBLIZZARD,1,PETALDANCE,1,POLLENPUFF,1,PROTECT,1,RAZORLEAF,1,REFLECT,1,REST,1,SAFEGUARD,1,SEEDBOMB,1,SLEEPTALK,1,SOLARBEAM,1,STRENGTHSAP,1,SUBSTITUTE,1,SUNNYDAY,1,SWEETSCENT,1,SWIFT,1,SYNTHESIS,1,TACKLE,1,TERRAINPULSE,1,TRAILBLAZE,1,WEATHERBALL
 EggGroups = Grass
 Height = 1.4
 Weight = 48.2
@@ -7036,6 +7467,7 @@ Shape = Bipedal
 Category = Olive
 Pokedex = This calm Pokémon is very compassionate. It will share its delicious, nutrient-rich oil with weakened Pokémon.
 Generation = 9
+FormName = 
 #-------------------------------
 [SQUAWKABILLY]
 Name = Squawkabilly
@@ -7044,7 +7476,7 @@ BaseStats = 92,121,71,100,45,51
 GenderRatio = Female50Percent
 Abilities = INTIMIDATE,HUSTLE
 HiddenAbilities = GUTS
-Moves = 0,TERABLAST,1,TERABLAST,1,AERIALACE,1,AIRCUTTER,1,AIRSLASH,1,BRAVEBIRD,1,CLOSECOMBAT,1,COPYCAT,1,DOUBLEEDGE,1,ENDURE,1,FACADE,1,FAKETEARS,1,FINALGAMBIT,1,FLATTER,1,FLY,1,FOULPLAY,1,FURYATTACK,1,GIGAIMPACT,1,GROWL,1,HEATWAVE,1,HELPINGHAND,1,HURRICANE,1,HYPERBEAM,1,HYPERVOICE,1,LASHOUT,1,MIMIC,1,OUTRAGE,1,PARTINGSHOT,1,PECK,1,POUNCE,1,PROTECT,1,QUICKATTACK,1,REST,1,REVERSAL,1,ROOST,1,SCARYFACE,1,SLEEPTALK,1,SUBSTITUTE,1,SUNNYDAY,1,SWAGGER,1,TAILWIND,1,TAKEDOWN,1,TAUNT,1,THIEF,1,THROATCHOP,1,TORMENT,1,UPROAR,1,UTURN
+Moves = 0,TERABLAST,1,TERABLAST,1,AERIALACE,1,AIRCUTTER,1,AIRSLASH,1,BRAVEBIRD,1,CLOSECOMBAT,1,COPYCAT,1,DOUBLEEDGE,1,ENDURE,1,FACADE,1,FAKETEARS,1,FINALGAMBIT,1,FLATTER,1,FLY,1,FOULPLAY,1,FURYATTACK,1,GIGAIMPACT,1,GROWL,1,HEATWAVE,1,HELPINGHAND,1,HURRICANE,1,HYPERBEAM,1,HYPERVOICE,1,LASHOUT,1,MIMIC,1,OUTRAGE,1,PARTINGSHOT,1,PECK,1,POUNCE,1,PROTECT,1,QUICKATTACK,1,REST,1,REVERSAL,1,ROOST,1,SCARYFACE,1,SLEEPTALK,1,SUBSTITUTE,1,SUNNYDAY,1,SWAGGER,1,TAILWIND,1,TAKEDOWN,1,TAUNT,1,THIEF,1,THROATCHOP,1,TORMENT,1,UPROAR,1,UTURN,1,CLOSECOMBAT,1,HONECLAWS,1,DUALWINGBEAT,1,LASHOUT,1,PAYBACK
 EggGroups = Flying
 Height = 0.6
 Weight = 2.4
@@ -7071,6 +7503,7 @@ Shape = Bipedal
 Category = Rock Salt
 Pokedex = Garganacl will rub its fingertips together and sprinkle injured Pokémon with salt. Even severe wounds will promptly heal afterward.
 Generation = 9
+FormName = 
 #-------------------------------
 [ARMAROUGE]
 Name = Armarouge
@@ -7088,6 +7521,7 @@ Shape = Bipedal
 Category = Fire Warrior
 Pokedex = Armarouge evolved through the use of a set of armor that belonged to a distinguished warrior. This Pokémon is incredibly loyal.
 Generation = 9
+FormName = 
 #-------------------------------
 [CERULEDGE]
 Name = Ceruledge
@@ -7105,6 +7539,7 @@ Shape = Bipedal
 Category = Fire Blades
 Pokedex = The fiery blades on its arms burn fiercely with the lingering resentment of a sword wielder who fell before accomplishing their goal.
 Generation = 9
+FormName = 
 #-------------------------------
 [BELLIBOLT]
 Name = Bellibolt
@@ -7122,6 +7557,7 @@ Shape = Bipedal
 Category = EleFrog
 Pokedex = When this Pokémon expands and contracts its wobbly body, the belly-button dynamo in its stomach produces a huge amount of electricity.
 Generation = 9
+FormName = 
 #-------------------------------
 [KILOWATTREL]
 Name = Kilowattrel
@@ -7139,6 +7575,7 @@ Shape = Winged
 Category = Frigatebird
 Pokedex = Kilowattrel inflates its throat sac to amplify its electricity. By riding the wind, this Pokémon can fly over 430 miles in a day.
 Generation = 9
+FormName = 
 #-------------------------------
 [MABOSSTIFF]
 Name = Mabosstiff
@@ -7156,6 +7593,7 @@ Shape = Quadruped
 Category = Boss
 Pokedex = This Pokémon can store energy in its large dewlap. Mabosstiff unleashes this energy all at once to blow away enemies.
 Generation = 9
+FormName = 
 #-------------------------------
 [GRAFAIAI]
 Name = Grafaiai
@@ -7173,6 +7611,7 @@ Shape = Bipedal
 Category = Toxic Monkey
 Pokedex = The color of the poisonous saliva depends on what the Pokémon eats. Grafaiai covers its fingers in its saliva and draws patterns on trees in forests.
 Generation = 9
+FormName = 
 #-------------------------------
 [BRAMBLEGHAST]
 Name = Brambleghast
@@ -7190,6 +7629,7 @@ Shape = Head
 Category = Tumbleweed
 Pokedex = It will open the branches of its head to envelop its prey. Once it absorbs all the life energy it needs, it expels the prey and discards it.
 Generation = 9
+FormName = 
 #-------------------------------
 [TOEDSCRUEL]
 Name = Toedscruel
@@ -7207,6 +7647,7 @@ Shape = Multiped
 Category = Woodear
 Pokedex = These Pokémon gather into groups and form colonies deep within forests. They absolutely hate it when strangers approach.
 Generation = 9
+FormName = 
 #-------------------------------
 [KLAWF]
 Name = Klawf
@@ -7224,6 +7665,7 @@ Shape = Insectoid
 Category = Ambush
 Pokedex = Klawf hangs upside-down from cliffs, waiting for prey. But Klawf can’t remain in this position for long because its blood rushes to its head.
 Generation = 9
+FormName = 
 #-------------------------------
 [SCOVILLAIN]
 Name = Scovillain
@@ -7241,6 +7683,7 @@ Shape = BipedalTail
 Category = Spicy Pepper
 Pokedex = The red head converts spicy chemicals into fire energy and blasts the surrounding area with a super spicy stream of flame.
 Generation = 9
+FormName = 
 #-------------------------------
 [RABSCA]
 Name = Rabsca
@@ -7258,6 +7701,7 @@ Shape = Insectoid
 Category = Rolling
 Pokedex = The body that supports the ball barely moves. Therefore, it is thought that the true body of this Pokémon is actually inside the ball.
 Generation = 9
+FormName = 
 #-------------------------------
 [ESPATHRA]
 Name = Espathra
@@ -7275,6 +7719,7 @@ Shape = Winged
 Category = Ostrich
 Pokedex = It immobilizes opponents by bathing them in psychic power from its large eyes. Despite its appearance, it has a vicious temperament.
 Generation = 9
+FormName = 
 #-------------------------------
 [TINKATON]
 Name = Tinkaton
@@ -7292,6 +7737,7 @@ Shape = Bipedal
 Category = Hammer
 Pokedex = This intelligent Pokémon has a very daring disposition. It knocks rocks into the sky with its hammer, aiming for flying Corviknight.
 Generation = 9
+FormName = 
 #-------------------------------
 [WUGTRIO]
 Name = Wugtrio
@@ -7309,6 +7755,7 @@ Shape = MultiBody
 Category = Garden Eel
 Pokedex = It has a vicious temperament, contrary to what its appearance may suggest. It wraps its long bodies around prey, then drags the prey into its den.
 Generation = 9
+FormName = 
 #-------------------------------
 [BOMBIRDIER]
 Name = Bombirdier
@@ -7326,14 +7773,16 @@ Shape = Winged
 Category = Item Drop
 Pokedex = It gathers things up in an apron made from shed feathers added to the Pokémon’s chest feathers, then drops those things from high places for fun.
 Generation = 9
+FormName = 
 #-------------------------------
 [PALAFIN]
 Name = Palafin
 Types = WATER
 BaseStats = 100,70,72,100,56,62
 GenderRatio = Female50Percent
-Abilities = ZEROTOHERO
-Moves = 0,TERABLAST,1,TERABLAST,1,ACROBATICS,1,AGILITY,1,AQUAJET,1,AQUATAIL,1,ASTONISH,1,AURASPHERE,1,BLIZZARD,1,BODYSLAM,1,BULKUP,1,CHARM,1,CHILLINGWATER,1,CLOSECOMBAT,1,DISARMINGVOICE,1,DIVE,1,DOUBLEHIT,1,DRAININGKISS,1,DRAINPUNCH,1,ENCORE,1,ENDURE,1,FACADE,1,FLING,1,FLIPTURN,1,FOCUSBLAST,1,FOCUSENERGY,1,FOCUSPUNCH,1,GIGAIMPACT,1,GRASSKNOT,1,HELPINGHAND,1,HYDROPUMP,1,HYPERBEAM,1,HYPERVOICE,1,ICEBEAM,1,ICEPUNCH,1,ICYWIND,1,IRONHEAD,1,JETPUNCH,1,LIQUIDATION,1,MIST,1,OUTRAGE,1,PROTECT,1,RAINDANCE,1,REST,1,REVERSAL,1,SLEEPTALK,1,SUBSTITUTE,1,SUPERSONIC,1,SURF,1,SWIFT,1,TAKEDOWN,1,TAUNT,1,WATERFALL,1,WATERGUN,1,WATERPULSE,1,WAVECRASH,1,ZENHEADBUTT
+#N/A
+#N/A
+#N/A
 EggGroups = Field,Water2
 Height = 1.3
 Weight = 60.2
@@ -7360,6 +7809,7 @@ Shape = Quadruped
 Category = Multi-Cyl
 Pokedex = It creates a gas out of poison and minerals from rocks. It then detonates the gas in its cylinders— now numbering eight—to generate energy.
 Generation = 9
+FormName = 
 #-------------------------------
 [CYCLIZAR]
 Name = Cyclizar
@@ -7377,6 +7827,7 @@ Shape = BipedalTail
 Category = Mount
 Pokedex = Apparently Cyclizar has been allowing people to ride on its back since ancient times. Depictions of this have been found in 10,000-year-old murals.
 Generation = 9
+FormName = 
 #-------------------------------
 [ORTHWORM]
 Name = Orthworm
@@ -7394,6 +7845,7 @@ Shape = Serpentine
 Category = Earthworm
 Pokedex = When attacked, this Pokémon will wield the tendrils on its body like fists and pelt the opponent with a storm of punches.
 Generation = 9
+FormName = 
 #-------------------------------
 [GLIMMORA]
 Name = Glimmora
@@ -7411,6 +7863,7 @@ Shape = Head
 Category = Ore
 Pokedex = When this Pokémon detects danger, it will open up its crystalline petals and fire beams from its conical body.
 Generation = 9
+FormName = 
 #-------------------------------
 [HOUNDSTONE]
 Name = Houndstone
@@ -7428,6 +7881,7 @@ Shape = Quadruped
 Category = Ghost Dog
 Pokedex = Houndstone spends most of its time sleeping in graveyards. Among all the dog Pokémon, this one is most loyal to its master.
 Generation = 9
+FormName = 
 #-------------------------------
 [FLAMIGO]
 Name = Flamigo
@@ -7445,6 +7899,7 @@ Shape = Winged
 Category = Synchronize
 Pokedex = This Pokémon apparently ties the base of its neck into a knot so that energy stored in its belly does not escape from its beak.
 Generation = 9
+FormName = 
 #-------------------------------
 [CETITAN]
 Name = Cetitan
@@ -7462,6 +7917,7 @@ Shape = BipedalTail
 Category = Terra Whale
 Pokedex = This Pokémon wanders around snowy, icy areas. It protects its body with powerful muscles and a thick layer of fat under its skin.
 Generation = 9
+FormName = 
 #-------------------------------
 [VELUZA]
 Name = Veluza
@@ -7479,6 +7935,7 @@ Shape = Finned
 Category = Jettison
 Pokedex = When Veluza discards unnecessary flesh, its mind becomes honed and its psychic power increases. The spare flesh has a mild but delicious flavor.
 Generation = 9
+FormName = 
 #-------------------------------
 [DONDOZO]
 Name = Dondozo
@@ -7496,6 +7953,7 @@ Shape = Finned
 Category = Big Catfish
 Pokedex = This Pokémon is a glutton, but it’s bad at getting food. It teams up with a Tatsugiri to catch prey.
 Generation = 9
+FormName = 
 #-------------------------------
 [TATSUGIRI]
 Name = Tatsugiri
@@ -7513,6 +7971,7 @@ Shape = Finned
 Category = Mimicry
 Pokedex = This is a small dragon Pokémon. It lives inside the mouth of Dondozo to protect itself from enemies on the outside.
 Generation = 9
+FormName = 
 #-------------------------------
 [ANNIHILAPE]
 Name = Annihilape
@@ -7530,6 +7989,7 @@ Shape = BipedalTail
 Category = Rage Monkey
 Pokedex = When its anger rose beyond a critical point, this Pokémon gained power that is unfettered by the limits of its physical body.
 Generation = 9
+FormName = 
 #-------------------------------
 [CLODSIRE]
 Name = Clodsire
@@ -7547,6 +8007,7 @@ Shape = Quadruped
 Category = Spiny Fish
 Pokedex = When attacked, this Pokémon will retaliate by sticking thick spines out from its body. It’s a risky move that puts everything on the line.
 Generation = 9
+FormName = 
 #-------------------------------
 [FARIGIRAF]
 Name = Farigiraf
@@ -7564,6 +8025,7 @@ Shape = Quadruped
 Category = Long Neck
 Pokedex = Now that the brain waves from the head and tail are synced up, the psychic power of this Pokémon is 10 times stronger than Girafarig’s.
 Generation = 9
+FormName = 
 #-------------------------------
 [DUDUNSPARCE]
 Name = Dudunsparce
@@ -7581,6 +8043,7 @@ Shape = Serpentine
 Category = Land Snake
 Pokedex = This Pokémon uses its hard tail to make its nest by boring holes into bedrock deep underground. The nest can reach lengths of over six miles.
 Generation = 9
+FormName = 
 #-------------------------------
 [KINGAMBIT]
 Name = Kingambit
@@ -7598,6 +8061,7 @@ Shape = Bipedal
 Category = Big Blade
 Pokedex = Only a Bisharp that stands above all others in its vast army can evolve into Kingambit.
 Generation = 9
+FormName = 
 #-------------------------------
 [BAXCALIBUR]
 Name = Baxcalibur
@@ -7615,6 +8079,7 @@ Shape = BipedalTail
 Category = Ice Dragon
 Pokedex = This Pokémon blasts cryogenic air out from its mouth. This air can instantly freeze even liquid-hot lava.
 Generation = 9
+FormName = 
 #-------------------------------
 [GHOLDENGO]
 Name = Gholdengo
@@ -7622,6 +8087,7 @@ Types = STEEL,GHOST
 BaseStats = 87,60,95,84,133,81
 GenderRatio = Genderless
 Abilities = GOODASGOLD
+HiddenAbilities =
 Moves = 0,TERABLAST,1,TERABLAST,1,ASTONISH,1,CHARGEBEAM,1,CONFUSERAY,1,DAZZLINGGLEAM,1,ELECTROBALL,1,ENDURE,1,FLASHCANNON,1,FLING,1,FOCUSBLAST,1,GIGAIMPACT,1,HEAVYSLAM,1,HEX,1,HYPERBEAM,1,IRONHEAD,1,LIGHTSCREEN,1,LOWKICK,1,LOWSWEEP,1,MAKEITRAIN,1,MEMENTO,1,METALSOUND,1,NASTYPLOT,1,NIGHTSHADE,1,POWERGEM,1,PROTECT,1,PSYCHIC,1,PSYSHOCK,1,RECOVER,1,REFLECT,1,REST,1,SANDSTORM,1,SHADOWBALL,1,SLEEPTALK,1,STEELBEAM,1,SUBSTITUTE,1,TACKLE,1,TAKEDOWN,1,THIEF,1,THUNDER,1,THUNDERBOLT,1,THUNDERPUNCH,1,THUNDERWAVE,1,TRICK
 EggGroups = Mineral
 Height = 1.2
@@ -7631,6 +8097,7 @@ Shape = Bipedal
 Category = Coin Entity
 Pokedex = Its body seems to be made up of 1,000 coins. This Pokémon gets along well with others and is quick to make friends with anybody.
 Generation = 9
+FormName = 
 #-------------------------------
 
 
