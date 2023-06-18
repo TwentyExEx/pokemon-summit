@@ -114,7 +114,7 @@ Battle::ItemEffects::DamageCalcFromUser.add(:HEARTSCALE,
 # Knife Sharpener
 #===============================================================================
 
-Battle::ItemEffects::AfterMoveUseFromUser.add(:KNIFESHARPENER,
+Battle::ItemEffects::AfterMoveUseFromUser.add(:SHARPENINGSTONE,
   proc { |item, user, targets, move, numHits, battle|
   targets.each do |b|
     next if battle.pbAllFainted?(user.idxOwnSide) ||

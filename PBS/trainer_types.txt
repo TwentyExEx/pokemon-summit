@@ -1,4 +1,5 @@
-﻿#-------------------------------
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
 [POKEMONTRAINER_Zenith]
 Name = Pokémon Trainer
 Gender = Male
@@ -1584,133 +1585,114 @@ Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = 
 #-------------------------------
 [PROTAG_Brendan]
 Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = 
 #-------------------------------
 [PROTAG_Lucas]
 Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = 
 #-------------------------------
 [PROTAG_Hilbert]
 Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = 
 #-------------------------------
 [PROTAG_Nate]
 Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = 
 #-------------------------------
 [PROTAG_Calem]
 Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = 
 #-------------------------------
 [PROTAG_Elio]
 Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = 
 #-------------------------------
 [PROTAG_Victor]
 Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = 
 #-------------------------------
 [PROTAG_Florian]
 Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = 
 #-------------------------------
 [PROTAG_Leaf]
 Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = 
 #-------------------------------
 [PROTAG_Lyra]
 Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = 
 #-------------------------------
 [PROTAG_May]
 Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = 
 #-------------------------------
 [PROTAG_Dawn]
 Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = 
 #-------------------------------
 [PROTAG_Hilda]
 Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = 
 #-------------------------------
 [PROTAG_Rosa]
 Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = 
 #-------------------------------
 [PROTAG_Serena]
 Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = 
 #-------------------------------
 [PROTAG_Selene]
 Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = 
 #-------------------------------
 [PROTAG_Gloria]
 Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = 
 #-------------------------------
 [PROTAG_Juliana]
 Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = 
 #-------------------------------
 [RIVAL_Blue]
 Name = Pokémon Trainer
@@ -3789,161 +3771,3 @@ BaseMoney = 50
 Name = Youngster
 Gender = Male
 BaseMoney = 50
-#-------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
