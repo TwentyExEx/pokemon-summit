@@ -1,3 +1,11 @@
+def pbSummitTrainerDebug
+  trainerdata = pbListScreen(_INTL("SINGLE TRAINER"), TrainerBattleLister.new(0, false))
+  if trainerdata
+    setBattleRule("canLose")
+    TrainerBattle.start(trainerdata[0], trainerdata[1], trainerdata[2])
+  end
+end
+
 def pbSummitTeamBuilder
   loop do 
     if !($player.party.length < 6)

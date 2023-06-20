@@ -136,6 +136,9 @@ end
 
 def pbSummitVendingPokemon(region)
   regionspecies = []
+  if region == "all"
+    region = SummitPokeInfo.randomregion
+  end
   for sp in SummitPokeInfo.allspecies(region).clone.uniq
     regionspecies << region.to_s
   end
