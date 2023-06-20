@@ -111,7 +111,7 @@ Battle::ItemEffects::DamageCalcFromUser.add(:HEARTSCALE,
 )
 
 #===============================================================================
-# Knife Sharpener
+# Sharpening Stone
 #===============================================================================
 
 Battle::ItemEffects::AfterMoveUseFromUser.add(:SHARPENINGSTONE,

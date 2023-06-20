@@ -878,7 +878,7 @@ Battle::AbilityEffects::DamageCalcFromTarget.add(:ELECTRICDISPERSION,
 Battle::AbilityEffects::MoveImmunity.add(:SUBMERGE,
   proc { |ability, user, target, move, type, battle, show_message|
     next target.pbMoveImmunityStatRaisingAbility(user, move, type,
-       :WATER, :DEFENSE, 1, show_message)
+       :FIRE, :SPECIAL_DEFENSE, 1, show_message)
   }
 )
 
