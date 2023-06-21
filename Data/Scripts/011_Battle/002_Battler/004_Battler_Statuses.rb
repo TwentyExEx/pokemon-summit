@@ -168,11 +168,6 @@ class Battle::Battler
       @battle.pbDisplay(_INTL("{1}'s team is protected by Safeguard!", pbThis)) if showMessages
       return false
     end
-    # Oil Shield immunity
-    if (target && target.effects[PBEffects::OilShield] > 0) && move
-      @battle.pbDisplay(_INTL("{1} is protected by its oil shield!", pbThis)) if showMessages
-      return false
-    end
     return true
   end
 

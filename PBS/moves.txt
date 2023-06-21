@@ -9917,16 +9917,14 @@ EffectChance = 30
 Description = The user engulfs its foe in a mysterious beam of light. It may also confuse the foe.
 #-------------------------------
 [OILSHIELD]
-Name = Tackle
+Name = Oil Shield
 Type = NORMAL
-Category = Physical
-Power = 40
-Accuracy = 100
-TotalPP = 35
+Category = Status
+Accuracy = 0
+TotalPP = 10
 Target = NearOther
-FunctionCode = None
-Flags = Contact,CanProtect,CanMirrorMove
-Description = A physical attack in which the user charges and slams into the target with its whole body.
+FunctionCode = RaiseUserAtkDef1ParaImmuneThreeTurns
+Description = The users covers its fur with a special, protective oil. boosting its Attack and Defense stats. This also gaves the user an inmunity to Paralysis for three turns.
 #-------------------------------
 [PACKINGFROST]
 Name = Packing Frost

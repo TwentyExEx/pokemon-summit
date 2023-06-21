@@ -684,7 +684,6 @@ class Battle::Move::RaiseUserAtkDef1ParaImmuneThreeTurns < Battle::Move::RaiseUs
 	@statUp = [:ATTACK, 1, :DEFENSE, 1]
   end
 
-
   def pbMoveFailed?(user, targets)
     if user.effects[PBEffects::OilShield] > 0
       @battle.pbDisplay(_INTL("But it failed!"))

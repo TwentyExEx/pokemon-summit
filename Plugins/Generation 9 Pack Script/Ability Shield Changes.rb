@@ -116,6 +116,14 @@ class Battle::Battler
         return false
       end
     end
+    # Oil Shield immunity
+    if newStatus == :PARALYSIS
+      @battle.allOtherSideBattlers(user).each do |b|
+        next unless b.effects[PBEffects::OilShield] > 0
+        @battle.pbDisplay(_INTL("{1} is protected by its oil shield!", pbThis(true))) if showMessages
+      end
+      return false
+    end
     # Type immunities
     hasImmuneType = false
     case newStatus
