@@ -330,6 +330,11 @@ def pbSummitBracketAnnounce
   pbMessage(_INTL("\\rYou will be facing the {1} bracket.",bracket))
 end
 
+def pbSummitBracketFail
+  bracket = $bracketnames[$game_variables[31]]
+  pbMessage(_INTL("\\rCome back anytime to reattempt the {1} bracket.",bracket))
+end
+
 def pbSummitPartyCheck
   if $game_variables[31] < 9
     if $player.pokemon_count == 3
