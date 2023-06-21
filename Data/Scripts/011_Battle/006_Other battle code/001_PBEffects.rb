@@ -123,7 +123,7 @@ module PBEffects
   HailToTheKing       = 118
   HailToTheQueen      = 119
   Cacaphony           = 120
-  HoneyHoncho	        = 121
+  HoneyHoncho	      = 121
   SnaringEntrance     = 122
   MindReader          = 123
   MindReaderPos       = 124
@@ -131,6 +131,7 @@ module PBEffects
   Shelter             = 126
   Echoburst           = 127
   ThawOut             = 128
+  OilShield           = 129
 
   #=============================================================================
   # These effects apply to a battler position

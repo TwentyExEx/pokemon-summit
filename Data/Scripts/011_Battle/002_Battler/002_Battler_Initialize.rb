@@ -124,6 +124,7 @@ class Battle::Battler
       @effects[PBEffects::MindReader]            = 0
       @effects[PBEffects::MindReaderPos]         = -1
       @effects[PBEffects::MagnetRise]        = 0
+      @effects[PBEffects::OilShield]        = 0
       @effects[PBEffects::PerishSong]        = 0
       @effects[PBEffects::PerishSongUser]    = -1
       @effects[PBEffects::PowerTrick]        = false

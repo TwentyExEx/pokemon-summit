@@ -345,6 +345,10 @@ class Battle
     pbEORCountDownBattlerEffect(priority, PBEffects::MagnetRise) { |battler|
       pbDisplay(_INTL("{1}'s electromagnetism wore off!", battler.pbThis))
     }
+    # Oil Shield
+    pbEORCountDownBattlerEffect(priority, PBEffects::OilShield) { |battler|
+      pbDisplay(_INTL("{1}'s oil shield wore off!", battler.pbThis))
+    }
     # Telekinesis
     pbEORCountDownBattlerEffect(priority, PBEffects::Telekinesis) { |battler|
       pbDisplay(_INTL("{1} was freed from the telekinesis!", battler.pbThis))

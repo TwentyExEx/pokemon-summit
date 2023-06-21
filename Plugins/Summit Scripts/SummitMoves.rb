@@ -672,3 +672,29 @@ class Battle::Move::HealUserDependingOnSnowstorm < Battle::Move::HealingMove
     return @healAmount
   end
 end
+
+#===============================================================================
+# For 3 rounds, user becomes immune to paralysis. (Oil Shield)
+#===============================================================================
+class Battle::Move::RaiseUserAtkDef1ParaImmuneThreeTurns < Battle::Move::RaiseUserAtkDef1
+  def canSnatch?;         return true; end
+  
+  def initialize(battle, move)
+    super
+	@statUp = [:ATTACK, 1, :DEFENSE, 1]
+  end
+
+
+  def pbMoveFailed?(user, targets)
+    if user.effects[PBEffects::OilShield] > 0
+      @battle.pbDisplay(_INTL("But it failed!"))
+      return true
+    end
+    return false
+  end
+
+  def pbEffectGeneral(user)
+    user.effects[PBEffects::OilShield] = 3
+    @battle.pbDisplay(_INTL("{1} is shielded by oil!", user.pbThis))
+  end
+end
