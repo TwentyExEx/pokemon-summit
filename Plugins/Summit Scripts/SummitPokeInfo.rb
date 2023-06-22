@@ -30,7 +30,7 @@ module SummitPokeInfo
 		when "unova"
 			return @unovaspecies
 		when "kalos"
-			return @kalospecies
+			return @kalosspecies
 		when "alola"
 			return @alolaspecies
 		when "galar"
