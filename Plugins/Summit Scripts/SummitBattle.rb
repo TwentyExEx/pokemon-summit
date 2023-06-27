@@ -428,15 +428,18 @@ def pbSummitPrepMainTrainer(bracket)
   return true
 end
 
-def pbSummitTestIntro # Debug
+def pbSummitTrailerTrainers # Debug
     testgroup = [
     ["BOSS_Lysandre","Lysandre"],
     ["CHAMPION_Steven","Steven"],
     ["CHAMPION_Cynthia","Cynthia"],
-    ["ELITE_Shauntal","Shauntal"],
-    ["ELITE_Marshal","Marshal"],
-    ["ELITE_Caitlin","Caitlin"],
-    ["ELITE_Wikstrom","Wikstrom"]
+    ["SPECIAL_Oak","Oak"],
+    ["RIVAL_Silver","Silver"],
+    ["SPECIAL_Emmet","Emmet"],
+    ["SPECIAL_Lillie","Lillie"],
+    ["SPECIAL_Piers","Piers"],
+    ["RIVAL_Nemona","Nemona"],
+    ["LEADER_Iono","Iono"]
   ]
   for trainer in testgroup
     for i in 0...$trbytype.size
@@ -446,8 +449,25 @@ def pbSummitTestIntro # Debug
       end
     end
   $game_variables[30] = trainer
-  # pbSummitAnnounceMainTrainer
-  pbSummitMainTrainerSpeech
+  pbSummitPrepBattle
+  type = $game_variables[30][0]
+  name = $game_variables[30][1]
+  version = $game_variables[15]
+  if $game_variables[31] > 8
+    version += 4
+  end
+
+  battleback = $bg.to_s
+  battlebase = $bg.to_s
+  
+  TrainerBattle.dx_start([type.to_sym, name, version], {
+    :canlose => true,
+    :noExp => true,
+    :nomoney => true,
+    :setstyle => true,
+    :outcome => 32, 
+    :backdrop => [battleback, battlebase]
+  })
   end
 end
 
