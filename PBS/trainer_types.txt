@@ -1545,7 +1545,7 @@ BaseMoney = 60
 SkillLevel = 100
 BattleBGM = paldea_rx_staradmin
 #-------------------------------
-[SPECIAL_Cassiopeia]
+[SPECIAL_Penny]
 Name = Team Star Boss
 Gender = Female
 BaseMoney = 60
