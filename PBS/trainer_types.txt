@@ -1573,6 +1573,41 @@ BaseMoney = 60
 SkillLevel = 100
 BattleBGM = paldea_sv_jacq
 #-------------------------------
+[SPECIAL_Aarune]
+Name = Secret Base Expert
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = hoenn_ex_wild
+#-------------------------------
+[SPECIAL_BallGuy]
+Name = Pokémon Mascot
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = galar_ex_trainer
+#-------------------------------
+[SPECIAL_Burnet]
+Name = Pokémon Professor
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = alola_ex_trainer
+#-------------------------------
+[SPECIAL_CaraLiss]
+Name = Fossil Researcher
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = galar_ex_trainer
+#-------------------------------
+[SPECIAL_Dendra]
+Name = Instructor
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = paldea_sv_jacq
+#-------------------------------
 [PROTAG_Red]
 Name = Pokémon Trainer
 Gender = Male
