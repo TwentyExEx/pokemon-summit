@@ -1608,6 +1608,76 @@ BaseMoney = 60
 SkillLevel = 100
 BattleBGM = paldea_sv_jacq
 #-------------------------------
+[SPECIAL_Fennel]
+Name = Doctor
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = unova_ex_trainer
+#-------------------------------
+[SPECIAL_Honey]
+Name = Dojo Matron
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = galar_ex_trainer
+#-------------------------------
+[SPECIAL_Miriam]
+Name = Instructor
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = paldea_sv_jacq
+#-------------------------------
+[SPECIAL_Oleana]
+Name = Macro Cosmos's
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = galar_ex_oleana
+#-------------------------------
+[SPECIAL_Peonia]
+Name = Pokémon Trainer
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = galar_ex_trainer
+#-------------------------------
+[SPECIAL_Raifort]
+Name = Instructor
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = paldea_sv_jacq
+#-------------------------------
+[SPECIAL_Saguaro]
+Name = Instructor
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = paldea_sv_jacq
+#-------------------------------
+[SPECIAL_Salvatore]
+Name = Instructor
+Gender = Male
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = paldea_sv_jacq
+#-------------------------------
+[SPECIAL_Tyme]
+Name = Instructor
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = paldea_sv_jacq
+#-------------------------------
+[SPECIAL_Wicke]
+Name = Aether Branch Chief
+Gender = Female
+BaseMoney = 60
+SkillLevel = 100
+BattleBGM = alola_ex_aether
+#-------------------------------
 [PROTAG_Red]
 Name = Pokémon Trainer
 Gender = Male

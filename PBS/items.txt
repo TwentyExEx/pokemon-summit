@@ -7332,3 +7332,11 @@ FieldUse = OnPokemon
 Flags = KeyItem
 Description = A colorful tube of illusion that can alter a Pokémon's appearance.
 #-------------------------------
+[ELECTROMAGNET]
+Name = Electro Magnet
+NamePlural = Electro Magnets
+Pocket = 1
+Price = 1000
+Flags = Fling_30
+Description = NON FUNCTIONAL 
+#-------------------------------
