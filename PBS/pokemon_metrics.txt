@@ -3023,3 +3023,9 @@ BackSprite = 0,41
 FrontSprite = -2,13
 ShadowX = 0
 ShadowSize = 2
+#-------------------------------
+[PIKACHU]
+BackSprite = 0,50
+FrontSprite = 4,28
+ShadowX = 0
+ShadowSize = 1

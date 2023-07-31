@@ -934,91 +934,91 @@ Name = Warden
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = hisui_rx_warden
+BattleBGM = hisui_ex_warden
 #-------------------------------
 [HISUI_Lian]
 Name = Warden
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = hisui_rx_warden
+BattleBGM = hisui_ex_warden
 #-------------------------------
 [HISUI_Calaba]
 Name = Warden
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = hisui_rx_warden
+BattleBGM = hisui_ex_warden
 #-------------------------------
 [HISUI_Arezu]
 Name = Warden
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = hisui_rx_warden
+BattleBGM = hisui_ex_warden
 #-------------------------------
 [HISUI_Iscan]
 Name = Warden
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = hisui_rx_warden
+BattleBGM = hisui_ex_warden
 #-------------------------------
 [HISUI_Palina]
 Name = Warden
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = hisui_rx_warden
+BattleBGM = hisui_ex_warden
 #-------------------------------
 [HISUI_Ingo]
 Name = Warden
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = hisui_rx_warden
+BattleBGM = hisui_ex_warden
 #-------------------------------
 [HISUI_Melli]
 Name = Warden
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = hisui_rx_warden
+BattleBGM = hisui_ex_warden
 #-------------------------------
 [HISUI_Gaeric]
 Name = Warden
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = hisui_rx_warden
+BattleBGM = hisui_ex_warden
 #-------------------------------
 [HISUI_Sabi]
 Name = Warden
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = hisui_rx_warden
+BattleBGM = hisui_ex_warden
 #-------------------------------
 [HISUI_Adaman]
 Name = Warden
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = hisui_rx_warden
+BattleBGM = hisui_ex_warden
 #-------------------------------
 [HISUI_Irida]
 Name = Warden
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = hisui_rx_warden
+BattleBGM = hisui_ex_warden
 #-------------------------------
 [HISUI_Kamado]
 Name = Warden
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = hisui_rx_warden
+BattleBGM = hisui_ex_warden
 #-------------------------------
 [HISUI_Volo]
 Name = Warden
@@ -1095,7 +1095,7 @@ Name = Mystery Man
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = johto_ex_trainer
+BattleBGM = johto_ex_eusine
 #-------------------------------
 [SPECIAL_Kris]
 Name = Pokémon Trainer
@@ -1867,7 +1867,7 @@ Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = paldea_sv_nemona
+BattleBGM = paldea_ex_nemona
 #-------------------------------
 [BOSS_Giovanni]
 Name = Team Rocket Boss
@@ -1916,7 +1916,7 @@ Name = Macro Cosmos
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
-BattleBGM = galar_rx_rose
+BattleBGM = galar_ex_rose
 #-------------------------------
 [IMPOSTER_Sada]
 Name = A.I
