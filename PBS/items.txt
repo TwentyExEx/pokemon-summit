@@ -7338,5 +7338,12 @@ NamePlural = Electro Magnets
 Pocket = 1
 Price = 1000
 Flags = Fling_30
-Description = NON FUNCTIONAL 
+Description = NON FUNCTIONAL
 #-------------------------------
+[MARKCHARM]
+Name = Mark Charm
+NamePlural = Mark Charms
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = Having one of these mysterious charms makes it more likely you’ll encounter a Pokémon with a mark.

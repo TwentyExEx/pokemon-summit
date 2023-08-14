@@ -1,0 +1,7 @@
+Name         = Improved Mementos
+Version      = 1.0
+Essentials   = 20.1
+Requires     = Essentials Deluxe,1.2.5
+Optional     = Improved Item Text,1.0.0
+Website      = https://www.pokecommunity.com/showthread.php?t=495029
+Credits      = Lucidious89
