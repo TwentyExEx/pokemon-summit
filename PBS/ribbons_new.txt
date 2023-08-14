@@ -1,0 +1,57 @@
+#-------------------------------
+[KANTOGUESTSRIBBON]
+Name = Kanto Guest Ribbon
+IconPosition = 1
+Description = A Ribbon awarded to a victor against a Guest from the Kanto Region.
+Title = the Kanto Tourist
+Flags = GiftRibbon
+#-------------------------------
+[KANTOLEADERRIBBON]
+Name = Kanto Leader Ribbon
+IconPosition = 2
+Description = A Ribbon awarded to a victor against all 8 Gym Leaders from the Kanto Region.
+Title = the Kanto Leader
+Flags = GiftRibbon
+#-------------------------------
+[KANTOELITERIBBON]
+Name = Kanto Elite Ribbon
+IconPosition = 3
+Description = A Ribbon awarded to a victor against all Elite Four members from the Kanto Region.
+Title = the Kanto Elite
+Flags = GiftRibbon
+#-------------------------------
+[BLUESRIBBON]
+Name = Blue's Ribbon
+IconPosition = 4
+Description = A Ribbon awarded to a victor against Champion Blue.
+Title = the Prodigal Grandchild
+Flags = GiftRibbon
+#-------------------------------
+[JOHTOGUESTSRIBBON]
+Name = Johto Guest Ribbon
+IconPosition = 5
+Description = A Ribbon awarded to a victor against a Guest from the Johto Region.
+Title = the Johto Tourist
+Flags = GiftRibbon
+#-------------------------------
+[JOHTOLEADERRIBBON]
+Name = Johto Leader Ribbon
+IconPosition = 6
+Description = A Ribbon awarded to a victor against all 8 Gym Leaders from the Johto Region.
+Title = the Johto Leader
+Flags = GiftRibbon
+#-------------------------------
+[JOHTOELITERIBBON]
+Name = Johto Elite Ribbon
+IconPosition = 7
+Description = A Ribbon awarded to a victor against all Elite Four members from the Johto Region.
+Title = the Johto Elite
+Flags = GiftRibbon
+#-------------------------------
+[LANCESRIBBON]
+Name = Lance's Ribbon
+IconPosition = 8
+Description = A Ribbon awarded to a victor against Champion Lance.
+Title = the Dragon Master
+Flags = GiftRibbon
+#-------------------------------
