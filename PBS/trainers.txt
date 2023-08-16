@@ -17090,3 +17090,16 @@ Pokemon = CETITAN,50
     IV = 31,31,31,31,31,31
     EV = 6,252,0,252,0,0
     TeraType = WATER
+#-------------------------------
+[TRAINER_ACETRAINER_HOENN_M,Tester,2]
+Items = TERAORB
+LoseText = ...
+Pokemon = WEEZING,50
+    Form = 1
+    Moves = DAZZLINGGLEAM,SLUDGEBOMB,FLAMETHROWER,THUNDERBOLT
+    AbilityIndex = 0
+    Item = CHOICESPECS
+    Nature = BOLD
+    IV = 31,31,31,31,31,31
+    EV = 252,0,0,0,252,6
+    TeraType = FAIRY
