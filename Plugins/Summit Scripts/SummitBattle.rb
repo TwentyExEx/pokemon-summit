@@ -717,7 +717,61 @@ def pbSummitMainTrainer
       battlebase = "dark"
   end
   
-  TrainerBattle.dx_start([type.to_sym, name, version], {
+    case $game_variables[48] # Scaling Stage
+    when 0
+      ivset = 15
+      evset = false
+      nature = "neutral"
+      helditems = false
+      tera = false
+    when 1
+      ivset = 17
+      evset = false
+      nature = "neutral"
+      helditems = false
+      tera = false
+    when 2
+      ivset = 19
+      evset = false
+      nature = "neutral"
+      helditems = true
+      tera = false
+    when 3
+      ivset = 21
+      evset = false
+      nature = "ideal"
+      helditems = true
+      tera = false
+    when 4
+      ivset = 23
+      evset = false
+      nature = "ideal"
+      helditems = true
+      tera = true
+    when 5
+      ivset = 31
+      evset = true
+      nature = "ideal"
+      helditems = true
+      tera = true
+  end
+
+  trainer = GameData::Trainer.get(type.to_sym, name, version).to_trainer
+  for pkmn in trainer.party
+    for stat in [:HP, :ATTACK, :DEFENSE, :SPECIAL_ATTACK, :SPECIAL_DEFENSE, :SPEED]
+      @givepkmn.iv[stat] = ivset
+    end
+    if evset == false
+      for stat in [:HP, :ATTACK, :DEFENSE, :SPECIAL_ATTACK, :SPECIAL_DEFENSE, :SPEED]
+        @givepkmn.ev[stat] = 0
+      end
+    end
+    pkmn.nature = :QUIRKY if nature == "neutral"
+    pkmn.item = nil if helditems == false
+  end
+
+  trainer.items.delete(:TERAORB) if tera == false
+  TrainerBattle.dx_start([trainer], {
     :canlose => true,
     :noExp => true,
     :nomoney => true,
