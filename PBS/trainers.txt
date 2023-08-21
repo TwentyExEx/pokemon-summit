@@ -14837,7 +14837,7 @@ Pokemon = GOLEM,50
     Nature = BRAVE
     IV = 31,31,31,31,31,31
     EV = 6,252,0,0,0,252
-    TeraType = GRASS
+    TeraType = ROCK
 #-------------------------------
 [LEADER_Misty,Misty,2]
 Items = TERAORB
@@ -14865,7 +14865,7 @@ Pokemon = STARMIE,50
     Nature = QUIET
     IV = 31,31,31,31,31,31
     EV = 252,0,6,0,252,0
-    TeraType = FIRE
+    TeraType = WATER
 #-------------------------------
 [LEADER_Surge,Surge,2]
 Items = TERAORB
@@ -14893,7 +14893,7 @@ Pokemon = RAICHU,50
     Nature = TIMID
     IV = 31,31,31,31,31,31
     EV = 6,0,0,252,252,0
-    TeraType = FLYING
+    TeraType = ELECTRIC
 #-------------------------------
 [LEADER_Erika,Erika,2]
 Items = TERAORB
@@ -14922,7 +14922,7 @@ Pokemon = VILEPLUME,50
     Nature = TIMID
     IV = 31,31,31,31,31,31
     EV = 6,0,0,252,252,0
-    TeraType = STEEL
+    TeraType = GRASS
 #-------------------------------
 [LEADER_Janine,Janine,2]
 Items = TERAORB
@@ -14950,7 +14950,7 @@ Pokemon = ARIADOS,50
     Nature = JOLLY
     IV = 31,31,31,31,31,31
     EV = 6,252,0,252,0,0
-    TeraType = GROUND
+    TeraType = POISON
 #-------------------------------
 [LEADER_Sabrina,Sabrina,2]
 Items = TERAORB
@@ -14978,7 +14978,7 @@ Pokemon = ALAKAZAM,50
     Nature = TIMID
     IV = 31,31,31,31,31,31
     EV = 6,0,0,252,252,0
-    TeraType = STEEL
+    TeraType = PSYCHIC
 #-------------------------------
 [LEADER_Blaine,Blaine,2]
 Items = TERAORB
@@ -14998,7 +14998,7 @@ Pokemon = ARCANINE,50
     Nature = JOLLY
     IV = 31,31,31,31,31,31
     EV = 6,252,0,252,0,0
-    TeraType = PSYCHIC
+    TeraType = FIRE
 Pokemon = RAPIDASH,50
     Moves = FLAREBLITZ,TERABLAST,MEGAHORN,HIGHHORSEPOWER
     AbilityIndex = 2
@@ -15006,7 +15006,7 @@ Pokemon = RAPIDASH,50
     Nature = JOLLY
     IV = 31,31,31,31,31,31
     EV = 6,252,0,252,0,0
-    TeraType = WATER
+    TeraType = FIRE
 #-------------------------------
 [LEADER_Giovanni,Giovanni,2]
 Items = TERAORB
@@ -15034,7 +15034,7 @@ Pokemon = NIDOQUEEN,50
     Nature = TIMID
     IV = 31,31,31,31,31,31
     EV = 6,0,0,252,252,0
-    TeraType = GRASS
+    TeraType = GROUND
 #-------------------------------
 [LEADER_Falkner,Falkner,2]
 Items = TERAORB
@@ -15062,7 +15062,7 @@ Pokemon = PIDGEOT,50
     Nature = MODEST
     IV = 31,31,31,31,31,31
     EV = 6,0,0,252,252,0
-    TeraType = GRASS
+    TeraType = FLYING
 #-------------------------------
 [LEADER_Bugsy,Bugsy,2]
 Items = TERAORB
@@ -15090,7 +15090,7 @@ Pokemon = SCIZOR,50
     Nature = ADAMANT
     IV = 31,31,31,31,31,31
     EV = 6,252,0,252,0,0
-    TeraType = FIRE
+    TeraType = BUG
 #-------------------------------
 [LEADER_Whitney,Whitney,2]
 Items = TERAORB
@@ -15118,7 +15118,7 @@ Pokemon = MILTANK,50
     Nature = ADAMANT
     IV = 31,31,31,31,31,31
     EV = 6,252,0,252,0,0
-    TeraType = GHOST
+    TeraType = NORMAL
 #-------------------------------
 [LEADER_Chuck,Chuck,2]
 Items = TERAORB
@@ -15146,7 +15146,7 @@ Pokemon = POLIWRATH,50
     Nature = JOLLY
     IV = 31,31,31,31,31,31
     EV = 252,252,0,6,0,0
-    TeraType = DARK
+    TeraType = FIGHTING
 #-------------------------------
 [LEADER_Morty,Morty,2]
 Items = TERAORB
@@ -15175,7 +15175,7 @@ Pokemon = MISMAGIUS,50
     Nature = TIMID
     IV = 31,31,31,31,31,31
     EV = 6,0,0,252,252,0
-    TeraType = FAIRY
+    TeraType = GHOST
 #-------------------------------
 [LEADER_Jasmine,Jasmine,2]
 Items = TERAORB
@@ -15203,7 +15203,7 @@ Pokemon = STEELIX,50
     Nature = BRAVE
     IV = 31,31,31,31,31,31
     EV = 6,252,0,0,0,252
-    TeraType = FIRE
+    TeraType = STEEL
 #-------------------------------
 [LEADER_Pryce,Pryce,2]
 Items = TERAORB
@@ -15231,7 +15231,7 @@ Pokemon = MAMOSWINE,50
     Nature = ADAMANT
     IV = 31,31,31,31,31,31
     EV = 6,252,0,0,0,252
-    TeraType = GRASS
+    TeraType = ICE
 #-------------------------------
 [LEADER_Clair,Clair,2]
 Items = TERAORB
@@ -15259,7 +15259,7 @@ Pokemon = KINGDRA,50
     Nature = TIMID
     IV = 31,31,31,31,31,31
     EV = 6,0,0,252,252,0
-    TeraType = STEEL
+    TeraType = DRAGON
 #-------------------------------
 [LEADER_Roxanne,Roxanne,2]
 Items = TERAORB
@@ -15287,7 +15287,7 @@ Pokemon = PROBOPASS,50
     Nature = TIMID
     IV = 31,31,31,31,31,31
     EV = 0,0,6,252,252,0
-    TeraType = FLYING
+    TeraType = ROCK
 #-------------------------------
 [LEADER_Brawly,Brawly,2]
 Items = TERAORB
@@ -15315,7 +15315,7 @@ Pokemon = HARIYAMA,50
     Nature = ADAMANT
     IV = 31,31,31,31,31,31
     EV = 0,252,6,252,0,0
-    TeraType = STEEL
+    TeraType = FIGHTING
 #-------------------------------
 [LEADER_Wattson,Wattson,2]
 Items = TERAORB
@@ -15343,7 +15343,7 @@ Pokemon = MANECTRIC,50
     Nature = TIMID
     IV = 31,31,31,31,31,31
     EV = 0,0,6,252,252,0
-    TeraType = FLYING
+    TeraType = ELECTRIC
 #-------------------------------
 [LEADER_Flannery,Flannery,2]
 Items = TERAORB
@@ -15371,7 +15371,7 @@ Pokemon = TORKOAL,50
     Nature = MODEST
     IV = 31,31,31,31,31,31
     EV = 0,0,6,252,252,0
-    TeraType = GRASS
+    TeraType = FIRE
 #-------------------------------
 [LEADER_Norman,Norman,2]
 Items = TERAORB
@@ -15399,7 +15399,7 @@ Pokemon = SLAKING,50
     Nature = ADAMANT
     IV = 31,31,31,31,31,31
     EV = 0,252,6,0,0,252
-    TeraType = GHOST
+    TeraType = NORMAL
 #-------------------------------
 [LEADER_Winona,Winona,2]
 Items = TERAORB
@@ -15427,7 +15427,7 @@ Pokemon = SWELLOW,50
     Nature = MODEST
     IV = 31,31,31,31,31,31
     EV = 6,0,0,252,252,0
-    TeraType = GHOST
+    TeraType = FLYING
 #-------------------------------
 [LEADER_Tate,Tate,2]
 Items = TERAORB
@@ -15455,7 +15455,7 @@ Pokemon = SOLROCK,50
     Nature = ADAMANT
     IV = 31,31,31,31,31,31
     EV = 0,0,6,252,252,0
-    TeraType = FIRE
+    TeraType = PSYCHIC
 #-------------------------------
 [LEADER_Liza,Liza,2]
 Items = TERAORB
@@ -15483,7 +15483,7 @@ Pokemon = LUNATONE,50
     Nature = TIMID
     IV = 31,31,31,31,31,31
     EV = 0,0,6,252,252,0
-    TeraType = ICE
+    TeraType = PSYCHIC
 #-------------------------------
 [LEADER_Juan,Juan,2]
 Items = TERAORB
@@ -15511,7 +15511,7 @@ Pokemon = WHISCASH,50
     Nature = JOLLY
     IV = 31,31,31,31,31,31
     EV = 0,252,6,252,0,0
-    TeraType = FIRE
+    TeraType = WATER
 #-------------------------------
 [LEADER_Roark,Roark,2]
 Items = TERAORB
@@ -15539,7 +15539,7 @@ Pokemon = RAMPARDOS,50
     Nature = JOLLY
     IV = 31,31,31,31,31,31
     EV = 6,252,0,252,0,0
-    TeraType = ELECTRIC
+    TeraType = ROCK
 #-------------------------------
 [LEADER_Gardenia,Gardenia,2]
 Items = TERAORB
@@ -15567,7 +15567,7 @@ Pokemon = ROSERADE,50
     Nature = TIMID
     IV = 31,31,31,31,31,31
     EV = 0,0,0,252,252,6
-    TeraType = GROUND
+    TeraType = GRASS
 #-------------------------------
 [LEADER_Maylene,Maylene,2]
 Items = TERAORB
@@ -15595,7 +15595,7 @@ Pokemon = MEDICHAM,50
     Nature = ADAMANT
     IV = 31,31,31,31,31,31
     EV = 252,252,0,6,0,0
-    TeraType = STEEL
+    TeraType = FIGHTING
 #-------------------------------
 [LEADER_Wake,Wake,2]
 Items = TERAORB
@@ -15623,7 +15623,7 @@ Pokemon = FLOATZEL,50
     Nature = JOLLY
     IV = 31,31,31,31,31,31
     EV = 0,252,0,252,0,6
-    TeraType = FIRE
+    TeraType = WATER
 #-------------------------------
 [LEADER_Fantina,Fantina,2]
 Items = TERAORB
@@ -15651,7 +15651,7 @@ Pokemon = DRIFBLIM,50
     Nature = MODEST
     IV = 31,31,31,31,31,31
     EV = 252,0,0,0,252,6
-    TeraType = FAIRY
+    TeraType = GHOST
 #-------------------------------
 [LEADER_Candice,Candice,2]
 Items = TERAORB
@@ -15679,7 +15679,7 @@ Pokemon = FROSLASS,50
     Nature = TIMID
     IV = 31,31,31,31,31,31
     EV = 0,0,0,252,252,6
-    TeraType = FAIRY
+    TeraType = ICE
 #-------------------------------
 [LEADER_Byron,Byron,2]
 Items = TERAORB
@@ -15707,7 +15707,7 @@ Pokemon = BASTIODON,50
     Nature = CAREFUL
     IV = 31,31,31,31,31,31
     EV = 252,0,6,0,0,252
-    TeraType = FIGHTING
+    TeraType = STEEL
 #-------------------------------
 [LEADER_Volkner,Volkner,2]
 Items = TERAORB
@@ -15735,7 +15735,7 @@ Pokemon = LUXRAY,50
     Nature = JOLLY
     IV = 31,31,31,31,31,31
     EV = 0,252,6,252,0,0
-    TeraType = ICE
+    TeraType = ELECTRIC
 #-------------------------------
 [LEADER_Cilan,Cilan,2]
 Items = TERAORB
@@ -15764,7 +15764,7 @@ Pokemon = SIMISAGE,50
     Nature = JOLLY
     IV = 31,31,31,31,31,31
     EV = 6,252,0,252,0,0
-    TeraType = FIRE
+    TeraType = GRASS
 #-------------------------------
 [LEADER_Chili,Chili,2]
 Items = TERAORB
@@ -15792,7 +15792,7 @@ Pokemon = SIMISEAR,50
     Nature = JOLLY
     IV = 31,31,31,31,31,31
     EV = 6,252,0,252,0,0
-    TeraType = ELECTRIC
+    TeraType = FIRE
 #-------------------------------
 [LEADER_Marlon,Marlon,2]
 Items = TERAORB
@@ -15820,7 +15820,7 @@ Pokemon = JELLICENT,50
     Nature = MODEST
     IV = 31,31,31,31,31,31
     EV = 252,0,0,0,252,6
-    TeraType = GROUND
+    TeraType = WATER
 #-------------------------------
 [LEADER_Cress,Cress,2]
 Items = TERAORB
@@ -15848,7 +15848,7 @@ Pokemon = SIMIPOUR,50
     Nature = TIMID
     IV = 31,31,31,31,31,31
     EV = 6,0,0,252,252,0
-    TeraType = GROUND
+    TeraType = WATER
 #-------------------------------
 [LEADER_Cheren,Cheren,2]
 Items = TERAORB
@@ -15876,7 +15876,7 @@ Pokemon = STOUTLAND,50
     Nature = JOLLY
     IV = 31,31,31,31,31,31
     EV = 6,252,0,252,0,0
-    TeraType = GHOST
+    TeraType = NORMAL
 #-------------------------------
 [LEADER_Lenora,Lenora,2]
 Items = TERAORB
@@ -15904,7 +15904,7 @@ Pokemon = WATCHOG,50
     Nature = JOLLY
     IV = 31,31,31,31,31,31
     EV = 6,252,0,252,0,0
-    TeraType = FLYING
+    TeraType = NORMAL
 #-------------------------------
 [LEADER_Roxie,Roxie,2]
 Items = TERAORB
@@ -15932,7 +15932,7 @@ Pokemon = SCOLIPEDE,50
     Nature = JOLLY
     IV = 31,31,31,31,31,31
     EV = 6,252,0,252,0,0
-    TeraType = WATER
+    TeraType = POISON
 #-------------------------------
 [LEADER_Burgh,Burgh,2]
 Items = TERAORB
@@ -15960,7 +15960,7 @@ Pokemon = LEAVANNY,50
     Nature = JOLLY
     IV = 31,31,31,31,31,31
     EV = 6,252,0,252,0,0
-    TeraType = GROUND
+    TeraType = BUG
 #-------------------------------
 [LEADER_Clay,Clay,2]
 Items = TERAORB
@@ -15988,7 +15988,7 @@ Pokemon = EXCADRILL,50
     Nature = JOLLY
     IV = 31,31,31,31,31,31
     EV = 6,252,0,252,0,0
-    TeraType = ELECTRIC
+    TeraType = GROUND
 #-------------------------------
 [LEADER_Elesa,Elesa,2]
 Items = TERAORB
@@ -16016,7 +16016,7 @@ Pokemon = ZEBSTRIKA,50
     Nature = JOLLY
     IV = 31,31,31,31,31,31
     EV = 6,252,0,252,0,0
-    TeraType = WATER
+    TeraType = ELECTRIC
 #-------------------------------
 [LEADER_Skyla,Skyla,2]
 Items = TERAORB
@@ -16044,7 +16044,7 @@ Pokemon = SWANNA,50
     Nature = MODEST
     IV = 31,31,31,31,31,31
     EV = 6,0,0,252,252,0
-    TeraType = GROUND
+    TeraType = FLYING
 #-------------------------------
 [LEADER_Brycen,Brycen,2]
 Items = TERAORB
@@ -16072,7 +16072,7 @@ Pokemon = BEARTIC,50
     Nature = JOLLY
     IV = 31,31,31,31,31,31
     EV = 0,252,0,252,0,6
-    TeraType = WATER
+    TeraType = ICE
 #-------------------------------
 [LEADER_Drayden,Drayden,2]
 Items = TERAORB
@@ -16100,7 +16100,7 @@ Pokemon = HAXORUS,50
     Nature = JOLLY
     IV = 31,31,31,31,31,31
     EV = 0,252,0,252,0,6
-    TeraType = STEEL
+    TeraType = DRAGON
 #-------------------------------
 [LEADER_Viola,Viola,2]
 Items = TERAORB
@@ -16128,7 +16128,7 @@ Pokemon = VIVILLON,50
     Nature = TIMID
     IV = 31,31,31,31,31,31
     EV = 0,0,6,252,252,0
-    TeraType = FAIRY
+    TeraType = BUG
 #-------------------------------
 [LEADER_Grant,Grant,2]
 Items = TERAORB
@@ -16156,7 +16156,7 @@ Pokemon = AURORUS,50
     Nature = TIMID
     IV = 31,31,31,31,31,31
     EV = 0,0,6,252,252,0
-    TeraType = STEEL
+    TeraType = ROCK
 #-------------------------------
 [LEADER_Korrina,Korrina,2]
 Items = TERAORB
@@ -16184,7 +16184,7 @@ Pokemon = HAWLUCHA,50
     Nature = ADAMANT
     IV = 31,31,31,31,31,31
     EV = 0,252,6,252,0,0
-    TeraType = FLYING
+    TeraType = FIGHTING
 #-------------------------------
 [LEADER_Ramos,Ramos,2]
 Items = TERAORB
@@ -16212,7 +16212,7 @@ Pokemon = GOGOAT,50
     Nature = ADAMANT
     IV = 31,31,31,31,31,31
     EV = 0,0,6,252,252,0
-    TeraType = GROUND
+    TeraType = GRASS
 #-------------------------------
 [LEADER_Clemont,Clemont,2]
 Items = TERAORB
@@ -16241,7 +16241,7 @@ Pokemon = HELIOLISK,50
     Nature = TIMID
     IV = 31,31,31,31,31,31
     EV = 0,0,6,252,252,0
-    TeraType = FLYING
+    TeraType = ELECTRIC
 #-------------------------------
 [LEADER_Olympia,Olympia,2]
 Items = TERAORB
@@ -16270,7 +16270,7 @@ Pokemon = MEOWSTIC,50
     Nature = TIMID
     IV = 31,31,31,31,31,31
     EV = 0,0,6,252,252,0
-    TeraType = STEEL
+    TeraType = PSYCHIC
 #-------------------------------
 [LEADER_Valerie,Valerie,2]
 Items = TERAORB
@@ -16298,7 +16298,7 @@ Pokemon = SYLVEON,50
     Nature = TIMID
     IV = 31,31,31,31,31,31
     EV = 0,0,6,252,252,0
-    TeraType = FIRE
+    TeraType = FAIRY
 #-------------------------------
 [LEADER_Wulfric,Wulfric,2]
 Items = TERAORB
@@ -16326,7 +16326,7 @@ Pokemon = AVALUGG,50
     Nature = BRAVE
     IV = 31,31,31,31,31,31
     EV = 0,252,6,0,0,252
-    TeraType = STEEL
+    TeraType = ICE
 #-------------------------------
 [CAPTAIN_Ilima,Ilima,2]
 Items = TERAORB
@@ -16354,7 +16354,7 @@ Pokemon = GUMSHOOS,50
     Nature = ADAMANT
     IV = 31,31,31,31,31,31
     EV = 0,252,6,252,0,0
-    TeraType = GHOST
+    TeraType = NORMAL
 #-------------------------------
 [CAPTAIN_Kiawe,Kiawe,2]
 Items = TERAORB
@@ -16383,7 +16383,7 @@ Pokemon = MAROWAK,50
     Nature = ADAMANT
     IV = 31,31,31,31,31,31
     EV = 6,252,0,252,0,0
-    TeraType = STEEL
+    TeraType = FIRE
 #-------------------------------
 [CAPTAIN_Lana,Lana,2]
 Items = TERAORB
@@ -16411,7 +16411,7 @@ Pokemon = ARAQUANID,50
     Nature = ADAMANT
     IV = 31,31,31,31,31,31
     EV = 6,252,252,0,0,0
-    TeraType = STEEL
+    TeraType = WATER
 #-------------------------------
 [CAPTAIN_Mallow,Mallow,2]
 Items = TERAORB
@@ -16439,7 +16439,7 @@ Pokemon = TSAREENA,50
     Nature = JOLLY
     IV = 31,31,31,31,31,31
     EV = 6,252,0,252,0,0
-    TeraType = ICE
+    TeraType = GRASS
 #-------------------------------
 [CAPTAIN_Acerola,Acerola,2]
 Items = TERAORB
@@ -16467,7 +16467,7 @@ Pokemon = MIMIKYU,50
     Nature = ADAMANT
     IV = 31,31,31,31,31,31
     EV = 252,252,6,0,0,0
-    TeraType = NORMAL
+    TeraType = GHOST
 #-------------------------------
 [CAPTAIN_Sophocles,Sophocles,2]
 Items = TERAORB
@@ -16496,7 +16496,7 @@ Pokemon = VIKAVOLT,50
     Nature = TIMID
     IV = 31,31,31,31,31,31
     EV = 6,0,0,252,252,0
-    TeraType = WATER
+    TeraType = ELECTRIC
 #-------------------------------
 [CAPTAIN_Mina,Mina,2]
 Items = TERAORB
@@ -16524,7 +16524,7 @@ Pokemon = RIBOMBEE,50
     Nature = TIMID
     IV = 31,31,31,31,31,31
     EV = 6,0,0,252,252,0
-    TeraType = STEEL
+    TeraType = FAIRY
 #-------------------------------
 [SPECIAL_Nanu,Nanu,2]
 Items = TERAORB
@@ -16553,7 +16553,7 @@ Pokemon = PERSIAN,50
     Nature = JOLLY
     IV = 31,31,31,31,31,31
     EV = 6,252,0,252,0,0
-    TeraType = GHOST
+    TeraType = DARK
 #-------------------------------
 [SPECIAL_Hapu,Hapu,2]
 Items = TERAORB
@@ -16582,7 +16582,7 @@ Pokemon = MUDSDALE,50
     Nature = JOLLY
     IV = 31,31,31,31,31,31
     EV = 6,252,0,252,0,0
-    TeraType = FIGHTING
+    TeraType = GROUND
 #-------------------------------
 [LEADER_Milo,Milo,2]
 Items = TERAORB
@@ -16610,7 +16610,7 @@ Pokemon = ELDEGOSS,50
     Nature = MODEST
     IV = 31,31,31,31,31,31
     EV = 0,0,6,0,252,252
-    TeraType = WATER
+    TeraType = GRASS
 #-------------------------------
 [LEADER_Kabu,Kabu,2]
 Items = TERAORB
@@ -16638,7 +16638,7 @@ Pokemon = CENTISKORCH,50
     Nature = ADAMANT
     IV = 31,31,31,31,31,31
     EV = 6,252,0,252,0,0
-    TeraType = ELECTRIC
+    TeraType = FIRE
 #-------------------------------
 [LEADER_Nessa,Nessa,2]
 Items = TERAORB
@@ -16666,7 +16666,7 @@ Pokemon = DREDNAW,50
     Nature = ADAMANT
     IV = 31,31,31,31,31,31
     EV = 0,252,252,6,0,0
-    TeraType = POISON
+    TeraType = WATER
 #-------------------------------
 [LEADER_Allister,Allister,2]
 Items = TERAORB
@@ -16695,7 +16695,7 @@ Pokemon = CURSOLA,50
     Nature = MODEST
     IV = 31,31,31,31,31,31
     EV = 6,0,0,0,252,252
-    TeraType = FAIRY
+    TeraType = GHOST
 #-------------------------------
 [LEADER_Bea,Bea,2]
 Items = TERAORB
@@ -16723,7 +16723,7 @@ Pokemon = SIRFETCHD,50
     Nature = JOLLY
     IV = 31,31,31,31,31,31
     EV = 0,252,6,252,0,0
-    TeraType = DARK
+    TeraType = FIGHTING
 #-------------------------------
 [LEADER_Opal,Opal,2]
 Items = TERAORB
@@ -16752,7 +16752,7 @@ Pokemon = ALCREMIE,50
     Nature = MODEST
     IV = 31,31,31,31,31,31
     EV = 6,0,0,0,252,252
-    TeraType = FIRE
+    TeraType = FAIRY
 #-------------------------------
 [LEADER_Piers,Piers,2]
 Items = TERAORB
@@ -16780,7 +16780,7 @@ Pokemon = OBSTAGOON,50
     Nature = JOLLY
     IV = 31,31,31,31,31,31
     EV = 6,252,0,252,0,0
-    TeraType = STEEL
+    TeraType = DARK
 #-------------------------------
 [LEADER_Gordie,Gordie,2]
 Items = TERAORB
@@ -16808,7 +16808,7 @@ Pokemon = STONJOURNER,50
     Nature = ADAMANT
     IV = 31,31,31,31,31,31
     EV = 6,252,252,0,0,0
-    TeraType = FLYING
+    TeraType = ROCK
 #-------------------------------
 [LEADER_Melony,Melony,2]
 Items = TERAORB
@@ -16837,7 +16837,7 @@ Pokemon = MRRIME,50
     Nature = MODEST
     IV = 31,31,31,31,31,31
     EV = 6,0,0,252,252,0
-    TeraType = WATER
+    TeraType = ICE
 #-------------------------------
 [LEADER_Raihan,Raihan,2]
 Items = TERAORB
@@ -16865,7 +16865,7 @@ Pokemon = DURALUDON,50
     Nature = TIMID
     IV = 31,31,31,31,31,31
     EV = 6,0,0,252,252,0
-    TeraType = ELECTRIC
+    TeraType = DRAGON
 #-------------------------------
 [LEADER_Katy,Katy,2]
 Items = TERAORB
@@ -16893,7 +16893,7 @@ Pokemon = LOKIX,50
     Nature = ADAMANT
     IV = 31,31,31,31,31,31
     EV = 6,252,0,252,0,0
-    TeraType = GROUND
+    TeraType = BUG
 #-------------------------------
 [LEADER_Brassius,Brassius,2]
 Items = TERAORB
@@ -16921,7 +16921,7 @@ Pokemon = ARBOLIVA,50
     Nature = TIMID
     IV = 31,31,31,31,31,31
     EV = 6,0,0,252,252,0
-    TeraType = WATER
+    TeraType = GRASS
 #-------------------------------
 [LEADER_Iono,Iono,2]
 Items = TERAORB
@@ -16949,7 +16949,7 @@ Pokemon = BELLIBOLT,50
     Nature = TIMID
     IV = 31,31,31,31,31,31
     EV = 6,0,0,252,252,0
-    TeraType = FLYING
+    TeraType = ELECTRIC
 #-------------------------------
 [LEADER_Kofu,Kofu,2]
 Items = TERAORB
@@ -16977,7 +16977,7 @@ Pokemon = VELUZA,50
     Nature = TIMID
     IV = 31,31,31,31,31,31
     EV = 6,0,0,252,252,0
-    TeraType = GROUND
+    TeraType = WATER
 #-------------------------------
 [LEADER_Larry,Larry,2]
 Items = TERAORB
@@ -17005,7 +17005,7 @@ Pokemon = DUDUNSPARCE,50
     Nature = ADAMANT
     IV = 31,31,31,31,31,31
     EV = 6,252,0,252,0,0
-    TeraType = GHOST
+    TeraType = NORMAL
 #-------------------------------
 [LEADER_Ryme,Ryme,2]
 Items = TERAORB
@@ -17033,7 +17033,7 @@ Pokemon = HOUNDSTONE,50
     Nature = JOLLY
     IV = 31,31,31,31,31,31
     EV = 6,252,0,252,0,0
-    TeraType = NORMAL
+    TeraType = GHOST
 #-------------------------------
 [LEADER_Tulip,Tulip,2]
 Items = TERAORB
@@ -17061,7 +17061,7 @@ Pokemon = ESPATHRA,50
     Nature = MODEST
     IV = 31,31,31,31,31,31
     EV = 0,0,252,0,6,252
-    TeraType = STEEL
+    TeraType = PSYCHIC
 #-------------------------------
 [LEADER_Grusha,Grusha,2]
 Items = TERAORB
@@ -17089,7 +17089,7 @@ Pokemon = CETITAN,50
     Nature = JOLLY
     IV = 31,31,31,31,31,31
     EV = 6,252,0,252,0,0
-    TeraType = WATER
+    TeraType = ICE
 #-------------------------------
 [TRAINER_ACETRAINER_HOENN_M,Tester,2]
 Items = TERAORB
