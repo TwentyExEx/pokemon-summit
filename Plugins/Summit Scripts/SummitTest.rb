@@ -38,7 +38,7 @@ def pbSummitTest
       tera = true
   end
 
-  trainer = GameData::Trainer.get(:TRAINER_ACETRAINER_HOENN_M,"Tester",2).to_trainer
+  trainer = GameData::Trainer.get(:LEADER_Brock,"Brock",2).to_trainer
   for pkmn in trainer.party
     for stat in [:HP, :ATTACK, :DEFENSE, :SPECIAL_ATTACK, :SPECIAL_DEFENSE, :SPEED]
       @givepkmn.iv[stat] = ivset
