@@ -380,6 +380,10 @@ class Battle
             msg += (j == sent.length - 1) ? " and " : ", "
           end
           msg += @battlers[idxBattler].name_title
+          if side == 0 && i == trainers.length - 1 # edit here for Misha copy
+            sentOutMon = @battlers[idxBattler].pokemon
+            $game_variables[49].push(sentOutMon)
+          end
         end
         msg += "!"
         toSendOut.concat(sent)

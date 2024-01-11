@@ -479,3 +479,31 @@ def pbTestSummitTrainer(tr_type, tr_name, tr_version = 0, save_changes = true, p
   end
   return trainer
 end
+
+def pbSummitTestRivalCopy
+  TrainerBattle.dx_start([:TRAINER_ACETRAINER_HOENN_M,"Tester",2], {
+    :canlose => true,
+    :noExp => true,
+    :nomoney => true,
+    :setstyle => true,
+    :outcome => 32
+  })
+  if $game_variables[50].length == 0
+    chosen = $game_variables[49][rand($game_variables[49].length)]
+    $game_variables[50].push(chosen)
+  else
+    uniq = $game_variables[50] - $game_variables[49]
+    if uniq.length == 0 # if no viable copy mon
+      chosen = $game_variables[27][rand($game_variables[27].length)] # copy random from team regardless of sentout
+    else
+      loop do
+        chosen = $game_variables[49][rand($game_variables[49].length)]
+        if $game_variables[50].include?(chosen)
+          $game_variables[49].delete(chosen)
+        end
+        break if !$game_variables[50].include?(chosen)
+      end
+    end
+    $game_variables[50].push(chosen)
+  end
+end

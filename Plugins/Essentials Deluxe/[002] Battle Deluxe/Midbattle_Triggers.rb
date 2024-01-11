@@ -109,11 +109,16 @@ class Battle
       @scene.pbDeluxeTriggers(idxBattler, nil, triggers)
     end
     newPkmnName = party[idxParty].name_title
+      sentOutMon = party[idxParty]
     if party[idxParty].ability == :ILLUSION && !pbCheckGlobalAbility(:NEUTRALIZINGGAS)
       new_index = pbLastInTeam(idxBattler)
+      sentOutMon = party[new_index]
       newPkmnName = party[new_index].name_title if new_index >= 0 && new_index != idxParty
     end
     if pbOwnedByPlayer?(idxBattler)
+      if !$game_variables[49].include?(sentOutMon) # edit here for Misha copy
+        $game_variables[49].push(sentOutMon) 
+      end
       opposing = @battlers[idxBattler].pbDirectOpposing
       if opposing.fainted? || opposing.hp == opposing.totalhp
         pbDisplayBrief(_INTL("You're in charge, {1}!", newPkmnName))

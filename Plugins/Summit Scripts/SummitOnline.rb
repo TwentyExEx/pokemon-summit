@@ -453,7 +453,7 @@ def pbOnlineMusicChanger
 		end	
 		tracknum = pbMessage(_INTL("\\bPlease choose a track."),tracknames,tracknames.length)
 		if tracknames[tracknum] != "Cancel"
-			$game_variables[48] = tracklist[tracknum]
+			$game_variables[51] = tracklist[tracknum]
 			trackdisp = region + " - " << tracknames[tracknum]
 			trackdisp += " (" << soundtypelist[choosetype] + ")" if soundtypelist
 			pbMessage(_INTL("\\bBattle music has been set to {1}.",trackdisp))
