@@ -8,13 +8,14 @@ class Battle::Battler
     amt = 1 if amt < 1 && !fainted?
     oldHP = @hp
     self.hp -= amt
-    PBDebug.log("[HP change] #{pbThis} lost #{amt} HP (#{oldHP}=>#{@hp})") if amt > 0
+    PBDebug.log("[HP change] #{pbThis} lost #{amt} HP (#{oldHP} -> #{@hp})") if amt > 0
     raise _INTL("HP less than 0") if @hp < 0
     raise _INTL("HP greater than total HP") if @hp > @totalhp
     @battle.scene.pbHPChanged(self, oldHP, anim) if anyAnim && amt > 0
     if amt > 0 && registerDamage
       @droppedBelowHalfHP = true if @hp < @totalhp / 2 && @hp + amt >= @totalhp / 2
       @tookDamageThisRound = true
+      @tookMoveDamageThisRound = true
     end
     return amt
   end
@@ -25,7 +26,7 @@ class Battle::Battler
     amt = 1 if amt < 1 && @hp < @totalhp
     oldHP = @hp
     self.hp += amt
-    PBDebug.log("[HP change] #{pbThis} gained #{amt} HP (#{oldHP}=>#{@hp})") if amt > 0
+    PBDebug.log("[HP change] #{pbThis} gained #{amt} HP (#{oldHP} -> #{@hp})") if amt > 0
     raise _INTL("HP less than 0") if @hp < 0
     raise _INTL("HP greater than total HP") if @hp > @totalhp
     @battle.scene.pbHPChanged(self, oldHP, anim) if anyAnim && amt > 0
@@ -34,7 +35,7 @@ class Battle::Battler
   end
 
   def pbRecoverHPFromDrain(amt, target, msg = nil)
-    if target.hasActiveAbility?(:LIQUIDOOZE)
+    if target.hasActiveAbility?(:LIQUIDOOZE, true)
       @battle.pbShowAbilitySplash(target)
       pbReduceHP(amt)
       @battle.pbDisplay(_INTL("{1} sucked up the liquid ooze!", pbThis))
@@ -129,25 +130,23 @@ class Battle::Battler
     if newType.is_a?(Battle::Battler)
       newTypes = newType.pbTypes
       newTypes.push(:NORMAL) if newTypes.length == 0
-      newType3 = newType.effects[PBEffects::Type3]
-      newType3 = nil if newTypes.include?(newType3)
+      newExtraType = newType.effects[PBEffects::ExtraType]
+      newExtraType = nil if newTypes.include?(newExtraType)
       @types = newTypes.clone
-      @effects[PBEffects::Type3] = newType3
+      @effects[PBEffects::ExtraType] = newExtraType
     else
       newType = GameData::Type.get(newType).id
       @types = [newType]
-      @effects[PBEffects::Type3] = nil
+      @effects[PBEffects::ExtraType] = nil
     end
     @effects[PBEffects::BurnUp] = false
-    @effects[PBEffects::ThawOut] = false
     @effects[PBEffects::Roost]  = false
   end
 
   def pbResetTypes
     @types = @pokemon.types
-    @effects[PBEffects::Type3]  = nil
+    @effects[PBEffects::ExtraType] = nil
     @effects[PBEffects::BurnUp] = false
-    @effects[PBEffects::ThawOut] = false
     @effects[PBEffects::Roost]  = false
   end
 
@@ -237,7 +236,7 @@ class Battle::Battler
     pbCheckFormOnWeatherChange if !endOfRound
     # Darmanitan - Zen Mode
     if isSpecies?(:DARMANITAN) && self.ability == :ZENMODE
-      if @hp > @totalhp / 4
+      if @hp <= @totalhp / 2
         if @form.even?
           @battle.pbShowAbilitySplash(self, true)
           @battle.pbHideAbilitySplash(self)
@@ -257,8 +256,6 @@ class Battle::Battler
           @battle.pbShowAbilitySplash(self, true)
           @battle.pbHideAbilitySplash(self)
           pbChangeForm(newForm, _INTL("{1} deactivated!", abilityName))
-        elsif !endOfRound
-          @battle.pbDisplay(_INTL("{1} deactivated!", abilityName))
         end
       elsif @form < 7   # Turn into Core form
         @battle.pbShowAbilitySplash(self, true)

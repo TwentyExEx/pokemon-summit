@@ -35,313 +35,83 @@
 #==============================================================================
 class Scene_Credits
   # Backgrounds to show in credits. Found in Graphics/Titles/ folder
-  BACKGROUNDS_LIST       = ["credits1", "credits2", "credits3", "credits4", "credits5","credits6", "credits7", "credits8", "credits9", "credits10","credits11", "credits12", "credits13", "credits14", "credits15", "credits16", "credits17", "credits18", "credits19", "credits20", "credits21", "credits22", "credits23", "credits24", "credits25", "credits26", "credits27", "credits28"]
-  BGM                    = "credits"
+  BACKGROUNDS_LIST       = ["credits1", "credits2", "credits3", "credits4", "credits5"]
+  BGM                    = "Credits"
   SCROLL_SPEED           = 40   # Pixels per second
-  SECONDS_PER_BACKGROUND = 10
+  SECONDS_PER_BACKGROUND = 11
   TEXT_OUTLINE_COLOR     = Color.new(0, 0, 128, 255)
   TEXT_BASE_COLOR        = Color.new(255, 255, 255, 255)
   TEXT_SHADOW_COLOR      = Color.new(0, 0, 0, 100)
 
-  # This next piece of code is the credits.
-  # Start Editing
-  CREDIT = <<_END_
-
-~~ Graphics ~~ 
-
-~Overworlds for the following:~
-
-Barry, Bianca, Pryce, Clair, Drake, 
-Professor Birch, Archie, Volkner, 
-Professor Sycamore, Professor Elm, 
-Bertha, Flint, Cheryl, Mira, Professor Rowan, 
-Benga, Hilbert, Lyra, Dawn, Serena, 
-Professor Kukui, Boarder, Rocker, Super Nerd, 
-Tamer, Hex Maniac, 
-Team Galactic Grunt - Aveontrainer
-
-Silver - Skeizerr and Aveontrainer
-
-Wally, Whitney, Morty, Chuck, Jasmine, 
-Roxanne, Wattson, Tate, Liza, Sidney, 
-Phoebe, Ghetsis, Crasher Wake, Fantina, 
-Byron, Drayden, Cheren, Aaron, Lucian, 
-Marley, Caitlin, Professor Juniper, 
-Lucas, Wallace, Steven, 
-Team Aqua Grunts - Starsparkless and Aveontrainer
-
-Hau, Shauna, Trevor, Lana, Marnie, Bea,
-Hau, Mina - Zender1752 and Aveontrainer
-
-Falkner - BurstXShadowsX and Aveontrainer
-
-Bugsy, Winona, Cyrus, 
-Brycen  - PurpleZaffre, Starsparkless and Aveontrainer
-
-Wulfric, Eusine, Avery, Nate, Rosa, 
-Team Plasma Grunts,  - PurpleZaffre and Aveontrainer
-
-Glacia - Starsparkless, KalerioDion and Aveontrainer
-
-Nanu, Kahili - Silentninja, TSR, 
-Furs the Fox, ShiningStar5022
-
-Roark, Gardenia, Maylene, Will, 
-Karen, N, Gold - PurpleZaffre
-
-Candice, Roxie, Fairy Tale Girl - UlithiumDragon
-
-Burgh, Clay, Skyla, Marlon, Viola, Grant, Korrina, 
-Ramos, Valerie. Olympia, Shauntal, Grimsley, Malva, 
-Siebold, Wikstrom, Drasna, Hop, Janine, Cilan, Chili, 
-Cress, Marshal, Milo, Nessa, Kabu, Opal, Gordie, 
-Melony, Piers, Raihan, Selene, Gloria, Elio, Victor, 
-Mustard, Bede, Sonia, Peony, President Rose, Buck, 
-Lisia, Green, Looker, Lysandre, Guzma, Lenora, Elesa, 
-Ilima, Kiawe, Sophocles, Olivia, Hala, Hapu, Acerola, 
-Lusamine, Iris, Maxie, Molayne, Gladion - Miguel_Horo
-
-Clemont - pokemonrater
-
-Whitney - Starsparkless
-
-Hugh - SylveonGives
-
-Mallow - Droid779 and Aveontrainer
-
-Riley - Etique and Aveontrainer
-
-Klara, Allister - hekigaHoge and Aveontrainer
-
-Calem  - spritestealer and Aveontrainer
-
-Hilda - Starsparkless, kisirokitsune and Aveontrainer
-
-Leon - JappaWakka and PurpleZaffre
-
-Diantha - Lolw3e932
-
-Alder - KalerioDion and Aveontrainer
-
-Cynthia - Wobb and Aveontrainer
-
-Kindler - Spherical Ice and Aveontrainer
-
-Dragon Tamer, Burglar, Engineer, 
-Breeder, Lady - kalerie and Aveontrainer
-
-Painter, PokeManiac, 
-Pokemon Rangers - MrDollSteak and Aveontrainer
-
-Female Swimmer - Teraneck
-
-Brawly, Norman, Juan - Poffin_Case
-
-Schoolkid - Young-Dante
-
-Team Flare Grunts - PurpleZaffre, 
-izzyviscious and Aveontrainer
-
-~Trainer Sprites~ 
-
-Milo, Nessa, Kabu, Bea, Allister, Opal, 
-Gordie, Melony, Piers, Raihan, President Rose, 
-Green, Lisia, Klara, Avery, Mustard, Marnie, 
-Bede, Sonia, Peony, Gloria, 
-Leon - Brumirage, Altthiel, Pujolly and Irpachuza.
-
-Ilima, Lana, Kiawe, Mallow, Sophocles, 
-Acerola, Mina, Hau, Guzma, Elio, Selene, 
-Kukui, Hala, Nanu, Hapu, Kahili, Molayne, 
-Lusamine, Gladion - Beliot419
-
-Viola, Korrina, Ramos, Clemont, Valerie, 
-Olympia, Wulfric, Sidney, Malva, Siebold, 
-Wikstrom, Drasna - Gnomowladny
-
-Grant, Glacia - MechanicalApe464
-
-Wally, Maxie, Archie, Leaf, Red, 
-Brandan, May, Victor, Steven - hyo-oppa
-
-Shauna - Krokotips
-
-Lysandre, Brock, Misty, Surge, Erika, 
-Koga, Sabrina, Blaine, Lorelei, 
-Bruno, Agatha, Lance - Drawnamu
-
-Professor Elm - VictorV111
-
-Kris - Kimba616, InvaderDebz 
-and pruighfyurgfgbvf
-
-Phoebe - UltimaxLugia2020
-
-Drake - Segesi
-
-Zinnia - Jart4115
-
-Professor Juniper - art-56
-
-Professor Sycamore - Wynruelle
-
-Trevor - Aveontrainer
-
-Calem, Serena - TintjeMadelintje101
-
-Looker, Diantha, Fairy Tale Girl, 
-Hex Maniac, Lord (Announcer) - KyleDove
-
-Standard Trainer Classes, Oak - kensuyjin33, 
-Flamejow, AutumnSpire and duncapham
-
-Roxanne, Brawly, Wattson, Flannery, Norman, 
-Winona, Tate, Liza, 
-Wallace - ChromusSama and Shir0n
-
-Team Aqua Grunts, Team Magma Grunts - IceJkai
-
-~Other Sprites~
-
-Player Sprite - WolfHeretic (via Advanced Character Customization)
-
-Gym Badges - VictorV111
-
-Z Crystals - Pixel3r
-
-~~Pokemon Emerald UI Pack~~
-
-Voltseon (For Bag, Relearn, Party, Summary)
-
-Shashu-Greninja, Gazza teh Fox, ENLS (For Trainer Card UI)
-
-Pokémon Splice Team (For Battle UI)
-
-~~ Pokemon Generation 8 Project for v20.1 ~~
-
-
-~Battler Sprites:~
-
-
-Gen 1-5 Pokemon Sprites - veekun
-
-Gen 6 Pokemon Sprites - All Contributors 
-To Smogon X/Y Sprite Project
-
-Gen 7 Pokemon Sprites - All Contributors To 
-Smogon Sun/Moon Sprite Project
-
-Gen 8 Pokemon Sprites - All Contributors To 
-Smogon Sword/Shield Sprite Project
-
-
-~Overworld Sprites~
-
-
-Gen 6+ Berry Tree Overworlds - Anarlaurendil
-
-Gen 6 Pokemon Overworlds - princess-pheonix, LunarDusk, 
-Wolfang62, TintjeMadelintje101, piphybuilder88
-
-Gen 7 Pokemon Overworlds - Larry Turbo, princess-pheonix
-
-Gen 8 Pokemon Overworlds - SageDeoxys, Wolfang62, 
-LarryTurbo, tammyclaydon
-
-Gen 1-5 Pokemon Overworlds - MissingLukey, help-14, 
-Kymoyonian, cSc-A7X, 2and2makes5, Pokegirl4ever, 
-Fernandojl, Silver-Skies, TyranitarDark, Getsuei-H, 
-Kid1513, Milomilotic11, Kyt666, kdiamo11, Chocosrawlooid, 
-Syledude, Gallanty, Gizamimi-Pichu, 2and2makes5, 
-Zyon17,LarryTurbo, spritesstealer, LarryTurbo
-
-
-~Icon Sprites~
-
-
-Gen 1-6 Pokemon Icon Sprites - Alaguesia
-
-Gen 7 Pokemon Icon Sprites - Marin, MapleBranchWing, 
-Contributors to the DS Styled Gen 7+ Repository
-
-Gen 8 Icon Sprites - Larry Turbo, Leparagon
-
-
-~Cry Credits~
-
-Gen 1-6 Pokemon Cries - Rhyden
-Gen 7 Pokemon Cries - Marin, Rhyden
-Gen 8 Pokemon Cries - Zeak6464
-
-~Script Credits~
-
-Golisopod User, Luka S.J.
-
-~Compilation of Resources~
-
-Golisopod User, UberDunsparce
-
-~~Music~~
-
-Pokemon Masters EX
-
-~~Animations~~ 
-
-Pokemon Reborn
-
-Gen 8 move animation project by StCooler, DarryBD99, 
-WolfPP, ardicoozer, riddlemeree.
-
-Sound Effects - BellBlitzKing 
-
-{INSERTS_PLUGIN_CREDITS_DO_NOT_REMOVE}
-
-"Pokémon Essentials" was created by:
-Flameguru
-Poccil (Peter O.)
-Maruno
-
-With contributions from:
-AvatarMonkeyKirby<s>Marin
-Boushy<s>MiDas Mike
-Brother1440<s>Near Fantastica
-FL.<s>PinkMan
-Genzai Kawakami<s>Popper
-Golisopod User<s>Rataime
-help-14<s>Savordez
-IceGod64<s>SoundSpawn
-Jacob O. Wobbrock<s>the__end
-KitsuneKouta<s>Venom12
-Lisa Anthony<s>Wachunga
-Luka S.J.<s>
-and everyone else who helped out
-
-"mkxp-z" by:
-Roza
-Based on "mkxp" by Ancurio et al.
-
-"RPG Maker XP" by:
-Enterbrain
-
-Pokémon is owned by:
-The Pokémon Company
-Nintendo
-Affiliated with Game Freak
-
-
-
-This is a non-profit fan-made game.
-No copyright infringements intended.
-Please support the official games!
-
-_END_
-# Stop Editing
+  def add_names_to_credits(credits, names, with_final_new_line = true)
+    if names.length >= 5
+      i = 0
+      loop do
+        credits.push(names[i] + "<s>" + (names[i + 1] || ""))
+        i += 2
+        break if i >= names.length
+      end
+    else
+      names.each { |name| credits.push(name) }
+    end
+    credits.push("") if with_final_new_line
+  end
+
+  def get_text
+    ret = Settings.game_credits || []
+    # Add plugin credits
+    if PluginManager.plugins.length > 0
+      ret.push("", "", "")
+      PluginManager.plugins.each do |plugin|
+        pcred = PluginManager.credits(plugin)
+        ret.push(_INTL("\"{1}\" v.{2} by:", plugin, PluginManager.version(plugin)))
+        add_names_to_credits(ret, pcred)
+      end
+    end
+    # Add Essentials credits
+    ret.push("", "", "")
+    ret.push(_INTL("\"Pokémon Essentials\" was created by:"))
+    add_names_to_credits(ret, [
+      "Poccil (Peter O.)",
+      "Maruno",
+      _INTL("Inspired by work by Flameguru")
+    ])
+    ret.push(_INTL("With contributions from:"))
+    add_names_to_credits(ret, [
+      "AvatarMonkeyKirby", "Boushy", "Brother1440", "FL.", "Genzai Kawakami",
+      "Golisopod User", "help-14", "IceGod64", "Jacob O. Wobbrock", "KitsuneKouta",
+      "Lisa Anthony", "Luka S.J.", "Marin", "MiDas Mike", "Near Fantastica",
+      "PinkMan", "Popper", "Rataime", "Savordez", "SoundSpawn",
+      "the__end", "Venom12", "Wachunga"
+    ], false)
+    ret.push(_INTL("and everyone else who helped out"))
+    ret.push("")
+    ret.push(_INTL("\"mkxp-z\" by:"))
+    add_names_to_credits(ret, [
+      "Roza",
+      _INTL("Based on \"mkxp\" by Ancurio et al.")
+    ])
+    ret.push(_INTL("\"RPG Maker XP\" by:"))
+    add_names_to_credits(ret, ["Enterbrain"])
+    ret.push(_INTL("Pokémon is owned by:"))
+    add_names_to_credits(ret, [
+      "The Pokémon Company",
+      "Nintendo",
+      _INTL("Affiliated with Game Freak")
+    ])
+    ret.push("", "")
+    ret.push(_INTL("This is a non-profit fan-made game."),
+             _INTL("No copyright infringements intended."),
+             _INTL("Please support the official games!"))
+    return ret
+  end
 
   def main
+    @quit = false
     #-------------------------------
     # Animated Background Setup
     #-------------------------------
-    @counter = 0.0   # Counts time elapsed since the background image changed
+    @timer_start = System.uptime   # Time when the credits started
     @bg_index = 0
     @bitmap_height = Graphics.height   # For a single credits text bitmap
     @trim = Graphics.height / 10
@@ -350,24 +120,7 @@ _END_
     #-------------------------------
     # Credits text Setup
     #-------------------------------
-    plugin_credits = ""
-    PluginManager.plugins.each do |plugin|
-      pcred = PluginManager.credits(plugin)
-      plugin_credits << "\"#{plugin}\" v.#{PluginManager.version(plugin)} by:\n"
-      if pcred.size >= 5
-        plugin_credits << (pcred[0] + "\n")
-        i = 1
-        until i >= pcred.size
-          plugin_credits << (pcred[i] + "<s>" + (pcred[i + 1] || "") + "\n")
-          i += 2
-        end
-      else
-        pcred.each { |name| plugin_credits << (name + "\n") }
-      end
-      plugin_credits << "\n"
-    end
-    CREDIT.gsub!(/\{INSERTS_PLUGIN_CREDITS_DO_NOT_REMOVE\}/, plugin_credits)
-    credit_lines = CREDIT.split(/\n/)
+    credit_lines = get_text
     #-------------------------------
     # Make background and text sprites
     #-------------------------------
@@ -387,29 +140,31 @@ _END_
       lines_per_bitmap.times do |j|
         line = credit_lines[(i * lines_per_bitmap) + j]
         next if !line
+        line += " " if line.end_with?("<s>")
         line = line.split("<s>")
         xpos = 0
         align = 1   # Centre align
         linewidth = Graphics.width
         line.length.times do |k|
+          text = line[k].strip
           if line.length > 1
             xpos = (k == 0) ? 0 : 20 + (Graphics.width / 2)
             align = (k == 0) ? 2 : 0   # Right align : left align
             linewidth = (Graphics.width / 2) - 20
           end
           credit_bitmap.font.color = TEXT_SHADOW_COLOR
-          credit_bitmap.draw_text(xpos, (j * 32) + 12, linewidth, 32, line[k], align)
+          credit_bitmap.draw_text(xpos, (j * 32) + 12, linewidth, 32, text, align)
           credit_bitmap.font.color = TEXT_OUTLINE_COLOR
-          credit_bitmap.draw_text(xpos + 2, (j * 32) + 2, linewidth, 32, line[k], align)
-          credit_bitmap.draw_text(xpos,     (j * 32) + 2, linewidth, 32, line[k], align)
-          credit_bitmap.draw_text(xpos - 2, (j * 32) + 2, linewidth, 32, line[k], align)
-          credit_bitmap.draw_text(xpos + 2, (j * 32) + 4, linewidth, 32, line[k], align)
-          credit_bitmap.draw_text(xpos - 2, (j * 32) + 4, linewidth, 32, line[k], align)
-          credit_bitmap.draw_text(xpos + 2, (j * 32) + 6, linewidth, 32, line[k], align)
-          credit_bitmap.draw_text(xpos,     (j * 32) + 6, linewidth, 32, line[k], align)
-          credit_bitmap.draw_text(xpos - 2, (j * 32) + 6, linewidth, 32, line[k], align)
+          credit_bitmap.draw_text(xpos + 2, (j * 32) + 2, linewidth, 32, text, align)
+          credit_bitmap.draw_text(xpos,     (j * 32) + 2, linewidth, 32, text, align)
+          credit_bitmap.draw_text(xpos - 2, (j * 32) + 2, linewidth, 32, text, align)
+          credit_bitmap.draw_text(xpos + 2, (j * 32) + 4, linewidth, 32, text, align)
+          credit_bitmap.draw_text(xpos - 2, (j * 32) + 4, linewidth, 32, text, align)
+          credit_bitmap.draw_text(xpos + 2, (j * 32) + 6, linewidth, 32, text, align)
+          credit_bitmap.draw_text(xpos,     (j * 32) + 6, linewidth, 32, text, align)
+          credit_bitmap.draw_text(xpos - 2, (j * 32) + 6, linewidth, 32, text, align)
           credit_bitmap.font.color = TEXT_BASE_COLOR
-          credit_bitmap.draw_text(xpos, (j * 32) + 4, linewidth, 32, line[k], align)
+          credit_bitmap.draw_text(xpos, (j * 32) + 4, linewidth, 32, text, align)
         end
       end
       credit_sprite = Sprite.new(text_viewport)
@@ -433,59 +188,46 @@ _END_
       Graphics.update
       Input.update
       update
-      break if $scene != self
+      break if @quit
     end
-    pbBGMFade(2.0)
     $game_temp.background_bitmap = Graphics.snap_to_bitmap
+    pbBGMFade(2.0)
     Graphics.freeze
-    viewport.color = Color.new(0, 0, 0, 255)   # Ensure screen is black
+    viewport.color = Color.black   # Ensure screen is black
+    text_viewport.color = Color.black   # Ensure screen is black
     Graphics.transition(8, "fadetoblack")
     $game_temp.background_bitmap.dispose
     @background_sprite.dispose
     @credit_sprites.each { |s| s&.dispose }
-    text_viewport.dispose
     viewport.dispose
+    text_viewport.dispose
     $PokemonGlobal.creditsPlayed = true
     pbBGMPlay(previousBGM)
-    $game_switches[37] = true
-    $game_switches[61] = true
-    Game.save
-    $game_temp.title_screen_calling = true
+    $scene = ($game_map) ? Scene_Map.new : nil
   end
 
   # Check if the credits should be cancelled
   def cancel?
-    if Input.trigger?(Input::USE) && $PokemonGlobal.creditsPlayed
-      $scene = Scene_Map.new
-      pbBGMFade(1.0)
-      return true
-    end
-    return false
+    @quit = true if Input.trigger?(Input::USE) && $PokemonGlobal.creditsPlayed
+    return @quit
   end
 
   # Checks if credits bitmap has reached its ending point
   def last?
-    if @realOY > @total_height + @trim
-      $scene = ($game_map) ? Scene_Map.new : nil
-      pbBGMFade(2.0)
-      return true
-    end
-    return false
+    @quit = true if @realOY > @total_height + @trim
+    return @quit
   end
 
   def update
-    delta = Graphics.delta_s
-    @counter += delta
     # Go to next slide
-    if @counter >= SECONDS_PER_BACKGROUND
-      @counter -= SECONDS_PER_BACKGROUND
-      @bg_index += 1
-      @bg_index = 0 if @bg_index >= BACKGROUNDS_LIST.length
+    new_bg_index = ((System.uptime - @timer_start) / SECONDS_PER_BACKGROUND) % BACKGROUNDS_LIST.length
+    if @bg_index != new_bg_index
+      @bg_index = new_bg_index
       @background_sprite.setBitmap("Graphics/Titles/" + BACKGROUNDS_LIST[@bg_index])
     end
     return if cancel?
     return if last?
-    @realOY += SCROLL_SPEED * delta
+    @realOY = (SCROLL_SPEED * (System.uptime - @timer_start)) - Graphics.height + @trim
     @credit_sprites.each_with_index { |s, i| s.oy = @realOY - (@bitmap_height * i) }
   end
 end

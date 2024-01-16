@@ -14,17 +14,17 @@ def pbCallTitle
 end
 
 def mainFunction
-	#if $DEBUG
-		pbCriticalCode { mainFunctionDebug }
-	# else
-		# mainFunctionDebug
-	# end
-	return 1
-end 
+  if $DEBUG
+    pbCriticalCode { mainFunctionDebug }
+  else
+    mainFunctionDebug
+  end
+  return 1
+end
 
 def mainFunctionDebug
   begin
-    MessageTypes.loadMessageFile("Data/messages.dat") if safeExists?("Data/messages.dat")
+    MessageTypes.load_default_messages if FileTest.exist?("Data/messages_core.dat")
     PluginManager.runPlugins
     Compiler.main
     Game.initialize
@@ -52,5 +52,3 @@ loop do
     break
   end
 end
-
-$DiscordRPC.shutdown

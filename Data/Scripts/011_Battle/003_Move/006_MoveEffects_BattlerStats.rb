@@ -23,10 +23,17 @@ end
 # (Fell Stinger (Gen 6-))
 #===============================================================================
 class Battle::Move::RaiseUserAttack2IfTargetFaints < Battle::Move
+  attr_reader :statUp
+
+  def initialize(battle, move)
+    super
+    @statUp = [:ATTACK, 2]
+  end
+
   def pbEffectAfterAllHits(user, target)
     return if !target.damageState.fainted
-    return if !user.pbCanRaiseStatStage?(:ATTACK, user, self)
-    user.pbRaiseStatStage(:ATTACK, 2, user)
+    return if !user.pbCanRaiseStatStage?(@statUp[0], user, self)
+    user.pbRaiseStatStage(@statUp[0], @statUp[1], user)
   end
 end
 
@@ -45,10 +52,17 @@ end
 # (Fell Stinger (Gen 7+))
 #===============================================================================
 class Battle::Move::RaiseUserAttack3IfTargetFaints < Battle::Move
+  attr_reader :statUp
+
+  def initialize(battle, move)
+    super
+    @statUp = [:ATTACK, 3]
+  end
+
   def pbEffectAfterAllHits(user, target)
     return if !target.damageState.fainted
-    return if !user.pbCanRaiseStatStage?(:ATTACK, user, self)
-    user.pbRaiseStatStage(:ATTACK, 3, user)
+    return if !user.pbCanRaiseStatStage?(@statUp[0], user, self)
+    user.pbRaiseStatStage(@statUp[0], @statUp[1], user)
   end
 end
 
@@ -57,7 +71,14 @@ end
 # (Belly Drum)
 #===============================================================================
 class Battle::Move::MaxUserAttackLoseHalfOfTotalHP < Battle::Move
+  attr_reader :statUp
+
   def canSnatch?; return true; end
+
+  def initialize(battle, move)
+    super
+    @statUp = [:ATTACK, 12]
+  end
 
   def pbMoveFailed?(user, targets)
     hpLoss = [user.totalhp / 2, 1].max
@@ -65,7 +86,7 @@ class Battle::Move::MaxUserAttackLoseHalfOfTotalHP < Battle::Move
       @battle.pbDisplay(_INTL("But it failed!"))
       return true
     end
-    return true if !user.pbCanRaiseStatStage?(:ATTACK, user, self, true)
+    return true if !user.pbCanRaiseStatStage?(@statUp[0], user, self, true)
     return false
   end
 
@@ -73,16 +94,18 @@ class Battle::Move::MaxUserAttackLoseHalfOfTotalHP < Battle::Move
     hpLoss = [user.totalhp / 2, 1].max
     user.pbReduceHP(hpLoss, false, false)
     if user.hasActiveAbility?(:CONTRARY)
-      user.stages[:ATTACK] = -6
+      user.stages[@statUp[0]] = -Battle::Battler::STAT_STAGE_MAXIMUM
       user.statsLoweredThisRound = true
       user.statsDropped = true
       @battle.pbCommonAnimation("StatDown", user)
-      @battle.pbDisplay(_INTL("{1} cut its own HP and minimized its Attack!", user.pbThis))
+      @battle.pbDisplay(_INTL("{1} cut its own HP and minimized its {2}!",
+         user.pbThis, GameData::Stat.get(@statUp[0]).name))
     else
-      user.stages[:ATTACK] = 6
+      user.stages[@statUp[0]] = Battle::Battler::STAT_STAGE_MAXIMUM
       user.statsRaisedThisRound = true
       @battle.pbCommonAnimation("StatUp", user)
-      @battle.pbDisplay(_INTL("{1} cut its own HP and maximized its Attack!", user.pbThis))
+      @battle.pbDisplay(_INTL("{1} cut its own HP and maximized its {2}!",
+         user.pbThis, GameData::Stat.get(@statUp[0]).name))
     end
     user.pbItemHPHealCheck
   end
@@ -407,6 +430,8 @@ end
 # (Shell Smash)
 #===============================================================================
 class Battle::Move::LowerUserDefSpDef1RaiseUserAtkSpAtkSpd2 < Battle::Move
+  attr_reader :statUp, :statDown
+
   def canSnatch?; return true; end
 
   def initialize(battle, move)
@@ -882,11 +907,12 @@ class Battle::Move::RaiseTargetAtkSpAtk2 < Battle::Move
   end
 
   def pbEffectAgainstTarget(user, target)
+    showAnim = true
     if target.pbCanRaiseStatStage?(:ATTACK, user, self)
-      target.pbRaiseStatStage(:ATTACK, 2, user)
+      showAnim = false if target.pbRaiseStatStage(:ATTACK, 2, user, showAnim)
     end
     if target.pbCanRaiseStatStage?(:SPECIAL_ATTACK, user, self)
-      target.pbRaiseStatStage(:SPECIAL_ATTACK, 2, user)
+      target.pbRaiseStatStage(:SPECIAL_ATTACK, 2, user, showAnim)
     end
   end
 end
@@ -1200,7 +1226,6 @@ class Battle::Move::LowerTargetEvasion1RemoveSideEffects < Battle::Move::TargetS
     targetSide = target.pbOwnSide
     targetOpposingSide = target.pbOpposingSide
     return false if targetSide.effects[PBEffects::AuroraVeil] > 0 ||
-					targetSide.effects[PBEffects::FungusVeil] > 0 ||
                     targetSide.effects[PBEffects::LightScreen] > 0 ||
                     targetSide.effects[PBEffects::Reflect] > 0 ||
                     targetSide.effects[PBEffects::Mist] > 0 ||
@@ -1225,10 +1250,6 @@ class Battle::Move::LowerTargetEvasion1RemoveSideEffects < Battle::Move::TargetS
     if target.pbOwnSide.effects[PBEffects::AuroraVeil] > 0
       target.pbOwnSide.effects[PBEffects::AuroraVeil] = 0
       @battle.pbDisplay(_INTL("{1}'s Aurora Veil wore off!", target.pbTeam))
-    end
-    if target.pbOwnSide.effects[PBEffects::FungusVeil] > 0
-      target.pbOwnSide.effects[PBEffects::FungusVeil] = 0
-      @battle.pbDisplay(_INTL("{1}'s Fungus Veil wore off!", target.pbTeam))
     end
     if target.pbOwnSide.effects[PBEffects::LightScreen] > 0
       target.pbOwnSide.effects[PBEffects::LightScreen] = 0
@@ -1335,6 +1356,8 @@ end
 # stage each. (Venom Drench)
 #===============================================================================
 class Battle::Move::LowerPoisonedTargetAtkSpAtkSpd1 < Battle::Move
+  attr_reader :statDown
+
   def canMagicCoat?; return true; end
 
   def initialize(battle, move)
@@ -1347,10 +1370,13 @@ class Battle::Move::LowerPoisonedTargetAtkSpAtkSpd1 < Battle::Move
     targets.each do |b|
       next if !b || b.fainted?
       next if !b.poisoned?
-      next if !b.pbCanLowerStatStage?(:ATTACK, user, self) &&
-              !b.pbCanLowerStatStage?(:SPECIAL_ATTACK, user, self) &&
-              !b.pbCanLowerStatStage?(:SPEED, user, self)
-      @validTargets.push(b.index)
+      failed = true
+      (@statDown.length / 2).times do |i|
+        next if !b.pbCanLowerStatStage?(@statDown[i * 2], user, self)
+        failed = false
+        break
+      end
+      @validTargets.push(b.index) if !failed
     end
     if @validTargets.length == 0
       @battle.pbDisplay(_INTL("But it failed!"))
@@ -1402,7 +1428,7 @@ end
 # Raises the Attack and Defense of all user's allies by 1 stage each. Bypasses
 # protections, including Crafty Shield. Fails if there is no ally. (Coaching)
 #===============================================================================
-class Battle::Move::RaiseUserAndAlliesAtkDef1 < Battle::Move
+class Battle::Move::RaiseAlliesAtkDef1 < Battle::Move
   def ignoresSubstitute?(user); return true; end
   def canSnatch?; return true; end
 
@@ -1439,9 +1465,8 @@ class Battle::Move::RaiseUserAndAlliesAtkDef1 < Battle::Move
 end
 
 #===============================================================================
-# Raises Atk/Sp. Atk of Steel-types. Raises Speed of Electric-types. 
-# If used on Electric Terrain, both Steel-types and Electric-types gain an 
-# additional boost in Speed. Does not affect airborne Pokemon. (Gear Up)
+# Increases the user's and its ally's Attack and Special Attack by 1 stage each,
+# if they have Plus or Minus. (Gear Up)
 #===============================================================================
 # NOTE: In Gen 5, this move should have a target of UserSide, while in Gen 6+ it
 #       should have a target of UserAndAllies. This is because, in Gen 5, this
@@ -1450,16 +1475,14 @@ end
 #       aren't protected by their substitute/ability/etc., but they are in Gen
 #       6+). We achieve this by not targeting any battlers in Gen 5, since
 #       pbSuccessCheckAgainstTarget is only called for targeted battlers.
-
-class Battle::Move::RaiseTargetStatsBasedOnTypeAndElectricTerrain < Battle::Move
+class Battle::Move::RaisePlusMinusUserAndAlliesAtkSpAtk1 < Battle::Move
   def ignoresSubstitute?(user); return true; end
   def canSnatch?;               return true; end
 
   def pbMoveFailed?(user, targets)
     @validTargets = []
-    @battle.allBattlers.each do |b|
-      next if !(b.pbHasType?(:STEEL) || b.pbHasType?(:ELECTRIC))
-      next if b.airborne?
+    @battle.allSameSideBattlers(user).each do |b|
+      next if !b.hasActiveAbility?([:MINUS, :PLUS])
       next if !b.pbCanRaiseStatStage?(:ATTACK, user, self) &&
               !b.pbCanRaiseStatStage?(:SPECIAL_ATTACK, user, self)
       @validTargets.push(b)
@@ -1473,35 +1496,18 @@ class Battle::Move::RaiseTargetStatsBasedOnTypeAndElectricTerrain < Battle::Move
 
   def pbFailsAgainstTarget?(user, target, show_message)
     return false if @validTargets.any? { |b| b.index == target.index }
-    return true if !(target.pbHasType?(:STEEL) || target.pbHasType?(:ELECTRIC))
+    return true if !target.hasActiveAbility?([:MINUS, :PLUS])
     @battle.pbDisplay(_INTL("{1}'s stats can't be raised further!", target.pbThis)) if show_message
     return true
   end
 
   def pbEffectAgainstTarget(user, target)
     showAnim = true
-    if target.pbHasType?(:STEEL)
-      if target.pbCanRaiseStatStage?(:ATTACK, user, self)
-        showAnim = false if target.pbRaiseStatStage(:ATTACK, 1, user, showAnim)
-      end
-      if target.pbCanRaiseStatStage?(:SPECIAL_ATTACK, user, self)
-        target.pbRaiseStatStage(:SPECIAL_ATTACK, 1, user, showAnim)
-      end
-      if @battle.field.terrain == :Electric
-        if target.pbCanRaiseStatStage?(:SPEED, user, self)
-          target.pbRaiseStatStage(:SPEED, 1, user, showAnim)
-        end
-      end
-    elsif target.pbHasType?(:ELECTRIC)
-      if @battle.field.terrain == :Electric
-        if target.pbCanRaiseStatStage?(:SPEED, user, self)
-          target.pbRaiseStatStage(:SPEED, 2, user, showAnim)
-        end
-      else
-        if target.pbCanRaiseStatStage?(:SPEED, user, self)
-          target.pbRaiseStatStage(:SPEED, 1, user, showAnim)
-        end
-      end
+    if target.pbCanRaiseStatStage?(:ATTACK, user, self)
+      showAnim = false if target.pbRaiseStatStage(:ATTACK, 1, user, showAnim)
+    end
+    if target.pbCanRaiseStatStage?(:SPECIAL_ATTACK, user, self)
+      target.pbRaiseStatStage(:SPECIAL_ATTACK, 1, user, showAnim)
     end
   end
 
@@ -1522,7 +1528,7 @@ end
 #       aren't protected by their substitute/ability/etc., but they are in Gen
 #       6+). We achieve this by not targeting any battlers in Gen 5, since
 #       pbSuccessCheckAgainstTarget is only called for targeted battlers.
-class Battle::Move::RaisePlusMinusUserAndAlliesDefSpDefSpd1 < Battle::Move
+class Battle::Move::RaisePlusMinusUserAndAlliesDefSpDef1 < Battle::Move
   def ignoresSubstitute?(user); return true; end
   def canSnatch?; return true; end
 
@@ -1531,8 +1537,7 @@ class Battle::Move::RaisePlusMinusUserAndAlliesDefSpDefSpd1 < Battle::Move
     @battle.allSameSideBattlers(user).each do |b|
       next if !b.hasActiveAbility?([:MINUS, :PLUS])
       next if !b.pbCanRaiseStatStage?(:DEFENSE, user, self) &&
-              !b.pbCanRaiseStatStage?(:SPECIAL_DEFENSE, user, self) &&
-			  !b.pbCanRaiseStatStage?(:SPEED, user, self)
+              !b.pbCanRaiseStatStage?(:SPECIAL_DEFENSE, user, self)
       @validTargets.push(b)
     end
     if @validTargets.length == 0
@@ -1556,9 +1561,6 @@ class Battle::Move::RaisePlusMinusUserAndAlliesDefSpDefSpd1 < Battle::Move
     end
     if target.pbCanRaiseStatStage?(:SPECIAL_DEFENSE, user, self)
       target.pbRaiseStatStage(:SPECIAL_DEFENSE, 1, user, showAnim)
-    end
-    if target.pbCanRaiseStatStage?(:SPEED, user, self)
-      target.pbRaiseStatStage(:SPEED, 1, user, showAnim)
     end
   end
 
@@ -1942,11 +1944,8 @@ class Battle::Move::StartSwapAllBattlersBaseDefensiveStats < Battle::Move
     if @battle.field.effects[PBEffects::WonderRoom] > 0
       @battle.field.effects[PBEffects::WonderRoom] = 0
       @battle.pbDisplay(_INTL("Wonder Room wore off, and the Defense and Sp. Def stats returned to normal!"))
-    elsif user.hasActiveItem?(:EXTENDEDBOOKING)
-      @battle.field.effects[PBEffects::WonderRoom] = 8
-      @battle.pbDisplay(_INTL("It created a bizarre area in which the Defense and Sp. Def stats are swapped!"))
-	else
-	  @battle.field.effects[PBEffects::WonderRoom] = 5
+    else
+      @battle.field.effects[PBEffects::WonderRoom] = 5
       @battle.pbDisplay(_INTL("It created a bizarre area in which the Defense and Sp. Def stats are swapped!"))
     end
   end

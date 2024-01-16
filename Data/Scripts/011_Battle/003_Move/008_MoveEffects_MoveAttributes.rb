@@ -100,9 +100,7 @@ class Battle::Move::OHKO < Battle::Move::FixedDamageMove
 
   def pbHitEffectivenessMessages(user, target, numTargets = 1)
     super
-    if target.fainted?
-      @battle.pbDisplay(_INTL("It's a one-hit KO!"))
-    end
+    @battle.pbDisplay(_INTL("It's a one-hit KO!")) if target.fainted?
   end
 end
 
@@ -145,7 +143,7 @@ class Battle::Move::DamageTargetAlly < Battle::Move
       next if !b.near?(target.index)
       next if !b.takesIndirectDamage?
       hitAlly.push([b.index, b.hp])
-      b.pbReduceHP(b.totalhp / 6, false)
+      b.pbReduceHP(b.totalhp / 16, false)
     end
     if hitAlly.length == 2
       @battle.pbDisplay(_INTL("The bursting flame hit {1} and {2}!",
@@ -333,7 +331,7 @@ class Battle::Move::PowerHigherWithConsecutiveUse < Battle::Move
     oldVal = user.effects[PBEffects::FuryCutter]
     super
     maxMult = 1
-    while (@baseDamage << (maxMult - 1)) < 160
+    while (@power << (maxMult - 1)) < 160
       maxMult += 1   # 1-4 for base damage of 20, 1-3 for base damage of 40
     end
     user.effects[PBEffects::FuryCutter] = (oldVal >= maxMult) ? maxMult : oldVal + 1
@@ -453,8 +451,6 @@ class Battle::Move::DoublePowerIfTargetPoisoned < Battle::Move
   end
 end
 
-
-
 #===============================================================================
 # Power is doubled if the target is paralyzed. Cures the target of paralysis.
 # (Smelling Salts)
@@ -553,48 +549,15 @@ class Battle::Move::DoublePowerInElectricTerrain < Battle::Move
 end
 
 #===============================================================================
-# Power is multiplied by 1.5 if Electric Terrain applies. (Psyblade)
+# Power is doubled if the user's last move failed. (Stomping Tantrum)
 #===============================================================================
-class Battle::Move::PowersUpInElectricTerrain < Battle::Move
+class Battle::Move::DoublePowerIfUserLastMoveFailed < Battle::Move
   def pbBaseDamage(baseDmg, user, target)
-    baseDmg *= 1.5 if @battle.field.terrain == :Electric && target.affectedByTerrain?
+    baseDmg *= 2 if user.lastRoundMoveFailed
     return baseDmg
   end
 end
 
-#===============================================================================
-# Power is multiplied by 1.5 if Sun applies. (Hydro Steam)
-#===============================================================================
-class Battle::Move::DoublePowerInSun < Battle::Move
-  def pbBaseDamage(baseDmg, user, target)
-    baseDmg *= 1.5 if user.effectiveWeather == :Sun
-    return baseDmg
-  end
-end
-
-#===============================================================================
-# Paralyzes the target if there is a terrain active and ends the terrain. (Stomping Tantrum)
-#===============================================================================
-class Battle::Move::ParalyzeIfTerrainRemoveTerrain < Battle::Move::ParalyzeTarget
-  def pbAdditionalEffect(user, target)
-    super if @battle.field.terrain != :None
-  end
-
-
-  def pbEffectGeneral(user)
-    case @battle.field.terrain
-    when :Electric
-      @battle.pbDisplay(_INTL("The electricity disappeared from the battlefield."))
-    when :Grassy
-      @battle.pbDisplay(_INTL("The grass disappeared from the battlefield."))
-    when :Misty
-      @battle.pbDisplay(_INTL("The mist disappeared from the battlefield."))
-    when :Psychic
-      @battle.pbDisplay(_INTL("The weirdness disappeared from the battlefield."))
-    end
-    @battle.field.terrain = :None
-  end
-end
 #===============================================================================
 # Power is doubled if a user's teammate fainted last round. (Retaliate)
 #===============================================================================
@@ -852,7 +815,7 @@ class Battle::Move::StartWeakenDamageAgainstUserSideIfHail < Battle::Move
 end
 
 #===============================================================================
-# Ends the opposing side's Light Screen, Reflect, Aurora Veil and Fungus Veil Break. (Brick Break,
+# Ends the opposing side's Light Screen, Reflect and Aurora Break. (Brick Break,
 # Psychic Fangs)
 #===============================================================================
 class Battle::Move::RemoveScreens < Battle::Move
@@ -871,17 +834,12 @@ class Battle::Move::RemoveScreens < Battle::Move
       user.pbOpposingSide.effects[PBEffects::AuroraVeil] = 0
       @battle.pbDisplay(_INTL("{1}'s Aurora Veil wore off!", user.pbOpposingTeam))
     end
-    if user.pbOpposingSide.effects[PBEffects::FungusVeil] > 0
-      user.pbOpposingSide.effects[PBEffects::FungusVeil] = 0
-      @battle.pbDisplay(_INTL("{1}'s Fungus Veil wore off!", user.pbOpposingTeam))
-    end
   end
 
   def pbShowAnimation(id, user, targets, hitNum = 0, showAnimation = true)
-    if user.pbOpposingSide.effects[PBEffects::LightScreen] > 0 ||
-       user.pbOpposingSide.effects[PBEffects::Reflect] > 0 ||
-       user.pbOpposingSide.effects[PBEffects::AuroraVeil] > 0 ||
-	   user.pbOpposingSide.effects[PBEffects::FungusVeil] > 0 
+    if user.pbOpposingSide.effects[PBEffects::AuroraVeil] > 0 ||
+       user.pbOpposingSide.effects[PBEffects::LightScreen] > 0 ||
+       user.pbOpposingSide.effects[PBEffects::Reflect] > 0
       hitNum = 1   # Wall-breaking anim
     end
     super
@@ -1020,7 +978,6 @@ class Battle::Move::RemoveProtections < Battle::Move
   def pbEffectAgainstTarget(user, target)
     target.effects[PBEffects::BanefulBunker]          = false
     target.effects[PBEffects::KingsShield]            = false
-    target.effects[PBEffects::Shelter]                = false
     target.effects[PBEffects::Obstruct]               = false
     target.effects[PBEffects::Protect]                = false
     target.effects[PBEffects::SpikyShield]            = false
@@ -1034,21 +991,8 @@ end
 #===============================================================================
 # Ends target's protections immediately. (Hyperspace Hole)
 #===============================================================================
-class Battle::Move::RemoveProtectionsBypassSubstitute < Battle::Move
+class Battle::Move::RemoveProtectionsBypassSubstitute < Battle::Move::RemoveProtections
   def ignoresSubstitute?(user); return true; end
-
-  def pbEffectAgainstTarget(user, target)
-    target.effects[PBEffects::BanefulBunker]          = false
-    target.effects[PBEffects::KingsShield]            = false
-    target.effects[PBEffects::Shelter]                = false
-    target.effects[PBEffects::Obstruct]               = false
-    target.effects[PBEffects::Protect]                = false
-    target.effects[PBEffects::SpikyShield]            = false
-    target.pbOwnSide.effects[PBEffects::CraftyShield] = false
-    target.pbOwnSide.effects[PBEffects::MatBlock]     = false
-    target.pbOwnSide.effects[PBEffects::QuickGuard]   = false
-    target.pbOwnSide.effects[PBEffects::WideGuard]    = false
-  end
 end
 
 #===============================================================================
@@ -1077,7 +1021,6 @@ class Battle::Move::HoopaRemoveProtectionsBypassSubstituteLowerUserDef1 < Battle
   def pbEffectAgainstTarget(user, target)
     target.effects[PBEffects::BanefulBunker]          = false
     target.effects[PBEffects::KingsShield]            = false
-    target.effects[PBEffects::Shelter]                = false
     target.effects[PBEffects::Obstruct]               = false
     target.effects[PBEffects::Protect]                = false
     target.effects[PBEffects::SpikyShield]            = false
@@ -1154,8 +1097,7 @@ class Battle::Move::EffectivenessIncludesFlyingType < Battle::Move
   def pbCalcTypeModSingle(moveType, defType, user, target)
     ret = super
     if GameData::Type.exists?(:FLYING)
-      flyingEff = Effectiveness.calculate_one(:FLYING, defType)
-      ret *= flyingEff.to_f / Effectiveness::NORMAL_EFFECTIVE_ONE
+      ret *= Effectiveness.calculate(:FLYING, defType)
     end
     return ret
   end
@@ -1179,24 +1121,26 @@ class Battle::Move::CategoryDependsOnHigherDamagePoisonTarget < Battle::Move::Po
 
   def pbOnStartUse(user, targets)
     target = targets[0]
-    stageMul = [2, 2, 2, 2, 2, 2, 2, 3, 4, 5, 6, 7, 8]
-    stageDiv = [8, 7, 6, 5, 4, 3, 2, 2, 2, 2, 2, 2, 2]
+    return if !target
+    max_stage = Battle::Battler::STAT_STAGE_MAXIMUM
+    stageMul = Battle::Battler::STAT_STAGE_MULTIPLIERS
+    stageDiv = Battle::Battler::STAT_STAGE_DIVISORS
     # Calculate user's effective attacking values
-    attack_stage         = user.stages[:ATTACK] + 6
+    attack_stage         = user.stages[:ATTACK] + max_stage
     real_attack          = (user.attack.to_f * stageMul[attack_stage] / stageDiv[attack_stage]).floor
-    special_attack_stage = user.stages[:SPECIAL_ATTACK] + 6
+    special_attack_stage = user.stages[:SPECIAL_ATTACK] + max_stage
     real_special_attack  = (user.spatk.to_f * stageMul[special_attack_stage] / stageDiv[special_attack_stage]).floor
     # Calculate target's effective defending values
-    defense_stage         = target.stages[:DEFENSE] + 6
+    defense_stage         = target.stages[:DEFENSE] + max_stage
     real_defense          = (target.defense.to_f * stageMul[defense_stage] / stageDiv[defense_stage]).floor
-    special_defense_stage = target.stages[:SPECIAL_DEFENSE] + 6
+    special_defense_stage = target.stages[:SPECIAL_DEFENSE] + max_stage
     real_special_defense  = (target.spdef.to_f * stageMul[special_defense_stage] / stageDiv[special_defense_stage]).floor
     # Perform simple damage calculation
     physical_damage = real_attack.to_f / real_defense
     special_damage = real_special_attack.to_f / real_special_defense
     # Determine move's category
     if physical_damage == special_damage
-      @calcCategry = @battle.pbRandom(2)
+      @calcCategory = (@battle.command_phase) ? rand(2) : @battle.pbRandom(2)
     else
       @calcCategory = (physical_damage > special_damage) ? 0 : 1
     end
@@ -1224,13 +1168,14 @@ class Battle::Move::CategoryDependsOnHigherDamageIgnoreTargetAbility < Battle::M
 
   def pbOnStartUse(user, targets)
     # Calculate user's effective attacking value
-    stageMul = [2, 2, 2, 2, 2, 2, 2, 3, 4, 5, 6, 7, 8]
-    stageDiv = [8, 7, 6, 5, 4, 3, 2, 2, 2, 2, 2, 2, 2]
+    max_stage = Battle::Battler::STAT_STAGE_MAXIMUM
+    stageMul = Battle::Battler::STAT_STAGE_MULTIPLIERS
+    stageDiv = Battle::Battler::STAT_STAGE_DIVISORS
     atk        = user.attack
-    atkStage   = user.stages[:ATTACK] + 6
+    atkStage   = user.stages[:ATTACK] + max_stage
     realAtk    = (atk.to_f * stageMul[atkStage] / stageDiv[atkStage]).floor
     spAtk      = user.spatk
-    spAtkStage = user.stages[:SPECIAL_ATTACK] + 6
+    spAtkStage = user.stages[:SPECIAL_ATTACK] + max_stage
     realSpAtk  = (spAtk.to_f * stageMul[spAtkStage] / stageDiv[spAtkStage]).floor
     # Determine move's category
     @calcCategory = (realAtk > realSpAtk) ? 0 : 1
@@ -1243,9 +1188,9 @@ end
 # are applied normally, applying the user's Attack modifiers and not the user's
 # Defence modifiers. (Body Press)
 #===============================================================================
-class Battle::Move::UseUserBaseDefenseInsteadOfUserBaseAttack < Battle::Move
+class Battle::Move::UseUserDefenseInsteadOfUserAttack < Battle::Move
   def pbGetAttackStats(user, target)
-    return user.defense, user.stages[:DEFENSE] + 6
+    return user.defense, user.stages[:DEFENSE] + Battle::Battler::STAT_STAGE_MAXIMUM
   end
 end
 
@@ -1255,10 +1200,8 @@ end
 #===============================================================================
 class Battle::Move::UseTargetAttackInsteadOfUserAttack < Battle::Move
   def pbGetAttackStats(user, target)
-    if specialMove?
-      return target.spatk, target.stages[:SPECIAL_ATTACK] + 6
-    end
-    return target.attack, target.stages[:ATTACK] + 6
+    return target.spatk, target.stages[:SPECIAL_ATTACK] + Battle::Battler::STAT_STAGE_MAXIMUM if specialMove?
+    return target.attack, target.stages[:ATTACK] + Battle::Battler::STAT_STAGE_MAXIMUM
   end
 end
 
@@ -1268,7 +1211,7 @@ end
 #===============================================================================
 class Battle::Move::UseTargetDefenseInsteadOfTargetSpDef < Battle::Move
   def pbGetDefenseStats(user, target)
-    return target.defense, target.stages[:DEFENSE] + 6
+    return target.defense, target.stages[:DEFENSE] + Battle::Battler::STAT_STAGE_MAXIMUM
   end
 end
 
@@ -1276,22 +1219,10 @@ end
 # User's attack next round against the target will definitely hit.
 # (Lock-On, Mind Reader)
 #===============================================================================
-class Battle::Move::EnsureNextMoveAlwaysHitsIgnoresRedirection < Battle::Move
+class Battle::Move::EnsureNextMoveAlwaysHits < Battle::Move
   def pbEffectAgainstTarget(user, target)
     user.effects[PBEffects::LockOn]    = 2
     user.effects[PBEffects::LockOnPos] = target.index
-    @battle.pbDisplay(_INTL("{1} took aim at {2}!", user.pbThis, target.pbThis(true)))
-  end
-end
-
-#===============================================================================
-# User's attack next round against the target will definitely hit.
-# (Lock-On, Mind Reader)
-#===============================================================================
-class Battle::Move::EnsureNextMoveAlwaysHitsBypassProtect < Battle::Move
-  def pbEffectAgainstTarget(user, target)
-    user.effects[PBEffects::MindReader]    = 2
-    user.effects[PBEffects::MindReaderPos] = target.index
     @battle.pbDisplay(_INTL("{1} took aim at {2}!", user.pbThis, target.pbThis(true)))
   end
 end
@@ -1329,14 +1260,14 @@ end
 # (Chip Away, Darkest Lariat, Sacred Sword)
 #===============================================================================
 class Battle::Move::IgnoreTargetDefSpDefEvaStatStages < Battle::Move
-  def pbCalcAccuracyMultipliers(user, target, multipliers)
+  def pbCalcAccuracyModifiers(user, target, modifiers)
     super
     modifiers[:evasion_stage] = 0
   end
 
   def pbGetDefenseStats(user, target)
     ret1, _ret2 = super
-    return ret1, 6   # Def/SpDef stat stage
+    return ret1, Battle::Battler::STAT_STAGE_MAXIMUM   # Def/SpDef stat stage
   end
 end
 
@@ -1416,13 +1347,9 @@ class Battle::Move::TypeAndPowerDependOnUserBerry < Battle::Move
     return false
   end
 
-  # NOTE: The AI calls this method via pbCalcType, and this method returns a
-  #       type assuming user has an item even though it might not. Since the AI
-  #       won't want to use this move if the user has no item, though, perhaps
-  #       this is good enough.
   def pbBaseType(user)
-    item = user.item
     ret = :NORMAL
+    item = user.item
     if item
       item.flags.each do |flag|
         next if !flag[/^NaturalGift_(\w+)_(?:\d+)$/i]
@@ -1434,18 +1361,13 @@ class Battle::Move::TypeAndPowerDependOnUserBerry < Battle::Move
     return ret
   end
 
-  # This is a separate method so that the AI can use it as well
-  def pbNaturalGiftBaseDamage(heldItem)
-    if heldItem
-      GameData::Item.get(heldItem).flags.each do |flag|
+  def pbBaseDamage(baseDmg, user, target)
+    if user.item.id
+      GameData::Item.get(user.item.id).flags.each do |flag|
         return [$~[1].to_i, 10].max if flag[/^NaturalGift_(?:\w+)_(\d+)$/i]
       end
     end
     return 1
-  end
-
-  def pbBaseDamage(baseDmg, user, target)
-    return pbNaturalGiftBaseDamage(user.item.id)
   end
 
   def pbEndOfMoveUsageEffect(user, targets, numHits, switchedBattlers)
@@ -1486,12 +1408,9 @@ class Battle::Move::TypeDependsOnUserPlate < Battle::Move
 
   def pbBaseType(user)
     ret = :NORMAL
-    if user.itemActive?
-      @itemTypes.each do |item, itemType|
-        next if user.item != item
-        ret = itemType if GameData::Type.exists?(itemType)
-        break
-      end
+    if user.item_id && user.itemActive?
+      typ = @itemTypes[user.item_id]
+      ret = typ if typ && GameData::Type.exists?(typ)
     end
     return ret
   end
@@ -1526,12 +1445,9 @@ class Battle::Move::TypeDependsOnUserMemory < Battle::Move
 
   def pbBaseType(user)
     ret = :NORMAL
-    if user.itemActive?
-      @itemTypes.each do |item, itemType|
-        next if user.item != item
-        ret = itemType if GameData::Type.exists?(itemType)
-        break
-      end
+    if user.item_id && user.itemActive?
+      typ = @itemTypes[user.item_id]
+      ret = typ if typ && GameData::Type.exists?(typ)
     end
     return ret
   end
@@ -1553,12 +1469,9 @@ class Battle::Move::TypeDependsOnUserDrive < Battle::Move
 
   def pbBaseType(user)
     ret = :NORMAL
-    if user.itemActive?
-      @itemTypes.each do |item, itemType|
-        next if user.item != item
-        ret = itemType if GameData::Type.exists?(itemType)
-        break
-      end
+    if user.item_id && user.itemActive?
+      typ = @itemTypes[user.item_id]
+      ret = typ if typ && GameData::Type.exists?(typ)
     end
     return ret
   end
@@ -1614,6 +1527,8 @@ class Battle::Move::TypeAndPowerDependOnWeather < Battle::Move
       ret = :ROCK if GameData::Type.exists?(:ROCK)
     when :Hail
       ret = :ICE if GameData::Type.exists?(:ICE)
+    when :ShadowSky
+      ret = :NONE
     end
     return ret
   end

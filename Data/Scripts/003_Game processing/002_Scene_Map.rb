@@ -45,16 +45,23 @@ class Scene_Map
     @spritesets = {}
   end
 
+  def dispose
+    disposeSpritesets
+    @map_renderer.dispose
+    @map_renderer = nil
+    @spritesetGlobal.dispose
+    @spritesetGlobal = nil
+  end
+
   def autofade(mapid)
     playingBGM = $game_system.playing_bgm
     playingBGS = $game_system.playing_bgs
     return if !playingBGM && !playingBGS
     map = load_data(sprintf("Data/Map%03d.rxdata", mapid))
     if playingBGM && map.autoplay_bgm
-      if (PBDayNight.isNight? && FileTest.audio_exist?("Audio/BGM/" + map.bgm.name + "_n") &&
-         playingBGM.name != map.bgm.name + "_n") || playingBGM.name != map.bgm.name
-        pbBGMFade(0.8)
-      end
+      test_filename = map.bgm.name
+      test_filename += "_n" if PBDayNight.isNight? && FileTest.audio_exist?("Audio/BGM/" + test_filename + "_n")
+      pbBGMFade(0.8) if playingBGM.name != test_filename
     end
     if playingBGS && map.autoplay_bgs && playingBGS.name != map.bgs.name
       pbBGMFade(0.8)
@@ -118,7 +125,7 @@ class Scene_Map
       updateMaps
       $game_system.update
       $game_screen.update
-      break unless $game_temp.player_transferring
+      break if !$game_temp.player_transferring
       transfer_player(false)
       break if $game_temp.transition_processing
     end
@@ -162,23 +169,12 @@ class Scene_Map
       updateMaps
       $game_system.update
       $game_screen.update
-      break unless $game_temp.player_transferring
+      break if !$game_temp.player_transferring
       transfer_player(false)
       break if $game_temp.transition_processing
     end
     updateSpritesets
     if $game_temp.title_screen_calling
-      if $game_switches[61] == true # edit here
-        $game_temp.player_transferring = true
-        $game_temp.player_new_map_id    = 2
-        $game_temp.player_new_x         = 12
-        $game_temp.player_new_y         = 8
-        $game_temp.player_new_direction = 8
-        Graphics.freeze
-        $game_temp.transition_processing = true
-        $game_temp.transition_name       = ""
-      end
-      $game_temp.title_screen_calling = false
       SaveData.mark_values_as_unloaded
       $scene = pbCallTitle
       return
@@ -192,23 +188,21 @@ class Scene_Map
       end
     end
     return if $game_temp.message_window_showing
-    if !pbMapInterpreterRunning?
+    if !pbMapInterpreterRunning? && !$PokemonGlobal.forced_movement?
       if Input.trigger?(Input::USE)
         $game_temp.interact_calling = true
       elsif Input.trigger?(Input::ACTION)
-        unless $game_system.menu_disabled || $game_player.moving?
+        if !$game_system.menu_disabled && !$game_player.moving?
           $game_temp.menu_calling = true
           $game_temp.menu_beep = true
         end
       elsif Input.trigger?(Input::SPECIAL)
-        unless $game_player.moving?
-          $game_temp.ready_menu_calling = true
-        end
+        $game_temp.ready_menu_calling = true if !$game_player.moving?
       elsif Input.press?(Input::F9)
         $game_temp.debug_calling = true if $DEBUG
       end
     end
-    unless $game_player.moving?
+    if !$game_player.moving?
       if $game_temp.menu_calling
         call_menu
       elsif $game_temp.debug_calling
@@ -219,8 +213,18 @@ class Scene_Map
         pbUseKeyItem
       elsif $game_temp.interact_calling
         $game_temp.interact_calling = false
-        $game_player.straighten
-        EventHandlers.trigger(:on_player_interact)
+        triggered = false
+        # Try to trigger an event the player is standing on, and one in front of
+        # the player
+        if !$game_temp.in_mini_update
+          triggered ||= $game_player.check_event_trigger_here([0])
+          triggered ||= $game_player.check_event_trigger_there([0, 2]) if !triggered
+        end
+        # Try to trigger an interaction with a tile
+        if !triggered
+          $game_player.straighten
+          EventHandlers.trigger(:on_player_interact)
+        end
       end
     end
   end
@@ -235,8 +239,12 @@ class Scene_Map
       break if $scene != self
     end
     Graphics.freeze
-    disposeSpritesets
+    dispose
     if $game_temp.title_screen_calling
+      pbMapInterpreter.command_end if pbMapInterpreterRunning?
+      $game_temp.last_uptime_refreshed_play_time = nil
+      $game_temp.title_screen_calling = false
+      pbBGMFade(1.0)
       Graphics.transition
       Graphics.freeze
     end
