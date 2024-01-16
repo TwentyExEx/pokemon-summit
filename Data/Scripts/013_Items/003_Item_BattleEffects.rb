@@ -25,8 +25,7 @@ ItemHandlers::CanUseInBattle.add(:POKEDOLL, proc { |item, pokemon, battler, move
 
 ItemHandlers::CanUseInBattle.copy(:POKEDOLL, :FLUFFYTAIL, :POKETOY)
 
-ItemHandlers::CanUseInBattle.addIf(:poke_balls,
-  proc { |item| GameData::Item.get(item).is_poke_ball? },
+ItemHandlers::CanUseInBattle.addIf(proc { |item| GameData::Item.get(item).is_poke_ball? },   # Poké Balls
   proc { |item, pokemon, battler, move, firstAction, battle, scene, showMessages|
     if battle.pbPlayer.party_full? && $PokemonStorage.full?
       scene.pbDisplay(_INTL("There is no room left in the PC!")) if showMessages
@@ -72,10 +71,9 @@ ItemHandlers::CanUseInBattle.add(:POTION, proc { |item, pokemon, battler, move, 
 })
 
 ItemHandlers::CanUseInBattle.copy(:POTION,
-                                  :SUPERPOTION, :HYPERPOTION, :MAXPOTION,
-                                  :BERRYJUICE, :SWEETHEART, :FRESHWATER, :SODAPOP,
-                                  :LEMONADE, :MOOMOOMILK, :ORANBERRY, :SITRUSBERRY,
-                                  :ENERGYPOWDER, :ENERGYROOT)
+   :SUPERPOTION, :HYPERPOTION, :MAXPOTION, :BERRYJUICE, :SWEETHEART, :FRESHWATER,
+   :SODAPOP, :LEMONADE, :MOOMOOMILK, :ORANBERRY, :SITRUSBERRY, :ENERGYPOWDER,
+   :ENERGYROOT)
 ItemHandlers::CanUseInBattle.copy(:POTION, :RAGECANDYBAR) if !Settings::RAGE_CANDY_BAR_CURES_STATUS_PROBLEMS
 
 ItemHandlers::CanUseInBattle.add(:AWAKENING, proc { |item, pokemon, battler, move, firstAction, battle, scene, showMessages|
@@ -127,9 +125,8 @@ ItemHandlers::CanUseInBattle.add(:FULLHEAL, proc { |item, pokemon, battler, move
 })
 
 ItemHandlers::CanUseInBattle.copy(:FULLHEAL,
-                                  :LAVACOOKIE, :OLDGATEAU, :CASTELIACONE,
-                                  :LUMIOSEGALETTE, :SHALOURSABLE, :BIGMALASADA,
-                                  :PEWTERCRUNCHIES, :LUMBERRY, :HEALPOWDER)
+   :LAVACOOKIE, :OLDGATEAU, :CASTELIACONE, :LUMIOSEGALETTE, :SHALOURSABLE,
+   :BIGMALASADA, :PEWTERCRUNCHIES, :LUMBERRY, :HEALPOWDER)
 ItemHandlers::CanUseInBattle.copy(:FULLHEAL, :RAGECANDYBAR) if Settings::RAGE_CANDY_BAR_CURES_STATUS_PROBLEMS
 
 ItemHandlers::CanUseInBattle.add(:FULLRESTORE, proc { |item, pokemon, battler, move, firstAction, battle, scene, showMessages|
@@ -143,7 +140,7 @@ ItemHandlers::CanUseInBattle.add(:FULLRESTORE, proc { |item, pokemon, battler, m
 })
 
 ItemHandlers::CanUseInBattle.add(:REVIVE, proc { |item, pokemon, battler, move, firstAction, battle, scene, showMessages|
-  if !pokemon.fainted?
+  if pokemon.able? || pokemon.egg?
     scene.pbDisplay(_INTL("It won't have any effect.")) if showMessages
     next false
   end
@@ -222,16 +219,14 @@ ItemHandlers::CanUseInBattle.add(:XDEFENSE, proc { |item, pokemon, battler, move
 })
 
 ItemHandlers::CanUseInBattle.copy(:XDEFENSE,
-                                  :XDEFENSE2, :XDEFENSE3, :XDEFENSE6,
-                                  :XDEFEND, :XDEFEND2, :XDEFEND3, :XDEFEND6)
+   :XDEFENSE2, :XDEFENSE3, :XDEFENSE6, :XDEFEND, :XDEFEND2, :XDEFEND3, :XDEFEND6)
 
 ItemHandlers::CanUseInBattle.add(:XSPATK, proc { |item, pokemon, battler, move, firstAction, battle, scene, showMessages|
   next pbBattleItemCanRaiseStat?(:SPECIAL_ATTACK, battler, scene, showMessages)
 })
 
 ItemHandlers::CanUseInBattle.copy(:XSPATK,
-                                  :XSPATK2, :XSPATK3, :XSPATK6,
-                                  :XSPECIAL, :XSPECIAL2, :XSPECIAL3, :XSPECIAL6)
+   :XSPATK2, :XSPATK3, :XSPATK6, :XSPECIAL, :XSPECIAL2, :XSPECIAL3, :XSPECIAL6)
 
 ItemHandlers::CanUseInBattle.add(:XSPDEF, proc { |item, pokemon, battler, move, firstAction, battle, scene, showMessages|
   next pbBattleItemCanRaiseStat?(:SPECIAL_DEFENSE, battler, scene, showMessages)
@@ -319,8 +314,7 @@ ItemHandlers::UseInBattle.add(:POKEFLUTE, proc { |item, battler, battle|
   battle.pbDisplay(_INTL("All Pokémon were roused by the tune!"))
 })
 
-ItemHandlers::UseInBattle.addIf(:poke_balls,
-  proc { |item| GameData::Item.get(item).is_poke_ball? },
+ItemHandlers::UseInBattle.addIf(proc { |item| GameData::Item.get(item).is_poke_ball? },   # Poké Balls
   proc { |item, battler, battle|
     battle.pbThrowPokeBall(battler.index, item)
   }
@@ -433,9 +427,8 @@ ItemHandlers::BattleUseOnPokemon.add(:FULLHEAL, proc { |item, pokemon, battler, 
 })
 
 ItemHandlers::BattleUseOnPokemon.copy(:FULLHEAL,
-                                      :LAVACOOKIE, :OLDGATEAU, :CASTELIACONE,
-                                      :LUMIOSEGALETTE, :SHALOURSABLE, :BIGMALASADA,
-                                      :PEWTERCRUNCHIES, :LUMBERRY)
+   :LAVACOOKIE, :OLDGATEAU, :CASTELIACONE, :LUMIOSEGALETTE, :SHALOURSABLE,
+   :BIGMALASADA, :PEWTERCRUNCHIES, :LUMBERRY)
 ItemHandlers::BattleUseOnPokemon.copy(:FULLHEAL, :RAGECANDYBAR) if Settings::RAGE_CANDY_BAR_CURES_STATUS_PROBLEMS
 
 ItemHandlers::BattleUseOnPokemon.add(:FULLRESTORE, proc { |item, pokemon, battler, choices, scene|
@@ -501,7 +494,6 @@ ItemHandlers::BattleUseOnPokemon.add(:REVIVALHERB, proc { |item, pokemon, battle
 ItemHandlers::BattleUseOnPokemon.add(:ETHER, proc { |item, pokemon, battler, choices, scene|
   idxMove = choices[3]
   pbBattleRestorePP(pokemon, battler, idxMove, 10)
-  pbSEPlay("Use item in party")
   scene.pbDisplay(_INTL("PP was restored."))
 })
 
@@ -510,7 +502,6 @@ ItemHandlers::BattleUseOnPokemon.copy(:ETHER, :LEPPABERRY)
 ItemHandlers::BattleUseOnPokemon.add(:MAXETHER, proc { |item, pokemon, battler, choices, scene|
   idxMove = choices[3]
   pbBattleRestorePP(pokemon, battler, idxMove, pokemon.moves[idxMove].total_pp)
-  pbSEPlay("Use item in party")
   scene.pbDisplay(_INTL("PP was restored."))
 })
 
@@ -518,7 +509,6 @@ ItemHandlers::BattleUseOnPokemon.add(:ELIXIR, proc { |item, pokemon, battler, ch
   pokemon.moves.length.times do |i|
     pbBattleRestorePP(pokemon, battler, i, 10)
   end
-  pbSEPlay("Use item in party")
   scene.pbDisplay(_INTL("PP was restored."))
 })
 
@@ -526,7 +516,6 @@ ItemHandlers::BattleUseOnPokemon.add(:MAXELIXIR, proc { |item, pokemon, battler,
   pokemon.moves.length.times do |i|
     pbBattleRestorePP(pokemon, battler, i, pokemon.moves[i].total_pp)
   end
-  pbSEPlay("Use item in party")
   scene.pbDisplay(_INTL("PP was restored."))
 })
 

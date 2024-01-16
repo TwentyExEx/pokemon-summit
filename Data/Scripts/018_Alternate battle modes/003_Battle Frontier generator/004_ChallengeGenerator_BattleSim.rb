@@ -231,13 +231,11 @@ class PlayerRating
     t = (deviation * deviation) + (volatility * volatility)
     deviation = 1.0 / Math.sqrt((1.0 / t) + (1.0 / variance))
     # Update rating
-    rating += deviation * deviation * sum
+    rating = rating + (deviation * deviation * sum)
     setRating2(rating)
     setDeviation2(deviation)
     setVolatility2(volatility)
   end
-
-  #-----------------------------------------------------------------------------
 
   private
 
@@ -288,7 +286,7 @@ class PlayerRating
     squVariance = variance + variance
     squDevplusVar = squDeviation + variance
     x0 = a
-    100.times do   # Up to 100 iterations to avoid potentially infinite loops
+    100.times {   # Up to 100 iterations to avoid potentially infinite loops
       e = Math.exp(x0)
       d = squDevplusVar + e
       squD = d * d
@@ -299,7 +297,7 @@ class PlayerRating
       x1 = x0
       x0 -= h1 / h2
       break if (x1 - x0).abs < 0.000001
-    end
+    }
     return Math.exp(x0 / 2.0)
   end
 end
@@ -309,19 +307,18 @@ end
 #===============================================================================
 def pbDecideWinnerEffectiveness(move, otype1, otype2, ability, scores)
   data = GameData::Move.get(move)
-  return 0 if data.power == 0
+  return 0 if data.base_damage == 0
   atype = data.type
-  typemod = 1.0
+  typemod = Effectiveness::NORMAL_EFFECTIVE_ONE**2
   if ability != :LEVITATE || data.type != :GROUND
-    mod1 = Effectiveness.calculate(atype, otype1)
-    mod2 = (otype1 == otype2) ? 1.0 : Effectiveness.calculate(atype, otype2)
+    mod1 = Effectiveness.calculate_one(atype, otype1)
+    mod2 = (otype1 == otype2) ? Effectiveness::NORMAL_EFFECTIVE_ONE : Effectiveness.calculate_one(atype, otype2)
     if ability == :WONDERGUARD
-      mod1 = 1.0 if !Effectiveness.super_effective?(mod1)
-      mod2 = 1.0 if !Effectiveness.super_effective?(mod2)
+      mod1 = Effectiveness::NORMAL_EFFECTIVE_ONE if mod1 <= Effectiveness::NORMAL_EFFECTIVE_ONE
+      mod2 = Effectiveness::NORMAL_EFFECTIVE_ONE if mod2 <= Effectiveness::NORMAL_EFFECTIVE_ONE
     end
     typemod = mod1 * mod2
   end
-  typemod *= 4   # Because dealing with 2 types
   return scores[0] if typemod == 0    # Ineffective
   return scores[1] if typemod == 1    # Doubly not very effective
   return scores[2] if typemod == 2    # Not very effective
@@ -401,7 +398,7 @@ def pbRuledBattle(team1, team2, rule)
       items2[i] = p.item_id
       trainer2.party.push(p)
     end
-    scene = Battle::DebugSceneNoVisuals.new
+    scene = Battle::DebugSceneNoLogging.new
     battle = rule.createBattle(scene, trainer1, trainer2)
     battle.debug = true
     battle.controlPlayer = true

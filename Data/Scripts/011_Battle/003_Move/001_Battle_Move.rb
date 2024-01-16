@@ -3,8 +3,8 @@ class Battle::Move
   attr_reader   :realMove
   attr_accessor :id
   attr_reader   :name
-  attr_reader   :function_code
-  attr_reader   :power
+  attr_reader   :function
+  attr_reader   :baseDamage
   attr_reader   :type
   attr_reader   :category
   attr_reader   :accuracy
@@ -18,37 +18,30 @@ class Battle::Move
   attr_accessor :powerBoost
   attr_accessor :snatched
 
-  CRITICAL_HIT_RATIOS = (Settings::NEW_CRITICAL_HIT_RATE_MECHANICS) ? [24, 8, 2, 1] : [16, 8, 4, 3, 2]
-
   def to_int; return @id; end
-
-  # @deprecated This method is slated to be removed in v22.
-  def baseDamage
-    Deprecation.warn_method("baseDamage", "v22", "power")
-    return @power
-  end
 
   #=============================================================================
   # Creating a move
   #=============================================================================
   def initialize(battle, move)
-    @battle        = battle
-    @realMove      = move
-    @id            = move.id
-    @name          = move.name   # Get the move's name
+    @battle     = battle
+    @realMove   = move
+    @id         = move.id
+    @name       = move.name   # Get the move's name
     # Get data on the move
-    @function_code = move.function_code
-    @power         = move.power
-    @type          = move.type
-    @category      = move.category
-    @accuracy      = move.accuracy
-    @pp            = move.pp   # Can be changed with Mimic/Transform
-    @target        = move.target
-    @priority      = move.priority
-    @flags         = move.flags.clone
-    @addlEffect    = move.effect_chance
-    @powerBoost    = false   # For Aerilate, Pixilate, Refrigerate, Galvanize
-    @snatched      = false
+    @function   = move.function_code
+    @baseDamage = move.base_damage
+    @type       = move.type
+    @category   = move.category
+    @accuracy   = move.accuracy
+    @pp         = move.pp   # Can be changed with Mimic/Transform
+    @addlEffect = move.effect_chance
+    @target     = move.target
+    @priority   = move.priority
+    @flags      = move.flags.clone
+    @calcType   = nil
+    @powerBoost = false   # For Aerilate, Pixilate, Refrigerate, Galvanize
+    @snatched   = false
   end
 
   # This is the code actually used to generate a Battle::Move object. The
@@ -139,14 +132,14 @@ class Battle::Move
   def pulseMove?;         return @flags.any? { |f| f[/^Pulse$/i] };               end
   def bombMove?;          return @flags.any? { |f| f[/^Bomb$/i] };                end
   def danceMove?;         return @flags.any? { |f| f[/^Dance$/i] };               end
+  def lightMove?;         return @flags.any? { |f| f[/^Light$/i] };               end
+  def flatlineMove?;      return @flags.any? { |f| f[/^Flatline$/i] };            end
   # Causes perfect accuracy and double damage if target used Minimize. Perfect accuracy only with Gen 6+ mechanics.
   def tramplesMinimize?;  return @flags.any? { |f| f[/^TramplesMinimize$/i] };    end
 
   def nonLethal?(_user, _target); return false; end   # For False Swipe
-  def preventsBattlerConsumingHealingBerry?(battler, targets); return false; end   # For Bug Bite/Pluck
 
-  # user is the Pokémon using this move.
-  def ignoresSubstitute?(user)
+  def ignoresSubstitute?(user)   # user is the Pokémon using this move
     if Settings::MECHANICS_GENERATION >= 6
       return true if soundMove?
       return true if user&.hasActiveAbility?(:INFILTRATOR)
@@ -155,9 +148,17 @@ class Battle::Move
   end
 
   def display_type(battler)
-    case @function_code
+    case @function
     when "TypeDependsOnUserMorpekoFormRaiseUserSpeed1"
       if battler.isSpecies?(:MORPEKO) || battler.effects[PBEffects::TransformSpecies] == :MORPEKO
+        return pbBaseType(battler)
+      end
+	when "TypeDependsOnSquawkabillyForm"
+      if battler.isSpecies?(:SQUAWKABILLY) || battler.effects[PBEffects::TransformSpecies] == :SQUAWKABILLY
+        return pbBaseType(battler)
+      end
+	when "TypeDependsOnSawsbuckForm"
+      if battler.isSpecies?(:SAWSBUCK) || battler.effects[PBEffects::TransformSpecies] == :SAWSBUCK
         return pbBaseType(battler)
       end
 =begin
@@ -173,14 +174,14 @@ class Battle::Move
 
   def display_damage(battler)
 =begin
-    case @function_code
+    case @function
     when "TypeAndPowerDependOnUserBerry"
       return pbNaturalGiftBaseDamage(battler.item_id)
     when "TypeAndPowerDependOnWeather", "TypeAndPowerDependOnTerrain",
          "PowerHigherWithUserHP", "PowerLowerWithUserHP",
          "PowerHigherWithUserHappiness", "PowerLowerWithUserHappiness",
          "PowerHigherWithUserPositiveStatStages", "PowerDependsOnUserStockpile"
-      return pbBaseType(@power, battler, nil)
+      return pbBaseType(@baseDamage, battler, nil)
     end
 =end
     return @realMove.display_damage(battler.pokemon)
@@ -188,7 +189,7 @@ class Battle::Move
 
   def display_category(battler)
 =begin
-    case @function_code
+    case @function
     when "CategoryDependsOnHigherDamageIgnoreTargetAbility"
       pbOnStartUse(user, nil)
       return @calcCategory

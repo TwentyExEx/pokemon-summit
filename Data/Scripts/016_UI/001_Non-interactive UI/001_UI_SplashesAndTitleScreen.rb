@@ -1,6 +1,3 @@
-#===============================================================================
-#
-#===============================================================================
 class IntroEventScene < EventScene
   # Splash screen images that appear for a few seconds and then disappear.
   SPLASH_IMAGES         = ["splash1", "splash2"]
@@ -33,7 +30,7 @@ class IntroEventScene < EventScene
     # fade to opacity 255 in FADE_TICKS ticks after waiting 0 frames
     @pic.moveOpacity(0, FADE_TICKS, 255)
     pictureWait
-    @timer = System.uptime                  # reset the timer
+    @timer = 0.0                            # reset the timer
     onUpdate.set(method(:splash_update))    # called every frame
     onCTrigger.set(method(:close_splash))   # called when C key is pressed
   end
@@ -52,7 +49,8 @@ class IntroEventScene < EventScene
   end
 
   def splash_update(scene, args)
-    close_splash(scene, args) if System.uptime - @timer >= SECONDS_PER_SPLASH
+    @timer += Graphics.delta_s
+    close_splash(scene, args) if @timer > SECONDS_PER_SPLASH
   end
 
   def open_title_screen(_scene, *args)
@@ -116,9 +114,8 @@ class IntroEventScene < EventScene
   end
 end
 
-#===============================================================================
-#
-#===============================================================================
+
+
 class Scene_Intro
   def main
     Graphics.transition(0)

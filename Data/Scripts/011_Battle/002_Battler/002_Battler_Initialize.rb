@@ -96,6 +96,7 @@ class Battle::Battler
       # reapplied
       @effects[PBEffects::LaserFocus] = (@effects[PBEffects::LaserFocus] > 0) ? 2 : 0
       @effects[PBEffects::LockOn]     = (@effects[PBEffects::LockOn] > 0) ? 2 : 0
+      @effects[PBEffects::MindReader] = (@effects[PBEffects::MindReader] > 0) ? 2 : 0
       if @effects[PBEffects::PowerTrick]
         @attack, @defense = @defense, @attack
       end
@@ -103,6 +104,7 @@ class Battle::Battler
       # cancelled in certain circumstances anyway
       @effects[PBEffects::Telekinesis] = 0 if isSpecies?(:GENGAR) && mega?
       @effects[PBEffects::GastroAcid]  = false if unstoppableAbility?
+      @effects[PBEffects::SuppressorVest]  = false if unstoppableAbility?
     else
       # These effects are passed on if Baton Pass is used
       GameData::Stat.each_battle { |stat| @stages[stat.id] = 0 }
@@ -112,41 +114,44 @@ class Battle::Battler
       @effects[PBEffects::Embargo]           = 0
       @effects[PBEffects::FocusEnergy]       = 0
       @effects[PBEffects::GastroAcid]        = false
+      @effects[PBEffects::SuppressorVest]    = false
       @effects[PBEffects::HealBlock]         = 0
       @effects[PBEffects::Ingrain]           = false
       @effects[PBEffects::LaserFocus]        = 0
       @effects[PBEffects::LeechSeed]         = -1
       @effects[PBEffects::LockOn]            = 0
       @effects[PBEffects::LockOnPos]         = -1
+      @effects[PBEffects::MindReader]            = 0
+      @effects[PBEffects::MindReaderPos]         = -1
       @effects[PBEffects::MagnetRise]        = 0
+      @effects[PBEffects::OilShield]        = 0
       @effects[PBEffects::PerishSong]        = 0
       @effects[PBEffects::PerishSongUser]    = -1
       @effects[PBEffects::PowerTrick]        = false
       @effects[PBEffects::Substitute]        = 0
       @effects[PBEffects::Telekinesis]       = 0
     end
-    @fainted                 = (@hp == 0)
-    @lastAttacker            = []
-    @lastFoeAttacker         = []
-    @lastHPLost              = 0
-    @lastHPLostFromFoe       = 0
-    @droppedBelowHalfHP      = false
-    @statsDropped            = false
-    @tookMoveDamageThisRound = false
-    @tookDamageThisRound     = false
-    @tookPhysicalHit         = false
-    @statsRaisedThisRound    = false
-    @statsLoweredThisRound   = false
-    @canRestoreIceFace       = false
-    @lastMoveUsed            = nil
-    @lastMoveUsedType        = nil
-    @lastRegularMoveUsed     = nil
-    @lastRegularMoveTarget   = -1
-    @lastRoundMoved          = -1
-    @lastMoveFailed          = false
-    @lastRoundMoveFailed     = false
-    @movesUsed               = []
-    @turnCount               = 0
+    @fainted               = (@hp == 0)
+    @lastAttacker          = []
+    @lastFoeAttacker       = []
+    @lastHPLost            = 0
+    @lastHPLostFromFoe     = 0
+    @droppedBelowHalfHP    = false
+    @statsDropped          = false
+    @tookDamageThisRound   = false
+    @tookPhysicalHit       = false
+    @statsRaisedThisRound  = false
+    @statsLoweredThisRound = false
+    @canRestoreIceFace     = false
+    @lastMoveUsed          = nil
+    @lastMoveUsedType      = nil
+    @lastRegularMoveUsed   = nil
+    @lastRegularMoveTarget = -1
+    @lastRoundMoved        = -1
+    @lastMoveFailed        = false
+    @lastRoundMoveFailed   = false
+    @movesUsed             = []
+    @turnCount             = 0
     @effects[PBEffects::Attract]             = -1
     @battle.allBattlers.each do |b|   # Other battlers no longer attracted to self
       b.effects[PBEffects::Attract] = -1 if b.effects[PBEffects::Attract] == @index
@@ -157,6 +162,7 @@ class Battle::Battler
     @effects[PBEffects::BideDamage]          = 0
     @effects[PBEffects::BideTarget]          = -1
     @effects[PBEffects::BurnUp]              = false
+    @effects[PBEffects::ThawOut]              = false
     @effects[PBEffects::Charge]              = 0
     @effects[PBEffects::ChoiceBand]          = nil
     @effects[PBEffects::Counter]             = -1
@@ -172,7 +178,6 @@ class Battle::Battler
     @effects[PBEffects::Encore]              = 0
     @effects[PBEffects::EncoreMove]          = nil
     @effects[PBEffects::Endure]              = false
-    @effects[PBEffects::ExtraType]           = nil
     @effects[PBEffects::FirstPledge]         = nil
     @effects[PBEffects::FlashFire]           = false
     @effects[PBEffects::Flinch]              = false
@@ -199,11 +204,16 @@ class Battle::Battler
       b.effects[PBEffects::JawLock] = -1 if b.effects[PBEffects::JawLock] == @index
     end
     @effects[PBEffects::KingsShield]         = false
+    @effects[PBEffects::Shelter]             = false
     @battle.allBattlers.each do |b|   # Other battlers lose their lock-on against self
       next if b.effects[PBEffects::LockOn] == 0
       next if b.effects[PBEffects::LockOnPos] != @index
+      next if b.effects[PBEffects::MindReader] == 0
+      next if b.effects[PBEffects::MindReaderPos] != @index
       b.effects[PBEffects::LockOn]    = 0
       b.effects[PBEffects::LockOnPos] = -1
+      b.effects[PBEffects::MindReader]    = 0
+      b.effects[PBEffects::MindReaderPos] = -1
     end
     @effects[PBEffects::MagicBounce]         = false
     @effects[PBEffects::MagicCoat]           = false
@@ -229,6 +239,7 @@ class Battle::Battler
     end
     @effects[PBEffects::Outrage]             = 0
     @effects[PBEffects::ParentalBond]        = 0
+    @effects[PBEffects::Echoburst]           = 0
     @effects[PBEffects::PickupItem]          = nil
     @effects[PBEffects::PickupUse]           = 0
     @effects[PBEffects::Pinch]               = false
@@ -272,11 +283,13 @@ class Battle::Battler
     end
     @effects[PBEffects::Truant]              = false
     @effects[PBEffects::TwoTurnAttack]       = nil
+    @effects[PBEffects::Type3]               = nil
     @effects[PBEffects::Unburden]            = false
     @effects[PBEffects::Uproar]              = 0
     @effects[PBEffects::WaterSport]          = false
     @effects[PBEffects::WeightChange]        = 0
     @effects[PBEffects::Yawn]                = 0
+    @effects[PBEffects::HiddenBlow]          = 0
   end
 
   #=============================================================================

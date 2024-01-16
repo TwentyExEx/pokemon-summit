@@ -46,8 +46,7 @@ class Pokemon
     return (formName && !formName.empty?) ? formName : _INTL("Mega {1}", species_data.name)
   end
 
-  # 0=default message, 1=Rayquaza message.
-  def megaMessage
+  def megaMessage   # 0=default message, 1=Rayquaza message
     megaForm = self.getMegaForm
     message_number = GameData::Species.get_species_form(@species, megaForm)&.mega_message
     return message_number || 0

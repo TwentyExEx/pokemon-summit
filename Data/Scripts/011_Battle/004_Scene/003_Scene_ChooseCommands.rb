@@ -10,7 +10,7 @@ class Battle::Scene
       _INTL("Fight"),
       _INTL("Bag"),
       _INTL("Pokémon"),
-      (shadowTrainer) ? _INTL("Call") : (firstAction) ? _INTL("Run") : _INTL("Cancel")
+      (shadowTrainer) ? _INTL("Call") : (firstAction) ? _INTL("Forfeit") : _INTL("Cancel") # edit here
     ]
     ret = pbCommandMenuEx(idxBattler, cmds, (shadowTrainer) ? 2 : (firstAction) ? 0 : 1)
     ret = 4 if ret == 3 && shadowTrainer   # Convert "Run" to "Call"
@@ -22,7 +22,7 @@ class Battle::Scene
   #       1 = regular battle with "Cancel"
   #       2 = regular battle with "Call" (for Shadow Pokémon battles)
   #       3 = Safari Zone
-  #       4 = Bug-Catching Contest
+  #       4 = Bug Catching Contest
   def pbCommandMenuEx(idxBattler, texts, mode = 0)
     pbShowWindow(COMMAND_BOX)
     cw = @sprites["commandWindow"]
@@ -98,11 +98,15 @@ class Battle::Scene
       if Input.trigger?(Input::LEFT)
         cw.index -= 1 if (cw.index & 1) == 1
       elsif Input.trigger?(Input::RIGHT)
-        cw.index += 1 if battler.moves[cw.index + 1]&.id && (cw.index & 1) == 0
+        if battler.moves[cw.index + 1]&.id && (cw.index & 1) == 0
+          cw.index += 1
+        end
       elsif Input.trigger?(Input::UP)
         cw.index -= 2 if (cw.index & 2) == 2
       elsif Input.trigger?(Input::DOWN)
-        cw.index += 2 if battler.moves[cw.index + 2]&.id && (cw.index & 2) == 0
+        if battler.moves[cw.index + 2]&.id && (cw.index & 2) == 0
+          cw.index += 2
+        end
       end
       pbPlayCursorSE if cw.index != oldIndex
       # Actions
@@ -165,8 +169,7 @@ class Battle::Scene
       cmdBoxes   = -1
       cmdSummary = -1
       commands = []
-      commands[cmdSwitch  = commands.length] = _INTL("Switch In") if mode == 0 && modParty[idxParty].able? &&
-                                                                     (@battle.canSwitch || !canCancel)
+      commands[cmdSwitch  = commands.length] = _INTL("Switch In") if mode == 0 && modParty[idxParty].able?
       commands[cmdBoxes   = commands.length] = _INTL("Send to Boxes") if mode == 1
       commands[cmdSummary = commands.length] = _INTL("Summary")
       commands[commands.length]              = _INTL("Cancel")
@@ -347,7 +350,7 @@ class Battle::Scene
       when :BothSides
         showName = true
       else
-        showName = @battle.pbMoveCanTarget?(idxBattler, i, target_data)
+        showName = @battle.pbMoveCanTarget?(i, idxBattler, target_data)
       end
       next nil if !showName
       next (@battle.battlers[i].fainted?) ? "" : @battle.battlers[i].name
@@ -446,11 +449,11 @@ class Battle::Scene
   # not allow HM moves to be forgotten.
   def pbForgetMove(pkmn, moveToLearn)
     ret = -1
-    pbFadeOutIn do
+    pbFadeOutIn {
       scene = PokemonSummary_Scene.new
       screen = PokemonSummaryScreen.new(scene)
       ret = screen.pbStartForgetScreen([pkmn], 0, moveToLearn)
-    end
+    }
     return ret
   end
 
@@ -465,10 +468,10 @@ class Battle::Scene
   # Shows the Pokédex entry screen for a newly caught Pokémon
   #=============================================================================
   def pbShowPokedex(species)
-    pbFadeOutIn do
+    pbFadeOutIn {
       scene = PokemonPokedexInfo_Scene.new
       screen = PokemonPokedexInfoScreen.new(scene)
       screen.pbDexEntry(species)
-    end
+    }
   end
 end

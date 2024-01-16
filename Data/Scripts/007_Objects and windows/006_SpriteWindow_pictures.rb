@@ -51,6 +51,8 @@ class IconWindow < SpriteWindow_Base
   end
 end
 
+
+
 #===============================================================================
 # Displays an icon bitmap in a window. Supports animated images.
 # Accepts bitmaps and paths to bitmap files in its constructor.

@@ -1,9 +1,3 @@
-# NOTE: The following clauses have battle code implementing them, but no class
-#       below to apply them:
-#         "drawclause"
-#         "modifiedselfdestructclause"
-#         "suddendeath"
-
 #===============================================================================
 #
 #===============================================================================
@@ -64,7 +58,7 @@ end
 #
 #===============================================================================
 class PerishSongClause < BattleRule
-  def setRule(battle); battle.rules["perishsongclause"] = true; end
+  def setRule(battle); battle.rules["perishsong"] = true; end
 end
 
 #===============================================================================

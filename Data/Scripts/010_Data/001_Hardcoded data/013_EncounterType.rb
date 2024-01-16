@@ -19,8 +19,6 @@ module GameData
       @type           = hash[:type]           || :none
       @trigger_chance = hash[:trigger_chance] || 0
     end
-
-    alias name real_name
   end
 end
 
@@ -60,12 +58,6 @@ GameData::EncounterType.register({
   :id             => :LandEvening,
   :type           => :land,
   :trigger_chance => 21
-})
-
-GameData::EncounterType.register({
-  :id             => :PokeRadar,
-  :type           => :land,
-  :trigger_chance => 20
 })
 
 GameData::EncounterType.register({

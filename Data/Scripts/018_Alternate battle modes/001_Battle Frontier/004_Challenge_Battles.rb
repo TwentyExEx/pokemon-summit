@@ -62,9 +62,11 @@ def pbOrganizedBattleEx(opponent, challengedata)
   BattleCreationHelperMethods.prepare_battle(battle)
   # Perform the battle itself
   decision = 0
-  pbBattleAnimation(pbGetTrainerBattleBGM(opponent)) do
-    pbSceneStandby { decision = battle.pbStartBattle }
-  end
+  pbBattleAnimation(pbGetTrainerBattleBGM(opponent)) {
+    pbSceneStandby {
+      decision = battle.pbStartBattle
+    }
+  }
   Input.update
   # Restore both parties to their original levels
   challengedata.unadjustLevels($player.party, opponent.party, oldlevels)
@@ -114,17 +116,19 @@ def pbPlayBattle(battledata)
   scene.abortable = true
   lastbattle = Marshal.restore(battledata)
   case lastbattle[0]
-  when BattleChallenge::BATTLE_TOWER_ID
+  when BattleChallenge::BattleTowerID
     battleplayer = RecordedBattle::PlaybackBattle.new(scene, lastbattle)
-  when BattleChallenge::BATTLE_PALACE_ID
+  when BattleChallenge::BattlePalaceID
     battleplayer = RecordedBattle::BattlePalacePlaybackBattle.new(scene, lastbattle)
-  when BattleChallenge::BATTLE_ARENA_ID
+  when BattleChallenge::BattleArenaID
     battleplayer = RecordedBattle::BattleArenaPlaybackBattle.new(scene, lastbattle)
   end
   bgm = RecordedBattle::PlaybackHelper.pbGetBattleBGM(lastbattle)
-  pbBattleAnimation(bgm) do
-    pbSceneStandby { battleplayer.pbStartBattle }
-  end
+  pbBattleAnimation(bgm) {
+    pbSceneStandby {
+      battleplayer.pbStartBattle
+    }
+  }
 end
 
 #===============================================================================
@@ -136,7 +140,9 @@ def pbDebugPlayBattle
   params.setInitialValue(0)
   params.setCancelValue(-1)
   num = pbMessageChooseNumber(_INTL("Choose a battle."), params)
-  pbPlayBattleFromFile(sprintf("Battles/Battle%03d.dat", num)) if num >= 0
+  if num >= 0
+    pbPlayBattleFromFile(sprintf("Battles/Battle%03d.dat", num))
+  end
 end
 
 def pbPlayBattleFromFile(filename)

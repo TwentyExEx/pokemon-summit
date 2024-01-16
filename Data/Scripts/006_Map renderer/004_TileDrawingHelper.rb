@@ -37,38 +37,23 @@ class TileDrawingHelper
     36, 24, 36, 24, 21,  6, 21,  4, 36, 24, 36, 24, 20,  2, 20,  0
   ]
 
-  def self.tableNeighbors(data, x, y, layer = nil)
+  def self.tableNeighbors(data, x, y)
     return 0 if x < 0 || x >= data.xsize
     return 0 if y < 0 || y >= data.ysize
-    if layer.nil?
-      t = data[x, y]
-    else
-      t = data[x, y, layer]
-    end
+    t = data[x, y]
     xp1 = [x + 1, data.xsize - 1].min
     yp1 = [y + 1, data.ysize - 1].min
     xm1 = [x - 1, 0].max
     ym1 = [y - 1, 0].max
     i = 0
-    if layer.nil?
-      i |= 0x01 if data[  x, ym1] == t   # N
-      i |= 0x02 if data[xp1, ym1] == t   # NE
-      i |= 0x04 if data[xp1,   y] == t   # E
-      i |= 0x08 if data[xp1, yp1] == t   # SE
-      i |= 0x10 if data[  x, yp1] == t   # S
-      i |= 0x20 if data[xm1, yp1] == t   # SW
-      i |= 0x40 if data[xm1,   y] == t   # W
-      i |= 0x80 if data[xm1, ym1] == t   # NW
-    else
-      i |= 0x01 if data[  x, ym1, layer] == t   # N
-      i |= 0x02 if data[xp1, ym1, layer] == t   # NE
-      i |= 0x04 if data[xp1,   y, layer] == t   # E
-      i |= 0x08 if data[xp1, yp1, layer] == t   # SE
-      i |= 0x10 if data[  x, yp1, layer] == t   # S
-      i |= 0x20 if data[xm1, yp1, layer] == t   # SW
-      i |= 0x40 if data[xm1,   y, layer] == t   # W
-      i |= 0x80 if data[xm1, ym1, layer] == t   # NW
-    end
+    i |= 0x01 if data[x, ym1] == t   # N
+    i |= 0x02 if data[xp1, ym1] == t   # NE
+    i |= 0x04 if data[xp1,   y] == t   # E
+    i |= 0x08 if data[xp1, yp1] == t   # SE
+    i |= 0x10 if data[x, yp1] == t   # S
+    i |= 0x20 if data[xm1, yp1] == t   # SW
+    i |= 0x40 if data[xm1,   y] == t   # W
+    i |= 0x80 if data[xm1, ym1] == t   # NW
     return i
   end
 
@@ -119,7 +104,7 @@ class TileDrawingHelper
       src = Rect.new(0, 0, 0, 0)
       4.times do |i|
         tile_position = tiles[i] - 1
-        src.set(((tile_position % 6) * 16) + anim, (tile_position / 6) * 16, 16, 16)
+        src.set((tile_position % 6 * 16) + anim, tile_position / 6 * 16, 16, 16)
         bitmap.stretch_blt(Rect.new((i % 2 * cxTile) + x, (i / 2 * cyTile) + y, cxTile, cyTile),
                            autotile, src)
       end
@@ -128,7 +113,7 @@ class TileDrawingHelper
 
   def bltSmallRegularTile(bitmap, x, y, cxTile, cyTile, id)
     return if id < 384 || !@tileset || @tileset.disposed?
-    rect = Rect.new(((id - 384) % 8) * 32, ((id - 384) / 8) * 32, 32, 32)
+    rect = Rect.new((id - 384) % 8 * 32, (id - 384) / 8 * 32, 32, 32)
     rect = TilemapRenderer::TilesetWrapper.getWrappedRect(rect) if @shouldWrap
     bitmap.stretch_blt(Rect.new(x, y, cxTile, cyTile), @tileset, rect)
   end
@@ -163,9 +148,9 @@ end
 #===============================================================================
 def createMinimap(mapid)
   map = load_data(sprintf("Data/Map%03d.rxdata", mapid)) rescue nil
-  return Bitmap.new(32, 32) if !map
-  bitmap = Bitmap.new(map.width * 4, map.height * 4)
-  black = Color.black
+  return BitmapWrapper.new(32, 32) if !map
+  bitmap = BitmapWrapper.new(map.width * 4, map.height * 4)
+  black = Color.new(0, 0, 0)
   tilesets = $data_tilesets
   tileset = tilesets[map.tileset_id]
   return bitmap if !tileset
@@ -211,7 +196,7 @@ end
 def getPassabilityMinimap(mapid)
   map = load_data(sprintf("Data/Map%03d.rxdata", mapid))
   tileset = $data_tilesets[map.tileset_id]
-  minimap = AnimatedBitmap.new("Graphics/UI/minimap_tiles")
+  minimap = AnimatedBitmap.new("Graphics/Pictures/minimap_tiles")
   ret = Bitmap.new(map.width * 6, map.height * 6)
   passtable = Table.new(map.width, map.height)
   passages = tileset.passages
@@ -236,6 +221,6 @@ def getPassabilityMinimap(mapid)
       bltMinimapAutotile(ret, i * 6, j * 6, minimap.bitmap, tile)
     end
   end
-  minimap.dispose
+  minimap.disposes
   return ret
 end

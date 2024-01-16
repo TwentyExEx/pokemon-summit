@@ -2,23 +2,13 @@
 # Walking charset, for use in text entry screens and load game screen
 #===============================================================================
 class TrainerWalkingCharSprite < Sprite
-  attr_accessor :anim_duration
-
-  # Default time in seconds for one animation cycle of a charset. The icon for a
-  # storage box is 0.4 instead (set manually).
-  ANIMATION_DURATION = 0.5
-
   def initialize(charset, viewport = nil)
     super(viewport)
     @animbitmap = nil
     self.charset = charset
-    @current_frame = 0   # Current pattern
-    @anim_duration = ANIMATION_DURATION
-  end
-
-  def dispose
-    @animbitmap&.dispose
-    super
+    @animframe      = 0   # Current pattern
+    @frame          = 0   # Frame counter
+    self.animspeed  = 5   # Animation speed (frames per pattern)
   end
 
   def charset=(value)
@@ -35,8 +25,7 @@ class TrainerWalkingCharSprite < Sprite
     end
   end
 
-  # Used for the box icon in the naming screen.
-  def altcharset=(value)
+  def altcharset=(value)   # Used for box icon in the naming screen
     @animbitmap&.dispose
     @animbitmap = nil
     @charset = pbResolveBitmap(value)
@@ -49,8 +38,13 @@ class TrainerWalkingCharSprite < Sprite
     end
   end
 
-  def update_frame
-    @current_frame = (4 * (System.uptime % @anim_duration) / @anim_duration).floor
+  def animspeed=(value)
+    @frameskip = value * Graphics.frame_rate / 40
+  end
+
+  def dispose
+    @animbitmap&.dispose
+    super
   end
 
   def update
@@ -60,9 +54,12 @@ class TrainerWalkingCharSprite < Sprite
       @animbitmap.update
       self.bitmap = @animbitmap.bitmap
     end
-    # Update animation
-    update_frame
-    self.src_rect.x = self.src_rect.width * @current_frame
+    @frame += 1
+    if @frame >= @frameskip
+      @animframe = (@animframe + 1) % 4
+      self.src_rect.x = @animframe * @animbitmap.bitmap.width / 4
+      @frame -= @frameskip
+    end
     @updating = false
   end
 end

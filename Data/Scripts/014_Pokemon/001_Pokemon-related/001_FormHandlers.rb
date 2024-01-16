@@ -1,6 +1,3 @@
-#===============================================================================
-#
-#===============================================================================
 module MultipleForms
   @@formSpecies = SpeciesHandlerHash.new
 
@@ -12,8 +9,8 @@ module MultipleForms
     @@formSpecies.add(sym, hash)
   end
 
-  def self.registerIf(sym, cond, hash)
-    @@formSpecies.addIf(sym, cond, hash)
+  def self.registerIf(cond, hash)
+    @@formSpecies.addIf(cond, hash)
   end
 
   def self.hasFunction?(pkmn, func)
@@ -35,9 +32,8 @@ module MultipleForms
   end
 end
 
-#===============================================================================
-#
-#===============================================================================
+
+
 def drawSpot(bitmap, spotpattern, x, y, red, green, blue)
   height = spotpattern.length
   width  = spotpattern[0].length
@@ -45,8 +41,8 @@ def drawSpot(bitmap, spotpattern, x, y, red, green, blue)
     spot = spotpattern[yy]
     width.times do |xx|
       next if spot[xx] != 1
-      xOrg = (x + xx) * 2
-      yOrg = (y + yy) * 2
+      xOrg = (x + xx) << 1
+      yOrg = (y + yy) << 1
       color = bitmap.get_pixel(xOrg, yOrg)
       r = color.red + red
       g = color.green + green
@@ -63,7 +59,6 @@ def drawSpot(bitmap, spotpattern, x, y, red, green, blue)
 end
 
 def pbSpindaSpots(pkmn, bitmap)
-  # NOTE: These spots are doubled in size when drawing them.
   spot1 = [
     [0, 0, 1, 1, 1, 1, 0, 0],
     [0, 1, 1, 1, 1, 1, 1, 0],
@@ -124,8 +119,6 @@ def pbSpindaSpots(pkmn, bitmap)
   c = (id >> 8) & 15
   b = (id >> 4) & 15
   a = (id) & 15
-  # NOTE: The coordinates below (b + 33, a + 25 and so on) are doubled when
-  #       drawing the spot.
   if pkmn.shiny?
     drawSpot(bitmap, spot1, b + 33, a + 25, -75, -10, -150)
     drawSpot(bitmap, spot2, d + 21, c + 24, -75, -10, -150)
@@ -218,56 +211,14 @@ MultipleForms.register(:CHERRIM, {
   }
 })
 
-MultipleForms.register(:ROTOM, {
-  "onSetForm" => proc { |pkmn, form, oldForm|
-    form_moves = [
-      :OVERHEAT,    # Heat (microwave oven)
-      :HYDROPUMP,   # Wash (washing machine)
-      :BLIZZARD,    # Frost (refrigerator)
-      :AIRSLASH,    # Fan (electric fan)
-      :LEAFSTORM    # Mow (lawn mower)
-    ]
-    # Find a known move that should be forgotten
-    old_move_index = -1
-    pkmn.moves.each_with_index do |move, i|
-      next if !form_moves.include?(move.id)
-      old_move_index = i
-      break
-    end
-    # Determine which new move to learn (if any)
-    new_move_id = (form > 0) ? form_moves[form - 1] : nil
-    new_move_id = nil if !GameData::Move.exists?(new_move_id)
-    if new_move_id.nil? && old_move_index >= 0 && pkmn.numMoves == 1
-      new_move_id = :THUNDERSHOCK
-      new_move_id = nil if !GameData::Move.exists?(new_move_id)
-      raise _INTL("Rotom is trying to forget its last move, but there isn't another move to replace it with.") if new_move_id.nil?
-    end
-    new_move_id = nil if pkmn.hasMove?(new_move_id)
-    # Forget a known move (if relevant) and learn a new move (if relevant)
-    if old_move_index >= 0
-      old_move_name = pkmn.moves[old_move_index].name
-      if new_move_id.nil?
-        # Just forget the old move
-        pkmn.forget_move_at_index(old_move_index)
-        pbMessage(_INTL("{1} forgot {2}...", pkmn.name, old_move_name))
-      else
-        # Replace the old move with the new move (keeps the same index)
-        pkmn.moves[old_move_index].id = new_move_id
-        new_move_name = pkmn.moves[old_move_index].name
-        pbMessage(_INTL("{1} forgot {2}...", pkmn.name, old_move_name) + "\1")
-        pbMessage("\\se[]" + _INTL("{1} learned {2}!", pkmn.name, new_move_name) + "\\se[Pkmn move learnt]")
-      end
-    elsif !new_move_id.nil?
-      # Just learn the new move
-      pbLearnMove(pkmn, new_move_id, true)
-    end
-  }
-})
 
 MultipleForms.register(:GIRATINA, {
   "getForm" => proc { |pkmn|
     next 1 if pkmn.hasItem?(:GRISEOUSORB)
-    next 1 if $game_map&.metadata&.has_flag?("DistortionWorld")
+    if $game_map &&
+       GameData::MapMetadata.get($game_map.map_id)&.has_flag?("DistortionWorld")
+      next 1
+    end
     next 0
   }
 })
@@ -318,14 +269,6 @@ MultipleForms.register(:DARMANITAN, {
     next 2 * (pkmn.form / 2)
   }
 })
-
-MultipleForms.register(:DEERLING, {
-  "getForm" => proc { |pkmn|
-    next pbGetSeason
-  }
-})
-
-MultipleForms.copy(:DEERLING, :SAWSBUCK)
 
 MultipleForms.register(:KYUREM, {
   "getFormOnEnteringBattle" => proc { |pkmn, wild|
@@ -411,14 +354,6 @@ MultipleForms.register(:GRENINJA, {
   }
 })
 
-MultipleForms.register(:SCATTERBUG, {
-  "getFormOnCreation" => proc { |pkmn|
-    next $player.secret_ID % 18
-  }
-})
-
-MultipleForms.copy(:SCATTERBUG, :SPEWPA, :VIVILLON)
-
 MultipleForms.register(:FURFROU, {
   "getForm" => proc { |pkmn|
     if !pkmn.time_form_set ||
@@ -445,18 +380,6 @@ MultipleForms.register(:AEGISLASH, {
   }
 })
 
-MultipleForms.register(:PUMPKABOO, {
-  "getFormOnCreation" => proc { |pkmn|
-    r = rand(100)
-    next 3 if r < 5    # Super Size (5%)
-    next 2 if r < 20   # Large (15%)
-    next 1 if r < 65   # Average (45%)
-    next 0             # Small (35%)
-  }
-})
-
-MultipleForms.copy(:PUMPKABOO, :GOURGEIST)
-
 MultipleForms.register(:XERNEAS, {
   "getFormOnStartingBattle" => proc { |pkmn, wild|
     next 1
@@ -481,22 +404,6 @@ MultipleForms.register(:HOOPA, {
   },
   "onSetForm" => proc { |pkmn, form, oldForm|
     pkmn.time_form_set = (form > 0) ? pbGetTimeNow.to_i : nil
-  }
-})
-
-MultipleForms.register(:ROCKRUFF, {
-  "getForm" => proc { |pkmn|
-    next if pkmn.form_simple >= 2   # Own Tempo Rockruff cannot become another form
-    next 1 if PBDayNight.isNight?
-    next 0
-  }
-})
-
-MultipleForms.register(:LYCANROC, {
-  "getFormOnCreation" => proc { |pkmn|
-    next 2 if PBDayNight.isEvening?   # Dusk
-    next 1 if PBDayNight.isNight?     # Midnight
-    next 0                            # Midday
   }
 })
 
@@ -602,35 +509,6 @@ MultipleForms.register(:TOXEL, {
 
 MultipleForms.copy(:TOXEL, :TOXTRICITY)
 
-MultipleForms.register(:SINISTEA, {
-  "getFormOnCreation" => proc { |pkmn|
-    next 1 if rand(100) < 10   # Antique
-    next 0                     # Phony
-  }
-})
-
-MultipleForms.copy(:SINISTEA, :POLTEAGEIST)
-
-# A Milcery will always have the same flavor, but it is randomly chosen.
-MultipleForms.register(:MILCERY, {
-  "getForm" => proc { |pkmn|
-    num_flavors = 9
-    sweets = [:STRAWBERRYSWEET, :BERRYSWEET, :LOVESWEET, :STARSWEET,
-              :CLOVERSWEET, :FLOWERSWEET, :RIBBONSWEET]
-    if sweets.include?(pkmn.item_id)
-      next sweets.index(pkmn.item_id) + ((pkmn.personalID % num_flavors) * sweets.length)
-    end
-    next 0
-  }
-})
-
-MultipleForms.register(:ALCREMIE, {
-  "getFormOnCreation" => proc { |pkmn|
-    num_flavors = 9
-    num_sweets = 7
-    next rand(num_flavors * num_sweets)
-  }
-})
 
 MultipleForms.register(:EISCUE, {
   "getFormOnLeavingBattle" => proc { |pkmn, battle, usedInBattle, endBattle|
@@ -690,12 +568,6 @@ MultipleForms.register(:ZAMAZENTA, {
   }
 })
 
-MultipleForms.register(:URSHIFU, {
-  "getFormOnCreation" => proc { |pkmn|
-    next rand(2)
-  }
-})
-
 MultipleForms.register(:CALYREX, {
   "onSetForm" => proc { |pkmn, form, oldForm|
     form_moves = [
@@ -727,6 +599,7 @@ MultipleForms.register(:CALYREX, {
     end
   }
 })
+
 
 #===============================================================================
 # Regional forms

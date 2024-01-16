@@ -22,22 +22,23 @@ end
 #===============================================================================
 class Battle::Move::Confusion < Battle::Move
   def initialize(battle, move)
-    @battle        = battle
-    @realMove      = move
-    @id            = :CONFUSEDAMAGE
-    @name          = ""
-    @function_code = "None"
-    @power         = 40
-    @type          = nil
-    @category      = 0
-    @accuracy      = 100
-    @pp            = -1
-    @target        = :User
-    @priority      = 0
-    @flags         = []
-    @addlEffect    = 0
-    @powerBoost    = false
-    @snatched      = false
+    @battle     = battle
+    @realMove   = move
+    @id         = :CONFUSEDAMAGE
+    @name       = ""
+    @function   = "None"
+    @baseDamage = 40
+    @type       = nil
+    @category   = 0
+    @accuracy   = 100
+    @pp         = -1
+    @target     = :User
+    @priority   = 0
+    @flags      = []
+    @addlEffect = 0
+    @calcType   = nil
+    @powerBoost = false
+    @snatched   = false
   end
 
   def physicalMove?(thisType = nil);   return true;  end
@@ -50,22 +51,23 @@ end
 #===============================================================================
 class Battle::Move::Struggle < Battle::Move
   def initialize(battle, move)
-    @battle        = battle
-    @realMove      = nil                     # Not associated with a move
-    @id            = :STRUGGLE
-    @name          = _INTL("Struggle")
-    @function_code = "Struggle"
-    @power         = 50
-    @type          = nil
-    @category      = 0
-    @accuracy      = 0
-    @pp            = -1
-    @target        = :RandomNearFoe
-    @priority      = 0
-    @flags         = ["Contact", "CanProtect"]
-    @addlEffect    = 0
-    @powerBoost    = false
-    @snatched      = false
+    @battle     = battle
+    @realMove   = nil                     # Not associated with a move
+    @id         = (move) ? move.id : :STRUGGLE
+    @name       = (move) ? move.name : _INTL("Struggle")
+    @function   = "Struggle"
+    @baseDamage = 50
+    @type       = nil
+    @category   = 0
+    @accuracy   = 0
+    @pp         = -1
+    @target     = :NearOther
+    @priority   = 0
+    @flags      = ["Contact", "CanProtect"]
+    @addlEffect = 0
+    @calcType   = nil
+    @powerBoost = false
+    @snatched   = false
   end
 
   def physicalMove?(thisType = nil); return true;  end
@@ -83,8 +85,6 @@ end
 # Raise one of user's stats.
 #===============================================================================
 class Battle::Move::StatUpMove < Battle::Move
-  attr_reader :statUp
-
   def canSnatch?; return true; end
 
   def pbMoveFailed?(user, targets)
@@ -108,8 +108,6 @@ end
 # Raise multiple of user's stats.
 #===============================================================================
 class Battle::Move::MultiStatUpMove < Battle::Move
-  attr_reader :statUp
-
   def canSnatch?; return true; end
 
   def pbMoveFailed?(user, targets)
@@ -153,8 +151,6 @@ end
 # Lower multiple of user's stats.
 #===============================================================================
 class Battle::Move::StatDownMove < Battle::Move
-  attr_reader :statDown
-
   def pbEffectWhenDealingDamage(user, target)
     return if @battle.pbAllFainted?(target.idxOwnSide)
     showAnim = true
@@ -171,8 +167,6 @@ end
 # Lower one of target's stats.
 #===============================================================================
 class Battle::Move::TargetStatDownMove < Battle::Move
-  attr_reader :statDown
-
   def canMagicCoat?; return true; end
 
   def pbFailsAgainstTarget?(user, target, show_message)
@@ -196,8 +190,6 @@ end
 # Lower multiple of target's stats.
 #===============================================================================
 class Battle::Move::TargetMultiStatDownMove < Battle::Move
-  attr_reader :statDown
-
   def canMagicCoat?; return true; end
 
   def pbFailsAgainstTarget?(user, target, show_message)
@@ -307,45 +299,26 @@ class Battle::Move::TwoTurnMove < Battle::Move
   # Non-nil means the charging turn. nil means the attacking turn.
   def pbIsChargingTurn?(user)
     @powerHerb = false
+    @automaton = false
+    @skip = false
     @chargingTurn = false   # Assume damaging turn by default
     @damagingTurn = true
     # nil at start of charging turn, move's ID at start of damaging turn
     if !user.effects[PBEffects::TwoTurnAttack]
       @powerHerb = user.hasActiveItem?(:POWERHERB)
+      @automaton = user.hasActiveAbility?(:AUTOMATON)
+      if @powerHerb || @automaton == true
+        @skip = true
+      end
       @chargingTurn = true
-      @damagingTurn = @powerHerb
+      @damagingTurn = @skip
     end
     return !@damagingTurn   # Deliberately not "return @chargingTurn"
   end
 
-  # Stops damage being dealt in the first (charging) turn.
-  def pbDamagingMove?
+  def pbDamagingMove?   # Stops damage being dealt in the first (charging) turn
     return false if !@damagingTurn
     return super
-  end
-
-  # Does the charging part of this move, for when this move only takes one round
-  # to use.
-  def pbQuickChargingMove(user, targets)
-    return if !@chargingTurn || !@damagingTurn   # Move only takes one turn to use
-    pbChargingTurnMessage(user, targets)
-    pbShowAnimation(@id, user, targets, 1)   # Charging anim
-    targets.each { |b| pbChargingTurnEffect(user, b) }
-    if @powerHerb
-      # Moves that would make the user semi-invulnerable will hide the user
-      # after the charging animation, so the "UseItem" animation shouldn't show
-      # for it
-      if !["TwoTurnAttackInvulnerableInSky",
-           "TwoTurnAttackInvulnerableUnderground",
-           "TwoTurnAttackInvulnerableUnderwater",
-           "TwoTurnAttackInvulnerableInSkyParalyzeTarget",
-           "TwoTurnAttackInvulnerableRemoveProtections",
-           "TwoTurnAttackInvulnerableInSkyTargetCannotAct"].include?(@function_code)
-        @battle.pbCommonAnimation("UseItem", user)
-      end
-      @battle.pbDisplay(_INTL("{1} became fully charged due to its Power Herb!", user.pbThis))
-      user.pbConsumeItem
-    end
   end
 
   def pbAccuracyCheck(user, target)
@@ -354,18 +327,48 @@ class Battle::Move::TwoTurnMove < Battle::Move
   end
 
   def pbInitialEffect(user, targets, hitNum)
-    if @damagingTurn
-      pbAttackingTurnMessage(user, targets)
-    elsif @chargingTurn
-      pbChargingTurnMessage(user, targets)
+    pbChargingTurnMessage(user, targets) if @chargingTurn
+    if @chargingTurn && @damagingTurn   # Move only takes one turn to use
+      pbShowAnimation(@id, user, targets, 1)   # Charging anim
+      targets.each { |b| pbChargingTurnEffect(user, b) }
+      if @skip
+        # Moves that would make the user semi-invulnerable will hide the user
+        # after the charging animation, so the "UseItem" animation shouldn't show
+        # for it
+        if !["TwoTurnAttackInvulnerableInSky",
+             "TwoTurnAttackInvulnerableUnderground",
+             "TwoTurnAttackInvulnerableUnderwater",
+             "TwoTurnAttackInvulnerableInSkyParalyzeTarget",
+             "TwoTurnAttackInvulnerableRemoveProtections",
+             "TwoTurnAttackInvulnerableInSkyTargetCannotAct"].include?(@function)
+          @battle.pbCommonAnimation("UseItem", user)
+        end
+        @battle.pbDisplay(_INTL("{1} became fully charged due to its Power Herb!", user.pbThis)) if @powerHerb
+        if @automaton
+          battle.pbShowAbilitySplash(user)
+          battle.pbDisplay(_INTL("{1} is fully charged by {2}!",user.pbThis,user.abilityName))
+          battle.pbHideAbilitySplash(user)
+        end
+        user.pbConsumeItem
+      end
     end
+    pbAttackingTurnMessage(user, targets) if @damagingTurn
   end
 
   def pbChargingTurnMessage(user, targets)
     @battle.pbDisplay(_INTL("{1} began charging up!", user.pbThis))
   end
 
-  def pbAttackingTurnMessage(user, targets); end
+  def pbAttackingTurnMessage(user, targets)
+  end
+
+  def pbChargingTurnEffect(user, target)
+    # Skull Bash/Sky Drop are the only two-turn moves with an effect here, and
+    # the latter just records the target is being Sky Dropped
+  end
+
+  def pbAttackingTurnEffect(user, target)
+  end
 
   def pbEffectAgainstTarget(user, target)
     if @damagingTurn
@@ -374,13 +377,6 @@ class Battle::Move::TwoTurnMove < Battle::Move
       pbChargingTurnEffect(user, target)
     end
   end
-
-  def pbChargingTurnEffect(user, target)
-    # Skull Bash/Sky Drop are the only two-turn moves with an effect here, and
-    # the latter just records the target is being Sky Dropped
-  end
-
-  def pbAttackingTurnEffect(user, target); end
 
   def pbShowAnimation(id, user, targets, hitNum = 0, showAnimation = true)
     hitNum = 1 if @chargingTurn && !@damagingTurn   # Charging anim
@@ -415,7 +411,7 @@ end
 # Recoil move.
 #===============================================================================
 class Battle::Move::RecoilMove < Battle::Move
-  def recoilMove?;                  return true; end
+  def recoilMove?;                 return true; end
   def pbRecoilDamage(user, target); return 1;    end
 
   def pbEffectAfterAllHits(user, target)
@@ -423,6 +419,9 @@ class Battle::Move::RecoilMove < Battle::Move
     return if !user.takesIndirectDamage?
     return if user.hasActiveAbility?(:ROCKHEAD)
     amt = pbRecoilDamage(user, target)
+	if user.hasActiveItem?(:CRASHGEAR)
+		amt = amt * 0.5
+	end
     amt = 1 if amt < 1
     user.pbReduceHP(amt, false)
     @battle.pbDisplay(_INTL("{1} is damaged by recoil!", user.pbThis))
@@ -494,8 +493,6 @@ end
 # Weather-inducing move.
 #===============================================================================
 class Battle::Move::WeatherMove < Battle::Move
-  attr_reader :weatherType
-
   def initialize(battle, move)
     super
     @weatherType = :None
@@ -550,7 +547,7 @@ class Battle::Move::PledgeMove < Battle::Move
       move = @battle.choices[b.index][2]
       next if !move
       @combos.each do |i|
-        next if i[0] != move.function_code
+        next if i[0] != move.function
         @pledgeSetup = true
         @pledgeOtherUser = b
         break
@@ -585,7 +582,7 @@ class Battle::Move::PledgeMove < Battle::Move
     return if !@pledgeSetup
     @battle.pbDisplay(_INTL("{1} is waiting for {2}'s move...",
                             user.pbThis, @pledgeOtherUser.pbThis(true)))
-    @pledgeOtherUser.effects[PBEffects::FirstPledge] = @function_code
+    @pledgeOtherUser.effects[PBEffects::FirstPledge] = @function
     @pledgeOtherUser.effects[PBEffects::MoveNext]    = true
     user.lastMoveFailed = true   # Treated as a failure for Stomping Tantrum
   end

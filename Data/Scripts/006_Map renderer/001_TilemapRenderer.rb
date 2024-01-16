@@ -127,7 +127,7 @@ class TilemapRenderer
       @frame_counts    = {}   # Number of frames in each autotile
       @frame_durations = {}   # How long each frame lasts per autotile
       @current_frames  = {}   # Which frame each autotile is currently showing
-      @timer_start     = System.uptime
+      @timer           = 0.0
     end
 
     def []=(filename, value)
@@ -184,7 +184,9 @@ class TilemapRenderer
     end
 
     def current_frame(filename)
-      set_current_frame(filename) if !@current_frames[filename]
+      if !@current_frames[filename]
+        set_current_frame(filename)
+      end
       return @current_frames[filename]
     end
 
@@ -193,7 +195,7 @@ class TilemapRenderer
       if frames < 2
         @current_frames[filename] = 0
       else
-        @current_frames[filename] = ((System.uptime - @timer_start) / @frame_durations[filename]).floor % frames
+        @current_frames[filename] = (@timer / @frame_durations[filename]).floor % frames
       end
     end
 
@@ -219,6 +221,7 @@ class TilemapRenderer
 
     def update
       super
+      @timer += Graphics.delta_s
       # Update the current frame for each autotile
       @bitmaps.each_key do |filename|
         next if !@bitmaps[filename] || @bitmaps[filename].disposed?
@@ -302,14 +305,10 @@ class TilemapRenderer
     @tiles.each do |col|
       col.each do |coord|
         coord.each { |tile| tile.dispose }
-        coord.clear
       end
     end
-    @tiles.clear
     @tilesets.bitmaps.each_value { |bitmap| bitmap.dispose }
-    @tilesets.bitmaps.clear
     @autotiles.bitmaps.each_value { |bitmap| bitmap.dispose }
-    @autotiles.bitmaps.clear
     @self_viewport.dispose
     @self_viewport = nil
     @disposed = true
@@ -425,7 +424,7 @@ class TilemapRenderer
       tile.z = 0
     else
       priority = tile.priority
-      tile.z = (priority == 0) ? 0 : (y * SOURCE_TILE_HEIGHT) + (priority * SOURCE_TILE_HEIGHT) + SOURCE_TILE_HEIGHT + 1
+      tile.z = (priority == 0) ? 0 : (y * SOURCE_TILE_HEIGHT) + (priority * SOURCE_TILE_HEIGHT) + SOURCE_TILE_HEIGHT
     end
   end
 
@@ -538,7 +537,7 @@ class TilemapRenderer
     if @old_color != @color
       @tiles.each do |col|
         col.each do |coord|
-          coord.each { |tile| tile.color = @color }
+          coord.each { |tile| tile.color = @tone }
         end
       end
       @old_color = @color.clone

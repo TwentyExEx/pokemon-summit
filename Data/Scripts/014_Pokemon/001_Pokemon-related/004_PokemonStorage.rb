@@ -1,6 +1,3 @@
-#===============================================================================
-#
-#===============================================================================
 class PokemonBox
   attr_reader   :pokemon
   attr_accessor :name
@@ -52,9 +49,8 @@ class PokemonBox
   end
 end
 
-#===============================================================================
-#
-#===============================================================================
+
+
 class PokemonStorage
   attr_reader   :boxes
   attr_accessor :currentBox
@@ -263,6 +259,8 @@ class PokemonStorage
   end
 end
 
+
+
 #===============================================================================
 # Regional Storage scripts
 #===============================================================================
@@ -284,7 +282,9 @@ class RegionalStorage
     if @rgnmap < 0
       raise _INTL("The current map has no region set. Please set the MapPosition metadata setting for this map.")
     end
-    @storages[@rgnmap] = PokemonStorage.new if !@storages[@rgnmap]
+    if !@storages[@rgnmap]
+      @storages[@rgnmap] = PokemonStorage.new
+    end
     return @storages[@rgnmap]
   end
 
@@ -369,6 +369,8 @@ class RegionalStorage
   end
 end
 
+
+
 #===============================================================================
 #
 #===============================================================================
@@ -376,8 +378,7 @@ def pbUnlockWallpaper(index)
   $PokemonStorage.unlockedWallpapers[index] = true
 end
 
-# NOTE: I don't know why you'd want to do this, but here you go.
-def pbLockWallpaper(index)
+def pbLockWallpaper(index)   # Don't know why you'd want to do this
   $PokemonStorage.unlockedWallpapers[index] = false
 end
 

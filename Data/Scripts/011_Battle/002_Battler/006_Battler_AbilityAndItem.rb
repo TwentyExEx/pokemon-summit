@@ -13,7 +13,7 @@ class Battle::Battler
     @fainted = true
     # Check for end of Neutralizing Gas/Unnerve
     pbAbilitiesOnNeutralizingGasEnding if hasActiveAbility?(:NEUTRALIZINGGAS, true)
-    pbItemsOnUnnerveEnding if hasActiveAbility?([:UNNERVE, :ASONECHILLINGNEIGH, :ASONEGRIMNEIGH], true)
+    pbItemsOnUnnerveEnding if hasActiveAbility?(:UNNERVE, true)
     # Check for end of primordial weather
     @battle.pbEndPrimordialWeather
   end
@@ -29,7 +29,7 @@ class Battle::Battler
       Battle::AbilityEffects.triggerOnBattlerFainting(b.ability, b, self, @battle)
     end
     pbAbilitiesOnNeutralizingGasEnding if hasActiveAbility?(:NEUTRALIZINGGAS, true)
-    pbItemsOnUnnerveEnding if hasActiveAbility?([:UNNERVE, :ASONECHILLINGNEIGH, :ASONEGRIMNEIGH], true)
+    pbItemsOnUnnerveEnding if hasActiveAbility?(:UNNERVE, true)
   end
 
   # Used for Emergency Exit/Wimp Out. Returns whether self has switched out.
@@ -48,6 +48,12 @@ class Battle::Battler
   def pbAbilitiesOnIntimidated
     return if !abilityActive?
     Battle::AbilityEffects.triggerOnIntimidated(self.ability, self, @battle)
+  end
+
+  # Used for Rattled's Gen 8 effect. Called when Intimidate is triggered.
+  def pbAbilitiesOnDisquieted
+    return if !abilityActive?
+    Battle::AbilityEffects.triggerOnDisquieted(self.ability, self, @battle)
   end
 
   def pbAbilitiesOnNeutralizingGasEnding
@@ -72,10 +78,10 @@ class Battle::Battler
       #       in and not at any later times, even if a traceable ability turns
       #       up later. Essentials ignores this, and allows Trace to trigger
       #       whenever it can even in Gen 5 battle mechanics.
-      choices = @battle.allOtherSideBattlers(@index).select do |b|
+      choices = @battle.allOtherSideBattlers(@index).select { |b|
         next !b.ungainableAbility? &&
              ![:POWEROFALCHEMY, :RECEIVER, :TRACE].include?(b.ability_id)
-      end
+      }
       if choices.length > 0
         choice = choices[@battle.pbRandom(choices.length)]
         @battle.pbShowAbilitySplash(self)
@@ -160,10 +166,9 @@ class Battle::Battler
   # Ability change
   #=============================================================================
   def pbOnLosingAbility(oldAbil, suppressed = false)
-    if oldAbil == :NEUTRALIZINGGAS && (suppressed || !@effects[PBEffects::GastroAcid])
+    if oldAbil == :NEUTRALIZINGGAS && (suppressed || !@effects[PBEffects::GastroAcid] || !@effects[PBEffects::SuppressorVest])
       pbAbilitiesOnNeutralizingGasEnding
-    elsif [:UNNERVE, :ASONECHILLINGNEIGH, :ASONEGRIMNEIGH].include?(oldAbil) &&
-          (suppressed || !@effects[PBEffects::GastroAcid])
+    elsif oldAbil == :UNNERVE && (suppressed || !@effects[PBEffects::GastroAcid] || !@effects[PBEffects::SuppressorVest])
       pbItemsOnUnnerveEnding
     elsif oldAbil == :ILLUSION && @effects[PBEffects::Illusion]
       @effects[PBEffects::Illusion] = nil
@@ -174,6 +179,7 @@ class Battle::Battler
       end
     end
     @effects[PBEffects::GastroAcid] = false if unstoppableAbility?
+    @effects[PBEffects::SuppressorVest] = false if unstoppableAbility? && self.item != :SUPPRESSORVEST
     @effects[PBEffects::SlowStart]  = 0 if self.ability != :SLOWSTART
     @effects[PBEffects::Truant]     = false if self.ability != :TRUANT
     # Check for end of primordial weather
@@ -201,7 +207,7 @@ class Battle::Battler
   # Held item consuming/removing
   #=============================================================================
   def canConsumeBerry?
-    return false if @battle.pbCheckOpposingAbility([:UNNERVE, :ASONECHILLINGNEIGH, :ASONEGRIMNEIGH], @index)
+    return false if @battle.pbCheckOpposingAbility(:UNNERVE, @index)
     return true
   end
 
@@ -282,8 +288,7 @@ class Battle::Battler
   # NOTE: A Pokémon using Bug Bite/Pluck, and a Pokémon having an item thrown at
   #       it via Fling, will gain the effect of the item even if the Pokémon is
   #       affected by item-negating effects.
-  # item_to_use is an item ID for Stuff Cheeks, Teatime, Bug Bite/Pluck and
-  # Fling, and nil otherwise.
+  # item_to_use is an item ID for Bug Bite/Pluck and Fling, and nil otherwise.
   # fling is for Fling only.
   def pbHeldItemTriggerCheck(item_to_use = nil, fling = false)
     return if fainted?
@@ -370,6 +375,15 @@ class Battle::Battler
       pbHeldItemTriggered(self.item)
     end
   end
+  
+  # Used for Adrenaline Orb. Called when Disquiet is triggered (even if
+  # Disquiet has no effect on the Pokémon).
+  def pbItemOnDisquietedCheck
+    return if !itemActive?
+    if Battle::ItemEffects.triggerOnIntimidated(self.item, self, @battle)
+      pbHeldItemTriggered(self.item)
+    end
+  end
 
   # Used for Eject Pack. Returns whether self has switched out.
   def pbItemOnStatDropped(move_user = nil)
@@ -387,7 +401,7 @@ class Battle::Battler
   #=============================================================================
   # Item effects
   #=============================================================================
-  def pbConfusionBerry(item_to_use, forced, confuse_stat, confuse_msg)
+  def pbConfusionBerry(item_to_use, forced, flavor, confuse_msg)
     return false if !forced && !canHeal?
     return false if !forced && !canConsumePinchBerry?(Settings::MECHANICS_GENERATION >= 7)
     used_item_name = GameData::Item.get(item_to_use).name
@@ -415,9 +429,12 @@ class Battle::Battler
         @battle.pbDisplay(_INTL("{1} restored its health using its {2}!", pbThis, used_item_name))
       end
     end
-    if self.nature.stat_changes.any? { |val| val[0] == confuse_stat && val[1] < 0 }
+    flavor_stat = [:ATTACK, :DEFENSE, :SPEED, :SPECIAL_ATTACK, :SPECIAL_DEFENSE][flavor]
+    self.nature.stat_changes.each do |change|
+      next if change[1] > 0 || change[0] != flavor_stat
       @battle.pbDisplay(confuse_msg)
       pbConfuse if pbCanConfuseSelf?(false)
+      break
     end
     return true
   end
@@ -459,9 +476,9 @@ class Battle::Battler
     return if move_type != gem_type
     @effects[PBEffects::GemConsumed] = @item_id
     if Settings::MECHANICS_GENERATION >= 6
-      mults[:power_multiplier] *= 1.3
+      mults[:base_damage_multiplier] *= 1.3
     else
-      mults[:power_multiplier] *= 1.5
+      mults[:base_damage_multiplier] *= 1.5
     end
   end
 end

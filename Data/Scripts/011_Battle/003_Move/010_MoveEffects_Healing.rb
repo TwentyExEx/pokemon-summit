@@ -109,13 +109,6 @@ end
 # it). (Strength Sap)
 #===============================================================================
 class Battle::Move::HealUserByTargetAttackLowerTargetAttack1 < Battle::Move
-  attr_reader :statDown
-
-  def initialize(battle, move)
-    super
-    @statDown = [:ATTACK, 1]
-  end
-
   def healingMove?;  return true; end
   def canMagicCoat?; return true; end
 
@@ -125,12 +118,10 @@ class Battle::Move::HealUserByTargetAttackLowerTargetAttack1 < Battle::Move
     #       has Contrary and is at +6" check too for symmetry. This move still
     #       works even if the stat stage cannot be changed due to an ability or
     #       other effect.
-    if !@battle.moldBreaker && target.hasActiveAbility?(:CONTRARY)
-      if target.statStageAtMax?(@statDown[0])
-        @battle.pbDisplay(_INTL("But it failed!")) if show_message
-        return true
-      end
-    elsif target.statStageAtMin?(@statDown[0])
+    if !@battle.moldBreaker && target.hasActiveAbility?(:CONTRARY) && target.statStageAtMax?(:ATTACK)
+      @battle.pbDisplay(_INTL("But it failed!")) if show_message
+      return true
+    elsif target.statStageAtMin?(:ATTACK)
       @battle.pbDisplay(_INTL("But it failed!")) if show_message
       return true
     end
@@ -139,18 +130,17 @@ class Battle::Move::HealUserByTargetAttackLowerTargetAttack1 < Battle::Move
 
   def pbEffectAgainstTarget(user, target)
     # Calculate target's effective attack value
-    max_stage = Battle::Battler::STAT_STAGE_MAXIMUM
-    stageMul = Battle::Battler::STAT_STAGE_MULTIPLIERS
-    stageDiv = Battle::Battler::STAT_STAGE_DIVISORS
+    stageMul = [2, 2, 2, 2, 2, 2, 2, 3, 4, 5, 6, 7, 8]
+    stageDiv = [8, 7, 6, 5, 4, 3, 2, 2, 2, 2, 2, 2, 2]
     atk      = target.attack
-    atkStage = target.stages[@statDown[0]] + max_stage
+    atkStage = target.stages[:ATTACK] + 6
     healAmt = (atk.to_f * stageMul[atkStage] / stageDiv[atkStage]).floor
     # Reduce target's Attack stat
-    if target.pbCanLowerStatStage?(@statDown[0], user, self)
-      target.pbLowerStatStage(@statDown[0], @statDown[1], user)
+    if target.pbCanLowerStatStage?(:ATTACK, user, self)
+      target.pbLowerStatStage(:ATTACK, 1, user)
     end
     # Heal user
-    if target.hasActiveAbility?(:LIQUIDOOZE, true)
+    if target.hasActiveAbility?(:LIQUIDOOZE)
       @battle.pbShowAbilitySplash(target)
       user.pbReduceHP(healAmt)
       @battle.pbDisplay(_INTL("{1} sucked up the liquid ooze!", user.pbThis))
@@ -497,7 +487,7 @@ end
 # User faints, even if the move does nothing else. (Explosion, Self-Destruct)
 #===============================================================================
 class Battle::Move::UserFaintsExplosive < Battle::Move
-  def worksWithNoTargets?;      return true; end
+  def worksWithNoTargets?;     return true; end
   def pbNumHits(user, targets); return 1;    end
 
   def pbMoveFailed?(user, targets)

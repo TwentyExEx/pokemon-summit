@@ -64,8 +64,6 @@ class AnimatedPlane < Plane
     end
   end
 
-  #-----------------------------------------------------------------------------
-
   private
 
   def clear_bitmap

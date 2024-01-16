@@ -109,21 +109,22 @@ module FileOutputMixin
 end
 
 class File < IO
-#   unless defined?(debugopen)
-#     class << self
-#       alias debugopen open
-#     end
-#   end
+=begin
+  unless defined?(debugopen)
+    class << self
+      alias debugopen open
+    end
+  end
 
-#   def open(f, m = "r")
-#     debugopen("debug.txt", "ab") { |file| file.write([f, m, Time.now.to_f].inspect + "\r\n") }
-#     if block_given?
-#       debugopen(f, m) { |file| yield file }
-#     else
-#       return debugopen(f, m)
-#     end
-#   end
-
+  def open(f, m = "r")
+    debugopen("debug.txt", "ab") { |file| file.write([f, m, Time.now.to_f].inspect + "\r\n") }
+    if block_given?
+      debugopen(f, m) { |file| yield file }
+    else
+      return debugopen(f, m)
+    end
+  end
+=end
   include FileInputMixin
   include FileOutputMixin
 end

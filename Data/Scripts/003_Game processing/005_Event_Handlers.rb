@@ -91,138 +91,14 @@ class NamedEvent
 end
 
 #===============================================================================
-# A class that stores code that can be triggered. Each piece of code has an
-# associated ID, which can be anything that can be used as a key in a hash.
-#===============================================================================
-class HandlerHash
-  def initialize
-    @hash = {}
-  end
-
-  def [](id)
-    return @hash[id] if id && @hash[id]
-    return nil
-  end
-
-  def add(id, handler = nil, &handlerBlock)
-    if ![Proc, Hash].include?(handler.class) && !block_given?
-      raise ArgumentError, "#{self.class.name} for #{id.inspect} has no valid handler (#{handler.inspect} was given)"
-    end
-    @hash[id] = handler || handlerBlock if id && !id.empty?
-  end
-
-  def copy(src, *dests)
-    handler = self[src]
-    return if !handler
-    dests.each { |dest| add(dest, handler) }
-  end
-
-  def remove(key)
-    @hash.delete(key)
-  end
-
-  def clear
-    @hash.clear
-  end
-
-  def each
-    @hash.each_pair { |key, value| yield key, value }
-  end
-
-  def keys
-    return @hash.keys.clone
-  end
-
-  # NOTE: The call does not pass id as a parameter to the proc/block.
-  def trigger(id, *args)
-    handler = self[id]
-    return handler&.call(*args)
-  end
-end
-
-#===============================================================================
-# A stripped-down version of class HandlerHash which only deals with IDs that
-# are symbols. Also contains an add_ifs hash for code that applies to multiple
-# IDs (determined by its condition proc).
-#===============================================================================
-class HandlerHashSymbol
-  def initialize
-    @hash    = {}
-    @add_ifs = {}
-  end
-
-  def [](sym)
-    sym = sym.id if !sym.is_a?(Symbol) && sym.respond_to?("id")
-    return @hash[sym] if sym && @hash[sym]
-    @add_ifs.each_value do |add_if|
-      return add_if[1] if add_if[0].call(sym)
-    end
-    return nil
-  end
-
-  def add(sym, handler = nil, &handlerBlock)
-    if ![Proc, Hash].include?(handler.class) && !block_given?
-      raise ArgumentError, "#{self.class.name} for #{sym.inspect} has no valid handler (#{handler.inspect} was given)"
-    end
-    @hash[sym] = handler || handlerBlock if sym
-  end
-
-  def addIf(sym, conditionProc, handler = nil, &handlerBlock)
-    if ![Proc, Hash].include?(handler.class) && !block_given?
-      raise ArgumentError, "addIf call for #{sym} in #{self.class.name} has no valid handler (#{handler.inspect} was given)"
-    end
-    @add_ifs[sym] = [conditionProc, handler || handlerBlock]
-  end
-
-  def copy(src, *dests)
-    handler = self[src]
-    return if !handler
-    dests.each { |dest| add(dest, handler) }
-  end
-
-  def remove(key)
-    @hash.delete(key)
-  end
-
-  def clear
-    @hash.clear
-    @add_ifs.clear
-  end
-
-  def trigger(sym, *args)
-    sym = sym.id if !sym.is_a?(Symbol) && sym.respond_to?("id")
-    handler = self[sym]
-    return handler&.call(sym, *args)
-  end
-end
-
-#===============================================================================
-# A specialised version of class HandlerHash which only deals with IDs that are
-# constants in a particular class or module. That class or module must be
-# defined when creating an instance of this class.
 # Unused.
 #===============================================================================
-class HandlerHashEnum
+class HandlerHash
   def initialize(mod)
     @mod         = mod
     @hash        = {}
     @addIfs      = []
     @symbolCache = {}
-  end
-
-  # 'sym' can be an ID or symbol.
-  def [](sym)
-    id = fromSymbol(sym)
-    ret = nil
-    ret = @hash[id] if id && @hash[id]   # Real ID from the item
-    symbol = toSymbol(sym)
-    ret = @hash[symbol] if symbol && @hash[symbol]   # Symbol or string
-    unless ret
-      @addIfs.each do |addif|
-        return addif[1] if addif[0].call(id)
-      end
-    end
-    return ret
   end
 
   def fromSymbol(sym)
@@ -247,8 +123,14 @@ class HandlerHashEnum
     return ret
   end
 
-  # 'sym' can be an ID or symbol.
-  def add(sym, handler = nil, &handlerBlock)
+  def addIf(conditionProc, handler = nil, &handlerBlock)
+    if ![Proc, Hash].include?(handler.class) && !block_given?
+      raise ArgumentError, "addIf call for #{self.class.name} has no valid handler (#{handler.inspect} was given)"
+    end
+    @addIfs.push([conditionProc, handler || handlerBlock])
+  end
+
+  def add(sym, handler = nil, &handlerBlock) # 'sym' can be an ID or symbol
     if ![Proc, Hash].include?(handler.class) && !block_given?
       raise ArgumentError, "#{self.class.name} for #{sym.inspect} has no valid handler (#{handler.inspect} was given)"
     end
@@ -256,6 +138,123 @@ class HandlerHashEnum
     @hash[id] = handler || handlerBlock if id
     symbol = toSymbol(sym)
     @hash[symbol] = handler || handlerBlock if symbol
+  end
+
+  def copy(src, *dests)
+    handler = self[src]
+    if handler
+      dests.each do |dest|
+        self.add(dest, handler)
+      end
+    end
+  end
+
+  def [](sym)   # 'sym' can be an ID or symbol
+    id = fromSymbol(sym)
+    ret = nil
+    ret = @hash[id] if id && @hash[id]   # Real ID from the item
+    symbol = toSymbol(sym)
+    ret = @hash[symbol] if symbol && @hash[symbol]   # Symbol or string
+    unless ret
+      @addIfs.each do |addif|
+        return addif[1] if addif[0].call(id)
+      end
+    end
+    return ret
+  end
+
+  def trigger(sym, *args)
+    handler = self[sym]
+    return (handler) ? handler.call(fromSymbol(sym), *args) : nil
+  end
+
+  def clear
+    @hash.clear
+  end
+end
+
+#===============================================================================
+# A stripped-down version of class HandlerHash which only deals with symbols and
+# doesn't care about whether those symbols are defined as constants in a class
+# or module.
+#===============================================================================
+class HandlerHash2
+  def initialize
+    @hash    = {}
+    @add_ifs = []
+  end
+
+  def [](sym)
+    sym = sym.id if !sym.is_a?(Symbol) && sym.respond_to?("id")
+    return @hash[sym] if sym && @hash[sym]
+    @add_ifs.each do |add_if|
+      return add_if[1] if add_if[0].call(sym)
+    end
+    return nil
+  end
+
+  def add(sym, handler = nil, &handlerBlock)
+    if ![Proc, Hash].include?(handler.class) && !block_given?
+      raise ArgumentError, "#{self.class.name} for #{sym.inspect} has no valid handler (#{handler.inspect} was given)"
+    end
+    @hash[sym] = handler || handlerBlock if sym
+  end
+
+  def addIf(conditionProc, handler = nil, &handlerBlock)
+    if ![Proc, Hash].include?(handler.class) && !block_given?
+      raise ArgumentError, "addIf call for #{self.class.name} has no valid handler (#{handler.inspect} was given)"
+    end
+    @add_ifs.push([conditionProc, handler || handlerBlock])
+  end
+
+  def copy(src, *dests)
+    handler = self[src]
+    return if !handler
+    dests.each { |dest| add(dest, handler) }
+  end
+
+  def remove(key)
+    @hash.delete(key)
+  end
+
+  def clear
+    @hash.clear
+  end
+
+  def trigger(sym, *args)
+    sym = sym.id if !sym.is_a?(Symbol) && sym.respond_to?("id")
+    handler = self[sym]
+    return handler&.call(sym, *args)
+  end
+end
+
+#===============================================================================
+# An even more stripped down version of class HandlerHash which just takes
+# hashes with keys, no matter what the keys are.
+#===============================================================================
+class HandlerHashBasic
+  def initialize
+    @hash   = {}
+    @addIfs = []
+  end
+
+  def [](entry)
+    ret = nil
+    ret = @hash[entry] if entry && @hash[entry]
+    unless ret
+      @addIfs.each do |addif|
+        return addif[1] if addif[0].call(entry)
+      end
+    end
+    return ret
+  end
+
+  def add(entry, handler = nil, &handlerBlock)
+    if ![Proc, Hash].include?(handler.class) && !block_given?
+      raise ArgumentError, "#{self.class.name} for #{entry.inspect} has no valid handler (#{handler.inspect} was given)"
+    end
+    return if !entry || entry.empty?
+    @hash[entry] = handler || handlerBlock
   end
 
   def addIf(conditionProc, handler = nil, &handlerBlock)
@@ -268,31 +267,42 @@ class HandlerHashEnum
   def copy(src, *dests)
     handler = self[src]
     return if !handler
-    dests.each { |dest| self.add(dest, handler) }
+    dests.each { |dest| add(dest, handler) }
+  end
+
+  def remove(key)
+    @hash.delete(key)
   end
 
   def clear
     @hash.clear
-    @addIfs.clear
   end
 
-  def trigger(sym, *args)
-    handler = self[sym]
-    return (handler) ? handler.call(fromSymbol(sym), *args) : nil
+  def each
+    @hash.each_pair { |key, value| yield key, value }
+  end
+
+  def keys
+    return @hash.keys.clone
+  end
+
+  def trigger(entry, *args)
+    handler = self[entry]
+    return handler&.call(*args)
   end
 end
 
 #===============================================================================
 #
 #===============================================================================
-class SpeciesHandlerHash < HandlerHashSymbol
+class SpeciesHandlerHash < HandlerHash2
 end
 
-class AbilityHandlerHash < HandlerHashSymbol
+class AbilityHandlerHash < HandlerHash2
 end
 
-class ItemHandlerHash < HandlerHashSymbol
+class ItemHandlerHash < HandlerHash2
 end
 
-class MoveHandlerHash < HandlerHashSymbol
+class MoveHandlerHash < HandlerHash2
 end

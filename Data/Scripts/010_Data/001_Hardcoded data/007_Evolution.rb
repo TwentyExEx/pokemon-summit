@@ -3,7 +3,7 @@ module GameData
     attr_reader :id
     attr_reader :real_name
     attr_reader :parameter
-    attr_reader :any_level_up   # false means parameter is the minimum level
+    attr_reader :minimum_level   # 0 means parameter is the minimum level
     attr_reader :level_up_proc
     attr_reader :use_item_proc
     attr_reader :on_trade_proc
@@ -21,9 +21,9 @@ module GameData
 
     def initialize(hash)
       @id                   = hash[:id]
-      @real_name            = hash[:id].to_s      || "Unnamed"
+      @real_name            = hash[:id].to_s       || "Unnamed"
       @parameter            = hash[:parameter]
-      @any_level_up         = hash[:any_level_up] || false
+      @minimum_level        = hash[:minimum_level] || 0
       @level_up_proc        = hash[:level_up_proc]
       @use_item_proc        = hash[:use_item_proc]
       @on_trade_proc        = hash[:on_trade_proc]
@@ -31,8 +31,6 @@ module GameData
       @event_proc           = hash[:event_proc]
       @after_evolution_proc = hash[:after_evolution_proc]
     end
-
-    alias name real_name
 
     def call_level_up(*args)
       return (@level_up_proc) ? @level_up_proc.call(*args) : nil
@@ -276,7 +274,7 @@ GameData::Evolution.register({
 
 GameData::Evolution.register({
   :id            => :Happiness,
-  :any_level_up  => true,   # Needs any level up
+  :minimum_level => 1,   # Needs any level up
   :level_up_proc => proc { |pkmn, parameter|
     next pkmn.happiness >= (Settings::APPLY_HAPPINESS_SOFT_CAP ? 160 : 220)
   }
@@ -284,7 +282,7 @@ GameData::Evolution.register({
 
 GameData::Evolution.register({
   :id            => :HappinessMale,
-  :any_level_up  => true,   # Needs any level up
+  :minimum_level => 1,   # Needs any level up
   :level_up_proc => proc { |pkmn, parameter|
     next pkmn.happiness >= (Settings::APPLY_HAPPINESS_SOFT_CAP ? 160 : 220) && pkmn.male?
   }
@@ -292,7 +290,7 @@ GameData::Evolution.register({
 
 GameData::Evolution.register({
   :id            => :HappinessFemale,
-  :any_level_up  => true,   # Needs any level up
+  :minimum_level => 1,   # Needs any level up
   :level_up_proc => proc { |pkmn, parameter|
     next pkmn.happiness >= (Settings::APPLY_HAPPINESS_SOFT_CAP ? 160 : 220) && pkmn.female?
   }
@@ -300,7 +298,7 @@ GameData::Evolution.register({
 
 GameData::Evolution.register({
   :id            => :HappinessDay,
-  :any_level_up  => true,   # Needs any level up
+  :minimum_level => 1,   # Needs any level up
   :level_up_proc => proc { |pkmn, parameter|
     next pkmn.happiness >= (Settings::APPLY_HAPPINESS_SOFT_CAP ? 160 : 220) && PBDayNight.isDay?
   }
@@ -308,7 +306,7 @@ GameData::Evolution.register({
 
 GameData::Evolution.register({
   :id            => :HappinessNight,
-  :any_level_up  => true,   # Needs any level up
+  :minimum_level => 1,   # Needs any level up
   :level_up_proc => proc { |pkmn, parameter|
     next pkmn.happiness >= (Settings::APPLY_HAPPINESS_SOFT_CAP ? 160 : 220) && PBDayNight.isNight?
   }
@@ -317,7 +315,7 @@ GameData::Evolution.register({
 GameData::Evolution.register({
   :id            => :HappinessMove,
   :parameter     => :Move,
-  :any_level_up  => true,   # Needs any level up
+  :minimum_level => 1,   # Needs any level up
   :level_up_proc => proc { |pkmn, parameter|
     if pkmn.happiness >= (Settings::APPLY_HAPPINESS_SOFT_CAP ? 160 : 220)
       next pkmn.moves.any? { |m| m && m.id == parameter }
@@ -328,7 +326,7 @@ GameData::Evolution.register({
 GameData::Evolution.register({
   :id            => :HappinessMoveType,
   :parameter     => :Type,
-  :any_level_up  => true,   # Needs any level up
+  :minimum_level => 1,   # Needs any level up
   :level_up_proc => proc { |pkmn, parameter|
     if pkmn.happiness >= (Settings::APPLY_HAPPINESS_SOFT_CAP ? 160 : 220)
       next pkmn.moves.any? { |m| m && m.type == parameter }
@@ -339,7 +337,7 @@ GameData::Evolution.register({
 GameData::Evolution.register({
   :id                   => :HappinessHoldItem,
   :parameter            => :Item,
-  :any_level_up         => true,   # Needs any level up
+  :minimum_level        => 1,   # Needs any level up
   :level_up_proc        => proc { |pkmn, parameter|
     next pkmn.item == parameter && pkmn.happiness >= (Settings::APPLY_HAPPINESS_SOFT_CAP ? 160 : 220)
   },
@@ -352,7 +350,7 @@ GameData::Evolution.register({
 
 GameData::Evolution.register({
   :id            => :MaxHappiness,
-  :any_level_up  => true,   # Needs any level up
+  :minimum_level => 1,   # Needs any level up
   :level_up_proc => proc { |pkmn, parameter|
     next pkmn.happiness == 255
   }
@@ -361,7 +359,7 @@ GameData::Evolution.register({
 GameData::Evolution.register({
   :id            => :Beauty,   # Feebas
   :parameter     => Integer,
-  :any_level_up  => true,   # Needs any level up
+  :minimum_level => 1,   # Needs any level up
   :level_up_proc => proc { |pkmn, parameter|
     next pkmn.beauty >= parameter
   }
@@ -370,7 +368,7 @@ GameData::Evolution.register({
 GameData::Evolution.register({
   :id                   => :HoldItem,
   :parameter            => :Item,
-  :any_level_up         => true,   # Needs any level up
+  :minimum_level        => 1,   # Needs any level up
   :level_up_proc        => proc { |pkmn, parameter|
     next pkmn.item == parameter
   },
@@ -384,7 +382,7 @@ GameData::Evolution.register({
 GameData::Evolution.register({
   :id                   => :HoldItemMale,
   :parameter            => :Item,
-  :any_level_up         => true,   # Needs any level up
+  :minimum_level        => 1,   # Needs any level up
   :level_up_proc        => proc { |pkmn, parameter|
     next pkmn.item == parameter && pkmn.male?
   },
@@ -398,7 +396,7 @@ GameData::Evolution.register({
 GameData::Evolution.register({
   :id                   => :HoldItemFemale,
   :parameter            => :Item,
-  :any_level_up         => true,   # Needs any level up
+  :minimum_level        => 1,   # Needs any level up
   :level_up_proc        => proc { |pkmn, parameter|
     next pkmn.item == parameter && pkmn.female?
   },
@@ -412,7 +410,7 @@ GameData::Evolution.register({
 GameData::Evolution.register({
   :id                   => :DayHoldItem,
   :parameter            => :Item,
-  :any_level_up         => true,   # Needs any level up
+  :minimum_level        => 1,   # Needs any level up
   :level_up_proc        => proc { |pkmn, parameter|
     next pkmn.item == parameter && PBDayNight.isDay?
   },
@@ -426,7 +424,7 @@ GameData::Evolution.register({
 GameData::Evolution.register({
   :id                   => :NightHoldItem,
   :parameter            => :Item,
-  :any_level_up         => true,   # Needs any level up
+  :minimum_level        => 1,   # Needs any level up
   :level_up_proc        => proc { |pkmn, parameter|
     next pkmn.item == parameter && PBDayNight.isNight?
   },
@@ -440,7 +438,7 @@ GameData::Evolution.register({
 GameData::Evolution.register({
   :id                   => :HoldItemHappiness,
   :parameter            => :Item,
-  :any_level_up         => true,   # Needs any level up
+  :minimum_level        => 1,   # Needs any level up
   :level_up_proc        => proc { |pkmn, parameter|
     next pkmn.item == parameter && pkmn.happiness >= (Settings::APPLY_HAPPINESS_SOFT_CAP ? 160 : 220)
   },
@@ -454,7 +452,7 @@ GameData::Evolution.register({
 GameData::Evolution.register({
   :id            => :HasMove,
   :parameter     => :Move,
-  :any_level_up  => true,   # Needs any level up
+  :minimum_level => 1,   # Needs any level up
   :level_up_proc => proc { |pkmn, parameter|
     next pkmn.moves.any? { |m| m && m.id == parameter }
   }
@@ -463,7 +461,7 @@ GameData::Evolution.register({
 GameData::Evolution.register({
   :id            => :HasMoveType,
   :parameter     => :Type,
-  :any_level_up  => true,   # Needs any level up
+  :minimum_level => 1,   # Needs any level up
   :level_up_proc => proc { |pkmn, parameter|
     next pkmn.moves.any? { |m| m && m.type == parameter }
   }
@@ -472,7 +470,7 @@ GameData::Evolution.register({
 GameData::Evolution.register({
   :id            => :HasInParty,
   :parameter     => :Species,
-  :any_level_up  => true,   # Needs any level up
+  :minimum_level => 1,   # Needs any level up
   :level_up_proc => proc { |pkmn, parameter|
     next $player.has_species?(parameter)
   }
@@ -481,7 +479,7 @@ GameData::Evolution.register({
 GameData::Evolution.register({
   :id            => :Location,
   :parameter     => Integer,
-  :any_level_up  => true,   # Needs any level up
+  :minimum_level => 1,   # Needs any level up
   :level_up_proc => proc { |pkmn, parameter|
     next $game_map.map_id == parameter
   }
@@ -490,7 +488,7 @@ GameData::Evolution.register({
 GameData::Evolution.register({
   :id            => :LocationFlag,
   :parameter     => String,
-  :any_level_up  => true,   # Needs any level up
+  :minimum_level => 1,   # Needs any level up
   :level_up_proc => proc { |pkmn, parameter|
     next $game_map.metadata&.has_flag?(parameter)
   }
@@ -499,7 +497,7 @@ GameData::Evolution.register({
 GameData::Evolution.register({
   :id            => :Region,
   :parameter     => Integer,
-  :any_level_up  => true,   # Needs any level up
+  :minimum_level => 1,   # Needs any level up
   :level_up_proc => proc { |pkmn, parameter|
     map_metadata = $game_map.metadata
     next map_metadata&.town_map_position && map_metadata.town_map_position[0] == parameter

@@ -1,6 +1,3 @@
-#===============================================================================
-#
-#===============================================================================
 class WindowCursorRect < Rect
   def initialize(window)
     super(0, 0, 0, 0)
@@ -42,8 +39,6 @@ class WindowCursorRect < Rect
     @window.width = @window.width
   end
 
-  #-----------------------------------------------------------------------------
-
   private
 
   def needs_update?(x, y, width, height)
@@ -51,9 +46,7 @@ class WindowCursorRect < Rect
   end
 end
 
-#===============================================================================
-#
-#===============================================================================
+
 class Window
   attr_reader :tone
   attr_reader :color
@@ -123,6 +116,7 @@ class Window
     @back_opacity = 255
     @contents_opacity = 255
     @cursor_rect = WindowCursorRect.new(self)
+    @cursorblink = 0
     @cursoropacity = 255
     @pause = false
     @pauseopacity = 255
@@ -301,11 +295,12 @@ class Window
     return if disposed?
     mustchange = false
     if @active
-      cursor_time = System.uptime / 0.4
-      if cursor_time.to_i.even?
-        @cursoropacity = lerp(255, 128, 0.4, cursor_time % 2)
+      if @cursorblink == 0
+        @cursoropacity -= 8
+        @cursorblink = 1 if @cursoropacity <= 128
       else
-        @cursoropacity = lerp(128, 255, 0.4, (cursor_time - 1) % 2)
+        @cursoropacity += 8
+        @cursorblink = 0 if @cursoropacity >= 255
       end
       mustchange = true if !@cursor_rect.empty?
     else
@@ -313,7 +308,7 @@ class Window
       @cursoropacity = 128
     end
     if @pause
-      @pauseframe = (System.uptime * 5).to_i % 4   # 4 frames, 5 frames per second
+      @pauseframe = (Graphics.frame_count / 8) % 4
       @pauseopacity = [@pauseopacity + 64, 255].min
       mustchange = true
     end
@@ -322,8 +317,6 @@ class Window
       i[1].update
     end
   end
-
-  #-----------------------------------------------------------------------------
 
   private
 

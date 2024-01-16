@@ -2,7 +2,7 @@
 # HP/Status options
 #===============================================================================
 MenuHandlers.add(:battle_pokemon_debug_menu, :hp_status_menu, {
-  "name"   => _INTL("HP/status..."),
+  "name"   => _INTL("HP/Status..."),
   "parent" => :main,
   "usage"  => :both
 })
@@ -162,7 +162,7 @@ MenuHandlers.add(:battle_pokemon_debug_menu, :set_stat_stages, {
       break if cmd < 0
       if cmd < stat_ids.length   # Set a stat
         params = ChooseNumberParams.new
-        params.setRange(-Battle::Battler::STAT_STAGE_MAXIMUM, Battle::Battler::STAT_STAGE_MAXIMUM)
+        params.setRange(-6, 6)
         params.setNegativesAllowed(true)
         params.setDefaultValue(battler.stages[stat_ids[cmd]])
         value = pbMessageChooseNumber(
@@ -295,6 +295,7 @@ MenuHandlers.add(:battle_pokemon_debug_menu, :hidden_values, {
   "effect" => proc { |pkmn, battler, battle|
     cmd = 0
     loop do
+      persid = sprintf("0x%08X", pkmn.personalID)
       cmd = pbMessage("\\ts[]" + _INTL("Choose hidden values to edit."),
                       [_INTL("Set EVs"), _INTL("Set IVs")], -1, nil, cmd)
       break if cmd < 0
@@ -415,7 +416,7 @@ MenuHandlers.add(:battle_pokemon_debug_menu, :set_types, {
   "parent" => :main,
   "usage"  => :battler,
   "effect" => proc { |pkmn, battler, battle|
-    max_main_types = 5   # Arbitrary value, could be any number
+    max_main_types = 2   # The most types a Pokémon can have normally
     cmd = 0
     loop do
       commands = []
@@ -426,12 +427,12 @@ MenuHandlers.add(:battle_pokemon_debug_menu, :set_types, {
         commands.push(_INTL("Type {1}: {2}", i + 1, type_name))
         types.push(type)
       end
-      extra_type = battler.effects[PBEffects::ExtraType]
+      extra_type = battler.effects[PBEffects::Type3]
       extra_type_name = (extra_type) ? GameData::Type.get(extra_type).name : "-"
       commands.push(_INTL("Extra type: {1}", extra_type_name))
       types.push(extra_type)
       msg = _INTL("Effective types: {1}", battler.pbTypes(true).map { |t| GameData::Type.get(t).name }.join("/"))
-      msg += "\n" + _INTL("(Change a type to itself to remove it.)")
+      msg += "\r\n" + _INTL("(Change a type to itself to remove it.)")
       cmd = pbMessage("\\ts[]" + msg, commands, -1, nil, cmd)
       break if cmd < 0
       old_type = types[cmd]
@@ -442,14 +443,14 @@ MenuHandlers.add(:battle_pokemon_debug_menu, :set_types, {
             if cmd < max_main_types
               battler.types[cmd] = nil
             else
-              battler.effects[PBEffects::ExtraType] = nil
+              battler.effects[PBEffects::Type3] = nil
             end
             battler.types.compact!
           end
         elsif cmd < max_main_types
           battler.types[cmd] = new_type
         else
-          battler.effects[PBEffects::ExtraType] = new_type
+          battler.effects[PBEffects::Type3] = new_type
         end
       end
     end

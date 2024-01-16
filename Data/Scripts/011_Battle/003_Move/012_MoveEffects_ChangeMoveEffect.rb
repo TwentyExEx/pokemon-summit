@@ -39,27 +39,25 @@ class Battle::Move::CannotBeRedirected < Battle::Move
 end
 
 #===============================================================================
-# Randomly damages or heals the target. (Present)
+# Randomly damages all adjacent Pokémon or heals all Pokémon on the field. (Present)
 # NOTE: Apparently a Normal Gem should be consumed even if this move will heal,
 #       but I think that's silly so I've omitted that effect.
 #===============================================================================
 class Battle::Move::RandomlyDamageOrHealTarget < Battle::Move
   def pbOnStartUse(user, targets)
-    @presentDmg = 0   # 0 = heal, >0 = damage
     r = @battle.pbRandom(100)
-    if r < 40
-      @presentDmg = 40
-    elsif r < 70
-      @presentDmg = 80
-    elsif r < 80
+    if r < 20
+      @presentDmg = 0 
+    else
       @presentDmg = 120
     end
   end
 
   def pbFailsAgainstTarget?(user, target, show_message)
-    return false if @presentDmg > 0
-    if !target.canHeal?
-      @battle.pbDisplay(_INTL("But it failed!")) if show_message
+    return false if (@presentDmg > 0 && user != target)
+    return true if (user == target && @presentDmg > 0) # Doesn't damage self
+    if (!target.canHeal? && @presentDmg == 0)
+      @battle.pbDisplay(_INTL("{1}'s HP is already full!",target.pbThis)) if show_message
       return true
     end
     return false
@@ -82,6 +80,7 @@ class Battle::Move::RandomlyDamageOrHealTarget < Battle::Move
 
   def pbShowAnimation(id, user, targets, hitNum = 0, showAnimation = true)
     hitNum = 1 if @presentDmg == 0   # Healing anim
+    targets.delete_at(0) if @presentDmg > 0 # Don't show anim on self if damaging anim
     super
   end
 end
@@ -138,15 +137,7 @@ end
 # user's Attack and Defense by 1 stage each. (Curse)
 #===============================================================================
 class Battle::Move::CurseTargetOrLowerUserSpd1RaiseUserAtkDef1 < Battle::Move
-  attr_reader :statUp, :statDown
-
   def ignoresSubstitute?(user); return true; end
-
-  def initialize(battle, move)
-    super
-    @statUp   = [:ATTACK, 1, :DEFENSE, 1]
-    @statDown = [:SPEED, 1]
-  end
 
   def pbTarget(user)
     if user.pbHasType?(:GHOST)
@@ -158,18 +149,9 @@ class Battle::Move::CurseTargetOrLowerUserSpd1RaiseUserAtkDef1 < Battle::Move
 
   def pbMoveFailed?(user, targets)
     return false if user.pbHasType?(:GHOST)
-    failed = true
-    (@statUp.length / 2).times do |i|
-      next if !user.pbCanRaiseStatStage?(@statUp[i * 2], user, self)
-      failed = false
-      break
-    end
-    (@statDown.length / 2).times do |i|
-      next if !user.pbCanLowerStatStage?(@statDown[i * 2], user, self)
-      failed = false
-      break
-    end
-    if failed
+    if !user.pbCanLowerStatStage?(:SPEED, user, self) &&
+       !user.pbCanRaiseStatStage?(:ATTACK, user, self) &&
+       !user.pbCanRaiseStatStage?(:DEFENSE, user, self)
       @battle.pbDisplay(_INTL("But it failed!"))
       return true
     end
@@ -187,19 +169,15 @@ class Battle::Move::CurseTargetOrLowerUserSpd1RaiseUserAtkDef1 < Battle::Move
   def pbEffectGeneral(user)
     return if user.pbHasType?(:GHOST)
     # Non-Ghost effect
-    showAnim = true
-    (@statDown.length / 2).times do |i|
-      next if !user.pbCanLowerStatStage?(@statDown[i * 2], user, self)
-      if user.pbLowerStatStage(@statDown[i * 2], @statDown[(i * 2) + 1], user, showAnim)
-        showAnim = false
-      end
+    if user.pbCanLowerStatStage?(:SPEED, user, self)
+      user.pbLowerStatStage(:SPEED, 1, user)
     end
     showAnim = true
-    (@statUp.length / 2).times do |i|
-      next if !user.pbCanRaiseStatStage?(@statUp[i * 2], user, self)
-      if user.pbRaiseStatStage(@statUp[i * 2], @statUp[(i * 2) + 1], user, showAnim)
-        showAnim = false
-      end
+    if user.pbCanRaiseStatStage?(:ATTACK, user, self)
+      showAnim = false if user.pbRaiseStatStage(:ATTACK, 1, user, showAnim)
+    end
+    if user.pbCanRaiseStatStage?(:DEFENSE, user, self)
+      user.pbRaiseStatStage(:DEFENSE, 1, user, showAnim)
     end
   end
 
@@ -222,8 +200,6 @@ end
 # Effect depends on the environment. (Secret Power)
 #===============================================================================
 class Battle::Move::EffectDependsOnEnvironment < Battle::Move
-  attr_reader :secretPower
-
   def flinchingMove?; return [6, 10, 12].include?(@secretPower); end
 
   def pbOnStartUse(user, targets)
@@ -273,7 +249,6 @@ class Battle::Move::EffectDependsOnEnvironment < Battle::Move
   def pbEffectAfterAllHits(user, target)
     return if target.fainted?
     return if target.damageState.unaffected || target.damageState.substitute
-    return if user.hasActiveAbility?(:SHEERFORCE)
     chance = pbAdditionalEffectChance(user, target)
     return if @battle.pbRandom(100) >= chance
     case @secretPower
@@ -692,8 +667,6 @@ end
 # Uses the last move that was used. (Copycat)
 #===============================================================================
 class Battle::Move::UseLastMoveUsed < Battle::Move
-  attr_reader :moveBlacklist
-
   def callsAnotherMove?; return true; end
 
   def initialize(battle, move)
@@ -717,11 +690,11 @@ class Battle::Move::UseLastMoveUsed < Battle::Move
       "ProtectUser",                                       # Detect, Protect
       "ProtectUserSideFromPriorityMoves",                  # Quick Guard        # Not listed on Bulbapedia
       "ProtectUserSideFromMultiTargetDamagingMoves",       # Wide Guard         # Not listed on Bulbapedia
-      "UserEnduresFaintingThisTurn",                       # Endure
+      "UserEnduresFaintingThisTurn",   # Endure
       "ProtectUserSideFromDamagingMovesIfUserFirstTurn",   # Mat Block
       "ProtectUserSideFromStatusMoves",                    # Crafty Shield      # Not listed on Bulbapedia
       "ProtectUserFromDamagingMovesKingsShield",           # King's Shield
-      "ProtectUserFromDamagingMovesObstruct",              # Obstruct           # Not listed on Bulbapedia
+      "ProtectUserFromDamagingMovesShelter",               # Shelter
       "ProtectUserFromTargetingMovesSpikyShield",          # Spiky Shield
       "ProtectUserBanefulBunker",                          # Baneful Bunker
       # Moves that call other moves
@@ -768,7 +741,6 @@ class Battle::Move::UseLastMoveUsed < Battle::Move
 
   def pbMoveFailed?(user, targets)
     if !@copied_move ||
-       !GameData::Move.exists?(@copied_move) ||
        @moveBlacklist.include?(GameData::Move.get(@copied_move).function_code)
       @battle.pbDisplay(_INTL("But it failed!"))
       return true
@@ -790,8 +762,7 @@ class Battle::Move::UseLastMoveUsedByTarget < Battle::Move
 
   def pbFailsAgainstTarget?(user, target, show_message)
     if !target.lastRegularMoveUsed ||
-       !GameData::Move.exists?(target.lastRegularMoveUsed) ||
-       !GameData::Move.get(target.lastRegularMoveUsed).has_flag?("CanMirrorMove")
+       GameData::Move.get(target.lastRegularMoveUsed).flags.none? { |f| f[/^CanMirrorMove$/i] }
       @battle.pbDisplay(_INTL("The mirror move failed!")) if show_message
       return true
     end
@@ -812,8 +783,6 @@ end
 # (Me First)
 #===============================================================================
 class Battle::Move::UseMoveTargetIsAboutToUse < Battle::Move
-  attr_reader :moveBlacklist
-
   def ignoresSubstitute?(user); return true; end
   def callsAnotherMove?; return true; end
 
@@ -838,7 +807,7 @@ class Battle::Move::UseMoveTargetIsAboutToUse < Battle::Move
   def pbFailsAgainstTarget?(user, target, show_message)
     return true if pbMoveFailedTargetAlreadyMoved?(target, show_message)
     oppMove = @battle.choices[target.index][2]
-    if !oppMove || oppMove.statusMove? || @moveBlacklist.include?(oppMove.function_code)
+    if !oppMove || oppMove.statusMove? || @moveBlacklist.include?(oppMove.function)
       @battle.pbDisplay(_INTL("But it failed!")) if show_message
       return true
     end
@@ -859,8 +828,6 @@ end
 #       Pokémon.
 #===============================================================================
 class Battle::Move::UseMoveDependingOnEnvironment < Battle::Move
-  attr_reader :npMove
-
   def callsAnotherMove?; return true; end
 
   def pbOnStartUse(user, targets)
@@ -921,8 +888,6 @@ end
 # Uses a random move that exists. (Metronome)
 #===============================================================================
 class Battle::Move::UseRandomMove < Battle::Move
-  attr_reader :moveBlacklist
-
   def callsAnotherMove?; return true; end
 
   def initialize(battle, move)
@@ -954,6 +919,7 @@ class Battle::Move::UseRandomMove < Battle::Move
       "ProtectUserSideFromDamagingMovesIfUserFirstTurn",   # Mat Block
       "ProtectUserSideFromStatusMoves",                    # Crafty Shield
       "ProtectUserFromDamagingMovesKingsShield",           # King's Shield
+      "ProtectUserFromDamagingMovesShelter",               # Shelter
       "ProtectUserFromDamagingMovesObstruct",              # Obstruct
       "ProtectUserFromTargetingMovesSpikyShield",          # Spiky Shield
       "ProtectUserBanefulBunker",                          # Baneful Bunker
@@ -1017,8 +983,6 @@ end
 # Uses a random move known by any non-user Pokémon in the user's party. (Assist)
 #===============================================================================
 class Battle::Move::UseRandomMoveFromUserParty < Battle::Move
-  attr_reader :moveBlacklist
-
   def callsAnotherMove?; return true; end
 
   def initialize(battle, move)
@@ -1046,7 +1010,7 @@ class Battle::Move::UseRandomMoveFromUserParty < Battle::Move
       "ProtectUserSideFromDamagingMovesIfUserFirstTurn",   # Mat Block
       "ProtectUserSideFromStatusMoves",                    # Crafty Shield      # Not listed on Bulbapedia
       "ProtectUserFromDamagingMovesKingsShield",           # King's Shield
-      "ProtectUserFromDamagingMovesObstruct",              # Obstruct           # Not listed on Bulbapedia
+      "ProtectUserFromDamagingMovesShelter",               # Shelter
       "ProtectUserFromTargetingMovesSpikyShield",          # Spiky Shield
       "ProtectUserBanefulBunker",                          # Baneful Bunker
       # Moves that call other moves
@@ -1099,6 +1063,7 @@ class Battle::Move::UseRandomMoveFromUserParty < Battle::Move
         "TwoTurnAttackInvulnerableInSkyTargetCannotAct",   # Sky Drop
         "AllBattlersLoseHalfHPUserSkipsNextTurn",          # Shadow Half
         "TwoTurnAttackRaiseUserSpAtkSpDefSpd2",            # Geomancy                  # Not listed on Bulbapedia
+        "TwoTurnAttackChargeRaiseUserDefenseSpDefenseAttack1",            # Skull Bash                # Not listed on Bulbapedia
         # Target-switching moves
         "SwitchOutTargetStatusMove"                        # Roar, Whirlwind
       ]
@@ -1134,8 +1099,6 @@ end
 # Uses a random move the user knows. Fails if user is not asleep. (Sleep Talk)
 #===============================================================================
 class Battle::Move::UseRandomUserMoveIfAsleep < Battle::Move
-  attr_reader :moveBlacklist
-
   def usableWhenAsleep?; return true; end
   def callsAnotherMove?; return true; end
 
@@ -1183,7 +1146,7 @@ class Battle::Move::UseRandomUserMoveIfAsleep < Battle::Move
   def pbMoveFailed?(user, targets)
     @sleepTalkMoves = []
     user.eachMoveWithIndex do |m, i|
-      next if @moveBlacklist.include?(m.function_code)
+      next if @moveBlacklist.include?(m.function)
       next if !@battle.pbCanChooseMove?(user.index, i, false, true)
       @sleepTalkMoves.push(i)
     end
@@ -1201,8 +1164,8 @@ class Battle::Move::UseRandomUserMoveIfAsleep < Battle::Move
 end
 
 #===============================================================================
-# This round, reflects all moves that can be Magic Coated which target the user
-# or which have no target back at their origin. (Magic Coat)
+# This round, reflects all moves with the "C" flag targeting the user back at
+# their origin. (Magic Coat)
 #===============================================================================
 class Battle::Move::BounceBackProblemCausingStatusMoves < Battle::Move
   def pbEffectGeneral(user)
@@ -1212,7 +1175,7 @@ class Battle::Move::BounceBackProblemCausingStatusMoves < Battle::Move
 end
 
 #===============================================================================
-# This round, snatches all used moves that can be Snatched. (Snatch)
+# This round, snatches all used moves with the "D" flag. (Snatch)
 #===============================================================================
 class Battle::Move::StealAndUseBeneficialStatusMove < Battle::Move
   def pbEffectGeneral(user)
@@ -1230,8 +1193,6 @@ end
 # out. (Mimic)
 #===============================================================================
 class Battle::Move::ReplaceMoveThisBattleWithTargetLastMoveUsed < Battle::Move
-  attr_reader :moveBlacklist
-
   def ignoresSubstitute?(user); return true; end
 
   def initialize(battle, move)
@@ -1283,8 +1244,6 @@ end
 # This move permanently turns into the last move used by the target. (Sketch)
 #===============================================================================
 class Battle::Move::ReplaceMoveWithTargetLastMoveUsed < Battle::Move
-  attr_reader :moveBlacklist
-
   def ignoresSubstitute?(user); return true; end
 
   def initialize(battle, move)
