@@ -2292,7 +2292,7 @@ Name = Butler
 Gender = Male
 BaseMoney = 50
 #-------------------------------
-[TRAINER_CABBIE]
+[TRAINER_CABBIE_GALAR]
 Name = Cabbie
 Gender = Male
 BaseMoney = 50
@@ -3874,5 +3874,130 @@ BaseMoney = 50
 #-------------------------------
 [TRAINER_YOUNGSTER_UNOVA]
 Name = Youngster
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ACETRAINER_PALDEA_F]
+Name = Ace Trainer
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ACETRAINER_PALDEA_M]
+Name = Ace Trainer
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_ARTIST_PALDEA]
+Name = Artist
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BACKPACKER_PALDEA]
+Name = Backpacker
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_BLACKBELT_PALDEA]
+Name = Black Belt
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_CABBIE_PALDEA]
+Name = Cabbie
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_CLERK_PALDEA_F]
+Name = Clerk
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_CLERK_PALDEA_M]
+Name = Clerk
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_COURIER]
+Name = Courier
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_DELINQUENT_F]
+Name = Delinquent
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_DELINQUENT_M]
+Name = Delinquent
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_DRAGONTAMER_PALDEA]
+Name = Dragon Tamer
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_HIKER_PALDEA]
+Name = Hiker
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_JANITOR_PALDEA]
+Name = Janitor
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_MODEL_PALDEA]
+Name = Model
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_MUSICIAN_PALDEA]
+Name = Musician
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_NURSE_PALDEA]
+Name = Nurse
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SCHOOLKID_PALDEA_F]
+Name = School Kid
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SCHOOLKID_PALDEA_M]
+Name = School Kid
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SCIENTIST_PALDEA]
+Name = Scientist
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_SWIMMER_PALDEA]
+Name = Swimmer
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_TOURIST_PALDEA]
+Name = Tourist
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_WAITER_PALDEA]
+Name = Waiter
+Gender = Male
+BaseMoney = 50
+#-------------------------------
+[TRAINER_WAITRESS_PALDEA]
+Name = Waitress
+Gender = Female
+BaseMoney = 50
+#-------------------------------
+[TRAINER_WORKER_PALDEA]
+Name = Worker
 Gender = Male
 BaseMoney = 50
